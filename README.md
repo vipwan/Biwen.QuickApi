@@ -1,11 +1,11 @@
-# Biwen.QuickApi
+ï»¿# Biwen.QuickApi
 
-## ÏîÄ¿½éÉÜ
-	- Ìá¹©Ò»ÖÖ¼òµ¥µÄWeb Api CQRS½»»¥¿ò¼Ü
-    - Ö§³Ö¿ªÏä¼´ÓÃµÄÂ·ÓÉºÍÈ¨ÏŞÅäÖÃÒÔ¼°DTOÑéÖ¤ÌåÑé
-    - ¸Ã¿ò¼ÜÊÇMinimalApiµÄ²¹³ä£¬ĞÔÄÜÎŞÏŞ½Ó½üÓÚMinimalApi£¬µ«ÊÇÌá¹©ÁË×î¼òµ¥µÄµÄÊ¹ÓÃÌåÑé
+## é¡¹ç›®ä»‹ç»
+	- æä¾›ä¸€ç§ç®€å•çš„Web Api CQRSäº¤äº’æ¡†æ¶
+    - æ”¯æŒå¼€ç®±å³ç”¨çš„è·¯ç”±å’Œæƒé™é…ç½®ä»¥åŠDTOéªŒè¯ä½“éªŒ
+    - è¯¥æ¡†æ¶æ˜¯MinimalApiçš„è¡¥å……ï¼Œæ€§èƒ½æ— é™æ¥è¿‘äºMinimalApiï¼Œä½†æ˜¯æä¾›äº†æœ€ç®€å•çš„çš„ä½¿ç”¨ä½“éªŒ
 
-## Ê¹ÓÃ·½Ê½
+## ä½¿ç”¨æ–¹å¼
 
 ### Step1 UseBiwenQuickApis
 
@@ -29,9 +29,9 @@ app.MapBiwenQuickApis();
 
         public HelloApiRequest()
         {
-            RuleFor(x => x.Name).NotEmpty().WithMessage("Name²»ÄÜÎª¿Õ");
-            RuleFor(x => x.Name).MaximumLength(10).WithMessage("Name×î´ó³¤¶ÈÎª10");
-            RuleFor(x => x.Name).MinimumLength(5).WithMessage("Name×îĞ¡³¤¶ÈÎª5");
+            RuleFor(x => x.Name).NotEmpty().WithMessage("Nameä¸èƒ½ä¸ºç©º");
+            RuleFor(x => x.Name).MaximumLength(10).WithMessage("Nameæœ€å¤§é•¿åº¦ä¸º10");
+            RuleFor(x => x.Name).MinimumLength(5).WithMessage("Nameæœ€å°é•¿åº¦ä¸º5");
         }
     }
 
