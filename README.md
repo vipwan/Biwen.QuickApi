@@ -47,6 +47,9 @@ app.MapBiwenQuickApis();
 
 ```csharp
 
+    /// <summary>
+    /// get ~/admin/index
+    /// </summary>
     [QuickApi("index", Group = "admin", Verbs = Verb.GET | Verb.POST, Policy = "admin")]
     public class NeedAuthApi : BaseQuickApi
     {
@@ -62,17 +65,24 @@ app.MapBiwenQuickApis();
     [QuickApi("world/{name}", Group = "hello", Verbs = Verb.GET | Verb.POST)]
     public class HelloApi : BaseQuickApi<HelloApiRequest, HelloApiResponse>
     {
-        public override HelloApiResponse Execute([From(RequestFrom.FromRoute)] HelloApiRequest request)
-        {
-            Console.WriteLine(HttpContextAccessor.HttpContext!.Request.Path.Value);
+        private readonly HelloService _service;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
+        public Hello4Api(HelloService service,IHttpContextAccessor httpContextAccessor)
+        {
+            _service = service;
+            _httpContextAccessor = httpContextAccessor;
+        }
+
+        public override HelloApiResponse Execute(EmptyRequest request)
+        {
+            var hello = _service.Hello($"hello world {_httpContextAccessor.HttpContext!.Request.Path} !");
             return new HelloApiResponse
             {
-                Message = $"Hello {request.Name} {HttpContextAccessor.HttpContext!.TraceIdentifier}"
+                Message = hello
             };
         }
     }
-
 
 ```
 
