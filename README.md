@@ -1,7 +1,9 @@
 # Biwen.QuickApi
 
 ## 项目介绍
-	- 提供简单的Web Api CQRS框架
+	- 提供一种简单的Web Api CQRS交互框架
+    - 支持开箱即用的路由和权限配置以及DTO验证体验
+    - 该框架是MinimalApi的补充，性能无限接近于MinimalApi，但是提供了最简单的的使用体验
 
 ## 使用方式
 
