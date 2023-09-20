@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34112.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biwen.QuickApi", "Biwen.QuickApi\Biwen.QuickApi.csproj", "{6F9B9A49-F7BC-488B-A524-82AAEB91FC1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biwen.QuickApi.DemoWeb", "Biwen.QuickApi.DemoWeb\Biwen.QuickApi.DemoWeb.csproj", "{548820F6-1948-47C6-BDC7-C464252E5435}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F9B9A49-F7BC-488B-A524-82AAEB91FC1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F9B9A49-F7BC-488B-A524-82AAEB91FC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F9B9A49-F7BC-488B-A524-82AAEB91FC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F9B9A49-F7BC-488B-A524-82AAEB91FC1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{548820F6-1948-47C6-BDC7-C464252E5435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548820F6-1948-47C6-BDC7-C464252E5435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548820F6-1948-47C6-BDC7-C464252E5435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{548820F6-1948-47C6-BDC7-C464252E5435}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3859D772-48C9-4531-BC8B-583D2B4DF111}
+	EndGlobalSection
+EndGlobal

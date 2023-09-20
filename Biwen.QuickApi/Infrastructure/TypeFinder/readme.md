@@ -1,0 +1,1 @@
+﻿[thanks to](https://github.com/pipe01/TypeFinder/tree/master)
