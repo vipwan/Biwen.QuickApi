@@ -57,7 +57,7 @@ namespace Biwen.QuickApi
         /// </summary>
         public IServiceProvider ServiceProvider { get; set; } = null!;
         /// <summary>
-        /// 请求输出
+        /// 请求输出,注意如果需要Request对象，请使用HttpContextAccessor.HttpContext.Request
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
