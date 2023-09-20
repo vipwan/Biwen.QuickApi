@@ -11,6 +11,12 @@ namespace Biwen.QuickApi
 
     public static class ServiceRegistration
     {
+
+        /// <summary>
+        /// Add Biwen.QuickApis
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         public static IServiceCollection AddBiwenQuickApis(this IServiceCollection services)
         {
             //注册验证器
@@ -58,6 +64,13 @@ namespace Biwen.QuickApi
             return result;
         }
 
+
+        /// <summary>
+        /// Map Biwen.QuickApis
+        /// </summary>
+        /// <param name="app"></param>
+        /// <returns></returns>
+        /// <exception cref="QuickApiExcetion"></exception>
         public static (string, RouteGroupBuilder)[] MapBiwenQuickApis(this IEndpointRouteBuilder app)
         {
             var apis = ASS.InAllRequiredAssemblies.Where(x => !x.IsAbstract && x.IsClass && x.IsAssignableTo(typeof(IQuickApi)));
