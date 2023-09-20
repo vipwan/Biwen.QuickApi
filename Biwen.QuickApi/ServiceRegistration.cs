@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Biwen.QuickApi
@@ -15,6 +16,7 @@ namespace Biwen.QuickApi
             //注册验证器
             services.AddFluentValidationAutoValidation();
             services.AddHttpContextAccessor();
+            services.AddMemoryCache();
 
             //services.Scan(scan =>
             //{
@@ -139,12 +141,19 @@ namespace Biwen.QuickApi
                 }
 
                 object? o = ctx.HttpContext!.RequestServices.GetRequiredService(api);
+                var cache = ctx.HttpContext!.RequestServices.GetRequiredService<IMemoryCache>();
 
                 var method = api.GetMethod("Execute")!;
                 var parameter = method.GetParameters()[0]!;
                 var fromAttr = parameter.GetCustomAttribute<FromAttribute>();
                 var parameterType = parameter.ParameterType!;
-                object? req = null;
+                //使用缓存,提升性能
+                object? req = await cache.GetOrCreateAsync($"biwen.quickapi.{parameterType.FullName}", async entry =>
+                {
+                    entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(365);
+                    return await Task.FromResult(Activator.CreateInstance(parameterType)!);
+                });
+                //获取请求对象
                 if (fromAttr != null)
                 {
                     switch (fromAttr.From)
@@ -153,7 +162,6 @@ namespace Biwen.QuickApi
                         default:
                             {
                                 var qs = ctx.HttpContext.Request.Query;
-                                req = Activator.CreateInstance(parameterType)!;
                                 foreach (var item in qs)
                                 {
                                     var prop = parameterType.GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
@@ -169,7 +177,6 @@ namespace Biwen.QuickApi
                         case RequestFrom.FromForm:
                             {
                                 var qs = ctx.HttpContext.Request.Form;
-                                req = Activator.CreateInstance(parameterType)!;
                                 foreach (var item in qs)
                                 {
                                     var prop = parameterType.GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
@@ -188,7 +195,6 @@ namespace Biwen.QuickApi
                         case RequestFrom.FromRoute:
                             {
                                 var qs = ctx.HttpContext.Request.RouteValues;
-                                req = Activator.CreateInstance(parameterType)!;
                                 foreach (var item in qs)
                                 {
                                     var prop = parameterType.GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
@@ -204,7 +210,6 @@ namespace Biwen.QuickApi
                         case RequestFrom.FromHead:
                             {
                                 var qs = ctx.HttpContext.Request.Headers;
-                                req = Activator.CreateInstance(parameterType)!;
                                 foreach (var item in qs)
                                 {
                                     var prop = parameterType.GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
