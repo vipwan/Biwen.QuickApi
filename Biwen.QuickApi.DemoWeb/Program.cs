@@ -23,4 +23,14 @@ app.UseWelcomePage("/");
 
 app.MapBiwenQuickApis();
 
+
+//测试其他地方调用QuickApi
+app.MapGet("/fromapi", (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
+{
+    var x = api.Execute(new EmptyRequest());
+    return Results.Ok(x);
+});
+
+
+
 app.Run();
