@@ -87,10 +87,18 @@ app.MapBiwenQuickApis();
 ```
 
 
-### Step4 Enjoy!
+### Step4 Enjoy !
 
 ```csharp
 
+//通过注入服务调用
+app.MapGet("/fromapi", (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
+{
+    var x = api.Execute(new EmptyRequest());
+    return Results.Ok(x);
+});
+
+//直接访问
 // GET ~/hello/world/biwen
 // GET ~/hello/world/biwen?name=biwen
 // POST ~/hello/world/biwen
