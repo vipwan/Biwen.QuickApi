@@ -39,12 +39,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override HelloApiResponse Execute([From(RequestFrom.FromRoute)] HelloApiRequest request)
         {
-            Console.WriteLine(HttpContextAccessor.HttpContext!.Request.Path.Value);
-
-
             return new HelloApiResponse
             {
-                Message = $"Hello {request.Name} {HttpContextAccessor.HttpContext!.TraceIdentifier}"
+                Message = $"Hello {request.Name}"
             };
         }
     }
@@ -58,8 +55,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override HelloApiResponse Execute([From(RequestFrom.FromBody)] HelloApiRequest request)
         {
-            Console.WriteLine(HttpContextAccessor.HttpContext!.Request.Path.Value);
-
             return new HelloApiResponse
             {
                 Message = $"Hello {request.Name}"
@@ -76,8 +71,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override HelloApiResponse Execute(EmptyRequest request)
         {
-            Console.WriteLine(HttpContextAccessor.HttpContext!.Request.Path.Value);
-
             return new HelloApiResponse
             {
                 Message = $"Hello 3"
@@ -93,16 +86,18 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     public class Hello4Api : BaseQuickApi<EmptyRequest, HelloApiResponse>
     {
         private readonly HelloService _service;
-        public Hello4Api(HelloService service)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+
+        public Hello4Api(HelloService service,IHttpContextAccessor httpContextAccessor)
         {
             _service = service;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public override HelloApiResponse Execute(EmptyRequest request)
         {
-            Console.WriteLine(HttpContextAccessor.HttpContext!.Request.Path.Value);
-
-            var hello = _service.Hello("hello world!");
+            var hello = _service.Hello($"hello world {_httpContextAccessor.HttpContext!.Request.Path} !");
             return new HelloApiResponse
             {
                 Message = hello

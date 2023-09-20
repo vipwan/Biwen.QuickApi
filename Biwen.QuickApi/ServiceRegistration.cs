@@ -29,18 +29,11 @@ namespace Biwen.QuickApi
             //});
 
             //注册Api
-            //services.Scan(scan =>
-            //{
-            //    scan.FromAssemblies(ASS.AllRequiredAssemblies).AddClasses(x =>
-            //    {
-            //        x.AssignableTo(typeof(IQuickApi));//来自指定的接口
-            //        x.Where(a => { return a.IsClass && !a.IsAbstract && !a.IsGenericTypeDefinition; });
-            //    })
-            //    .AsSelf()//Self
-            //    .AsImplementedInterfaces(x => x.IsGenericType) //实现基于他的接口
-            //    .WithTransientLifetime();  //AddTransient
-            //});
-
+            var apis = ASS.InAllRequiredAssemblies.Where(x => !x.IsAbstract && x.IsClass && x.IsAssignableTo(typeof(IQuickApi)));
+            foreach (var api in apis)
+            {
+                services.AddScoped(api);
+            }
             return services;
         }
 
@@ -145,32 +138,8 @@ namespace Biwen.QuickApi
                     }
                 }
 
-                var ctors = api.GetConstructors();
-                if (ctors.Length == 0)
-                {
-                    throw new QuickApiExcetion($"{api.Name}必须具有构造函数!");
-                }
-                var ctor = ctors[0];
-                object? o = null;
-                if (ctor.GetParameters().Length == 0)
-                {
-                    o = Activator.CreateInstance(api)!;
-                }
-                else
-                {
-                    var ctorParams = ctor.GetParameters();
-                    var ctorParamInstances = new List<object>();
-                    foreach (var ctorParam in ctorParams)
-                    {
-                        var paramType = ctorParam.ParameterType;
-                        var paramInstance = ctx.HttpContext!.RequestServices.GetService(paramType) ??
-                            throw new QuickApiExcetion($"{paramType.Name}未注册!");
-                        ctorParamInstances.Add(paramInstance);
-                    }
-                    o = Activator.CreateInstance(api, ctorParamInstances.ToArray())!;
-                }
-                o.GetType().GetProperty("HttpContextAccessor")!.SetValue(o, ctx);
-                o.GetType().GetProperty("ServiceProvider")!.SetValue(o, ctx.HttpContext!.RequestServices);
+                object? o = ctx.HttpContext!.RequestServices.GetRequiredService(api);
+
                 var method = api.GetMethod("Execute")!;
                 var parameter = method.GetParameters()[0]!;
                 var fromAttr = parameter.GetCustomAttribute<FromAttribute>();

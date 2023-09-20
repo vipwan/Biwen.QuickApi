@@ -48,14 +48,7 @@ namespace Biwen.QuickApi
     /// <typeparam name="Rsp">输出对象</typeparam>
     public abstract class BaseQuickApi<Req, Rsp> : IQuickApi where Req : BaseRequest<Req>, new() where Rsp : BaseResponse
     {
-        /// <summary>
-        /// HttpContextAccessor
-        /// </summary>
-        public IHttpContextAccessor HttpContextAccessor { get; set; } = null!;
-        /// <summary>
-        /// ServiceProvider
-        /// </summary>
-        public IServiceProvider ServiceProvider { get; set; } = null!;
+
         /// <summary>
         /// 请求输出,注意如果需要Request对象，请使用HttpContextAccessor.HttpContext.Request
         /// </summary>
