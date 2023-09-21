@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-	<PackageVersion>1.0.0-preview1</PackageVersion>
+	<PackageVersion>1.0.0</PackageVersion>
 
 	<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
 	<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
