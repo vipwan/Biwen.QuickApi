@@ -178,5 +178,26 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
             return EmptyResponse.New;
         }
+
+        /// <summary>
+        /// 提供minimal扩展
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <returns></returns>
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            //自定义描述
+            builder.WithOpenApi(operation => new(operation)
+            {
+                Summary = "This is a summary",
+                Description = "This is a description"
+            });
+
+            //自定义标签
+            builder.WithTags("custom");
+
+            return builder;
+        }
+
     }
 }

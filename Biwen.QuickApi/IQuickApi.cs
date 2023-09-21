@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi
+﻿using Microsoft.AspNetCore.Builder;
+
+namespace Biwen.QuickApi
 {
 
     /// <summary>
@@ -38,7 +40,15 @@
     /// <summary>
     /// 标记接口
     /// </summary>
-    internal interface IQuickApi { }
+    internal interface IQuickApi
+    {
+        /// <summary>
+        /// 提供minimal扩展
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <returns></returns>
+        RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder);
+    }
 
     /// <summary>
     /// BaseQuickApi
@@ -54,6 +64,12 @@
         /// <param name="request"></param>
         /// <returns></returns>
         public abstract Task<Rsp> ExecuteAsync(Req request);
+
+        public virtual RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            //todo:
+            return builder;
+        }
 
     }
 

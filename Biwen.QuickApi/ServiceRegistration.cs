@@ -90,7 +90,7 @@ namespace Biwen.QuickApi
                     var verbs = attr.Verbs.SplitEnum();//拆分枚举
                     foreach (var verb in verbs)
                     {
-                        RouteHandlerBuilder routeHandlerBuilder = null!;
+                        RouteHandlerBuilder? routeHandlerBuilder = null!;
 
                         switch (verb)
                         {
@@ -136,6 +136,11 @@ namespace Biwen.QuickApi
                                 }
                                 break;
                         }
+
+                        //HandlerBuilder
+                        using var scope = app.ServiceProvider.CreateAsyncScope();
+                        var currentApi = scope.ServiceProvider.GetService(api) as IQuickApi;
+                        routeHandlerBuilder = currentApi!.HandlerBuilder(routeHandlerBuilder!);
 
                         //OpenApi 生成
                         var method = api.GetMethod("ExecuteAsync")!;
