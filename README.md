@@ -72,7 +72,7 @@ app.MapBiwenQuickApis();
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public override HelloApiResponse Execute(EmptyRequest request)
+        public override HelloApiResponse Execute([From(RequestFrom.FromRoute)HelloApiRequest request)
         {
             var hello = _service.Hello($"hello world {_httpContextAccessor.HttpContext!.Request.Path} !");
             return new HelloApiResponse
