@@ -24,6 +24,7 @@ namespace Biwen.QuickApi
     /// <summary>
     /// Request对象来源
     /// </summary>
+    [Obsolete("1.1.0版本后，不再使用,请使用IReqBinder", false)]
     public enum RequestFrom
     {
         /// <summary>
