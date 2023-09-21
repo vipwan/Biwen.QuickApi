@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-
-namespace Biwen.QuickApi
+﻿namespace Biwen.QuickApi
 {
 
     /// <summary>

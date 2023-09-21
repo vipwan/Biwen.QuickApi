@@ -1,7 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Http;
-
-namespace Biwen.QuickApi.Attributes
+﻿namespace Biwen.QuickApi.Attributes
 {
 
     /// <summary>
