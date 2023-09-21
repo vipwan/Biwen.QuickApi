@@ -7,7 +7,7 @@ namespace Biwen.QuickApi
     /// Req绑定器接口
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface IReqBinder<T> where T : class, new()
+    internal interface IReqBinder<T> where T : class, new()
     {
         Task<T> Bind(HttpContext context);
     }
