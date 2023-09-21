@@ -1,9 +1,9 @@
 ﻿# Biwen.QuickApi
 
 ## 项目介绍
-	- 提供一种简单集成的Web Api CQRS交互模块
+	- 提供一种简单集成的Minimal Web Api交互模块
     - 开箱即用的 路由 和 权限 以及 Request验证体验
-    - 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi，但是提供了最简单的的使用体验
+    - 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi,遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
     - write less, do more ; write anywhere, do anything
 ## 使用方式
 
@@ -116,11 +116,3 @@ app.MapGet("/fromapi", (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 
 
 ```
-
-### OpenApi & Swagger支持
-
-![image](https://github.com/vipwan/Biwen.QuickApi/assets/13956765/bacafe3e-14eb-44da-93b8-a84d259266e4)
-
-
-
-
