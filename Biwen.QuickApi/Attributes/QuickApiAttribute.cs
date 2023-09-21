@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.AspNetCore.Http;
+
 namespace Biwen.QuickApi.Attributes
 {
 
@@ -31,16 +33,4 @@ namespace Biwen.QuickApi.Attributes
         public string? Policy { get; set; }
     }
 
-    /// <summary>
-    /// 请求参数来源
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false, Inherited = false)]
-    public class FromAttribute : Attribute
-    {
-        public FromAttribute(RequestFrom from)
-        {
-            From = from;
-        }
-        public RequestFrom From { get; set; }
-    }
 }

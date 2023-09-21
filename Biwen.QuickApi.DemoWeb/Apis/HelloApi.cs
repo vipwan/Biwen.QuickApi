@@ -14,6 +14,38 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         }
     }
 
+    /// <summary>
+    /// 模拟自定义绑定的Request
+    /// </summary>
+    public class CustomApiRequest : BaseRequest<CustomApiRequest>
+    {
+        public string? Name { get; set; }
+
+        public CustomApiRequest()
+        {
+            RuleFor(x => x.Name).NotNull().Length(5, 10);
+        }
+
+        /// <summary>
+        /// 自定义绑定
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override Task<CustomApiRequest> Bind(HttpContext context)
+        {
+            var @default = base.Bind(context);
+
+            //自定义绑定
+            if (context.Request.Query.ContainsKey("c"))
+            {
+                @default.Result.Name = context.Request.Query["c"];
+            }
+
+            return @default;
+        }
+    }
+
+
     public class HelloApiResponse : BaseResponse
     {
         public string? Message { get; set; }
@@ -25,7 +57,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override EmptyResponse Execute(EmptyRequest request)
         {
-            return EmptyResponse.Instance;
+            return EmptyResponse.New;
         }
     }
 
@@ -35,7 +67,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("world/{name}", Group = "hello", Verbs = Verb.GET | Verb.POST)]
     public class HelloApi : BaseQuickApi<HelloApiRequest, HelloApiResponse>
     {
-        public override HelloApiResponse Execute([From(RequestFrom.FromRoute)] HelloApiRequest request)
+        public override HelloApiResponse Execute(HelloApiRequest request)
         {
             return new HelloApiResponse
             {
@@ -51,7 +83,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("world2", Group = "hello", Verbs = Verb.POST)]
     public class Hello2Api : BaseQuickApi<HelloApiRequest, HelloApiResponse>
     {
-        public override HelloApiResponse Execute([From(RequestFrom.FromBody)] HelloApiRequest request)
+        public override HelloApiResponse Execute(HelloApiRequest request)
         {
             return new HelloApiResponse
             {
@@ -87,7 +119,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         private readonly IHttpContextAccessor _httpContextAccessor;
 
 
-        public Hello4Api(HelloService service,IHttpContextAccessor httpContextAccessor)
+        public Hello4Api(HelloService service, IHttpContextAccessor httpContextAccessor)
         {
             _service = service;
             _httpContextAccessor = httpContextAccessor;
@@ -112,7 +144,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override EmptyResponse Execute(EmptyRequest request)
         {
-            return EmptyResponse.Instance;
+            return EmptyResponse.New;
         }
     }
 
@@ -124,7 +156,20 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override EmptyResponse Execute(EmptyRequest request)
         {
-            return EmptyResponse.Instance;
+            return EmptyResponse.New;
+        }
+    }
+
+    /// <summary>
+    /// get ~/custom?c=11112222
+    /// </summary>
+    [QuickApi("custom", Verbs = Verb.GET)]
+    public class CustomApi : BaseQuickApi<CustomApiRequest>
+    {
+        public override EmptyResponse Execute(CustomApiRequest request)
+        {
+            Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
+            return EmptyResponse.New;
         }
     }
 }

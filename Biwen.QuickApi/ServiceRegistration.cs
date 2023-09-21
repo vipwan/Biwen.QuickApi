@@ -140,11 +140,10 @@ namespace Biwen.QuickApi
                         //OpenApi 生成
                         var method = api.GetMethod("Execute")!;
                         var parameter = method.GetParameters()[0]!;
-                        var fromAttr = parameter.GetCustomAttribute<FromAttribute>();
                         var parameterType = parameter.ParameterType!;
-                        if (fromAttr?.From == RequestFrom.FromBody)
+
+                        if (verb != Verb.GET && parameterType != typeof(EmptyRequest))
                         {
-                            //POST,PUT,PATCH
                             routeHandlerBuilder!.Accepts(parameterType, "application/json");
                         }
                         //401
@@ -185,7 +184,7 @@ namespace Biwen.QuickApi
 
                 var method = api.GetMethod("Execute")!;
                 var parameter = method.GetParameters()[0]!;
-                var fromAttr = parameter.GetCustomAttribute<FromAttribute>();
+                //var fromAttr = parameter.GetCustomAttribute<FromAttribute>();
                 var parameterType = parameter.ParameterType!;
                 //使用缓存,提升性能
                 object? req = await cache.GetOrCreateAsync($"biwen.quickapi.{parameterType.FullName}", async entry =>
@@ -193,77 +192,12 @@ namespace Biwen.QuickApi
                     entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(365);
                     return await Task.FromResult(Activator.CreateInstance(parameterType)!);
                 });
+
                 //获取请求对象
-                if (fromAttr != null)
-                {
-                    switch (fromAttr.From)
-                    {
-                        case RequestFrom.FromQuery:
-                        default:
-                            {
-                                var qs = ctx.HttpContext.Request.Query;
-                                foreach (var item in qs)
-                                {
-                                    var prop = parameterType.GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
-                                    if (prop != null)
-                                    {
-                                        //转换
-                                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
-                                        prop.SetValue(req, value);
-                                    }
-                                }
-                            }
-                            break;
-                        case RequestFrom.FromForm:
-                            {
-                                var qs = ctx.HttpContext.Request.Form;
-                                foreach (var item in qs)
-                                {
-                                    var prop = parameterType.GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
-                                    if (prop != null)
-                                    {
-                                        //转换
-                                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
-                                        prop.SetValue(req, item.Value);
-                                    }
-                                }
-                            }
-                            break;
-                        case RequestFrom.FromBody:
-                            req = await ctx.HttpContext.Request.ReadFromJsonAsync(parameterType);
-                            break;
-                        case RequestFrom.FromRoute:
-                            {
-                                var qs = ctx.HttpContext.Request.RouteValues;
-                                foreach (var item in qs)
-                                {
-                                    var prop = parameterType.GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
-                                    if (prop != null)
-                                    {
-                                        //转换
-                                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFrom(item.Value!);
-                                        prop.SetValue(req, item.Value);
-                                    }
-                                }
-                            }
-                            break;
-                        case RequestFrom.FromHead:
-                            {
-                                var qs = ctx.HttpContext.Request.Headers;
-                                foreach (var item in qs)
-                                {
-                                    var prop = parameterType.GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
-                                    if (prop != null)
-                                    {
-                                        //转换
-                                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
-                                        prop.SetValue(req, item.Value);
-                                    }
-                                }
-                            }
-                            break;
-                    }
-                }
+                var bindMethod = parameterType.BaseType!.GetMethod("Bind")!;
+                dynamic bindRutn = bindMethod.Invoke(req, new object[] { ctx.HttpContext })!;
+                req = bindRutn.Result;
+
                 //验证DTO
                 (bool, IDictionary<string, string[]>?) Valid(MethodInfo? md, object validator)
                 {

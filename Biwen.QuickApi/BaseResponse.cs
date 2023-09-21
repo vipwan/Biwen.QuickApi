@@ -10,6 +10,6 @@
     /// </summary>
     public class EmptyResponse : BaseResponse
     {
-        public static EmptyResponse Instance => new();
+        public static EmptyResponse New => new();
     }
 }
