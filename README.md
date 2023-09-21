@@ -116,3 +116,11 @@ app.MapGet("/fromapi", (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 
 
 ```
+
+### OpenApi & Swagger支持
+
+![image](https://github.com/vipwan/Biwen.QuickApi/assets/13956765/bacafe3e-14eb-44da-93b8-a84d259266e4)
+
+
+
+
