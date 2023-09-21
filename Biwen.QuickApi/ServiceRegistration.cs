@@ -147,14 +147,20 @@ namespace Biwen.QuickApi
                             //POST,PUT,PATCH
                             routeHandlerBuilder!.Accepts(parameterType, "application/json");
                         }
-                        if(method.ReturnType != typeof(EmptyResponse))
+                        //401
+                        if (!string.IsNullOrEmpty(attr.Policy))
                         {
-                            routeHandlerBuilder!.Produces(200, method.ReturnType);
-                        }   
+                            routeHandlerBuilder!.ProducesProblem(StatusCodes.Status401Unauthorized);
+                        }
+                        //200
+                        routeHandlerBuilder!.Produces(200, method.ReturnType == typeof(EmptyResponse) ? null : method.ReturnType);
+                        //400
                         if (parameterType != typeof(EmptyRequest))
                         {
-                            routeHandlerBuilder!.Produces(400, typeof(Microsoft.AspNetCore.Mvc.ValidationProblemDetails));
+                            routeHandlerBuilder!.ProducesValidationProblem();
                         }
+                        //500
+                        routeHandlerBuilder!.ProducesProblem(StatusCodes.Status500InternalServerError);
                     }
                 }
                 routeGroups.Add((group.Key, g));
