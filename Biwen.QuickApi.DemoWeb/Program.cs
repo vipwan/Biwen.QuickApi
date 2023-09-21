@@ -20,15 +20,17 @@ builder.Services.AddScoped<HelloService>();
 var app = builder.Build();
 
 
-app.UseAuthentication();
-app.UseAuthorization();
-
-app.UseWelcomePage("/");
-
-
 //swagger
 app.UseSwagger();
 app.UseSwaggerUI();
+
+
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+//app.UseWelcomePage("/");
+app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 
 
 app.MapBiwenQuickApis();
