@@ -25,12 +25,15 @@ namespace Biwen.QuickApi
             return Validator.RuleFor(expression);
         }
 
+        /// <summary>
+        /// 可以重写此方法，实现自定义绑定,
+        /// 如果需要表单绑定,以及IFormFile绑定，请务必重写此方法
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public virtual async Task<T> Bind(HttpContext context)
         {
-            //默认实现，如果需要自定义，请重写
-
             //route > header > body(Post) = querystring(Get)
-
             var @default = new T();
 
             var requestMethod = context.Request.Method!;
