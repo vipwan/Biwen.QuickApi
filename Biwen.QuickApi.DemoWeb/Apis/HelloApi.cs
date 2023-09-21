@@ -31,14 +31,14 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
-        public override Task<CustomApiRequest> Bind(HttpContext context)
+        public override async Task<CustomApiRequest> BindAsync(HttpContext context)
         {
-            var @default = base.Bind(context);
+            var @default = await base.BindAsync(context);
 
             //自定义绑定
             if (context.Request.Query.ContainsKey("c"))
             {
-                @default.Result.Name = context.Request.Query["c"];
+                @default.Name = context.Request.Query["c"];
             }
 
             return @default;

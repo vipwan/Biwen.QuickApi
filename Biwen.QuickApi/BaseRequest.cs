@@ -9,7 +9,7 @@ namespace Biwen.QuickApi
     /// <typeparam name="T"></typeparam>
     internal interface IReqBinder<T> where T : class, new()
     {
-        Task<T> Bind(HttpContext context);
+        Task<T> BindAsync(HttpContext context);
     }
 
     public abstract class BaseRequest<T> : IRequestValidator,IReqBinder<T> where T : class, new()
@@ -31,7 +31,7 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
-        public virtual async Task<T> Bind(HttpContext context)
+        public virtual async Task<T> BindAsync(HttpContext context)
         {
             //route > header > body(Post) = querystring(Get)
             var @default = new T();

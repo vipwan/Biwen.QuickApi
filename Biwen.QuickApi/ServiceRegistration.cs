@@ -207,7 +207,7 @@ namespace Biwen.QuickApi
             });
 
             //获取请求对象
-            var bindMethod = parameterType.BaseType!.GetMethod("Bind")!;
+            var bindMethod = parameterType.BaseType!.GetMethod("BindAsync")!;
             dynamic bindRutn = bindMethod.Invoke(req, new object[] { ctx.HttpContext })!;
             req = bindRutn.Result;
 
