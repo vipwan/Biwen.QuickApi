@@ -184,7 +184,7 @@ namespace Biwen.QuickApi
             {
                 var httpContext = ctx.HttpContext;
                 var authService = httpContext!.RequestServices.GetRequiredService<IAuthorizationService>();
-                var authorizationResult = authService.AuthorizeAsync(httpContext.User, policy).GetAwaiter().GetResult();
+                var authorizationResult =await authService.AuthorizeAsync(httpContext.User, policy);
                 if (!authorizationResult.Succeeded)
                 {
                     return Results.Unauthorized();
