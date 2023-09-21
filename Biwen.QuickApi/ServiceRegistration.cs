@@ -138,7 +138,7 @@ namespace Biwen.QuickApi
                         }
 
                         //OpenApi 生成
-                        var method = api.GetMethod("Execute")!;
+                        var method = api.GetMethod("ExecuteAsync")!;
                         var parameter = method.GetParameters()[0]!;
                         var parameterType = parameter.ParameterType!;
 
@@ -152,7 +152,8 @@ namespace Biwen.QuickApi
                             routeHandlerBuilder!.ProducesProblem(StatusCodes.Status401Unauthorized);
                         }
                         //200
-                        routeHandlerBuilder!.Produces(200, method.ReturnType == typeof(EmptyResponse) ? null : method.ReturnType);
+                        var retnType = method.ReturnType.GenericTypeArguments[0];
+                        routeHandlerBuilder!.Produces(200, retnType == typeof(EmptyResponse) ? null : retnType);
                         //400
                         if (parameterType != typeof(EmptyRequest))
                         {
@@ -184,7 +185,7 @@ namespace Biwen.QuickApi
             {
                 var httpContext = ctx.HttpContext;
                 var authService = httpContext!.RequestServices.GetRequiredService<IAuthorizationService>();
-                var authorizationResult =await authService.AuthorizeAsync(httpContext.User, policy);
+                var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
                 if (!authorizationResult.Succeeded)
                 {
                     return Results.Unauthorized();
@@ -194,7 +195,7 @@ namespace Biwen.QuickApi
             object? o = ctx.HttpContext!.RequestServices.GetRequiredService(api);
             var cache = ctx.HttpContext!.RequestServices.GetRequiredService<IMemoryCache>();
 
-            var method = api.GetMethod("Execute")!;
+            var method = api.GetMethod("ExecuteAsync")!;
             var parameter = method.GetParameters()[0]!;
             //var fromAttr = parameter.GetCustomAttribute<FromAttribute>();
             var parameterType = parameter.ParameterType!;
@@ -236,7 +237,9 @@ namespace Biwen.QuickApi
                     }
                 }
             }
-            var result = method.Invoke(o, new object[] { req! });
+
+            //使用异步方法
+            var result = ((dynamic)method.Invoke(o, new object[] { req! })!).Result;
 
             if (result is EmptyResponse)
             {
@@ -244,6 +247,5 @@ namespace Biwen.QuickApi
             }
             return Results.Ok(result);
         }
-
     }
 }

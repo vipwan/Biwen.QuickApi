@@ -53,7 +53,7 @@
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public abstract Rsp Execute(Req request);
+        public abstract Task<Rsp> ExecuteAsync(Req request);
 
     }
 

@@ -55,9 +55,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("index", Group = "admin", Verbs = Verb.GET | Verb.POST, Policy = "admin")]
     public class NeedAuthApi : BaseQuickApi
     {
-        public override EmptyResponse Execute(EmptyRequest request)
+        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
         {
-            return EmptyResponse.New;
+            return Task.FromResult(EmptyResponse.New);
         }
     }
 
@@ -67,8 +67,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("world/{name}", Group = "hello", Verbs = Verb.GET | Verb.POST)]
     public class HelloApi : BaseQuickApi<HelloApiRequest, HelloApiResponse>
     {
-        public override HelloApiResponse Execute(HelloApiRequest request)
+        public override async Task<HelloApiResponse> ExecuteAsync(HelloApiRequest request)
         {
+            await Task.CompletedTask;
             return new HelloApiResponse
             {
                 Message = $"Hello {request.Name}"
@@ -83,8 +84,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("world2", Group = "hello", Verbs = Verb.POST)]
     public class Hello2Api : BaseQuickApi<HelloApiRequest, HelloApiResponse>
     {
-        public override HelloApiResponse Execute(HelloApiRequest request)
+        public override async Task<HelloApiResponse> ExecuteAsync(HelloApiRequest request)
         {
+            await Task.CompletedTask;
             return new HelloApiResponse
             {
                 Message = $"Hello {request.Name}"
@@ -99,8 +101,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("world3", Group = "hello", Verbs = Verb.POST)]
     public class Hello3Api : BaseQuickApi<EmptyRequest, HelloApiResponse>
     {
-        public override HelloApiResponse Execute(EmptyRequest request)
+        public override async Task<HelloApiResponse> ExecuteAsync(EmptyRequest request)
         {
+            await Task.CompletedTask;
             return new HelloApiResponse
             {
                 Message = $"Hello 3"
@@ -125,8 +128,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public override HelloApiResponse Execute(EmptyRequest request)
+        public override async Task<HelloApiResponse> ExecuteAsync(EmptyRequest request)
         {
+            await Task.CompletedTask;
             var hello = _service.Hello($"hello world {_httpContextAccessor.HttpContext!.Request.Path} !");
             return new HelloApiResponse
             {
@@ -142,8 +146,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("world5", Verbs = Verb.GET)]
     public class Hello5Api : BaseQuickApi
     {
-        public override EmptyResponse Execute(EmptyRequest request)
+        public override async Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
         {
+            await Task.CompletedTask;
             return EmptyResponse.New;
         }
     }
@@ -154,8 +159,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("world6", Verbs = Verb.GET)]
     public class Hello6Api : BaseQuickApi
     {
-        public override EmptyResponse Execute(EmptyRequest request)
+        public override async Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
         {
+            await Task.CompletedTask;
             return EmptyResponse.New;
         }
     }
@@ -166,8 +172,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("custom", Verbs = Verb.GET)]
     public class CustomApi : BaseQuickApi<CustomApiRequest>
     {
-        public override EmptyResponse Execute(CustomApiRequest request)
+        public override async Task<EmptyResponse> ExecuteAsync(CustomApiRequest request)
         {
+            await Task.CompletedTask;
             Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
             return EmptyResponse.New;
         }
