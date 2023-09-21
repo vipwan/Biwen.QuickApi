@@ -90,12 +90,14 @@ namespace Biwen.QuickApi
                     var verbs = attr.Verbs.SplitEnum();//拆分枚举
                     foreach (var verb in verbs)
                     {
+                        RouteHandlerBuilder routeHandlerBuilder = null!;
+
                         switch (verb)
                         {
                             case Verb.GET:
                             default:
                                 {
-                                    g.MapGet(attr.Route, async (IHttpContextAccessor ctx) =>
+                                    routeHandlerBuilder = g.MapGet(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
                                         return await @delegate(ctx, api, attr);
                                     });
@@ -103,7 +105,7 @@ namespace Biwen.QuickApi
                                 break;
                             case Verb.POST:
                                 {
-                                    g.MapPost(attr.Route, async (IHttpContextAccessor ctx) =>
+                                    routeHandlerBuilder = g.MapPost(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
                                         return await @delegate(ctx, api, attr);
                                     });
@@ -111,7 +113,7 @@ namespace Biwen.QuickApi
                                 break;
                             case Verb.PUT:
                                 {
-                                    g.MapPut(attr.Route, async (IHttpContextAccessor ctx) =>
+                                    routeHandlerBuilder = g.MapPut(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
                                         return await @delegate(ctx, api, attr);
                                     });
@@ -119,7 +121,7 @@ namespace Biwen.QuickApi
                                 break;
                             case Verb.DELETE:
                                 {
-                                    g.MapDelete(attr.Route, async (IHttpContextAccessor ctx) =>
+                                    routeHandlerBuilder = g.MapDelete(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
                                         return await @delegate(ctx, api, attr);
                                     });
@@ -127,12 +129,31 @@ namespace Biwen.QuickApi
                                 break;
                             case Verb.PATCH:
                                 {
-                                    g.MapPatch(attr.Route, async (IHttpContextAccessor ctx) =>
+                                    routeHandlerBuilder = g.MapPatch(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
                                         return await @delegate(ctx, api, attr);
                                     });
                                 }
                                 break;
+                        }
+
+                        //OpenApi 生成
+                        var method = api.GetMethod("Execute")!;
+                        var parameter = method.GetParameters()[0]!;
+                        var fromAttr = parameter.GetCustomAttribute<FromAttribute>();
+                        var parameterType = parameter.ParameterType!;
+                        if (fromAttr?.From == RequestFrom.FromBody)
+                        {
+                            //POST,PUT,PATCH
+                            routeHandlerBuilder!.Accepts(parameterType, "application/json");
+                        }
+                        if(method.ReturnType != typeof(EmptyResponse))
+                        {
+                            routeHandlerBuilder!.Produces(200, method.ReturnType);
+                        }   
+                        if (parameterType != typeof(EmptyRequest))
+                        {
+                            routeHandlerBuilder!.Produces(400, typeof(Microsoft.AspNetCore.Mvc.ValidationProblemDetails));
                         }
                     }
                 }
