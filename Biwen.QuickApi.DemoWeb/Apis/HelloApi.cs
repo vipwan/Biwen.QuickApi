@@ -10,9 +10,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public HelloApiRequest()
         {
-            RuleFor(x => x.Name).NotEmpty().WithMessage("Name不能为空");
-            RuleFor(x => x.Name).MaximumLength(10).WithMessage("Name最大长度为10");
-            RuleFor(x => x.Name).MinimumLength(5).WithMessage("Name最小长度为5");
+            RuleFor(x => x.Name).NotNull().Length(5, 10);
         }
     }
 
