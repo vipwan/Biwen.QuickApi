@@ -19,7 +19,7 @@ namespace Biwen.QuickApi
         /// <summary>
         /// 全局仅有一个T的内部验证器
         /// </summary>
-        private readonly InnerValidator Validator = new();
+        private static readonly InnerValidator Validator = new();
 
         public object RealValidator => Validator;
 
