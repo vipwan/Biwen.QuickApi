@@ -153,6 +153,6 @@ app.MapGet("/fromapi", (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 // GET ~/hello/world/biwen
 // GET ~/hello/world/biwen?name=biwen
 // POST ~/hello/world/biwen
-
+// GET ~/custom?c=11112222
 
 ```
