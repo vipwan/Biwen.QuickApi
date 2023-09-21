@@ -8,6 +8,10 @@ builder.Services.AddBiwenQuickApis();
 builder.Services.AddAuthentication("Bearer");
 builder.Services.AddAuthorization(builder => builder.AddPolicy("admin", policy => policy.RequireClaim("admin")));
 
+//swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 
 // Add services to the container.
 builder.Services.AddScoped<HelloService>();
@@ -20,6 +24,11 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseWelcomePage("/");
+
+
+//swagger
+app.UseSwagger();
+app.UseSwaggerUI();
 
 
 app.MapBiwenQuickApis();
