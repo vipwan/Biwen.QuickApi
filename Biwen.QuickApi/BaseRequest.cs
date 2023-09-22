@@ -1,4 +1,5 @@
 ﻿using System.Linq.Expressions;
+using System.Text.Json.Serialization;
 
 namespace Biwen.QuickApi
 {
@@ -22,6 +23,7 @@ namespace Biwen.QuickApi
         /// </summary>
         private readonly InnerValidator Validator = new();
 
+        [JsonIgnore]
         public IValidator<T> RealValidator => Validator;
 
         #endregion

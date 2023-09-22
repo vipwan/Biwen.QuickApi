@@ -266,7 +266,7 @@ namespace Biwen.QuickApi
             //var parameterType = parameter.ParameterType!;
 
             //所有的QuickApi都实现了IQuickApi,因此ReqType不可能为Null
-            var parameterType = ((dynamic)api).ReqType as Type;
+            //var parameterType = ((dynamic)api).ReqType as Type;
 
             //使用缓存,提升性能
             //object? req = await cache.GetOrCreateAsync($"biwen.quickapi.{parameterType.FullName}", async entry =>
