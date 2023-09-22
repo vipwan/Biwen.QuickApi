@@ -35,7 +35,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     }
 
 
-
     public class HelloApiResponse : BaseResponse
     {
         public string? Message { get; set; }
@@ -208,6 +207,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     }
 
 
+    #region 版本控制测试
+
     [QuickApi("v1")]
     public class V1Api : BaseQuickApi
     {
@@ -265,6 +266,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         }
     }
 
-
+    #endregion
 
 }
