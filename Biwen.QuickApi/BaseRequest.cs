@@ -36,7 +36,7 @@ namespace Biwen.QuickApi
     /// <summary>
     /// 空请求
     /// </summary>
-    public class EmptyRequest : BaseRequest<EmptyRequest>
+    public sealed class EmptyRequest : BaseRequest<EmptyRequest>
     {
     }
 

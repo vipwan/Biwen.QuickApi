@@ -8,7 +8,7 @@
     /// <summary>
     /// 空输出
     /// </summary>
-    public class EmptyResponse : BaseResponse
+    public sealed class EmptyResponse : BaseResponse
     {
         public static EmptyResponse New => new();
     }
