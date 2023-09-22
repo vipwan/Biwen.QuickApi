@@ -41,11 +41,11 @@ namespace Biwen.QuickApi
                 services.AddScoped(api);
             }
 
-            foreach (var binder in Binders)
-            {
-                //注册ReqBinder
-                services.AddSingleton(binder);
-            }
+            //foreach (var binder in Binders)
+            //{
+            //    //注册ReqBinder
+            //    services.AddSingleton(binder);
+            //}
 
             return services;
         }
@@ -95,7 +95,7 @@ namespace Biwen.QuickApi
             {
                 lock (_lock)
                     return _apis ??= ASS.InAllRequiredAssemblies.Where(x =>
-                    !x.IsAbstract && x.IsClass && x.IsToGenericInterface(InterfaceQuickApi));
+                    !x.IsAbstract && x.IsPublic && x.IsClass && x.IsToGenericInterface(InterfaceQuickApi));
             }
         }
 
@@ -106,7 +106,7 @@ namespace Biwen.QuickApi
             {
                 lock (_lock)
                     return _binders ??= ASS.InAllRequiredAssemblies.Where(x =>
-                    !x.IsAbstract && x.IsClass && x.IsToGenericInterface(InterfaceReqBinder));
+                    !x.IsAbstract && x.IsPublic && x.IsClass && x.IsToGenericInterface(InterfaceReqBinder));
             }
         }
 
@@ -281,19 +281,20 @@ namespace Biwen.QuickApi
 
             //获取请求对象,使用dynamic代替反射
             //约定:所有的请求对象都实现了IReqBinder,因此不可能为Null
-            var reqBinder = ctx.HttpContext!.RequestServices.GetRequiredService(parameterType!);
-            var req = await ((dynamic)reqBinder!).BindAsync(ctx.HttpContext!);
+            //var reqBinder = ctx.HttpContext!.RequestServices.GetRequiredService(parameterType!);
+            //var req = await ((dynamic)reqBinder!).BindAsync(ctx.HttpContext!);
+
+            var req = await ((dynamic)api).ReqBinder.BindAsync(ctx.HttpContext!);
 
             //验证DTO
             if (req != null)
             {
-                if (req is IRequestValidator validator)
+                //验证器
+                if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
                 {
-                    if (((dynamic)validator.RealValidator).Validate(req) is ValidationResult vresult && !vresult!.IsValid)
-                    {
-                        return Results.ValidationProblem(vresult.ToDictionary());
-                    }
+                    return Results.ValidationProblem(vresult.ToDictionary());
                 }
+                
                 //(bool, IDictionary<string, string[]>?) Valid(MethodInfo? md, object validator)
                 //{
                 //    //验证不通过的情况

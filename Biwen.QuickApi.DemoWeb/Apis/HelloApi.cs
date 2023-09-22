@@ -25,25 +25,26 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             RuleFor(x => x.Name).NotNull().Length(5, 10);
         }
+    }
 
-        /// <summary>
-        /// 自定义绑定
-        /// </summary>
-        /// <param name="context"></param>
-        /// <returns></returns>
-        public override async Task<CustomApiRequest> BindAsync(HttpContext context)
+    /// <summary>
+    /// 自定义的绑定器
+    /// </summary>
+    public class CustomApiRequestBinder : IReqBinder<CustomApiRequest>
+    {
+        public async Task<CustomApiRequest> BindAsync(HttpContext context)
         {
-            var @default = await base.BindAsync(context);
-
-            //自定义绑定
-            if (context.Request.Query.ContainsKey("c"))
+            var request = new CustomApiRequest
             {
-                @default.Name = context.Request.Query["c"];
-            }
+                Name = context.Request.Query["c"]
+            };
 
-            return @default;
+            await Task.CompletedTask;
+
+            return request;
         }
     }
+
 
 
     public class HelloApiResponse : BaseResponse
@@ -172,6 +173,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("custom", Verbs = Verb.GET)]
     public class CustomApi : BaseQuickApi<CustomApiRequest>
     {
+        public CustomApi()
+        {
+            UseReqBinder<CustomApiRequestBinder>();
+        }
+
         public override async Task<EmptyResponse> ExecuteAsync(CustomApiRequest request)
         {
             await Task.CompletedTask;

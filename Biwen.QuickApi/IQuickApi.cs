@@ -74,6 +74,26 @@ namespace Biwen.QuickApi
         ///  输出类型
         /// </summary>
         public Type RspType => typeof(Rsp);
+        
+        /// <summary>
+        /// 默认的请求参数绑定器
+        /// </summary>
+        private IReqBinder<Req> _reqBinder = new DefaultReqBinder<Req>();
+
+        public IReqBinder<Req> ReqBinder
+        {
+            get => _reqBinder;
+            private set => _reqBinder = value ?? throw new ArgumentNullException(nameof(value));
+        }
+
+        /// <summary>
+        /// 使用自定义的请求参数绑定器
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public void UseReqBinder<T>() where T : IReqBinder<Req>, new()
+        {
+            ReqBinder = new T();
+        }
 
         /// <summary>
         /// 请求输出,注意如果需要Request对象，请使用HttpContextAccessor.HttpContext.Request

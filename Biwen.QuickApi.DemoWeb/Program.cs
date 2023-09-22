@@ -45,14 +45,12 @@ app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
     //通过你的方式获取请求对象
     var req = new EmptyRequest();
     //验证请求对象
-    if (req.RealValidator is IValidator<EmptyRequest> validator)
+    var result = req.RealValidator.Validate(req);
+    if (!result.IsValid)
     {
-        var result = validator.Validate(req);
-        if (!result.IsValid)
-        {
-            return Results.BadRequest(result.ToDictionary());
-        }
+        return Results.BadRequest(result.ToDictionary());
     }
+
     //执行请求
     var x = await api.ExecuteAsync(new EmptyRequest());
     return Results.Ok(x);
