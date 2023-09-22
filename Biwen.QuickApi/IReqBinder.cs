@@ -69,6 +69,14 @@ namespace Biwen.QuickApi
                 //}
                 //body
                 {
+                    if (typeof(T) == typeof(EmptyRequest))
+                    {
+                        return @default;
+                    }
+                    if (typeof(T).GetProperties().Length == 0)
+                    {
+                        return @default;
+                    }
                     @default = await context.Request.ReadFromJsonAsync<T>();
                 }
             }
