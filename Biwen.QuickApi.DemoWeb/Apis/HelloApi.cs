@@ -198,8 +198,73 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 return await next(context);
             });
 
+
+            builder.HasApiVersion(1.0);
+
+
             return builder;
         }
 
     }
+
+
+    [QuickApi("v1")]
+    public class V1Api : BaseQuickApi
+    {
+        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        {
+            Console.WriteLine("v1");
+            return Task.FromResult(EmptyResponse.New);
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.HasApiVersion(1.0).WithGroupName("1.0");
+
+            builder.WithTags("VT");//按照版本分组
+            return builder;
+        }
+    }
+
+    [QuickApi("v1v2")]
+    public class V1V2Api : BaseQuickApi
+    {
+        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        {
+            Console.WriteLine("v1,v2");
+            return Task.FromResult(EmptyResponse.New);
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+
+            builder.HasApiVersion(1.0).WithGroupName("1.0");
+            builder.HasApiVersion(2.0).WithGroupName("2.0");
+
+            builder.WithTags("VT");//按照版本分组
+
+            return builder;
+        }
+    }
+
+    [QuickApi("v2")]
+    public class V2Api : BaseQuickApi
+    {
+        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        {
+            Console.WriteLine("v2");
+            return Task.FromResult(EmptyResponse.New);
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.HasApiVersion(2.0).WithGroupName("2.0");
+            builder.WithTags("VT");//按照版本分组
+
+            return builder;
+        }
+    }
+
+
+
 }

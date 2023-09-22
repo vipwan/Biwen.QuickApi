@@ -1,6 +1,8 @@
 using Biwen.QuickApi;
 using Biwen.QuickApi.DemoWeb;
-using FluentValidation;
+using Microsoft.OpenApi.Models;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,24 +11,44 @@ builder.Services.AddAuthorization(builder => builder.AddPolicy("admin", policy =
 
 //swagger
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("1.0", new OpenApiInfo
+    {
+        Version = "1.0",
+        Title = "API1标题",
+        Description = $"API描述,{"1.0"}版本, ?api-version=1.0"
+    });
+
+    options.SwaggerDoc("2.0", new OpenApiInfo
+    {
+        Version = "2.0",
+        Title = "API2标题",
+        Description = $"API描述,{"2.0"}版本, ?api-version=2.0"
+    });
+});
 
 
 // Add services to the container.
 builder.Services.AddScoped<HelloService>();
 
-
-
 //
-builder.Services.AddBiwenQuickApis();
+builder.Services.AddBiwenQuickApis(o =>
+{
+    o.RoutePrefix = "quick";
+});
 
 var app = builder.Build();
 
 
 //swagger
 app.UseSwagger();
-app.UseSwaggerUI();
 
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint($"/swagger/1.0/swagger.json", "1.0");
+    options.SwaggerEndpoint($"/swagger/2.0/swagger.json", "2.0");
+});
 
 
 app.UseAuthentication();

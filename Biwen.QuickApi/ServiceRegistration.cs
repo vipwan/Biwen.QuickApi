@@ -1,4 +1,5 @@
 ﻿
+using Asp.Versioning;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -7,7 +8,6 @@ using Microsoft.AspNetCore.Routing;
 
 namespace Biwen.QuickApi
 {
-
     public static class ServiceRegistration
     {
 
@@ -16,12 +16,30 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddBiwenQuickApis(this IServiceCollection services)
+        public static IServiceCollection AddBiwenQuickApis(this IServiceCollection services,Action<BiwenQuickApiOptions>? options=null)
         {
             //注册验证器
             services.AddFluentValidationAutoValidation();
             services.AddHttpContextAccessor();
             services.AddMemoryCache();
+
+            services.AddProblemDetails();
+            //当前支持服务版本
+            services.AddApiVersioning(options =>
+            {
+                // 如果请求没有声明就使用默认版本
+                options.AssumeDefaultVersionWhenUnspecified = true;
+                //options.ReportApiVersions = true;
+
+                // 使用QueryString来指定版本
+                options.ApiVersionReader = new QueryStringApiVersionReader("api-version");
+
+                // 默认版本1.0
+                options.DefaultApiVersion = new ApiVersion(1.0);
+            });
+
+            //options
+            services.AddOptions<BiwenQuickApiOptions>().Configure(o => { options?.Invoke(o); });
 
             //services.Scan(scan =>
             //{
@@ -133,12 +151,24 @@ namespace Biwen.QuickApi
             //分组:
             var groups = Apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
             var routeGroups = new List<(string, RouteGroupBuilder)>();
+            //quickapi前缀
+            var prefix = app.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.RoutePrefix;
             foreach (var group in groups)
             {
-                var g = app.MapGroup(group.Key);
+                var ver = app.NewVersionedApi(group.Key);
+                var g = ver.MapGroup(string.Empty);
+                //quickapi前缀
+                if (!string.IsNullOrEmpty(prefix))
+                {
+                    g = g.MapGroup(prefix);
+                }
+                //url分组
+                g = g.MapGroup(group.Key);
+
                 foreach (var apiType in group)
                 {
                     var attr = apiType.GetCustomAttribute<QuickApiAttribute>() ?? throw new QuickApiExcetion($"{apiType.Name}:必须标注QuickApi特性!");
+
                     var verbs = attr.Verbs.SplitEnum();//拆分枚举
                     foreach (var verb in verbs)
                     {
