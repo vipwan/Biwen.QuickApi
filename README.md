@@ -15,7 +15,11 @@ public class MyApi : BaseQuickApi{}
 
 ```csharp
 
-builder.Services.AddBiwenQuickApis();
+builder.Services.AddBiwenQuickApis(o =>
+{
+    o.RoutePrefix = "quick";
+});
+
 //....
 app.MapBiwenQuickApis();
 
@@ -153,6 +157,11 @@ app.MapBiwenQuickApis();
                 Console.WriteLine("自定义过滤器!");
                 return await next(context);
             });
+
+            //自定义Api版本
+            //默认为版本1.0,如果需要访问其他版本,需要在querystring中添加?api-version=2.0 :)
+            builder.HasApiVersion(1.0).WithGroupName("1.0");
+            builder.HasApiVersion(2.0).WithGroupName("2.0");
 
             return builder;
         }
