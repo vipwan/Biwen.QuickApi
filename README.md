@@ -3,7 +3,7 @@
 ## 项目介绍
 ```csharp
 [QuickApi("hello/world")]
-public class MyApi : BaseQuickApi{}
+public class MyApi : BaseQuickApi<Req,Rsp>{}
 ```
 	- 提供一种简单集成的Minimal Web Api交互模块
     - 开箱即用的Api路由 和 权限,Bind,validator体验
