@@ -50,13 +50,15 @@ namespace Biwen.QuickApi
             return services;
         }
 
+        #region internal
+
         /// <summary>
         /// 拆分枚举
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="e"></param>
         /// <returns></returns>
-        private static List<T> SplitEnum<T>(this T e) where T : Enum
+        static List<T> SplitEnum<T>(this T e) where T : Enum
         {
             var result = new List<T>();
             foreach (T item in Enum.GetValues(typeof(T)))
@@ -69,9 +71,8 @@ namespace Biwen.QuickApi
             return result;
         }
 
-        #region internal
 
-        static readonly Type InterfaceG = typeof(IQuickApi<,>);
+        static readonly Type InterfaceQuickApi = typeof(IQuickApi<,>);
         static readonly Type InterfaceReqBinder = typeof(IReqBinder<>);
 
         static readonly object _lock = new();//锁
@@ -93,7 +94,7 @@ namespace Biwen.QuickApi
             {
                 lock (_lock)
                     return _apis ??= ASS.InAllRequiredAssemblies.Where(x => 
-                    !x.IsAbstract && x.IsClass && x.IsToGenericInterface(InterfaceG));
+                    !x.IsAbstract && x.IsClass && x.IsToGenericInterface(InterfaceQuickApi));
             }
         }
 
