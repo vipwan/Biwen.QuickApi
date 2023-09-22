@@ -1,6 +1,5 @@
 ﻿namespace Biwen.QuickApi.Attributes
 {
-
     /// <summary>
     /// QuickApi特性
     /// </summary>
@@ -13,9 +12,9 @@
             Route = route;
         }
         /// <summary>
-        /// 分组. 例如: hello
+        /// 分组. 例如: hello,不可为Null
         /// </summary>
-        public string Group { get; set; } = string.Empty;
+        public string Group { get;set; } = string.Empty;
         /// <summary>
         /// 路由. 例如: hello/world/{name}
         /// </summary>

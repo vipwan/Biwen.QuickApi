@@ -71,17 +71,18 @@ namespace Biwen.QuickApi
             return result;
         }
 
-
         static readonly Type InterfaceQuickApi = typeof(IQuickApi<,>);
         static readonly Type InterfaceReqBinder = typeof(IReqBinder<>);
 
         static readonly object _lock = new();//锁
 
-        static bool IsToGenericInterface(this Type type, Type intface)
+        static bool IsToGenericInterface(this Type type, Type baseInterface)
         {
             if (type == null) return false;
+            if (baseInterface == null) return false;
+
             return type.GetInterfaces().Length > 0
-                && type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == intface);
+                && type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == baseInterface);
         }
 
         static IEnumerable<Type> _apis = null!;
@@ -120,7 +121,7 @@ namespace Biwen.QuickApi
         /// <exception cref="QuickApiExcetion"></exception>
         public static (string, RouteGroupBuilder)[] MapBiwenQuickApis(this IEndpointRouteBuilder app)
         {
-            if (Apis.Count() == 0)
+            if (!Apis.Any())
             {
                 throw new QuickApiExcetion("确定你有添加任何继承了BaseQuickApi的Api吗!?");
             }
@@ -141,14 +142,14 @@ namespace Biwen.QuickApi
                     var verbs = attr.Verbs.SplitEnum();//拆分枚举
                     foreach (var verb in verbs)
                     {
-                        RouteHandlerBuilder? routeHandlerBuilder = null!;
+                        RouteHandlerBuilder? rhBuilder = null!;
 
                         switch (verb)
                         {
                             case Verb.GET:
                             default:
                                 {
-                                    routeHandlerBuilder = g.MapGet(attr.Route, async (IHttpContextAccessor ctx) =>
+                                    rhBuilder = g.MapGet(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
                                         return await RequestHandler(ctx, apiType, attr);
                                     });
@@ -156,7 +157,7 @@ namespace Biwen.QuickApi
                                 break;
                             case Verb.POST:
                                 {
-                                    routeHandlerBuilder = g.MapPost(attr.Route, async (IHttpContextAccessor ctx) =>
+                                    rhBuilder = g.MapPost(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
                                         return await RequestHandler(ctx, apiType, attr);
                                     });
@@ -164,7 +165,7 @@ namespace Biwen.QuickApi
                                 break;
                             case Verb.PUT:
                                 {
-                                    routeHandlerBuilder = g.MapPut(attr.Route, async (IHttpContextAccessor ctx) =>
+                                    rhBuilder = g.MapPut(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
                                         return await RequestHandler(ctx, apiType, attr);
                                     });
@@ -172,7 +173,7 @@ namespace Biwen.QuickApi
                                 break;
                             case Verb.DELETE:
                                 {
-                                    routeHandlerBuilder = g.MapDelete(attr.Route, async (IHttpContextAccessor ctx) =>
+                                    rhBuilder = g.MapDelete(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
                                         return await RequestHandler(ctx, apiType, attr);
                                     });
@@ -180,7 +181,7 @@ namespace Biwen.QuickApi
                                 break;
                             case Verb.PATCH:
                                 {
-                                    routeHandlerBuilder = g.MapPatch(attr.Route, async (IHttpContextAccessor ctx) =>
+                                    rhBuilder = g.MapPatch(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
                                         return await RequestHandler(ctx, apiType, attr);
                                     });
@@ -190,36 +191,38 @@ namespace Biwen.QuickApi
 
                         //HandlerBuilder
                         using var scope = app.ServiceProvider.CreateAsyncScope();
-                        var currentApi = scope.ServiceProvider.GetService(apiType);
+                        var currentApi = scope.ServiceProvider.GetRequiredService(apiType);
                         if (currentApi is IHandlerBuilder handlerBuilder)
                         {
-                            routeHandlerBuilder = handlerBuilder.HandlerBuilder(routeHandlerBuilder!);
+                            rhBuilder = handlerBuilder.HandlerBuilder(rhBuilder!);
                         }
 
                         //OpenApi 生成
-                        var method = apiType.GetMethod("ExecuteAsync")!;
-                        var parameter = method.GetParameters()[0]!;
-                        var parameterType = parameter.ParameterType!;
+                        //var method = apiType.GetMethod("ExecuteAsync")!;
+                        //var parameter = method.GetParameters()[0]!;
+                        //var parameterType = parameter.ParameterType!;
+                        var parameterType = ((dynamic)currentApi).ReqType as Type;
 
                         if (verb != Verb.GET && parameterType != typeof(EmptyRequest))
                         {
-                            routeHandlerBuilder!.Accepts(parameterType, "application/json");
+                            rhBuilder!.Accepts(parameterType!, "application/json");
                         }
                         //401
                         if (!string.IsNullOrEmpty(attr.Policy))
                         {
-                            routeHandlerBuilder?.ProducesProblem(StatusCodes.Status401Unauthorized);
+                            rhBuilder?.ProducesProblem(StatusCodes.Status401Unauthorized);
                         }
                         //200
-                        var retnType = method.ReturnType.GenericTypeArguments[0];
-                        routeHandlerBuilder?.Produces(200, retnType == typeof(EmptyResponse) ? null : retnType);
+                        //var retnType = method.ReturnType.GenericTypeArguments[0];
+                        var retnType= ((dynamic)currentApi).RspType as Type;
+                        rhBuilder?.Produces(200, retnType == typeof(EmptyResponse) ? null : retnType);
                         //400
                         if (parameterType != typeof(EmptyRequest))
                         {
-                            routeHandlerBuilder?.ProducesValidationProblem();
+                            rhBuilder?.ProducesValidationProblem();
                         }
                         //500
-                        routeHandlerBuilder?.ProducesProblem(StatusCodes.Status500InternalServerError);
+                        rhBuilder?.ProducesProblem(StatusCodes.Status500InternalServerError);
                     }
                 }
                 routeGroups.Add((group.Key, g));

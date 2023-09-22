@@ -70,6 +70,10 @@ namespace Biwen.QuickApi
         /// 获取请求类型
         /// </summary>
         public Type ReqType => typeof(Req);
+        /// <summary>
+        ///  输出类型
+        /// </summary>
+        public Type RspType => typeof(Rsp);
 
         /// <summary>
         /// 请求输出,注意如果需要Request对象，请使用HttpContextAccessor.HttpContext.Request
