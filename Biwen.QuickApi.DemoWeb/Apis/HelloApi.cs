@@ -6,7 +6,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     public class HelloApiRequest : BaseRequest<HelloApiRequest>
     {
-        public string? Name { get; set; }
+        public string? Name { get; set; } = "default";
 
         public HelloApiRequest()
         {
@@ -21,10 +21,14 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public async Task<HelloApiRequest> BindAsync(HttpContext context)
         {
-            var request = new HelloApiRequest
+            var request = new HelloApiRequest();
+
+            //支持默认值,如果没有c,则使用默认值
+            if (context.Request.Query.TryGetValue("c", out var c))
             {
-                Name = context.Request.Query["c"]
-            };
+                request.Name = c;
+            }
+
             await Task.CompletedTask;
             return request;
         }
