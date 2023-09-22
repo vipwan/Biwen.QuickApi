@@ -42,21 +42,21 @@ app.MapBiwenQuickApis();
         {
             RuleFor(x => x.Name).NotNull().Length(5, 10);
         }
+    }
 
-        /// <summary>
-        /// 自定义绑定
-        /// </summary>
-        /// <param name="context"></param>
-        /// <returns></returns>
-        public override Task<CustomApiRequest> Bind(HttpContext context)
+    /// <summary>
+    /// 自定义的绑定器
+    /// </summary>
+    public class CustomApiRequestBinder : IReqBinder<CustomApiRequest>
+    {
+        public async Task<CustomApiRequest> BindAsync(HttpContext context)
         {
-            var @default = base.Bind(context);
-            //自定义绑定
-            if (context.Request.Query.ContainsKey("c"))
+            var request = new CustomApiRequest
             {
-                @default.Result.Name = context.Request.Query["c"];
-            }
-            return @default;
+                Name = context.Request.Query["c"]
+            };
+            await Task.CompletedTask;
+            return request;
         }
     }
 
@@ -114,8 +114,14 @@ app.MapBiwenQuickApis();
     [QuickApi("custom", Verbs = Verb.GET)]
     public class CustomApi : BaseQuickApi<CustomApiRequest>
     {
-        public override EmptyResponse Execute(CustomApiRequest request)
+        public CustomApi()
         {
+            UseReqBinder<CustomApiRequestBinder>();
+        }
+
+        public override async Task<EmptyResponse> ExecuteAsync(CustomApiRequest request)
+        {
+            await Task.CompletedTask;
             Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
             return EmptyResponse.New;
         }
@@ -146,7 +152,9 @@ app.MapBiwenQuickApis();
 
             return builder;
         }
+
     }
+
 
 ```
 
@@ -155,23 +163,19 @@ app.MapBiwenQuickApis();
 
 ```csharp
 
-//通过服务调用QuickApi
-app.MapGet("/fromapi", (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
+//测试其他地方调用QuickApi
+app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 {
     //通过你的方式获取请求对象
     var req = new EmptyRequest();
     //验证请求对象
-    var validator = req.RealValidator as IValidator<EmptyRequest>;
-    if (validator != null)
+    var result = req.RealValidator.Validate(req);
+    if (!result.IsValid)
     {
-        var result = validator.Validate(req);
-        if (!result.IsValid)
-        {
-            return Results.BadRequest(result.ToDictionary());
-        }
+        return Results.BadRequest(result.ToDictionary());
     }
     //执行请求
-    var x = api.Execute(new EmptyRequest());
+    var x = await api.ExecuteAsync(new EmptyRequest());
     return Results.Ok(x);
 });
 

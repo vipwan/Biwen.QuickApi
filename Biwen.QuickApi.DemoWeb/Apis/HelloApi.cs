@@ -15,32 +15,17 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     }
 
     /// <summary>
-    /// 模拟自定义绑定的Request
-    /// </summary>
-    public class CustomApiRequest : BaseRequest<CustomApiRequest>
-    {
-        public string? Name { get; set; }
-
-        public CustomApiRequest()
-        {
-            RuleFor(x => x.Name).NotNull().Length(5, 10);
-        }
-    }
-
-    /// <summary>
     /// 自定义的绑定器
     /// </summary>
-    public class CustomApiRequestBinder : IReqBinder<CustomApiRequest>
+    public class CustomApiRequestBinder : IReqBinder<HelloApiRequest>
     {
-        public async Task<CustomApiRequest> BindAsync(HttpContext context)
+        public async Task<HelloApiRequest> BindAsync(HttpContext context)
         {
-            var request = new CustomApiRequest
+            var request = new HelloApiRequest
             {
                 Name = context.Request.Query["c"]
             };
-
             await Task.CompletedTask;
-
             return request;
         }
     }
@@ -171,14 +156,14 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// get ~/custom?c=11112222
     /// </summary>
     [QuickApi("custom", Verbs = Verb.GET)]
-    public class CustomApi : BaseQuickApi<CustomApiRequest>
+    public class CustomApi : BaseQuickApi<HelloApiRequest>
     {
         public CustomApi()
         {
             UseReqBinder<CustomApiRequestBinder>();
         }
 
-        public override async Task<EmptyResponse> ExecuteAsync(CustomApiRequest request)
+        public override async Task<EmptyResponse> ExecuteAsync(HelloApiRequest request)
         {
             await Task.CompletedTask;
             Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
