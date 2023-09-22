@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.Caching.Memory;
 
 namespace Biwen.QuickApi
 {
@@ -36,12 +35,18 @@ namespace Biwen.QuickApi
             //    .WithTransientLifetime();  //AddTransient
             //});
 
-            //注册Api
-            var apis = ASS.InAllRequiredAssemblies.Where(x => !x.IsAbstract && x.IsClass && x.IsAssignableTo(typeof(IQuickApi)));
-            foreach (var api in apis)
+            foreach (var api in Apis)
             {
+                //注册Api
                 services.AddScoped(api);
             }
+
+            foreach (var binder in Binders)
+            {
+                //注册ReqBinder
+                services.AddSingleton(binder);
+            }
+
             return services;
         }
 
@@ -64,6 +69,47 @@ namespace Biwen.QuickApi
             return result;
         }
 
+        #region internal
+
+        static readonly Type InterfaceG = typeof(IQuickApi<,>);
+        static readonly Type InterfaceReqBinder = typeof(IReqBinder<>);
+
+        static readonly object _lock = new();//锁
+
+        static bool IsToGenericInterface(this Type type,Type intface)
+        {
+            if (type == null) return false;
+            return type.GetInterfaces().Length > 0
+                && type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == intface);
+        }
+
+        static IEnumerable<Type> _apis = null!;
+        /// <summary>
+        /// 所有的QuickApi
+        /// </summary>
+        static IEnumerable<Type> Apis
+        {
+            get
+            {
+                lock (_lock)
+                    return _apis ??= ASS.InAllRequiredAssemblies.Where(x => 
+                    !x.IsAbstract && x.IsClass && x.IsToGenericInterface(InterfaceG));
+            }
+        }
+
+        static IEnumerable<Type> _binders= null!;
+        static IEnumerable<Type> Binders
+        {
+            get
+            {
+                lock (_lock)
+                    return _binders ??= ASS.InAllRequiredAssemblies.Where(x =>
+                    !x.IsAbstract && x.IsClass && x.IsToGenericInterface(InterfaceReqBinder));
+            }
+        }
+
+        #endregion
+
 
         /// <summary>
         /// Map Biwen.QuickApis
@@ -73,20 +119,24 @@ namespace Biwen.QuickApi
         /// <exception cref="QuickApiExcetion"></exception>
         public static (string, RouteGroupBuilder)[] MapBiwenQuickApis(this IEndpointRouteBuilder app)
         {
-            var apis = ASS.InAllRequiredAssemblies.Where(x => !x.IsAbstract && x.IsClass && x.IsAssignableTo(typeof(IQuickApi)));
-            if (apis.Any(x => x.GetCustomAttribute<QuickApiAttribute>() == null))
+            if (Apis.Count() == 0)
+            {
+                throw new QuickApiExcetion("确定你有添加任何继承了BaseQuickApi的Api吗!?");
+            }
+
+            if (Apis.Any(x => x.GetCustomAttribute<QuickApiAttribute>() == null))
             {
                 throw new QuickApiExcetion($"所有QuickApi都必须标注QuickApi特性!");
             }
             //分组:
-            var groups = apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
+            var groups = Apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
             var routeGroups = new List<(string, RouteGroupBuilder)>();
             foreach (var group in groups)
             {
                 var g = app.MapGroup(group.Key);
-                foreach (var api in group)
+                foreach (var apiType in group)
                 {
-                    var attr = api.GetCustomAttribute<QuickApiAttribute>() ?? throw new QuickApiExcetion($"{api.Name}:必须标注QuickApi特性!");
+                    var attr = apiType.GetCustomAttribute<QuickApiAttribute>() ?? throw new QuickApiExcetion($"{apiType.Name}:必须标注QuickApi特性!");
                     var verbs = attr.Verbs.SplitEnum();//拆分枚举
                     foreach (var verb in verbs)
                     {
@@ -99,7 +149,7 @@ namespace Biwen.QuickApi
                                 {
                                     routeHandlerBuilder = g.MapGet(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
-                                        return await RequestHandler(ctx, api, attr);
+                                        return await RequestHandler(ctx, apiType, attr);
                                     });
                                 }
                                 break;
@@ -107,7 +157,7 @@ namespace Biwen.QuickApi
                                 {
                                     routeHandlerBuilder = g.MapPost(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
-                                        return await RequestHandler(ctx, api, attr);
+                                        return await RequestHandler(ctx, apiType, attr);
                                     });
                                 }
                                 break;
@@ -115,7 +165,7 @@ namespace Biwen.QuickApi
                                 {
                                     routeHandlerBuilder = g.MapPut(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
-                                        return await RequestHandler(ctx, api, attr);
+                                        return await RequestHandler(ctx, apiType, attr);
                                     });
                                 }
                                 break;
@@ -123,7 +173,7 @@ namespace Biwen.QuickApi
                                 {
                                     routeHandlerBuilder = g.MapDelete(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
-                                        return await RequestHandler(ctx, api, attr);
+                                        return await RequestHandler(ctx, apiType, attr);
                                     });
                                 }
                                 break;
@@ -131,7 +181,7 @@ namespace Biwen.QuickApi
                                 {
                                     routeHandlerBuilder = g.MapPatch(attr.Route, async (IHttpContextAccessor ctx) =>
                                     {
-                                        return await RequestHandler(ctx, api, attr);
+                                        return await RequestHandler(ctx, apiType, attr);
                                     });
                                 }
                                 break;
@@ -139,11 +189,14 @@ namespace Biwen.QuickApi
 
                         //HandlerBuilder
                         using var scope = app.ServiceProvider.CreateAsyncScope();
-                        var currentApi = scope.ServiceProvider.GetService(api) as IQuickApi;
-                        routeHandlerBuilder = currentApi!.HandlerBuilder(routeHandlerBuilder!);
+                        var currentApi = scope.ServiceProvider.GetService(apiType);
+                        if(currentApi is IHandlerBuilder handlerBuilder)
+                        {
+                            routeHandlerBuilder = handlerBuilder.HandlerBuilder(routeHandlerBuilder!);
+                        }
 
                         //OpenApi 生成
-                        var method = api.GetMethod("ExecuteAsync")!;
+                        var method = apiType.GetMethod("ExecuteAsync")!;
                         var parameter = method.GetParameters()[0]!;
                         var parameterType = parameter.ParameterType!;
 
@@ -154,18 +207,18 @@ namespace Biwen.QuickApi
                         //401
                         if (!string.IsNullOrEmpty(attr.Policy))
                         {
-                            routeHandlerBuilder!.ProducesProblem(StatusCodes.Status401Unauthorized);
+                            routeHandlerBuilder?.ProducesProblem(StatusCodes.Status401Unauthorized);
                         }
                         //200
                         var retnType = method.ReturnType.GenericTypeArguments[0];
-                        routeHandlerBuilder!.Produces(200, retnType == typeof(EmptyResponse) ? null : retnType);
+                        routeHandlerBuilder?.Produces(200, retnType == typeof(EmptyResponse) ? null : retnType);
                         //400
                         if (parameterType != typeof(EmptyRequest))
                         {
-                            routeHandlerBuilder!.ProducesValidationProblem();
+                            routeHandlerBuilder?.ProducesValidationProblem();
                         }
                         //500
-                        routeHandlerBuilder!.ProducesProblem(StatusCodes.Status500InternalServerError);
+                        routeHandlerBuilder?.ProducesProblem(StatusCodes.Status500InternalServerError);
                     }
                 }
                 routeGroups.Add((group.Key, g));
@@ -178,74 +231,94 @@ namespace Biwen.QuickApi
         /// 执行请求的委托
         /// </summary>
         /// <param name="ctx"></param>
-        /// <param name="api"></param>
+        /// <param name="apiType"></param>
         /// <param name="quickApiAttribute"></param>
         /// <returns></returns>
         /// <exception cref="QuickApiExcetion"></exception>
-        async static Task<IResult> RequestHandler(IHttpContextAccessor ctx, Type api, QuickApiAttribute quickApiAttribute)
+        async static Task<IResult> RequestHandler(IHttpContextAccessor ctx, Type apiType, QuickApiAttribute quickApiAttribute)
         {
+            if(ctx==null) throw new QuickApiExcetion($"HttpContextAccessor is null!");
+            if(apiType==null) throw new QuickApiExcetion($"apiType is null!");
+            if(quickApiAttribute==null) throw new QuickApiExcetion($"quickApiAttribute is null!");
+
             //验证策略
             var policy = quickApiAttribute.Policy;
             if (!string.IsNullOrEmpty(policy))
             {
                 var httpContext = ctx.HttpContext;
-                var authService = httpContext!.RequestServices.GetRequiredService<IAuthorizationService>();
+                var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ??
+                    throw new QuickApiExcetion($"IAuthorizationService is null,besure services.AddAuthorization() first!");
                 var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
                 if (!authorizationResult.Succeeded)
                 {
                     return Results.Unauthorized();
                 }
             }
+            object? api = ctx.HttpContext!.RequestServices.GetRequiredService(apiType);
 
-            object? o = ctx.HttpContext!.RequestServices.GetRequiredService(api);
-            var cache = ctx.HttpContext!.RequestServices.GetRequiredService<IMemoryCache>();
+            //var cache = ctx.HttpContext!.RequestServices.GetRequiredService<IMemoryCache>();
+            //var method = apiType.GetMethod("ExecuteAsync")!;
+            //var parameter = method.GetParameters()[0]!;
+            //var parameterType = parameter.ParameterType!;
 
-            var method = api.GetMethod("ExecuteAsync")!;
-            var parameter = method.GetParameters()[0]!;
-            //var fromAttr = parameter.GetCustomAttribute<FromAttribute>();
-            var parameterType = parameter.ParameterType!;
+            //所有的QuickApi都实现了IQuickApi,因此ReqType不可能为Null
+            var parameterType = ((dynamic)api).ReqType as Type;
+
             //使用缓存,提升性能
-            object? req = await cache.GetOrCreateAsync($"biwen.quickapi.{parameterType.FullName}", async entry =>
-            {
-                entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(365);
-                return await Task.FromResult(Activator.CreateInstance(parameterType)!);
-            });
+            //object? req = await cache.GetOrCreateAsync($"biwen.quickapi.{parameterType.FullName}", async entry =>
+            //{
+            //    entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(365);
+            //    return await Task.FromResult(Activator.CreateInstance(parameterType)!);
+            //});
 
-            //获取请求对象
-            var bindMethod = parameterType.BaseType!.GetMethod("BindAsync")!;
-            dynamic bindRutn = bindMethod.Invoke(req, new object[] { ctx.HttpContext })!;
-            req = bindRutn.Result;
+            //var bindMethod = parameterType.BaseType!.GetMethod("BindAsync")!;
+            //dynamic bindRutn = bindMethod.Invoke(req, new object[] { ctx.HttpContext })!;
+            //req = bindRutn.Result;
+
+            //获取请求对象,使用dynamic代替反射
+            //约定:所有的请求对象都实现了IReqBinder,因此不可能为Null
+            var reqBinder = ctx.HttpContext!.RequestServices.GetRequiredService(parameterType!);
+            var req = await ((dynamic)reqBinder!).BindAsync(ctx.HttpContext!);
 
             //验证DTO
-            (bool, IDictionary<string, string[]>?) Valid(MethodInfo? md, object validator)
-            {
-                //验证不通过的情况
-                if (md!.Invoke(validator, new[] { req }) is ValidationResult result && !result!.IsValid)
-                {
-                    return (false, result.ToDictionary());
-                }
-                return (true, null);
-            }
             if (req != null)
             {
-                //继承至ValidationSettingBase<T>的情况
-                if (o.GetType().BaseType!.IsConstructedGenericType && o.GetType().BaseType!.GenericTypeArguments.Any(x => x == req!.GetType()))
+                if (req is IRequestValidator validator)
                 {
-                    var x = req as IRequestValidator ?? throw new QuickApiExcetion($"IRequestValidator is Null!");
-                    var md = x.RealValidator.GetType().GetMethods().First(
-                        x => !x.IsGenericMethod && x.Name == nameof(IValidator.Validate));
-                    //验证不通过的情况
-                    var vResult = Valid(md, x.RealValidator);
-                    if (!vResult.Item1)
+                    if (((dynamic)validator.RealValidator).Validate(req) is ValidationResult vresult && !vresult!.IsValid)
                     {
-                        return Results.ValidationProblem(vResult.Item2!);
+                        return Results.ValidationProblem(vresult.ToDictionary());
                     }
                 }
+                //(bool, IDictionary<string, string[]>?) Valid(MethodInfo? md, object validator)
+                //{
+                //    //验证不通过的情况
+                //    if (md!.Invoke(validator, new[] { req }) is ValidationResult result && !result!.IsValid)
+                //    {
+                //        return (false, result.ToDictionary());
+                //    }
+                //    return (true, null);
+                //}
+
+                //继承至ValidationSettingBase<T>的情况
+                //if (api.GetType().BaseType!.IsConstructedGenericType && api.GetType().BaseType!.GenericTypeArguments.Any(x => x == req!.GetType()))
+                //{
+                //    var x = req as IRequestValidator ?? throw new QuickApiExcetion($"IRequestValidator is Null!");
+                //    var md = x.RealValidator.GetType().GetMethods().First(
+                //        x => !x.IsGenericMethod && x.Name == nameof(IValidator.Validate));
+                //    //验证不通过的情况
+                //    var vResult = Valid(md, x.RealValidator);
+                //    if (!vResult.Item1)
+                //    {
+                //        return Results.ValidationProblem(vResult.Item2!);
+                //    }
+                //}
             }
 
-            //使用异步方法
-            var result = ((dynamic)method.Invoke(o, new object[] { req! })!).Result;
-
+            //执行请求
+            //var result = await (dynamic)method.Invoke(api, new object[] { req! })!;
+            var result = await ((dynamic)api)!.ExecuteAsync(req!);
+            //返回结果
             if (result is EmptyResponse)
             {
                 return Results.Ok();//返回空

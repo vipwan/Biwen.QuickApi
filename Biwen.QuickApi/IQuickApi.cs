@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using System.Security.Cryptography;
 
 namespace Biwen.QuickApi
 {
@@ -40,7 +41,15 @@ namespace Biwen.QuickApi
     /// <summary>
     /// 标记接口
     /// </summary>
-    internal interface IQuickApi
+    internal interface IQuickApi<Req, Rsp>
+    {
+        Task<Rsp> ExecuteAsync(Req request);
+    }
+
+    /// <summary>
+    /// HandlerBuilder
+    /// </summary>
+    internal interface IHandlerBuilder
     {
         /// <summary>
         /// 提供minimal扩展
@@ -50,13 +59,18 @@ namespace Biwen.QuickApi
         RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder);
     }
 
+
     /// <summary>
     /// BaseQuickApi
     /// </summary>
     /// <typeparam name="Req">请求对象</typeparam>
     /// <typeparam name="Rsp">输出对象</typeparam>
-    public abstract class BaseQuickApi<Req, Rsp> : IQuickApi where Req : BaseRequest<Req>, new() where Rsp : BaseResponse
+    public abstract class BaseQuickApi<Req, Rsp> : IHandlerBuilder, IQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new() where Rsp : BaseResponse
     {
+        /// <summary>
+        /// 获取请求类型
+        /// </summary>
+        public Type ReqType => typeof(Req);
 
         /// <summary>
         /// 请求输出,注意如果需要Request对象，请使用HttpContextAccessor.HttpContext.Request
@@ -70,7 +84,6 @@ namespace Biwen.QuickApi
             //todo:
             return builder;
         }
-
     }
 
     /// <summary>
@@ -79,7 +92,6 @@ namespace Biwen.QuickApi
     /// <typeparam name="Req"></typeparam>
     public abstract class BaseQuickApi<Req> : BaseQuickApi<Req, EmptyResponse> where Req : BaseRequest<Req>, new()
     {
-
     }
 
     /// <summary>
@@ -87,6 +99,5 @@ namespace Biwen.QuickApi
     /// </summary>
     public abstract class BaseQuickApi : BaseQuickApi<EmptyRequest, EmptyResponse>
     {
-
     }
 }
