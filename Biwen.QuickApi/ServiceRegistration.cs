@@ -77,7 +77,7 @@ namespace Biwen.QuickApi
 
         static readonly object _lock = new();//锁
 
-        static bool IsToGenericInterface(this Type type,Type intface)
+        static bool IsToGenericInterface(this Type type, Type intface)
         {
             if (type == null) return false;
             return type.GetInterfaces().Length > 0
@@ -93,12 +93,12 @@ namespace Biwen.QuickApi
             get
             {
                 lock (_lock)
-                    return _apis ??= ASS.InAllRequiredAssemblies.Where(x => 
+                    return _apis ??= ASS.InAllRequiredAssemblies.Where(x =>
                     !x.IsAbstract && x.IsClass && x.IsToGenericInterface(InterfaceQuickApi));
             }
         }
 
-        static IEnumerable<Type> _binders= null!;
+        static IEnumerable<Type> _binders = null!;
         static IEnumerable<Type> Binders
         {
             get
@@ -191,7 +191,7 @@ namespace Biwen.QuickApi
                         //HandlerBuilder
                         using var scope = app.ServiceProvider.CreateAsyncScope();
                         var currentApi = scope.ServiceProvider.GetService(apiType);
-                        if(currentApi is IHandlerBuilder handlerBuilder)
+                        if (currentApi is IHandlerBuilder handlerBuilder)
                         {
                             routeHandlerBuilder = handlerBuilder.HandlerBuilder(routeHandlerBuilder!);
                         }
@@ -238,9 +238,9 @@ namespace Biwen.QuickApi
         /// <exception cref="QuickApiExcetion"></exception>
         async static Task<IResult> RequestHandler(IHttpContextAccessor ctx, Type apiType, QuickApiAttribute quickApiAttribute)
         {
-            if(ctx==null) throw new QuickApiExcetion($"HttpContextAccessor is null!");
-            if(apiType==null) throw new QuickApiExcetion($"apiType is null!");
-            if(quickApiAttribute==null) throw new QuickApiExcetion($"quickApiAttribute is null!");
+            if (ctx == null) throw new QuickApiExcetion($"HttpContextAccessor is null!");
+            if (apiType == null) throw new QuickApiExcetion($"apiType is null!");
+            if (quickApiAttribute == null) throw new QuickApiExcetion($"quickApiAttribute is null!");
 
             //验证策略
             var policy = quickApiAttribute.Policy;
@@ -317,14 +317,28 @@ namespace Biwen.QuickApi
             }
 
             //执行请求
-            //var result = await (dynamic)method.Invoke(api, new object[] { req! })!;
-            var result = await ((dynamic)api)!.ExecuteAsync(req!);
-            //返回结果
-            if (result is EmptyResponse)
+            try
             {
-                return Results.Ok();//返回空
+                //var result = await (dynamic)method.Invoke(api, new object[] { req! })!;
+                var result = await ((dynamic)api)!.ExecuteAsync(req!);
+                //返回结果
+                if (result is EmptyResponse)
+                {
+                    return Results.Ok();//返回空
+                }
+                return Results.Ok(result);
             }
-            return Results.Ok(result);
+            catch (Exception ex)
+            {
+                var exceptionHandlers = ctx.HttpContext!.RequestServices.GetServices<IQuickApiExceptionHandler>();
+                //异常处理
+                foreach (var handler in exceptionHandlers)
+                {
+                    await handler.HandleAsync(ex);
+                }
+                //默认处理
+                throw;
+            }
         }
     }
 }

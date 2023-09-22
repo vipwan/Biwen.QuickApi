@@ -7,7 +7,7 @@ namespace Biwen.QuickApi.Infrastructure
     /// <summary>
     /// Assembly Helper
     /// </summary>
-    public static class Assemblies
+    internal static class Assemblies
     {
         /// <summary>
         /// 排除的程序集

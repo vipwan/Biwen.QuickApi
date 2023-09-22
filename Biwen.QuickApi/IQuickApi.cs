@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using System.Security.Cryptography;
 
 namespace Biwen.QuickApi
 {

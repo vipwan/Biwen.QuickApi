@@ -196,6 +196,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             //自定义标签
             builder.WithTags("custom");
 
+            //自定义过滤器
+            builder.AddEndpointFilter(async (context, next) =>
+            {
+                Console.WriteLine("自定义过滤器!");
+                return await next(context);
+            });
+
             return builder;
         }
 
