@@ -1,6 +1,7 @@
 ﻿using Biwen.QuickApi.Attributes;
 using Biwen.QuickApi.Binder;
 using FluentValidation;
+using System.Text.Json.Serialization;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
 {
@@ -45,6 +46,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     public class HelloApiResponse : BaseResponse
     {
         public string? Message { get; set; }
+
+        /// <summary>
+        /// 返回字段的别名测试
+        /// </summary>
+        ///[AliasAs("a")]
+        [JsonPropertyName("a")]
+        public string? Alias { get; set; }
     }
 
 
@@ -97,7 +105,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             await Task.CompletedTask;
             return new HelloApiResponse
             {
-                Message = $"Hello {request.Name}  {request.Alias} "
+                Message = $"Hello {request.Name}  {request.Alias} ",
+                Alias = request.Alias //别名测试 Alias -> a
             };
         }
 

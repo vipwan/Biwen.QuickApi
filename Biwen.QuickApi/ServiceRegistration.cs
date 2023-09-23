@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using System.Dynamic;
 
 namespace Biwen.QuickApi
 {
@@ -16,7 +17,7 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddBiwenQuickApis(this IServiceCollection services,Action<BiwenQuickApiOptions>? options=null)
+        public static IServiceCollection AddBiwenQuickApis(this IServiceCollection services, Action<BiwenQuickApiOptions>? options = null)
         {
             //注册验证器
             services.AddFluentValidationAutoValidation();
@@ -206,10 +207,10 @@ namespace Biwen.QuickApi
                         }
                         //200
                         //var retnType = method.ReturnType.GenericTypeArguments[0];
-                        var retnType= ((dynamic)currentApi).RspType as Type;
-                        if(retnType == typeof(ContentResponse))
+                        var retnType = ((dynamic)currentApi).RspType as Type;
+                        if (retnType == typeof(ContentResponse))
                         {
-                            rhBuilder?.Produces(200,typeof(string), contentType: "text/plain");
+                            rhBuilder?.Produces(200, typeof(string), contentType: "text/plain");
                         }
                         else
                         {
@@ -296,7 +297,7 @@ namespace Biwen.QuickApi
                 {
                     return Results.ValidationProblem(vresult.ToDictionary());
                 }
-                
+
                 //(bool, IDictionary<string, string[]>?) Valid(MethodInfo? md, object validator)
                 //{
                 //    //验证不通过的情况
@@ -333,12 +334,37 @@ namespace Biwen.QuickApi
                     return Results.Ok();//返回空
                 }
                 //返回文本结果
-                if(result is ContentResponse content)
+                if (result is ContentResponse content)
                 {
                     return Results.Content(content.Content);
                 }
+
+                //针对返回结果的别名处理
+                Func<dynamic?, dynamic?> rspToExpandoObject = (rsp) =>
+                {
+                    if (rsp == null) return null;
+
+                    var type = rsp.GetType() as Type;
+
+                    var hasAlias = type!.GetProperties().Any(x => x.GetCustomAttribute<AliasAsAttribute>() != null);
+                    if (!hasAlias)
+                    {
+                        return rsp;
+                    }
+
+                    dynamic expandoObject = new ExpandoObject();
+                    foreach (var prop in type.GetProperties())
+                    {
+                        var alias = prop.GetCustomAttribute<AliasAsAttribute>();
+                        ((IDictionary<string, object>)expandoObject)[alias != null ? alias.Name : prop.Name] = prop.GetValue(rsp);
+                    }
+
+                    return expandoObject;
+                };
+
                 //返回JSON
-                return Results.Json(result, quickApiOptions?.JsonSerializerOptions);
+                var expandoResult = rspToExpandoObject(result);
+                return Results.Json(expandoResult, quickApiOptions?.JsonSerializerOptions);
             }
             catch (Exception ex)
             {
