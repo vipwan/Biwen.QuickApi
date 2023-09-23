@@ -36,6 +36,12 @@ app.MapBiwenQuickApis();
     {
         public string? Name { get; set; }
 
+        /// <summary>
+        /// 别名绑定字段
+        /// </summary>
+        [AliasAs("a")]
+        public string? Alias { get; set; }
+
         public HelloApiRequest()
         {
             RuleFor(x => x.Name).NotNull().Length(5, 10);
