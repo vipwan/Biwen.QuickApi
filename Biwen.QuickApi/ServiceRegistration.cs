@@ -99,8 +99,7 @@ namespace Biwen.QuickApi
             if (type == null) return false;
             if (baseInterface == null) return false;
 
-            return type.GetInterfaces().Length > 0
-                && type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == baseInterface);
+            return type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == baseInterface);
         }
 
         static IEnumerable<Type> _apis = null!;
