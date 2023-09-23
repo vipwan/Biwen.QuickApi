@@ -4,8 +4,9 @@
 ```csharp
 [QuickApi("hello/world")]
 public class MyApi : BaseQuickApi<Req,Rsp>{}
-``` - 提供一种简单集成的Minimal Web Api交互模块
+```
     - Req -> {Authorization?} -> {Bind} -> {Validation?} -> {Logic} -> {ExceptionHandler?} -> Rsp
+    - 提供一种简单集成的Minimal Web Api交互模块
     - 开箱即用的Api路由 和 权限,Bind,validator体验
     - 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi,遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
     - write less, do more ; write anywhere, do anything
