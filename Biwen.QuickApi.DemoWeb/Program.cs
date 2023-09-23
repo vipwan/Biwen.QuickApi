@@ -1,6 +1,7 @@
 using Biwen.QuickApi;
 using Biwen.QuickApi.DemoWeb;
 using Microsoft.OpenApi.Models;
+using System.Text.Json;
 
 
 
@@ -36,6 +37,8 @@ builder.Services.AddScoped<HelloService>();
 builder.Services.AddBiwenQuickApis(o =>
 {
     o.RoutePrefix = "quick";
+    //不需要驼峰模式设置为null
+    //o.JsonSerializerOptions.PropertyNamingPolicy = null;
 });
 
 var app = builder.Build();

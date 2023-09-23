@@ -12,4 +12,17 @@
     {
         public static EmptyResponse New => new();
     }
+
+    /// <summary>
+    /// 文本输出
+    /// </summary>
+    public sealed class ContentResponse : BaseResponse
+    {
+        public ContentResponse(string content)
+        {
+            Content = content;
+        }
+
+        public string Content { get; set; }
+    }
 }

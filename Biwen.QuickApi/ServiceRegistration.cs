@@ -162,9 +162,11 @@ namespace Biwen.QuickApi
                 {
                     g = g.MapGroup(prefix);
                 }
-                //url分组
-                g = g.MapGroup(group.Key);
-
+                if (!string.IsNullOrEmpty(group.Key))
+                {
+                    //url分组
+                    g = g.MapGroup(group.Key);
+                }
                 foreach (var apiType in group)
                 {
                     var attr = apiType.GetCustomAttribute<QuickApiAttribute>() ?? throw new QuickApiExcetion($"{apiType.Name}:必须标注QuickApi特性!");
@@ -245,7 +247,14 @@ namespace Biwen.QuickApi
                         //200
                         //var retnType = method.ReturnType.GenericTypeArguments[0];
                         var retnType= ((dynamic)currentApi).RspType as Type;
-                        rhBuilder?.Produces(200, retnType == typeof(EmptyResponse) ? null : retnType);
+                        if(retnType == typeof(ContentResponse))
+                        {
+                            rhBuilder?.Produces(200, contentType: "text/plain");
+                        }
+                        else
+                        {
+                            rhBuilder?.Produces(200, retnType == typeof(EmptyResponse) ? null : retnType);
+                        }
                         //400
                         if (parameterType != typeof(EmptyRequest))
                         {
@@ -289,6 +298,9 @@ namespace Biwen.QuickApi
                 }
             }
             object? api = ctx.HttpContext!.RequestServices.GetRequiredService(apiType);
+
+            var quickApiOptions = ctx.HttpContext!.RequestServices.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
+
 
             //var cache = ctx.HttpContext!.RequestServices.GetRequiredService<IMemoryCache>();
             //var method = apiType.GetMethod("ExecuteAsync")!;
@@ -355,12 +367,18 @@ namespace Biwen.QuickApi
             {
                 //var result = await (dynamic)method.Invoke(api, new object[] { req! })!;
                 var result = await ((dynamic)api)!.ExecuteAsync(req!);
-                //返回结果
+                //返回空结果
                 if (result is EmptyResponse)
                 {
                     return Results.Ok();//返回空
                 }
-                return Results.Ok(result);
+                //返回文本结果
+                if(result is ContentResponse content)
+                {
+                    return Results.Content(content.Content);
+                }
+                //返回JSON
+                return Results.Json(result, quickApiOptions?.JsonSerializerOptions);
             }
             catch (Exception ex)
             {

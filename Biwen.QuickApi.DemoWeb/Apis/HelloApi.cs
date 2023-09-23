@@ -199,8 +199,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
 
             builder.HasApiVersion(1.0);
-
-
             return builder;
         }
 
@@ -267,5 +265,24 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     }
 
     #endregion
+
+
+    /// <summary>
+    /// get ~/content 返回文本测试
+    /// </summary>
+    [QuickApi("content",Group = "hello", Verbs = Verb.GET)]
+    public class ContentApi : BaseQuickApi<EmptyRequest, ContentResponse>
+    {
+        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Task.FromResult(new ContentResponse("Hello World content!"));
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.WithTags("custom");//按照版本分组
+            return builder;
+        }
+    }
 
 }
