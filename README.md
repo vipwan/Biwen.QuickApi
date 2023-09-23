@@ -12,6 +12,11 @@ public class MyApi : BaseQuickApi<Req,Rsp>{}
     - write less, do more ; write anywhere, do anything
 ## 使用方式
 
+### Step0 Nuget Install
+```bash
+dotnet add package Biwen.QuickApi
+```
+
 ### Step1 UseBiwenQuickApis
 
 ```csharp
