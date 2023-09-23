@@ -19,6 +19,8 @@ public class MyApi : BaseQuickApi<Req,Rsp>{}
 builder.Services.AddBiwenQuickApis(o =>
 {
     o.RoutePrefix = "quick";
+    //不需要驼峰模式设置为null
+    //o.JsonSerializerOptions.PropertyNamingPolicy = null;
 });
 
 //....
