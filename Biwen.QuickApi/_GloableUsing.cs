@@ -10,6 +10,7 @@ global using System.ComponentModel;
 global using System.Linq;
 global using System.Reflection;
 global using Biwen.QuickApi.Attributes;
+global using Biwen.QuickApi.Binder;
 
 global using FindTypes = Biwen.QuickApi.Infrastructure.TypeFinder.FindTypes;
 global using ASS = Biwen.QuickApi.Infrastructure.Assemblies;

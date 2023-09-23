@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# Default severity for analyzer diagnostics with category 'Style'
+dotnet_analyzer_diagnostic.category-Style.severity = silent
+
+# IDE0290: 使用主构造函数
+dotnet_diagnostic.IDE0290.severity = silent
+
+# IDE0022: 使用方法的程序块主体
+dotnet_diagnostic.IDE0022.severity = silent

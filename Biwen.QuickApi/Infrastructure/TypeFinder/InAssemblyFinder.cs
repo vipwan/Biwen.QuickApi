@@ -65,7 +65,9 @@ namespace Biwen.QuickApi.Infrastructure.TypeFinder
 
     internal class InAssemblyFinder : IInAssemblyFinder
     {
+#pragma warning disable CA1859 // 尽可能使用具体类型以提高性能
         private IRule? MainRule;
+#pragma warning restore CA1859 // 尽可能使用具体类型以提高性能
         private bool IsFrozen;
 
         private readonly Assembly[] Assemblies;

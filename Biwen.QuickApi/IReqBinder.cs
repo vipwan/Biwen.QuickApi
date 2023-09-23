@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
-namespace Biwen.QuickApi
+using System.Dynamic;
+
+namespace Biwen.QuickApi.Binder
 {
+
     /// <summary>
     /// Req绑定器接口
     /// 请注意ReqBinder不支持构造器注入
@@ -37,7 +40,7 @@ namespace Biwen.QuickApi
                     var qs = context.Request.Query;
                     foreach (var item in qs)
                     {
-                        var prop = typeof(T).GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
+                        var prop = GetProperty(item.Key);
                         if (prop != null)
                         {
                             //转换
@@ -69,15 +72,39 @@ namespace Biwen.QuickApi
                 //}
                 //body
                 {
-                    if (typeof(T) == typeof(EmptyRequest))
+                    var type = typeof(T);
+                    if (type == typeof(EmptyRequest))
                     {
                         return @default;
                     }
-                    if (typeof(T).GetProperties().Length == 0)
+                    if (type.GetProperties().Length == 0)
                     {
                         return @default;
                     }
-                    @default = await context.Request.ReadFromJsonAsync<T>();
+
+                    if (type.GetProperties().Any(x => x.GetCustomAttribute<AliasAsAttribute>() != null))
+                    {
+                        var jsonObject = await context.Request.ReadFromJsonAsync<ExpandoObject>();
+                        if(jsonObject==null)
+                            return @default;
+
+                        var dic = jsonObject as IDictionary<string, object>;
+                        foreach (var item in dic)
+                        {
+                            var prop = GetProperty(item.Key);
+                            if (prop != null)
+                            {
+                                //转换
+                                var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString()!);
+                                prop.SetValue(@default, value);
+                            }
+                        }
+                        return @default;
+                    }
+                    else
+                    {
+                        @default = await context.Request.ReadFromJsonAsync<T>();
+                    }
                 }
             }
 
@@ -89,7 +116,7 @@ namespace Biwen.QuickApi
                     var qs = context.Request.Headers;
                     foreach (var item in qs)
                     {
-                        var prop = typeof(T).GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
+                        var prop = GetProperty(item.Key);
                         if (prop != null)
                         {
                             //转换
@@ -105,7 +132,7 @@ namespace Biwen.QuickApi
                 var qs = context.Request.RouteValues;
                 foreach (var item in qs)
                 {
-                    var prop = typeof(T).GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
+                    var prop = GetProperty(item.Key);
                     if (prop != null && item.Value != null)
                     {
                         //转换
@@ -118,5 +145,17 @@ namespace Biwen.QuickApi
             //返回
             return @default ?? new();
         }
+
+        private Func<string?, PropertyInfo?> GetProperty = (string? name) =>
+        {
+            if (string.IsNullOrEmpty(name))
+                return null;
+
+            var prop =
+                typeof(T).GetProperties().FirstOrDefault(x => x.GetCustomAttribute<AliasAsAttribute>()?.Name.Equals(name, StringComparison.OrdinalIgnoreCase) ?? false) ??
+                typeof(T).GetProperties().FirstOrDefault(x => x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            return prop;
+        };
+
     }
 }

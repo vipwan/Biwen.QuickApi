@@ -1,4 +1,5 @@
 ﻿using Biwen.QuickApi.Attributes;
+using Biwen.QuickApi.Binder;
 using FluentValidation;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
@@ -7,6 +8,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     public class HelloApiRequest : BaseRequest<HelloApiRequest>
     {
         public string? Name { get; set; } = "default";
+
+        /// <summary>
+        /// 别名测试
+        /// </summary>
+        [AliasAs("a")]
+        public string? Alias { get; set; }
 
         public HelloApiRequest()
         {
@@ -90,9 +97,22 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             await Task.CompletedTask;
             return new HelloApiResponse
             {
-                Message = $"Hello {request.Name}"
+                Message = $"Hello {request.Name}  {request.Alias} "
             };
         }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.WithOpenApi(operation => new(operation)
+            {
+                Summary = "测试别名a->Alias的绑定",
+                Description = "测试别名"
+            });
+
+            return base.HandlerBuilder(builder);
+        }
+
+
     }
 
     /// <summary>

@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
     <None Include="C:\Users\vipwa\source\repos\Biwen.QuickApi\README.md" Link="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
