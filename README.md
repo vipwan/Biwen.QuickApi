@@ -243,7 +243,7 @@ app.MapGet("/refit", async (IRefitBusiness bussiness) =>
 ### QA
 
 - 为什么不支持多个参数的绑定?
--- 因为我们认为这样的Api设计是不合理的,如果你需要多个参数,请使用复杂化的Request对象
+-- 因为我认为这样的Api设计是不合理的,我们遵循REPR设计理念,如果你需要多个参数,请使用复杂化的Request对象
 
 - 是否支持Minimal的中间件和拦截器?
 -- 支持的,本身QuickApi就是扩展了MinimalApi,底层也是Minimal的处理机制,所以请考虑全局的中间件和拦截器,以及重写QuickApi的HandlerBuilder方法

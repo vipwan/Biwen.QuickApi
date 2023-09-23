@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-	<PackageVersion>1.2.0</PackageVersion>
+	<PackageVersion>1.3.0</PackageVersion>
 
 	<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
 	<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
@@ -16,8 +16,8 @@
 	<Description>Biwen.QuickApi ,NET7+ MinimalApi CQRS</Description>
 	<Copyright>MIT</Copyright>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
-	<PackageTags>webapi;minimal;CQRS;netcore</PackageTags>
-	<PackageReleaseNotes>重写验证器和绑定器实现</PackageReleaseNotes>
+	<PackageTags>webapi;minimal;REPR;netcore</PackageTags>
+	<PackageReleaseNotes>Req别名绑定,版本化支持</PackageReleaseNotes>
 
   </PropertyGroup>
 
