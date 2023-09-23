@@ -75,7 +75,7 @@ app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 
     //÷¥––«Î«Û
     var x = await api.ExecuteAsync(new EmptyRequest());
-    return Results.Ok(x);
+    return Results.Json(x);
 });
 
 
