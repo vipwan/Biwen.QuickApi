@@ -222,9 +222,9 @@ namespace Biwen.QuickApi
                         //HandlerBuilder
                         using var scope = app.ServiceProvider.CreateAsyncScope();
                         var currentApi = scope.ServiceProvider.GetRequiredService(apiType);
-                        if (currentApi is IHandlerBuilder handlerBuilder)
+                        if (currentApi is IHandlerBuilder hb)
                         {
-                            rhBuilder = handlerBuilder.HandlerBuilder(rhBuilder!);
+                            rhBuilder = hb.HandlerBuilder(rhBuilder!);
                         }
 
                         //OpenApi 生成
