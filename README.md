@@ -211,32 +211,39 @@ app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 
 ### Step5 OpenApi 以及Client代理
 
-     - 你可以全局配置版本号,以及自定义的OpenApi描述
-     - 你可以重写QuickApi的HandlerBuilder方法,以便于你自定义的OpenApi描述
-     - 我们强烈建议您使用Refit生成代理代码,以便于您的客户端和服务端保持一致的接口定义
-     - 强烈不推荐您使用SwaggerStudio生成代理代码,除非您的QuickApi定义的相当规范!!!
+- 你可以全局配置版本号,以及自定义的OpenApi描述
+- 你可以重写QuickApi的HandlerBuilder方法,以便于你自定义的OpenApi描述
+- 我们强烈建议您使用Refit生成代理代码,以便于您的客户端和服务端保持一致的接口定义
+- 强烈不推荐您使用SwaggerStudio生成代理代码,除非您的QuickApi定义的相当规范!!!
 
 ```csharp
 
-    /// <summary>
-    /// refit client
-    /// </summary>
-    public interface IRefitBusiness
-    {
-        [Refit.Get("/fromapi")]
-        public Task<TestRsp> TestPost();
-    }
+/// <summary>
+/// refit client
+/// </summary>
+public interface IRefitBusiness
+{
+    [Refit.Get("/fromapi")]
+    public Task<TestRsp> TestPost();
+}
 
-    //Refit
-    builder.Services.AddRefitClient<IRefitBusiness>()
-        .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://localhost:5101"));
+//Refit
+builder.Services.AddRefitClient<IRefitBusiness>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://localhost:5101"));
 
-    var app = builder.Build();
+var app = builder.Build();
 
-    app.MapGet("/refit", async (IRefitBusiness bussiness) =>
-    {
-        var resp = await bussiness.TestPost();
-        return Results.Content(resp.Message);
-    });
+app.MapGet("/refit", async (IRefitBusiness bussiness) =>
+{
+    var resp = await bussiness.TestPost();
+    return Results.Content(resp.Message);
+});
 
 ```
+### QA
+
+- 为什么不支持多个参数的绑定?
+-- 因为我们认为这样的Api设计是不合理的,如果你需要多个参数,请使用复杂化的Request对象
+
+- 是否支持Minimal的中间件和拦截器?
+-- 支持的,本身QuickApi就是扩展了MinimalApi,底层也是Minimal的处理机制,所以请考虑全局的中间件和拦截器,以及重写QuickApi的HandlerBuilder方法
