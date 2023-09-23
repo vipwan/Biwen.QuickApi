@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 namespace Biwen.QuickApi.Infrastructure.TypeFinder
 {
-    public interface IInAssemblyFinder : IEnumerable<Type>
+    internal interface IInAssemblyFinder : IEnumerable<Type>
     {
         /// <summary>
         /// Filters types that have a parameterless constructor.

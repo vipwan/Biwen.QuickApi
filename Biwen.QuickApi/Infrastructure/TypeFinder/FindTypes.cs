@@ -1,6 +1,6 @@
 ﻿namespace Biwen.QuickApi.Infrastructure.TypeFinder
 {
-    public static class FindTypes
+    internal static class FindTypes
     {
         public static IInAssemblyFinder InAssembly(Assembly assembly) => new InAssemblyFinder(new[] { assembly });
 
