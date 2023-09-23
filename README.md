@@ -208,3 +208,35 @@ app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 // GET ~/custom?c=11112222
 
 ```
+
+### Step5 OpenApi 以及Client代理
+
+     - 你可以全局配置版本号,以及自定义的OpenApi描述
+     - 你可以重写QuickApi的HandlerBuilder方法,以便于你自定义的OpenApi描述
+     - 我们强烈建议您使用Refit生成代理代码,以便于您的客户端和服务端保持一致的接口定义
+     - 强烈不推荐您使用SwaggerStudio生成代理代码,除非您的QuickApi定义的相当规范!!!
+
+```csharp
+
+    /// <summary>
+    /// refit client
+    /// </summary>
+    public interface IRefitBusiness
+    {
+        [Refit.Get("/fromapi")]
+        public Task<TestRsp> TestPost();
+    }
+
+    //Refit
+    builder.Services.AddRefitClient<IRefitBusiness>()
+        .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://localhost:5101"));
+
+    var app = builder.Build();
+
+    app.MapGet("/refit", async (IRefitBusiness bussiness) =>
+    {
+        var resp = await bussiness.TestPost();
+        return Results.Content(resp.Message);
+    });
+
+```
