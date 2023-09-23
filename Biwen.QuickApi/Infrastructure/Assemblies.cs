@@ -25,6 +25,7 @@ namespace Biwen.QuickApi.Infrastructure
             "Swashbuckle",
             "AutoMapper",
             "FluentValidation",
+            "Asp.Versioning",
         };
 
         private static Assembly[] _allRequiredAssemblies = null!;

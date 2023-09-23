@@ -2,7 +2,7 @@
 
 namespace Biwen.QuickApi.Infrastructure.TypeFinder
 {
-    public interface IRule
+    internal interface IRule
     {
         bool Complies(Type type);
     }
