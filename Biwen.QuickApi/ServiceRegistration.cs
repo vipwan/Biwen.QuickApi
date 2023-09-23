@@ -210,7 +210,7 @@ namespace Biwen.QuickApi
                         var retnType= ((dynamic)currentApi).RspType as Type;
                         if(retnType == typeof(ContentResponse))
                         {
-                            rhBuilder?.Produces(200, contentType: "text/plain");
+                            rhBuilder?.Produces(200,typeof(string), contentType: "text/plain");
                         }
                         else
                         {
