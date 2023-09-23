@@ -48,6 +48,18 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             return Task.FromResult(EmptyResponse.New);
         }
+
+        override public RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.WithOpenApi(operation => new(operation)
+            {
+                Summary = "需要验证权限的接口",
+                Description = "需要验证权限的接口"
+            });
+
+            return builder;
+        }
+
     }
 
     /// <summary>
@@ -126,6 +138,19 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 Message = hello
             };
         }
+
+        override public RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.WithOpenApi(operation => new(operation)
+            {
+                Summary = "模拟注入服务的接口",
+                Description = "模拟注入服务的接口"
+            });
+
+            return builder;
+        }
+
+
     }
 
 
@@ -183,8 +208,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             //自定义描述
             builder.WithOpenApi(operation => new(operation)
             {
-                Summary = "This is a summary",
-                Description = "This is a description"
+                Summary = "模拟自定义绑定器的接口",
+                Description = "模拟自定义绑定器的接口"
             });
 
             //自定义标签
@@ -280,7 +305,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-            builder.WithTags("custom");//按照版本分组
+            builder.WithOpenApi(operation => new(operation)
+            {
+                Summary = "这个接口返回纯文本 text/plain",
+                Description = "这个接口返回纯文本 text/plain"
+            });
+
             return builder;
         }
     }
