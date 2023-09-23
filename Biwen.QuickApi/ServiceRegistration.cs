@@ -176,50 +176,11 @@ namespace Biwen.QuickApi
                     {
                         RouteHandlerBuilder? rhBuilder = null!;
 
-                        switch (verb)
+                        //MapMethods
+                        rhBuilder = g.MapMethods(attr.Route, new[] { verb.ToString() }, async (IHttpContextAccessor ctx) =>
                         {
-                            case Verb.GET:
-                            default:
-                                {
-                                    rhBuilder = g.MapGet(attr.Route, async (IHttpContextAccessor ctx) =>
-                                    {
-                                        return await RequestHandler(ctx, apiType, attr);
-                                    });
-                                }
-                                break;
-                            case Verb.POST:
-                                {
-                                    rhBuilder = g.MapPost(attr.Route, async (IHttpContextAccessor ctx) =>
-                                    {
-                                        return await RequestHandler(ctx, apiType, attr);
-                                    });
-                                }
-                                break;
-                            case Verb.PUT:
-                                {
-                                    rhBuilder = g.MapPut(attr.Route, async (IHttpContextAccessor ctx) =>
-                                    {
-                                        return await RequestHandler(ctx, apiType, attr);
-                                    });
-                                }
-                                break;
-                            case Verb.DELETE:
-                                {
-                                    rhBuilder = g.MapDelete(attr.Route, async (IHttpContextAccessor ctx) =>
-                                    {
-                                        return await RequestHandler(ctx, apiType, attr);
-                                    });
-                                }
-                                break;
-                            case Verb.PATCH:
-                                {
-                                    rhBuilder = g.MapPatch(attr.Route, async (IHttpContextAccessor ctx) =>
-                                    {
-                                        return await RequestHandler(ctx, apiType, attr);
-                                    });
-                                }
-                                break;
-                        }
+                            return await RequestHandler(ctx, apiType, attr);
+                        });
 
                         //HandlerBuilder
                         using var scope = app.ServiceProvider.CreateAsyncScope();
