@@ -1,15 +1,18 @@
 ﻿# Biwen.QuickApi
 
 ## 项目介绍
+
 ```csharp
 [QuickApi("hello/world")]
 public class MyApi : BaseQuickApi<Req,Rsp>{}
-```
-    - Req -> {Authorization?} -> {Bind} -> {Validation?} -> {Logic} -> {ExceptionHandler?} -> Rsp
-    - 提供一种简单集成的Minimal Web Api交互模块 遵循了 REPR 设计 （Request-Endpoint-Response）
-    - 开箱即用的Api路由 和 权限,Bind,validator体验
-    - 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi,遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
-    - write less, do more ; write anywhere, do anything
+``` 
+- 提供一种简单集成的Minimal Web Api交互模块 遵循了 REPR 设计 （Request-Endpoint-Response）
+- 开箱即用的Api路由 和 权限,Bind,validator体验
+- 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi,遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
+- write less, do more ; write anywhere, do anything  
+- 欢迎小伙伴们star&issue共同学习进步 (Biwen.QuickApi)[https://github.com/vipwan/Biwen.QuickApi]
+
+
 ## 使用方式
 
 ### Step0 Nuget Install
@@ -190,7 +193,17 @@ app.MapBiwenQuickApis();
 
 ```csharp
 
-//测试其他地方调用QuickApi
+//直接访问
+// GET ~/hello/world/biwen
+// GET ~/hello/world/biwen?name=biwen
+// POST ~/hello/world/biwen
+// GET ~/custom?c=11112222
+
+```
+
+```csharp
+
+//你也可以把QuickApi当Service使用
 app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 {
     //通过你的方式获取请求对象
@@ -206,12 +219,6 @@ app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
     return Results.Ok(x);
 });
 
-//直接访问
-// GET ~/hello/world/biwen
-// GET ~/hello/world/biwen?name=biwen
-// POST ~/hello/world/biwen
-// GET ~/custom?c=11112222
-
 ```
 
 ### Step5 OpenApi 以及Client代理
@@ -219,33 +226,33 @@ app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 - 你可以全局配置版本号,以及自定义的OpenApi描述
 - 你可以重写QuickApi的HandlerBuilder方法,以便于你自定义的OpenApi描述
 - 我们强烈建议您使用Refit生成代理代码,以便于您的客户端和服务端保持一致的接口定义
-- 强烈不推荐您使用SwaggerStudio生成代理代码,除非您的QuickApi定义的相当规范!!!
+- 不推荐您使用SwaggerStudio生成代理代码,除非您的QuickApi定义的相当规范!
 
 ```csharp
 
 /// <summary>
 /// refit client
 /// </summary>
-public interface IRefitBusiness
+public interface IBusiness
 {
     [Refit.Get("/fromapi")]
     public Task<TestRsp> TestPost();
 }
 
 //Refit
-builder.Services.AddRefitClient<IRefitBusiness>()
+builder.Services.AddRefitClient<IBusiness>()
     .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://localhost:5101"));
 
 var app = builder.Build();
 
-app.MapGet("/refit", async (IRefitBusiness bussiness) =>
+app.MapGet("/from-quickapi", async (IRefitBusiness bussiness) =>
 {
     var resp = await bussiness.TestPost();
     return Results.Content(resp.Message);
 });
 
 ```
-### QA
+### Q&A
 
 - 为什么不支持多个参数的绑定?
 -- 因为我认为这样的Api设计是不合理的,我们遵循REPR设计理念,如果你需要多个参数,请使用复杂化的Request对象
