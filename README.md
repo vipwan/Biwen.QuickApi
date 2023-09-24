@@ -6,7 +6,7 @@
 [QuickApi("hello/world")]
 public class MyApi : BaseQuickApi<Req,Rsp>{}
 ``` 
-- 提供一种简单集成的Minimal Web Api交互模块 遵循了 REPR 设计 （Request-Endpoint-Response）
+- (MinimalApi as REPR) Biwen.QuickApi遵循了 REPR 设计 （Request-Endpoint-Response）
 - 开箱即用的Api路由 和 权限,Bind,validator体验
 - 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi,遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
 - write less, do more ; write anywhere, do anything  
