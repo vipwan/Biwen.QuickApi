@@ -254,6 +254,9 @@ app.MapGet("/from-quickapi", async (IBusiness bussiness) =>
 ```
 ### Q&A
 
+- 为什么不支持.NET6
+-- 考虑到.NET8已经发布了RC,11月就会发布RTM,这个是未来3年的长期支持版本,并且.NET是可以无缝升级到.NET8的,所以我没有计划.NET6支持,直接拥抱新特性
+
 - 为什么不支持多个参数的绑定?
 -- 因为我认为这样的Api设计是不合理的,我们遵循REPR设计理念,如果你需要多个参数,请使用复杂化的Request对象
 
