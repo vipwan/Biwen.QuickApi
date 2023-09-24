@@ -24,5 +24,16 @@
         }
 
         public string Content { get; set; }
+
+
+        /// <summary>
+        /// Content
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return Content;
+        }
+
     }
 }

@@ -324,7 +324,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <summary>
     /// get ~/content 返回文本测试
     /// </summary>
-    [QuickApi("content",Group = "hello", Verbs = Verb.GET)]
+    [QuickApi("content", Group = "hello", Verbs = Verb.GET)]
     public class ContentApi : BaseQuickApi<EmptyRequest, ContentResponse>
     {
         public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
@@ -344,4 +344,16 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         }
     }
 
+
+    /// <summary>
+    /// JustAsService 只会被服务发现，不会被注册到路由表
+    /// </summary>
+    [QuickApi(""), JustAsService]
+    public class JustAsService : BaseQuickApi<EmptyRequest, ContentResponse>
+    {
+        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Task.FromResult(new ContentResponse("Hello World JustAsService!"));
+        }
+    }
 }

@@ -65,7 +65,7 @@ app.MapBiwenQuickApis();
 
 
 //测试其他地方调用QuickApi
-app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
+app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.JustAsService api) =>
 {
     //通过你的方式获取请求对象
     var req = new EmptyRequest();
@@ -78,7 +78,7 @@ app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 
     //执行请求
     var x = await api.ExecuteAsync(new EmptyRequest());
-    return Results.Json(x);
+    return Results.Content(x.ToString());
 });
 
 
