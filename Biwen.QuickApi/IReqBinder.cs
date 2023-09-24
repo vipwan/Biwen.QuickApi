@@ -145,8 +145,10 @@ namespace Biwen.QuickApi.Binder
             //返回
             return @default ?? new();
         }
-
-        private Func<string?, PropertyInfo?> GetProperty = (string? name) =>
+        /// <summary>
+        /// 定位属性
+        /// </summary>
+        private static Func<string?, PropertyInfo?> GetProperty = (string? name) =>
         {
             if (string.IsNullOrEmpty(name))
                 return null;
