@@ -245,7 +245,7 @@ builder.Services.AddRefitClient<IBusiness>()
 
 var app = builder.Build();
 
-app.MapGet("/from-quickapi", async (IRefitBusiness bussiness) =>
+app.MapGet("/from-quickapi", async (IBusiness bussiness) =>
 {
     var resp = await bussiness.TestPost();
     return Results.Content(resp.Message);
