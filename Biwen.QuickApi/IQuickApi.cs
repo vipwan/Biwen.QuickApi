@@ -51,7 +51,7 @@ namespace Biwen.QuickApi
     internal interface IHandlerBuilder
     {
         /// <summary>
-        /// 提供minimal扩展
+        /// 提供minimal扩展,可以扩充缓存,日志,鉴权等功能..
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
@@ -69,11 +69,11 @@ namespace Biwen.QuickApi
         /// <summary>
         /// 获取请求类型
         /// </summary>
-        public Type ReqType => typeof(Req);
+        internal Type ReqType => typeof(Req);
         /// <summary>
         ///  输出类型
         /// </summary>
-        public Type RspType => typeof(Rsp);
+        internal Type RspType => typeof(Rsp);
         
         /// <summary>
         /// 默认的请求参数绑定器

@@ -8,3 +8,6 @@ dotnet_diagnostic.IDE0290.severity = silent
 
 # IDE0022: 使用方法的程序块主体
 dotnet_diagnostic.IDE0022.severity = silent
+
+# CA1822: 将成员标记为 static
+dotnet_diagnostic.CA1822.severity = silent
