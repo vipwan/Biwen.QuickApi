@@ -18,7 +18,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public HelloApiRequest()
         {
-            RuleFor(x => x.Name).NotNull().Length(5, 10);
+            RuleFor(x => x.Name).NotNull().Length(2, 36);
         }
     }
 
@@ -88,7 +88,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             await Task.CompletedTask;
             return new HelloApiResponse
             {
-                Message = $"Hello {request.Name}"
+                Message = $"Hello {request.Name}",
+                Alias = request.Alias
             };
         }
     }
