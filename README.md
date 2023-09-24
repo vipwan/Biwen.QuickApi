@@ -184,10 +184,18 @@ app.MapBiwenQuickApis();
         }
 
     }
-
-
+    /// <summary>
+    /// JustAsService 只会被服务发现，不会被注册到路由表
+    /// </summary>
+    [QuickApi(""), JustAsService]
+    public class JustAsService : BaseQuickApi<EmptyRequest, ContentResponse>
+    {
+        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Task.FromResult(new ContentResponse("Hello World JustAsService!"));
+        }
+    }
 ```
-
 
 ### Step4 Enjoy !
 
