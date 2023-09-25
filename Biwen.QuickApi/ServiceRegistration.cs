@@ -137,7 +137,7 @@ namespace Biwen.QuickApi
         /// <param name="app"></param>
         /// <returns></returns>
         /// <exception cref="QuickApiExcetion"></exception>
-        public static (string, RouteGroupBuilder)[] MapBiwenQuickApis(this IEndpointRouteBuilder app)
+        public static (string Group, RouteGroupBuilder RouteGroupBuilder)[] MapBiwenQuickApis(this IEndpointRouteBuilder app)
         {
             if (!Apis.Any())
             {

@@ -89,7 +89,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return new HelloApiResponse
             {
                 Message = $"Hello {request.Name}",
-                Alias = request.Alias
+                Alias =request.Alias
             };
         }
     }
