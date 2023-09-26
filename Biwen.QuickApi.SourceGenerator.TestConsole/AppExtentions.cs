@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 
 namespace Biwen.QuickApi.SourceGenerator.TestConsole
 {
-    public static class AppExtentions
+    public static partial class AppExtentions
     {
 
         /*
@@ -30,8 +30,9 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="QuickApiExcetion"></exception>
-        public static RouteGroupBuilder MapQuickApi_Group(this IEndpointRouteBuilder app, string group = "$0")
+        static RouteGroupBuilder MapQuickApi_Group(this IEndpointRouteBuilder app, string group = "$0")
         {
+
             if (string.IsNullOrEmpty(group))
             {
                 throw new ArgumentNullException(nameof(group));
@@ -83,5 +84,15 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
 
             return groupBuilder;
         }
+
+        public static IEndpointRouteBuilder MapGenQuickApis(this IEndpointRouteBuilder app)
+        {
+            
+            app.MapQuickApi_Group("$0");
+            //$0
+            return app;
+        }
+
+
     }
 }

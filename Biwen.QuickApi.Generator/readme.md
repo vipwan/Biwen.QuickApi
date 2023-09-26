@@ -16,3 +16,6 @@
 ### 参考文档
 - https://learn.microsoft.com/zh-cn/dotnet/csharp/roslyn-sdk/source-generators-overview
 - https://github.com/dotnet/roslyn-sdk/tree/main/samples/CSharp/SourceGenerators
+
+- https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.cookbook.md#out-of-scope-designs
+
