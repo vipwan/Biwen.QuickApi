@@ -20,7 +20,7 @@ app.MapGet("/", () => Results.Content("hello world")).ExcludeFromDescription();
 //app.MapBiwenQuickApis();
 
 
-app.MapGroup("hello").MapGet("/world", (IHttpContextAccessor ctx,[FromBody]EmptyRequest req) => Results.Content("hello world")).ExcludeFromDescription();
+app.MapGroup("").MapGet("/world", (IHttpContextAccessor ctx) => Results.Content("hello world")).ExcludeFromDescription();
 app.MapGroup("hello").MapGet("/world2", () => Results.Content("hello world2")).ExcludeFromDescription();
 
 //

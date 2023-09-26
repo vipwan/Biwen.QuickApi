@@ -39,7 +39,7 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
             }
             var groupBuilder = app.MapGroup(group);
 
-            groupBuilder.MapGet("$1", async (IHttpContextAccessor ctx, TestPostQuickApi api, EmptyRequest req) =>
+            groupBuilder.MapGet("$1", async (IHttpContextAccessor ctx, TestPostQuickApi api) =>
             {
 
                 //验证策略
@@ -55,6 +55,8 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
                         return Results.Unauthorized();
                     }
                 }
+                //绑定对象
+                var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
 
                 //验证器
                 if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
