@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+  <PropertyGroup>
+
+	<Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+	<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+	<AnalysisLevel>6.0-all</AnalysisLevel>  
+	  
+  </PropertyGroup>
+	
+	<PropertyGroup>
+		<AnalyzerLanguage>cs</AnalyzerLanguage>
+		<InjectIsExternalInitOnLegacy>true</InjectIsExternalInitOnLegacy>
+		<LangVersion>latest</LangVersion>
+
+		<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+		<CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
+		<IsRoslynComponent>true</IsRoslynComponent>
+		
+		
+	</PropertyGroup>
+	
+	<!--开发调试阶段-->
+	<!--<ItemGroup>
+		<None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+	</ItemGroup>-->
+	
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0-2.final" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.8.0-2.final" PrivateAssets="all" />
+	</ItemGroup>
+
+</Project>
