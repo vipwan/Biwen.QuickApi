@@ -12,7 +12,8 @@ public class MyApi : BaseQuickApi<Req,Rsp>{}
 - write less, do more ; write anywhere, do anything  
 - 欢迎小伙伴们star&issue共同学习进步 (Biwen.QuickApi)[https://github.com/vipwan/Biwen.QuickApi]
 
-
+## 未来计划
+--V2.0版本将提供源代码生成器方案,以于显著提升性能(V1.0版本使用的Emit和dynamic会导致部分性能损失)
 ## 使用方式
 
 ### Step0 Nuget Install
