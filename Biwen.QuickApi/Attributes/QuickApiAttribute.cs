@@ -25,6 +25,7 @@
         public Verb Verbs { get; set; } = Verb.GET;
         /// <summary>
         /// 请求策略. 默认为null，表示不需要验证
+        /// 推荐使用HandlerBuilder的方式实现强大的鉴权功能
         /// </summary>
         public string? Policy { get; set; }
     }
