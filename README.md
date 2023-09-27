@@ -13,9 +13,9 @@ public class MyApi : BaseQuickApi<Req,Rsp>{}
 - 欢迎小伙伴们star&issue共同学习进步 (Biwen.QuickApi)[https://github.com/vipwan/Biwen.QuickApi]
 
 
-## 未来计划
+## SourceGenerator
 - 提供gen源代码生成器方案,以于显著提升性能(V1.0版本使用的Emit和dynamic会导致部分性能损失)
-- gen SourceGenerator已发布v1.0.0,[使用方式](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.Generator/readme.md)
+- gen SourceGenerator已发布v1.1.0,[使用方式](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.Generator/readme.md)
 
 ## 使用方式
 
@@ -30,16 +30,13 @@ dotnet add package Biwen.QuickApi.SourceGenerator
 
 ```csharp
 
-builder.Services.AddBiwenQuickApis(o =>
-{
-    o.RoutePrefix = "quick";
-    //不需要驼峰模式设置为null
-    //o.JsonSerializerOptions.PropertyNamingPolicy = null;
-});
+builder.Services.AddBiwenQuickApis();
 
-//....
+//不使用gen方案
 app.MapBiwenQuickApis();
 
+//推荐gen方案
+//app.MapGenBiwenQuickApis();
 ```
 
 ### Step2 Define Request and Response
