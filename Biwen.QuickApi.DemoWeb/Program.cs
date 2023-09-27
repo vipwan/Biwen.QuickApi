@@ -12,22 +12,7 @@ builder.Services.AddAuthorization(builder => builder.AddPolicy("admin", policy =
 
 //swagger
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("1.0", new OpenApiInfo
-    {
-        Version = "1.0",
-        Title = "API1标题",
-        Description = $"API描述,{"1.0"}版本, ?api-version=1.0"
-    });
-
-    options.SwaggerDoc("2.0", new OpenApiInfo
-    {
-        Version = "2.0",
-        Title = "API2标题",
-        Description = $"API描述,{"2.0"}版本, ?api-version=2.0"
-    });
-});
+builder.Services.AddSwaggerGen();
 
 
 // Add services to the container.
@@ -46,13 +31,7 @@ var app = builder.Build();
 
 //swagger
 app.UseSwagger();
-
-app.UseSwaggerUI(options =>
-{
-    options.SwaggerEndpoint($"/swagger/1.0/swagger.json", "1.0");
-    options.SwaggerEndpoint($"/swagger/2.0/swagger.json", "2.0");
-});
-
+app.UseSwaggerUI();
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -63,7 +42,7 @@ app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 
 // var apis = app.MapBiwenQuickApis();
 //
-app.MapGenQuickApis("api");
+app.MapGenQuickApis(app.Services);
 //如果你想对特定的分组批量操作. 比如授权等,可以这样做
 
 //测试其他地方调用QuickApi
@@ -85,53 +64,13 @@ app.MapGet("/fromapi", async (JustAsService api) =>
 });
 
 
-
-using var scopeNeedAuthApi = app.Services.CreateScope();
-
-
-var mapNeedAuthApi = app.MapMethods("admin/index", new[] { "GET", "POST" }, async (IHttpContextAccessor ctx, NeedAuthApi api) =>
-{
-    //验证策略
-    var policy = "admin";
-    if (!string.IsNullOrEmpty(policy))
+//发现ms的WithOpenApi的一处BUG,当Method为多个时会报错!
+app.MapMethods("/hello-world", new[] { "GET" }, () => Results.Ok())
+    .WithOpenApi(operation => new(operation)
     {
-        var httpContext = ctx.HttpContext;
-        var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null,besure services.AddAuthorization() first!");
-        var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
-        if (!authorizationResult.Succeeded)
-        {
-            return Results.Unauthorized();
-        }
-    }
-    //绑定对象
-    var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
-
-    //验证器
-    if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
-    {
-        return Results.ValidationProblem(vresult.ToDictionary());
-    }
-    //执行请求
-    try
-    {
-        var result = await api.ExecuteAsync(req!);
-        return Results.Json(result);
-    }
-    catch (Exception ex)
-    {
-        var exceptionHandlers = ctx.HttpContext!.RequestServices.GetServices<IQuickApiExceptionHandler>();
-        //异常处理
-        foreach (var handler in exceptionHandlers)
-        {
-            await handler.HandleAsync(ex);
-        }
-        //默认处理
-        throw;
-    }
-});
-//handler
-scopeNeedAuthApi.ServiceProvider.GetRequiredService<NeedAuthApi>().HandlerBuilder(mapNeedAuthApi);
-
+        Summary = "NeedAuthApi",
+        Description = "NeedAuthApi"
+    });
 
 
 app.Run();

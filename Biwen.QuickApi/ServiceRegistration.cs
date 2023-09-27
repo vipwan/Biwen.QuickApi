@@ -1,5 +1,4 @@
 ﻿
-using Asp.Versioning;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -17,7 +16,9 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
+#pragma warning disable CS0618 // 类型或成员已过时
         public static IServiceCollection AddBiwenQuickApis(this IServiceCollection services, Action<BiwenQuickApiOptions>? options = null)
+#pragma warning restore CS0618 // 类型或成员已过时
         {
             //注册验证器
             services.AddFluentValidationAutoValidation();
@@ -25,22 +26,11 @@ namespace Biwen.QuickApi
             services.AddMemoryCache();
 
             services.AddProblemDetails();
-            //当前支持服务版本
-            services.AddApiVersioning(options =>
-            {
-                // 如果请求没有声明就使用默认版本
-                options.AssumeDefaultVersionWhenUnspecified = true;
-                //options.ReportApiVersions = true;
-
-                // 使用QueryString来指定版本
-                options.ApiVersionReader = new QueryStringApiVersionReader("api-version");
-
-                // 默认版本1.0
-                options.DefaultApiVersion = new ApiVersion(1.0);
-            });
 
             //options
+#pragma warning disable CS0618 // 类型或成员已过时
             services.AddOptions<BiwenQuickApiOptions>().Configure(o => { options?.Invoke(o); });
+#pragma warning restore CS0618 // 类型或成员已过时
 
             //services.Scan(scan =>
             //{
@@ -156,8 +146,7 @@ namespace Biwen.QuickApi
             var prefix = app.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.RoutePrefix;
             foreach (var group in groups)
             {
-                var ver = app.NewVersionedApi(group.Key);
-                var g = ver.MapGroup(string.Empty);
+                var g = app.MapGroup(string.Empty);
                 //quickapi前缀
                 if (!string.IsNullOrEmpty(prefix))
                 {
@@ -266,7 +255,9 @@ namespace Biwen.QuickApi
             }
             object? api = ctx.HttpContext!.RequestServices.GetRequiredService(apiType);
 
+#pragma warning disable CS0618 // 类型或成员已过时
             var quickApiOptions = ctx.HttpContext!.RequestServices.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
+#pragma warning restore CS0618 // 类型或成员已过时
 
 
             //var cache = ctx.HttpContext!.RequestServices.GetRequiredService<IMemoryCache>();

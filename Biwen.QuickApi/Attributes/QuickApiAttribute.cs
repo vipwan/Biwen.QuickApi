@@ -9,6 +9,7 @@
     {
         public QuickApiAttribute(string route)
         {
+            ArgumentNullException.ThrowIfNull(route);
             Route = route;
         }
         /// <summary>

@@ -57,7 +57,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     }
 
 
-    [QuickApi("index", Group = "admin", Verbs = Verb.GET | Verb.POST, Policy = "admin")]
+    [QuickApi("index", Group = "admin", Verbs = Verb.GET, Policy = "admin")]
     public class NeedAuthApi : BaseQuickApi
     {
         public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
@@ -65,12 +65,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return Task.FromResult(EmptyResponse.New);
         }
 
-        override public RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
             builder.WithOpenApi(operation => new(operation)
             {
-                Summary = "需要验证权限的接口",
-                Description = "需要验证权限的接口"
+                Summary = "NeedAuthApi",
+                Description = "NeedAuthApi"
             });
 
             return builder;
@@ -116,8 +117,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             builder.WithOpenApi(operation => new(operation)
             {
-                Summary = "测试别名a->Alias的绑定",
-                Description = "测试别名"
+                Summary = "world2",
+                Description = "world2"
             });
 
             return base.HandlerBuilder(builder);
@@ -171,11 +172,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         override public RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-            builder.WithOpenApi(operation => new(operation)
-            {
-                Summary = "模拟注入服务的接口",
-                Description = "模拟注入服务的接口"
-            });
 
             return builder;
         }
@@ -233,13 +229,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         /// <returns></returns>
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-            //自定义描述
-            builder.WithOpenApi(operation => new(operation)
-            {
-                Summary = "模拟自定义绑定器的接口",
-                Description = "模拟自定义绑定器的接口"
-            });
-
             //自定义标签
             builder.WithTags("custom");
 
@@ -250,10 +239,16 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 return await next(context);
             });
 
+            builder.WithOpenApi(operation => new(operation)
+            {
+                Summary = "custom",
+                Description = "custom"
+            });
 
-            builder.HasApiVersion(1.0);
             return builder;
         }
+
+
 
     }
 
@@ -270,8 +265,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-            builder.HasApiVersion(1.0).WithGroupName("1.0");
-
             builder.WithTags("VT");//按照版本分组
             return builder;
         }
@@ -288,9 +281,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-
-            builder.HasApiVersion(1.0).WithGroupName("1.0");
-            builder.HasApiVersion(2.0).WithGroupName("2.0");
 
             builder.WithTags("VT");//按照版本分组
 
@@ -309,7 +299,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-            builder.HasApiVersion(2.0).WithGroupName("2.0");
             builder.WithTags("VT");//按照版本分组
 
             return builder;
@@ -331,12 +320,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-            builder.WithOpenApi(operation => new(operation)
-            {
-                Summary = "这个接口返回纯文本 text/plain",
-                Description = "这个接口返回纯文本 text/plain"
-            });
-
             return builder;
         }
     }
