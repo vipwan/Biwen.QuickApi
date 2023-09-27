@@ -30,14 +30,57 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="QuickApiExcetion"></exception>
-        static RouteGroupBuilder MapQuickApi_Group(this IEndpointRouteBuilder app, string group = "$0")
+        public static RouteGroupBuilder MapGenQuickApis(this IEndpointRouteBuilder app, string prefix = "api")
         {
-
-            if (string.IsNullOrEmpty(group))
+            if (string.IsNullOrEmpty(prefix))
             {
-                throw new ArgumentNullException(nameof(group));
+                throw new ArgumentNullException(nameof(prefix));
             }
-            var groupBuilder = app.MapGroup(group);
+            var groupBuilder = app.MapGroup(prefix);
+
+            groupBuilder.MapMethods("$0", new[] { "GET","POST" }, async (IHttpContextAccessor ctx, TestPostQuickApi api) =>
+            {
+
+                //验证策略
+                var policy = "$2";
+                if (!string.IsNullOrEmpty(policy))
+                {
+                    var httpContext = ctx.HttpContext;
+                    var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null,besure services.AddAuthorization() first!");
+                    var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
+                    if (!authorizationResult.Succeeded)
+                    {
+                        return Results.Unauthorized();
+                    }
+                }
+                //绑定对象
+                var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
+
+                //验证器
+                if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
+                {
+                    return Results.ValidationProblem(vresult.ToDictionary());
+                }
+
+                //执行请求
+                try
+                {
+                    var result = await api.ExecuteAsync(req!);
+                    return Results.Json(result);
+                }
+                catch (Exception ex)
+                {
+                    var exceptionHandlers = ctx.HttpContext!.RequestServices.GetServices<IQuickApiExceptionHandler>();
+                    //异常处理
+                    foreach (var handler in exceptionHandlers)
+                    {
+                        await handler.HandleAsync(ex);
+                    }
+                    //默认处理
+                    throw;
+                }
+            });
+
 
             groupBuilder.MapGet("$1", async (IHttpContextAccessor ctx, TestPostQuickApi api) =>
             {
@@ -85,14 +128,6 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
             });
 
             return groupBuilder;
-        }
-
-        public static IEndpointRouteBuilder MapGenQuickApis(this IEndpointRouteBuilder app)
-        {
-            
-            app.MapQuickApi_Group("$0");
-            //$0
-            return app;
         }
 
 
