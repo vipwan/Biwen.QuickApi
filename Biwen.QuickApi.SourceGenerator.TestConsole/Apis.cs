@@ -19,7 +19,7 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
     /// <summary>
     /// 模拟一个空的请求
     /// </summary>
-    [QuickApi("test1",Group ="hello",Policy ="admin",Verbs = Verb.GET| Verb.POST)]
+    [QuickApi("test1", Group = "hello", Policy = "admin", Verbs = Verb.GET | Verb.POST)]
     [Authorize("admin")]
     public class TestQuickApi : BaseQuickApi
     {
@@ -56,4 +56,18 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
             return new ContentResponse($"hello {request.Name}");
         }
     }
+
+
+    [QuickApi("hello4")]
+    public class Tset3QuickApi : BaseQuickApi<HelloRequest, ContentResponse>
+    {
+
+        public override async Task<ContentResponse> ExecuteAsync(HelloRequest request)
+        {
+            await Task.CompletedTask;
+            return new ContentResponse($"hello {request.Name}");
+        }
+    }
+
+
 }

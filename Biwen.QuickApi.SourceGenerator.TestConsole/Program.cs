@@ -23,6 +23,9 @@ app.MapGet("/", () => Results.Content("hello world")).ExcludeFromDescription();
 app.MapGroup("").MapGet("/world", (IHttpContextAccessor ctx) => Results.Content("hello world")).ExcludeFromDescription();
 app.MapGroup("hello").MapGet("/world2", () => Results.Content("hello world2")).ExcludeFromDescription();
 
+
+app.MapGenQuickApis();
+
 //
 //app.MapGenQuickApis();
 

@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Biwen.QuickApi.SourceGenerator.TestConsole": {
+    "TestConsole": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

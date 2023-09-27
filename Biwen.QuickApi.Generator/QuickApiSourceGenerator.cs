@@ -67,16 +67,18 @@ namespace Biwen.QuickApi.SourceGenerator
                                 .Replace("$2", policy ?? "")
                                 .Replace("$3", fullname);
 
-                            sb.Append(source);
+                            sb.AppendLine(source);
 
                         }
-
                     });
                 }
             }
 
+            var endpointSource = endpointTemp.Replace(
+                "$namespace", $"using {context.Compilation.AssemblyName};")
+                .Replace("$apis", sb.ToString());
 
-            context.AddSource($"extentions.g.cs", SourceText.From(sb.ToString(), Encoding.UTF8));
+            context.AddSource($"extentions.g.cs", SourceText.From(endpointSource, Encoding.UTF8));
 
             // Find the main method
             //var mainMethod = context.Compilation.GetEntryPoint(context.CancellationToken)!;
@@ -84,28 +86,48 @@ namespace Biwen.QuickApi.SourceGenerator
 
         #region template
 
-       const string endpointTemp = $@"
+        const string endpointTemp = $@"
+//code gen for Biwen.QuickApi
+//author :vipwan@outlook.com 万雅虎
+//https://github.com/vipwan/Biwen.QuickApi
+//如果你在使用中遇到问题,请第一时间issue,谢谢!
 
-        /// <summary>
-        /// 源代码生成器的模板代码
-        /// </summary>
-        /// <param name=""app""></param>
-        /// <param name=""group""></param>
-        /// <returns></returns>
-        /// <exception cref=""ArgumentNullException""></exception>
-        /// <exception cref=""QuickApiExcetion""></exception>
-        public static RouteGroupBuilder MapGenQuickApis(this IEndpointRouteBuilder app, string prefix = ""api"")
+using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Options;
+using Biwen.QuickApi;
+using Biwen.QuickApi.Attributes;
+
+$namespace
+
+public static partial class AppExtentions
+{{
+
+    /// <summary>
+    /// 源代码生成器的模板代码
+    /// </summary>
+    /// <param name=""app""></param>
+    /// <param name=""group""></param>
+    /// <returns></returns>
+    /// <exception cref=""ArgumentNullException""></exception>
+    /// <exception cref=""QuickApiExcetion""></exception>
+    public static RouteGroupBuilder MapGenQuickApis(this IEndpointRouteBuilder app, string prefix = ""api"")
+    {{
+        if (string.IsNullOrEmpty(prefix))
         {{
-            if (string.IsNullOrEmpty(prefix))
-            {{
-                throw new ArgumentNullException(nameof(prefix));
-            }}
-            var groupBuilder = app.MapGroup(prefix);
-
-            $0
-
-            return groupBuilder;
+            throw new ArgumentNullException(nameof(prefix));
         }}
+        var groupBuilder = app.MapGroup(prefix);
+
+        $apis
+
+        return groupBuilder;
+    }}
+}}
+
+
+
+
 ";
 
         const string routeTemp = $@"
@@ -151,7 +173,7 @@ namespace Biwen.QuickApi.SourceGenerator
                     throw;
                 }}
             }});
-            \r\n
+
 ";
 
 
