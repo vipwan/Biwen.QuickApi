@@ -3,6 +3,8 @@ using System.Text.Json;
 
 namespace Biwen.QuickApi
 {
+
+    [Obsolete("Gen版本不支持配置Options,请使用原生支持", false)]
     public class BiwenQuickApiOptions
     {
         /// <summary>
