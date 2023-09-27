@@ -27,40 +27,12 @@ namespace Biwen.QuickApi.SourceGenerator
 
             var classDeclarationSyntaxes = quickApiSyntaxReceivers.ClassDeclarationSyntaxes;
 
-            var sourceFormat = @"
-            using System;
-            using System.Collections.Generic;
-            using System.Linq;
-            using System.Text;
-            namespace Biwen.QuickApi.SourceGenerator.TestConsole
-            {
-                public static class EndpointExtentions
-                {
-                    public static IEndpointRouteBuilder MapQuickApis(this IEndpointRouteBuilder app)
-                    {
-                        $0
-                        return app;
-                    }
-                }
-            }
-";
-
-            var addFromat = @"
-
-            app.MapGet(""/fromapi/$0"", async () =>
-            {
-                await Task.CompletedTask;
-                return Results.Text(""fromapi"");
-            });
-";
 
             var sb = new StringBuilder();
 
             foreach (var classDeclarationSyntax in classDeclarationSyntaxes)
             {
                 var fullname = classDeclarationSyntax.Identifier.ValueText;
-                var source = addFromat.Replace("$0", fullname);
-                sb.Append(source);
 
                 var attrs = classDeclarationSyntax.AttributeLists.ToList();
                 foreach (var attr in attrs)
@@ -89,14 +61,22 @@ namespace Biwen.QuickApi.SourceGenerator
                             //"GET","POST"
                             var verbsStr = string.Join(",", verbs.Select(x => $"\"{x}\""));
 
+
+                            var source = routeTemp.Replace("$0", $"{group}/{route}")
+                                .Replace("$1", verbsStr)
+                                .Replace("$2", policy ?? "")
+                                .Replace("$3", fullname);
+
+                            sb.Append(source);
+
                         }
 
                     });
                 }
             }
 
-            var source2 = sourceFormat.Replace("$0", sb.ToString());
-            context.AddSource($"extentions.g.cs", SourceText.From(source2, Encoding.UTF8));
+
+            context.AddSource($"extentions.g.cs", SourceText.From(sb.ToString(), Encoding.UTF8));
 
             // Find the main method
             //var mainMethod = context.Compilation.GetEntryPoint(context.CancellationToken)!;
@@ -130,7 +110,7 @@ namespace Biwen.QuickApi.SourceGenerator
 
         const string routeTemp = $@"
 
-            groupBuilder.MapMethods(""$0"", new[] {{ $1 }}, async (IHttpContextAccessor ctx, $2 api) =>
+            groupBuilder.MapMethods(""$0"", new[] {{ $1 }}, async (IHttpContextAccessor ctx, $3 api) =>
             {{
 
                 //验证策略
@@ -171,7 +151,8 @@ namespace Biwen.QuickApi.SourceGenerator
                     throw;
                 }}
             }});
-"; 
+            \r\n
+";
 
 
         #endregion
