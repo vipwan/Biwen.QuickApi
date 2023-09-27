@@ -153,7 +153,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         private readonly HelloService _service;
         private readonly IHttpContextAccessor _httpContextAccessor;
 
-
         public Hello4Api(HelloService service, IHttpContextAccessor httpContextAccessor)
         {
             _service = service;
@@ -181,9 +180,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return builder;
         }
 
-
     }
-
 
     /// <summary>
     /// 默认不需要Group
@@ -260,7 +257,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     }
 
-
     #region 版本控制测试
 
     [QuickApi("v1")]
@@ -322,7 +318,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     #endregion
 
-
     /// <summary>
     /// get ~/content 返回文本测试
     /// </summary>
@@ -345,7 +340,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return builder;
         }
     }
-
 
     /// <summary>
     /// JustAsService 只会被服务发现，不会被注册到路由表
