@@ -19,11 +19,13 @@ public class MyApi : BaseQuickApi<Req,Rsp>{}
 
 ## 使用方式
 
-### Step0 Nuget Install
+### Step0 Nuget Base & Generator
 ```bash
 dotnet add package Biwen.QuickApi
 ```
-
+```bash
+dotnet add package Biwen.QuickApi.SourceGenerator
+```
 ### Step1 UseBiwenQuickApis
 
 ```csharp
