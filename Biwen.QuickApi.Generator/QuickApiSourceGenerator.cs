@@ -120,11 +120,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using Biwen.QuickApi;
 using Biwen.QuickApi.Attributes;
+using Microsoft.Extensions.DependencyInjection;
 
 $namespace
 
 public static partial class AppExtentions
 {{
+
 
     /// <summary>
     /// 源代码生成器的模板代码
@@ -134,24 +136,22 @@ public static partial class AppExtentions
     /// <returns></returns>
     /// <exception cref=""ArgumentNullException""></exception>
     /// <exception cref=""QuickApiExcetion""></exception>
-    public static RouteGroupBuilder MapGenQuickApis(this IEndpointRouteBuilder app, string prefix = ""api"")
+    public static RouteGroupBuilder MapGenQuickApis(this IEndpointRouteBuilder app, IServiceProvider serviceProvider,string prefix = ""api"")
     {{
         if (string.IsNullOrEmpty(prefix))
         {{
             throw new ArgumentNullException(nameof(prefix));
         }}
         var groupBuilder = app.MapGroup(prefix);
-
+        using var scope = serviceProvider.CreateScope();
         $apis
-
         return groupBuilder;
     }}
 }}
 ";
 
         const string routeTemp = $@"
-
-            groupBuilder.MapMethods(""$0"", new[] {{ $1 }}, async (IHttpContextAccessor ctx, $3 api) =>
+        var map$3 = groupBuilder.MapMethods(""$0"", new[] {{ $1 }}, async (IHttpContextAccessor ctx, $3 api) =>
             {{
                 //验证策略
                 var policy = ""$2"";
@@ -191,8 +191,10 @@ public static partial class AppExtentions
                     throw;
                 }}
             }});
-";
 
+        //handler
+        scope.ServiceProvider.GetRequiredService<$3>().HandlerBuilder(map$3);
+";
 
         #endregion
 

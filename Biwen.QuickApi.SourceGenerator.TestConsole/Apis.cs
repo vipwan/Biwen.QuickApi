@@ -4,6 +4,7 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
     using Biwen.QuickApi.Attributes;
     using FluentValidation;
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Builder;
 
     public class HelloRequest : BaseRequest<HelloRequest>
     {
@@ -67,7 +68,15 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
             await Task.CompletedTask;
             return new ContentResponse($"hello {request.Name}");
         }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.RequireAuthorization("admin");
+
+            return builder;
+        }
+
+
+
     }
-
-
 }

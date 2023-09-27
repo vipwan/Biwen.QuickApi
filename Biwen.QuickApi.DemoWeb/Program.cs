@@ -1,6 +1,9 @@
 using Biwen.QuickApi;
 using Biwen.QuickApi.DemoWeb;
+using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi.Writers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -75,10 +78,60 @@ app.MapGet("/fromapi", async (JustAsService api) =>
         return Results.BadRequest(result.ToDictionary());
     }
 
+
     //执行请求
     var x = await api.ExecuteAsync(new EmptyRequest());
     return Results.Content(x.ToString());
 });
+
+
+
+using var scopeNeedAuthApi = app.Services.CreateScope();
+
+
+var mapNeedAuthApi = app.MapMethods("admin/index", new[] { "GET", "POST" }, async (IHttpContextAccessor ctx, NeedAuthApi api) =>
+{
+    //验证策略
+    var policy = "admin";
+    if (!string.IsNullOrEmpty(policy))
+    {
+        var httpContext = ctx.HttpContext;
+        var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null,besure services.AddAuthorization() first!");
+        var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
+        if (!authorizationResult.Succeeded)
+        {
+            return Results.Unauthorized();
+        }
+    }
+    //绑定对象
+    var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
+
+    //验证器
+    if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
+    {
+        return Results.ValidationProblem(vresult.ToDictionary());
+    }
+    //执行请求
+    try
+    {
+        var result = await api.ExecuteAsync(req!);
+        return Results.Json(result);
+    }
+    catch (Exception ex)
+    {
+        var exceptionHandlers = ctx.HttpContext!.RequestServices.GetServices<IQuickApiExceptionHandler>();
+        //异常处理
+        foreach (var handler in exceptionHandlers)
+        {
+            await handler.HandleAsync(ex);
+        }
+        //默认处理
+        throw;
+    }
+});
+//handler
+scopeNeedAuthApi.ServiceProvider.GetRequiredService<NeedAuthApi>().HandlerBuilder(mapNeedAuthApi);
+
 
 
 app.Run();
