@@ -1,17 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 
-  <PropertyGroup>
+	<PropertyGroup>
 
-	<Nullable>enable</Nullable>
-    <TargetFramework>netstandard2.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<TargetFramework>netstandard2.0</TargetFramework>
 
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-	<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-	<AnalysisLevel>6.0-all</AnalysisLevel>  
-	  
-  </PropertyGroup>
-	
+		<PackageVersion>1.0.0</PackageVersion>
+
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+		<AnalysisLevel>6.0-all</AnalysisLevel>
+
+	</PropertyGroup>
+
 	<PropertyGroup>
 		<AnalyzerLanguage>cs</AnalyzerLanguage>
 		<InjectIsExternalInitOnLegacy>true</InjectIsExternalInitOnLegacy>
@@ -20,15 +22,24 @@
 		<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
 		<CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
 		<IsRoslynComponent>true</IsRoslynComponent>
-		
-		
+
+		<Description>Biwen.QuickApi ,NET7+ MinimalApi CQRS, CodeGEN</Description>
+		<Copyright>MIT</Copyright>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>webapi;minimal;REPR;netcore,Biwen.QuickApi</PackageTags>
+		<PackageReleaseNotes>Biwen.QuickApi 源代码预生成工具</PackageReleaseNotes>
+		<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>
 	</PropertyGroup>
-	
+
 	<!--开发调试阶段-->
-	<!--<ItemGroup>
+	<ItemGroup>
 		<None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-	</ItemGroup>-->
-	
+		<None Include="..\README.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0-2.final" PrivateAssets="all" />

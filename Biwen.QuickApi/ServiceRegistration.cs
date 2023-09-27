@@ -137,6 +137,7 @@ namespace Biwen.QuickApi
         /// <param name="app"></param>
         /// <returns></returns>
         /// <exception cref="QuickApiExcetion"></exception>
+        [Obsolete("当前扩展方法不推荐使用,推荐安装Biwen.QuickApi.SourceGenerator代码生成器调用:app.MapGenQuickApis();", false)]
         public static (string Group, RouteGroupBuilder RouteGroupBuilder)[] MapBiwenQuickApis(this IEndpointRouteBuilder app)
         {
             if (!Apis.Any())
@@ -171,7 +172,7 @@ namespace Biwen.QuickApi
                 {
                     var attr = apiType.GetCustomAttribute<QuickApiAttribute>() ?? throw new QuickApiExcetion($"{apiType.Name}:必须标注QuickApi特性!");
 
-                    if(apiType.GetCustomAttribute<JustAsServiceAttribute>() != null)
+                    if (apiType.GetCustomAttribute<JustAsServiceAttribute>() != null)
                     {
                         //不需要注册路由的QuickApi
                         continue;

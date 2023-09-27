@@ -3,7 +3,7 @@ using Biwen.QuickApi.Binder;
 using FluentValidation;
 using System.Text.Json.Serialization;
 
-namespace Biwen.QuickApi.DemoWeb.Apis
+namespace Biwen.QuickApi.DemoWeb
 {
 
     public class HelloApiRequest : BaseRequest<HelloApiRequest>
@@ -89,7 +89,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return new HelloApiResponse
             {
                 Message = $"Hello {request.Name}",
-                Alias =request.Alias
+                Alias = request.Alias
             };
         }
     }
