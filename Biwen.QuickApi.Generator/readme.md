@@ -11,7 +11,7 @@
 
 ### Enjoy!
 
-- 1.安装Biwen.QuickApi.SourceGenerator 1.0.1
+- 1.安装Biwen.QuickApi.SourceGenerator 1.1.0
 - <del>2.全局引用你[QuickApi]特性标注的地方 比如: global using Biwen.QuickApi.DemoWeb.Apis;</del>
 - 3.调用 app.MapGenQuickApis("api"); 注册所有Api,尽情享用吧!
 
