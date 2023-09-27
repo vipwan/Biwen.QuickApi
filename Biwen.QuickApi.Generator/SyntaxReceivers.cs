@@ -7,8 +7,13 @@ namespace Biwen.QuickApi.SourceGenerator
     using System.Collections.Generic;
     using System.Linq;
 
+#if !SHARED_PROJECT
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+#endif
     internal class QuickApiSyntaxReceivers : ISyntaxContextReceiver
     {
+
+        internal static ISyntaxContextReceiver Create() => new QuickApiSyntaxReceivers();
 
         public List<ClassDeclarationSyntax> ClassDeclarationSyntaxes { get; } = new();
 
@@ -17,6 +22,10 @@ namespace Biwen.QuickApi.SourceGenerator
         /// </summary>
         const string QuickApiAttributeName = "QuickApi";
 
+        /// <summary>
+        /// 查找所有标记[QuickApi]的接口
+        /// </summary>
+        /// <param name="context"></param>
         public void OnVisitSyntaxNode(GeneratorSyntaxContext context)
         {
             if (context.Node is ClassDeclarationSyntax classDeclarationSyntax)
