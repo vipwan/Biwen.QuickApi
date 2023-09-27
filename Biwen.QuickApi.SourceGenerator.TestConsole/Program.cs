@@ -11,13 +11,23 @@ builder.Services.AddBiwenQuickApis(builder =>
     //builder.JsonSerializerOptions.PropertyNamingPolicy = null;
 });
 
+//swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
+
 var app = builder.Build();
 
 
 
-app.MapGet("/", () => Results.Content("hello world")).ExcludeFromDescription();
+app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 
 //app.MapBiwenQuickApis();
+
+//swagger
+app.UseSwagger();
+app.UseSwaggerUI();
 
 
 app.MapGroup("").MapGet("/world", (IHttpContextAccessor ctx) => Results.Content("hello world")).ExcludeFromDescription();

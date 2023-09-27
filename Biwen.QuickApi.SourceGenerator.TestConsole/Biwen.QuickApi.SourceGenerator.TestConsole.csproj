@@ -13,6 +13,8 @@
 
 	<ItemGroup>
 
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+
 		<ProjectReference
 			Include="..\Biwen.QuickApi.Generator\Biwen.QuickApi.SourceGenerator.csproj"
 			OutputItemType="Analyzer"

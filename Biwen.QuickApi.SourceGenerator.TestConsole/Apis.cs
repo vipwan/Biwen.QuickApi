@@ -42,6 +42,19 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
             await Task.CompletedTask;
             return EmptyResponse.New;
         }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+
+            builder.WithOpenApi(operation => new(operation)
+            {
+                Summary = "This is a summary 22222222",
+                Description = "This is a description"
+            });
+
+            return base.HandlerBuilder(builder);
+        }
+
     }
 
 
@@ -56,6 +69,7 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
             await Task.CompletedTask;
             return new ContentResponse($"hello {request.Name}");
         }
+
     }
 
 
@@ -71,7 +85,12 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-            builder.RequireAuthorization("admin");
+
+            builder.WithOpenApi(operation => new(operation)
+            {
+                Summary = "This is a summary",
+                Description = "This is a description"
+            });
 
             return builder;
         }
