@@ -46,7 +46,7 @@ namespace Biwen.QuickApi.SourceGenerator
                 if (classDeclarationSyntax.Parent is NamespaceDeclarationSyntax ns)
                 {
                     var nsName = ns.Name.ToString();
-                    if (namespaces.Any(x => x != nsName))
+                    if (!namespaces.Contains(nsName))
                     {
                         namespaces.Add(nsName);
                     }
