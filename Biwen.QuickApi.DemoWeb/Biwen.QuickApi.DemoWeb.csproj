@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Biwen.QuickApi.SourceGenerator" Version="1.0.1" />
+    <PackageReference Include="Biwen.QuickApi.SourceGenerator" Version="1.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
