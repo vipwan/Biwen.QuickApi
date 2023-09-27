@@ -177,6 +177,15 @@ public static partial class AppExtentions
                 try
                 {{
                     var result = await api.ExecuteAsync(req!);
+
+                    if(result is EmptyResponse)
+                    {{
+                        return Results.Ok();
+                    }}
+                    if(result is ContentResponse)
+                    {{
+                        return Results.Content(x.ToString());
+                    }}
                     return Results.Json(result);
                 }}
                 catch (Exception ex)
