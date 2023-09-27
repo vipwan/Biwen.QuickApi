@@ -58,17 +58,10 @@ app.UseAuthorization();
 app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 
 
-var apis = app.MapBiwenQuickApis();
+// var apis = app.MapBiwenQuickApis();
 //
 app.MapGenQuickApis("api");
-
-
 //如果你想对特定的分组批量操作. 比如授权等,可以这样做
-var adminApis = apis.Where(g => g.Group.StartsWith("admin", StringComparison.OrdinalIgnoreCase)).Select(g => g.Item2);
-foreach (var api in adminApis)
-{
-    //todo:
-};
 
 //测试其他地方调用QuickApi
 app.MapGet("/fromapi", async (JustAsService api) =>
