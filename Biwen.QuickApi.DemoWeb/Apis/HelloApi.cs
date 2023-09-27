@@ -1,9 +1,10 @@
 ﻿using Biwen.QuickApi.Attributes;
 using Biwen.QuickApi.Binder;
+using Biwen.QuickApi.DemoWeb;
 using FluentValidation;
 using System.Text.Json.Serialization;
 
-namespace Biwen.QuickApi.DemoWeb
+namespace Biwen.QuickApi.DemoWeb.Apis
 {
 
     public class HelloApiRequest : BaseRequest<HelloApiRequest>

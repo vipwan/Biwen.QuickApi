@@ -332,7 +332,7 @@ namespace Biwen.QuickApi
             //执行请求
             try
             {
-                //var result = await (dynamic)method.Invoke(api, new object[] { req! })!;
+                //var result = await method.Invoke(api, new object[] { req! })!;
                 var result = await ((dynamic)api)!.ExecuteAsync(req!);
                 //返回空结果
                 if (result is EmptyResponse)
