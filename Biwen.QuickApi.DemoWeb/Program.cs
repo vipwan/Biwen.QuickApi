@@ -65,12 +65,12 @@ app.MapGet("/fromapi", async (JustAsService api) =>
 
 
 //发现ms的WithOpenApi的一处BUG,当Method为多个时会报错!
-app.MapMethods("/hello-world", new[] { "GET" }, () => Results.Ok())
-    .WithOpenApi(operation => new(operation)
-    {
-        Summary = "NeedAuthApi",
-        Description = "NeedAuthApi"
-    });
+//app.MapMethods("hello-world", new[] { "GET", "POST" }, () => Results.Ok()).WithOpenApi(operation => new(operation)
+//{
+//    Summary = "NeedAuthApi",
+//    Description = "NeedAuthApi"
+//});
+
 
 
 app.Run();
