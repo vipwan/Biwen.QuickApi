@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-	<PackageVersion>1.3.0</PackageVersion>
+	<PackageVersion>1.3.1</PackageVersion>
 
 	<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
 	<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
@@ -17,7 +17,7 @@
 	<Copyright>MIT</Copyright>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>webapi;minimal;REPR;netcore</PackageTags>
-	<PackageReleaseNotes>Req别名绑定,版本化支持</PackageReleaseNotes>
+	<PackageReleaseNotes>不在集成Version多版本,如果需要多版本支持请自行引用相关包</PackageReleaseNotes>
 
   </PropertyGroup>
 
