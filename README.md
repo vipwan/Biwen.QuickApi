@@ -8,12 +8,15 @@ public class MyApi : BaseQuickApi<Req,Rsp>{}
 ``` 
 - (MinimalApi as REPR) Biwen.QuickApi遵循了 REPR 设计 （Request-Endpoint-Response）
 - 开箱即用的Api路由 和 权限,Bind,validator体验
-- 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi,遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
+- 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi(gen版本=minimalApi,生成原生接口代码),遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
 - write less, do more ; write anywhere, do anything  
 - 欢迎小伙伴们star&issue共同学习进步 (Biwen.QuickApi)[https://github.com/vipwan/Biwen.QuickApi]
 
+
 ## 未来计划
---V2.0版本将提供源代码生成器方案,以于显著提升性能(V1.0版本使用的Emit和dynamic会导致部分性能损失)
+- 提供gen源代码生成器方案,以于显著提升性能(V1.0版本使用的Emit和dynamic会导致部分性能损失)
+- gen SourceGenerator已发布v1.0.0,[使用方式](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.Generator/readme.md)
+
 ## 使用方式
 
 ### Step0 Nuget Install
