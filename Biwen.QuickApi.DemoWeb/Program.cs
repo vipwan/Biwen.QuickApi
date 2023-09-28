@@ -1,5 +1,7 @@
-using Biwen.QuickApi;
+using Biwen.Apis;
+
 using Biwen.QuickApi.DemoWeb;
+using Biwen.QuickApi.DemoWeb.Apis;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.OpenApi.Models;
@@ -58,15 +60,10 @@ app.MapGet("/fromapi", async (JustAsService api) =>
         return Results.BadRequest(result.ToDictionary());
     }
 
-
-
-
-
     //Ö´ÐÐÇëÇó
     var x = await api.ExecuteAsync(new EmptyRequest());
     return Results.Content(x.ToString());
 });
-
 
 
 //app.MapGet("hhe", () => TypedResults.Ok(new EmptyResponse()));
