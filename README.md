@@ -15,7 +15,7 @@ public class MyApi : BaseQuickApi<Req,Rsp>{}
 
 ## SourceGenerator
 - 提供gen源代码生成器方案,以于显著提升性能(V1.0版本使用的Emit和dynamic会导致部分性能损失)
-- gen SourceGenerator已发布v1.1.0,[使用方式](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.Generator/readme.md)
+- gen SourceGenerator已发布v1.1.2,[使用方式](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.Generator/readme.md)
 
 ## 使用方式
 
