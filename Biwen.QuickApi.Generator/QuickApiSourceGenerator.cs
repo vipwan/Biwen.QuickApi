@@ -144,7 +144,8 @@ public static partial class AppExtentions
     /// 注册所有的QuickApi(Gen版)
     /// </summary>
     /// <param name=""app""></param>
-    /// <param name=""group""></param>
+    /// <param name=""serviceProvider""></param>
+    /// <param name=""prefix"">全局路由前缀</param>
     /// <returns></returns>
     /// <exception cref=""ArgumentNullException""></exception>
     /// <exception cref=""QuickApiExcetion""></exception>
