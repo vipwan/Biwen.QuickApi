@@ -4,6 +4,9 @@ using Biwen.QuickApi.DemoWeb;
 using FluentValidation;
 using System.Text.Json.Serialization;
 
+
+#pragma warning disable
+
 namespace Biwen.QuickApi.DemoWeb.Apis
 {
 
@@ -330,3 +333,5 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         }
     }
 }
+
+#pragma warning restore

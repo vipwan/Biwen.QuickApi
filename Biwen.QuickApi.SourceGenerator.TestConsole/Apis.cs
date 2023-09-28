@@ -18,7 +18,7 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
 
     public class HelloResponse : BaseResponse
     {
-        public HelloResponse(string hello,string world)
+        public HelloResponse(string hello, string world)
         {
             Hello = hello;
             World = world;
@@ -112,5 +112,14 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
 
 
 
+    }
+
+    [QuickApi("test6")]
+    public class Test6 : BaseQuickApi
+    {
+        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Task.FromResult(EmptyResponse.New);
+        }
     }
 }
