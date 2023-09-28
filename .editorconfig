@@ -11,3 +11,6 @@ dotnet_diagnostic.IDE0022.severity = silent
 
 # CA1822: 将成员标记为 static
 dotnet_diagnostic.CA1822.severity = silent
+
+# CA1812: 避免未实例化的内部类
+dotnet_diagnostic.CA1812.severity = silent

@@ -74,7 +74,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 Description = "NeedAuthApi"
             });
 
-            return builder;
+            return base.HandlerBuilder(builder);
         }
 
     }
@@ -170,12 +170,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             };
         }
 
-        override public RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-        {
-
-            return builder;
-        }
-
     }
 
     /// <summary>
@@ -245,7 +239,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 Description = "custom"
             });
 
-            return builder;
+            return base.HandlerBuilder(builder);
         }
 
 
@@ -266,7 +260,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
             builder.WithTags("VT");//按照版本分组
-            return builder;
+            return base.HandlerBuilder(builder);
         }
     }
 
@@ -284,7 +278,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
             builder.WithTags("VT");//按照版本分组
 
-            return builder;
+            return base.HandlerBuilder(builder);
         }
     }
 
@@ -301,7 +295,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             builder.WithTags("VT");//按照版本分组
 
-            return builder;
+            return base.HandlerBuilder(builder);
         }
     }
 
@@ -320,7 +314,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-            return builder;
+            return base.HandlerBuilder(builder);
         }
     }
 

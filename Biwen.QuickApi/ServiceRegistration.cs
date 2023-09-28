@@ -123,11 +123,11 @@ namespace Biwen.QuickApi
 
         /// <summary>
         /// Map Biwen.QuickApis
+        /// 推荐安装Biwen.QuickApi.SourceGenerator代码生成器调用:app.MapGenQuickApis();
         /// </summary>
         /// <param name="app"></param>
         /// <returns></returns>
         /// <exception cref="QuickApiExcetion"></exception>
-        [Obsolete("当前扩展方法不推荐使用,推荐安装Biwen.QuickApi.SourceGenerator代码生成器调用:app.MapGenQuickApis();", false)]
         public static (string Group, RouteGroupBuilder RouteGroupBuilder)[] MapBiwenQuickApis(this IEndpointRouteBuilder app)
         {
             if (!Apis.Any())
@@ -143,7 +143,9 @@ namespace Biwen.QuickApi
             var groups = Apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
             var routeGroups = new List<(string, RouteGroupBuilder)>();
             //quickapi前缀
+#pragma warning disable CS0618 // 类型或成员已过时
             var prefix = app.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.RoutePrefix;
+#pragma warning restore CS0618 // 类型或成员已过时
             foreach (var group in groups)
             {
                 var g = app.MapGroup(string.Empty);
@@ -200,24 +202,24 @@ namespace Biwen.QuickApi
                         {
                             rhBuilder?.ProducesProblem(StatusCodes.Status401Unauthorized);
                         }
-                        //200
-                        //var retnType = method.ReturnType.GenericTypeArguments[0];
-                        var retnType = ((dynamic)currentApi).RspType as Type;
-                        if (retnType == typeof(ContentResponse))
-                        {
-                            rhBuilder?.Produces(200, typeof(string), contentType: "text/plain");
-                        }
-                        else
-                        {
-                            rhBuilder?.Produces(200, retnType == typeof(EmptyResponse) ? null : retnType);
-                        }
-                        //400
-                        if (parameterType != typeof(EmptyRequest))
-                        {
-                            rhBuilder?.ProducesValidationProblem();
-                        }
-                        //500
-                        rhBuilder?.ProducesProblem(StatusCodes.Status500InternalServerError);
+                        ////200
+                        ////var retnType = method.ReturnType.GenericTypeArguments[0];
+                        //var retnType = ((dynamic)currentApi).RspType as Type;
+                        //if (retnType == typeof(ContentResponse))
+                        //{
+                        //    rhBuilder?.Produces(200, typeof(string), contentType: "text/plain");
+                        //}
+                        //else
+                        //{
+                        //    rhBuilder?.Produces(200, retnType == typeof(EmptyResponse) ? null : retnType);
+                        //}
+                        ////400
+                        //if (parameterType != typeof(EmptyRequest))
+                        //{
+                        //    rhBuilder?.ProducesValidationProblem();
+                        //}
+                        ////500
+                        //rhBuilder?.ProducesProblem(StatusCodes.Status500InternalServerError);
                     }
                 }
                 routeGroups.Add((group.Key, g));
@@ -250,7 +252,7 @@ namespace Biwen.QuickApi
                 var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
                 if (!authorizationResult.Succeeded)
                 {
-                    return Results.Unauthorized();
+                    return TypedResults.Unauthorized();
                 }
             }
             object? api = ctx.HttpContext!.RequestServices.GetRequiredService(apiType);
@@ -292,7 +294,7 @@ namespace Biwen.QuickApi
                 //验证器
                 if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
                 {
-                    return Results.ValidationProblem(vresult.ToDictionary());
+                    return TypedResults.ValidationProblem(vresult.ToDictionary());
                 }
 
                 //(bool, IDictionary<string, string[]>?) Valid(MethodInfo? md, object validator)
@@ -328,12 +330,12 @@ namespace Biwen.QuickApi
                 //返回空结果
                 if (result is EmptyResponse)
                 {
-                    return Results.Ok();//返回空
+                    return TypedResults.Ok();//返回空
                 }
                 //返回文本结果
                 if (result is ContentResponse content)
                 {
-                    return Results.Content(content.Content);
+                    return TypedResults.Content(content.ToString());
                 }
 
                 //针对返回结果的别名处理
@@ -361,7 +363,8 @@ namespace Biwen.QuickApi
 
                 //返回JSON
                 var expandoResult = rspToExpandoObject(result);
-                return Results.Json(expandoResult, quickApiOptions?.JsonSerializerOptions);
+                //return Results.Json(expandoResult, quickApiOptions?.JsonSerializerOptions);
+                return TypedResults.Json(expandoResult, quickApiOptions?.JsonSerializerOptions);
             }
             catch (Exception ex)
             {

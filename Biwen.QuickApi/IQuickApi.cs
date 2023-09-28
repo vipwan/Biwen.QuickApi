@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using System.Runtime.InteropServices.JavaScript;
 
 namespace Biwen.QuickApi
 {
@@ -51,7 +53,8 @@ namespace Biwen.QuickApi
     internal interface IHandlerBuilder
     {
         /// <summary>
-        /// 提供minimal扩展,可以扩充缓存,日志,鉴权等功能..
+        /// 提供minimal扩展,可以扩充缓存,日志,鉴权等功能,..
+        /// 注意OpenApi的Produces<>QuickApi已经默认实现.
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
@@ -74,7 +77,7 @@ namespace Biwen.QuickApi
         ///  输出类型
         /// </summary>
         internal Type RspType => typeof(Rsp);
-        
+
         /// <summary>
         /// 默认的请求参数绑定器
         /// </summary>
@@ -104,8 +107,30 @@ namespace Biwen.QuickApi
 
         public virtual RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
+            //Accepts
+            if (ReqType != typeof(EmptyRequest))
+            {
+                //builder?.Accepts(ReqType, "application/json");
+            }
+            //200
+            if (RspType == typeof(ContentResponse))
+            {
+                builder?.Produces(200, typeof(string), contentType: "text/plain");
+            }
+            else
+            {
+                builder?.Produces(200, RspType == typeof(EmptyResponse) ? null : RspType);
+            }
+            //400
+            if (RspType != typeof(EmptyRequest))
+            {
+                builder?.ProducesValidationProblem();
+            }
+            //500
+            builder?.ProducesProblem(StatusCodes.Status500InternalServerError);
+
             //todo:
-            return builder;
+            return builder!;
         }
     }
 

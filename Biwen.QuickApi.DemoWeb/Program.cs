@@ -4,6 +4,7 @@ using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.OpenApi.Models;
 using Microsoft.OpenApi.Writers;
+using System.Reflection.Metadata.Ecma335;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,9 +41,9 @@ app.UseAuthorization();
 app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 
 
-// var apis = app.MapBiwenQuickApis();
+ var apis = app.MapBiwenQuickApis();
 //
-app.MapGenQuickApis(app.Services);
+//app.MapGenQuickApis(app.Services);
 //如果你想对特定的分组批量操作. 比如授权等,可以这样做
 
 //测试其他地方调用QuickApi
@@ -62,6 +63,10 @@ app.MapGet("/fromapi", async (JustAsService api) =>
     var x = await api.ExecuteAsync(new EmptyRequest());
     return Results.Content(x.ToString());
 });
+
+
+
+//app.MapGet("hhe", () => TypedResults.Ok(new EmptyResponse()));
 
 
 //发现ms的WithOpenApi的一处BUG,当Method为多个时会报错!
