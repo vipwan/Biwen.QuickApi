@@ -6,6 +6,7 @@ using Biwen.QuickApi;
 using Biwen.QuickApi.Attributes;
 
 using Biwen.QuickApi.SourceGenerator.TestConsole;
+using Microsoft.OpenApi.Models;
 
 public static partial class AppExtentions
 {

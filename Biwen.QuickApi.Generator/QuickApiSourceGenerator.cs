@@ -94,8 +94,9 @@ namespace Biwen.QuickApi.SourceGenerator
 
             var namespacesSyntaxs = namespaces.Select(x => $"using {x};").ToList();
 
-            var endpointSource = endpointTemp.Replace(
-                "$namespace", string.Join(Environment.NewLine, namespacesSyntaxs))
+            var endpointSource = endpointTemp
+                .Replace("$version", typeof(QuickApiSourceGenerator).Assembly.GetName().Version?.ToString() ?? "")
+                .Replace("$namespace", string.Join(Environment.NewLine, namespacesSyntaxs))
                 .Replace("$apis", sb.ToString());
 
             context.AddSource($"QuickApiExtentions.g.cs", SourceText.From(endpointSource, Encoding.UTF8));
@@ -111,12 +112,14 @@ namespace Biwen.QuickApi.SourceGenerator
 
         const string endpointTemp = $@"
 //code gen for Biwen.QuickApi
+//version :$version
 //author :vipwan@outlook.com 万雅虎
 //https://github.com/vipwan/Biwen.QuickApi
 //如果你在使用中遇到问题,请第一时间issue,谢谢!
 
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using Biwen.QuickApi;
 using Biwen.QuickApi.Attributes;
@@ -126,7 +129,6 @@ $namespace
 
 public static partial class AppExtentions
 {{
-
 
     /// <summary>
     /// 源代码生成器的模板代码
@@ -162,7 +164,7 @@ public static partial class AppExtentions
                     var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
                     if (!authorizationResult.Succeeded)
                     {{
-                        return Results.Unauthorized();
+                        return TypedResults.Unauthorized();
                     }}
                 }}
                 //绑定对象
@@ -171,7 +173,7 @@ public static partial class AppExtentions
                 //验证器
                 if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
                 {{
-                    return Results.ValidationProblem(vresult.ToDictionary());
+                    return TypedResults.ValidationProblem(vresult.ToDictionary());
                 }}
                 //执行请求
                 try
@@ -180,13 +182,13 @@ public static partial class AppExtentions
 
                     if(result is EmptyResponse)
                     {{
-                        return Results.Ok();
+                        return TypedResults.Ok();
                     }}
                     if(result is ContentResponse)
                     {{
-                        return Results.Content(x.ToString());
+                        return Results.Content(result.ToString());
                     }}
-                    return Results.Json(result);
+                    return TypedResults.Json(result);
                 }}
                 catch (Exception ex)
                 {{
@@ -200,7 +202,6 @@ public static partial class AppExtentions
                     throw;
                 }}
             }});
-
         //handler
         scope.ServiceProvider.GetRequiredService<$3>().HandlerBuilder(map$3);
 ";

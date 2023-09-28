@@ -5,6 +5,11 @@ namespace Biwen.QuickApi.SourceGenerator
 
     internal class QuickApiType
     {
+        public QuickApiType()
+        {
+
+        }
+
         public const string TypeName = "QuickApi";
 
         public const string JustAsServiceTypeName = "JustAsService";

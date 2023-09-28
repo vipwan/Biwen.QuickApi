@@ -16,6 +16,22 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
         }
     }
 
+    public class HelloResponse : BaseResponse
+    {
+        public HelloResponse(string hello,string world)
+        {
+            Hello = hello;
+            World = world;
+        }
+
+        public string Hello { get; set; } = null!;
+        public string World { get; set; } = null!;
+
+    }
+
+
+
+
 
     /// <summary>
     /// 模拟一个空的请求
@@ -74,25 +90,24 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole
 
 
     [QuickApi("hello4")]
-    public class Tset3QuickApi : BaseQuickApi<HelloRequest, ContentResponse>
+    public class Tset3QuickApi : BaseQuickApi<HelloRequest, HelloResponse>
     {
 
-        public override async Task<ContentResponse> ExecuteAsync(HelloRequest request)
+        public override async Task<HelloResponse> ExecuteAsync(HelloRequest request)
         {
             await Task.CompletedTask;
-            return new ContentResponse($"hello {request.Name}");
+            return new HelloResponse("hello", "world");
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-
             builder.WithOpenApi(operation => new(operation)
             {
                 Summary = "This is a summary",
                 Description = "This is a description"
             });
 
-            return builder;
+            return base.HandlerBuilder(builder);
         }
 
 
