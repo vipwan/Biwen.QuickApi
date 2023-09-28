@@ -165,7 +165,7 @@ public static partial class AppExtentions
 ";
 
         const string routeTemp = $@"
-        var map$3 = groupBuilder.MapMethods(""$0"", new[] {{ $1 }}, async (IHttpContextAccessor ctx, $3 api) =>
+        var $4 = groupBuilder.MapMethods(""$0"", new[] {{ $1 }}, async (IHttpContextAccessor ctx, $3 api) =>
             {{
                 //验证策略
                 var policy = ""$2"";
@@ -217,7 +217,7 @@ public static partial class AppExtentions
                 }}
             }});
         //handler
-        scope.ServiceProvider.GetRequiredService<$3>().HandlerBuilder(map$3);
+        scope.ServiceProvider.GetRequiredService<$3>().HandlerBuilder($4);
 ";
 
         #endregion
@@ -284,10 +284,12 @@ public static partial class AppExtentions
                 {
                     var fullname = classDeclarationSyntax.Identifier.ValueText;
                     var attrs = classDeclarationSyntax.AttributeLists.ToList();
+                    var nsName = string.Empty;
+
                     //(classDeclarationSyntax.Parent as Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax).Name.ToString()
                     if (classDeclarationSyntax.Parent is NamespaceDeclarationSyntax ns)
                     {
-                        var nsName = ns.Name.ToString();
+                        nsName = ns.Name.ToString();
                         if (!namespaces.Contains(nsName))
                         {
                             namespaces.Add(nsName);
@@ -325,7 +327,8 @@ public static partial class AppExtentions
                                 var source = routeTemp.Replace("$0", $"{group}/{route}")
                                     .Replace("$1", verbsStr)
                                     .Replace("$2", policy ?? "")
-                                    .Replace("$3", fullname);
+                                    .Replace("$3", string.IsNullOrEmpty(nsName) ? fullname : $"{nsName}.{fullname}")
+                                    .Replace("$4", $"map{Guid.NewGuid().ToString().Substring(0, 8)}");
 
                                 sb.AppendLine(source);
 
