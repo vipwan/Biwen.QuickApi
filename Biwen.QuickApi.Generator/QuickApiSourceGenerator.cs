@@ -129,6 +129,7 @@ $namespace
 
 namespace Biwen.QuickApi;
 
+#pragma warning disable
 public static partial class AppExtentions
 {{
 
@@ -152,6 +153,7 @@ public static partial class AppExtentions
         return groupBuilder;
     }}
 }}
+#pragma warning restore
 ";
 
         const string routeTemp = $@"
