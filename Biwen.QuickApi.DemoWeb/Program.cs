@@ -59,6 +59,9 @@ app.MapGet("/fromapi", async (JustAsService api) =>
     }
 
 
+
+
+
     //÷¥––«Î«Û
     var x = await api.ExecuteAsync(new EmptyRequest());
     return Results.Content(x.ToString());
