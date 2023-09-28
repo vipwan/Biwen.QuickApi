@@ -50,9 +50,27 @@ namespace Biwen.QuickApi.Binder
                     }
                 }
             }
+            if (requestMethod == HttpMethods.Head)
+            {
+                //header
+                {
+                    var qs = context.Request.Headers;
+                    foreach (var item in qs)
+                    {
+                        var prop = GetProperty(item.Key);
+                        if (prop != null)
+                        {
+                            //转换
+                            var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
+                            prop.SetValue(@default, item.Value);
+                        }
+                    }
+                }
+            }
 
             if (requestMethod == HttpMethods.Post ||
                 requestMethod == HttpMethods.Put ||
+                requestMethod == HttpMethods.Options ||
                 requestMethod == HttpMethods.Patch ||
                 requestMethod == HttpMethods.Delete)
             {
@@ -107,26 +125,6 @@ namespace Biwen.QuickApi.Binder
                     }
                 }
             }
-
-            if (requestMethod == HttpMethods.Head ||
-                requestMethod == HttpMethods.Options)
-            {
-                //header
-                {
-                    var qs = context.Request.Headers;
-                    foreach (var item in qs)
-                    {
-                        var prop = GetProperty(item.Key);
-                        if (prop != null)
-                        {
-                            //转换
-                            var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
-                            prop.SetValue(@default, item.Value);
-                        }
-                    }
-                }
-            }
-
             //route
             {
                 var qs = context.Request.RouteValues;
