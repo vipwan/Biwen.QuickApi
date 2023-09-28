@@ -127,11 +127,13 @@ using Microsoft.Extensions.DependencyInjection;
 
 $namespace
 
+namespace Biwen.QuickApi;
+
 public static partial class AppExtentions
 {{
 
     /// <summary>
-    /// 源代码生成器的模板代码
+    /// 注册所有的QuickApi(Gen版)
     /// </summary>
     /// <param name=""app""></param>
     /// <param name=""group""></param>
