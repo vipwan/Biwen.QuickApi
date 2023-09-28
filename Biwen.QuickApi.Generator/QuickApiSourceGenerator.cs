@@ -180,6 +180,7 @@ public static partial class AppExtentions
                 {{
                     var result = await api.ExecuteAsync(req!);
 
+#pragma warning disable CS0184 // '""is"" 表达式的给定表达式始终不是所提供的类型
                     if(result is EmptyResponse)
                     {{
                         return TypedResults.Ok();
@@ -188,6 +189,7 @@ public static partial class AppExtentions
                     {{
                         return Results.Content(result.ToString());
                     }}
+#pragma warning restore CS0184 // '""is"" 表达式的给定表达式始终不是所提供的类型
                     return TypedResults.Json(result);
                 }}
                 catch (Exception ex)
