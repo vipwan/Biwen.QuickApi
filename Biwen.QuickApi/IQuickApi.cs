@@ -110,7 +110,7 @@ namespace Biwen.QuickApi
             //Accepts
             if (ReqType != typeof(EmptyRequest))
             {
-                //builder?.Accepts(ReqType, "application/json");
+                builder?.Accepts(ReqType, "application/json");
             }
             //200
             if (RspType == typeof(ContentResponse))
