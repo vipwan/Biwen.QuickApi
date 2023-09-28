@@ -19,7 +19,7 @@ namespace Biwen.QuickApi
         DELETE = 8,
         PATCH = 16,
         HEAD = 32,
-        //OPTIONS = 64,
+        OPTIONS = 64,
     }
 
     /// <summary>

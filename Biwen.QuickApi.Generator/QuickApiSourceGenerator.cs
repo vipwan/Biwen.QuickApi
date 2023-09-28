@@ -254,6 +254,15 @@ public static partial class AppExtentions
             {
                 list.Add("PATCH");
             }
+            if (verbs.Contains("HEAD"))
+            {
+                list.Add("HEAD");
+            }
+            if (verbs.Contains("OPTIONS"))
+            {
+                list.Add("OPTIONS");
+            }
+
             return list;
         }
 
