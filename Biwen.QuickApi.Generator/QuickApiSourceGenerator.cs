@@ -5,7 +5,7 @@ namespace Biwen.QuickApi.SourceGenerator
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using System.Threading;
+    //using System.Threading;
     using Microsoft.CodeAnalysis;
     using Microsoft.CodeAnalysis.CSharp.Syntax;
     using Microsoft.CodeAnalysis.Text;
@@ -15,107 +15,8 @@ namespace Biwen.QuickApi.SourceGenerator
     public class QuickApiSourceGenerator : IIncrementalGenerator
 #pragma warning restore RS1036 // 指定分析器禁止的 API 强制设置
     {
-        # region 已弃用.ISourceGenerator 当前使用IIncrementalGenerator
-
-        public void Execute(GeneratorExecutionContext context)
-        {
-
-            var symbos = SymbolLoader.LoadSymbols(context.Compilation);
-            if (symbos == null) { return; }
-            #region 生成QuickApi代码
-
-
-            // retrieve the populated receiver 
-            if (!(context.SyntaxContextReceiver is QuickApiSyntaxReceivers quickApiSyntaxReceivers))
-                return;
-
-            var classDeclarationSyntaxes = quickApiSyntaxReceivers.ClassDeclarationSyntaxes;
-
-            var sb = new StringBuilder();
-
-            //存储所有的命名空间
-            IList<string> namespaces = new List<string> { context.Compilation.AssemblyName! };
-
-            foreach (var classDeclarationSyntax in classDeclarationSyntaxes)
-            {
-                var fullname = classDeclarationSyntax.Identifier.ValueText;
-                var attrs = classDeclarationSyntax.AttributeLists.ToList();
-
-                //(classDeclarationSyntax.Parent as Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax).Name.ToString()
-
-                if (classDeclarationSyntax.Parent is NamespaceDeclarationSyntax ns)
-                {
-                    var nsName = ns.Name.ToString();
-                    if (!namespaces.Contains(nsName))
-                    {
-                        namespaces.Add(nsName);
-                    }
-                }
-
-                foreach (var attr in attrs)
-                {
-                    //屏蔽JustAsService
-                    if (attrs.Any(x => x.Attributes.Any(x => x.Name.ToString() == QuickApiType.JustAsServiceTypeName)))
-                    {
-                        continue;
-                    }
-
-                    attr.Attributes.ToList().ForEach(x =>
-                    {
-                        var name = x.Name.ToString();
-                        var args = x.ArgumentList?.Arguments.ToList();
-                        if (name == QuickApiType.TypeName)
-                        {
-                            //路由地址
-                            var route = args.First().Expression.ToString().ToRaw();
-                            //验证策略
-                            var policy = args.FirstOrDefault(x =>
-                            x.NameEquals?.Name.ToString() == nameof(QuickApiType.Policy))?.Expression.ToString().ToRaw();
-                            //请求类型
-                            var verbs = ToVerbs(args.FirstOrDefault(x =>
-                            x.NameEquals?.Name.ToString() == nameof(QuickApiType.Verbs))?.Expression.ToString().ToRaw());
-                            //分组
-                            var group = args.FirstOrDefault(x =>
-                            x.NameEquals?.Name.ToString() == nameof(QuickApiType.Group))?.Expression.ToString().ToRaw();
-                            //"GET","POST"
-                            var verbsStr = string.Join(",", verbs.Select(x => $"\"{x}\""));
-
-                            var source = routeTemp.Replace("$0", $"{group}/{route}")
-                                .Replace("$1", verbsStr)
-                                .Replace("$2", policy ?? "")
-                                .Replace("$3", fullname);
-
-                            sb.AppendLine(source);
-
-                        }
-                    });
-                }
-            }
-
-            var namespacesSyntaxs = namespaces.Select(x => $"using {x};").ToList();
-
-            var endpointSource = endpointTemp
-                .Replace("$version", typeof(QuickApiSourceGenerator).Assembly.GetName().Version?.ToString() ?? "")
-                .Replace("$namespace", string.Join(Environment.NewLine, namespacesSyntaxs))
-                .Replace("$apis", sb.ToString());
-
-            context.AddSource($"QuickApiExtentions.g.cs", SourceText.From(endpointSource, Encoding.UTF8));
-
-            // Find the main method
-            //var mainMethod = context.Compilation.GetEntryPoint(context.CancellationToken)!;
-
-            #endregion
-        }
-        public void Initialize(GeneratorInitializationContext context)
-        {
-            // Register a syntax receiver that will be created for each generation pass
-            context.RegisterForSyntaxNotifications(() => QuickApiSyntaxReceivers.Create());
-        }
-
-        #endregion
 
         #region template
-
 
         const string endpointTemp = $@"
 //code gen for Biwen.QuickApi
@@ -273,12 +174,34 @@ public static partial class AppExtentions
 
             // quickApi
             var quickApiProvider = context.SyntaxProvider.CreateSyntaxProvider(
-                (syntax, cancellationToken) => syntax is ClassDeclarationSyntax { BaseList: not null },
+                (syntax, cancellationToken) => syntax is ClassDeclarationSyntax
+                {
+                    BaseList: not null
+                },
                 (context, cancellationToken) =>
                 (ClassDeclarationSyntax)context.Node)
                      .Where(x => x.AttributeLists.Count > 0)
                      .Where(x => x.AttributeLists.SelectMany(x => x.Attributes)
                      .Any(x => x.Name.ToString() == QuickApiType.TypeName)).Collect();
+
+
+
+            //顶级语句是没有main函数的
+            //var main = context.SyntaxProvider.CreateSyntaxProvider(
+            //                   (syntax, cancellationToken) => syntax is MethodDeclarationSyntax
+            //                   {
+            //                       Identifier: { ValueText: "Main" }
+            //                   },
+            //                   (context, cancellationToken) =>
+            //                   (MethodDeclarationSyntax)context.Node).Collect();
+
+            //context.RegisterSourceOutput(main, (ctx, source) =>
+            //{
+            //    var method = source.AsEnumerable();
+            //    var len = method.Count();
+
+            //});
+
 
             context.RegisterSourceOutput(quickApiProvider, (ctx, source) =>
             {
