@@ -179,8 +179,9 @@ app.MapBiwenQuickApis();
             });
             //默认实现了Accepts和Produces
             return base.HandlerBuilder(builder);
-        }
-
+            //如果完全自定义直接返回Builder
+            //return builder;
+         }
     }
     /// <summary>
     /// JustAsService 只会被服务发现，不会被注册到路由表

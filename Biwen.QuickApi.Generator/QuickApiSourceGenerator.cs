@@ -7,10 +7,11 @@ namespace Biwen.QuickApi.SourceGenerator
     using System.Text;
     //using System.Threading;
     using Microsoft.CodeAnalysis;
+    using Microsoft.CodeAnalysis.CSharp;
     using Microsoft.CodeAnalysis.CSharp.Syntax;
     using Microsoft.CodeAnalysis.Text;
 
-    [Generator]
+    [Generator(LanguageNames.CSharp)]
 #pragma warning disable RS1036 // 指定分析器禁止的 API 强制设置
     public class QuickApiSourceGenerator : IIncrementalGenerator
 #pragma warning restore RS1036 // 指定分析器禁止的 API 强制设置
