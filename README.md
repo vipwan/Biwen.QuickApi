@@ -144,6 +144,7 @@ app.MapBiwenQuickApis();
     {
         public CustomApi()
         {
+            //自定义绑定器
             UseReqBinder<CustomApiRequestBinder>();
         }
 
