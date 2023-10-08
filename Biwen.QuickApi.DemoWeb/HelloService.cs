@@ -1,5 +1,4 @@
-﻿
-namespace Biwen.QuickApi.DemoWeb;
+﻿namespace Biwen.QuickApi.DemoWeb;
 
 /// <summary>
 /// 测试服务

@@ -1,5 +1,4 @@
-﻿
-namespace Biwen.QuickApi.SourceGenerator
+﻿namespace Biwen.QuickApi.SourceGenerator
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +6,7 @@ namespace Biwen.QuickApi.SourceGenerator
     using System.Text;
     //using System.Threading;
     using Microsoft.CodeAnalysis;
-    using Microsoft.CodeAnalysis.CSharp;
+    //using Microsoft.CodeAnalysis.CSharp;
     using Microsoft.CodeAnalysis.CSharp.Syntax;
     using Microsoft.CodeAnalysis.Text;
 

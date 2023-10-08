@@ -1,5 +1,4 @@
-﻿
-namespace Biwen.QuickApi.SourceGenerator.TestConsole
+﻿namespace Biwen.QuickApi.SourceGenerator.TestConsole
 {
     using Biwen.QuickApi.Attributes;
     using FluentValidation;

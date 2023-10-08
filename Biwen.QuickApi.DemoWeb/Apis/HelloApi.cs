@@ -1,6 +1,4 @@
 ﻿using Biwen.QuickApi.Attributes;
-using Biwen.QuickApi.Binder;
-using Biwen.QuickApi.DemoWeb;
 using FluentValidation;
 using System.Text.Json.Serialization;
 

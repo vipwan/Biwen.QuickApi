@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Dynamic;
 
-namespace Biwen.QuickApi.Binder
+namespace Biwen.QuickApi
 {
 
     /// <summary>
