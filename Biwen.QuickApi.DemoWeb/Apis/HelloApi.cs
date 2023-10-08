@@ -192,12 +192,16 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// 默认不需要Group
     /// </summary>
     [QuickApi("world6", Verbs = Verb.GET)]
-    public class Hello6Api : BaseQuickApi
+    public class Hello6Api : BaseQuickApiWithoutRequest<HelloApiResponse>
     {
-        public override async Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<HelloApiResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return EmptyResponse.New;
+            return new HelloApiResponse
+            {
+                Message = "Hello 6",
+                Alias = "Alias"
+            };
         }
     }
 

@@ -103,7 +103,7 @@ namespace Biwen.QuickApi.Binder
                     if (type.GetProperties().Any(x => x.GetCustomAttribute<AliasAsAttribute>() != null))
                     {
                         var jsonObject = await context.Request.ReadFromJsonAsync<ExpandoObject>();
-                        if(jsonObject==null)
+                        if (jsonObject == null)
                             return @default;
 
                         var dic = jsonObject as IDictionary<string, object>;
@@ -157,5 +157,18 @@ namespace Biwen.QuickApi.Binder
             return prop;
         };
 
+    }
+
+
+    /// <summary>
+    /// 空绑定器
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    internal sealed class EmptyReqBinder<T> : IReqBinder<T> where T : class, new()
+    {
+        public Task<T> BindAsync(HttpContext context)
+        {
+            return Task.FromResult(new T());
+        }
     }
 }
