@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace Biwen.QuickApi
 {
 
-    public abstract class BaseRequest<T> : IRequestValidator<T> where T : class, new()
+    public abstract class BaseRequest<T> : IReqValidator<T> where T : class, new()
     {
         /// <summary>
         /// 添加验证规则
