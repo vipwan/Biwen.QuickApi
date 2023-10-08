@@ -4,6 +4,14 @@ using System.Text.Json.Serialization;
 namespace Biwen.QuickApi
 {
 
+    /// <summary>
+    /// 验证器接口
+    /// </summary>
+    internal interface IRequestValidator<T> where T : class, new()
+    {
+        IValidator<T> RealValidator { get; }
+    }
+
     public abstract class BaseRequest<T> : IRequestValidator<T> where T : class, new()
     {
         /// <summary>
@@ -39,13 +47,4 @@ namespace Biwen.QuickApi
     public sealed class EmptyRequest : BaseRequest<EmptyRequest>
     {
     }
-
-    /// <summary>
-    /// 验证器接口
-    /// </summary>
-    interface IRequestValidator<T> where T : class, new()
-    {
-        IValidator<T> RealValidator { get; }
-    }
-
 }
