@@ -334,6 +334,17 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return Task.FromResult(new ContentResponse("Hello World JustAsService!"));
         }
     }
+
+
+
+    [QuickApi("iresult", Verbs = Verb.GET)]
+    public class IResultTestApi : BaseQuickApi<EmptyRequest, IResultResponse>
+    {
+        public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Task.FromResult(new IResultResponse(Results.Ok("Hello World IResult!")));
+        }
+    }
 }
 
 #pragma warning restore

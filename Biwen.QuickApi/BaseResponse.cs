@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi
+﻿using Microsoft.AspNetCore.Http;
+
+namespace Biwen.QuickApi
 {
     public abstract class BaseResponse
     {
@@ -35,5 +37,19 @@
             return Content;
         }
 
+    }
+
+    /// <summary>
+    /// IResult输出.
+    /// 针对IResultResponse 请自行重写BaseQuickApi.HandlerBuilder方法的OpenApi实现
+    /// </summary>
+    public sealed class IResultResponse : BaseResponse
+    {
+        public IResultResponse(IResult result)
+        {
+            Result = result;
+        }
+
+        public IResult Result { get; set; }
     }
 }

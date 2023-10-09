@@ -201,24 +201,6 @@ namespace Biwen.QuickApi
                         {
                             rhBuilder?.ProducesProblem(StatusCodes.Status401Unauthorized);
                         }
-                        ////200
-                        ////var retnType = method.ReturnType.GenericTypeArguments[0];
-                        //var retnType = ((dynamic)currentApi).RspType as Type;
-                        //if (retnType == typeof(ContentResponse))
-                        //{
-                        //    rhBuilder?.Produces(200, typeof(string), contentType: "text/plain");
-                        //}
-                        //else
-                        //{
-                        //    rhBuilder?.Produces(200, retnType == typeof(EmptyResponse) ? null : retnType);
-                        //}
-                        ////400
-                        //if (parameterType != typeof(EmptyRequest))
-                        //{
-                        //    rhBuilder?.ProducesValidationProblem();
-                        //}
-                        ////500
-                        //rhBuilder?.ProducesProblem(StatusCodes.Status500InternalServerError);
                     }
                 }
                 routeGroups.Add((group.Key, g));
@@ -295,30 +277,6 @@ namespace Biwen.QuickApi
                 {
                     return TypedResults.ValidationProblem(vresult.ToDictionary());
                 }
-
-                //(bool, IDictionary<string, string[]>?) Valid(MethodInfo? md, object validator)
-                //{
-                //    //验证不通过的情况
-                //    if (md!.Invoke(validator, new[] { req }) is ValidationResult result && !result!.IsValid)
-                //    {
-                //        return (false, result.ToDictionary());
-                //    }
-                //    return (true, null);
-                //}
-
-                //继承至ValidationSettingBase<T>的情况
-                //if (api.GetType().BaseType!.IsConstructedGenericType && api.GetType().BaseType!.GenericTypeArguments.Any(x => x == req!.GetType()))
-                //{
-                //    var x = req as IRequestValidator ?? throw new QuickApiExcetion($"IRequestValidator is Null!");
-                //    var md = x.RealValidator.GetType().GetMethods().First(
-                //        x => !x.IsGenericMethod && x.Name == nameof(IValidator.Validate));
-                //    //验证不通过的情况
-                //    var vResult = Valid(md, x.RealValidator);
-                //    if (!vResult.Item1)
-                //    {
-                //        return Results.ValidationProblem(vResult.Item2!);
-                //    }
-                //}
             }
 
             //执行请求
@@ -335,6 +293,11 @@ namespace Biwen.QuickApi
                 if (result is ContentResponse content)
                 {
                     return TypedResults.Content(content.ToString());
+                }
+                //返回IResult结果
+                if(result is IResultResponse iresult)
+                {
+                    return iresult.Result;
                 }
 
                 //针对返回结果的别名处理
@@ -362,7 +325,6 @@ namespace Biwen.QuickApi
 
                 //返回JSON
                 var expandoResult = rspToExpandoObject(result);
-                //return Results.Json(expandoResult, quickApiOptions?.JsonSerializerOptions);
                 return TypedResults.Json(expandoResult, quickApiOptions?.JsonSerializerOptions);
             }
             catch (Exception ex)

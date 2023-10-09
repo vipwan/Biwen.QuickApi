@@ -42,13 +42,13 @@ app.UseAuthorization();
 app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 
 
-// var apis = app.MapBiwenQuickApis();
+ var apis = app.MapBiwenQuickApis();
 //
-app.MapGenQuickApis(app.Services);
+//app.MapGenQuickApis(app.Services);
 //如果你想对特定的分组批量操作. 比如授权等,可以这样做
 
 //测试其他地方调用QuickApi
-app.MapGet("/fromapi", async (JustAsService api) =>
+app.MapGet("/fromapi", async (IResultTestApi api) =>
 {
     //通过你的方式获取请求对象
     var req = new EmptyRequest();
@@ -61,8 +61,9 @@ app.MapGet("/fromapi", async (JustAsService api) =>
 
     //执行请求
     var x = await api.ExecuteAsync(new EmptyRequest());
-    return Results.Content(x.ToString());
+    return x.Result;
 });
+
 
 
 //app.MapGet("hhe", () => TypedResults.Ok(new EmptyResponse()));

@@ -58,6 +58,10 @@ namespace Biwen.QuickApi
             {
                 builder?.Produces(200, typeof(string), contentType: "text/plain");
             }
+            else if (RspType == typeof(IResultResponse))
+            {
+                //todo:IResultResponse不提供具体的类型，需执行时自行指定
+            }
             else
             {
                 if (RspType != typeof(EmptyResponse))

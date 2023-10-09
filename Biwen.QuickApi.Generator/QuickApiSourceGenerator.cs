@@ -102,6 +102,10 @@ public static partial class AppExtentions
                     {{
                         return Results.Content(result.ToString());
                     }}
+                    else if (result.GetType() == typeof(IResultResponse))
+                    {{
+                        return ((IResultResponse)((object)result)).Result;
+                    }}
 #pragma warning restore CS0184 // '""is"" 表达式的给定表达式始终不是所提供的类型
                     return TypedResults.Json(result);
                 }}
