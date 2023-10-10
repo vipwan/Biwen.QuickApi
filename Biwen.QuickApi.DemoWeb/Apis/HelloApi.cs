@@ -340,9 +340,18 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("iresult", Verbs = Verb.GET)]
     public class IResultTestApi : BaseQuickApi<EmptyRequest, IResultResponse>
     {
-        public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(new IResultResponse(Results.Ok("Hello World IResult!")));
+            return Results.Ok("Hello World IResult!").AsRsp();
+            //return Task.FromResult(new IResultResponse(Results.Ok("Hello World IResult!")));
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            //针对IResultResponse,需要完全自定义Produces,QuickApi无法自动识别
+            builder.Produces(200, typeof(string), contentType: "text/plain");
+            return builder;
+            //return base.HandlerBuilder(builder);
         }
     }
 }
