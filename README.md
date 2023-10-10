@@ -75,7 +75,20 @@ app.MapBiwenQuickApis();
             RuleFor(x => x.Name).NotNull().Length(5, 10);
         }
     }
+    /// <summary>
+    /// 标记FromBodyReq,表示这个请求对象是FromBody的
+    /// </summary>
+    [FromBodyReq]
+    public class FromBodyRequest : BaseRequest<FromBodyRequest>
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
 
+        public FromBodyRequest()
+        {
+            RuleFor(x => x.Id).InclusiveBetween(1, 100);//必须1~100
+        }
+    }
     /// <summary>
     /// 自定义的绑定器
     /// </summary>
