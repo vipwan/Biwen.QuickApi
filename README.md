@@ -52,7 +52,11 @@ app.MapBiwenQuickApis();
         /// </summary>
         [AliasAs("a")]
         public string? Alias { get; set; }
-
+        /// <summary>
+        /// FromQuery特性绑定字段
+        /// </summary>
+        [FromQuery("q")]
+        public string? Q { get; set; }
         public HelloApiRequest()
         {
             RuleFor(x => x.Name).NotNull().Length(5, 10);
