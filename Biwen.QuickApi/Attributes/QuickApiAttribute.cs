@@ -4,7 +4,7 @@
     /// QuickApi特性
     /// </summary>
 
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
     public class QuickApiAttribute : Attribute
     {
         public QuickApiAttribute(string route)

@@ -133,4 +133,15 @@ namespace Biwen.QuickApi
         }
     }
 
+
+    /// <summary>
+    /// BaseQuickApi 作为服务使用,不注册Api路由
+    /// </summary>
+    /// <typeparam name="Req"></typeparam>
+    /// <typeparam name="Rsp"></typeparam>
+    [QuickApi(""), JustAsService]
+    public abstract class BaseQuickApiJustAsService<Req, Rsp> : BaseQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new() where Rsp : BaseResponse
+    {
+
+    }
 }

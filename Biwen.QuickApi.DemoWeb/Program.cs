@@ -3,6 +3,8 @@ using Biwen.QuickApi.DemoWeb;
 using Biwen.QuickApi.DemoWeb.Apis;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
 using Microsoft.OpenApi.Writers;
 
@@ -47,7 +49,9 @@ app.MapGenQuickApis(app.Services);
 //如果你想对特定的分组批量操作. 比如授权等,可以这样做
 
 //测试其他地方调用QuickApi
-app.MapGet("/fromapi", async (IResultTestApi api) =>
+app.MapGet("/fromapi",
+    async Task<Results<Ok<string>, BadRequest<IDictionary<string, string[]>>>>
+    (JustAsService api) =>
 {
     //通过你的方式获取请求对象
     var req = new EmptyRequest();
@@ -55,14 +59,14 @@ app.MapGet("/fromapi", async (IResultTestApi api) =>
     var result = req.RealValidator.Validate(req);
     if (!result.IsValid)
     {
-        return Results.BadRequest(result.ToDictionary());
+        return TypedResults.BadRequest(result.ToDictionary());
     }
 
     //执行请求
-    var x = await api.ExecuteAsync(new EmptyRequest());
-    return x.Result;
-});
+    var x = await api.ExecuteAsync(req);
+    return TypedResults.Ok(x.Content);
 
+});
 
 
 //app.MapGet("hhe", () => TypedResults.Ok(new EmptyResponse()));
