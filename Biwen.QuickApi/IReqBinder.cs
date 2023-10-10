@@ -38,6 +38,7 @@ namespace Biwen.QuickApi
 
             foreach (var prop in props!)
             {
+
                 if (prop.Name == nameof(BaseRequest<T>.RealValidator)) continue;
                 var fromQuery = prop.GetCustomAttribute<FromQueryAttribute>();
                 if (fromQuery != null)
@@ -112,6 +113,7 @@ namespace Biwen.QuickApi
                 //如果仍然未找到
                 {
                     bool isBodySet = false;
+                    var alias = prop.GetCustomAttribute<AliasAsAttribute>();
 
                     var requestMethod = context.Request.Method!;
                     if (requestMethod == HttpMethods.Get)
@@ -119,15 +121,13 @@ namespace Biwen.QuickApi
                         //querystring
                         {
                             var qs = context.Request.Query;
-                            foreach (var item in qs)
+                            var value = qs[alias?.Name ?? prop.Name];
+                            if (value.Count > 0)
                             {
-                                if (prop != null)
-                                {
-                                    //转换
-                                    var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
-                                    prop.SetValue(@default, value);
-                                    break;
-                                }
+                                //转换
+                                var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value[0]!);
+                                prop.SetValue(@default, value2);
+                                continue;
                             }
                         }
                     }
@@ -136,15 +136,13 @@ namespace Biwen.QuickApi
                         //header
                         {
                             var qs = context.Request.Headers;
-                            foreach (var item in qs)
+                            var value = qs[alias?.Name ?? prop.Name];
+                            if (value.Count > 0)
                             {
-                                if (prop != null)
-                                {
-                                    //转换
-                                    var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
-                                    prop.SetValue(@default, item.Value);
-                                    break;
-                                }
+                                //转换
+                                var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value[0]!);
+                                prop.SetValue(@default, value2);
+                                continue;
                             }
                         }
                     }
@@ -171,33 +169,19 @@ namespace Biwen.QuickApi
                         //body
                         {
                             var jsonObject = await context.Request.ReadFromJsonAsync<ExpandoObject>();
-                            var alias = prop.GetCustomAttribute<AliasAsAttribute>();
-                            if (alias != null)
+                            var dic = (jsonObject as IDictionary<string, object>)!;
+
+                            if (dic.TryGetValue(alias?.Name ?? prop.Name, out object? value))
                             {
-                                var dic = (jsonObject as IDictionary<string, object>)!;
-                                if (dic.TryGetValue(alias.Name, out object? value))
-                                {
-                                    //转换
-                                    var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value.ToString()!);
-                                    prop.SetValue(@default, value2);
-                                    isBodySet = true;
-                                }
-                            }
-                            else
-                            {
-                                var dic = (jsonObject as IDictionary<string, object>)!;
-                                if (dic.TryGetValue(prop.Name, out object? value))
-                                {
-                                    //转换
-                                    var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value.ToString()!);
-                                    prop.SetValue(@default, value2);
-                                    isBodySet = true;
-                                }
+                                //转换
+                                var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value.ToString()!);
+                                prop.SetValue(@default, value2);
+                                isBodySet = true;
                             }
                         }
                     }
                     if (isBodySet) continue;
-                    //route
+                    //route & 路由不支持别名
                     {
                         var qs = context.Request.RouteValues;
                         if (qs.ContainsKey(prop.Name))
