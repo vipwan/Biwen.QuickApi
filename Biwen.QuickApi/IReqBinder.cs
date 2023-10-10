@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System.Dynamic;
+using System.Xml.Linq;
 
 namespace Biwen.QuickApi
 {
@@ -31,111 +33,181 @@ namespace Biwen.QuickApi
         {
             //route > header > body(Post) = querystring(Get)
             var @default = new T();
+            var type = typeof(T);
+            var props = type.GetProperties();
+            if (props?.Length == 0) return @default;
 
-            var requestMethod = context.Request.Method!;
-            if (requestMethod == HttpMethods.Get)
+            foreach (var prop in props!)
             {
-                //querystring
+                if (prop.Name == nameof(BaseRequest<T>.RealValidator)) continue;
+
+                var fromQuery = prop.GetCustomAttribute<FromQueryAttribute>();
+                if (fromQuery != null)
                 {
+                    var name = fromQuery.Name ?? prop.Name;
                     var qs = context.Request.Query;
-                    foreach (var item in qs)
-                    {
-                        var prop = GetProperty(item.Key);
-                        if (prop != null)
-                        {
-                            //转换
-                            var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
-                            prop.SetValue(@default, value);
-                        }
-                    }
-                }
-            }
-            if (requestMethod == HttpMethods.Head)
-            {
-                //header
-                {
-                    var qs = context.Request.Headers;
-                    foreach (var item in qs)
-                    {
-                        var prop = GetProperty(item.Key);
-                        if (prop != null)
-                        {
-                            //转换
-                            var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
-                            prop.SetValue(@default, item.Value);
-                        }
-                    }
-                }
-            }
-
-            if (requestMethod == HttpMethods.Post ||
-                requestMethod == HttpMethods.Put ||
-                requestMethod == HttpMethods.Options ||
-                requestMethod == HttpMethods.Patch ||
-                requestMethod == HttpMethods.Delete)
-            {
-                //form
-                //{
-                //    var qs = context.Request.Form;
-                //    foreach (var item in qs)
-                //    {
-                //        var prop = typeof(T).GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
-                //        if (prop != null)
-                //        {
-                //            //转换
-                //            var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
-                //            prop.SetValue(@default, item.Value);
-                //        }
-                //    }
-                //}
-                //body
-                {
-                    var type = typeof(T);
-                    if (type == typeof(EmptyRequest))
-                    {
-                        return @default;
-                    }
-                    if (type.GetProperties().Length == 0)
-                    {
-                        return @default;
-                    }
-
-                    if (type.GetProperties().Any(x => x.GetCustomAttribute<AliasAsAttribute>() != null))
-                    {
-                        var jsonObject = await context.Request.ReadFromJsonAsync<ExpandoObject>();
-                        if (jsonObject == null)
-                            return @default;
-
-                        var dic = jsonObject as IDictionary<string, object>;
-                        foreach (var item in dic)
-                        {
-                            var prop = GetProperty(item.Key);
-                            if (prop != null)
-                            {
-                                //转换
-                                var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString()!);
-                                prop.SetValue(@default, value);
-                            }
-                        }
-                        return @default;
-                    }
-                    else
-                    {
-                        @default = await context.Request.ReadFromJsonAsync<T>();
-                    }
-                }
-            }
-            //route
-            {
-                var qs = context.Request.RouteValues;
-                foreach (var item in qs)
-                {
-                    var prop = GetProperty(item.Key);
-                    if (prop != null && item.Value != null)
+                    if (qs.ContainsKey(name))
                     {
                         //转换
-                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value!.ToString()!);
-                        prop.SetValue(@default, item.Value);
+                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[name].ToString());
+                        prop.SetValue(@default, value);
+                        continue;
+                    }
+                }
+                var fromHeader = prop.GetCustomAttribute<FromHeaderAttribute>();
+                if ((fromHeader != null))
+                {
+                    var name = fromHeader.Name ?? prop.Name;
+                    var qs = context.Request.Headers;
+                    if (qs.ContainsKey(name))
+                    {
+                        //转换
+                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[name].ToString());
+                        prop.SetValue(@default, value);
+                        continue;
+                    }
+                }
+                var fromRoute = prop.GetCustomAttribute<FromRouteAttribute>();
+                if (fromRoute != null)
+                {
+                    var name = fromRoute.Name ?? prop.Name;
+                    var qs = context.Request.RouteValues;
+                    if (qs.ContainsKey(name))
+                    {
+                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[name]?.ToString()!);
+                        prop.SetValue(@default, value);
+                        continue;
+                    }
+                }
+                var fromService = prop.GetCustomAttribute<FromServicesAttribute>();
+                if (fromService != null)
+                {
+                    var service = context.RequestServices.GetService(prop.PropertyType);
+                    if (service != null)
+                    {
+                        prop.SetValue(@default, service);
+                        continue;
+                    }
+                }
+                var fromForm = prop.GetCustomAttribute<FromFormAttribute>();
+                if (fromForm != null)
+                {
+                    var name = fromForm.Name ?? prop.Name;
+                    var qs = context.Request.Form;
+                    if (qs.ContainsKey(name))
+                    {
+                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[name].ToString());
+                        prop.SetValue(@default, value);
+                        continue;
+                    }
+                }
+
+                if (fromQuery != null ||
+                    fromHeader != null ||
+                    fromRoute != null ||
+                    fromService != null ||
+                    fromForm != null)
+                {
+                    continue;
+                }
+                //如果仍然未找到
+                {
+                    bool isBodySet = false;
+
+                    var requestMethod = context.Request.Method!;
+                    if (requestMethod == HttpMethods.Get)
+                    {
+                        //querystring
+                        {
+                            var qs = context.Request.Query;
+                            foreach (var item in qs)
+                            {
+                                if (prop != null)
+                                {
+                                    //转换
+                                    var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
+                                    prop.SetValue(@default, value);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    if (requestMethod == HttpMethods.Head)
+                    {
+                        //header
+                        {
+                            var qs = context.Request.Headers;
+                            foreach (var item in qs)
+                            {
+                                if (prop != null)
+                                {
+                                    //转换
+                                    var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
+                                    prop.SetValue(@default, item.Value);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    if (requestMethod == HttpMethods.Post ||
+                        requestMethod == HttpMethods.Put ||
+                        requestMethod == HttpMethods.Options ||
+                        requestMethod == HttpMethods.Patch ||
+                        requestMethod == HttpMethods.Delete)
+                    {
+                        //form
+                        //{
+                        //    var qs = context.Request.Form;
+                        //    foreach (var item in qs)
+                        //    {
+                        //        var prop = typeof(T).GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
+                        //        if (prop != null)
+                        //        {
+                        //            //转换
+                        //            var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
+                        //            prop.SetValue(@default, item.Value);
+                        //        }
+                        //    }
+                        //}
+                        //body
+                        {
+                            var jsonObject = await context.Request.ReadFromJsonAsync<ExpandoObject>();
+                            var alias = prop.GetCustomAttribute<AliasAsAttribute>();
+                            if (alias != null)
+                            {
+                                var dic = (jsonObject as IDictionary<string, object>)!;
+                                if (dic.TryGetValue(alias.Name, out object? value))
+                                {
+                                    //转换
+                                    var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value.ToString()!);
+                                    prop.SetValue(@default, value2);
+                                    isBodySet = true;
+                                }
+                            }
+                            else
+                            {
+                                var dic = (jsonObject as IDictionary<string, object>)!;
+                                if (dic.TryGetValue(prop.Name, out object? value))
+                                {
+                                    //转换
+                                    var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value.ToString()!);
+                                    prop.SetValue(@default, value2);
+                                    isBodySet = true;
+                                }
+                            }
+                        }
+                    }
+                    if (isBodySet) continue;
+                    //route
+                    {
+                        var qs = context.Request.RouteValues;
+                        if (qs.ContainsKey(prop.Name))
+                        {
+                            var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[prop.Name]?.ToString()!);
+                            prop.SetValue(@default, value);
+                            continue;
+                        }
                     }
                 }
             }

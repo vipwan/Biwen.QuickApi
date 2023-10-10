@@ -1,5 +1,6 @@
 ﻿using Biwen.QuickApi.Attributes;
 using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
 
 
@@ -17,6 +18,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         /// </summary>
         [AliasAs("a")]
         public string? Alias { get; set; }
+
+        [FromQuery]
+        public string? Q { get; set; }
+
+
 
         public HelloApiRequest()
         {
@@ -91,8 +97,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             await Task.CompletedTask;
             return new HelloApiResponse
             {
-                Message = $"Hello {request.Name}",
-                Alias = request.Alias
+                Message = $"Hello {request.Name} {request.Q}",
+                Alias = request.Alias,
             };
         }
     }
