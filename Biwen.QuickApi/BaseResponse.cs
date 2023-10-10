@@ -1,10 +1,17 @@
 ﻿using Microsoft.AspNetCore.Http;
-
+using System.Text.Json;
 namespace Biwen.QuickApi
 {
     public abstract class BaseResponse
     {
-
+        /// <summary>
+        /// ToJson
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return JsonSerializer.Serialize(this);
+        }
     }
 
     /// <summary>

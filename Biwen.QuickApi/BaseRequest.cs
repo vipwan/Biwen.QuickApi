@@ -34,6 +34,16 @@ namespace Biwen.QuickApi
     }
 
     /// <summary>
+    /// BaseRequest FromBody:Json
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    [FromBodyReq]
+    public abstract class BaseRequestFromBody<T> : BaseRequest<T> where T : class, new()
+    {
+
+    }
+
+    /// <summary>
     /// 空请求
     /// </summary>
     public sealed class EmptyRequest : BaseRequest<EmptyRequest>

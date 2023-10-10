@@ -249,7 +249,7 @@ namespace Biwen.QuickApi
     /// <summary>
     /// 标记整个Request对象为FromBody
     /// </summary>
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
     public class FromBodyReqAttribute : Attribute
     {
 

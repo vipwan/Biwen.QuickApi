@@ -31,8 +31,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <summary>
     /// 标记FromBodyReq,表示这个请求对象是FromBody的
     /// </summary>
-    [FromBodyReq]
-    public class FromBodyRequest : BaseRequest<FromBodyRequest>
+    public class FromBodyRequest : BaseRequestFromBody<FromBodyRequest>
     {
         public int Id { get; set; }
         public string? Name { get; set; }
@@ -41,8 +40,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             RuleFor(x => x.Id).InclusiveBetween(1, 100);//必须1~100
         }
-
-
     }
 
 
