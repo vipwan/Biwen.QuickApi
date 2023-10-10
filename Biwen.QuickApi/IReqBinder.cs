@@ -36,6 +36,17 @@ namespace Biwen.QuickApi
             var props = type.GetProperties();
             if (props?.Length == 0) return @default;
 
+            if (context.Request.Method != HttpMethods.Get)
+            {
+                //FromBodyReq
+                var fromBodyReq = type.GetCustomAttribute<FromBodyReqAttribute>();
+                if (fromBodyReq != null)
+                {
+                    @default = await context.Request.ReadFromJsonAsync<T>();
+                    return @default!;
+                }
+            }
+
             foreach (var prop in props!)
             {
 
@@ -224,5 +235,14 @@ namespace Biwen.QuickApi
         {
             return Task.FromResult(new T());
         }
+    }
+
+    /// <summary>
+    /// 标记整个Request对象为FromBody
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+    public class FromBodyReqAttribute : Attribute
+    {
+
     }
 }

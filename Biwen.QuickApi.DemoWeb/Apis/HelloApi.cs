@@ -8,7 +8,6 @@ using System.Text.Json.Serialization;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
 {
-
     public class HelloApiRequest : BaseRequest<HelloApiRequest>
     {
         public string? Name { get; set; } = "default";
@@ -22,13 +21,23 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         [FromQuery]
         public string? Q { get; set; }
 
-
-
         public HelloApiRequest()
         {
             RuleFor(x => x.Name).NotNull().Length(2, 36);
         }
     }
+
+
+    /// <summary>
+    /// 标记FromBodyReq,表示这个请求对象是FromBody的
+    /// </summary>
+    [FromBodyReq]
+    public class FromBodyRequest : BaseRequest<FromBodyRequest>
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+    }
+
 
     /// <summary>
     /// 自定义的绑定器
@@ -356,6 +365,16 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             builder.Produces(200, typeof(string), contentType: "text/plain");
             return builder;
             //return base.HandlerBuilder(builder);
+        }
+    }
+
+
+    [QuickApi("frombody", Verbs = Verb.POST)]
+    public class FromBodyApi : BaseQuickApi<FromBodyRequest, ContentResponse>
+    {
+        public override async Task<ContentResponse> ExecuteAsync(FromBodyRequest request)
+        {
+            return new ContentResponse($"FromBodyApi {request.Id} {request.Name}");
         }
     }
 }
