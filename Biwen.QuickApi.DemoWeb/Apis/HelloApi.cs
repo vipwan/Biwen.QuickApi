@@ -36,6 +36,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public int Id { get; set; }
         public string? Name { get; set; }
+
+        public FromBodyRequest()
+        {
+            RuleFor(x => x.Id).InclusiveBetween(1, 100);//必须1~100
+        }
+
+
     }
 
 
