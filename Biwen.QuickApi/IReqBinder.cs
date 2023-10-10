@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Dynamic;
-using System.Xml.Linq;
 
 namespace Biwen.QuickApi
 {
@@ -40,7 +39,6 @@ namespace Biwen.QuickApi
             foreach (var prop in props!)
             {
                 if (prop.Name == nameof(BaseRequest<T>.RealValidator)) continue;
-
                 var fromQuery = prop.GetCustomAttribute<FromQueryAttribute>();
                 if (fromQuery != null)
                 {
@@ -108,6 +106,7 @@ namespace Biwen.QuickApi
                     fromService != null ||
                     fromForm != null)
                 {
+                    //如果标记的bind特性,不管是否找到,都不再继续查找(最高权重)
                     continue;
                 }
                 //如果仍然未找到
@@ -149,7 +148,6 @@ namespace Biwen.QuickApi
                             }
                         }
                     }
-
                     if (requestMethod == HttpMethods.Post ||
                         requestMethod == HttpMethods.Put ||
                         requestMethod == HttpMethods.Options ||
