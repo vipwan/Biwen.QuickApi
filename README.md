@@ -184,6 +184,27 @@ app.MapBiwenQuickApis();
             //return builder;
          }
     }
+
+     /// <summary>
+    /// 提供对IResult的封装支持
+    /// </summary>
+    [QuickApi("iresult", Verbs = Verb.GET)]
+    public class IResultTestApi : BaseQuickApiWithoutRequest<IResultResponse>
+    {
+        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Results.Ok("Hello World IResult!").AsRsp();
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            //针对IResultResponse,需要完全自定义Produces,QuickApi无法自动识别
+            builder.Produces(200, typeof(string), contentType: "text/plain");
+            return builder;
+            //return base.HandlerBuilder(builder);
+        }
+    }
+
     /// <summary>
     /// JustAsService 只会被服务发现，不会被注册到路由表
     /// </summary>

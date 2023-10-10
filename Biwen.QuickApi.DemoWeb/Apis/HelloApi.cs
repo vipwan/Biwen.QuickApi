@@ -336,14 +336,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     }
 
 
-
     [QuickApi("iresult", Verbs = Verb.GET)]
-    public class IResultTestApi : BaseQuickApi<EmptyRequest, IResultResponse>
+    public class IResultTestApi : BaseQuickApiWithoutRequest<IResultResponse>
     {
         public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             return Results.Ok("Hello World IResult!").AsRsp();
-            //return Task.FromResult(new IResultResponse(Results.Ok("Hello World IResult!")));
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
