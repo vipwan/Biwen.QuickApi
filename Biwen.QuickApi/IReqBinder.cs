@@ -112,11 +112,20 @@ namespace Biwen.QuickApi
                     }
                 }
 
+                var fromBody = prop.GetCustomAttribute<FromBodyAttribute>();
+                if (fromBody != null)
+                {
+                    var value = await context.Request.ReadFromJsonAsync(prop.PropertyType);
+                    prop.SetValue(@default, value);
+                    continue;
+                }
+
                 if (fromQuery != null ||
                     fromHeader != null ||
                     fromRoute != null ||
                     fromService != null ||
-                    fromForm != null)
+                    fromForm != null ||
+                    fromBody != null)
                 {
                     //如果标记的bind特性,不管是否找到,都不再继续查找(最高权重)
                     continue;
