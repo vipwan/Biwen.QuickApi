@@ -20,6 +20,8 @@ builder.Services.AddSwaggerGen();
 
 // Add services to the container.
 builder.Services.AddScoped<HelloService>();
+// keyed services
+builder.Services.AddKeyedScoped<HelloService>("hello");
 
 //
 builder.Services.AddBiwenQuickApis(o =>
@@ -43,7 +45,7 @@ app.UseAuthorization();
 app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 
 
- var apis = app.MapBiwenQuickApis();
+var apis = app.MapBiwenQuickApis();
 //
 //app.MapGenQuickApis(app.Services);
 //如果你想对特定的分组批量操作. 比如授权等,可以这样做

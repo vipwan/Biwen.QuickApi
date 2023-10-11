@@ -39,7 +39,7 @@ namespace Biwen.QuickApi
             if (context.Request.Method != HttpMethods.Get)
             {
                 //FromBodyReq
-                var fromBodyReq = type.GetCustomAttribute<FromBodyReqAttribute>();
+                var fromBodyReq = type.GetCustomAttribute<FromBodyAttribute>();
                 if (fromBodyReq != null)
                 {
                     @default = await context.Request.ReadFromJsonAsync<T>();
@@ -270,8 +270,21 @@ namespace Biwen.QuickApi
     /// 标记整个Request对象为FromBody
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public class FromBodyReqAttribute : Attribute
+    public class FromBodyAttribute : Attribute
     {
 
+    }
+
+    /// <summary>
+    /// 标记绑定属性为FromKeyedServices
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
+    public class FromKeyedServicesAttribute : Attribute
+    {
+        public FromKeyedServicesAttribute(string key)
+        {
+            Key = key;
+        }
+        public string Key { get; set; }
     }
 }

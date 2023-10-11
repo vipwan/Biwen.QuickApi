@@ -37,7 +37,7 @@ namespace Biwen.QuickApi
     /// BaseRequest FromBody:Json
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    [FromBodyReq]
+    [FromBody]
     public abstract class BaseRequestFromBody<T> : BaseRequest<T> where T : class, new()
     {
 

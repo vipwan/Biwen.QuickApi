@@ -22,6 +22,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         [FromQuery]
         public string? Q { get; set; }
 
+        [FromKeyedServices("hello")]
+        public HelloService HelloService { get; set; }
+
+
+
         public HelloApiRequest()
         {
             RuleFor(x => x.Name).NotNull().Length(2, 36);
@@ -130,7 +135,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return new HelloApiResponse
             {
                 Message = $"Hello {request.Name}  {request.Alias} ",
-                Alias = request.Alias //别名测试 Alias -> a
+                Alias = $"{request.Alias} {request.HelloService.Hello(request.Name)} " //别名测试 Alias -> a
             };
         }
 
