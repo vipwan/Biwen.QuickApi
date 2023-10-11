@@ -1,42 +1,42 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-	  
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-	<PackageVersion>1.3.3</PackageVersion>
+	<PropertyGroup>
 
-	<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
-	<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-	<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>
-	<Authors>万雅虎</Authors>
-	<RepositoryUrl>https://github.com/vipwan/Biwen.QuickApi</RepositoryUrl>
-	<Title>Biwen.QuickApi</Title>
-	<Description>Biwen.QuickApi ,NET7+ MinimalApi CQRS</Description>
-	<Copyright>MIT</Copyright>
-	<PackageReadmeFile>README.md</PackageReadmeFile>
-	<PackageTags>webapi;minimal;REPR;netcore</PackageTags>
-	<PackageReleaseNotes>提供IResultResponse支持</PackageReleaseNotes>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+		<PackageVersion>1.3.3</PackageVersion>
 
-  </PropertyGroup>
+		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+		<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>
+		<Authors>万雅虎</Authors>
+		<RepositoryUrl>https://github.com/vipwan/Biwen.QuickApi</RepositoryUrl>
+		<Title>Biwen.QuickApi</Title>
+		<Description>Biwen.QuickApi ,NET7+ MinimalApi CQRS</Description>
+		<Copyright>MIT</Copyright>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>webapi;minimal;REPR;netcore</PackageTags>
+		<PackageReleaseNotes>提供IResultResponse支持</PackageReleaseNotes>
 
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\.editorconfig" Link=".editorconfig" />
-    <None Include="C:\Users\vipwa\source\repos\Biwen.QuickApi\README.md" Link="README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.12" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\.editorconfig" Link=".editorconfig" />
+		<None Include="C:\Users\vipwa\source\repos\Biwen.QuickApi\README.md" Link="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.12" />
+	</ItemGroup>
 
 
 
