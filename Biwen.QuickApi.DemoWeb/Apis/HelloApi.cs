@@ -19,13 +19,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         [AliasAs("a")]
         public string? Alias { get; set; }
 
+        [JsonIgnore]//FromQuery POST无需展示字段
         [FromQuery]
         public string? Q { get; set; }
 
+        [JsonIgnore]//FromKeyedServices POST无需展示字段
         [FromKeyedServices("hello")]
         public HelloService HelloService { get; set; }
-
-
 
         public HelloApiRequest()
         {
