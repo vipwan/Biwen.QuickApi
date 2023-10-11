@@ -188,10 +188,16 @@ namespace Biwen.QuickApi
                         //}
                         //body
                         {
-                            var jsonObject = await context.Request.ReadFromJsonAsync<ExpandoObject>();
-                            var dic = (jsonObject as IDictionary<string, object>)!;
+                            ReadFromJsonDic ??= (await context.Request.ReadFromJsonAsync<ExpandoObject>())!;
 
-                            if (dic.TryGetValue(alias?.Name ?? prop.Name, out object? value))
+                            //注意别名权重高于属性名
+                            var currentKey = (alias?.Name ?? prop.Name).ToLower();
+
+                            //忽略大小写
+                            var ignoreCasDic = ReadFromJsonDic.Select(x => new KeyValuePair<string, object>(x.Key.ToLower(), x.Value))
+                                .ToDictionary(x => x.Key, x => x.Value);
+
+                            if (ignoreCasDic.TryGetValue(currentKey, out object? value))
                             {
                                 //转换
                                 var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value.ToString()!);
@@ -217,6 +223,9 @@ namespace Biwen.QuickApi
             //返回
             return @default ?? new();
         }
+
+        private IDictionary<string, object>? ReadFromJsonDic { get; set; }
+
         /// <summary>
         /// 定位属性
         /// </summary>
@@ -232,7 +241,6 @@ namespace Biwen.QuickApi
         };
 
     }
-
 
     /// <summary>
     /// 空绑定器

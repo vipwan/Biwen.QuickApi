@@ -168,39 +168,40 @@ namespace Biwen.QuickApi
                         continue;
                     }
                     var verbs = attr.Verbs.SplitEnum();//拆分枚举
-                    foreach (var verb in verbs)
+
+                    RouteHandlerBuilder? rhBuilder = null!;
+
+                    //MapMethods
+                    rhBuilder = g.MapMethods(
+                        attr.Route,
+                        verbs.Select(x => x.ToString()).ToArray(),
+                        async Task<IResult> (IHttpContextAccessor ctx) =>
                     {
-                        RouteHandlerBuilder? rhBuilder = null!;
+                        return await RequestHandler(ctx, apiType, attr);
+                    });
 
-                        //MapMethods
-                        rhBuilder = g.MapMethods(attr.Route, new[] { verb.ToString() }, async (IHttpContextAccessor ctx) =>
-                        {
-                            return await RequestHandler(ctx, apiType, attr);
-                        });
+                    //HandlerBuilder
+                    using var scope = app.ServiceProvider.CreateAsyncScope();
+                    var currentApi = scope.ServiceProvider.GetRequiredService(apiType);
+                    if (currentApi is IHandlerBuilder hb)
+                    {
+                        rhBuilder = hb.HandlerBuilder(rhBuilder!);
+                    }
 
-                        //HandlerBuilder
-                        using var scope = app.ServiceProvider.CreateAsyncScope();
-                        var currentApi = scope.ServiceProvider.GetRequiredService(apiType);
-                        if (currentApi is IHandlerBuilder hb)
-                        {
-                            rhBuilder = hb.HandlerBuilder(rhBuilder!);
-                        }
+                    //OpenApi 生成
+                    //var method = apiType.GetMethod("ExecuteAsync")!;
+                    //var parameter = method.GetParameters()[0]!;
+                    //var parameterType = parameter.ParameterType!;
+                    var parameterType = ((dynamic)currentApi).ReqType as Type;
 
-                        //OpenApi 生成
-                        //var method = apiType.GetMethod("ExecuteAsync")!;
-                        //var parameter = method.GetParameters()[0]!;
-                        //var parameterType = parameter.ParameterType!;
-                        var parameterType = ((dynamic)currentApi).ReqType as Type;
-
-                        if (verb != Verb.GET && parameterType != typeof(EmptyRequest))
-                        {
-                            rhBuilder!.Accepts(parameterType!, "application/json");
-                        }
-                        //401
-                        if (!string.IsNullOrEmpty(attr.Policy))
-                        {
-                            rhBuilder?.ProducesProblem(StatusCodes.Status401Unauthorized);
-                        }
+                    if (!verbs.Contains(Verb.GET) && parameterType != typeof(EmptyRequest))
+                    {
+                        rhBuilder!.Accepts(parameterType!, "application/json");
+                    }
+                    //401
+                    if (!string.IsNullOrEmpty(attr.Policy))
+                    {
+                        rhBuilder?.ProducesProblem(StatusCodes.Status401Unauthorized);
                     }
                 }
                 routeGroups.Add((group.Key, g));

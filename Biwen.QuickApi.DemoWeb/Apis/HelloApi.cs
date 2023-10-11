@@ -1,5 +1,6 @@
 ﻿using Biwen.QuickApi.Attributes;
 using FluentValidation;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
 
@@ -359,7 +360,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Results.Ok("Hello World IResult!").AsRsp();
+            //return Results.Ok("Hello World IResult!").AsRsp();
+
+            Results<ContentHttpResult, JsonHttpResult<string>> results = TypedResults.Content("Hello World IResult!");
+            return results.AsRsp();
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
