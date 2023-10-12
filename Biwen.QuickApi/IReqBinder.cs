@@ -33,7 +33,7 @@ namespace Biwen.QuickApi
             //route > header > body(Post) = querystring(Get)
             var @default = new T();
             var type = typeof(T);
-            var props = type.GetProperties();
+            var props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
             if (props?.Length == 0) return @default;
 
             if (context.Request.Method != HttpMethods.Get)
@@ -49,8 +49,10 @@ namespace Biwen.QuickApi
 
             foreach (var prop in props!)
             {
+                //if (prop.Name == nameof(BaseRequest<T>.RealValidator)) continue;
+                //如果属性不可读|写,则跳过
+                if (prop.CanWrite == false || prop.CanRead == false) continue;
 
-                if (prop.Name == nameof(BaseRequest<T>.RealValidator)) continue;
                 var fromQuery = prop.GetCustomAttribute<FromQueryAttribute>();
                 if (fromQuery != null)
                 {

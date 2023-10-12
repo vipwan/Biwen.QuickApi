@@ -9,7 +9,19 @@ using System.Text.Json.Serialization;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
 {
-    public class HelloApiRequest : BaseRequest<HelloApiRequest>
+
+    /// <summary>
+    /// 模拟请求需要登录信息
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public abstract class AuthRequest<T> : BaseRequest<T> where T : class, new()
+    {
+        public string? UserName { get; set; }
+        public string? Password { get; set; }
+
+    }
+
+    public class HelloApiRequest : AuthRequest<HelloApiRequest>
     {
         public string? Name { get; set; } = "default";
 
@@ -30,7 +42,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         public HelloApiRequest()
         {
             RuleFor(x => x.Name).NotNull().Length(2, 36);
+            RuleFor(x => x.Password).NotNull().Length(2, 36);
         }
+
+
     }
 
 
