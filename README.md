@@ -76,9 +76,9 @@ app.MapBiwenQuickApis();
         }
     }
     /// <summary>
-    /// 标记FromBodyReq,表示这个请求对象是FromBody的
+    /// 标记FromBody,表示这个请求对象是FromBody的
     /// </summary>
-    [FromBodyReq]
+    [FromBody]
     public class FromBodyRequest : BaseRequest<FromBodyRequest>
     {
         public int Id { get; set; }
