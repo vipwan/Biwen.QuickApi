@@ -93,6 +93,18 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             {
                 request.Name = c;
             }
+            if(context.Request.Query.TryGetValue("q", out var q))
+            {
+                request.Q = q;
+            }
+            if (context.Request.Query.TryGetValue("u", out var u))
+            {
+                request.UserName = u;
+            }
+            if(context.Request.Query.TryGetValue("p", out var p))
+            {
+                request.Password= p;
+            }
 
             await Task.CompletedTask;
             return request;
@@ -236,7 +248,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     }
 
     /// <summary>
-    /// get ~/custom?c=11112222
+    /// get ~/custom?c=11112&p=12345&u=1234567
     /// </summary>
     [QuickApi("custom", Verbs = Verb.GET)]
     public class CustomApi : BaseQuickApi<HelloApiRequest>
@@ -275,11 +287,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 Summary = "custom",
                 Description = "custom"
             });
-
             return base.HandlerBuilder(builder);
         }
-
-
 
     }
 
