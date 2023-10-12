@@ -121,6 +121,9 @@ public static partial class AppExtentions
                     throw;
                 }}
             }});
+
+        //metadata
+        $4.WithMetadata(new QuickApiMetadata(typeof($3)));
         //handler
         scope.ServiceProvider.GetRequiredService<$3>().HandlerBuilder($4);
 ";

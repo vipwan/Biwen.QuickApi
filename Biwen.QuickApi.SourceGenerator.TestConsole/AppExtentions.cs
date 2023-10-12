@@ -40,6 +40,11 @@ public static partial class AppExtentions
             throw new ArgumentNullException(nameof(prefix));
         }
         var groupBuilder = app.MapGroup(prefix);
+
+        groupBuilder.WithMetadata(new QuickApiMetadata(null));
+        //metadata
+        groupBuilder.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6)));
+
         return groupBuilder;
     }
 }
