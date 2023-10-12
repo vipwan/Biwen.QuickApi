@@ -442,7 +442,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <summary>
     ///  模拟直接登录,并且给予admin的Policy
     /// </summary>
-    [QuickApi("logined")]
+    [QuickApi("logined",Group ="admin")]
     public class Login : BaseQuickApiWithoutRequest<ContentResponse>
     {
 
@@ -470,7 +470,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <summary>
     /// 退出登录
     /// </summary>
-    [QuickApi("loginout")]
+    [QuickApi("loginout",Group ="admin")]
     public class LoginOut : BaseQuickApiWithoutRequest<ContentResponse>
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -534,7 +534,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(Results.Ok("你有权限编辑!").AsRsp());
+            return Task.FromResult(Results.Ok($"你有权限编辑!{DateTime.Now.ToLongTimeString()}").AsRsp());
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            return base.HandlerBuilder(builder);
         }
     }
 

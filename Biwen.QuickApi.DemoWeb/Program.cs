@@ -1,4 +1,3 @@
-
 using Biwen.QuickApi.DemoWeb;
 using Biwen.QuickApi.DemoWeb.Apis;
 using Microsoft.AspNetCore.Authentication;
@@ -6,13 +5,14 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-
 builder.Services.AddAuthentication().AddCookie();
 builder.Services.AddAuthorization();
+
+builder.Services.AddOutputCache();
 
 //builder.Services.AddAuthorizationBuilder().AddPolicy("admin", policy =>
 //{
@@ -69,12 +69,24 @@ app.UseSwaggerUI();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseOutputCache();
 
+// 默认方式
 var apis = app.MapBiwenQuickApis();
-//
-//app.MapGenQuickApis(app.Services);
-//如果你想对特定的分组批量操作. 比如授权等,可以这样做
+//如果你想对特定的分组批量操作. 比如授权等,可以这样做,但是注意该操作会覆盖掉原有的配置(如果存在的情况下)
+var groupAdmin = apis.FirstOrDefault(x => x.Group == "admin");
+groupAdmin.RouteGroupBuilder?
+    .WithTags("Admin Test")
+    .WithOpenApi(operation => new(operation)
+    {
+        Summary = "用于测试权限相关",
+        //Description = "Admin Test"
+    })                             //自定义OpenApi
+    .RequireHost("localhost:5101") //模拟需要指定Host访问接口
+    ;
 
+// Gen方式
+//app.MapGenQuickApis(app.Services);
 
 //app.UseWelcomePage("/");
 app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
