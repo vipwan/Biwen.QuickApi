@@ -192,12 +192,13 @@ namespace Biwen.QuickApi
                     //var method = apiType.GetMethod("ExecuteAsync")!;
                     //var parameter = method.GetParameters()[0]!;
                     //var parameterType = parameter.ParameterType!;
-                    var parameterType = ((dynamic)currentApi).ReqType as Type;
 
-                    if (!verbs.Contains(Verb.GET) && parameterType != typeof(EmptyRequest))
-                    {
-                        rhBuilder!.Accepts(parameterType!, "application/json");
-                    }
+                    //var parameterType = ((dynamic)currentApi).ReqType as Type;
+                    //if (!verbs.Contains(Verb.GET) && parameterType != typeof(EmptyRequest))
+                    //{
+                    //    rhBuilder!.Accepts(parameterType!, "application/json");
+                    //}
+
                     //401
                     if (!string.IsNullOrEmpty(attr.Policy))
                     {
