@@ -110,7 +110,7 @@ app.MapGet("/fromapi",
     var x = await api.ExecuteAsync(req);
     return TypedResults.Ok(x.Content);
 
-});
+}).RequireAuthorization("admin");
 
 //app.MapGet("hhe", () => TypedResults.Ok(new EmptyResponse()));
 
