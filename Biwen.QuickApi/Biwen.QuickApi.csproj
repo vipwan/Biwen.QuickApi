@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-		<PackageVersion>1.3.3</PackageVersion>
+		<PackageVersion>1.3.4</PackageVersion>
 
 		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
@@ -17,7 +17,7 @@
 		<Copyright>MIT</Copyright>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>webapi;minimal;REPR;netcore</PackageTags>
-		<PackageReleaseNotes>提供IResultResponse支持</PackageReleaseNotes>
+		<PackageReleaseNotes>提供原生绑定[FromServices],[FromQuery],提供文件上传支持...</PackageReleaseNotes>
 
 	</PropertyGroup>
 
