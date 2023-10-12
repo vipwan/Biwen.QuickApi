@@ -48,6 +48,19 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     }
 
+    /// <summary>
+    /// 上传文件测试
+    /// </summary>
+    public class FileUploadRequest : BaseRequest<FileUploadRequest>
+    {
+        public IFormFile? File { get; set; }
+
+
+        public FileUploadRequest()
+        {
+            RuleFor(x => x.File).NotNull();
+        }
+    }
 
     /// <summary>
     /// 标记FromBodyReq,表示这个请求对象是FromBody的
@@ -402,6 +415,42 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         public override async Task<ContentResponse> ExecuteAsync(FromBodyRequest request)
         {
             return new ContentResponse($"FromBodyApi {request.Id} {request.Name}");
+        }
+    }
+
+    /// <summary>
+    /// 上传文件测试
+    /// 请使用postman & apifox 测试
+    /// </summary>
+    [QuickApi("fromfile", Verbs = Verb.POST)]
+    public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
+    {
+
+        public override async Task<IResultResponse> ExecuteAsync(FileUploadRequest request)
+        {
+            //测试上传一个文本文件并读取内容
+            if (request.File != null)
+            {
+                using (var sr = new StreamReader(request.File.OpenReadStream()))
+                {
+                    var content = await sr.ReadToEndAsync();
+                    return Results.Ok(content).AsRsp();
+                }
+            }
+            return Results.BadRequest("no file").AsRsp();
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.Accepts<FileUploadRequest>("multipart/form-data");
+
+            builder.WithOpenApi(operation => new(operation)
+            {
+                Summary = "上传文件测试",
+                Description = "上传文件测试"
+            });
+
+            return builder;
         }
     }
 }

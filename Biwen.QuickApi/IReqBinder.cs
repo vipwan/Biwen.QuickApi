@@ -53,6 +53,29 @@ namespace Biwen.QuickApi
                 //如果属性不可读|写,则跳过
                 if (prop.CanWrite == false || prop.CanRead == false) continue;
 
+                #region IFormFile 和 IFormFileCollection 绑定
+
+                if (prop.PropertyType == typeof(IFormFile))
+                {
+                    var file = context.Request.Form.Files.FirstOrDefault();
+                    if (file != null)
+                    {
+                        prop.SetValue(@default, file);
+                        continue;
+                    }
+                }
+                if (prop.PropertyType == typeof(IFormFileCollection))
+                {
+                    var files = context.Request.Form.Files;
+                    if (files != null)
+                    {
+                        prop.SetValue(@default, files);
+                        continue;
+                    }
+                }
+
+                #endregion
+
                 var fromQuery = prop.GetCustomAttribute<FromQueryAttribute>();
                 if (fromQuery != null)
                 {
@@ -186,6 +209,10 @@ namespace Biwen.QuickApi
                         requestMethod == HttpMethods.Patch ||
                         requestMethod == HttpMethods.Delete)
                     {
+
+                        //是否上传文件
+                        bool hasFormFile = prop.PropertyType == typeof(IFormFile) || prop.PropertyType == typeof(IFormFileCollection);
+
                         //form
                         //{
                         //    var qs = context.Request.Form;
@@ -202,6 +229,9 @@ namespace Biwen.QuickApi
                         //}
                         //body
                         {
+                            //如果是上传文件,则跳过
+                            if (hasFormFile) continue;
+
                             ReadFromJsonDic ??= (await context.Request.ReadFromJsonAsync<ExpandoObject>())!;
 
                             //注意别名权重高于属性名
