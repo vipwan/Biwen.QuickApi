@@ -1,7 +1,9 @@
 ﻿using Biwen.QuickApi.Attributes;
 using FluentValidation;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using System.Text.Json.Serialization;
 
 
@@ -108,29 +110,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         ///[AliasAs("a")]
         [JsonPropertyName("a")]
         public string? Alias { get; set; }
-    }
-
-
-    [QuickApi("index", Group = "admin", Verbs = Verb.GET, Policy = "admin")]
-    public class NeedAuthApi : BaseQuickApi
-    {
-        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
-        {
-            return Task.FromResult(EmptyResponse.New);
-        }
-
-
-        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-        {
-            builder.WithOpenApi(operation => new(operation)
-            {
-                Summary = "NeedAuthApi",
-                Description = "NeedAuthApi"
-            });
-
-            return base.HandlerBuilder(builder);
-        }
-
     }
 
     /// <summary>
@@ -453,6 +432,113 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return builder;
         }
     }
+
+
+
+    #region 含权限的测试
+
+
+
+    /// <summary>
+    ///  模拟直接登录,并且给予admin的Policy
+    /// </summary>
+    [QuickApi("logined")]
+    public class Login : BaseQuickApiWithoutRequest<ContentResponse>
+    {
+
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public Login(IHttpContextAccessor httpContextAccessor)
+        {
+            _httpContextAccessor = httpContextAccessor;
+        }
+
+        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        {
+            //模拟当前账号登录
+            _httpContextAccessor.HttpContext.SignInAsync(
+                new ClaimsPrincipal(new ClaimsIdentity(new[]
+            {
+                new Claim(ClaimTypes.NameIdentifier, "vipwan"),
+                new Claim("admin", "admin"),
+                new Claim(ClaimTypes.Role, "admin"),
+            }, "admin")));
+
+            return Task.FromResult(new ContentResponse("已经登录成功"));
+        }
+    }
+
+    /// <summary>
+    /// 退出登录
+    /// </summary>
+    [QuickApi("loginout")]
+    public class LoginOut : BaseQuickApiWithoutRequest<ContentResponse>
+    {
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public LoginOut(IHttpContextAccessor httpContextAccessor)
+        {
+            _httpContextAccessor = httpContextAccessor;
+        }
+
+        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        {
+            _httpContextAccessor.HttpContext.SignOutAsync();
+            return Task.FromResult(new ContentResponse("已经退出登录"));
+        }
+    }
+
+    //测试权限组
+    public abstract class BaseAdminApi<Req, Rsp> : BaseQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new() where Rsp : BaseResponse
+    {
+        public override Task<Rsp> ExecuteAsync(Req request)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            //需要Admin的Policy才能访问
+            builder.RequireAuthorization("admin");
+            return base.HandlerBuilder(builder);
+        }
+    }
+
+    /// <summary>
+    /// 基本的权限测试
+    /// </summary>
+    [QuickApi("index", Group = "admin", Verbs = Verb.GET, Policy = "admin")]
+    public class NeedAuthApi : BaseQuickApiWithoutRequest<ContentResponse>
+    {
+        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Task.FromResult(new ContentResponse("恭喜你有权限访问当前接口!"));
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.WithOpenApi(operation => new(operation)
+            {
+                Summary = "NeedAuthApi",
+                Description = "NeedAuthApi"
+            });
+
+            return base.HandlerBuilder(builder);
+        }
+
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [QuickApi("edit", Group = "admin", Verbs = Verb.GET)]
+    public class EditDocumentApi : BaseAdminApi<EmptyRequest, IResultResponse>
+    {
+        public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Task.FromResult(Results.Ok("你有权限编辑!").AsRsp());
+        }
+    }
+
+    #endregion
 }
 
 #pragma warning restore

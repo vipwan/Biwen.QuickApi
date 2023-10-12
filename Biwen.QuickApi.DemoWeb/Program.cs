@@ -1,17 +1,44 @@
 
 using Biwen.QuickApi.DemoWeb;
 using Biwen.QuickApi.DemoWeb.Apis;
-using FluentValidation.Results;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.OpenApi.Models;
-using Microsoft.OpenApi.Writers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAuthentication("Bearer");
-builder.Services.AddAuthorization(builder => builder.AddPolicy("admin", policy => policy.RequireClaim("admin")));
+
+
+builder.Services.AddAuthentication().AddCookie();
+builder.Services.AddAuthorization();
+
+//builder.Services.AddAuthorizationBuilder().AddPolicy("admin", policy =>
+//{
+//    policy.RequireClaim("admin");
+//    policy.RequireAuthenticatedUser();
+//});
+
+builder.Services.Configure<AuthorizationOptions>(options =>
+{
+    options.AddPolicy("admin", policy =>
+    {
+        policy.RequireClaim("admin");
+        policy.RequireAuthenticatedUser();
+    });
+});
+
+builder.Services.Configure<AuthenticationOptions>(options =>
+{
+    options.DefaultScheme = "Cookies";
+    options.DefaultChallengeScheme = "Cookies";
+});
+
+//builder.Services.ConfigureApplicationCookie(options =>
+//{
+//    options.LoginPath = "/login";
+//});
 
 //swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -38,17 +65,20 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
+
 app.UseAuthentication();
 app.UseAuthorization();
-
-//app.UseWelcomePage("/");
-app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 
 
 var apis = app.MapBiwenQuickApis();
 //
 //app.MapGenQuickApis(app.Services);
 //如果你想对特定的分组批量操作. 比如授权等,可以这样做
+
+
+//app.UseWelcomePage("/");
+app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
+
 
 //测试其他地方调用QuickApi
 app.MapGet("/fromapi",
@@ -69,7 +99,6 @@ app.MapGet("/fromapi",
     return TypedResults.Ok(x.Content);
 
 });
-
 
 //app.MapGet("hhe", () => TypedResults.Ok(new EmptyResponse()));
 
