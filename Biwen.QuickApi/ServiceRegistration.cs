@@ -1,5 +1,6 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -23,6 +24,10 @@ namespace Biwen.QuickApi
             services.AddFluentValidationAutoValidation();
             services.AddHttpContextAccessor();
             services.AddMemoryCache();
+
+            //重写AuthorizationMiddlewareResultHandler
+            services.AddSingleton<IAuthorizationMiddlewareResultHandler, QuickApiAuthorizationMiddlewareResultHandler>();
+
 
             services.AddProblemDetails();
 
@@ -179,6 +184,9 @@ namespace Biwen.QuickApi
                     {
                         return await RequestHandler(ctx, apiType, attr);
                     });
+
+                    //metadata
+                    rhBuilder.WithMetadata(new QuickApiMetadata(apiType));
 
                     //HandlerBuilder
                     using var scope = app.ServiceProvider.CreateAsyncScope();
