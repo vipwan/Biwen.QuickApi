@@ -32,10 +32,10 @@ dotnet add package Biwen.QuickApi.SourceGenerator
 
 builder.Services.AddBiwenQuickApis();
 
-//不使用gen方案
+//缺省方案
 app.MapBiwenQuickApis();
 
-//推荐gen方案
+//Gen方案
 //app.MapGenBiwenQuickApis();
 ```
 
