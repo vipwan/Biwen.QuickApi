@@ -1,0 +1,9 @@
+﻿@Biwen.QuickApi.DemoWeb_HostAddress = http://localhost:5101
+
+GET {{Biwen.QuickApi.DemoWeb_HostAddress}}/fromapi
+
+###
+
+GET {{Biwen.QuickApi.DemoWeb_HostAddress}}/quick/custom?u=1234&p=12345&c=5555555
+
+###

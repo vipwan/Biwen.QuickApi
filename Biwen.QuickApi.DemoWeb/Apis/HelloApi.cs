@@ -548,6 +548,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
+            //cache
+            builder.CacheOutput();
             return base.HandlerBuilder(builder);
         }
     }

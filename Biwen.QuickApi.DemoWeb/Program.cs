@@ -5,14 +5,18 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OutputCaching;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAuthentication().AddCookie();
 builder.Services.AddAuthorization();
 
-builder.Services.AddOutputCache();
+builder.Services.AddOutputCache(options =>
+{
+    options.AddBasePolicy(builder => builder.Expire(TimeSpan.FromSeconds(10)));
+});
+
+builder.Services.AddResponseCaching();
 
 //builder.Services.AddAuthorizationBuilder().AddPolicy("admin", policy =>
 //{
@@ -70,6 +74,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseOutputCache();
+app.UseResponseCaching();
 
 // 默认方式
 var apis = app.MapBiwenQuickApis();
@@ -93,8 +98,7 @@ app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 
 
 //测试其他地方调用QuickApi
-app.MapGet("/fromapi",
-    async Task<Results<Ok<string>, BadRequest<IDictionary<string, string[]>>>>
+app.MapGet("/fromapi",async Task<Results<Ok<string>, BadRequest<IDictionary<string, string[]>>>>
     (JustAsService api) =>
 {
     //通过你的方式获取请求对象
@@ -111,6 +115,7 @@ app.MapGet("/fromapi",
     return TypedResults.Ok(x.Content);
 
 }).RequireAuthorization("admin");
+
 
 //app.MapGet("hhe", () => TypedResults.Ok(new EmptyResponse()));
 
