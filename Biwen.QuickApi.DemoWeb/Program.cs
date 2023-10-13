@@ -47,19 +47,9 @@ builder.Services.Configure<AuthenticationOptions>(options =>
 });
 
 //swagger
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddOpenApiDocument(options =>
+builder.Services.AddQuickApiDocument(options =>
 {
-    //Ìí¼ÓQuickApiµÄOperationProcessor
-    options.OperationProcessors.Add(new QuickApiOperationProcessor());
-    options.SchemaProcessors.Add(new QuickApiSchemaProcessor());
-    options.SerializerSettings = new JsonSerializerSettings()
-    {
-        ContractResolver = new QuickApiContractResolver()
-    };
-
     options.UseControllerSummaryAsTagDescription = true;
-
     options.PostProcess = document =>
     {
         document.Info = new OpenApiInfo
