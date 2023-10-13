@@ -1,10 +1,13 @@
 using Biwen.QuickApi.DemoWeb;
 using Biwen.QuickApi.DemoWeb.Apis;
+using Biwen.QuickApi.SourceGenerator;
+using Biwen.QuickApi.Swagger;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using NSwag;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,7 +49,33 @@ builder.Services.Configure<AuthenticationOptions>(options =>
 
 //swagger
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddOpenApiDocument(options =>
+{
+    //添加QuickApi的OperationProcessor
+    //options.OperationProcessors.Add(new QuickApiOperationProcessor());
+    //options.UseControllerSummaryAsTagDescription = true;
+
+    options.PostProcess = document =>
+    {
+        document.Info = new OpenApiInfo
+        {
+            Version = "Quick API Demo V1",
+            Title = "Quick API Demo",
+            Description = "Biwen.QuickApi Demo",
+            TermsOfService = "https://github.com/vipwan",
+            Contact = new OpenApiContact
+            {
+                Name = "Contact Me",
+                Url = "https://github.com/vipwan/Biwen.QuickApi"
+            },
+            License = new OpenApiLicense
+            {
+                Name = "MIT License",
+                Url = "https://github.com/vipwan/Biwen.QuickApi/blob/master/LICENSE.txt"
+            }
+        };
+    };
+});
 
 
 // Add services to the container.
@@ -64,10 +93,9 @@ builder.Services.AddBiwenQuickApis(o =>
 
 var app = builder.Build();
 
-
 //swagger
-app.UseSwagger();
-app.UseSwaggerUI();
+app.UseOpenApi();
+app.UseSwaggerUi3();
 
 
 app.UseAuthentication();
@@ -98,7 +126,7 @@ app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 
 
 //测试其他地方调用QuickApi
-app.MapGet("/fromapi",async Task<Results<Ok<string>, BadRequest<IDictionary<string, string[]>>>>
+app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<string, string[]>>>>
     (JustAsService api) =>
 {
     //通过你的方式获取请求对象

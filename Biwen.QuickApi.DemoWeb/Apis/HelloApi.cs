@@ -25,6 +25,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     public class HelloApiRequest : AuthRequest<HelloApiRequest>
     {
+
         public string? Name { get; set; } = "default";
 
         /// <summary>
@@ -93,7 +94,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             {
                 request.Name = c;
             }
-            if(context.Request.Query.TryGetValue("q", out var q))
+            if (context.Request.Query.TryGetValue("q", out var q))
             {
                 request.Q = q;
             }
@@ -101,9 +102,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             {
                 request.UserName = u;
             }
-            if(context.Request.Query.TryGetValue("p", out var p))
+            if (context.Request.Query.TryGetValue("p", out var p))
             {
-                request.Password= p;
+                request.Password = p;
             }
 
             await Task.CompletedTask;
@@ -285,7 +286,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             builder.WithOpenApi(operation => new(operation)
             {
                 Summary = "custom",
-                Description = "custom"
+                Description = "自定义绑定.系统生成的SwagDoc传参没有意义,请按照实际情况传参"
             });
             return base.HandlerBuilder(builder);
         }
@@ -451,7 +452,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <summary>
     ///  模拟直接登录,并且给予admin的Policy
     /// </summary>
-    [QuickApi("logined",Group ="admin")]
+    [QuickApi("logined", Group = "admin")]
     public class Login : BaseQuickApiWithoutRequest<ContentResponse>
     {
 
@@ -479,7 +480,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <summary>
     /// 退出登录
     /// </summary>
-    [QuickApi("loginout",Group ="admin")]
+    [QuickApi("loginout", Group = "admin")]
     public class LoginOut : BaseQuickApiWithoutRequest<ContentResponse>
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
