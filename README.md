@@ -7,7 +7,7 @@
 public class MyApi : BaseQuickApi<Req,Rsp>{}
 ``` 
 - (MinimalApi as REPR) Biwen.QuickApi遵循了 REPR 设计 （Request-Endpoint-Response）
-- 开箱即用的Api路由 和 权限,Bind,validator体验
+- 开箱即用的Route, Policy,Binder,validator & 整合NSwag支持
 - 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi(gen版本=minimalApi,生成原生接口代码),遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
 - write less, do more ; write anywhere, do anything  
 - 欢迎小伙伴们star&issue共同学习进步 (Biwen.QuickApi)[https://github.com/vipwan/Biwen.QuickApi]
@@ -314,7 +314,50 @@ app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 
 ```
 
-### Step5 OpenApi 以及Client代理
+### Step5 NSwag集成 
+
+```c#
+
+//register nswag & quickapi document
+
+builder.Services.AddQuickApiDocument(options =>
+{
+    options.UseControllerSummaryAsTagDescription = true;
+    options.PostProcess = document =>
+    {
+        document.Info = new OpenApiInfo
+        {
+            Version = "Quick API Demo V1",
+            Title = "Quick API Demo",
+            Description = "Biwen.QuickApi Demo",
+            TermsOfService = "https://github.com/vipwan",
+            Contact = new OpenApiContact
+            {
+                Name = "Contact Me",
+                Url = "https://github.com/vipwan/Biwen.QuickApi"
+            },
+            License = new OpenApiLicense
+            {
+                Name = "MIT License",
+                Url = "https://github.com/vipwan/Biwen.QuickApi/blob/master/LICENSE.txt"
+            }
+        };
+    };
+});
+
+
+//use swagger ui
+
+app.UseOpenApi();
+app.UseSwaggerUi3();
+
+
+```
+
+
+
+
+### Step6 OpenApi 以及Client代理
 
 - 你可以全局配置版本号,以及自定义的OpenApi描述
 - 你可以重写QuickApi的HandlerBuilder方法,以便于你自定义的OpenApi描述
