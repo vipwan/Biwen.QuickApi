@@ -353,7 +353,7 @@ app.UseSwaggerUi3();
 
 
 ```
-
+- 更多参考代码 [Issues 8](https://github.com/vipwan/Biwen.QuickApi/issues/8)
 
 
 
