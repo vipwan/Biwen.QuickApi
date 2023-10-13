@@ -2,7 +2,11 @@
 using FluentValidation;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi.Validations.Rules;
+using NSwag.Annotations;
 using System.Security.Claims;
 using System.Text.Json.Serialization;
 
@@ -23,9 +27,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     }
 
+
     public class HelloApiRequest : AuthRequest<HelloApiRequest>
     {
-
         public string? Name { get; set; } = "default";
 
         /// <summary>
@@ -34,11 +38,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         [AliasAs("a")]
         public string? Alias { get; set; }
 
-        [JsonIgnore]//FromQuery POST无需展示字段
+        //[JsonIgnore]//FromQuery POST无需展示字段
         [FromQuery]
         public string? Q { get; set; }
 
-        [JsonIgnore]//FromKeyedServices POST无需展示字段
+        //[JsonIgnore]//FromKeyedServices POST无需展示字段
         [FromKeyedServices("hello")]
         public HelloService HelloService { get; set; }
 
@@ -47,8 +51,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             RuleFor(x => x.Name).NotNull().Length(2, 36);
             RuleFor(x => x.Password).NotNull().Length(2, 36);
         }
-
-
     }
 
     /// <summary>
@@ -159,12 +161,17 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             };
         }
 
+        [OpenApiOperation("world2", "world2")]
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-            builder.WithOpenApi(operation => new(operation)
+            //如果请求是POST,可以添加Example.否则会忽略
+            builder.WithExample(new HelloApiRequest
             {
-                Summary = "world2",
-                Description = "world2"
+                Name = "vipwan",
+                Alias = "alias",
+                Q = "q54543534",
+                UserName = "u545435",
+                Password = "p234565",
             });
 
             return base.HandlerBuilder(builder);
@@ -254,6 +261,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("custom", Verbs = Verb.GET)]
     public class CustomApi : BaseQuickApi<HelloApiRequest>
     {
+
         public CustomApi()
         {
             UseReqBinder<CustomApiRequestBinder>();
@@ -271,10 +279,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
+        [OpenApiOperation("custom", "自定义绑定.系统生成的SwagDoc传参没有意义,请按照实际情况传参")]
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
             //自定义标签
-            builder.WithTags("custom");
+            builder.WithTags("Custom");
 
             //自定义过滤器
             builder.AddEndpointFilter(async (context, next) =>
@@ -283,70 +292,16 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 return await next(context);
             });
 
-            builder.WithOpenApi(operation => new(operation)
-            {
-                Summary = "custom",
-                Description = "自定义绑定.系统生成的SwagDoc传参没有意义,请按照实际情况传参"
-            });
-            return base.HandlerBuilder(builder);
-        }
-
-    }
-
-    #region 版本控制测试
-
-    [QuickApi("v1")]
-    public class V1Api : BaseQuickApi
-    {
-        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
-        {
-            Console.WriteLine("v1");
-            return Task.FromResult(EmptyResponse.New);
-        }
-
-        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-        {
-            builder.WithTags("VT");//按照版本分组
+            //NSwag 必须使用 OpenApiOperationAttribute 
+            //Swashbuckle 使用 WithOpenApi
+            //builder.WithOpenApi(operation => new(operation)
+            //{
+            //    Summary = "custom",
+            //    Description = "自定义绑定.系统生成的SwagDoc传参没有意义,请按照实际情况传参"
+            //});
             return base.HandlerBuilder(builder);
         }
     }
-
-    [QuickApi("v1v2")]
-    public class V1V2Api : BaseQuickApi
-    {
-        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
-        {
-            Console.WriteLine("v1,v2");
-            return Task.FromResult(EmptyResponse.New);
-        }
-
-        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-        {
-
-            builder.WithTags("VT");//按照版本分组
-
-            return base.HandlerBuilder(builder);
-        }
-    }
-
-    [QuickApi("v2")]
-    public class V2Api : BaseQuickApi
-    {
-        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
-        {
-            Console.WriteLine("v2");
-            return Task.FromResult(EmptyResponse.New);
-        }
-
-        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-        {
-            builder.WithTags("VT");//按照版本分组
-
-            return base.HandlerBuilder(builder);
-        }
-    }
-
-    #endregion
 
     /// <summary>
     /// get ~/content 返回文本测试
@@ -405,6 +360,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             return new ContentResponse($"FromBodyApi {request.Id} {request.Name}");
         }
+
+        [OpenApiOperation("frombody", "当前接口Req来自整个FormBody")]
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            return base.HandlerBuilder(builder);
+        }
     }
 
     /// <summary>
@@ -429,21 +390,19 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return Results.BadRequest("no file").AsRsp();
         }
 
+        [OpenApiOperation("fromfile", "上传文件测试")]
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
             builder.Accepts<FileUploadRequest>("multipart/form-data");
 
-            builder.WithOpenApi(operation => new(operation)
-            {
-                Summary = "上传文件测试",
-                Description = "上传文件测试"
-            });
-
+            //builder.WithOpenApi(operation => new(operation)
+            //{
+            //    Summary = "上传文件测试",
+            //    Description = "上传文件测试"
+            //});
             return builder;
         }
     }
-
-
 
     #region 含权限的测试
 
@@ -475,6 +434,14 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
             return Task.FromResult(new ContentResponse("已经登录成功"));
         }
+
+
+        [OpenApiOperation("logined", "模拟直接登录,并且给予admin的Policy")]
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            return base.HandlerBuilder(builder);
+        }
+
     }
 
     /// <summary>
@@ -494,6 +461,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _httpContextAccessor.HttpContext.SignOutAsync();
             return Task.FromResult(new ContentResponse("已经退出登录"));
         }
+
+        [OpenApiOperation("loginout", "退出登录")]
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            return base.HandlerBuilder(builder);
+        }
+
     }
 
     //测试权限组
@@ -523,13 +497,14 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return Task.FromResult(new ContentResponse("恭喜你有权限访问当前接口!"));
         }
 
+        [OpenApiOperation("需要登录,NeedAuthApi", "NeedAuthApi")]
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-            builder.WithOpenApi(operation => new(operation)
-            {
-                Summary = "NeedAuthApi",
-                Description = "NeedAuthApi"
-            });
+            //builder.WithOpenApi(operation => new(operation)
+            //{
+            //    Summary = "NeedAuthApi",
+            //    Description = "NeedAuthApi"
+            //});
 
             return base.HandlerBuilder(builder);
         }
@@ -547,6 +522,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return Task.FromResult(Results.Ok($"你有权限编辑!{DateTime.Now.ToLongTimeString()}").AsRsp());
         }
 
+        [OpenApiOperation("需要登录,EditDocumentApi", "EditDocumentApi")]
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
             //cache

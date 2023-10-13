@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
+using NSwag.Annotations;
 using System.Text.Json;
 namespace Biwen.QuickApi
 {
+
+    [OpenApiIgnore]
     public abstract class BaseResponse
     {
         /// <summary>

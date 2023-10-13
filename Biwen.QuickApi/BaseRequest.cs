@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using NSwag.Annotations;
+using System.Linq.Expressions;
 using System.Text.Json.Serialization;
 
 namespace Biwen.QuickApi
@@ -46,6 +47,7 @@ namespace Biwen.QuickApi
     /// <summary>
     /// 空请求
     /// </summary>
+    [OpenApiIgnore]
     public sealed class EmptyRequest : BaseRequest<EmptyRequest>
     {
     }

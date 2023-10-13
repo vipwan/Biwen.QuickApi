@@ -4,7 +4,10 @@ using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.FileSystemGlobbing.Internal;
+using Microsoft.Extensions.Hosting;
 using System.Dynamic;
+using System.Reflection;
 
 namespace Biwen.QuickApi
 {
@@ -185,9 +188,6 @@ namespace Biwen.QuickApi
                         return await RequestHandler(ctx, apiType, attr);
                     });
 
-                    //metadata
-                    rhBuilder.WithMetadata(new QuickApiMetadata(apiType));
-
                     //HandlerBuilder
                     using var scope = app.ServiceProvider.CreateAsyncScope();
                     var currentApi = scope.ServiceProvider.GetRequiredService(apiType);
@@ -195,6 +195,9 @@ namespace Biwen.QuickApi
                     {
                         rhBuilder = hb.HandlerBuilder(rhBuilder!);
                     }
+
+                    //metadata
+                    rhBuilder.WithMetadata(new QuickApiMetadata(apiType));
 
                     //OpenApi 生成
                     //var method = apiType.GetMethod("ExecuteAsync")!;

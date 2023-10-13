@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NSwag;
+using System.Text.Json.Serialization;
+using System.Text.Json;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,8 +56,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApiDocument(options =>
 {
     //Ìí¼ÓQuickApiµÄOperationProcessor
-    //options.OperationProcessors.Add(new QuickApiOperationProcessor());
-    //options.UseControllerSummaryAsTagDescription = true;
+    options.OperationProcessors.Add(new QuickApiOperationProcessor());
+    options.SchemaProcessors.Add(new QuickApiSchemaProcessor());
+    options.SerializerSettings = new JsonSerializerSettings()
+    {
+        ContractResolver = new QuickApiContractResolver()
+    };
+
+    options.UseControllerSummaryAsTagDescription = true;
 
     options.PostProcess = document =>
     {
