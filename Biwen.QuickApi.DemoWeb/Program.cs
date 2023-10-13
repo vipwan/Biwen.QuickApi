@@ -46,11 +46,6 @@ builder.Services.Configure<AuthenticationOptions>(options =>
     options.DefaultChallengeScheme = "Cookies";
 });
 
-//builder.Services.ConfigureApplicationCookie(options =>
-//{
-//    options.LoginPath = "/login";
-//});
-
 //swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApiDocument(options =>
@@ -119,12 +114,7 @@ var apis = app.MapBiwenQuickApis();
 //如果你想对特定的分组批量操作. 比如授权等,可以这样做,但是注意该操作会覆盖掉原有的配置(如果存在的情况下)
 var groupAdmin = apis.FirstOrDefault(x => x.Group == "admin");
 groupAdmin.RouteGroupBuilder?
-    .WithTags("Admin Test")
-    .WithOpenApi(operation => new(operation)
-    {
-        Summary = "用于测试权限相关",
-        //Description = "Admin Test"
-    })                             //自定义OpenApi
+    .WithTags("Admin Test")         //自定义Tags
     .RequireHost("localhost:5101") //模拟需要指定Host访问接口
     ;
 
@@ -154,17 +144,11 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
 
 }).RequireAuthorization("admin");
 
-
-//app.MapGet("hhe", () => TypedResults.Ok(new EmptyResponse()));
-
-
 //发现ms的WithOpenApi的一处BUG,当Method为多个时会报错!
 //app.MapMethods("hello-world", new[] { "GET", "POST" }, () => Results.Ok()).WithOpenApi(operation => new(operation)
 //{
 //    Summary = "NeedAuthApi",
 //    Description = "NeedAuthApi"
 //});
-
-
 
 app.Run();

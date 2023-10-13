@@ -142,6 +142,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 Alias = request.Alias,
             };
         }
+
+        [OpenApiOperation("Verbs", "测试多个Verbs的情况")]
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            return base.HandlerBuilder(builder);
+        }
+        
     }
 
 
