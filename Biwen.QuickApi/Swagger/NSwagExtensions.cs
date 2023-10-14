@@ -30,6 +30,7 @@ namespace Biwen.QuickApi
             {
                 settings.OperationProcessors.Add(new QuickApiOperationProcessor());
                 settings.SchemaProcessors.Add(new QuickApiSchemaProcessor());
+                settings.SchemaProcessors.Add(new QuickApiValidationSchemaProcessor());
                 if (securityOptions?.EnlableSecurityProcessor is true)
                 {
                     settings.OperationProcessors.Add(new QuickApiOperationSecurityProcessor(securityOptions));

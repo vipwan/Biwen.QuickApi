@@ -9,6 +9,11 @@ using Biwen.QuickApi.Metadata;
 using Biwen.QuickApi.SourceGenerator.TestConsole;
 using Microsoft.OpenApi.Models;
 
+
+
+//用于测试生成器的代码
+
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1050:在命名空间中声明类型", Justification = "<挂起>")]
 public static partial class AppExtentions
 {
 
