@@ -10,15 +10,15 @@ namespace Biwen.QuickApi.Swagger
 {
     internal sealed class QuickApiValidationSchemaProcessor : ISchemaProcessor
     {
-        readonly FluentValidationRule[] _rules;
-        readonly Dictionary<string, IValidator> _childAdaptorValidators = new();
-
+        static readonly FluentValidationRule[] _rules = CreateDefaultRules();
         static readonly Type _iReqValidatorType = typeof(IReqValidator<>);
+
+        readonly Dictionary<string, IValidator> _childAdaptorValidators = new();
 
         public QuickApiValidationSchemaProcessor()
         {
-            _rules = CreateDefaultRules();
         }
+
         public void Process(SchemaProcessorContext context)
         {
             var tRequest = context.ContextualType;
