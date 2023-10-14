@@ -47,4 +47,30 @@
         }
     }
 
+
+    [QuickApi("deprecated", Verbs = Verb.GET)]
+    [QuickApiSummary("已过时的接口", "DeprecatedApi",IsDeprecated = true)]
+    public class DeprecatedApi : BaseQuickApi
+    {
+
+        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return base.ExecuteAsync(request);
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.WithTags("custom");
+
+            // NSwag不被支持,请使用QuickApiSummaryAttribute
+            //builder.WithOpenApi(operation => new(operation)
+            //{
+            //    Deprecated = true
+            //});
+
+            return base.HandlerBuilder(builder);
+        }
+
+    }
+
 }

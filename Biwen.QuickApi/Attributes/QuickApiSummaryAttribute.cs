@@ -24,6 +24,16 @@
         /// </summary>
         public string? Description { get; set; }
 
+        /// <summary>
+        /// OperationId
+        /// </summary>
+        public string? OperationId { get; set; }
+
+        /// <summary>
+        /// 标记为是否已过时.
+        /// </summary>
+        public bool IsDeprecated { get; set; } = false;
+
 
     }
 }

@@ -41,21 +41,33 @@
 
             //标注方法
             var apiOperationAttribute = kuickApiDef.QuickApiType
-                ?.GetMethod(nameof(IHandlerBuilder.HandlerBuilder))
-                ?.GetCustomAttribute<OpenApiOperationAttribute>();
+                ?.GetMethod(nameof(IHandlerBuilder.HandlerBuilder))?.GetCustomAttribute<OpenApiOperationAttribute>();
             if (apiOperationAttribute != null)
             {
                 op.Summary = apiOperationAttribute.Summary;
                 op.Description = apiOperationAttribute.Description;
+                if (!string.IsNullOrEmpty(apiOperationAttribute.OperationId))
+                {
+                    op.OperationId = apiOperationAttribute.OperationId;
+                }
             }
 
             //标注类
-            var quickapiOperationAttribute = kuickApiDef.QuickApiType
-                ?.GetCustomAttribute<Attributes.QuickApiSummaryAttribute>();
-            if (quickapiOperationAttribute != null)
+            var quickApiSummaryAttribute = kuickApiDef.QuickApiType?.GetCustomAttribute<QuickApiSummaryAttribute>();
+            if (quickApiSummaryAttribute != null)
             {
-                op.Summary = quickapiOperationAttribute.Summary;
-                op.Description = quickapiOperationAttribute.Description;
+                op.Summary = quickApiSummaryAttribute.Summary;
+                op.Description = quickApiSummaryAttribute.Description;
+
+                if (!string.IsNullOrEmpty(quickApiSummaryAttribute.OperationId))
+                {
+                    op.OperationId = quickApiSummaryAttribute.OperationId;
+                }
+
+                if(quickApiSummaryAttribute.IsDeprecated)
+                {
+                    op.IsDeprecated = true;//标注为已过时
+                }
             }
 
             //fix request content-types not displaying correctly
