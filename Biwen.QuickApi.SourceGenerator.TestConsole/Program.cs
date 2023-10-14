@@ -13,7 +13,10 @@ builder.Services.AddBiwenQuickApis(builder =>
 
 //swagger
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddQuickApiDocument(cfg =>
+{
+    cfg.DocumentName = "QuickApi Test";
+});
 
 
 
@@ -26,8 +29,8 @@ app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 //app.MapBiwenQuickApis();
 
 //swagger
-app.UseSwagger();
-app.UseSwaggerUI();
+app.UseOpenApi();
+app.UseSwaggerUi3();
 
 
 app.MapGroup("").MapGet("/world", (IHttpContextAccessor ctx) => Results.Content("hello world")).ExcludeFromDescription();
