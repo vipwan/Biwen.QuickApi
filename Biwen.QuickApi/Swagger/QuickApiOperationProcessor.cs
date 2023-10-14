@@ -14,18 +14,13 @@
     using System.Text.Json;
     using System.Text.Json.Serialization;
     using System.Text.RegularExpressions;
-    using YamlDotNet.Core.Tokens;
 
     /// <summary>
     /// QuickApi Swagger OperationProcessor
     /// </summary>
-    public class QuickApiOperationProcessor : IOperationProcessor
+    public partial class QuickApiOperationProcessor : IOperationProcessor
     {
-        /// <summary>
-        /// 路由Regex
-        /// </summary>
-        static readonly Regex routeParamsRegex = new("(?<={)(?:.*?)*(?=})", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-        static readonly Regex routeConstraintsRegex = new("(?<={)([^?:}]+)[^}]*(?=})", RegexOptions.Compiled);
+
 
         public bool Process(OperationProcessorContext context)
         {
@@ -44,10 +39,8 @@
             //set endpoint summary & description
             //op.Summary = metaData.OfType<IEndpointSummaryMetadata>()?.FirstOrDefault()?.Summary;
             //op.Description = metaData.OfType<IEndpointDescriptionMetadata>()?.FirstOrDefault()?.Description;
-            var apiOperationAttribute = kuickApiDef.QuickApiType?.
-                GetMethod(nameof(IHandlerBuilder.HandlerBuilder))?.
-                GetCustomAttribute<OpenApiOperationAttribute>();
 
+            var apiOperationAttribute = kuickApiDef.QuickApiType?.GetMethod(nameof(IHandlerBuilder.HandlerBuilder))?.GetCustomAttribute<OpenApiOperationAttribute>();
             if (apiOperationAttribute != null)
             {
                 op.Summary = apiOperationAttribute.Summary;
@@ -84,7 +77,6 @@
 
             //请求的Req要求为FromBody的情况:
             var reqType = kuickApiDef.QuickApiType?.GetInterface($"{nameof(IQuickApi<EmptyRequest, EmptyResponse>)}`2")?.GenericTypeArguments[0];
-
             if (reqType?.GetCustomAttribute<QuickApi.FromBodyAttribute>() != null)
             {
                 op.RequestBody = new OpenApiRequestBody
@@ -115,7 +107,6 @@
                     reqDtoProps.Remove(p);
                 }
 #if NET8_0_OR_GREATER
-
                 //FromKeyedServicesAttribute
                 foreach (var p in reqDtoProps.Where(p => p.IsDefined(typeof(FromKeyedServicesAttribute)) || p.GetSetMethod()?.IsPublic is not true).ToArray())
                 {
@@ -129,7 +120,7 @@
                     if (prop.IsDefined(typeof(FromQueryAttribute)))
                     {
                         reqParams.Add(CreateParam(
-                            ctx: context,
+                            context,
                             prop: prop,
                             paramName: prop.GetCustomAttribute<FromQueryAttribute>()?.Name ?? prop.Name,
                             isRequired: !IsNullable(prop),
@@ -139,37 +130,40 @@
                     if (prop.IsDefined(typeof(FromRouteAttribute)))
                     {
                         reqParams.Add(CreateParam(
-                            ctx: context,
+                            context,
                             prop: prop,
                             paramName: prop.Name,
-                            isRequired: IsNullable(prop),
+                            isRequired: !IsNullable(prop),
                             kind: OpenApiParameterKind.Path));
                         continue;
                     }
                     if (prop.IsDefined(typeof(FromHeaderAttribute)))
                     {
                         reqParams.Add(CreateParam(
-                            ctx: context,
+                            context,
                             prop: prop,
                             paramName: prop.GetCustomAttribute<FromHeaderAttribute>()?.Name ?? prop.Name,
-                            isRequired: IsNullable(prop),
+                            isRequired: !IsNullable(prop),
                             kind: OpenApiParameterKind.Header));
                         continue;
                     }
                     if (prop.IsDefined(typeof(FromBodyAttribute)))
                     {
-                        reqParams.Add(CreateParam(ctx: context, prop:
-                            prop, paramName: prop.Name,
-                            isRequired: IsNullable(prop),
+                        reqParams.Add(CreateParam(
+                            context, 
+                            prop:prop, 
+                            paramName: prop.Name,
+                            isRequired: !IsNullable(prop),
                             kind: OpenApiParameterKind.Body));
                         continue;
                     }
                     if (prop.IsDefined(typeof(FromFormAttribute)))
                     {
-                        reqParams.Add(CreateParam(context,
+                        reqParams.Add(CreateParam(
+                            context,
                             prop: prop,
                             paramName: prop.GetCustomAttribute<FromFormAttribute>()?.Name ?? prop.Name,
-                            isRequired: IsNullable(prop),
+                            isRequired: !IsNullable(prop),
                             kind: OpenApiParameterKind.FormData));
                         continue;
                     }
@@ -212,10 +206,11 @@
                     //别名
                     if (prop.IsDefined(typeof(AliasAsAttribute)))
                     {
-                        reqParams.Add(CreateParam(context,
+                        reqParams.Add(CreateParam(
+                            context,
                             prop: prop,
                             paramName: prop.GetCustomAttribute<AliasAsAttribute>()?.Name ?? prop.Name,
-                            isRequired: IsNullable(prop),
+                            isRequired: !IsNullable(prop),
                             kind: OpenApiParameterKind.Query));
                         continue;
                     }
@@ -227,20 +222,22 @@
 
                     if (isFromRoute)
                     {
-                        reqParams.Add(CreateParam(context,
+                        reqParams.Add(CreateParam(
+                            context,
                             prop: prop,
                             paramName: prop.Name,
-                            isRequired: IsNullable(prop),
+                            isRequired: !IsNullable(prop),
                             kind: OpenApiParameterKind.Path));
                         continue;
                     }
 
                     if (isGETRequest && !isFromRoute)
                     {
-                        reqParams.Add(CreateParam(context,
+                        reqParams.Add(CreateParam(
+                            context,
                             prop: prop,
                             paramName: prop.Name,
-                            isRequired: IsNullable(prop),
+                            isRequired: !IsNullable(prop),
                             kind: OpenApiParameterKind.Query));
                         continue;
                     }
@@ -316,6 +313,18 @@
 
         #region Helper
 
+        [GeneratedRegex("(?<={)(?:.*?)*(?=})", RegexOptions.IgnoreCase | RegexOptions.Compiled)]
+        private static partial Regex RouteParamsRegex();
+
+        [GeneratedRegex("(?<={)([^?:}]+)[^}]*(?=})", RegexOptions.Compiled)]
+        private static partial Regex RouteConstraintsRegex();
+
+        /// <summary>
+        /// 路由Regex
+        /// </summary>
+        static readonly Regex routeParamsRegex = RouteParamsRegex();
+        static readonly Regex routeConstraintsRegex = RouteConstraintsRegex();
+
         static bool HasNoProperties(IDictionary<string, OpenApiMediaType> content)
              => !content.Any(c => GetAllProperties(c).Any());
 
@@ -364,9 +373,7 @@
                 paramName,
                 paramName,
                 (prop?.PropertyType ?? typeof(string)).ToContextualType());
-
             prm.Kind = kind;
-
             prm.IsRequired = isRequired ?? !IsNullable(prop!);
             prm.IsNullableRaw = null; //if this is not null, nswag generates an incorrect swagger spec for some unknown reason.
             return prm;

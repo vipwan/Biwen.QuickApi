@@ -57,7 +57,7 @@ namespace Biwen.QuickApi
 
                 if (prop.PropertyType == typeof(IFormFile))
                 {
-                    var file = context.Request.Form.Files.FirstOrDefault();
+                    var file = context.Request.Form.Files.SingleOrDefault();
                     if (file != null)
                     {
                         prop.SetValue(@default, file);
@@ -94,10 +94,10 @@ namespace Biwen.QuickApi
                 {
                     var name = fromHeader.Name ?? prop.Name;
                     var qs = context.Request.Headers;
-                    if (qs.ContainsKey(name))
+                    if (qs.TryGetValue(name, out Microsoft.Extensions.Primitives.StringValues val))
                     {
                         //转换
-                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[name].ToString());
+                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(val.ToString());
                         prop.SetValue(@default, value);
                         continue;
                     }
@@ -273,7 +273,7 @@ namespace Biwen.QuickApi
         /// <summary>
         /// 定位属性
         /// </summary>
-        private static Func<string?, PropertyInfo?> GetProperty = (string? name) =>
+        private static readonly Func<string?, PropertyInfo?> GetProperty = (string? name) =>
         {
             if (string.IsNullOrEmpty(name))
                 return null;

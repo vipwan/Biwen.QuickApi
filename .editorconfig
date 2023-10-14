@@ -14,3 +14,6 @@ dotnet_diagnostic.CA1822.severity = silent
 
 # CA1812: 避免未实例化的内部类
 dotnet_diagnostic.CA1812.severity = silent
+
+# IDE0052: 删除未读的私有成员
+dotnet_diagnostic.IDE0052.severity = silent
