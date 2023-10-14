@@ -45,12 +45,13 @@ app.MapBiwenQuickApis();
 
     public class HelloApiRequest : BaseRequest<HelloApiRequest>
     {
+        [Description("Name Desc")]
         public string? Name { get; set; }
 
         /// <summary>
         /// 别名绑定字段
         /// </summary>
-        [AliasAs("a")]
+        [AliasAs("anotherAlias")]
         public string? Alias { get; set; }
         /// <summary>
         /// FromQuery特性绑定字段
@@ -133,6 +134,7 @@ app.MapBiwenQuickApis();
     /// get ~/admin/index
     /// </summary>
     [QuickApi("index", Group = "admin", Verbs = Verb.GET | Verb.POST, Policy = "admin")]
+    [QuickApiSummary("this is summary","this is description")]
     public class NeedAuthApi : BaseQuickApi
     {
         public override EmptyResponse Execute(EmptyRequest request)
@@ -235,12 +237,12 @@ app.MapBiwenQuickApis();
         }
     }
     
-
     /// <summary>
     /// 上传文件测试
     /// 请使用postman & apifox 测试
     /// </summary>
     [QuickApi("fromfile", Verbs = Verb.POST)]
+    [QuickApiSummary("上传文件测试", "上传文件测试")]
     public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
     {
         public override async Task<IResultResponse> ExecuteAsync(FileUploadRequest request)
@@ -256,15 +258,9 @@ app.MapBiwenQuickApis();
             }
             return Results.BadRequest("no file").AsRsp();
         }
-
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
             builder.Accepts<FileUploadRequest>("multipart/form-data");
-            builder.WithOpenApi(operation => new(operation)
-            {
-                Summary = "上传文件测试",
-                Description = "上传文件测试"
-            });
             return builder;
         }
     }
@@ -327,13 +323,13 @@ builder.Services.AddQuickApiDocument(options =>
     {
         document.Info = new OpenApiInfo
         {
-            Version = "Quick API Demo V1",
-            Title = "Quick API Demo",
-            Description = "Biwen.QuickApi Demo",
+            Version = "Quick API V1",
+            Title = "Quick API showcase",
+            Description = "Biwen.QuickApi 测试用例",
             TermsOfService = "https://github.com/vipwan",
             Contact = new OpenApiContact
             {
-                Name = "Contact Me",
+                Name = "wherecome star & issue",
                 Url = "https://github.com/vipwan/Biwen.QuickApi"
             },
             License = new OpenApiLicense
