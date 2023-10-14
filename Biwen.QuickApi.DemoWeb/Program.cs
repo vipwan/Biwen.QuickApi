@@ -88,10 +88,20 @@ builder.Services.AddBiwenQuickApis(o =>
 
 var app = builder.Build();
 
-//swagger
-app.UseOpenApi();
-app.UseSwaggerUi3();
 
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+    //swagger ui
+    app.UseQuickApiSwagger();
+
+    app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
+}
+else
+{
+    app.UseWelcomePage("/");
+}
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -110,10 +120,6 @@ groupAdmin.RouteGroupBuilder?
 
 // Gen方式
 //app.MapGenQuickApis(app.Services);
-
-//app.UseWelcomePage("/");
-app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
-
 
 //测试其他地方调用QuickApi
 app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<string, string[]>>>>
