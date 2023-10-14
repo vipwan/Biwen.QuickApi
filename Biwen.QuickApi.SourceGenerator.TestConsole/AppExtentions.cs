@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using Biwen.QuickApi;
 using Biwen.QuickApi.Attributes;
+using Biwen.QuickApi.Metadata;
 
 using Biwen.QuickApi.SourceGenerator.TestConsole;
 using Microsoft.OpenApi.Models;

@@ -1,5 +1,6 @@
 ﻿namespace Biwen.QuickApi.Swagger
 {
+    using Biwen.QuickApi.Metadata;
     using Microsoft.AspNetCore.Authorization;
     using NSwag;
     using NSwag.Generation.AspNetCore;

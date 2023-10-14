@@ -31,6 +31,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using Biwen.QuickApi;
 using Biwen.QuickApi.Attributes;
+using Biwen.QuickApi.Metadata;
 using Microsoft.Extensions.DependencyInjection;
 
 $namespace

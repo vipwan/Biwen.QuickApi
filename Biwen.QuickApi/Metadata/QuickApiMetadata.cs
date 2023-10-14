@@ -1,7 +1,6 @@
-﻿
-using Microsoft.AspNetCore.Http.Metadata;
+﻿using Microsoft.AspNetCore.Http.Metadata;
 
-namespace Biwen.QuickApi
+namespace Biwen.QuickApi.Metadata
 {
     /// <summary>
     /// Metadata for QuickApi
@@ -29,17 +28,5 @@ namespace Biwen.QuickApi
         public IEndpointSummaryMetadata? EndpointSummaryMetadata { get; set; }
 
         public IEndpointDescriptionMetadata? EndpointDescriptionMetadata { get; set; }
-    }
-
-    /// <summary>
-    /// Example Metadata for QuickApi
-    /// </summary>
-    public class QuickApiExampleMetadata
-    {
-        public QuickApiExampleMetadata(object? example)
-        {
-            Example = example;
-        }
-        public object? Example { get; set; }
     }
 }
