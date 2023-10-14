@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
 using NSwag.Annotations;
+using System.ComponentModel;
 using System.Text.Json.Serialization;
 
 
@@ -20,7 +21,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <typeparam name="T"></typeparam>
     public abstract class AuthRequest<T> : BaseRequest<T> where T : class, new()
     {
+        [Description("登录用户名")]
         public string? UserName { get; set; }
+
+        [Description("登录密码")]
         public string? Password { get; set; }
 
     }
@@ -34,13 +38,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         /// 别名测试
         /// </summary>
         [AliasAs("a")]
+        [Description("别名测试使用:a")]
         public string? Alias { get; set; }
 
-        //[JsonIgnore]//FromQuery POST无需展示字段
         [FromQuery]
+        [Description("测试FromQuery:Q")]
         public string? Q { get; set; }
 
-        //[JsonIgnore]//FromKeyedServices POST无需展示字段
         [FromKeyedServices("hello")]
         public HelloService HelloService { get; set; }
 
@@ -57,6 +61,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     public class FileUploadRequest : BaseRequest<FileUploadRequest>
     {
+        [Description("上传的文件")]
         public IFormFile? File { get; set; }
 
 
