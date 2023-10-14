@@ -11,16 +11,14 @@
     using NSwag.Generation.Processors.Contexts;
     using System.Collections;
     using System.Dynamic;
-    using System.Text.Json;
     using System.Text.Json.Serialization;
     using System.Text.RegularExpressions;
 
     /// <summary>
     /// QuickApi Swagger OperationProcessor
     /// </summary>
-    public partial class QuickApiOperationProcessor : IOperationProcessor
+    internal partial class QuickApiOperationProcessor : IOperationProcessor
     {
-
 
         public bool Process(OperationProcessorContext context)
         {

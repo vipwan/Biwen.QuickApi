@@ -6,10 +6,13 @@
     using NSwag.Generation.Processors;
     using NSwag.Generation.Processors.Contexts;
 
-    public class QuickApiOperationSecurityProcessor : IOperationProcessor
+    /// <summary>
+    /// QuickApiOperationSecurityProcessor
+    /// </summary>
+    internal sealed class QuickApiOperationSecurityProcessor : IOperationProcessor
     {
 
-        private SecurityOptions? _securityOptions;
+        private readonly SecurityOptions? _securityOptions;
 
         public QuickApiOperationSecurityProcessor(SecurityOptions? options)
         {
