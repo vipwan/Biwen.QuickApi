@@ -347,10 +347,7 @@ builder.Services.AddQuickApiDocument(options =>
 
 
 //use swagger ui
-
-app.UseOpenApi();
-app.UseSwaggerUi3();
-
+app.UseQuickApiSwagger();
 
 ```
 - 更多参考代码 [Issues 8](https://github.com/vipwan/Biwen.QuickApi/issues/8)
