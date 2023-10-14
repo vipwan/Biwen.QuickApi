@@ -39,11 +39,23 @@
             //op.Summary = metaData.OfType<IEndpointSummaryMetadata>()?.FirstOrDefault()?.Summary;
             //op.Description = metaData.OfType<IEndpointDescriptionMetadata>()?.FirstOrDefault()?.Description;
 
-            var apiOperationAttribute = kuickApiDef.QuickApiType?.GetMethod(nameof(IHandlerBuilder.HandlerBuilder))?.GetCustomAttribute<OpenApiOperationAttribute>();
+            //标注方法
+            var apiOperationAttribute = kuickApiDef.QuickApiType
+                ?.GetMethod(nameof(IHandlerBuilder.HandlerBuilder))
+                ?.GetCustomAttribute<OpenApiOperationAttribute>();
             if (apiOperationAttribute != null)
             {
                 op.Summary = apiOperationAttribute.Summary;
                 op.Description = apiOperationAttribute.Description;
+            }
+
+            //标注类
+            var quickapiOperationAttribute = kuickApiDef.QuickApiType
+                ?.GetCustomAttribute<Attributes.QuickApiSummaryAttribute>();
+            if (quickapiOperationAttribute != null)
+            {
+                op.Summary = quickapiOperationAttribute.Summary;
+                op.Description = quickapiOperationAttribute.Description;
             }
 
             //fix request content-types not displaying correctly
