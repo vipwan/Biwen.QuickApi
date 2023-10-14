@@ -1,7 +1,6 @@
-﻿using Biwen.QuickApi;
-using Microsoft.AspNetCore.Builder;
-namespace Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Builder;
 
+namespace Microsoft.AspNetCore.Http;
 public static class OpenApiExtentions
 {
     /// <summary>
