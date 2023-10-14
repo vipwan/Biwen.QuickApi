@@ -13,20 +13,20 @@ namespace Biwen.QuickApi.Metadata
             QuickApiType = quickApiType;
         }
 
-        public QuickApiMetadata(
-            Type? quickApiType,
-            IEndpointSummaryMetadata endpointSummaryMetadata,
-            IEndpointDescriptionMetadata? endpointDescriptionMetadata)
-        {
-            QuickApiType = quickApiType;
-            EndpointSummaryMetadata = endpointSummaryMetadata;
-            EndpointDescriptionMetadata = endpointDescriptionMetadata;
-        }
+        //public QuickApiMetadata(
+        //    Type? quickApiType,
+        //    IEndpointSummaryMetadata endpointSummaryMetadata,
+        //    IEndpointDescriptionMetadata? endpointDescriptionMetadata)
+        //{
+        //    QuickApiType = quickApiType;
+        //    EndpointSummaryMetadata = endpointSummaryMetadata;
+        //    EndpointDescriptionMetadata = endpointDescriptionMetadata;
+        //}
 
         public Type? QuickApiType { get; set; }
 
-        public IEndpointSummaryMetadata? EndpointSummaryMetadata { get; set; }
+        //public IEndpointSummaryMetadata? EndpointSummaryMetadata { get; set; }
 
-        public IEndpointDescriptionMetadata? EndpointDescriptionMetadata { get; set; }
+        //public IEndpointDescriptionMetadata? EndpointDescriptionMetadata { get; set; }
     }
 }
