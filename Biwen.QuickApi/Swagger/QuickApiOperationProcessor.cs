@@ -398,6 +398,11 @@
                 (prop?.PropertyType ?? typeof(string)).ToContextualType());
             prm.Kind = kind;
             prm.IsRequired = isRequired ?? !IsNullable(prop!);
+
+            //设置默认值,如果存在的话
+            prm.Schema.Default = prop?.GetCustomAttribute<DefaultValueAttribute>()?.Value;
+
+
             prm.IsNullableRaw = null; //if this is not null, nswag generates an incorrect swagger spec for some unknown reason.
             return prm;
         }

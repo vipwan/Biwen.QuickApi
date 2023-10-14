@@ -22,6 +22,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     public abstract class AuthRequest<T> : BaseRequest<T> where T : class, new()
     {
         [Description("登录用户名")]
+        [DefaultValue("vipwan@ms.co.ltd")]
         public string? UserName { get; set; }
 
         [Description("登录密码")]
