@@ -26,6 +26,10 @@ namespace Biwen.QuickApi.Infrastructure
             "AutoMapper",
             "FluentValidation",
             "Asp.Versioning",
+            "NSwag",
+            "YamlDotNet",
+            "NJsonSchema",
+            "Namotion.Reflection"
         };
 
         private static Assembly[] _allRequiredAssemblies = null!;
