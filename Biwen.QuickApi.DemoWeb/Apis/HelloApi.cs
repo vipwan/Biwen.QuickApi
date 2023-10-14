@@ -50,6 +50,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             RuleFor(x => x.Name).NotNull().Length(2, 36);
             RuleFor(x => x.Password).NotNull().Length(2, 36);
+            RuleFor(x => x.UserName).EmailAddress();//要求邮箱
         }
     }
 
@@ -177,7 +178,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 Name = "vipwan",
                 Alias = "alias",
                 Q = "q54543534",
-                UserName = "u545435",
+                UserName = "vipwan@ms.co.ltd",
                 Password = "p234565",
             });
 
