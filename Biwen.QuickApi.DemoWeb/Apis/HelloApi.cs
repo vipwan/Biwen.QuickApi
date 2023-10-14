@@ -37,8 +37,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         /// <summary>
         /// 别名测试
         /// </summary>
-        [AliasAs("a")]
-        [Description("别名测试使用:a")]
+        [AliasAs("otherAlias")]
+        [Description("别名测试使用:otherAlias")]
         public string? Alias { get; set; }
 
         [FromQuery]
