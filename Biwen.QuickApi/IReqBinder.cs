@@ -4,11 +4,12 @@ using System.Dynamic;
 
 namespace Biwen.QuickApi
 {
+    using Microsoft.AspNetCore.Builder;
 
     /// <summary>
-    /// Req绑定器接口
-    /// 请注意ReqBinder不支持构造器注入
+    /// 请注意IReqBinder不支持构造器注入
     /// 如果需要DI,使用HttpContext.RequestServices获取Service
+    /// 请注意IReqBinder,会导致Swagger无法生成正确的Schema,请务必重写<see cref="BaseQuickApi.HandlerBuilder(RouteHandlerBuilder)"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public interface IReqBinder<T> where T : class, new()

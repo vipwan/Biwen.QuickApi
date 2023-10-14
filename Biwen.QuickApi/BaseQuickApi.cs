@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Http;
 
 namespace Biwen.QuickApi
 {
+    using NSwag.Annotations;
+
+
     /// <summary>
     /// BaseQuickApi
     /// </summary>
@@ -40,12 +43,20 @@ namespace Biwen.QuickApi
         }
 
         /// <summary>
-        /// 请求输出,注意如果需要Request对象，请使用HttpContextAccessor.HttpContext.Request
+        /// 执行请求,如需要HttpContext对象，请使用<see cref="IHttpContextAccessor.HttpContext"/>获取
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
         public abstract Task<Rsp> ExecuteAsync(Req request);
 
+
+        /// <summary>
+        /// https://github.com/RicoSuter/NSwag/issues/4163
+        /// 请注意NSwag和AspnetCore-OpenApi的WithOpenApi(Summary,Description)不兼容,
+        /// 请使用<see cref="OpenApiOperationAttribute"/>标记<seealso cref="BaseQuickApi.HandlerBuilder"/>方法!
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <returns></returns>
         public virtual RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
             //Accepts
