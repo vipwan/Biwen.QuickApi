@@ -54,13 +54,13 @@ builder.Services.AddQuickApiDocument(options =>
     {
         document.Info = new OpenApiInfo
         {
-            Version = "Quick API Demo V1",
-            Title = "Quick API Demo",
-            Description = "Biwen.QuickApi Demo",
+            Version = "Quick API V1",
+            Title = "Quick API testcase",
+            Description = "Biwen.QuickApi ≤‚ ‘”√¿˝",
             TermsOfService = "https://github.com/vipwan",
             Contact = new OpenApiContact
             {
-                Name = "Contact Me",
+                Name = "ª∂”≠ Star & issue",
                 Url = "https://github.com/vipwan/Biwen.QuickApi"
             },
             License = new OpenApiLicense
