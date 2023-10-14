@@ -70,8 +70,8 @@ builder.Services.AddQuickApiDocument(options =>
             }
         };
     };
-});
-
+},
+new SecurityOptions());
 
 // Add services to the container.
 builder.Services.AddScoped<HelloService>();
