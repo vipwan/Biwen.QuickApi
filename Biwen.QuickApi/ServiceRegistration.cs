@@ -4,10 +4,7 @@ using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.FileSystemGlobbing.Internal;
-using Microsoft.Extensions.Hosting;
 using System.Dynamic;
-using System.Reflection;
 
 namespace Biwen.QuickApi
 {
