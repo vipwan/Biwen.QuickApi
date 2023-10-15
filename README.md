@@ -319,17 +319,19 @@ app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 builder.Services.AddQuickApiDocument(options =>
 {
     options.UseControllerSummaryAsTagDescription = true;
+    options.DocumentName = "Quick API Admin&Group1";
+    options.ApiGroupNames = new[] { "admin", "group1" }; //文档分组指定
     options.PostProcess = document =>
     {
         document.Info = new OpenApiInfo
         {
-            Version = "Quick API V1",
-            Title = "Quick API showcase",
+            Version = "Quick API V2",
+            Title = "Quick API testcase",
             Description = "Biwen.QuickApi 测试用例",
             TermsOfService = "https://github.com/vipwan",
             Contact = new OpenApiContact
             {
-                Name = "wherecome star & issue",
+                Name = "欢迎 Star & issue",
                 Url = "https://github.com/vipwan/Biwen.QuickApi"
             },
             License = new OpenApiLicense
@@ -339,7 +341,10 @@ builder.Services.AddQuickApiDocument(options =>
             }
         };
     };
-});
+},
+new SecurityOptions());
+
+//more doc group...
 
 
 //use swagger ui
