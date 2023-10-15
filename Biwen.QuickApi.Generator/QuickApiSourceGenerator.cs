@@ -122,8 +122,9 @@ public static partial class AppExtentions
                     {{
                         await handler.HandleAsync(ex);
                     }}
-                    //默认处理
-                    throw;
+                    //规范化异常返回
+                    var exceptionResultBuilder = ctx.HttpContext!.RequestServices.GetRequiredService<IQuickApiExceptionResultBuilder>();
+                    return await exceptionResultBuilder.ErrorResult(ex);
                 }}
             }});
 

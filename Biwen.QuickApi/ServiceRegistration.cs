@@ -28,6 +28,8 @@ namespace Biwen.QuickApi
             //重写AuthorizationMiddlewareResultHandler
             services.AddSingleton<IAuthorizationMiddlewareResultHandler, QuickApiAuthorizationMiddlewareResultHandler>();
 
+            //默认的异常返回构造器
+            services.AddSingleton<IQuickApiExceptionResultBuilder, DefaultExceptionResultBuilder>();
 
             services.AddProblemDetails();
 
@@ -181,13 +183,11 @@ namespace Biwen.QuickApi
                     RouteHandlerBuilder? rhBuilder = null!;
 
                     //MapMethods
-                    rhBuilder = g.MapMethods(
-                        attr.Route,
-                        verbs.Select(x => x.ToString()).ToArray(),
-                        async Task<IResult> (IHttpContextAccessor ctx) =>
-                    {
-                        return await RequestHandler(ctx, apiType, attr);
-                    });
+                    rhBuilder = g.MapMethods(attr.Route, verbs.Select(x => x.ToString()).ToArray(),
+                       async Task<IResult> (IHttpContextAccessor ctx) =>
+                        {
+                            return await RequestHandler(ctx, apiType, attr);
+                        });
 
                     //HandlerBuilder
                     using var scope = app.ServiceProvider.CreateAsyncScope();
@@ -309,7 +309,7 @@ namespace Biwen.QuickApi
                     return TypedResults.Content(content.ToString());
                 }
                 //返回IResult结果
-                if(result is IResultResponse iresult)
+                if (result is IResultResponse iresult)
                 {
                     return iresult.Result;
                 }
@@ -349,8 +349,9 @@ namespace Biwen.QuickApi
                 {
                     await handler.HandleAsync(ex);
                 }
-                //默认处理
-                throw;
+                //规范化异常返回
+                var exceptionResultBuilder = ctx.HttpContext!.RequestServices.GetRequiredService<IQuickApiExceptionResultBuilder>();
+                return await exceptionResultBuilder.ErrorResult(ex);
             }
         }
     }

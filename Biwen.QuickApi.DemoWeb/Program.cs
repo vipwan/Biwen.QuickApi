@@ -86,6 +86,10 @@ builder.Services.AddBiwenQuickApis(o =>
     //o.JsonSerializerOptions.PropertyNamingPolicy = null;
 });
 
+//如果需要自定义异常返回格式
+builder.Services.AddSingleton<IQuickApiExceptionResultBuilder, CustomExceptionResultBuilder>();
+
+
 var app = builder.Build();
 
 

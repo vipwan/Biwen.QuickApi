@@ -24,7 +24,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _httpContextAccessor.HttpContext?.SignInAsync(
                 new ClaimsPrincipal(new ClaimsIdentity(new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, "vipwan"),
+                new Claim(ClaimTypes.NameIdentifier, "123456"),
+                new Claim(ClaimTypes.Name, "vipwan@ms.co.ltd"),
                 new Claim("admin", "admin"),
                 new Claim(ClaimTypes.Role, "admin"),
             }, "admin")));

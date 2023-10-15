@@ -50,7 +50,7 @@
 
 
     [QuickApi("deprecated", Verbs = Verb.GET)]
-    [QuickApiSummary("已过时的接口", "DeprecatedApi",IsDeprecated = true)]
+    [QuickApiSummary("已过时的接口", "DeprecatedApi", IsDeprecated = true)]
     public class DeprecatedApi : BaseQuickApi
     {
 
@@ -74,4 +74,20 @@
 
     }
 
+
+    [QuickApi("throw", Verbs = Verb.GET)]
+    [QuickApiSummary("抛出异常的接口", "抛出异常,测试500错误格式化")]
+    public class ThrowErrorApi : BaseQuickApi
+    {
+        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        {
+            throw new NotImplementedException();
+        }
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.WithTags("custom");
+            builder.WithOrder(int.MinValue);
+            return base.HandlerBuilder(builder);
+        }
+    }
 }
