@@ -29,6 +29,7 @@ using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.OutputCaching;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Options;
 using Biwen.QuickApi;
 using Biwen.QuickApi.Attributes;
@@ -137,6 +138,9 @@ public static partial class AppExtentions
         //outputcache
         var $4Cache = typeof($3).GetCustomAttribute<OutputCacheAttribute>();
         if ($4Cache != null) $4.WithMetadata($4Cache);
+        //endpointgroup
+        var $4EndpointgroupAttribute = typeof($3).GetCustomAttribute<EndpointGroupNameAttribute>();
+        if ($4EndpointgroupAttribute != null) $4.WithMetadata($4EndpointgroupAttribute);
 ";
 
         #endregion

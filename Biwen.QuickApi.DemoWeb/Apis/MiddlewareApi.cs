@@ -5,7 +5,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 {
 
 
-
     [QuickApi("middleware")]
     public class MiddlewareApi : BaseQuickApi
     {

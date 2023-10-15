@@ -8,10 +8,6 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NSwag;
-using System.Text.Json.Serialization;
-using System.Text.Json;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,15 +42,23 @@ builder.Services.Configure<AuthenticationOptions>(options =>
     options.DefaultChallengeScheme = "Cookies";
 });
 
+
+#region swagger 文档
+
+
 //swagger
 builder.Services.AddQuickApiDocument(options =>
 {
     options.UseControllerSummaryAsTagDescription = true;
+    options.DocumentName = "Quick API ALL";
+
+    //options.ApiGroupNames = new[] { };//未指定展示全部Api
+
     options.PostProcess = document =>
     {
         document.Info = new OpenApiInfo
         {
-            Version = "Quick API V1",
+            Version = "Quick API ALL",
             Title = "Quick API testcase",
             Description = "Biwen.QuickApi 测试用例",
             TermsOfService = "https://github.com/vipwan",
@@ -72,6 +76,41 @@ builder.Services.AddQuickApiDocument(options =>
     };
 },
 new SecurityOptions());
+
+builder.Services.AddQuickApiDocument(options =>
+{
+    options.UseControllerSummaryAsTagDescription = true;
+    options.DocumentName = "Quick API Admin&Group1";
+
+    options.ApiGroupNames = new[] { "admin", "group1" }; //文档分组指定
+
+    options.PostProcess = document =>
+    {
+        document.Info = new OpenApiInfo
+        {
+            Version = "Quick API V2",
+            Title = "Quick API testcase",
+            Description = "Biwen.QuickApi 测试用例",
+            TermsOfService = "https://github.com/vipwan",
+            Contact = new OpenApiContact
+            {
+                Name = "欢迎 Star & issue",
+                Url = "https://github.com/vipwan/Biwen.QuickApi"
+            },
+            License = new OpenApiLicense
+            {
+                Name = "MIT License",
+                Url = "https://github.com/vipwan/Biwen.QuickApi/blob/master/LICENSE.txt"
+            }
+        };
+    };
+},
+new SecurityOptions());
+
+#endregion
+
+
+
 
 // Add services to the container.
 builder.Services.AddScoped<HelloService>();
@@ -96,12 +135,12 @@ var app = builder.Build();
 
 
 
-
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     //swagger ui
     app.UseQuickApiSwagger();
+
     app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 }
 else
@@ -121,7 +160,8 @@ var apis = app.MapBiwenQuickApis();
 var groupAdmin = apis.FirstOrDefault(x => x.Group == "admin");
 groupAdmin.RouteGroupBuilder?
     .WithTags("authorization")         //自定义Tags
-    //.RequireHost("localhost:5101") //模拟需要指定Host访问接口
+    //.RequireHost("localhost:5101")   //模拟需要指定Host访问接口
+    .WithGroupName("admin")            //自定义EndpointGroupName
     ;
 
 // Gen方式

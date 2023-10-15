@@ -208,6 +208,13 @@ namespace Biwen.QuickApi
                         rhBuilder.WithMetadata(outputCacheAttribute);
                     }
 
+                    //endpointgroup
+                    var endpointgroupAttribute = apiType.GetCustomAttribute<EndpointGroupNameAttribute>();
+                    if (endpointgroupAttribute != null)
+                    {
+                        rhBuilder.WithMetadata(endpointgroupAttribute);
+                    }
+
                     //OpenApi 生成
                     //var method = apiType.GetMethod("ExecuteAsync")!;
                     //var parameter = method.GetParameters()[0]!;
