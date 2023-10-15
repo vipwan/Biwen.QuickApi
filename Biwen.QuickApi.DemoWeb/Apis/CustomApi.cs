@@ -55,7 +55,7 @@
 
         public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
         {
-            return base.ExecuteAsync(request);
+            return Task.FromResult(EmptyResponse.New);
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)

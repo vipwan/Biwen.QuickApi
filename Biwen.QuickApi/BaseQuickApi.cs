@@ -130,17 +130,15 @@ namespace Biwen.QuickApi
     /// <typeparam name="Req"></typeparam>
     public abstract class BaseQuickApi<Req> : BaseQuickApi<Req, EmptyResponse> where Req : BaseRequest<Req>, new()
     {
-
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
             builder.Produces(200, null);
             return base.HandlerBuilder(builder);
         }
-
-        public override Task<EmptyResponse> ExecuteAsync(Req request)
-        {
-            return Task.FromResult(EmptyResponse.New);
-        }
+        //public override Task<EmptyResponse> ExecuteAsync(Req request)
+        //{
+        //    return Task.FromResult(EmptyResponse.New);
+        //}
     }
 
     /// <summary>
@@ -159,10 +157,10 @@ namespace Biwen.QuickApi
             return base.HandlerBuilder(builder);
         }
 
-        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
-        {
-            return Task.FromResult(EmptyResponse.New);
-        }
+        //public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        //{
+        //    return Task.FromResult(EmptyResponse.New);
+        //}
     }
 
     /// <summary>
