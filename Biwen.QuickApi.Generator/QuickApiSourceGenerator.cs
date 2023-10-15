@@ -28,11 +28,13 @@
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.Extensions.Options;
 using Biwen.QuickApi;
 using Biwen.QuickApi.Attributes;
 using Biwen.QuickApi.Metadata;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 $namespace
 
@@ -127,11 +129,14 @@ public static partial class AppExtentions
                     return await exceptionResultBuilder.ErrorResult(ex);
                 }}
             }});
-
+        
         //metadata
         $4.WithMetadata(new QuickApiMetadata(typeof($3)));
         //handler
         scope.ServiceProvider.GetRequiredService<$3>().HandlerBuilder($4);
+        //outputcache
+        var $4Cache = typeof($3).GetCustomAttribute<OutputCacheAttribute>();
+        if ($4Cache != null) $4.WithMetadata($4Cache);
 ";
 
         #endregion

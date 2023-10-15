@@ -1,4 +1,7 @@
-﻿namespace Biwen.QuickApi.DemoWeb.Apis
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
+
+namespace Biwen.QuickApi.DemoWeb.Apis
 {
     /// <summary>
     /// get ~/custom?c=11112&p=12345&u=1234567
@@ -86,7 +89,29 @@
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
             builder.WithTags("custom");
-            builder.WithOrder(int.MinValue);
+            return base.HandlerBuilder(builder);
+        }
+    }
+
+
+    [QuickApi("cache", Verbs = Verb.GET | Verb.POST)]
+    [QuickApiSummary("Cache缓存测试", "测试缓存功能")]
+    [OutputCache(Duration = 10)]
+    public class CachedApi : BaseQuickApiWithoutRequest<ContentResponse>
+    {
+        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Task.FromResult(new ContentResponse(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
+        }
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+
+            builder.CacheOutput(x =>
+            {
+                x.Expire(TimeSpan.FromSeconds(5));
+            });
+
+            builder.WithTags("custom");
             return base.HandlerBuilder(builder);
         }
     }

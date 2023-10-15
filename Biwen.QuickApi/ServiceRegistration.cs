@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.AspNetCore.Routing;
 using System.Dynamic;
 
@@ -199,6 +200,13 @@ namespace Biwen.QuickApi
 
                     //metadata
                     rhBuilder.WithMetadata(new QuickApiMetadata(apiType));
+
+                    //outputcache
+                    var outputCacheAttribute = apiType.GetCustomAttribute<OutputCacheAttribute>();
+                    if (outputCacheAttribute != null)
+                    {
+                        rhBuilder.WithMetadata(outputCacheAttribute);
+                    }
 
                     //OpenApi 生成
                     //var method = apiType.GetMethod("ExecuteAsync")!;

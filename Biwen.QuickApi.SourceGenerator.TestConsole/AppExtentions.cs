@@ -8,6 +8,8 @@ using Biwen.QuickApi.Metadata;
 
 using Biwen.QuickApi.SourceGenerator.TestConsole;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.OutputCaching;
+using System.Reflection;
 
 
 
@@ -50,6 +52,11 @@ public static partial class AppExtentions
         groupBuilder.WithMetadata(new QuickApiMetadata(null));
         //metadata
         groupBuilder.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6)));
+
+        //outputcache
+        var outputCacheAttribute = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6).GetCustomAttribute<OutputCacheAttribute>();
+        if (outputCacheAttribute != null) groupBuilder.WithMetadata(outputCacheAttribute);
+    
 
         return groupBuilder;
     }
