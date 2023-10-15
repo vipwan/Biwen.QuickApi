@@ -143,6 +143,10 @@ namespace Biwen.QuickApi
             {
                 throw new QuickApiExcetion($"所有QuickApi都必须标注QuickApi特性!");
             }
+
+            //middleware:
+            (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
+
             //分组:
             var groups = Apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
             var routeGroups = new List<(string, RouteGroupBuilder)>();

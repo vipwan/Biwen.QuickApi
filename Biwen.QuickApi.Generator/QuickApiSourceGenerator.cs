@@ -57,6 +57,10 @@ public static partial class AppExtentions
         {{
             throw new ArgumentNullException(nameof(prefix));
         }}
+
+        //middleware:
+        (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
+
         var groupBuilder = app.MapGroup(prefix);
         using var scope = serviceProvider.CreateScope();
         $apis

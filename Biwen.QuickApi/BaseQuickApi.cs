@@ -5,13 +5,12 @@ namespace Biwen.QuickApi
 {
     using NSwag.Annotations;
 
-
     /// <summary>
     /// BaseQuickApi
     /// </summary>
     /// <typeparam name="Req">请求对象</typeparam>
     /// <typeparam name="Rsp">输出对象</typeparam>
-    public abstract class BaseQuickApi<Req, Rsp> : IQuickApi<Req, Rsp>, IHandlerBuilder where Req : BaseRequest<Req>, new() where Rsp : BaseResponse
+    public abstract class BaseQuickApi<Req, Rsp> : IQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new() where Rsp : BaseResponse
     {
         /// <summary>
         /// 获取请求类型
@@ -49,6 +48,15 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public abstract Task<Rsp> ExecuteAsync(Req request);
 
+
+
+        /*
+         *  
+         * AddEndpointFilter 提供诸如筛选器, https://learn.microsoft.com/zh-cn/aspnet/core/fundamentals/minimal-apis/min-api-filters
+         * WithOpenApi  https://learn.microsoft.com/zh-cn/aspnet/core/fundamentals/minimal-apis/openapi
+         * 日志,缓存,鉴权等功能,..
+         * 
+         */
 
         /// <summary>
         /// https://github.com/RicoSuter/NSwag/issues/4163
@@ -88,6 +96,31 @@ namespace Biwen.QuickApi
 
             //todo:
             return builder!;
+        }
+
+
+        private static readonly string? AssemblyName = typeof(BaseQuickApi<Req, Rsp>).Assembly.GetName().Name;
+
+        /// <summary>
+        /// 请求QuickApi前的操作
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="next"></param>
+        /// <returns></returns>
+        public virtual Task InvokeBeforeAsync(HttpContext context)
+        {
+            context.Response.Headers.TryAdd("X-Powered-By", AssemblyName);
+            return Task.CompletedTask;
+        }
+        /// <summary>
+        /// 请求QuickApi后的操作
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="next"></param>
+        /// <returns></returns>
+        public virtual Task InvokeAfterAsync(HttpContext context)
+        {
+            return Task.CompletedTask;
         }
     }
 
