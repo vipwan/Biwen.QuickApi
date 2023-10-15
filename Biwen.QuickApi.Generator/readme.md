@@ -28,11 +28,16 @@
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.OutputCaching;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Options;
 using Biwen.QuickApi;
 using Biwen.QuickApi.Attributes;
+using Biwen.QuickApi.Metadata;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
+using Biwen.QuickApi.SourceGenerator.TestConsole.Api2;
 using Biwen.QuickApi.SourceGenerator.TestConsole;
 
 namespace Biwen.QuickApi;
@@ -45,7 +50,8 @@ public static partial class AppExtentions
     /// 注册所有的QuickApi(Gen版)
     /// </summary>
     /// <param name="app"></param>
-    /// <param name="group"></param>
+    /// <param name="serviceProvider"></param>
+    /// <param name="prefix">全局路由前缀</param>
     /// <returns></returns>
     /// <exception cref="ArgumentNullException"></exception>
     /// <exception cref="QuickApiExcetion"></exception>
@@ -55,13 +61,17 @@ public static partial class AppExtentions
         {
             throw new ArgumentNullException(nameof(prefix));
         }
+
+        //middleware:
+        (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
+
         var groupBuilder = app.MapGroup(prefix);
         using var scope = serviceProvider.CreateScope();
         
-        var mapTestQuickApi = groupBuilder.MapMethods("hello/test1", new[] { "GET","POST" }, async (IHttpContextAccessor ctx, TestQuickApi api) =>
+        var map69e5b3c7 = groupBuilder.MapMethods("api2/test1", new[] { "GET" }, async (IHttpContextAccessor ctx, Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi api) =>
             {
                 //验证策略
-                var policy = "admin";
+                var policy = "";
                 if (!string.IsNullOrEmpty(policy))
                 {
                     var httpContext = ctx.HttpContext;
@@ -94,6 +104,10 @@ public static partial class AppExtentions
                     {
                         return Results.Content(result.ToString());
                     }
+                    else if (result.GetType() == typeof(IResultResponse))
+                    {
+                        return ((IResultResponse)((object)result)).Result;
+                    }
 #pragma warning restore CS0184 // '"is" 表达式的给定表达式始终不是所提供的类型
                     return TypedResults.Json(result);
                 }
@@ -105,12 +119,22 @@ public static partial class AppExtentions
                     {
                         await handler.HandleAsync(ex);
                     }
-                    //默认处理
-                    throw;
+                    //规范化异常返回
+                    var exceptionResultBuilder = ctx.HttpContext!.RequestServices.GetRequiredService<IQuickApiExceptionResultBuilder>();
+                    return await exceptionResultBuilder.ErrorResult(ex);
                 }
             });
+        
+        //metadata
+        map69e5b3c7.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi)));
         //handler
-        scope.ServiceProvider.GetRequiredService<TestQuickApi>().HandlerBuilder(mapTestQuickApi);
+        scope.ServiceProvider.GetRequiredService<Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi>().HandlerBuilder(map69e5b3c7);
+        //outputcache
+        var map69e5b3c7Cache = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttribute<OutputCacheAttribute>();
+        if (map69e5b3c7Cache != null) map69e5b3c7.WithMetadata(map69e5b3c7Cache);
+        //endpointgroup
+        var map69e5b3c7EndpointgroupAttribute = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttribute<EndpointGroupNameAttribute>();
+        if (map69e5b3c7EndpointgroupAttribute != null) map69e5b3c7.WithMetadata(map69e5b3c7EndpointgroupAttribute);
 
         return groupBuilder;
     }
