@@ -9,7 +9,7 @@
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
     public class QuickApiSummaryAttribute : Attribute
     {
-        public QuickApiSummaryAttribute(string? summary, string description)
+        public QuickApiSummaryAttribute(string? summary, string? description)
         {
             Summary = summary;
             Description = description;
