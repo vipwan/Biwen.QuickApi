@@ -32,6 +32,7 @@
             //自定义过滤器
             builder.AddEndpointFilter(async (context, next) =>
             {
+                context.HttpContext.Response.Headers.TryAdd("X-Powered-By", "Biwen.QuickApi");
                 Console.WriteLine("自定义过滤器!");
                 return await next(context);
             });
