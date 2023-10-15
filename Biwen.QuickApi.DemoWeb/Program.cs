@@ -20,7 +20,7 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddOutputCache(options =>
 {
-    options.AddBasePolicy(builder => builder.Expire(TimeSpan.FromSeconds(10)));
+    //options.AddBasePolicy(builder => builder.Expire(TimeSpan.FromSeconds(10)));
 });
 
 builder.Services.AddResponseCaching();
@@ -92,8 +92,8 @@ builder.Services.AddSingleton<IQuickApiExceptionResultBuilder, CustomExceptionRe
 //自定义异常处理
 builder.Services.AddScoped<IQuickApiExceptionHandler, CustomExceptionHandler>();
 
-
 var app = builder.Build();
+
 
 
 
@@ -102,7 +102,6 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
     //swagger ui
     app.UseQuickApiSwagger();
-
     app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 }
 else
@@ -122,7 +121,7 @@ var apis = app.MapBiwenQuickApis();
 var groupAdmin = apis.FirstOrDefault(x => x.Group == "admin");
 groupAdmin.RouteGroupBuilder?
     .WithTags("authorization")         //自定义Tags
-    .RequireHost("localhost:5101") //模拟需要指定Host访问接口
+    //.RequireHost("localhost:5101") //模拟需要指定Host访问接口
     ;
 
 // Gen方式

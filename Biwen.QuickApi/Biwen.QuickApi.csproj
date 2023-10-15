@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-		<PackageVersion>1.3.5</PackageVersion>
+		<PackageVersion>1.3.6</PackageVersion>
 
 		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
@@ -17,7 +17,7 @@
 		<Copyright>MIT</Copyright>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>webapi;minimal;REPR;netcore</PackageTags>
-		<PackageReleaseNotes>权限控制特性</PackageReleaseNotes>
+		<PackageReleaseNotes>提供对NSwag的支持</PackageReleaseNotes>
 
 	</PropertyGroup>
 
