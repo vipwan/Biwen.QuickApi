@@ -28,34 +28,53 @@ namespace Biwen.QuickApi
         private readonly InnerValidator Validator = new();
 
         [JsonIgnore]
-        [Obsolete("请使用Validate(),以同时兼容DataAnnotation和FluentValidation,请注意该属性未来会被移除!",false)]
+        [Obsolete("请使用Validate(),以同时兼容DataAnnotation和FluentValidation,请注意该属性未来会被移除!", false)]
         public IValidator<T> RealValidator => Validator;
 
         public ValidationResult Validate()
         {
             var req = (T)MemberwiseClone();
+            return Validator.Validate(req);
 
-            //ms内建的DataAnnotations验证器
-            var context = new MSDA.ValidationContext(req);
-            var validationResults = new List<MSDA.ValidationResult>();
-            var defaultFlag = MSDA.Validator.TryValidateObject(req, context, validationResults, true);
+            #region 重写PreValidate实现
 
-            //FluentValidation验证器
-            var fluentValidationResult = Validator.Validate(req);
+            ////ms内建的DataAnnotations验证器
+            //var context = new MSDA.ValidationContext(req);
+            //var validationResults = new List<MSDA.ValidationResult>();
+            //var defaultFlag = MSDA.Validator.TryValidateObject(req, context, validationResults, true);
 
-            if (!defaultFlag)
-            {
-                fluentValidationResult.Errors.AddRange(validationResults.Select(x => new ValidationFailure(x.MemberNames.FirstOrDefault(), x.ErrorMessage)));
-            }
-            //var method = typeof(InnerValidator).GetMethods().First(x => x.Name == nameof(IValidator.Validate));
-            //return (method!.Invoke(Validator, new object[] { this }) as ValidationResult)!;
-            return fluentValidationResult;
+            ////FluentValidation验证器
+            //var fluentValidationResult = Validator.Validate(req);
+
+            //if (!defaultFlag)
+            //{
+            //    fluentValidationResult.Errors.AddRange(validationResults.Select(x => new ValidationFailure(x.MemberNames.FirstOrDefault(), x.ErrorMessage)));
+            //}
+            ////var method = typeof(InnerValidator).GetMethods().First(x => x.Name == nameof(IValidator.Validate));
+            ////return (method!.Invoke(Validator, new object[] { this }) as ValidationResult)!;
+            //return fluentValidationResult;
+
+            #endregion
         }
         #endregion
 
-
         private class InnerValidator : AbstractValidator<T>
         {
+            protected override bool PreValidate(ValidationContext<T> context, ValidationResult result)
+            {
+                var req = context.InstanceToValidate;
+
+                //ms内建的DataAnnotations验证器
+                var mc = new MSDA.ValidationContext(req);
+                var validationResults = new List<MSDA.ValidationResult>();
+                var defaultFlag = MSDA.Validator.TryValidateObject(req, mc, validationResults, true);
+
+                if (!defaultFlag)
+                {
+                    result.Errors.AddRange(validationResults.Select(x => new ValidationFailure(x.MemberNames.FirstOrDefault(), x.ErrorMessage)));
+                }
+                return base.PreValidate(context, result);
+            }
         }
     }
 
