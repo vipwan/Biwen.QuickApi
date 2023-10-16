@@ -17,3 +17,6 @@ dotnet_diagnostic.CA1812.severity = silent
 
 # IDE0052: 删除未读的私有成员
 dotnet_diagnostic.IDE0052.severity = silent
+
+# CA1861: 不要将常量数组作为参数
+dotnet_diagnostic.CA1861.severity = silent
