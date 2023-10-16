@@ -292,7 +292,7 @@ namespace Biwen.QuickApi
             if (req != null)
             {
                 //验证器
-                if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
+                if (req.Validate() is ValidationResult vresult && !vresult!.IsValid)
                 {
                     return TypedResults.ValidationProblem(vresult.ToDictionary());
                 }
