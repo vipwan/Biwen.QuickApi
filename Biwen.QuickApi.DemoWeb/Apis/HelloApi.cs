@@ -153,7 +153,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             return base.HandlerBuilder(builder);
         }
-        
+
     }
 
     /// <summary>
@@ -275,7 +275,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(new ContentResponse("Hello World content!"));
+            return Task.FromResult("Hello World content!".AsRspOfContent());
         }
 
     }
@@ -287,7 +287,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(new ContentResponse("Hello World JustAsService!"));
+            return Task.FromResult("Hello World JustAsService!".AsRspOfContent());
         }
     }
 
@@ -301,7 +301,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             //return Results.Ok("Hello World IResult!").AsRsp();
 
             Results<ContentHttpResult, JsonHttpResult<string>> results = TypedResults.Content("Hello World IResult!");
-            return results.AsRsp();
+            return results.AsRspOfResult();
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -320,7 +320,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override async Task<ContentResponse> ExecuteAsync(FromBodyRequest request)
         {
-            return new ContentResponse($"FromBodyApi {request.Id} {request.Name}");
+            return $"FromBodyApi {request.Id} {request.Name}".AsRspOfContent();
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -346,10 +346,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 using (var sr = new StreamReader(request.File.OpenReadStream()))
                 {
                     var content = await sr.ReadToEndAsync();
-                    return Results.Ok(content).AsRsp();
+                    return Results.Ok(content).AsRspOfResult();
                 }
             }
-            return Results.BadRequest("no file").AsRsp();
+            return Results.BadRequest("no file").AsRspOfResult();
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)

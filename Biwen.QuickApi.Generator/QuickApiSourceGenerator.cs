@@ -154,7 +154,6 @@ public static partial class AppExtentions
                     return await exceptionResultBuilder.ErrorResult(ex);
                 }}
             }});
-        
         //metadata
         $4.WithMetadata(new QuickApiMetadata(typeof($3)));
         //handler

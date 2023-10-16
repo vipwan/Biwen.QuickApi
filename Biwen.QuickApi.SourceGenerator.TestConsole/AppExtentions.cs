@@ -13,7 +13,6 @@ using System.Reflection;
 using System.Collections.Generic;
 
 
-
 //用于测试生成器的代码
 
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1050:在命名空间中声明类型", Justification = "<挂起>")]
@@ -48,6 +47,9 @@ public static partial class AppExtentions
         {
             throw new ArgumentNullException(nameof(prefix));
         }
+
+        //prefix = prefix ?? throw new ArgumentNullException(nameof(prefix));
+
         var groupBuilder = app.MapGroup(prefix);
 
         groupBuilder.WithMetadata(new QuickApiMetadata(null));

@@ -103,7 +103,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(Results.Ok($"你有权限编辑!{DateTime.Now.ToLongTimeString()}").AsRsp());
+            return Task.FromResult(Results.Ok($"你有权限编辑!{DateTime.Now.ToLongTimeString()}").AsRspOfResult());
         }
     }
 
