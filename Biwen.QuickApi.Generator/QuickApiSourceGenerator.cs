@@ -69,6 +69,53 @@ public static partial class AppExtentions
         $apis
         return groupBuilder;
     }}
+
+    /// <summary>
+    /// 验证Policy
+    /// </summary>
+    /// <exception cref=""QuickApiExcetion""></exception>
+    async static Task<(bool Flag, IResult? Result)> CheckPolicy(IHttpContextAccessor ctx, string? policy)
+    {{
+        if (string.IsNullOrEmpty(policy))
+        {{
+            return (true, null);
+        }}
+        if (!string.IsNullOrEmpty(policy))
+        {{
+            var httpContext = ctx.HttpContext;
+            var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($""IAuthorizationService is null, besure services.AddAuthorization() first!"");
+            var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
+            if (!authorizationResult.Succeeded)
+            {{
+                return (false, TypedResults.Unauthorized());
+            }}
+        }}
+        return (true, null);
+    }}
+
+    /// <summary>
+    /// 内部返回的Result
+    /// </summary>
+    static (bool Flag, IResult? Result) InnerResult(object? result)
+    {{
+        //返回空结果
+        if (result is EmptyResponse)
+        {{
+            return (true, TypedResults.Ok());//返回空
+        }}
+        //返回文本结果
+        if (result is ContentResponse content)
+        {{
+            return (true, TypedResults.Content(content.ToString()));
+        }}
+        //返回IResult结果
+        if (result is IResultResponse iresult)
+        {{
+            return (true, iresult.Result);
+        }}
+        return (false, null);
+    }}
+
 }}
 #pragma warning restore
 ";
@@ -77,20 +124,10 @@ public static partial class AppExtentions
         var $4 = groupBuilder.MapMethods(""$0"", new[] {{ $1 }}, async (IHttpContextAccessor ctx, $3 api) =>
             {{
                 //验证策略
-                var policy = ""$2"";
-                if (!string.IsNullOrEmpty(policy))
-                {{
-                    var httpContext = ctx.HttpContext;
-                    var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($""IAuthorizationService is null,besure services.AddAuthorization() first!"");
-                    var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
-                    if (!authorizationResult.Succeeded)
-                    {{
-                        return TypedResults.Unauthorized();
-                    }}
-                }}
+                var checkResult = await CheckPolicy(ctx, ""$2"");
+                if (!checkResult.Flag) return checkResult.Result!;
                 //绑定对象
                 var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
-
                 //验证器
                 if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
                 {{
@@ -100,20 +137,9 @@ public static partial class AppExtentions
                 try
                 {{
                     var result = await api.ExecuteAsync(req!);
-
 #pragma warning disable CS0184 // '""is"" 表达式的给定表达式始终不是所提供的类型
-                    if(result is EmptyResponse)
-                    {{
-                        return TypedResults.Ok();
-                    }}
-                    if(result is ContentResponse)
-                    {{
-                        return Results.Content(result.ToString());
-                    }}
-                    else if (result.GetType() == typeof(IResultResponse))
-                    {{
-                        return ((IResultResponse)((object)result)).Result;
-                    }}
+                    var resultFlag = InnerResult(result);
+                    if (resultFlag.Flag) return resultFlag.Result!;
 #pragma warning restore CS0184 // '""is"" 表达式的给定表达式始终不是所提供的类型
                     return TypedResults.Json(result);
                 }}

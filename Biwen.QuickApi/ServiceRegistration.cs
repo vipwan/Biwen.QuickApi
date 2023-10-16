@@ -1,6 +1,5 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.OutputCaching;
@@ -253,18 +252,9 @@ namespace Biwen.QuickApi
             if (quickApiAttribute == null) throw new QuickApiExcetion($"quickApiAttribute is null!");
 
             //验证策略
-            var policy = quickApiAttribute.Policy;
-            if (!string.IsNullOrEmpty(policy))
-            {
-                var httpContext = ctx.HttpContext;
-                var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ??
-                    throw new QuickApiExcetion($"IAuthorizationService is null,besure services.AddAuthorization() first!");
-                var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
-                if (!authorizationResult.Succeeded)
-                {
-                    return TypedResults.Unauthorized();
-                }
-            }
+            var checkResult = await CheckPolicy(ctx, quickApiAttribute.Policy);
+            if (!checkResult.Flag) return checkResult.Result!;
+
             object? api = ctx.HttpContext!.RequestServices.GetRequiredService(apiType);
 
 #pragma warning disable CS0618 // 类型或成员已过时
@@ -313,21 +303,8 @@ namespace Biwen.QuickApi
             {
                 //var result = await method.Invoke(api, new object[] { req! })!;
                 var result = await ((dynamic)api)!.ExecuteAsync(req!);
-                //返回空结果
-                if (result is EmptyResponse)
-                {
-                    return TypedResults.Ok();//返回空
-                }
-                //返回文本结果
-                if (result is ContentResponse content)
-                {
-                    return TypedResults.Content(content.ToString());
-                }
-                //返回IResult结果
-                if (result is IResultResponse iresult)
-                {
-                    return iresult.Result;
-                }
+                var resultFlag = InnerResult(result);
+                if (resultFlag.Flag) return resultFlag.Result!;
 
                 //针对返回结果的别名处理
                 Func<dynamic?, dynamic?> rspToExpandoObject = (rsp) =>
@@ -368,6 +345,54 @@ namespace Biwen.QuickApi
                 var exceptionResultBuilder = ctx.HttpContext!.RequestServices.GetRequiredService<IQuickApiExceptionResultBuilder>();
                 return await exceptionResultBuilder.ErrorResult(ex);
             }
+        }
+
+        /// <summary>
+        /// 验证Policy
+        /// </summary>
+        /// <exception cref="QuickApiExcetion"></exception>
+        async static Task<(bool Flag, IResult? Result)> CheckPolicy(IHttpContextAccessor ctx, string? policy)
+        {
+            if (string.IsNullOrEmpty(policy))
+            {
+                return (true, null);
+            }
+            if (!string.IsNullOrEmpty(policy))
+            {
+                var httpContext = ctx.HttpContext;
+                var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null, besure services.AddAuthorization() first!");
+                var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
+                if (!authorizationResult.Succeeded)
+                {
+                    return (false, TypedResults.Unauthorized());
+                }
+            }
+            return (true, null);
+        }
+
+        /// <summary>
+        /// 内部返回的Result
+        /// </summary>
+        /// <param name="result"></param>
+        /// <returns></returns>
+        static (bool Flag, IResult? Result) InnerResult(object? result)
+        {
+            //返回空结果
+            if (result is EmptyResponse)
+            {
+                return (true, TypedResults.Ok());//返回空
+            }
+            //返回文本结果
+            if (result is ContentResponse content)
+            {
+                return (true, TypedResults.Content(content.ToString()));
+            }
+            //返回IResult结果
+            if (result is IResultResponse iresult)
+            {
+                return (true, iresult.Result);
+            }
+            return (false, null);
         }
     }
 }

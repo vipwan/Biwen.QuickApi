@@ -10,6 +10,7 @@ using Biwen.QuickApi.SourceGenerator.TestConsole;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.OutputCaching;
 using System.Reflection;
+using System.Collections.Generic;
 
 
 
@@ -56,8 +57,31 @@ public static partial class AppExtentions
         //outputcache
         var outputCacheAttribute = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6).GetCustomAttribute<OutputCacheAttribute>();
         if (outputCacheAttribute != null) groupBuilder.WithMetadata(outputCacheAttribute);
-    
+
 
         return groupBuilder;
+    }
+
+    /// <summary>
+    /// 验证Policy
+    /// </summary>
+    /// <exception cref="QuickApiExcetion"></exception>
+    private static async Task<(bool Flag, IResult? Result)> CheckPolicy(IHttpContextAccessor ctx, string? policy)
+    {
+        if (string.IsNullOrEmpty(policy))
+        {
+            return (true, null);
+        }
+        if (!string.IsNullOrEmpty(policy))
+        {
+            var httpContext = ctx.HttpContext;
+            var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null, besure services.AddAuthorization() first!");
+            var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
+            if (!authorizationResult.Succeeded)
+            {
+                return (true, TypedResults.Unauthorized());
+            }
+        }
+        return (true, null);
     }
 }
