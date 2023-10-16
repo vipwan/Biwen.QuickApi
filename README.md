@@ -21,6 +21,11 @@ public class MyApi : BaseQuickApi<Req,Rsp>{}
 - [Visual Studio 2022 17.8.0 Preview 3.0+](https://learn.microsoft.com/zh-cn/visualstudio/releases/2022/release-notes-preview)
 - [Net 7.0.12](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0) , [Net 8.0.0-rc.2.23479.6](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
 - 调试Gen请在VS中安装 .NET Compiler Platform SDK 组件
+## 依赖环境&库
+- Microsoft.AspNetCore.App
+- [FluentValidation.AspNetCore](https://www.nuget.org/packages/FluentValidation.AspNetCore/11.3.0)
+- [NSwag.AspNetCore](https://www.nuget.org/packages/NSwag.AspNetCore/13.20.0)
+- [Microsoft.AspNetCore.OpenApi](https://www.nuget.org/packages/Microsoft.AspNetCore.OpenApi/7.0.12)
 
 ## 使用方式
 
