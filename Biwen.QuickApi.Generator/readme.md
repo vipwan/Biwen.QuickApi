@@ -68,7 +68,7 @@ public static partial class AppExtentions
         var groupBuilder = app.MapGroup(prefix);
         using var scope = serviceProvider.CreateScope();
         
-                var map1aa5c30c = groupBuilder.MapMethods("/test6", new[] { "GET" }, async (IHttpContextAccessor ctx, Biwen.QuickApi.SourceGenerator.TestConsole.Test6 api) =>
+        var map1aa5c30c = groupBuilder.MapMethods("/test6", new[] { "GET" }, async (IHttpContextAccessor ctx, Biwen.QuickApi.SourceGenerator.TestConsole.Test6 api) =>
             {
                 //验证策略
                 var checkResult = await CheckPolicy(ctx, "");
@@ -84,10 +84,8 @@ public static partial class AppExtentions
                 try
                 {
                     var result = await api.ExecuteAsync(req!);
-#pragma warning disable CS0184 // '"is" 表达式的给定表达式始终不是所提供的类型
                     var resultFlag = InnerResult(result);
                     if (resultFlag.Flag) return resultFlag.Result!;
-#pragma warning restore CS0184 // '"is" 表达式的给定表达式始终不是所提供的类型
                     return TypedResults.Json(result);
                 }
                 catch (Exception ex)

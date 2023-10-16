@@ -137,10 +137,8 @@ public static partial class AppExtentions
                 try
                 {{
                     var result = await api.ExecuteAsync(req!);
-#pragma warning disable CS0184 // '""is"" 表达式的给定表达式始终不是所提供的类型
                     var resultFlag = InnerResult(result);
                     if (resultFlag.Flag) return resultFlag.Result!;
-#pragma warning restore CS0184 // '""is"" 表达式的给定表达式始终不是所提供的类型
                     return TypedResults.Json(result);
                 }}
                 catch (Exception ex)
