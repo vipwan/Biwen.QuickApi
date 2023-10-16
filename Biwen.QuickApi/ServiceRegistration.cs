@@ -303,7 +303,7 @@ namespace Biwen.QuickApi
             {
                 //var result = await method.Invoke(api, new object[] { req! })!;
                 var result = await ((dynamic)api)!.ExecuteAsync(req!);
-                var resultFlag = InnerResult(result);
+                var resultFlag = InnerResult((BaseResponse)result);
                 if (resultFlag.Flag) return resultFlag.Result!;
 
                 //针对返回结果的别名处理

@@ -11,6 +11,7 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.OutputCaching;
 using System.Reflection;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 
 //用于测试生成器的代码
@@ -52,6 +53,16 @@ public static partial class AppExtentions
 
         var groupBuilder = app.MapGroup(prefix);
 
+        var req = new EmptyRequest();
+
+
+
+        //验证器
+        //var vresult = req.RealValidator.Validate(req);
+        //if (!vresult.IsValid) { return TypedResults.ValidationProblem(vresult.ToDictionary()); }
+
+
+
         groupBuilder.WithMetadata(new QuickApiMetadata(null));
         //metadata
         groupBuilder.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6)));
@@ -86,4 +97,18 @@ public static partial class AppExtentions
         }
         return (true, null);
     }
+
+
+
+    abstract class Hello<T> where T : class, new()
+    {
+        public object GetThis()
+        {
+            return this;
+        }
+
+
+    }
+
+
 }

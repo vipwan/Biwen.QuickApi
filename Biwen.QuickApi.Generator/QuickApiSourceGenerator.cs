@@ -60,10 +60,8 @@ public static partial class AppExtentions
         {{
             throw new ArgumentNullException(nameof(prefix));
         }}
-
         //middleware:
         (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
-
         var groupBuilder = app.MapGroup(prefix);
         using var scope = serviceProvider.CreateScope();
         $apis
@@ -98,24 +96,20 @@ public static partial class AppExtentions
     /// </summary>
     static (bool Flag, IResult? Result) InnerResult(object? result)
     {{
-        //返回空结果
         if (result is EmptyResponse)
         {{
-            return (true, TypedResults.Ok());//返回空
+            return (true, TypedResults.Ok());
         }}
-        //返回文本结果
         if (result is ContentResponse content)
         {{
             return (true, TypedResults.Content(content.ToString()));
         }}
-        //返回IResult结果
         if (result is IResultResponse iresult)
         {{
             return (true, iresult.Result);
         }}
         return (false, null);
     }}
-
 }}
 #pragma warning restore
 ";
@@ -123,17 +117,11 @@ public static partial class AppExtentions
         const string routeTemp = $@"
         var $4 = groupBuilder.MapMethods(""$0"", new[] {{ $1 }}, async (IHttpContextAccessor ctx, $3 api) =>
             {{
-                //验证策略
                 var checkResult = await CheckPolicy(ctx, ""$2"");
                 if (!checkResult.Flag) return checkResult.Result!;
-                //绑定对象
                 var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
-                //验证器
-                if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
-                {{
-                    return TypedResults.ValidationProblem(vresult.ToDictionary());
-                }}
-                //执行请求
+                var vresult = req.RealValidator.Validate(req);
+                if (!vresult.IsValid) {{ return TypedResults.ValidationProblem(vresult.ToDictionary()); }}
                 try
                 {{
                     var result = await api.ExecuteAsync(req!);
@@ -144,19 +132,17 @@ public static partial class AppExtentions
                 catch (Exception ex)
                 {{
                     var exceptionHandlers = ctx.HttpContext!.RequestServices.GetServices<IQuickApiExceptionHandler>();
-                    //异常处理
                     foreach (var handler in exceptionHandlers)
                     {{
                         await handler.HandleAsync(ex);
                     }}
-                    //规范化异常返回
                     var exceptionResultBuilder = ctx.HttpContext!.RequestServices.GetRequiredService<IQuickApiExceptionResultBuilder>();
                     return await exceptionResultBuilder.ErrorResult(ex);
                 }}
             }});
         //metadata
         $4.WithMetadata(new QuickApiMetadata(typeof($3)));
-        //handler
+        //handlerbuilder
         scope.ServiceProvider.GetRequiredService<$3>().HandlerBuilder($4);
         //outputcache
         var $4Cache = typeof($3).GetCustomAttribute<OutputCacheAttribute>();

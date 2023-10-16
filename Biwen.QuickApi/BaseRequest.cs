@@ -30,7 +30,13 @@ namespace Biwen.QuickApi
         [JsonIgnore]
         public IValidator<T> RealValidator => Validator;
 
+        public ValidationResult Validate()
+        {
+            var method = typeof(InnerValidator).GetMethods().First(x => x.Name == nameof(IValidator.Validate));
+            return (method!.Invoke(Validator, new object[] { this }) as ValidationResult)!;
+        }
         #endregion
+
 
         private class InnerValidator : AbstractValidator<T>
         {
@@ -44,7 +50,6 @@ namespace Biwen.QuickApi
     [FromBody]
     public abstract class BaseRequestFromBody<T> : BaseRequest<T> where T : class, new()
     {
-
     }
 
     /// <summary>

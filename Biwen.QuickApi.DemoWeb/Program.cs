@@ -160,7 +160,7 @@ var apis = app.MapBiwenQuickApis();
 var groupAdmin = apis.FirstOrDefault(x => x.Group == "admin");
 groupAdmin.RouteGroupBuilder?
     .WithTags("authorization")         //自定义Tags
-    //.RequireHost("localhost:5101")   //模拟需要指定Host访问接口
+                                       //.RequireHost("localhost:5101")   //模拟需要指定Host访问接口
     .WithGroupName("admin")            //自定义EndpointGroupName
     ;
 
@@ -174,7 +174,7 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
     //通过你的方式获取请求对象
     var req = new EmptyRequest();
     //验证请求对象
-    var result = req.RealValidator.Validate(req);
+    var result = req.Validate();
     if (!result.IsValid)
     {
         return TypedResults.BadRequest(result.ToDictionary());
