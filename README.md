@@ -19,7 +19,7 @@ public class MyApi : BaseQuickApi<Req,Rsp>{}
 
 ## 开发工具
 - [Visual Studio 2022 17.8.0 Preview 3.0+](https://learn.microsoft.com/zh-cn/visualstudio/releases/2022/release-notes-preview)
-- [Net 7.0.12](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0) , [Net 8.0.0-rc](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
+- [Net 7.0.12](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0) , [Net 8.0.0-rc.2.23479.6](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
 - 调试Gen请在VS中安装 .NET Compiler Platform SDK 组件
 
 ## 使用方式
