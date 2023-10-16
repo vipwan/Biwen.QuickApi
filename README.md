@@ -17,6 +17,11 @@ public class MyApi : BaseQuickApi<Req,Rsp>{}
 - 提供gen源代码生成器方案,以于显著提升性能(V1.0版本使用的Emit和dynamic会导致部分性能损失)
 - gen SourceGenerator已发布v1.1.2,[使用方式](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.Generator/readme.md)
 
+## 开发工具
+- [Visual Studio 2022 17.8.0 Preview 3.0+](https://learn.microsoft.com/zh-cn/visualstudio/releases/2022/release-notes-preview)
+- [Net 7.0.12](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0) , [Net 8.0.0-rc](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
+- 调试Gen请在VS中安装 .NET Compiler Platform SDK 组件
+
 ## 使用方式
 
 ### Step0 Nuget Base & Generator
