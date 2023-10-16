@@ -245,8 +245,15 @@ namespace Biwen.QuickApi
                             if (ignoreCasDic.TryGetValue(currentKey, out object? value))
                             {
                                 //转换
-                                var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value.ToString()!);
-                                prop.SetValue(@default, value2);
+                                if (value == null)
+                                {
+                                    prop.SetValue(@default, null);
+                                }
+                                else
+                                {
+                                    var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value.ToString()!);
+                                    prop.SetValue(@default, value2);
+                                }
                                 isBodySet = true;
                             }
                         }

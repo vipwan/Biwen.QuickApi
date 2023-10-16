@@ -165,7 +165,7 @@ groupAdmin.RouteGroupBuilder?
     ;
 
 // Gen方式
-app.MapGenQuickApis(app.Services);
+//app.MapGenQuickApis(app.Services);
 
 //测试其他地方调用QuickApi
 app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<string, string[]>>>>

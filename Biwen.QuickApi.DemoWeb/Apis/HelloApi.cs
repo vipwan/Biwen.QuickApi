@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
 using NSwag.Annotations;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 
@@ -45,6 +46,17 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         [FromQuery]
         [Description("测试FromQuery:Q")]
         public string? Q { get; set; }
+
+
+        /// <summary>
+        /// DataAnnotations内建特性测试
+        /// </summary>
+        [Description("DataAnnotations内建特性 测试")]
+        [StringLength(12,MinimumLength =6)]
+        [EmailAddress]
+        [Required]
+        public string Department { get; set; }
+
 
         [FromKeyedServices("hello")]
         public HelloService HelloService { get; set; }

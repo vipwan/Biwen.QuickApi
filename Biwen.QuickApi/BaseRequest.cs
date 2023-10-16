@@ -32,9 +32,23 @@ namespace Biwen.QuickApi
 
         public ValidationResult Validate()
         {
+            var req = (T)MemberwiseClone();
+
+            //ms内建的DataAnnotations验证器
+            var context = new System.ComponentModel.DataAnnotations.ValidationContext(req);
+            var validationResults = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+            var defaultFlag = System.ComponentModel.DataAnnotations.Validator.TryValidateObject(req, context, validationResults, true);
+
+            //FluentValidation验证器
+            var fluentValidationResult = Validator.Validate(req);
+
+            if (!defaultFlag)
+            {
+                fluentValidationResult.Errors.AddRange(validationResults.Select(x => new FluentValidation.Results.ValidationFailure(x.MemberNames.FirstOrDefault(), x.ErrorMessage)));
+            }
             //var method = typeof(InnerValidator).GetMethods().First(x => x.Name == nameof(IValidator.Validate));
             //return (method!.Invoke(Validator, new object[] { this }) as ValidationResult)!;
-            return Validator.Validate((T)MemberwiseClone());
+            return fluentValidationResult;
         }
         #endregion
 
