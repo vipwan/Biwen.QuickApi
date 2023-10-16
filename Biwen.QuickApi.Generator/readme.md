@@ -68,23 +68,13 @@ public static partial class AppExtentions
         var groupBuilder = app.MapGroup(prefix);
         using var scope = serviceProvider.CreateScope();
         
-        var map69e5b3c7 = groupBuilder.MapMethods("api2/test1", new[] { "GET" }, async (IHttpContextAccessor ctx, Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi api) =>
+                var map1aa5c30c = groupBuilder.MapMethods("/test6", new[] { "GET" }, async (IHttpContextAccessor ctx, Biwen.QuickApi.SourceGenerator.TestConsole.Test6 api) =>
             {
                 //验证策略
-                var policy = "";
-                if (!string.IsNullOrEmpty(policy))
-                {
-                    var httpContext = ctx.HttpContext;
-                    var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null,besure services.AddAuthorization() first!");
-                    var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
-                    if (!authorizationResult.Succeeded)
-                    {
-                        return TypedResults.Unauthorized();
-                    }
-                }
+                var checkResult = await CheckPolicy(ctx, "");
+                if (!checkResult.Flag) return checkResult.Result!;
                 //绑定对象
                 var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
-
                 //验证器
                 if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
                 {
@@ -94,20 +84,9 @@ public static partial class AppExtentions
                 try
                 {
                     var result = await api.ExecuteAsync(req!);
-
 #pragma warning disable CS0184 // '"is" 表达式的给定表达式始终不是所提供的类型
-                    if(result is EmptyResponse)
-                    {
-                        return TypedResults.Ok();
-                    }
-                    if(result is ContentResponse)
-                    {
-                        return Results.Content(result.ToString());
-                    }
-                    else if (result.GetType() == typeof(IResultResponse))
-                    {
-                        return ((IResultResponse)((object)result)).Result;
-                    }
+                    var resultFlag = InnerResult(result);
+                    if (resultFlag.Flag) return resultFlag.Result!;
 #pragma warning restore CS0184 // '"is" 表达式的给定表达式始终不是所提供的类型
                     return TypedResults.Json(result);
                 }
@@ -126,17 +105,62 @@ public static partial class AppExtentions
             });
         
         //metadata
-        map69e5b3c7.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi)));
+        map1aa5c30c.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6)));
         //handler
-        scope.ServiceProvider.GetRequiredService<Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi>().HandlerBuilder(map69e5b3c7);
+        scope.ServiceProvider.GetRequiredService<Biwen.QuickApi.SourceGenerator.TestConsole.Test6>().HandlerBuilder(map1aa5c30c);
         //outputcache
-        var map69e5b3c7Cache = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttribute<OutputCacheAttribute>();
-        if (map69e5b3c7Cache != null) map69e5b3c7.WithMetadata(map69e5b3c7Cache);
+        var map1aa5c30cCache = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6).GetCustomAttribute<OutputCacheAttribute>();
+        if (map1aa5c30cCache != null) map1aa5c30c.WithMetadata(map1aa5c30cCache);
         //endpointgroup
-        var map69e5b3c7EndpointgroupAttribute = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttribute<EndpointGroupNameAttribute>();
-        if (map69e5b3c7EndpointgroupAttribute != null) map69e5b3c7.WithMetadata(map69e5b3c7EndpointgroupAttribute);
-
+        var map1aa5c30cEndpointgroupAttribute = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6).GetCustomAttribute<EndpointGroupNameAttribute>();
+        if (map1aa5c30cEndpointgroupAttribute != null) map1aa5c30c.WithMetadata(map1aa5c30cEndpointgroupAttribute);
+        
         return groupBuilder;
+    }
+
+    /// <summary>
+    /// 验证Policy
+    /// </summary>
+    /// <exception cref="QuickApiExcetion"></exception>
+    async static Task<(bool Flag, IResult? Result)> CheckPolicy(IHttpContextAccessor ctx, string? policy)
+    {
+        if (string.IsNullOrEmpty(policy))
+        {
+            return (true, null);
+        }
+        if (!string.IsNullOrEmpty(policy))
+        {
+            var httpContext = ctx.HttpContext;
+            var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null, besure services.AddAuthorization() first!");
+            var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
+            if (!authorizationResult.Succeeded)
+            {
+                return (false, TypedResults.Unauthorized());
+            }
+        }
+        return (true, null);
+    }
+    /// <summary>
+    /// 内部返回的Result
+    /// </summary>
+    static (bool Flag, IResult? Result) InnerResult(object? result)
+    {
+        //返回空结果
+        if (result is EmptyResponse)
+        {
+            return (true, TypedResults.Ok());//返回空
+        }
+        //返回文本结果
+        if (result is ContentResponse content)
+        {
+            return (true, TypedResults.Content(content.ToString()));
+        }
+        //返回IResult结果
+        if (result is IResultResponse iresult)
+        {
+            return (true, iresult.Result);
+        }
+        return (false, null);
     }
 }
 #pragma warning restore
