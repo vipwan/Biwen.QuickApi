@@ -14,3 +14,4 @@ global using Biwen.QuickApi.Metadata;
 
 global using FindTypes = Biwen.QuickApi.Infrastructure.TypeFinder.FindTypes;
 global using ASS = Biwen.QuickApi.Infrastructure.Assemblies;
+global using MSDA = System.ComponentModel.DataAnnotations;

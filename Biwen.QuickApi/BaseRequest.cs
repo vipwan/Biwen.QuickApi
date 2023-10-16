@@ -35,9 +35,9 @@ namespace Biwen.QuickApi
             var req = (T)MemberwiseClone();
 
             //ms内建的DataAnnotations验证器
-            var context = new System.ComponentModel.DataAnnotations.ValidationContext(req);
-            var validationResults = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
-            var defaultFlag = System.ComponentModel.DataAnnotations.Validator.TryValidateObject(req, context, validationResults, true);
+            var context = new MSDA.ValidationContext(req);
+            var validationResults = new List<MSDA.ValidationResult>();
+            var defaultFlag = MSDA.Validator.TryValidateObject(req, context, validationResults, true);
 
             //FluentValidation验证器
             var fluentValidationResult = Validator.Validate(req);
