@@ -180,10 +180,8 @@ namespace Biwen.QuickApi
                     }
                     var verbs = attr.Verbs.SplitEnum();//拆分枚举
 
-                    RouteHandlerBuilder? rhBuilder = null!;
-
                     //MapMethods
-                    rhBuilder = g.MapMethods(attr.Route, verbs.Select(x => x.ToString()).ToArray(),
+                    var rhBuilder = g.MapMethods(attr.Route, verbs.Select(x => x.ToString()).ToArray(),
                        async Task<IResult> (IHttpContextAccessor ctx) =>
                         {
                             return await RequestHandler(ctx, apiType, attr);
@@ -191,12 +189,9 @@ namespace Biwen.QuickApi
 
                     //HandlerBuilder
                     using var scope = app.ServiceProvider.CreateAsyncScope();
-                    var currentApi = scope.ServiceProvider.GetRequiredService(apiType);
-                    if (currentApi is IHandlerBuilder hb)
-                    {
-                        rhBuilder = hb.HandlerBuilder(rhBuilder!);
-                    }
-
+                    var hb = scope.ServiceProvider.GetRequiredService(apiType) as IHandlerBuilder;
+                    rhBuilder = hb!.HandlerBuilder(rhBuilder);
+                    
                     //metadata
                     rhBuilder.WithMetadata(new QuickApiMetadata(apiType));
 
@@ -255,10 +250,11 @@ namespace Biwen.QuickApi
             var checkResult = await CheckPolicy(ctx, quickApiAttribute.Policy);
             if (!checkResult.Flag) return checkResult.Result!;
 
-            object? api = ctx.HttpContext!.RequestServices.GetRequiredService(apiType);
+            var sp = ctx.HttpContext!.RequestServices;
 
+            var api = sp.GetRequiredService(apiType);
 #pragma warning disable CS0618 // 类型或成员已过时
-            var quickApiOptions = ctx.HttpContext!.RequestServices.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
+            var quickApiOptions = sp.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
 #pragma warning restore CS0618 // 类型或成员已过时
 
 
@@ -289,21 +285,16 @@ namespace Biwen.QuickApi
             var req = await ((dynamic)api).ReqBinder.BindAsync(ctx.HttpContext!);
 
             //验证DTO
-            if (req != null)
+            if (req.Validate() is ValidationResult vresult && !vresult!.IsValid)
             {
-                //验证器
-                if (req.Validate() is ValidationResult vresult && !vresult!.IsValid)
-                {
-                    return TypedResults.ValidationProblem(vresult.ToDictionary());
-                }
+                return TypedResults.ValidationProblem(vresult.ToDictionary());
             }
-
             //执行请求
             try
             {
                 //var result = await method.Invoke(api, new object[] { req! })!;
                 var result = await ((dynamic)api)!.ExecuteAsync(req!);
-                var resultFlag = InnerResult((BaseResponse)result);
+                var resultFlag = InnerResult(result as BaseResponse);
                 if (resultFlag.Flag) return resultFlag.Result!;
 
                 //针对返回结果的别名处理
@@ -335,14 +326,14 @@ namespace Biwen.QuickApi
             }
             catch (Exception ex)
             {
-                var exceptionHandlers = ctx.HttpContext!.RequestServices.GetServices<IQuickApiExceptionHandler>();
+                var exceptionHandlers = sp.GetServices<IQuickApiExceptionHandler>();
                 //异常处理
                 foreach (var handler in exceptionHandlers)
                 {
                     await handler.HandleAsync(ex);
                 }
                 //规范化异常返回
-                var exceptionResultBuilder = ctx.HttpContext!.RequestServices.GetRequiredService<IQuickApiExceptionResultBuilder>();
+                var exceptionResultBuilder = sp.GetRequiredService<IQuickApiExceptionResultBuilder>();
                 return await exceptionResultBuilder.ErrorResult(ex);
             }
         }
@@ -375,7 +366,7 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="result"></param>
         /// <returns></returns>
-        static (bool Flag, IResult? Result) InnerResult(object? result)
+        static (bool Flag, IResult? Result) InnerResult(BaseResponse? result)
         {
             //返回空结果
             if (result is EmptyResponse)

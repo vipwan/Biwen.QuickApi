@@ -32,8 +32,9 @@ namespace Biwen.QuickApi
 
         public ValidationResult Validate()
         {
-            var method = typeof(InnerValidator).GetMethods().First(x => x.Name == nameof(IValidator.Validate));
-            return (method!.Invoke(Validator, new object[] { this }) as ValidationResult)!;
+            //var method = typeof(InnerValidator).GetMethods().First(x => x.Name == nameof(IValidator.Validate));
+            //return (method!.Invoke(Validator, new object[] { this }) as ValidationResult)!;
+            return Validator.Validate((T)MemberwiseClone());
         }
         #endregion
 

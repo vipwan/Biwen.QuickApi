@@ -165,7 +165,7 @@ groupAdmin.RouteGroupBuilder?
     ;
 
 // Gen方式
-//app.MapGenQuickApis(app.Services);
+app.MapGenQuickApis(app.Services);
 
 //测试其他地方调用QuickApi
 app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<string, string[]>>>>
@@ -184,7 +184,7 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
     var x = await api.ExecuteAsync(req);
     return TypedResults.Ok(x.Content);
 
-}).RequireAuthorization("admin");
+});
 
 //发现ms的WithOpenApi的一处BUG,当Method为多个时会报错!
 //请直接使用QuickApiSummaryAttribute!
