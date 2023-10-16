@@ -253,10 +253,10 @@ app.MapBiwenQuickApis();
                 using (var sr = new StreamReader(request.File.OpenReadStream()))
                 {
                     var content = await sr.ReadToEndAsync();
-                    return Results.Ok(content).AsRsp();
+                    return Results.Ok(content).AsRspOfResult();
                 }
             }
-            return Results.BadRequest("no file").AsRsp();
+            return Results.BadRequest("no file").AsRspOfResult();
         }
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
