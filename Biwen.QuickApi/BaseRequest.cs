@@ -28,6 +28,7 @@ namespace Biwen.QuickApi
         private readonly InnerValidator Validator = new();
 
         [JsonIgnore]
+        [Obsolete("请使用Validate(),以同时兼容DataAnnotation和FluentValidation,请注意该属性未来会被移除!",false)]
         public IValidator<T> RealValidator => Validator;
 
         public ValidationResult Validate()
@@ -44,7 +45,7 @@ namespace Biwen.QuickApi
 
             if (!defaultFlag)
             {
-                fluentValidationResult.Errors.AddRange(validationResults.Select(x => new FluentValidation.Results.ValidationFailure(x.MemberNames.FirstOrDefault(), x.ErrorMessage)));
+                fluentValidationResult.Errors.AddRange(validationResults.Select(x => new ValidationFailure(x.MemberNames.FirstOrDefault(), x.ErrorMessage)));
             }
             //var method = typeof(InnerValidator).GetMethods().First(x => x.Name == nameof(IValidator.Validate));
             //return (method!.Invoke(Validator, new object[] { this }) as ValidationResult)!;
