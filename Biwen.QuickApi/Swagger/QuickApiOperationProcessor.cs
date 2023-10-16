@@ -70,6 +70,11 @@
                 }
             }
 
+            if (kuickApiDef.QuickApiType?.GetCustomAttribute<ObsoleteAttribute>() != null)
+            {
+                op.IsDeprecated = true;//标注为已过时
+            }
+
             //fix request content-types not displaying correctly
             if (reqContent?.Count > 0)
             {

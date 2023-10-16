@@ -240,6 +240,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// 默认不需要Group
     /// </summary>
     [QuickApi("world5", Verbs = Verb.GET)]
+    [QuickApiSummary("过期测试", "过期测试",IsDeprecated =true)]
+    [Obsolete("过期测试",false)]
     public class Hello5Api : BaseQuickApi
     {
         public override async Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
