@@ -120,7 +120,7 @@ public static partial class AppExtentions
                 var checkResult = await CheckPolicy(ctx, ""$2"");
                 if (!checkResult.Flag) return checkResult.Result!;
                 var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
-                var vresult = req.RealValidator.Validate(req);
+                var vresult = req.Validate();
                 if (!vresult.IsValid) {{ return TypedResults.ValidationProblem(vresult.ToDictionary()); }}
                 try
                 {{
