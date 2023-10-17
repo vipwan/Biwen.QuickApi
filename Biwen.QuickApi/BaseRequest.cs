@@ -63,13 +63,11 @@ namespace Biwen.QuickApi
             protected override bool PreValidate(ValidationContext<T> context, ValidationResult result)
             {
                 var req = context.InstanceToValidate;
-
                 //ms内建的DataAnnotations验证器
                 var mc = new MSDA.ValidationContext(req);
                 var validationResults = new List<MSDA.ValidationResult>();
-                var defaultFlag = MSDA.Validator.TryValidateObject(req, mc, validationResults, true);
-
-                if (!defaultFlag)
+                var flag = MSDA.Validator.TryValidateObject(req, mc, validationResults, true);
+                if (!flag)
                 {
                     result.Errors.AddRange(validationResults.Select(x => new ValidationFailure(x.MemberNames.FirstOrDefault(), x.ErrorMessage)));
                 }
