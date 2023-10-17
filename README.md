@@ -403,8 +403,8 @@ app.MapGet("/from-quickapi", async (IBusiness bussiness) =>
 BenchmarkDotNet v0.13.9, Windows 10 (10.0.19045.3570/22H2/2022Update)
 11th Gen Intel Core i7-11800H 2.30GHz, 1 CPU, 16 logical and 8 physical cores
 .NET SDK 8.0.100-rc.2.23502.2
-  [Host]     : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2 [AttachedDebugger]
-  Job-LZKNMM : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2
+[Host]     : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2 [AttachedDebugger]
+Job-LZKNMM : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2
 
 Runtime=.NET 7.0  InvocationCount=1000  IterationCount=10  
 LaunchCount=1  UnrollFactor=1  WarmupCount=1  
