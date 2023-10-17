@@ -12,6 +12,8 @@ namespace Biwen.QuickApi
     /// </summary>
     internal class QuickApiAuthorizationMiddlewareResultHandler : IAuthorizationMiddlewareResultHandler
     {
+        private readonly AuthorizationMiddlewareResultHandler defaultHandler = new();
+
         public Task HandleAsync(
             RequestDelegate next,
             HttpContext context,
@@ -38,39 +40,8 @@ namespace Biwen.QuickApi
                 }
             }
 
-            //AuthorizationMiddlewareResultHandler 原始实现
-            return Handle();
-            async Task Handle()
-            {
-                if (authorizeResult.Challenged)
-                {
-                    if (policy.AuthenticationSchemes.Count > 0)
-                    {
-                        foreach (var scheme in policy.AuthenticationSchemes)
-                        {
-                            await context.ChallengeAsync(scheme);
-                        }
-                    }
-                    else
-                    {
-                        await context.ChallengeAsync();
-                    }
-                }
-                else if (authorizeResult.Forbidden)
-                {
-                    if (policy.AuthenticationSchemes.Count > 0)
-                    {
-                        foreach (var scheme in policy.AuthenticationSchemes)
-                        {
-                            await context.ForbidAsync(scheme);
-                        }
-                    }
-                    else
-                    {
-                        await context.ForbidAsync();
-                    }
-                }
-            }
+            // Fall back to the default implementation.
+            return defaultHandler.HandleAsync(next, context, policy, authorizeResult);
         }
     }
 }
