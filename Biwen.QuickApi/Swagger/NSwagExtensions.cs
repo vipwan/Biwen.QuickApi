@@ -19,11 +19,13 @@ namespace Biwen.QuickApi
         /// <param name="serviceCollection"></param>
         /// <param name="configure"></param>
         /// <param name="securityOptions"></param>
+        /// <param name="onlyQuickApi">是否只对QuickApi生成文档,默认:False</param>
         /// <returns></returns>
         public static IServiceCollection AddQuickApiDocument(
-            this IServiceCollection serviceCollection, 
-            Action<AspNetCoreOpenApiDocumentGeneratorSettings> configure, 
-            SecurityOptions? securityOptions=null)
+            this IServiceCollection serviceCollection,
+            Action<AspNetCoreOpenApiDocumentGeneratorSettings> configure,
+            SecurityOptions? securityOptions = null,
+            bool onlyQuickApi = false)
         {
             serviceCollection.AddEndpointsApiExplorer();
             serviceCollection.AddOpenApiDocument(delegate (AspNetCoreOpenApiDocumentGeneratorSettings settings, IServiceProvider services)
@@ -45,6 +47,11 @@ namespace Biwen.QuickApi
                             BearerFormat = "jwt",
                             Scheme = "bearer"
                         }));
+                }
+                if (onlyQuickApi)
+                {
+                    //排除非QuickApi的接口
+                    settings.OperationProcessors.Insert(0, new QuickApiFilter());
                 }
                 settings.SerializerSettings = new JsonSerializerSettings()
                 {

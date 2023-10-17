@@ -50,7 +50,7 @@ builder.Services.Configure<AuthenticationOptions>(options =>
 builder.Services.AddQuickApiDocument(options =>
 {
     options.UseControllerSummaryAsTagDescription = true;
-    options.DocumentName = "Quick API ALL";
+    options.DocumentName = "Quick API ALL QuickApi";
 
     //options.ApiGroupNames = new[] { };//未指定展示全部Api
 
@@ -58,7 +58,7 @@ builder.Services.AddQuickApiDocument(options =>
     {
         document.Info = new OpenApiInfo
         {
-            Version = "Quick API ALL",
+            Version = "Quick API ALL QuickApi",
             Title = "Quick API testcase",
             Description = "Biwen.QuickApi 测试用例",
             TermsOfService = "https://github.com/vipwan",
@@ -75,7 +75,7 @@ builder.Services.AddQuickApiDocument(options =>
         };
     };
 },
-new SecurityOptions());
+new SecurityOptions(), true);
 
 builder.Services.AddQuickApiDocument(options =>
 {
@@ -106,6 +106,38 @@ builder.Services.AddQuickApiDocument(options =>
     };
 },
 new SecurityOptions());
+
+
+builder.Services.AddQuickApiDocument(options =>
+{
+    options.UseControllerSummaryAsTagDescription = true;
+    options.DocumentName = "Quick API ALL";
+
+    //options.ApiGroupNames = new[] { };//未指定展示全部Api
+
+    options.PostProcess = document =>
+    {
+        document.Info = new OpenApiInfo
+        {
+            Version = "Quick API ALL",
+            Title = "Quick API testcase",
+            Description = "Biwen.QuickApi 测试用例",
+            TermsOfService = "https://github.com/vipwan",
+            Contact = new OpenApiContact
+            {
+                Name = "欢迎 Star & issue",
+                Url = "https://github.com/vipwan/Biwen.QuickApi"
+            },
+            License = new OpenApiLicense
+            {
+                Name = "MIT License",
+                Url = "https://github.com/vipwan/Biwen.QuickApi/blob/master/LICENSE.txt"
+            }
+        };
+    };
+},
+new SecurityOptions());
+
 
 #endregion
 
