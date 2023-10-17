@@ -10,7 +10,7 @@ public class MyApi : BaseQuickApi<Req,Rsp>{}
 - 开箱即用的Route, Policy,Binder,validator & 整合NSwag支持
 - 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi(gen版本=minimalApi,生成原生接口代码),遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
 - write less, do more ; write anywhere, do anything  
-- 欢迎小伙伴们star&issue共同学习进步 (Biwen.QuickApi)[https://github.com/vipwan/Biwen.QuickApi]
+- 欢迎小伙伴们star&issue共同学习进步 [Biwen.QuickApi](https://github.com/vipwan/Biwen.QuickApi)
 
 
 ## SourceGenerator
