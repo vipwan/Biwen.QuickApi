@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
@@ -107,4 +108,39 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         }
     }
 
+
+    [Authorize]
+    [Authorize(policy: "admin")]
+    [QuickApi("an-auth")]
+    [QuickApiSummary("使用特性标记需要登录", "使用特性标记需要登录")]
+    public class AuthorizationTestApi : BaseQuickApiWithoutRequest<ContentResponse>
+    {
+        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Task.FromResult("登录成功的请求!".AsRspOfContent());
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.WithGroupName("admin");
+            return base.HandlerBuilder(builder);
+        }
+
+    }
+
+    [AllowAnonymous]
+    [QuickApi("an-anonymous")]
+    [QuickApiSummary("使用特性标记可以匿名", "使用特性标记可以匿名")]
+    public class AllowAnonymousTestApi : BaseQuickApiWithoutRequest<ContentResponse>
+    {
+        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Task.FromResult("无效登录的请求!".AsRspOfContent());
+        }
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            builder.WithGroupName("admin");
+            return base.HandlerBuilder(builder);
+        }
+    }
 }

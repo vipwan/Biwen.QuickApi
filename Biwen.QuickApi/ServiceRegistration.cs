@@ -191,7 +191,7 @@ namespace Biwen.QuickApi
                     using var scope = app.ServiceProvider.CreateAsyncScope();
                     var hb = scope.ServiceProvider.GetRequiredService(apiType) as IHandlerBuilder;
                     rhBuilder = hb!.HandlerBuilder(rhBuilder);
-                    
+
                     //metadata
                     rhBuilder.WithMetadata(new QuickApiMetadata(apiType));
 
@@ -208,6 +208,18 @@ namespace Biwen.QuickApi
                     {
                         rhBuilder.WithMetadata(endpointgroupAttribute);
                     }
+                    //authorizeattribute
+                    var authorizeAttributes = apiType.GetCustomAttributes<AuthorizeAttribute>();
+                    if (authorizeAttributes.Any()) rhBuilder.WithMetadata(new AuthorizeAttribute());
+                    foreach (var authAttr in authorizeAttributes)
+                    {
+                        rhBuilder.WithMetadata(authAttr);
+                    }
+                    //allowanonymous
+                    var allowanonymous = apiType.GetCustomAttribute<AllowAnonymousAttribute>();
+                    if (allowanonymous != null) rhBuilder.WithMetadata(allowanonymous);
+
+                    //return rhBuilder.RequireAuthorization(policyNames.Select(n => new AuthorizeAttribute(n)).ToArray());
 
                     //OpenApi 生成
                     //var method = apiType.GetMethod("ExecuteAsync")!;

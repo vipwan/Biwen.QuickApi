@@ -23,7 +23,7 @@
         public bool Process(OperationProcessorContext context)
         {
             //如果没有启用安全处理器
-            if(_securityOptions==null || !_securityOptions.EnlableSecurityProcessor)
+            if (_securityOptions == null || !_securityOptions.EnlableSecurityProcessor)
                 return true;
 
             //如果没有设置Scheme
@@ -49,16 +49,21 @@
             {
                 policys.Add(apiAttribute.Policy);
             }
-            var authAttribute = epDef.QuickApiType!.GetCustomAttribute<AuthorizeAttribute>();
-            if (authAttribute?.Policy != null)
+            var authAttributes = epDef.QuickApiType!.GetCustomAttributes<AuthorizeAttribute>();
+            foreach (var authAttribute in authAttributes)
             {
-                policys.Add(authAttribute.Policy);
+                if (authAttribute?.Policy != null)
+                {
+                    policys.Add(authAttribute.Policy);
+                }
             }
-
-            var authMetadata = quikcApiMeta.OfType<AuthorizeAttribute>().SingleOrDefault();
-            if (authMetadata?.Policy != null)
+            var authMetadatas = quikcApiMeta.OfType<AuthorizeAttribute>();
+            foreach (var authMeta in authMetadatas)
             {
-                policys.Add(authMetadata.Policy);
+                if (authMeta?.Policy != null)
+                {
+                    policys.Add(authMeta.Policy);
+                }
             }
 
             if (policys.Count == 0)
@@ -82,6 +87,6 @@
     /// </summary>
     /// <param name="EnlableSecurityProcessor"></param>
     /// <param name="Scheme"></param>
-    public record SecurityOptions(bool EnlableSecurityProcessor=true, string? SecretScheme = "Bearer");
+    public record SecurityOptions(bool EnlableSecurityProcessor = true, string? SecretScheme = "Bearer");
 
 }

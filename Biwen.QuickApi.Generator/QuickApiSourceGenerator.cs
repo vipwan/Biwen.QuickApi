@@ -150,6 +150,16 @@ public static partial class AppExtentions
         //endpointgroup
         var $4EndpointgroupAttribute = typeof($3).GetCustomAttribute<EndpointGroupNameAttribute>();
         if ($4EndpointgroupAttribute != null) $4.WithMetadata($4EndpointgroupAttribute);
+        //authorizeattribute
+        var $4authorizeAttributes = typeof($3).GetCustomAttributes<AuthorizeAttribute>();
+        if ($4authorizeAttributes.Any()) $4.WithMetadata(new AuthorizeAttribute());
+        foreach (var authAttr in $4authorizeAttributes)
+        {{
+            $4.WithMetadata(authAttr);
+        }}
+        //allowanonymous
+        var $4allowanonymous = typeof($3).GetCustomAttribute<AllowAnonymousAttribute>();
+        if ($4allowanonymous != null) $4.WithMetadata($4allowanonymous);
 ";
 
         #endregion
