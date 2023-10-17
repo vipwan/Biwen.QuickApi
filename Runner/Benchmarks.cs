@@ -9,7 +9,7 @@ namespace Runner
     /// launchCount:运行次数,iterationCount:应执行多少次目标迭代,invocationCount:每次迭代执行多少次目标方法
     /// 总共调用的次数=launchCount*iterationCount*invocationCount
     /// </summary>
-    [MemoryDiagnoser, SimpleJob(RuntimeMoniker.Net70, launchCount: 1, warmupCount: 1, iterationCount: 10, invocationCount: 1000)]
+    [MemoryDiagnoser, SimpleJob(RuntimeMoniker.Net70, launchCount: 1, warmupCount: 1, iterationCount: 10, invocationCount: 2000)]
     public class Benchmarks
     {
         /// <summary>
@@ -24,8 +24,8 @@ namespace Runner
             @"{
               ""userName"": ""vipwan"",
               ""password"": ""12345678"",
-              ""email"": ""vipwms.co.ltd"",
-              ""phone"": ""www123456"",
+              ""email"": ""vipwms@ms.co.ltd"",
+              ""phone"": ""123456"",
               ""address"": ""ShenZhen China"",
               ""remark"": ""this is a QuickApi Test""
             }",

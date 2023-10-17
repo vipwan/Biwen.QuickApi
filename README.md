@@ -400,22 +400,23 @@ app.MapGet("/from-quickapi", async (IBusiness bussiness) =>
 ### Benchmark性能测试
 
 ```
+
 BenchmarkDotNet v0.13.9, Windows 10 (10.0.19045.3570/22H2/2022Update)
 11th Gen Intel Core i7-11800H 2.30GHz, 1 CPU, 16 logical and 8 physical cores
 .NET SDK 8.0.100-rc.2.23502.2
 [Host]     : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2 [AttachedDebugger]
-Job-LZKNMM : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2
+Job-WHDDIT : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2
 
-Runtime=.NET 7.0  InvocationCount=1000  IterationCount=10  
-LaunchCount=1  UnrollFactor=1  WarmupCount=1  
+Runtime=.NET 7.0  InvocationCount=2000  IterationCount=10  
+LaunchCount=1  WarmupCount=1  
+
 ```
-| Method      | Mean     | Error     | StdDev    | Ratio | RatioSD | Gen0   | Allocated | Alloc Ratio |
-|------------ |---------:|----------:|----------:|------:|--------:|-------:|----------:|------------:|
-| WebApiCtol     | 530.6 μs | 324.50 μs | 193.11 μs |  1.00 |    0.00 | 2.0000 |  32.89 KB |        1.00 |
-| MinimalApi  | 269.0 μs |  50.54 μs |  33.43 μs |  0.59 |    0.24 | 2.0000 |  27.25 KB |        0.83 |
-| QuickApi(Gen) | 285.1 μs |  61.91 μs |  40.95 μs |  0.62 |    0.27 | 2.0000 |  30.13 KB |        0.92 |
-| QuickApi    | 276.7 μs |  95.68 μs |  63.28 μs |  0.60 |    0.21 | 2.0000 |  30.17 KB |        0.92 |
-
+| Method      | Mean     | Error     | StdDev    | Median   | Ratio | RatioSD | Gen0   | Allocated | Alloc Ratio |
+|------------ |---------:|----------:|----------:|---------:|------:|--------:|-------:|----------:|------------:|
+| WebApiCtrl      | 385.5 μs | 357.93 μs | 236.75 μs | 231.0 μs |  1.00 |    0.00 | 2.5000 |   33.5 KB |        1.00 |
+| MinimalApi  | 221.2 μs |  13.02 μs |   6.81 μs | 220.9 μs |  0.68 |    0.34 | 2.0000 |  24.38 KB |        0.73 |
+| QuickApi(Gen) | 224.7 μs |  16.05 μs |   8.39 μs | 225.8 μs |  0.69 |    0.34 | 2.0000 |  27.55 KB |        0.82 |
+| QuickApi    | 235.9 μs |  22.26 μs |  11.65 μs | 235.4 μs |  0.72 |    0.34 | 2.0000 |  27.59 KB |        0.82 |
 
 ### Q&A
 
