@@ -1,0 +1,19 @@
+@BenchmarkTestWeb_HostAddress = http://localhost:5010
+
+GET {{BenchmarkTestWeb_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{BenchmarkTestWeb_HostAddress}}/my
+Content-Type: application/json
+
+{
+  //MyRequest
+}
+
+###
+
+POST {{BenchmarkTestWeb_HostAddress}}/my-minimal
+
+###

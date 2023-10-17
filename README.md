@@ -372,6 +372,25 @@ app.UseQuickApiSwagger();
 - 我们强烈建议您使用Refit生成代理代码,以便于您的客户端和服务端保持一致的接口定义
 - 因为遵循REPR风格,所以不推荐SwaggerUI或使用SwaggerStudio生成代理代码,除非您的QuickApi定义的相当规范(如存在自定义绑定,别名绑定等)!
 
+### 性能测试:
+
+```
+BenchmarkDotNet v0.13.9+228a464e8be6c580ad9408e98f18813f6407fb5a, Windows 10 (10.0.19045.3570/22H2/2022Update)
+11th Gen Intel Core i7-11800H 2.30GHz, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 8.0.100-rc.2.23502.2
+  [Host]     : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2 [AttachedDebugger]
+  Job-LZKNMM : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2
+
+Runtime=.NET 7.0  InvocationCount=1000  IterationCount=10  
+LaunchCount=1  UnrollFactor=1  WarmupCount=1  
+```
+| Method      | Mean     | Error     | StdDev    | Ratio | RatioSD | Gen0   | Allocated | Alloc Ratio |
+|------------ |---------:|----------:|----------:|------:|--------:|-------:|----------:|------------:|
+| WebApiController      | 530.6 μs | 324.50 μs | 193.11 μs |  1.00 |    0.00 | 2.0000 |  32.89 KB |        1.00 |
+| MinimalApi  | 269.0 μs |  50.54 μs |  33.43 μs |  0.59 |    0.24 | 2.0000 |  27.25 KB |        0.83 |
+| QuickApi(Gen) | 285.1 μs |  61.91 μs |  40.95 μs |  0.62 |    0.27 | 2.0000 |  30.13 KB |        0.92 |
+| QuickApi    | 276.7 μs |  95.68 μs |  63.28 μs |  0.60 |    0.21 | 2.0000 |  30.17 KB |        0.92 |
+
 ```csharp
 
 /// <summary>
