@@ -271,21 +271,21 @@ namespace Biwen.QuickApi
             var quickApiOptions = sp.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
 #pragma warning restore CS0618 // 类型或成员已过时
 
-            //var cache = ctx.HttpContext!.RequestServices.GetRequiredService<IMemoryCache>();
-            //var method = apiType.GetMethod("ExecuteAsync")!;
-            //var parameter = method.GetParameters()[0]!;
-            //var parameterType = parameter.ParameterType!;
-
-            var req = await ((dynamic)api).ReqBinder.BindAsync(ctx.HttpContext!);
-
-            //验证DTO
-            if (req.Validate() is ValidationResult vresult && !vresult!.IsValid)
-            {
-                return TypedResults.ValidationProblem(vresult.ToDictionary());
-            }
             //执行请求
             try
             {
+                //var cache = ctx.HttpContext!.RequestServices.GetRequiredService<IMemoryCache>();
+                //var method = apiType.GetMethod("ExecuteAsync")!;
+                //var parameter = method.GetParameters()[0]!;
+                //var parameterType = parameter.ParameterType!;
+                var req = await ((dynamic)api).ReqBinder.BindAsync(ctx.HttpContext!);
+
+                //验证DTO
+                if (req.Validate() is ValidationResult vresult && !vresult!.IsValid)
+                {
+                    return TypedResults.ValidationProblem(vresult.ToDictionary());
+                }
+
                 //var result = await method.Invoke(api, new object[] { req! })!;
                 var result = await ((dynamic)api)!.ExecuteAsync(req!);
                 var resultFlag = InnerResult(result as BaseResponse);

@@ -24,6 +24,10 @@ namespace BenchmarkTestWeb
 
         public string? Remark { get; set; }
 
+        public MyScore? Score { get; set; }
+
+        public record MyScore(string ScoreName,double Score);
+
         public MyRequest()
         {
             RuleFor(x => x.Remark).Length(2, 50).NotNull();

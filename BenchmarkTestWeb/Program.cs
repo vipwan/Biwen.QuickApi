@@ -69,7 +69,7 @@ app.Use(async (context, next) =>
     //统一等待10微秒
     //await Task.Delay(TimeSpan.FromMicroseconds(10));
     //记录日志
-    Console.WriteLine($"{context.Request.Path.Value} {context.Request.Host.Value}:{context.Request.Host.Port}");
+    Console.WriteLine($"{context.Request.Path.Value} {context.Request.Host.Value}:{context.Request.ContentType}");
     await next(context);
 });
 
