@@ -92,7 +92,7 @@ namespace Biwen.QuickApi
                         continue;
                     }
                     //数组
-                    var value = StringValuesExtensions.DeserializeJsonArrayString(qs[name], prop.PropertyType);
+                    var value = StringValuesExtensions.DeserializeFromStringValues(qs[name], prop.PropertyType);
                     //var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[name].ToString());
                     prop.SetValue(@default, value);
                     continue;
@@ -105,7 +105,7 @@ namespace Biwen.QuickApi
                     if (qs.TryGetValue(name, out StringValues val))
                     {
                         //转换
-                        var value = StringValuesExtensions.DeserializeJsonArrayString(val, prop.PropertyType);
+                        var value = StringValuesExtensions.DeserializeFromStringValues(val, prop.PropertyType);
                         prop.SetValue(@default, value);
                         continue;
                     }
@@ -186,7 +186,7 @@ namespace Biwen.QuickApi
                         //querystring
                         {
                             var qs = context.Request.Query;
-                            var value = StringValuesExtensions.DeserializeJsonArrayString(qs[alias?.Name ?? prop.Name], prop.PropertyType);
+                            var value = StringValuesExtensions.DeserializeFromStringValues(qs[alias?.Name ?? prop.Name], prop.PropertyType);
                             prop.SetValue(@default, value);
                             continue;
                         }
@@ -372,7 +372,7 @@ namespace Biwen.QuickApi
         /// <param name="input"></param>
         /// <param name="tProp"></param>
         /// <returns></returns>
-        public static object? DeserializeJsonArrayString(StringValues? input, Type tProp)
+        public static object? DeserializeFromStringValues(StringValues? input, Type tProp)
         {
             if (input is not StringValues vals || vals.Count == 0)
                 return null;
