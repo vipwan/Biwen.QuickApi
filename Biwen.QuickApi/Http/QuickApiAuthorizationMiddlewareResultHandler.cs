@@ -4,9 +4,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.AspNetCore.Http;
 
-namespace Biwen.QuickApi
+namespace Biwen.QuickApi.Http
 {
-
     /// <summary>
     /// 401 403不做跳转而是直接返回StatusCode
     /// </summary>

@@ -8,6 +8,8 @@ using System.Dynamic;
 
 namespace Biwen.QuickApi
 {
+    using Biwen.QuickApi.Http;
+
     public static class ServiceRegistration
     {
 

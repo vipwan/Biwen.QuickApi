@@ -33,6 +33,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Options;
 using Biwen.QuickApi;
 using Biwen.QuickApi.Attributes;
+using Biwen.QuickApi.Http;
 using Biwen.QuickApi.Metadata;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
