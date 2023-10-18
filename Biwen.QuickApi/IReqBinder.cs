@@ -5,6 +5,16 @@ using System.Dynamic;
 namespace Biwen.QuickApi
 {
     using Microsoft.AspNetCore.Builder;
+    using Microsoft.Extensions.Primitives;
+    using System.Collections;
+    using System.Collections.Concurrent;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.Linq.Expressions;
+    using System.Text;
+    using System.Text.Json;
+    using System.Text.Json.Serialization;
+    using System.Xml.Linq;
 
     /// <summary>
     /// 请注意IReqBinder不支持构造器注入
@@ -82,13 +92,15 @@ namespace Biwen.QuickApi
                 {
                     var name = fromQuery.Name ?? prop.Name;
                     var qs = context.Request.Query;
-                    if (qs.ContainsKey(name))
+                    if (string.IsNullOrEmpty(qs[name]))
                     {
-                        //转换
-                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[name].ToString());
-                        prop.SetValue(@default, value);
                         continue;
                     }
+                    //数组
+                    var value = StringValuesExtensions.DeserializeJsonArrayString(qs[name], prop.PropertyType);
+                    //var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[name].ToString());
+                    prop.SetValue(@default, value);
+                    continue;
                 }
                 var fromHeader = prop.GetCustomAttribute<FromHeaderAttribute>();
                 if ((fromHeader != null))
@@ -179,14 +191,9 @@ namespace Biwen.QuickApi
                         //querystring
                         {
                             var qs = context.Request.Query;
-                            var value = qs[alias?.Name ?? prop.Name];
-                            if (value.Count > 0)
-                            {
-                                //转换
-                                var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value[0]!);
-                                prop.SetValue(@default, value2);
-                                continue;
-                            }
+                            var value = StringValuesExtensions.DeserializeJsonArrayString(qs[alias?.Name ?? prop.Name], prop.PropertyType);
+                            prop.SetValue(@default, value);
+                            continue;
                         }
                     }
                     if (requestMethod == HttpMethods.Head)
@@ -260,12 +267,15 @@ namespace Biwen.QuickApi
                     }
                     if (isBodySet) continue;
                     //route & 路由不支持别名
+                    //route只支持基础类型,不可使用复杂类型 这属于约定!
                     {
                         var qs = context.Request.RouteValues;
                         if (qs.ContainsKey(prop.Name))
                         {
-                            var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[prop.Name]?.ToString()!);
-                            prop.SetValue(@default, value);
+                            //var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[prop.Name]?.ToString()!);
+                            //prop.SetValue(@default, value);
+
+                            prop.SetValue(@default, qs[prop.Name]);
                             continue;
                         }
                     }
@@ -315,6 +325,7 @@ namespace Biwen.QuickApi
 
     }
 
+
 #if NET8_0_OR_GREATER
 
     /// <summary>
@@ -331,5 +342,91 @@ namespace Biwen.QuickApi
     }
 
 #endif
+
+    #region BinderExtensions
+
+    public struct ParseResult
+    {
+        public bool IsSuccess { get; set; }
+
+        public object? Value { get; set; }
+
+        public ParseResult(bool isSuccess, object? value)
+        {
+            IsSuccess = isSuccess;
+            Value = value;
+        }
+    }
+
+    /// <summary>
+    /// StringValuesBinderExtensions
+    /// </summary>
+    static class StringValuesExtensions
+    {
+
+        /// <summary>
+        /// 将QueryString转换为数组
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="tProp"></param>
+        /// <returns></returns>
+        public static object? DeserializeJsonArrayString(StringValues? input, Type tProp)
+        {
+            if (input is not StringValues vals || vals.Count == 0)
+                return null;
+
+            if (vals.Count == 1 && vals[0]!.StartsWith('[') && vals[0]!.EndsWith(']'))
+            {
+                // querystring: ?ids=[1,2,3]
+                // possible inputs:
+                // - [1,2,3] (as StringValues[0])
+                // - ["one","two","three"] (as StringValues[0])
+                // - [{"name":"x"},{"name":"y"}] (as StringValues[0])
+
+                return JsonSerializer.Deserialize(vals[0]!, tProp);
+            }
+
+            // querystring: ?ids=one&ids=two
+            // possible inputs:
+            // - 1 (as StringValues)
+            // - 1,2,3 (as StringValues)
+            // - one (as StringValues)
+            // - one,two,three (as StringValues)
+            // - [1,2], 2, 3 (as StringValues)
+            // - ["one","two"], three, four (as StringValues)
+            // - {"name":"x"}, {"name":"y"} (as StringValues) - from swagger ui
+
+            var isEnumArray = false;
+            if (tProp.IsArray)
+                isEnumArray = tProp.GetElementType()!.IsEnum;
+
+            var sb = new StringBuilder("[");
+
+            for (var i = 0; i < vals.Count; i++)
+            {
+                if (isEnumArray || (vals[i]!.StartsWith('{') && vals[i]!.EndsWith('}')))
+                    sb.Append(vals[i]);
+                else
+                {
+                    sb.Append('"')
+                      .Append(
+                           vals[i]!.Contains('"') //json strings with quotations must be escaped
+                               ? vals[i]!.Replace("\"", "\\\"")
+                               : vals[i])
+                      .Append('"');
+                }
+
+                if (i < vals.Count - 1)
+                    sb.Append(',');
+            }
+            sb.Append(']');
+
+            return JsonSerializer.Deserialize(sb.ToString(), tProp);
+        }
+
+    }
+
+
+    #endregion
 
 }

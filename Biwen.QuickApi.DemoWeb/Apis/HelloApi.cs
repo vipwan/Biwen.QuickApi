@@ -52,10 +52,15 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         /// DataAnnotations内建特性测试
         /// </summary>
         [Description("DataAnnotations内建特性 测试")]
-        [StringLength(12,MinimumLength =6)]
+        [StringLength(18,MinimumLength =6)]
         [EmailAddress]
         [Required]
         public string Department { get; set; }
+
+        [Description("支持绑定querystring的[],比如tags=hello&tags=world")]
+        [FromQuery]
+        public string[]? Tags { get; set; }
+
 
 
         [FromKeyedServices("hello")]
@@ -195,6 +200,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 Q = "q54543534",
                 UserName = "vipwan@ms.co.ltd",
                 Password = "p234565",
+                Department = "vipwan@co.ltd"
             });
 
             return base.HandlerBuilder(builder);
