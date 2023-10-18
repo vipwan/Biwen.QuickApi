@@ -271,30 +271,10 @@ namespace Biwen.QuickApi
             var quickApiOptions = sp.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
 #pragma warning restore CS0618 // 类型或成员已过时
 
-
             //var cache = ctx.HttpContext!.RequestServices.GetRequiredService<IMemoryCache>();
             //var method = apiType.GetMethod("ExecuteAsync")!;
             //var parameter = method.GetParameters()[0]!;
             //var parameterType = parameter.ParameterType!;
-
-            //所有的QuickApi都实现了IQuickApi,因此ReqType不可能为Null
-            //var parameterType = ((dynamic)api).ReqType as Type;
-
-            //使用缓存,提升性能
-            //object? req = await cache.GetOrCreateAsync($"biwen.quickapi.{parameterType.FullName}", async entry =>
-            //{
-            //    entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(365);
-            //    return await Task.FromResult(Activator.CreateInstance(parameterType)!);
-            //});
-
-            //var bindMethod = parameterType.BaseType!.GetMethod("BindAsync")!;
-            //dynamic bindRutn = bindMethod.Invoke(req, new object[] { ctx.HttpContext })!;
-            //req = bindRutn.Result;
-
-            //获取请求对象,使用dynamic代替反射
-            //约定:所有的请求对象都实现了IReqBinder,因此不可能为Null
-            //var reqBinder = ctx.HttpContext!.RequestServices.GetRequiredService(parameterType!);
-            //var req = await ((dynamic)reqBinder!).BindAsync(ctx.HttpContext!);
 
             var req = await ((dynamic)api).ReqBinder.BindAsync(ctx.HttpContext!);
 

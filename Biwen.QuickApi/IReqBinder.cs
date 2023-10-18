@@ -376,6 +376,12 @@ namespace Biwen.QuickApi
         {
             if (input is not StringValues vals || vals.Count == 0)
                 return null;
+
+            if (tProp.IsValueType || tProp == typeof(string))
+            {
+                return vals[0];
+            }
+
             if (vals.Count == 1 && vals[0]!.StartsWith('[') && vals[0]!.EndsWith(']'))
             {
                 // querystring: ?ids=[1,2,3]
