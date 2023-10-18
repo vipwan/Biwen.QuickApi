@@ -436,3 +436,16 @@ LaunchCount=1  WarmupCount=1
  
 - 是否支持Minimal的中间件和拦截器?
 -- 支持的,本身QuickApi就是扩展了MinimalApi,底层也是Minimal的处理机制,所以请考虑全局的中间件和拦截器,以及重写QuickApi的HandlerBuilder方法
+-- 如果你仅仅需要使用中间件控制QuickApi的行为可以参考下面的代码:
+```c#
+
+var md = context.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>();
+if (md == null || md.QuickApiType == null)
+{
+    await _next(context);
+    return;
+}
+
+//todo:
+
+```
