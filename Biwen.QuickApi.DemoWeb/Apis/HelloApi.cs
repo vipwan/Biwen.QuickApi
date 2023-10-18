@@ -68,8 +68,25 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         [FromHeader(Name = "headmember")]
         public Member CurrentMemberFromHeader { get; set; }
 
+        [Description("MemberUserType枚举测试")]
+        [FromQuery]
+        public UserType MemberUserType { get; set; } = UserType.No1;
+
+        [Description("值类型绑定测试")]
+        [FromQuery]
+        public int? OrderId { get; set; }
+
+
 
         public record Member(string Id,string UserName);
+
+        /// <summary>
+        /// enum测试
+        /// </summary>
+        public enum UserType
+        {
+            No1 = 1, No2 = 2, No3 = 3,
+        }
 
 
         [FromKeyedServices("hello")]

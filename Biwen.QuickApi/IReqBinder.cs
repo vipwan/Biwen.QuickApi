@@ -377,9 +377,26 @@ namespace Biwen.QuickApi
             if (input is not StringValues vals || vals.Count == 0)
                 return null;
 
-            if (tProp.IsValueType || tProp == typeof(string))
+            if (tProp.IsEnum)
+            {
+                return Enum.Parse(tProp, vals[0]!);
+            }
+            if (tProp == typeof(string))
             {
                 return vals[0];
+            }
+            if (tProp.IsValueType)
+            {
+                var converter = TypeDescriptor.GetConverter(tProp);
+                if (converter.CanConvertFrom(typeof(string)))
+                {
+                    return converter.ConvertFromInvariantString(vals[0]!);
+                }
+                else
+                {
+                    //值类型如果没有值返回默认值:
+                    return Activator.CreateInstance(tProp);
+                }
             }
 
             if (vals.Count == 1 && vals[0]!.StartsWith('[') && vals[0]!.EndsWith(']'))
