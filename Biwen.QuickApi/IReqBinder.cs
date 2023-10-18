@@ -6,6 +6,7 @@ namespace Biwen.QuickApi
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.Extensions.Primitives;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Text;
     using System.Text.Json;
@@ -357,6 +358,14 @@ namespace Biwen.QuickApi
     /// </summary>
     static class StringValuesExtensions
     {
+        /// <summary>
+        /// 默认忽略大小写
+        /// </summary>
+        static readonly JsonSerializerOptions _serializerOptions = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        };
+
 
         /// <summary>
         /// 将QueryString转换为数组
@@ -377,8 +386,14 @@ namespace Biwen.QuickApi
                 // - ["one","two","three"] (as StringValues[0])
                 // - [{"name":"x"},{"name":"y"}] (as StringValues[0])
 
-                return JsonSerializer.Deserialize(vals[0]!, tProp);
+                return JsonSerializer.Deserialize(vals[0]!, tProp, _serializerOptions);
             }
+
+            //如果是单个对象且不是字符串,则直接返回
+            if (tProp != typeof(string) && !tProp.GetInterfaces().Any(x => x == typeof(IEnumerable)))
+            {
+                return JsonSerializer.Deserialize(vals[0]!, tProp, _serializerOptions);
+            } 
 
             // querystring: ?ids=one&ids=two
             // possible inputs:
@@ -415,7 +430,7 @@ namespace Biwen.QuickApi
             }
             sb.Append(']');
 
-            return JsonSerializer.Deserialize(sb.ToString(), tProp);
+            return JsonSerializer.Deserialize(sb.ToString(), tProp, _serializerOptions);
         }
 
     }

@@ -52,15 +52,21 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         /// DataAnnotations内建特性测试
         /// </summary>
         [Description("DataAnnotations内建特性 测试")]
-        [StringLength(18,MinimumLength =6)]
+        [StringLength(18, MinimumLength = 6)]
         [EmailAddress]
         [Required]
         public string Department { get; set; }
 
-        [Description("支持绑定querystring的[],比如tags=hello&tags=world")]
+        [Description("querystring比如?tags=hello&tags=world")]
         [FromQuery]
         public string[]? Tags { get; set; }
 
+        [Description("querystring比如?member={\"id\":\"123\",\"userName\":\"vipwan\"}")]
+        [FromQuery(Name = "member")]
+        public Member CurrentMember { get; set; }
+
+
+        public record Member(string Id,string UserName);
 
 
         [FromKeyedServices("hello")]
