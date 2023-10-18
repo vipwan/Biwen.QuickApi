@@ -429,5 +429,10 @@ LaunchCount=1  WarmupCount=1
 - QuickApi中如何拿到HttpContext对象?
 -- 请在构造函数中注入IHttpContextAccessor获取
 
+- QuickApi是否支持Request多级属性以及嵌套的属性?   
+-- Request可以任意复杂, 但是QuickApi不支持多个属性逐级绑定,你需要POST方式提交并且Request对象标记[FromBody],如果仍然满足不了需求,请使用自定义绑定器IReqBinder
+-- 主要原因是因为QuickApi没办法封装所有的绑定场景,这会带来性能上的瓶颈,已经脱离MinimalApi的初衷了!
+-- 另外如果需要兼容Swagger的情况建议使用WithExample()增强可读性
+ 
 - 是否支持Minimal的中间件和拦截器?
 -- 支持的,本身QuickApi就是扩展了MinimalApi,底层也是Minimal的处理机制,所以请考虑全局的中间件和拦截器,以及重写QuickApi的HandlerBuilder方法
