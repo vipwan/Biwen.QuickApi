@@ -6,15 +6,9 @@ namespace Biwen.QuickApi
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.Extensions.Primitives;
-    using System.Collections;
-    using System.Collections.Concurrent;
     using System.Collections.Generic;
-    using System.Globalization;
-    using System.Linq.Expressions;
     using System.Text;
     using System.Text.Json;
-    using System.Text.Json.Serialization;
-    using System.Xml.Linq;
 
     /// <summary>
     /// 请注意IReqBinder不支持构造器注入
