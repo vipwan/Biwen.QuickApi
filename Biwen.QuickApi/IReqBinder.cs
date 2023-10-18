@@ -102,10 +102,10 @@ namespace Biwen.QuickApi
                 {
                     var name = fromHeader.Name ?? prop.Name;
                     var qs = context.Request.Headers;
-                    if (qs.TryGetValue(name, out Microsoft.Extensions.Primitives.StringValues val))
+                    if (qs.TryGetValue(name, out StringValues val))
                     {
                         //转换
-                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(val.ToString());
+                        var value = StringValuesExtensions.DeserializeJsonArrayString(val, prop.PropertyType);
                         prop.SetValue(@default, value);
                         continue;
                     }
@@ -366,7 +366,6 @@ namespace Biwen.QuickApi
             PropertyNameCaseInsensitive = true
         };
 
-
         /// <summary>
         /// 将QueryString转换为数组
         /// </summary>
@@ -377,7 +376,6 @@ namespace Biwen.QuickApi
         {
             if (input is not StringValues vals || vals.Count == 0)
                 return null;
-
             if (vals.Count == 1 && vals[0]!.StartsWith('[') && vals[0]!.EndsWith(']'))
             {
                 // querystring: ?ids=[1,2,3]
@@ -388,13 +386,12 @@ namespace Biwen.QuickApi
 
                 return JsonSerializer.Deserialize(vals[0]!, tProp, _serializerOptions);
             }
-
             //如果是单个对象且不是字符串,则直接返回
+            //?user={"id":"123","name":"x"}
             if (tProp != typeof(string) && !tProp.GetInterfaces().Any(x => x == typeof(IEnumerable)))
             {
                 return JsonSerializer.Deserialize(vals[0]!, tProp, _serializerOptions);
-            } 
-
+            }
             // querystring: ?ids=one&ids=two
             // possible inputs:
             // - 1 (as StringValues)

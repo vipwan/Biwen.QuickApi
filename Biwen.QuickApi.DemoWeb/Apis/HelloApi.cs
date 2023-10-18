@@ -65,6 +65,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         [FromQuery(Name = "member")]
         public Member CurrentMember { get; set; }
 
+        [Description("header比如{\"id\":\"123\",\"userName\":\"vipwan\"}")]
+        [FromHeader(Name = "headmember")]
+        public Member CurrentMemberFromHeader { get; set; }
+
 
         public record Member(string Id,string UserName);
 
@@ -77,6 +81,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             RuleFor(x => x.Name).NotNull().Length(2, 36);
             RuleFor(x => x.Password).NotNull().Length(2, 36);
             RuleFor(x => x.UserName).EmailAddress();//要求邮箱
+            //嵌套对象验证
+            RuleFor(x=>x.CurrentMember.UserName).EmailAddress();
+            RuleFor(x=>x.CurrentMemberFromHeader.UserName).EmailAddress();
         }
     }
 
