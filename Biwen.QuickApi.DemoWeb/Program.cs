@@ -215,13 +215,6 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
 
 });
 
-app.MapPost("upload", ([FromForm] IFormFile file) =>
-{
-
-    return Results.Ok();
-});
-
-
 //发现ms的WithOpenApi的一处BUG,当Method为多个时会报错!
 //请直接使用QuickApiSummaryAttribute!
 //app.MapMethods("hello-world", new[] { "GET", "POST" }, () => Results.Ok()).WithOpenApi(operation => new(operation)
