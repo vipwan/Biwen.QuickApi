@@ -4,7 +4,6 @@ using System.Text.Json;
 namespace Biwen.QuickApi
 {
 
-    [Obsolete("Gen版本不支持配置Options,请使用原生支持", false)]
     public class BiwenQuickApiOptions
     {
         /// <summary>
@@ -13,14 +12,10 @@ namespace Biwen.QuickApi
         public string RoutePrefix { get; set; } = "api";
 
         /// <summary>
-        /// Json序列化配置项
+        /// 是否开启ProblemDetails,默认:false 不开启 ,开发阶段调试 推荐开启
+        /// 如果开启你也可以自行调用配置更多选项<see cref="ProblemDetailsServiceCollectionExtensions.AddProblemDetails(IServiceCollection, Action{Microsoft.AspNetCore.Http.ProblemDetailsOptions}?)"/>
         /// </summary>
-        public JsonSerializerOptions JsonSerializerOptions { get; } = new JsonSerializerOptions
-        {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,//默认使用驼峰
-            //PropertyNameCaseInsensitive = true,
-            //IgnoreReadOnlyProperties = true,
-            //WriteIndented = true,
-        };
+        public bool AddProblemDetails { get; set; } = false;
+
     }
 }

@@ -154,8 +154,7 @@ builder.Services.AddKeyedScoped<HelloService>("hello");
 builder.Services.AddBiwenQuickApis(o =>
 {
     o.RoutePrefix = "quick";
-    //不需要驼峰模式设置为null
-    //o.JsonSerializerOptions.PropertyNamingPolicy = null;
+    o.AddProblemDetails = true;
 });
 
 //如果需要自定义异常返回格式

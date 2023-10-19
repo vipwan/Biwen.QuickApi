@@ -9,12 +9,14 @@ using System.Dynamic;
 namespace Biwen.QuickApi
 {
     using Biwen.QuickApi.Http;
+    using Microsoft.AspNetCore.Http.Json;
 
     public static class ServiceRegistration
     {
 
         /// <summary>
-        /// Add Biwen.QuickApis
+        /// Add Biwen.QuickApis,默认Json序列化JsonSerializerDefaults.Web.
+        /// 你也可以自行调用配置更多选项<see cref="HttpJsonServiceExtensions.ConfigureHttpJsonOptions"/>
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
@@ -22,6 +24,9 @@ namespace Biwen.QuickApi
         public static IServiceCollection AddBiwenQuickApis(this IServiceCollection services, Action<BiwenQuickApiOptions>? options = null)
 #pragma warning restore CS0618 // 类型或成员已过时
         {
+            //JSON Options
+            services.ConfigureHttpJsonOptions(x => { });
+
             //注册验证器
             services.AddFluentValidationAutoValidation();
             services.AddHttpContextAccessor();
@@ -29,41 +34,19 @@ namespace Biwen.QuickApi
 
             //重写AuthorizationMiddlewareResultHandler
             services.AddSingleton<IAuthorizationMiddlewareResultHandler, QuickApiAuthorizationMiddlewareResultHandler>();
-
             //默认的异常返回构造器
             services.AddSingleton<IQuickApiExceptionResultBuilder, DefaultExceptionResultBuilder>();
-
-            services.AddProblemDetails();
-
             //options
-#pragma warning disable CS0618 // 类型或成员已过时
             services.AddOptions<BiwenQuickApiOptions>().Configure(o => { options?.Invoke(o); });
-#pragma warning restore CS0618 // 类型或成员已过时
-
-            //services.Scan(scan =>
-            //{
-            //    scan.FromAssemblies(ASS.AllRequiredAssemblies).AddClasses(x =>
-            //    {
-            //        x.AssignableTo(typeof(IValidator<>));//来自指定的接口
-            //                                             //必须是类,且当前Class不是泛型类.排除ValidationSettingBase<T>,且不为抽象类
-            //        x.Where(a => { return a.IsClass && !a.IsAbstract && !a.IsGenericTypeDefinition; });
-            //    })
-            //    .AsImplementedInterfaces(x => x.IsGenericType) //实现基于他的接口
-            //    .WithTransientLifetime();  //AddTransient
-            //});
-
-            foreach (var api in Apis)
+            //AddProblemDetails
+            var addProblemDetails = services.BuildServiceProvider()
+                 .GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.AddProblemDetails;
+            if (addProblemDetails)
             {
-                //注册Api
-                services.AddScoped(api);
+                services.AddProblemDetails();
             }
-
-            //foreach (var binder in Binders)
-            //{
-            //    //注册ReqBinder
-            //    services.AddSingleton(binder);
-            //}
-
+            //add quickapis
+            foreach (var api in Apis) services.AddScoped(api);
             return services;
         }
 
@@ -127,7 +110,6 @@ namespace Biwen.QuickApi
         }
 
         #endregion
-
 
         /// <summary>
         /// Map Biwen.QuickApis
@@ -271,6 +253,9 @@ namespace Biwen.QuickApi
             var quickApiOptions = sp.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
 #pragma warning restore CS0618 // 类型或成员已过时
 
+            //使用系统自带的JsonSerializerOptions配置
+            var jsonSerializerOptions = sp.GetRequiredService<IOptions<JsonOptions>>().Value.SerializerOptions;
+
             //执行请求
             try
             {
@@ -316,7 +301,8 @@ namespace Biwen.QuickApi
 
                 //返回JSON
                 var expandoResult = rspToExpandoObject(result);
-                return TypedResults.Json(expandoResult, quickApiOptions?.JsonSerializerOptions);
+                //使用JsonSerializerOptions
+                return TypedResults.Json(expandoResult, jsonSerializerOptions);
             }
             catch (Exception ex)
             {
