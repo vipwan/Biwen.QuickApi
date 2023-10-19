@@ -361,11 +361,11 @@ public static partial class AppExtentions
                 {{
                     var checkResult = await CheckPolicy(ctx, ""$5"");
                     if (!checkResult.Flag) return checkResult.Result!;
-                    var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
-                    var vresult = req.Validate();
-                    if (!vresult.IsValid) {{ return TypedResults.ValidationProblem(vresult.ToDictionary()); }}
                     try
                     {{
+                        var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
+                        var vresult = req.Validate();
+                        if (!vresult.IsValid) {{ return TypedResults.ValidationProblem(vresult.ToDictionary()); }}
                         var result = await api.ExecuteAsync(req!);
                         var resultFlag = InnerResult(result);
                         if (resultFlag.Flag) return resultFlag.Result!;
