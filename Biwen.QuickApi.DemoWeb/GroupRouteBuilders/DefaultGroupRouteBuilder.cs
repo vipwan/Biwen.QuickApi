@@ -7,13 +7,13 @@ namespace Biwen.QuickApi.DemoWeb.GroupRouteBuilders
     /// </summary>
     public class DefaultGroupRouteBuilder : IQuickApiGroupRouteBuilder
     {
-        public string Group => string.Empty;
+        public string Group => "admin";
 
         public int Order => 1;
 
         public RouteGroupBuilder Builder(RouteGroupBuilder routeBuilder)
         {
-            routeBuilder.WithTags("Def");
+            routeBuilder.WithTags("authorization").WithGroupName("admin");
             return routeBuilder;
         }
     }

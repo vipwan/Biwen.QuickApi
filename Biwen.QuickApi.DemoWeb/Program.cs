@@ -191,14 +191,7 @@ app.UseOutputCache();
 app.UseResponseCaching();
 
 // 默认方式
-var apis = app.MapBiwenQuickApis();
-//如果你想对特定的分组批量操作. 比如授权等,可以这样做,但是注意该操作会覆盖掉原有的配置(如果存在的情况下)
-var groupAdmin = apis.FirstOrDefault(x => x.Group == "admin");
-groupAdmin.RouteGroupBuilder?
-    .WithTags("authorization")         //自定义Tags
-                                       //.RequireHost("localhost:5101")   //模拟需要指定Host访问接口
-    .WithGroupName("admin")            //自定义EndpointGroupName
-    ;
+app.MapBiwenQuickApis();
 
 // Gen方式
 //app.MapGenQuickApis(app.Services);
