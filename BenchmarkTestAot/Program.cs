@@ -3,7 +3,13 @@ using Biwen.QuickApi;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
-builder.Services.AddBiwenQuickApis(x => { x.RoutePrefix = ""; });
+
+
+builder.Services.AddBiwenQuickApis(x =>
+{
+    x.RoutePrefix = "";
+});
+
 //如果需要单独设置Json序列化配置项,请使用如下方式
 builder.Services.ConfigureHttpJsonOptions(options =>
 {

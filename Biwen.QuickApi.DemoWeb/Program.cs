@@ -43,7 +43,6 @@ builder.Services.Configure<AuthenticationOptions>(options =>
     options.DefaultChallengeScheme = "Cookies";
 });
 
-
 #region swagger 文档
 
 
@@ -154,8 +153,8 @@ builder.Services.AddKeyedScoped<HelloService>("hello");
 builder.Services.AddBiwenQuickApis(o =>
 {
     o.RoutePrefix = "quick";
-    o.AddProblemDetails = true;
 });
+
 
 //如果需要自定义异常返回格式
 builder.Services.AddSingleton<IQuickApiExceptionResultBuilder, CustomExceptionResultBuilder>();

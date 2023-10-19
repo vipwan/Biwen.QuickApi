@@ -38,13 +38,17 @@ namespace Biwen.QuickApi
             services.AddSingleton<IQuickApiExceptionResultBuilder, DefaultExceptionResultBuilder>();
             //options
             services.AddOptions<BiwenQuickApiOptions>().Configure(o => { options?.Invoke(o); });
+
+            /// <summary>
+            /// 开启ProblemDetails
+            /// 如需自定义请调用
+            /// <see cref="ProblemDetailsServiceCollectionExtensions.AddProblemDetails(IServiceCollection, Action{ProblemDetailsOptions}?)"/>
+            /// <seealso cref="ProblemDetailsOptions"/>
+            /// 500错误推荐重写并注册:<seealso cref="IQuickApiExceptionResultBuilder"/>
+            /// </summary>
             //AddProblemDetails
-            var addProblemDetails = services.BuildServiceProvider()
-                 .GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.AddProblemDetails;
-            if (addProblemDetails)
-            {
-                services.AddProblemDetails();
-            }
+            services.AddProblemDetails();
+
             //add quickapis
             foreach (var api in Apis) services.AddScoped(api);
             return services;
