@@ -24,7 +24,7 @@ namespace BenchmarkTestAot.Apis
     //}
     public class Req : BaseRequest<Req>
     {
-        [FromRoute] public int Id { get; set; }
+        public int Id { get; set; }
         public Req()
         {
             RuleFor(x => x.Id).InclusiveBetween(1, 5);

@@ -175,9 +175,20 @@ namespace Biwen.QuickApi
                     //如果标记的bind特性,不管是否找到,都不再继续查找(最高权重)
                     continue;
                 }
+
+                //route & 路由不支持别名
+                //route只支持基础类型,不可使用复杂类型 这属于约定!
+                {
+                    var qs = context.Request.RouteValues;
+                    if (qs.ContainsKey(prop.Name))
+                    {
+                        var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[prop.Name]?.ToString()!);
+                        prop.SetValue(@default, value);
+                        continue;
+                    }
+                }
                 //如果仍然未找到
                 {
-                    bool isBodySet = false;
                     var alias = prop.GetCustomAttribute<AliasAsAttribute>();
 
                     var requestMethod = context.Request.Method!;
@@ -256,22 +267,7 @@ namespace Biwen.QuickApi
                                     var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(value.ToString()!);
                                     prop.SetValue(@default, value2);
                                 }
-                                isBodySet = true;
                             }
-                        }
-                    }
-                    if (isBodySet) continue;
-                    //route & 路由不支持别名
-                    //route只支持基础类型,不可使用复杂类型 这属于约定!
-                    {
-                        var qs = context.Request.RouteValues;
-                        if (qs.ContainsKey(prop.Name))
-                        {
-                            //var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[prop.Name]?.ToString()!);
-                            //prop.SetValue(@default, value);
-
-                            prop.SetValue(@default, qs[prop.Name]);
-                            continue;
                         }
                     }
                 }
