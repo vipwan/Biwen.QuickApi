@@ -3,6 +3,8 @@
     using NSwag.Generation.AspNetCore;
     using NSwag.Generation.Processors.Contexts;
     using NSwag.Generation.Processors;
+    using NJsonSchema.Generation;
+    using System;
 
     /// <summary>
     /// 筛选器. 用于过滤掉所有非QuickApi的Endpoint
@@ -15,4 +17,7 @@
             return metaData.OfType<QuickApiMetadata>().Any();
         }
     }
+
+
+
 }

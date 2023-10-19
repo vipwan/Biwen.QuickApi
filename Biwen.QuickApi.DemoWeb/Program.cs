@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NSwag;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -170,6 +171,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
+
     //swagger ui
     app.UseQuickApiSwagger();
 

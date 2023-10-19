@@ -2,11 +2,14 @@
 using Biwen.QuickApi.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Newtonsoft.Json;
+using NJsonSchema.Generation;
 using NSwag;
 using NSwag.AspNetCore;
 using NSwag.Generation.AspNetCore;
 using NSwag.Generation.Processors.Security;
 using System.Net;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Biwen.QuickApi
 {
@@ -27,6 +30,12 @@ namespace Biwen.QuickApi
             SecurityOptions? securityOptions = null,
             bool onlyQuickApi = false)
         {
+            //配置JsonSerializerOptions的枚举转换器
+            //serviceCollection.Configure<JsonSerializerOptions>(x =>
+            //{
+            //    x.Converters.Add(new JsonStringEnumConverter());
+            //});
+
             serviceCollection.AddEndpointsApiExplorer();
             serviceCollection.AddOpenApiDocument(delegate (AspNetCoreOpenApiDocumentGeneratorSettings settings, IServiceProvider services)
             {
@@ -57,6 +66,9 @@ namespace Biwen.QuickApi
                 {
                     ContractResolver = new QuickApiContractResolver()
                 };
+
+                //EnumDescription
+                settings.GenerateEnumMappingDescription = true;
 
                 configure?.Invoke(settings);
             });

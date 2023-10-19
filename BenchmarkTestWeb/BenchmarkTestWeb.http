@@ -15,5 +15,20 @@ Content-Type: application/json
 ###
 
 POST {{BenchmarkTestWeb_HostAddress}}/my-minimal
+Accept: application/json
+Content-Type: application/json
+
+{
+  "userName": "vipwan",
+  "password": "12345678",
+  "email": "vipwms@ms.co.ltd",
+  "phone": "123456",
+  "address": "ShenZhen China",
+  "remark": "this is a QuickApi Test",
+  "Score":{
+    "ScoreName": "Chinese",
+    "Score": 80
+  }
+}
 
 ###
