@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.OutputCaching;
 using System.Reflection;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-
+using Biwen.QuickApi.Http;
 
 //用于测试生成器的代码
 
@@ -42,72 +42,137 @@ public static partial class AppExtentions
     /// <returns></returns>
     /// <exception cref="ArgumentNullException"></exception>
     /// <exception cref="QuickApiExcetion"></exception>
-    public static RouteGroupBuilder MapXGenQuickApis(this IEndpointRouteBuilder app, string prefix = "api")
+    public static (string Group, RouteGroupBuilder RouteGroupBuilder)[] MapXGenQuickApis(this IEndpointRouteBuilder app, IServiceProvider serviceProvider, string prefix = "api")
     {
-        if (string.IsNullOrEmpty(prefix))
+        //step0
+        if (prefix == null)
         {
             throw new ArgumentNullException(nameof(prefix));
         }
-
-        //prefix = prefix ?? throw new ArgumentNullException(nameof(prefix));
-
+        //middleware:
+        (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
         var groupBuilder = app.MapGroup(prefix);
+        using var scope = serviceProvider.CreateScope();
+        List<(string, RouteGroupBuilder)> groups = new();
+        //step1
+        {
+            //step2
+            //group: admin
+            var group123456 = GroupBuilder(groupBuilder, serviceProvider, "admin");
+            {
+                //step3
+                var map3f9bcb4e = group123456.MapMethods("test1", new[] { "GET" }, async (IHttpContextAccessor ctx, Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi api) =>
+                {
+                    await Task.CompletedTask;
+                    return Results.Ok();
+                });
+                //metadata
+                map3f9bcb4e.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi)));
+                //handlerbuilder
+                scope.ServiceProvider.GetRequiredService<Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi>().HandlerBuilder(map3f9bcb4e);
+                //outputcache
+                var map3f9bcb4eCache = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttribute<OutputCacheAttribute>();
+                if (map3f9bcb4eCache != null) map3f9bcb4e.WithMetadata(map3f9bcb4eCache);
+                //endpointgroup
+                var map3f9bcb4eEndpointgroupAttribute = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttribute<EndpointGroupNameAttribute>();
+                if (map3f9bcb4eEndpointgroupAttribute != null) map3f9bcb4e.WithMetadata(map3f9bcb4eEndpointgroupAttribute);
+                //authorizeattribute
+                var map3f9bcb4eauthorizeAttributes = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttributes<AuthorizeAttribute>();
+                if (map3f9bcb4eauthorizeAttributes.Any()) map3f9bcb4e.WithMetadata(new AuthorizeAttribute());
+                foreach (var authAttr in map3f9bcb4eauthorizeAttributes)
+                {
+                    map3f9bcb4e.WithMetadata(authAttr);
+                }
+                //allowanonymous
+                var map3f9bcb4eallowanonymous = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttribute<AllowAnonymousAttribute>();
+                if (map3f9bcb4eallowanonymous != null) map3f9bcb4e.WithMetadata(map3f9bcb4eallowanonymous);
+            }
+            groups.Add(("admin", group123456));
+        }
 
-        var req = new EmptyRequest();
+        return groups.ToArray();
+    }
 
+    /// <summary>
+    /// GroupBuilder
+    /// </summary>
+    /// <returns></returns>
+    private static RouteGroupBuilder GroupBuilder(RouteGroupBuilder groupBuilder, IServiceProvider serviceProvider, string group)
+    {
+        if (group == null) { return groupBuilder; }
+        groupBuilder = groupBuilder.MapGroup(group);
 
-
-        //验证器
-        //var vresult = req.RealValidator.Validate(req);
-        //if (!vresult.IsValid) { return TypedResults.ValidationProblem(vresult.ToDictionary()); }
-
-
-
-        groupBuilder.WithMetadata(new QuickApiMetadata(null));
-        //metadata
-        groupBuilder.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6)));
-
-        //outputcache
-        var outputCacheAttribute = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6).GetCustomAttribute<OutputCacheAttribute>();
-        if (outputCacheAttribute != null) groupBuilder.WithMetadata(outputCacheAttribute);
-
-
+        //GroupRouteBuilder
+        var groupRouteBuilders = serviceProvider.GetServices<IQuickApiGroupRouteBuilder>();
+        foreach (var groupRouteBuilder in groupRouteBuilders.OrderBy(x => x.Order))
+        {
+            if (groupRouteBuilder.Group.Equals(group, StringComparison.OrdinalIgnoreCase))
+            {
+                groupBuilder = groupRouteBuilder.Builder(groupBuilder);
+            }
+        }
         return groupBuilder;
     }
 
     /// <summary>
     /// 验证Policy
     /// </summary>
-    /// <exception cref="QuickApiExcetion"></exception>
-    private static async Task<(bool Flag, IResult? Result)> CheckPolicy(IHttpContextAccessor ctx, string? policy)
+    /// <exception cref=""QuickApiExcetion""></exception>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:删除未使用的私有成员", Justification = "<挂起>")]
+    async static Task<(bool Flag, IResult? Result)> CheckPolicy(IHttpContextAccessor ctx, string? policy)
     {
-        if (string.IsNullOrEmpty(policy))
         {
+            if (string.IsNullOrEmpty(policy))
+            {
+                {
+                    return (true, null);
+                }
+            }
+            if (!string.IsNullOrEmpty(policy))
+            {
+                {
+                    var httpContext = ctx.HttpContext;
+                    var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null, besure services.AddAuthorization() first!");
+                    var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
+                    if (!authorizationResult.Succeeded)
+                    {
+                        {
+                            return (false, TypedResults.Unauthorized());
+                        }
+                    }
+                }
+            }
             return (true, null);
         }
-        if (!string.IsNullOrEmpty(policy))
-        {
-            var httpContext = ctx.HttpContext;
-            var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null, besure services.AddAuthorization() first!");
-            var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
-            if (!authorizationResult.Succeeded)
-            {
-                return (true, TypedResults.Unauthorized());
-            }
-        }
-        return (true, null);
     }
 
-
-
-    abstract class Hello<T> where T : class, new()
+    /// <summary>
+    /// 内部返回的Result
+    /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:删除未使用的私有成员", Justification = "<挂起>")]
+    static (bool Flag, IResult? Result) InnerResult(object? result)
     {
-        public object GetThis()
         {
-            return this;
+            if (result is EmptyResponse)
+            {
+                {
+                    return (true, TypedResults.Ok());
+                }
+            }
+            if (result is ContentResponse content)
+            {
+                {
+                    return (true, TypedResults.Content(content.ToString()));
+                }
+            }
+            if (result is IResultResponse iresult)
+            {
+                {
+                    return (true, iresult.Result);
+                }
+            }
+            return (false, null);
         }
-
-
     }
 
 

@@ -20,9 +20,9 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-#pragma warning disable CS0618 // 类型或成员已过时
-        public static IServiceCollection AddBiwenQuickApis(this IServiceCollection services, Action<BiwenQuickApiOptions>? options = null)
-#pragma warning restore CS0618 // 类型或成员已过时
+        public static IServiceCollection AddBiwenQuickApis(
+            this IServiceCollection services, 
+            Action<BiwenQuickApiOptions>? options = null)
         {
             //JSON Options
             services.ConfigureHttpJsonOptions(x => { });
@@ -51,6 +51,18 @@ namespace Biwen.QuickApi
 
             //add quickapis
             foreach (var api in Apis) services.AddScoped(api);
+            return services;
+        }
+
+        /// <summary>
+        /// 添加对Group的的扩展支持
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddBiwenQuickApiGroupRouteBuilder<T>(this IServiceCollection services) where T : IQuickApiGroupRouteBuilder, new()
+        {
+            services.AddSingleton<IQuickApiGroupRouteBuilder>((sp) => { return new T(); });
             return services;
         }
 
@@ -141,9 +153,7 @@ namespace Biwen.QuickApi
             var groups = Apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
             var routeGroups = new List<(string, RouteGroupBuilder)>();
             //quickapi前缀
-#pragma warning disable CS0618 // 类型或成员已过时
             var prefix = app.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.RoutePrefix;
-#pragma warning restore CS0618 // 类型或成员已过时
             foreach (var group in groups)
             {
                 var g = app.MapGroup(string.Empty);
@@ -157,6 +167,17 @@ namespace Biwen.QuickApi
                     //url分组
                     g = g.MapGroup(group.Key);
                 }
+
+                //GroupRouteBuilder
+                var groupRouteBuilders = app.ServiceProvider.GetServices<IQuickApiGroupRouteBuilder>();
+                foreach (var groupRouteBuilder in groupRouteBuilders.OrderBy(x => x.Order))
+                {
+                    if (groupRouteBuilder.Group.Equals(group.Key, StringComparison.OrdinalIgnoreCase))
+                    {
+                        g = groupRouteBuilder.Builder(g);
+                    }
+                }
+
                 foreach (var apiType in group)
                 {
                     var attr = apiType.GetCustomAttribute<QuickApiAttribute>() ?? throw new QuickApiExcetion($"{apiType.Name}:必须标注QuickApi特性!");
@@ -253,10 +274,7 @@ namespace Biwen.QuickApi
             var sp = ctx.HttpContext!.RequestServices;
 
             var api = sp.GetRequiredService(apiType);
-#pragma warning disable CS0618 // 类型或成员已过时
             var quickApiOptions = sp.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
-#pragma warning restore CS0618 // 类型或成员已过时
-
             //使用系统自带的JsonSerializerOptions配置
             var jsonSerializerOptions = sp.GetRequiredService<IOptions<JsonOptions>>().Value.SerializerOptions;
 

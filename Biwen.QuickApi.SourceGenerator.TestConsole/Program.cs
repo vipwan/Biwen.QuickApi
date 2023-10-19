@@ -1,4 +1,5 @@
 ﻿using Biwen.QuickApi;
+using Biwen.QuickApi.SourceGenerator.TestConsole.GroupRouteBuilders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddQuickApiDocument(cfg =>
 {
     cfg.DocumentName = "QuickApi Test";
 });
+
+builder.Services.AddBiwenQuickApiGroupRouteBuilder<DefaultGroupRouteBuilder>();
 
 var app = builder.Build();
 

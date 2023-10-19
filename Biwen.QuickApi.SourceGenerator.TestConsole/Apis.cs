@@ -84,9 +84,7 @@
             await Task.CompletedTask;
             return new ContentResponse($"hello {request.Name}");
         }
-
     }
-
 
     [QuickApi("hello4")]
     public class Tset3QuickApi : BaseQuickApi<HelloRequest, HelloResponse>
@@ -95,7 +93,7 @@
         public override async Task<HelloResponse> ExecuteAsync(HelloRequest request)
         {
             await Task.CompletedTask;
-            return new HelloResponse("hello", "world");
+            return new HelloResponse("hello", request.Name);
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -108,9 +106,6 @@
 
             return base.HandlerBuilder(builder);
         }
-
-
-
     }
 
     [QuickApi("test6")]

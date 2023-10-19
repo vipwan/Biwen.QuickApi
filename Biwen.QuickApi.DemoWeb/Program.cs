@@ -1,5 +1,6 @@
 using Biwen.QuickApi.DemoWeb;
 using Biwen.QuickApi.DemoWeb.Apis;
+using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
 using Biwen.QuickApi.SourceGenerator;
 using Biwen.QuickApi.Swagger;
 using Microsoft.AspNetCore.Authentication;
@@ -154,6 +155,9 @@ builder.Services.AddBiwenQuickApis(o =>
 {
     o.RoutePrefix = "quick";
 });
+
+//如果需要自定义分组路由构建器
+builder.Services.AddBiwenQuickApiGroupRouteBuilder<DefaultGroupRouteBuilder>();
 
 
 //如果需要自定义异常返回格式

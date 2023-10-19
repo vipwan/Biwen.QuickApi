@@ -38,7 +38,9 @@ app.MapBiwenQuickApis();
 app.Run();
 
 
+#pragma warning disable CA1050 // 在命名空间中声明类型
 public record Todo(int Id, string? Title, DateOnly? DueBy = null, bool IsComplete = false);
+#pragma warning restore CA1050 // 在命名空间中声明类型
 
 [JsonSerializable(typeof(Todo[]))]
 internal partial class AppJsonSerializerContext : JsonSerializerContext
