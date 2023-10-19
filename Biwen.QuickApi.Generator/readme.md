@@ -19,6 +19,8 @@
 ### SourceGenerator生成代码样例
 ```csharp
 
+
+
 //code gen for Biwen.QuickApi
 //version :1.0.0.0
 //author :vipwan@outlook.com 万雅虎
@@ -33,6 +35,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Options;
 using Biwen.QuickApi;
 using Biwen.QuickApi.Attributes;
+using Biwen.QuickApi.Http;
 using Biwen.QuickApi.Metadata;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -49,77 +52,110 @@ public static partial class AppExtentions
     /// <summary>
     /// 注册所有的QuickApi(Gen版)
     /// </summary>
-    /// <param name="app"></param>
-    /// <param name="serviceProvider"></param>
-    /// <param name="prefix">全局路由前缀</param>
+    /// <param name=""app""></param>
+    /// <param name=""serviceProvider""></param>
+    /// <param name=""prefix"">全局路由前缀</param>
     /// <returns></returns>
-    /// <exception cref="ArgumentNullException"></exception>
-    /// <exception cref="QuickApiExcetion"></exception>
-    public static RouteGroupBuilder MapGenQuickApis(this IEndpointRouteBuilder app, IServiceProvider serviceProvider,string prefix = "api")
+    /// <exception cref=""ArgumentNullException""></exception>
+    /// <exception cref=""QuickApiExcetion""></exception>
+    public static (string Group, RouteGroupBuilder RouteGroupBuilder)[] MapGenQuickApis(this IEndpointRouteBuilder app, IServiceProvider serviceProvider,string prefix = "api")
     {
         if (string.IsNullOrEmpty(prefix))
         {
             throw new ArgumentNullException(nameof(prefix));
         }
-
         //middleware:
         (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
-
         var groupBuilder = app.MapGroup(prefix);
         using var scope = serviceProvider.CreateScope();
-        
-        var map1aa5c30c = groupBuilder.MapMethods("/test6", new[] { "GET" }, async (IHttpContextAccessor ctx, Biwen.QuickApi.SourceGenerator.TestConsole.Test6 api) =>
+        List<(string, RouteGroupBuilder)> groups = new();
+        //step1
+        {
+            //step2
+            //group: hello
+            var group4a35a790 = GroupBuilder(groupBuilder, serviceProvider, "hello");
             {
-                //验证策略
-                var checkResult = await CheckPolicy(ctx, "");
-                if (!checkResult.Flag) return checkResult.Result!;
-                //绑定对象
-                var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
-                //验证器
-                if (req.RealValidator.Validate(req) is ValidationResult vresult && !vresult!.IsValid)
+                //step3
+                var map8e0e61a8 = group4a35a790.MapMethods("test1", new[] { "GET","POST" }, async (IHttpContextAccessor ctx, Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi api) =>
                 {
-                    return TypedResults.ValidationProblem(vresult.ToDictionary());
-                }
-                //执行请求
-                try
-                {
-                    var result = await api.ExecuteAsync(req!);
-                    var resultFlag = InnerResult(result);
-                    if (resultFlag.Flag) return resultFlag.Result!;
-                    return TypedResults.Json(result);
-                }
-                catch (Exception ex)
-                {
-                    var exceptionHandlers = ctx.HttpContext!.RequestServices.GetServices<IQuickApiExceptionHandler>();
-                    //异常处理
-                    foreach (var handler in exceptionHandlers)
+                    var checkResult = await CheckPolicy(ctx, "admin");
+                    if (!checkResult.Flag) return checkResult.Result!;
+                    var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
+                    var vresult = req.Validate();
+                    if (!vresult.IsValid) { return TypedResults.ValidationProblem(vresult.ToDictionary()); }
+                    try
                     {
-                        await handler.HandleAsync(ex);
+                        var result = await api.ExecuteAsync(req!);
+                        var resultFlag = InnerResult(result);
+                        if (resultFlag.Flag) return resultFlag.Result!;
+                        return TypedResults.Json(result);
                     }
-                    //规范化异常返回
-                    var exceptionResultBuilder = ctx.HttpContext!.RequestServices.GetRequiredService<IQuickApiExceptionResultBuilder>();
-                    return await exceptionResultBuilder.ErrorResult(ex);
+                    catch (Exception ex)
+                    {
+                        var exceptionHandlers = ctx.HttpContext!.RequestServices.GetServices<IQuickApiExceptionHandler>();
+                        foreach (var handler in exceptionHandlers)
+                        {
+                            await handler.HandleAsync(ex);
+                        }
+                        var exceptionResultBuilder = ctx.HttpContext!.RequestServices.GetRequiredService<IQuickApiExceptionResultBuilder>();
+                        return await exceptionResultBuilder.ErrorResult(ex);
+                    }
+                });
+                //metadata
+                map8e0e61a8.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi)));
+                //handlerbuilder
+                scope.ServiceProvider.GetRequiredService<Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi>().HandlerBuilder(map8e0e61a8);
+                //outputcache
+                var map8e0e61a8Cache = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi).GetCustomAttribute<OutputCacheAttribute>();
+                if (map8e0e61a8Cache != null) map8e0e61a8.WithMetadata(map8e0e61a8Cache);
+                //endpointgroup
+                var map8e0e61a8EndpointgroupAttribute = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi).GetCustomAttribute<EndpointGroupNameAttribute>();
+                if (map8e0e61a8EndpointgroupAttribute != null) map8e0e61a8.WithMetadata(map8e0e61a8EndpointgroupAttribute);
+                //authorizeattribute
+                var map8e0e61a8authorizeAttributes = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi).GetCustomAttributes<AuthorizeAttribute>();
+                if (map8e0e61a8authorizeAttributes.Any()) map8e0e61a8.WithMetadata(new AuthorizeAttribute());
+                foreach (var authAttr in map8e0e61a8authorizeAttributes)
+                {
+                    map8e0e61a8.WithMetadata(authAttr);
                 }
-            });
-        
-        //metadata
-        map1aa5c30c.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6)));
-        //handler
-        scope.ServiceProvider.GetRequiredService<Biwen.QuickApi.SourceGenerator.TestConsole.Test6>().HandlerBuilder(map1aa5c30c);
-        //outputcache
-        var map1aa5c30cCache = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6).GetCustomAttribute<OutputCacheAttribute>();
-        if (map1aa5c30cCache != null) map1aa5c30c.WithMetadata(map1aa5c30cCache);
-        //endpointgroup
-        var map1aa5c30cEndpointgroupAttribute = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Test6).GetCustomAttribute<EndpointGroupNameAttribute>();
-        if (map1aa5c30cEndpointgroupAttribute != null) map1aa5c30c.WithMetadata(map1aa5c30cEndpointgroupAttribute);
-        
+                //allowanonymous
+                var map8e0e61a8allowanonymous = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi).GetCustomAttribute<AllowAnonymousAttribute>();
+                if (map8e0e61a8allowanonymous != null) map8e0e61a8.WithMetadata(map8e0e61a8allowanonymous);
+
+
+            }
+            groups.Add(("hello", group4a35a790));
+        }
+
+
+        return groups.ToArray();
+    }
+
+    /// <summary>
+    /// GroupBuilder
+    /// </summary>
+    /// <returns></returns>
+    private static RouteGroupBuilder GroupBuilder(RouteGroupBuilder groupBuilder, IServiceProvider serviceProvider, string group)
+    {
+        if (group == null) { return groupBuilder; }
+        groupBuilder = groupBuilder.MapGroup(group);
+
+        //GroupRouteBuilder
+        var groupRouteBuilders = serviceProvider.GetServices<IQuickApiGroupRouteBuilder>();
+        foreach (var groupRouteBuilder in groupRouteBuilders.OrderBy(x => x.Order))
+        {
+            if (groupRouteBuilder.Group.Equals(group, StringComparison.OrdinalIgnoreCase))
+            {
+                groupBuilder = groupRouteBuilder.Builder(groupBuilder);
+            }
+        }
         return groupBuilder;
     }
 
     /// <summary>
     /// 验证Policy
     /// </summary>
-    /// <exception cref="QuickApiExcetion"></exception>
+    /// <exception cref=""QuickApiExcetion""></exception>
     async static Task<(bool Flag, IResult? Result)> CheckPolicy(IHttpContextAccessor ctx, string? policy)
     {
         if (string.IsNullOrEmpty(policy))
@@ -138,22 +174,20 @@ public static partial class AppExtentions
         }
         return (true, null);
     }
+
     /// <summary>
     /// 内部返回的Result
     /// </summary>
     static (bool Flag, IResult? Result) InnerResult(object? result)
     {
-        //返回空结果
         if (result is EmptyResponse)
         {
-            return (true, TypedResults.Ok());//返回空
+            return (true, TypedResults.Ok());
         }
-        //返回文本结果
         if (result is ContentResponse content)
         {
             return (true, TypedResults.Content(content.ToString()));
         }
-        //返回IResult结果
         if (result is IResultResponse iresult)
         {
             return (true, iresult.Result);
@@ -162,7 +196,6 @@ public static partial class AppExtentions
     }
 }
 #pragma warning restore
-
 
 ```
 
