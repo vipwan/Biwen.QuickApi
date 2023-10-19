@@ -21,6 +21,9 @@ namespace Biwen.QuickApi
         /// </summary>
         internal Type RspType => typeof(Rsp);
 
+        /// <inheritdoc cref="IAntiforgery.IsAntiforgeryEnabled" />
+        public virtual bool IsAntiforgeryEnabled => false;
+
         /// <summary>
         /// 默认的请求参数绑定器
         /// </summary>
@@ -68,10 +71,10 @@ namespace Biwen.QuickApi
         public virtual RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
             //Accepts
-            if (ReqType != typeof(EmptyRequest))
-            {
-                builder?.Accepts(ReqType, "application/json");
-            }
+            //if (ReqType != typeof(EmptyRequest))
+            //{
+            //    builder?.Accepts(ReqType, "application/json");
+            //}
             //200
             if (RspType == typeof(ContentResponse))
             {

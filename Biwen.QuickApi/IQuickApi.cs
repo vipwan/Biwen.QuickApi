@@ -7,7 +7,7 @@ namespace Biwen.QuickApi
     /// <summary>
     /// 标记接口
     /// </summary>
-    internal interface IQuickApi<Req, Rsp> : IHandlerBuilder, IQuickApiMiddlewareHandler
+    internal interface IQuickApi<Req, Rsp> : IHandlerBuilder, IQuickApiMiddlewareHandler, IAntiforgeryApi
     {
         Task<Rsp> ExecuteAsync(Req request);
     }
@@ -45,4 +45,14 @@ namespace Biwen.QuickApi
         Task InvokeAfterAsync(HttpContext context);
     }
 
+    /// <summary>
+    /// 防伪令牌检测
+    /// </summary>
+    internal interface IAntiforgeryApi
+    {
+        /// <summary>
+        /// 是否启动防伪令牌检测
+        /// </summary>
+        bool IsAntiforgeryEnabled { get; }
+    }
 }

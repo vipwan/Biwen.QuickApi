@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Antiforgery;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
@@ -112,6 +114,78 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             });
 
             builder.WithTags("custom");
+            return base.HandlerBuilder(builder);
+        }
+    }
+
+
+
+    [QuickApi("ant-ui")]
+    public class AntUI : BaseQuickApiWithoutRequest<IResultResponse>
+    {
+        private readonly IAntiforgery _antiforgery;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public AntUI(IAntiforgery antiforgery, IHttpContextAccessor httpContextAccessor)
+        {
+            _antiforgery = antiforgery;
+            _httpContextAccessor = httpContextAccessor;
+        }
+
+        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        {
+            var token = _antiforgery.GetAndStoreTokens(_httpContextAccessor.HttpContext!);
+            var html = $"""
+              <html>
+                <body>
+                 <h3>Upload a image test</h3>
+                  <form name="form1" action="/quick/ant" method="post" enctype="multipart/form-data">
+                    <input name="{token.FormFieldName}" type="hidden" value="{token.RequestToken}"/>
+                    <input type="file" name="file" placeholder="Upload an image..." accept=".jpg,.png" />
+                    <input type="submit" />
+                  </form> 
+                </body>
+              </html>
+            """;
+            await Task.CompletedTask;
+            return Results.Content(html, "text/html").AsRspOfResult();
+        }
+    }
+
+
+    public class AntRequest : BaseRequest<AntRequest>
+    {
+        /// <summary>
+        /// 上传的文件
+        /// </summary>
+        public IFormFile? File { get; set; }
+
+        public AntRequest()
+        {
+            RuleFor(x => x.File).NotNull();
+        }
+    }
+
+    [QuickApi("ant", Verbs = Verb.POST)]
+    [QuickApiSummary("请注意不能在swaggerUI中测试", "请注意不能在swaggerUI中测试,因为没有给定正确的RequestToken,请打开quick/ant-ui测试通过")]
+    public class AntApi : BaseQuickApi<AntRequest, IResultResponse>
+    {
+        /// <summary>
+        /// 启动防伪验证
+        /// </summary>
+        public override bool IsAntiforgeryEnabled => true;
+
+        public override async Task<IResultResponse> ExecuteAsync(AntRequest request)
+        {
+            await Task.CompletedTask;
+            //return "Successed!".AsRspOfResult();
+            return Results.File(request.File!.OpenReadStream(), "image/png").AsRspOfResult();
+        }
+
+        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        {
+            //上传文件必须使用 multipart/form-data
+            builder.Accepts<AntRequest>("multipart/form-data");
+
             return base.HandlerBuilder(builder);
         }
     }

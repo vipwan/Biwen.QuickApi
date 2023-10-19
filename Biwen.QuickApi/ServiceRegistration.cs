@@ -9,6 +9,7 @@ using System.Dynamic;
 namespace Biwen.QuickApi
 {
     using Biwen.QuickApi.Http;
+    using Microsoft.AspNetCore.Antiforgery;
     using Microsoft.AspNetCore.Http.Json;
 
     public static class ServiceRegistration
@@ -31,6 +32,9 @@ namespace Biwen.QuickApi
             services.AddFluentValidationAutoValidation();
             services.AddHttpContextAccessor();
             services.AddMemoryCache();
+
+            //注册Antiforgery服务
+            services.AddAntiforgery();
 
             //重写AuthorizationMiddlewareResultHandler
             services.AddSingleton<IAuthorizationMiddlewareResultHandler, QuickApiAuthorizationMiddlewareResultHandler>();
@@ -147,6 +151,12 @@ namespace Biwen.QuickApi
             }
 
             //middleware:
+#if !NET8_0_OR_GREATER
+            (app as WebApplication)?.UseMiddleware<QuickApiAntiforgeryMiddleware>();
+#endif
+#if NET8_0_OR_GREATER
+            (app as WebApplication)?.UseAntiforgery();
+#endif
             (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
 
             //分组:
@@ -203,6 +213,22 @@ namespace Biwen.QuickApi
 
                     //metadata
                     rhBuilder.WithMetadata(new QuickApiMetadata(apiType));
+                    //antiforgery
+                    //net8.0以上使用UseAntiforgery,
+                    //net7.0以下使用QuickApiAntiforgeryMiddleware
+                    var antiforgeryApi = scope.ServiceProvider.GetRequiredService(apiType) as IAntiforgeryApi;
+#if NET8_0_OR_GREATER
+                    if (antiforgeryApi?.IsAntiforgeryEnabled is false)
+                    {
+                        rhBuilder.DisableAntiforgery();
+                    }
+#endif
+#if NET8_0_OR_GREATER
+                    if (antiforgeryApi?.IsAntiforgeryEnabled is true)
+                    {
+                        rhBuilder.WithMetadata(new RequireAntiforgeryTokenAttribute(true));
+                    }
+#endif
 
                     //outputcache
                     var outputCacheAttribute = apiType.GetCustomAttribute<OutputCacheAttribute>();
