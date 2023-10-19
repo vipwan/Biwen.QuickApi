@@ -20,7 +20,10 @@ namespace Biwen.QuickApi.Http
         public async Task Invoke(HttpContext context)
         {
             //GET请求不需要防伪验证
-            if(context.Request.Method == HttpMethods.Get)
+            if (context.Request.Method == HttpMethods.Get ||
+                context.Request.Method == HttpMethods.Trace ||
+                context.Request.Method == HttpMethods.Options ||
+                context.Request.Method == HttpMethods.Head)
             {
                 await _next(context);
                 return;

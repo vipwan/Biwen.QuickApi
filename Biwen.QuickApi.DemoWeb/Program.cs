@@ -161,7 +161,7 @@ builder.Services.AddBiwenQuickApiGroupRouteBuilder<DefaultGroupRouteBuilder>();
 
 
 //如果需要自定义异常返回格式
-builder.Services.AddSingleton<IQuickApiExceptionResultBuilder, CustomExceptionResultBuilder>();
+//builder.Services.AddSingleton<IQuickApiExceptionResultBuilder, CustomExceptionResultBuilder>();
 
 //自定义异常处理
 builder.Services.AddScoped<IQuickApiExceptionHandler, CustomExceptionHandler>();
