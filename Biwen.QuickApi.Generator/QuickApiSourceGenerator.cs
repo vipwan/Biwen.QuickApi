@@ -253,18 +253,15 @@ public static partial class AppExtentions
     /// <summary>
     /// 注册所有的QuickApi(Gen版)
     /// </summary>
-    /// <param name=""""app""""></param>
-    /// <param name=""""serviceProvider""""></param>
-    /// <param name=""""prefix"""">全局路由前缀</param>
+    /// <param name=""app""></param>
+    /// <param name=""serviceProvider""></param>
+    /// <param name=""prefix"">全局路由前缀</param>
     /// <returns></returns>
-    /// <exception cref=""""ArgumentNullException""""></exception>
-    /// <exception cref=""""QuickApiExcetion""""></exception>
+    /// <exception cref=""ArgumentNullException""></exception>
+    /// <exception cref=""QuickApiExcetion""></exception>
     public static (string Group, RouteGroupBuilder RouteGroupBuilder)[] MapGenQuickApis(this IEndpointRouteBuilder app, IServiceProvider serviceProvider,string prefix = ""api"")
     {{
-        if (string.IsNullOrEmpty(prefix))
-        {{
-            throw new ArgumentNullException(nameof(prefix));
-        }}
+        prefix ??= string.Empty;
         //middleware:
         (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
         var groupBuilder = app.MapGroup(prefix);
