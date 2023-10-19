@@ -48,7 +48,7 @@ namespace Biwen.QuickApi
     /// <summary>
     /// 防伪令牌检测
     /// </summary>
-    internal interface IAntiforgeryApi
+    public interface IAntiforgeryApi
     {
         /// <summary>
         /// 是否启动防伪令牌检测

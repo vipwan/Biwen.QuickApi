@@ -263,7 +263,14 @@ public static partial class AppExtentions
     {{
         prefix ??= string.Empty;
         //middleware:
+#if !NET8_0_OR_GREATER
+        (app as WebApplication)?.UseMiddleware<QuickApiAntiforgeryMiddleware>();
+#endif
+#if NET8_0_OR_GREATER
+        (app as WebApplication)?.UseAntiforgery();
+#endif
         (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
+
         var groupBuilder = app.MapGroup(prefix);
         using var scope = serviceProvider.CreateScope();
         List<(string, RouteGroupBuilder)> groups = new();
@@ -381,6 +388,22 @@ public static partial class AppExtentions
                 }});
                 //metadata
                 map$0.WithMetadata(new QuickApiMetadata(typeof($3)));
+
+                //antiforgery
+                //net8.0以上使用UseAntiforgery,
+                //net7.0以下使用QuickApiAntiforgeryMiddleware
+                var antiforgeryApi$0 = scope.ServiceProvider.GetRequiredService(typeof($3)) as IAntiforgeryApi;
+#if NET8_0_OR_GREATER
+                if (antiforgeryApi$0?.IsAntiforgeryEnabled is false)
+                {{
+                    map$0.DisableAntiforgery();
+                }}
+                if (antiforgeryApi$0?.IsAntiforgeryEnabled is true)
+                {{
+                    map$0.WithMetadata(new RequireAntiforgeryTokenAttribute(true));
+                }}
+#endif
+
                 //handlerbuilder
                 scope.ServiceProvider.GetRequiredService<$3>().HandlerBuilder(map$0);
                 //outputcache

@@ -222,8 +222,6 @@ namespace Biwen.QuickApi
                     {
                         rhBuilder.DisableAntiforgery();
                     }
-#endif
-#if NET8_0_OR_GREATER
                     if (antiforgeryApi?.IsAntiforgeryEnabled is true)
                     {
                         rhBuilder.WithMetadata(new RequireAntiforgeryTokenAttribute(true));
