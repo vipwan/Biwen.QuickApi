@@ -62,11 +62,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         [Description("querystring比如?member={\"id\":\"123\",\"userName\":\"vipwan\"}")]
         [FromQuery(Name = "member")]
-        public Member CurrentMember { get; set; }
+        public Member? CurrentMember { get; set; }
 
         [Description("header比如{\"id\":\"123\",\"userName\":\"vipwan\"}")]
         [FromHeader(Name = "headmember")]
-        public Member CurrentMemberFromHeader { get; set; }
+        public Member? CurrentMemberFromHeader { get; set; }
 
         [Description("MemberUserType枚举测试")]
         [FromQuery]
@@ -75,7 +75,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         [Description("值类型绑定测试")]
         [FromQuery]
         public int? OrderId { get; set; }
-
 
 
         public record Member(string Id,string UserName);
@@ -159,6 +158,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             {
                 request.Password = p;
             }
+
+            //FluentValidation当前有一个bug,当父对象为null时,无法正确的验证嵌套对象
+            request.CurrentMember = new HelloApiRequest.Member("1234", "viwan@co.ltd");
+            request.CurrentMemberFromHeader = new HelloApiRequest.Member("2346", "");
 
             await Task.CompletedTask;
             return request;
