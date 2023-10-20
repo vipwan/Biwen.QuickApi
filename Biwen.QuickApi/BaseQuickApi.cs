@@ -128,26 +128,18 @@ namespace Biwen.QuickApi
     }
 
     /// <summary>
-    /// 有请求参数的BaseQuickApi,没有返回值
+    /// 有请求参数的BaseQuickApi,返回IResultResponse
     /// </summary>
     /// <typeparam name="Req"></typeparam>
-    public abstract class BaseQuickApi<Req> : BaseQuickApi<Req, EmptyResponse> where Req : BaseRequest<Req>, new()
+    public abstract class BaseQuickApi<Req> : BaseQuickApi<Req, IResultResponse> where Req : BaseRequest<Req>, new()
     {
-        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-        {
-            builder.Produces(200, null);
-            return base.HandlerBuilder(builder);
-        }
-        //public override Task<EmptyResponse> ExecuteAsync(Req request)
-        //{
-        //    return Task.FromResult(EmptyResponse.New);
-        //}
+        public abstract override Task<IResultResponse> ExecuteAsync(Req request);
     }
 
     /// <summary>
     /// 没有请求参数的BaseQuickApi,没有返回值
     /// </summary>
-    public abstract class BaseQuickApi : BaseQuickApi<EmptyRequest, EmptyResponse>
+    public abstract class BaseQuickApi : BaseQuickApi<EmptyRequest, IResultResponse>
     {
         public BaseQuickApi()
         {
@@ -160,10 +152,8 @@ namespace Biwen.QuickApi
             return base.HandlerBuilder(builder);
         }
 
-        //public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
-        //{
-        //    return Task.FromResult(EmptyResponse.New);
-        //}
+        public abstract override Task<IResultResponse> ExecuteAsync(EmptyRequest request);
+
     }
 
     /// <summary>
@@ -189,4 +179,8 @@ namespace Biwen.QuickApi
     {
 
     }
+
+
+
+
 }

@@ -291,10 +291,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [Obsolete("过期测试",false)]
     public class Hello5Api : BaseQuickApi
     {
-        public override async Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return EmptyResponse.New;
+            return Results.Ok().AsRspOfResult();
         }
     }
 
@@ -322,9 +322,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("ContentApi", "ContentApi")]
     public class ContentApi : BaseQuickApi<EmptyRequest, ContentResponse>
     {
-        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<ContentResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult("Hello World content!".AsRspOfContent());
+            await Task.CompletedTask;
+            return new ContentResponse("Hello World content!");
         }
 
     }
@@ -334,9 +335,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     public class JustAsService : BaseQuickApiJustAsService<EmptyRequest, ContentResponse>
     {
-        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<ContentResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult("Hello World JustAsService!".AsRspOfContent());
+            return new ContentResponse("Hello World content!");
         }
     }
 
@@ -369,7 +370,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override async Task<ContentResponse> ExecuteAsync(FromBodyRequest request)
         {
-            return $"FromBodyApi {request.Id} {request.Name}".AsRspOfContent();
+            return new ContentResponse($"FromBodyApi {request.Id} {request.Name}");
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)

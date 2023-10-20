@@ -39,10 +39,10 @@
     [Authorize("admin")]
     public class TestQuickApi : BaseQuickApi
     {
-        public override async Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return EmptyResponse.New;
+            return Results.Ok().AsRspOfResult();
         }
     }
 
@@ -52,10 +52,10 @@
     [QuickApi("test2", Verbs = Verb.POST)]
     public class TestPostQuickApi : BaseQuickApi
     {
-        public override async Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return EmptyResponse.New;
+            return Results.Ok().AsRspOfResult();
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -111,9 +111,10 @@
     [QuickApi("test6")]
     public class Test6 : BaseQuickApi
     {
-        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(EmptyResponse.New);
+            await Task.CompletedTask;
+            return Results.Ok().AsRspOfResult();
         }
     }
 }

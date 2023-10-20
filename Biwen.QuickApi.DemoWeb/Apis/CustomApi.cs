@@ -17,11 +17,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             UseReqBinder<CustomApiRequestBinder>();
         }
 
-        public override async Task<EmptyResponse> ExecuteAsync(HelloApiRequest request)
+        public override async Task<IResultResponse> ExecuteAsync(HelloApiRequest request)
         {
             await Task.CompletedTask;
             Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
-            return EmptyResponse.New;
+            return Results.Ok().AsRspOfResult();
         }
 
         /// <summary>
@@ -59,9 +59,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     public class DeprecatedApi : BaseQuickApi
     {
 
-        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(EmptyResponse.New);
+            await Task.CompletedTask;
+            return Results.Ok().AsRspOfResult();
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -84,7 +85,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("抛出异常的接口", "抛出异常,测试500错误格式化")]
     public class ThrowErrorApi : BaseQuickApi
     {
-        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             throw new NotImplementedException();
         }

@@ -23,15 +23,14 @@ namespace Biwen.QuickApi
             return new IResultResponse(TypedResults.Content(result));
         }
 
-
-        /// <summary>
-        /// 转换为ContentResponse
-        /// </summary>
-        /// <param name="result"></param>
-        /// <returns></returns>
-        public static ContentResponse AsRspOfContent(this string result)
-        {
-            return new ContentResponse(result);
-        }
+        ///// <summary>
+        ///// 转换为ContentResponse
+        ///// </summary>
+        ///// <param name="result"></param>
+        ///// <returns></returns>
+        //public static ContentResponse AsRspOfContent(this string result)
+        //{
+        //    return new ContentResponse(result);
+        //}
     }
 }

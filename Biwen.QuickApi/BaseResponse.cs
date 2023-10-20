@@ -61,5 +61,26 @@ namespace Biwen.QuickApi
         }
 
         public IResult Result { get; set; }
+
+        /// <summary>
+        /// 直接返回OK
+        /// </summary>
+        public static IResultResponse OK => Results.Ok().AsRspOfResult();
+
+        /// <summary>
+        /// BadRequest
+        /// </summary>
+        public static IResultResponse BadRequest => Results.BadRequest().AsRspOfResult();
+
+        /// <summary>
+        /// NotFound
+        /// </summary>
+        public static IResultResponse NotFound => Results.NotFound().AsRspOfResult();
+
+        /// <summary>
+        /// Unauthorized
+        /// </summary>
+        public static IResultResponse Unauthorized => Results.Unauthorized().AsRspOfResult();
+
     }
 }

@@ -1,17 +1,14 @@
-﻿
-
-
-namespace Biwen.QuickApi.DemoWeb.Apis
+﻿namespace Biwen.QuickApi.DemoWeb.Apis
 {
-
 
     [QuickApi("middleware")]
     public class MiddlewareApi : BaseQuickApi
     {
 
-        public override Task<EmptyResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-           return Task.FromResult(EmptyResponse.New);
+            await Task.CompletedTask;
+            return IResultResponse.OK;
         }
 
 

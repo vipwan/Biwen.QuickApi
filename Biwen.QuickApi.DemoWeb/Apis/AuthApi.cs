@@ -113,11 +113,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [Authorize(policy: "admin")]
     [QuickApi("an-auth")]
     [QuickApiSummary("使用特性标记需要登录", "使用特性标记需要登录")]
-    public class AuthorizationTestApi : BaseQuickApiWithoutRequest<ContentResponse>
+    public class AuthorizationTestApi : BaseQuickApi
     {
-        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult("登录成功的请求!".AsRspOfContent());
+            await Task.CompletedTask;
+            return Results.Content("登录成功的请求!").AsRspOfResult();
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -131,11 +132,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [AllowAnonymous]
     [QuickApi("an-anonymous")]
     [QuickApiSummary("使用特性标记可以匿名", "使用特性标记可以匿名")]
-    public class AllowAnonymousTestApi : BaseQuickApiWithoutRequest<ContentResponse>
+    public class AllowAnonymousTestApi : BaseQuickApi
     {
-        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult("无效登录的请求!".AsRspOfContent());
+            await Task.CompletedTask;
+            return Results.Content("无效登录的请求!").AsRspOfResult();
         }
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
