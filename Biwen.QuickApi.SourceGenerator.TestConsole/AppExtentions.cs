@@ -49,10 +49,24 @@ public static partial class AppExtentions
         {
             throw new ArgumentNullException(nameof(prefix));
         }
+
         //middleware:
         (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
         var groupBuilder = app.MapGroup(prefix);
         using var scope = serviceProvider.CreateScope();
+
+        var options = scope.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
+        if (options.EnableAntiForgeryTokens)
+        {
+            //middleware:
+#if !NET8_0_OR_GREATER
+            (app as WebApplication)?.UseMiddleware<QuickApiAntiforgeryMiddleware>();
+#endif
+#if NET8_0_OR_GREATER
+        (app as WebApplication)?.UseAntiforgery();
+#endif
+        }
+
         List<(string, RouteGroupBuilder)> groups = new();
         //step1
         {
