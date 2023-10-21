@@ -150,10 +150,10 @@ namespace Biwen.QuickApi
                 throw new QuickApiExcetion($"所有QuickApi都必须标注QuickApi特性!");
             }
 
-            var biwenQuickApiOptions = app.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
+            var quickApiOptions = app.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
 
             //antiforgery middleware
-            if (biwenQuickApiOptions.EnableAntiForgeryTokens)
+            if (quickApiOptions.EnableAntiForgeryTokens)
             {
 #if !NET8_0_OR_GREATER
                 (app as WebApplication)?.UseMiddleware<QuickApiAntiforgeryMiddleware>();
@@ -170,7 +170,7 @@ namespace Biwen.QuickApi
             var routeGroups = new List<(string, RouteGroupBuilder)>();
 
             //quickapi前缀
-            var prefix = biwenQuickApiOptions.RoutePrefix;
+            var prefix = quickApiOptions.RoutePrefix;
             foreach (var group in groups)
             {
                 var g = app.MapGroup(string.Empty);
@@ -231,7 +231,7 @@ namespace Biwen.QuickApi
                     }
                     if (antiforgeryApi?.IsAntiforgeryEnabled is true)
                     {
-                        if (!biwenQuickApiOptions.EnableAntiForgeryTokens)
+                        if (!quickApiOptions.EnableAntiForgeryTokens)
                         {
                             throw new QuickApiExcetion($"如需要防伪验证,请启用BiwenQuickApiOptions.EnableAntiForgeryTokens!");
                         }
