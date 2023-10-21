@@ -29,6 +29,7 @@
 
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.AspNetCore.Routing;
@@ -60,31 +61,44 @@ public static partial class AppExtentions
     /// <exception cref=""QuickApiExcetion""></exception>
     public static (string Group, RouteGroupBuilder RouteGroupBuilder)[] MapGenQuickApis(this IEndpointRouteBuilder app, IServiceProvider serviceProvider,string prefix = "api")
     {
-        if (string.IsNullOrEmpty(prefix))
-        {
-            throw new ArgumentNullException(nameof(prefix));
-        }
+        prefix ??= string.Empty;
         //middleware:
         (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
+
         var groupBuilder = app.MapGroup(prefix);
         using var scope = serviceProvider.CreateScope();
+
+        var options = scope.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
+        if (options.EnableAntiForgeryTokens)
+        {
+            //middleware:
+#if !NET8_0_OR_GREATER
+            (app as WebApplication)?.UseMiddleware<QuickApiAntiforgeryMiddleware>();
+#endif
+#if NET8_0_OR_GREATER
+        (app as WebApplication)?.UseAntiforgery();
+#endif
+        }
+
         List<(string, RouteGroupBuilder)> groups = new();
+        
         //step1
         {
             //step2
-            //group: hello
-            var group4a35a790 = GroupBuilder(groupBuilder, serviceProvider, "hello");
+            //group: api2
+            var group57939de9 = GroupBuilder(groupBuilder, serviceProvider, "api2");
             {
                 //step3
-                var map8e0e61a8 = group4a35a790.MapMethods("test1", new[] { "GET","POST" }, async (IHttpContextAccessor ctx, Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi api) =>
+                
+                var map561c9ac5 = group57939de9.MapMethods("test1", new[] { "GET" }, async (IHttpContextAccessor ctx, Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi api) =>
                 {
-                    var checkResult = await CheckPolicy(ctx, "admin");
+                    var checkResult = await CheckPolicy(ctx, "");
                     if (!checkResult.Flag) return checkResult.Result!;
-                    var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
-                    var vresult = req.Validate();
-                    if (!vresult.IsValid) { return TypedResults.ValidationProblem(vresult.ToDictionary()); }
                     try
                     {
+                        var req = await api.ReqBinder.BindAsync(ctx.HttpContext!);
+                        var vresult = req.Validate();
+                        if (!vresult.IsValid) { return TypedResults.ValidationProblem(vresult.ToDictionary()); }
                         var result = await api.ExecuteAsync(req!);
                         var resultFlag = InnerResult(result);
                         if (resultFlag.Flag) return resultFlag.Result!;
@@ -102,32 +116,48 @@ public static partial class AppExtentions
                     }
                 });
                 //metadata
-                map8e0e61a8.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi)));
-                //handlerbuilder
-                scope.ServiceProvider.GetRequiredService<Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi>().HandlerBuilder(map8e0e61a8);
-                //outputcache
-                var map8e0e61a8Cache = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi).GetCustomAttribute<OutputCacheAttribute>();
-                if (map8e0e61a8Cache != null) map8e0e61a8.WithMetadata(map8e0e61a8Cache);
-                //endpointgroup
-                var map8e0e61a8EndpointgroupAttribute = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi).GetCustomAttribute<EndpointGroupNameAttribute>();
-                if (map8e0e61a8EndpointgroupAttribute != null) map8e0e61a8.WithMetadata(map8e0e61a8EndpointgroupAttribute);
-                //authorizeattribute
-                var map8e0e61a8authorizeAttributes = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi).GetCustomAttributes<AuthorizeAttribute>();
-                if (map8e0e61a8authorizeAttributes.Any()) map8e0e61a8.WithMetadata(new AuthorizeAttribute());
-                foreach (var authAttr in map8e0e61a8authorizeAttributes)
+                map561c9ac5.WithMetadata(new QuickApiMetadata(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi)));
+
+                //antiforgery
+                //net8.0以上使用UseAntiforgery,
+                //net7.0以下使用QuickApiAntiforgeryMiddleware
+                var antiforgeryApi561c9ac5 = scope.ServiceProvider.GetRequiredService(typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi)) as IAntiforgeryApi;
+#if NET8_0_OR_GREATER
+                if (antiforgeryApi561c9ac5?.IsAntiforgeryEnabled is false)
                 {
-                    map8e0e61a8.WithMetadata(authAttr);
+                    map561c9ac5.DisableAntiforgery();
+                }
+                if (antiforgeryApi561c9ac5?.IsAntiforgeryEnabled is true)
+                {
+                    if (!options.EnableAntiForgeryTokens)
+                        {
+                            throw new QuickApiExcetion($"如需要防伪验证,请启用BiwenQuickApiOptions.EnableAntiForgeryTokens!");
+                        }
+                    map561c9ac5.WithMetadata(new RequireAntiforgeryTokenAttribute(true));
+                }
+#endif
+
+                //handlerbuilder
+                scope.ServiceProvider.GetRequiredService<Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi>().HandlerBuilder(map561c9ac5);
+                //outputcache
+                var map561c9ac5Cache = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttribute<OutputCacheAttribute>();
+                if (map561c9ac5Cache != null) map561c9ac5.WithMetadata(map561c9ac5Cache);
+                //endpointgroup
+                var map561c9ac5EndpointgroupAttribute = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttribute<EndpointGroupNameAttribute>();
+                if (map561c9ac5EndpointgroupAttribute != null) map561c9ac5.WithMetadata(map561c9ac5EndpointgroupAttribute);
+                //authorizeattribute
+                var map561c9ac5authorizeAttributes = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttributes<AuthorizeAttribute>();
+                if (map561c9ac5authorizeAttributes.Any()) map561c9ac5.WithMetadata(new AuthorizeAttribute());
+                foreach (var authAttr in map561c9ac5authorizeAttributes)
+                {
+                    map561c9ac5.WithMetadata(authAttr);
                 }
                 //allowanonymous
-                var map8e0e61a8allowanonymous = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.TestQuickApi).GetCustomAttribute<AllowAnonymousAttribute>();
-                if (map8e0e61a8allowanonymous != null) map8e0e61a8.WithMetadata(map8e0e61a8allowanonymous);
-
-
+                var map561c9ac5allowanonymous = typeof(Biwen.QuickApi.SourceGenerator.TestConsole.Api2.TestQuickApi).GetCustomAttribute<AllowAnonymousAttribute>();
+                if (map561c9ac5allowanonymous != null) map561c9ac5.WithMetadata(map561c9ac5allowanonymous);
             }
-            groups.Add(("hello", group4a35a790));
+            groups.Add(("api2", group57939de9));
         }
-
-
         return groups.ToArray();
     }
 
