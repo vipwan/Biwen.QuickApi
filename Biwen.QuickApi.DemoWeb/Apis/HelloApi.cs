@@ -87,8 +87,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             No1 = 1, No2 = 2, No3 = 3,
         }
 
-
-        [FromKeyedServices("hello")]
+        //[FromKeyedServices("hello")]
+        [FromServices]
         public HelloService HelloService { get; set; }
 
         public HelloApiRequest()

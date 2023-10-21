@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 namespace Biwen.QuickApi.Http
 {
 
@@ -10,6 +11,9 @@ namespace Biwen.QuickApi.Http
     {
         private readonly RequestDelegate _next;
         private readonly IAntiforgery _antiforgery;
+
+        const string UrlEncodedFormContentType = "application/x-www-form-urlencoded";
+        const string MultipartFormContentType = "multipart/form-data";
 
         public QuickApiAntiforgeryMiddleware(RequestDelegate next, IAntiforgery antiforgery)
         {
@@ -28,7 +32,12 @@ namespace Biwen.QuickApi.Http
                 await _next(context);
                 return;
             }
-
+            var contentType = context.Request.ContentType;
+            if (string.IsNullOrEmpty(contentType))
+            {
+                await _next(context);
+                return;
+            }
 #if NET8_0_OR_GREATER
             var requiresValidation = context.GetEndpoint()?.Metadata.GetMetadata<IAntiforgeryMetadata>()?.RequiresValidation;
             //.NET8支持屏蔽防伪验证
@@ -38,24 +47,38 @@ namespace Biwen.QuickApi.Http
                 return;
             }
 #endif
-            var md = context.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>();
-            if (md == null || md.QuickApiType == null)
+            if (contentType.Equals(UrlEncodedFormContentType, StringComparison.OrdinalIgnoreCase) ||
+                contentType.StartsWith(MultipartFormContentType, StringComparison.OrdinalIgnoreCase))
             {
-                await _next(context);
-                return;
-            }
-            var antiforgeryApi = context.RequestServices.GetRequiredService(md.QuickApiType) as IAntiforgeryApi;
-            if (antiforgeryApi?.IsAntiforgeryEnabled is true)
-            {
-                try
+                var md = context.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>();
+                if (md == null || md.QuickApiType == null)
                 {
-                    await _antiforgery.ValidateRequestAsync(context);
-                }
-                catch (AntiforgeryValidationException)
-                {
-                    context.Response.StatusCode = StatusCodes.Status400BadRequest;
-                    await context.Response.WriteAsync("Invalid anti-forgery token");
+                    await _next(context);
                     return;
+                }
+
+                var antiforgeryApi = context.RequestServices.GetRequiredService(md.QuickApiType) as IAntiforgeryApi;
+                if (antiforgeryApi?.IsAntiforgeryEnabled is true)
+                {
+                    try
+                    {
+                        await _antiforgery.ValidateRequestAsync(context);
+                    }
+                    catch (AntiforgeryValidationException)
+                    {
+                        var problemDetails = new ProblemDetails
+                        {
+                            Title = "Antiforgery Validation Failed",
+                            Detail = "The provided antiforgery token was meant for a different claims-based user than the current user.",
+                            Status = StatusCodes.Status400BadRequest,
+                            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+                            Instance = context.Request.Path
+                        };
+                        context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                        await context.Response.WriteAsJsonAsync(problemDetails);
+
+                        return;
+                    }
                 }
             }
             await _next(context);

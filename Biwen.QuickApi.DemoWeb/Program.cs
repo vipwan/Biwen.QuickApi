@@ -147,7 +147,7 @@ new SecurityOptions());
 // Add services to the container.
 builder.Services.AddScoped<HelloService>();
 // keyed services
-builder.Services.AddKeyedScoped<HelloService>("hello");
+//builder.Services.AddKeyedScoped<HelloService>("hello");
 
 //
 builder.Services.AddBiwenQuickApis(o =>
