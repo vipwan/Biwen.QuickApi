@@ -150,20 +150,27 @@ namespace Biwen.QuickApi
                 throw new QuickApiExcetion($"所有QuickApi都必须标注QuickApi特性!");
             }
 
-            //middleware:
+            var biwenQuickApiOptions = app.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
+
+            //antiforgery middleware
+            if (biwenQuickApiOptions.EnableAntiForgeryTokens)
+            {
 #if !NET8_0_OR_GREATER
-            (app as WebApplication)?.UseMiddleware<QuickApiAntiforgeryMiddleware>();
+                (app as WebApplication)?.UseMiddleware<QuickApiAntiforgeryMiddleware>();
 #endif
 #if NET8_0_OR_GREATER
             (app as WebApplication)?.UseAntiforgery();
 #endif
+            }
+            //middleware:
             (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
 
             //分组:
             var groups = Apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
             var routeGroups = new List<(string, RouteGroupBuilder)>();
+
             //quickapi前缀
-            var prefix = app.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.RoutePrefix;
+            var prefix = biwenQuickApiOptions.RoutePrefix;
             foreach (var group in groups)
             {
                 var g = app.MapGroup(string.Empty);
@@ -224,10 +231,13 @@ namespace Biwen.QuickApi
                     }
                     if (antiforgeryApi?.IsAntiforgeryEnabled is true)
                     {
+                        if (!biwenQuickApiOptions.EnableAntiForgeryTokens)
+                        {
+                            throw new QuickApiExcetion($"如需要防伪验证,请启用BiwenQuickApiOptions.EnableAntiForgeryTokens!");
+                        }
                         rhBuilder.WithMetadata(new RequireAntiforgeryTokenAttribute(true));
                     }
 #endif
-
                     //outputcache
                     var outputCacheAttribute = apiType.GetCustomAttribute<OutputCacheAttribute>();
                     if (outputCacheAttribute != null)

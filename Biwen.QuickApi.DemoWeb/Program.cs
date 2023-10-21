@@ -1,7 +1,6 @@
 using Biwen.QuickApi.DemoWeb;
 using Biwen.QuickApi.DemoWeb.Apis;
 using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
-using Biwen.QuickApi.SourceGenerator;
 using Biwen.QuickApi.Swagger;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -154,6 +153,7 @@ builder.Services.AddKeyedScoped<HelloService>("hello");
 builder.Services.AddBiwenQuickApis(o =>
 {
     o.RoutePrefix = "quick";
+    o.EnableAntiForgeryTokens = true;
 });
 
 //如果需要自定义分组路由构建器
@@ -169,8 +169,7 @@ builder.Services.AddScoped<IQuickApiExceptionHandler, CustomExceptionHandler>();
 var app = builder.Build();
 
 
-
-if (app.Environment.IsDevelopment())
+if (!app.Environment.IsProduction())
 {
     app.UseDeveloperExceptionPage();
 
@@ -225,3 +224,10 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
 
 
 app.Run();
+
+
+//用于xunit Test
+namespace Biwen.QuickApi.DemoWeb
+{
+    public partial class Program { }
+}

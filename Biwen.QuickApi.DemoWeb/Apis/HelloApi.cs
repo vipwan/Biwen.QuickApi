@@ -96,9 +96,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             RuleFor(x => x.Name).NotNull().Length(2, 36);
             RuleFor(x => x.Password).NotNull().Length(2, 36);
             RuleFor(x => x.UserName).EmailAddress();//要求邮箱
-            //嵌套对象验证
-            RuleFor(x=>x.CurrentMember.UserName).EmailAddress();
-            RuleFor(x=>x.CurrentMemberFromHeader.UserName).EmailAddress();
+            //注意嵌套对象的验证,必须手动指定 When() != null 的情况
+            RuleFor(x => x.CurrentMember.UserName).EmailAddress().When(x => x.CurrentMember != null);
+            RuleFor(x => x.CurrentMemberFromHeader.UserName).EmailAddress().When(x => x.CurrentMemberFromHeader != null);
         }
     }
 

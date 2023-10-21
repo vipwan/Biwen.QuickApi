@@ -231,6 +231,7 @@
 
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.AspNetCore.Routing;
@@ -263,16 +264,23 @@ public static partial class AppExtentions
     {{
         prefix ??= string.Empty;
         //middleware:
-#if !NET8_0_OR_GREATER
-        (app as WebApplication)?.UseMiddleware<QuickApiAntiforgeryMiddleware>();
-#endif
-#if NET8_0_OR_GREATER
-        (app as WebApplication)?.UseAntiforgery();
-#endif
         (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
 
         var groupBuilder = app.MapGroup(prefix);
         using var scope = serviceProvider.CreateScope();
+
+        var options = scope.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
+        if (options.EnableAntiForgeryTokens)
+        {{
+            //middleware:
+#if !NET8_0_OR_GREATER
+            (app as WebApplication)?.UseMiddleware<QuickApiAntiforgeryMiddleware>();
+#endif
+#if NET8_0_OR_GREATER
+        (app as WebApplication)?.UseAntiforgery();
+#endif
+        }}
+
         List<(string, RouteGroupBuilder)> groups = new();
         $apis
         return groups.ToArray();
@@ -400,6 +408,10 @@ public static partial class AppExtentions
                 }}
                 if (antiforgeryApi$0?.IsAntiforgeryEnabled is true)
                 {{
+                    if (!options.EnableAntiForgeryTokens)
+                        {{
+                            throw new QuickApiExcetion($""如需要防伪验证,请启用BiwenQuickApiOptions.EnableAntiForgeryTokens!"");
+                        }}
                     map$0.WithMetadata(new RequireAntiforgeryTokenAttribute(true));
                 }}
 #endif
