@@ -29,7 +29,8 @@ namespace Biwen.QuickApi.Infrastructure
             "NSwag",
             "YamlDotNet",
             "NJsonSchema",
-            "Namotion.Reflection"
+            "Namotion.Reflection",
+            "MiniProfiler"
         };
 
         private static Assembly[] _allRequiredAssemblies = null!;
