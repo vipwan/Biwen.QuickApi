@@ -3,24 +3,24 @@
 ## 项目介绍
 
 ```c#
-    public class MySotre
+public class MySotre
+{
+    public static Todo[] SampleTodos()
     {
-        public static Todo[] SampleTodos()
-        {
-            return new Todo[] {
-                new(1, "Walk the dog"),
-                new(2, "Do the dishes", DateOnly.FromDateTime(DateTime.Now)),
-            };
-        }
+        return new Todo[] {
+            new(1, "Walk the dog"),
+            new(2, "Do the dishes", DateOnly.FromDateTime(DateTime.Now)),
+        };
     }
-    [QuickApi("todos")]
-    public class TodosApi : BaseQuickApi<EmptyRequest, IResultResponse>
+}
+[QuickApi("todos")]
+public class TodosApi : BaseQuickApi<EmptyRequest, IResultResponse>
+{
+    public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
     {
-        public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
-        {
-            return Task.FromResult(Results.Ok(MySotre.SampleTodos()).AsRspOfResult());
-        }
+        return Task.FromResult(Results.Ok(MySotre.SampleTodos()).AsRspOfResult());
     }
+}
 ``` 
 - (MinimalApi as REPR) Biwen.QuickApi遵循了 REPR 设计 （Request-Endpoint-Response）
 - 开箱即用的Route, Policy,Binder,validator & 整合NSwag支持
@@ -68,86 +68,86 @@ app.MapBiwenQuickApis();
 
 ```csharp
 
-    public class HelloApiRequest : BaseRequest<HelloApiRequest>
-    {
-        [Description("Name Desc")]
-        public string? Name { get; set; }
+public class HelloApiRequest : BaseRequest<HelloApiRequest>
+{
+    [Description("Name Desc")]
+    public string? Name { get; set; }
 
-        /// <summary>
-        /// 别名绑定字段
-        /// </summary>
-        [AliasAs("anotherAlias")]
-        public string? Alias { get; set; }
-        /// <summary>
-        /// FromQuery特性绑定字段
-        /// </summary>
-        [FromQuery("q")]
-        public string? Q { get; set; }
-        public HelloApiRequest()
-        {
-            RuleFor(x => x.Name).NotNull().Length(5, 10);
-        }
+    /// <summary>
+    /// 别名绑定字段
+    /// </summary>
+    [AliasAs("anotherAlias")]
+    public string? Alias { get; set; }
+    /// <summary>
+    /// FromQuery特性绑定字段
+    /// </summary>
+    [FromQuery("q")]
+    public string? Q { get; set; }
+    public HelloApiRequest()
+    {
+        RuleFor(x => x.Name).NotNull().Length(5, 10);
     }
+}
     
-    /// <summary>
-    /// 上传文件FileUploadRequest 
-    /// </summary>
-    public class FileUploadRequest : BaseRequest<FileUploadRequest>
-    {
-        public IFormFile? File { get; set; }
+/// <summary>
+/// 上传文件FileUploadRequest 
+/// </summary>
+public class FileUploadRequest : BaseRequest<FileUploadRequest>
+{
+    public IFormFile? File { get; set; }
 
-        public FileUploadRequest()
+    public FileUploadRequest()
+    {
+        RuleFor(x => x.File).NotNull();
+    }
+}
+
+/// <summary>
+/// 模拟自定义绑定的Request
+/// </summary>
+public class CustomApiRequest : BaseRequest<CustomApiRequest>
+{
+    public string? Name { get; set; }
+
+    public CustomApiRequest()
+    {
+        RuleFor(x => x.Name).NotNull().Length(5, 10);
+    }
+}
+/// <summary>
+/// 标记FromBody,表示这个请求对象是FromBody的
+/// </summary>
+[FromBody]
+public class FromBodyRequest : BaseRequest<FromBodyRequest>
+{
+    public int Id { get; set; }
+    public string? Name { get; set; }
+
+    public FromBodyRequest()
+    {
+        RuleFor(x => x.Id).InclusiveBetween(1, 100);//必须1~100
+    }
+}
+/// <summary>
+/// 自定义的绑定器
+/// </summary>
+public class CustomApiRequestBinder : IReqBinder<CustomApiRequest>
+{
+    public async Task<CustomApiRequest> BindAsync(HttpContext context)
+    {
+        var request = new CustomApiRequest
         {
-            RuleFor(x => x.File).NotNull();
-        }
+            Name = context.Request.Query["c"]
+        };
+        await Task.CompletedTask;
+        return request;
     }
+}
 
-    /// <summary>
-    /// 模拟自定义绑定的Request
-    /// </summary>
-    public class CustomApiRequest : BaseRequest<CustomApiRequest>
-    {
-        public string? Name { get; set; }
-
-        public CustomApiRequest()
-        {
-            RuleFor(x => x.Name).NotNull().Length(5, 10);
-        }
-    }
-    /// <summary>
-    /// 标记FromBody,表示这个请求对象是FromBody的
-    /// </summary>
-    [FromBody]
-    public class FromBodyRequest : BaseRequest<FromBodyRequest>
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-
-        public FromBodyRequest()
-        {
-            RuleFor(x => x.Id).InclusiveBetween(1, 100);//必须1~100
-        }
-    }
-    /// <summary>
-    /// 自定义的绑定器
-    /// </summary>
-    public class CustomApiRequestBinder : IReqBinder<CustomApiRequest>
-    {
-        public async Task<CustomApiRequest> BindAsync(HttpContext context)
-        {
-            var request = new CustomApiRequest
-            {
-                Name = context.Request.Query["c"]
-            };
-            await Task.CompletedTask;
-            return request;
-        }
-    }
-
-    public class HelloApiResponse : BaseResponse
-    {
-        public string? Message { get; set; }
-    }
+public class HelloApiResponse : BaseResponse
+{
+    public string? Message { get; set; }
+}
 
 ```
 
@@ -155,152 +155,152 @@ app.MapBiwenQuickApis();
 
 ```csharp
 
-    /// <summary>
-    /// get ~/admin/index
-    /// </summary>
-    [QuickApi("index", Group = "admin", Verbs = Verb.GET | Verb.POST, Policy = "admin")]
-    [QuickApiSummary("this is summary","this is description")]
-    public class NeedAuthApi : BaseQuickApi
+/// <summary>
+/// get ~/admin/index
+/// </summary>
+[QuickApi("index", Group = "admin", Verbs = Verb.GET | Verb.POST, Policy = "admin")]
+[QuickApiSummary("this is summary","this is description")]
+public class NeedAuthApi : BaseQuickApi
+{
+    public override EmptyResponse Execute(EmptyRequest request)
     {
-        public override EmptyResponse Execute(EmptyRequest request)
+        return EmptyResponse.Instance;
+    }
+}
+
+/// <summary>
+/// get ~/hello/world/{name}
+/// </summary>
+[QuickApi("world/{name}", Group = "hello", Verbs = Verb.GET | Verb.POST)]
+public class HelloApi : BaseQuickApi<HelloApiRequest, HelloApiResponse>
+{
+    private readonly HelloService _service;
+    private readonly IHttpContextAccessor _httpContextAccessor;
+
+    public Hello4Api(HelloService service,IHttpContextAccessor httpContextAccessor)
+    {
+        _service = service;
+        _httpContextAccessor = httpContextAccessor;
+    }
+
+    public override HelloApiResponse Execute(HelloApiRequest request)
+    {
+        var hello = _service.Hello($"hello world {_httpContextAccessor.HttpContext!.Request.Path} !");
+        return new HelloApiResponse
         {
-            return EmptyResponse.Instance;
-        }
+            Message = hello
+        };
+    }
+}
+
+/// <summary>
+/// get ~/custom?c=11112222
+/// </summary>
+[QuickApi("custom", Verbs = Verb.GET)]
+public class CustomApi : BaseQuickApi<CustomApiRequest>
+{
+    public CustomApi()
+    {
+        //自定义绑定器
+        UseReqBinder<CustomApiRequestBinder>();
+    }
+
+    public override async Task<EmptyResponse> ExecuteAsync(CustomApiRequest request)
+    {
+        await Task.CompletedTask;
+        Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
+        return EmptyResponse.New;
     }
 
     /// <summary>
-    /// get ~/hello/world/{name}
+    /// 提供minimal扩展
     /// </summary>
-    [QuickApi("world/{name}", Group = "hello", Verbs = Verb.GET | Verb.POST)]
-    public class HelloApi : BaseQuickApi<HelloApiRequest, HelloApiResponse>
+    /// <param name="builder"></param>
+    /// <returns></returns>
+    public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
     {
-        private readonly HelloService _service;
-        private readonly IHttpContextAccessor _httpContextAccessor;
-
-        public Hello4Api(HelloService service,IHttpContextAccessor httpContextAccessor)
+        //自定义描述
+        builder.WithOpenApi(operation => new(operation)
         {
-            _service = service;
-            _httpContextAccessor = httpContextAccessor;
-        }
+            Summary = "This is a summary",
+            Description = "This is a description"
+        });
 
-        public override HelloApiResponse Execute(HelloApiRequest request)
+        //自定义标签
+        builder.WithTags("custom");
+
+        //自定义过滤器
+        builder.AddEndpointFilter(async (context, next) =>
         {
-            var hello = _service.Hello($"hello world {_httpContextAccessor.HttpContext!.Request.Path} !");
-            return new HelloApiResponse
-            {
-                Message = hello
-            };
+            Console.WriteLine("自定义过滤器!");
+            return await next(context);
+        });
+        //默认实现了Accepts和Produces
+        return base.HandlerBuilder(builder);
+        //如果完全自定义直接返回Builder
+        //return builder;
         }
-    }
+}
 
     /// <summary>
-    /// get ~/custom?c=11112222
-    /// </summary>
-    [QuickApi("custom", Verbs = Verb.GET)]
-    public class CustomApi : BaseQuickApi<CustomApiRequest>
+/// 提供对IResult的封装支持
+/// </summary>
+[QuickApi("iresult", Verbs = Verb.GET)]
+public class IResultTestApi : BaseQuickApiWithoutRequest<IResultResponse>
+{
+    public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
     {
-        public CustomApi()
-        {
-            //自定义绑定器
-            UseReqBinder<CustomApiRequestBinder>();
-        }
-
-        public override async Task<EmptyResponse> ExecuteAsync(CustomApiRequest request)
-        {
-            await Task.CompletedTask;
-            Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
-            return EmptyResponse.New;
-        }
-
-        /// <summary>
-        /// 提供minimal扩展
-        /// </summary>
-        /// <param name="builder"></param>
-        /// <returns></returns>
-        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-        {
-            //自定义描述
-            builder.WithOpenApi(operation => new(operation)
-            {
-                Summary = "This is a summary",
-                Description = "This is a description"
-            });
-
-            //自定义标签
-            builder.WithTags("custom");
-
-            //自定义过滤器
-            builder.AddEndpointFilter(async (context, next) =>
-            {
-                Console.WriteLine("自定义过滤器!");
-                return await next(context);
-            });
-            //默认实现了Accepts和Produces
-            return base.HandlerBuilder(builder);
-            //如果完全自定义直接返回Builder
-            //return builder;
-         }
+        return Results.Ok("Hello World IResult!").AsRsp();
     }
 
-     /// <summary>
-    /// 提供对IResult的封装支持
-    /// </summary>
-    [QuickApi("iresult", Verbs = Verb.GET)]
-    public class IResultTestApi : BaseQuickApiWithoutRequest<IResultResponse>
+    public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
     {
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
-        {
-            return Results.Ok("Hello World IResult!").AsRsp();
-        }
-
-        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-        {
-            //针对IResultResponse,需要完全自定义Produces,QuickApi无法自动识别
-            builder.Produces(200, typeof(string), contentType: "text/plain");
-            return builder;
-            //return base.HandlerBuilder(builder);
-        }
+        //针对IResultResponse,需要完全自定义Produces,QuickApi无法自动识别
+        builder.Produces(200, typeof(string), contentType: "text/plain");
+        return builder;
+        //return base.HandlerBuilder(builder);
     }
+}
     
-    /// <summary>
-    /// 上传文件测试
-    /// 请使用postman & apifox 测试
-    /// </summary>
-    [QuickApi("fromfile", Verbs = Verb.POST)]
-    [QuickApiSummary("上传文件测试", "上传文件测试")]
-    public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
+/// <summary>
+/// 上传文件测试
+/// 请使用postman & apifox 测试
+/// </summary>
+[QuickApi("fromfile", Verbs = Verb.POST)]
+[QuickApiSummary("上传文件测试", "上传文件测试")]
+public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
+{
+    public override async Task<IResultResponse> ExecuteAsync(FileUploadRequest request)
     {
-        public override async Task<IResultResponse> ExecuteAsync(FileUploadRequest request)
+        //测试上传一个文本文件并读取内容
+        if (request.File != null)
         {
-            //测试上传一个文本文件并读取内容
-            if (request.File != null)
+            using (var sr = new StreamReader(request.File.OpenReadStream()))
             {
-                using (var sr = new StreamReader(request.File.OpenReadStream()))
-                {
-                    var content = await sr.ReadToEndAsync();
-                    return Results.Ok(content).AsRspOfResult();
-                }
+                var content = await sr.ReadToEndAsync();
+                return Results.Ok(content).AsRspOfResult();
             }
-            return Results.BadRequest("no file").AsRspOfResult();
         }
-        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-        {
-            builder.Accepts<FileUploadRequest>("multipart/form-data");
-            return builder;
-        }
+        return Results.BadRequest("no file").AsRspOfResult();
     }
-
-    /// <summary>
-    /// JustAsService 只会被服务发现，不会被注册到路由表
-    /// </summary>
-    [QuickApi(""), JustAsService]
-    public class JustAsService : BaseQuickApi<EmptyRequest, ContentResponse>
+    public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
     {
-        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
-        {
-            return Task.FromResult(new ContentResponse("Hello World JustAsService!"));
-        }
+        builder.Accepts<FileUploadRequest>("multipart/form-data");
+        return builder;
     }
+}
+
+/// <summary>
+/// JustAsService 只会被服务发现，不会被注册到路由表
+/// </summary>
+[QuickApi(""), JustAsService]
+public class JustAsService : BaseQuickApi<EmptyRequest, ContentResponse>
+{
+    public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+    {
+        return Task.FromResult(new ContentResponse("Hello World JustAsService!"));
+    }
+}
 ```
 
 ### Step4 Enjoy !
