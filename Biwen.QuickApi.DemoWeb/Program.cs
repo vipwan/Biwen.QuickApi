@@ -7,8 +7,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using NSwag;
+using NSwag.AspNetCore;
 using System.Text;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -158,11 +161,8 @@ builder.Services.AddBiwenQuickApis(o =>
 
 //如果需要自定义分组路由构建器
 builder.Services.AddBiwenQuickApiGroupRouteBuilder<DefaultGroupRouteBuilder>();
-
-
 //如果需要自定义异常返回格式
 //builder.Services.AddSingleton<IQuickApiExceptionResultBuilder, CustomExceptionResultBuilder>();
-
 //自定义异常处理
 builder.Services.AddScoped<IQuickApiExceptionHandler, CustomExceptionHandler>();
 
@@ -174,9 +174,13 @@ if (!app.Environment.IsProduction())
     app.UseDeveloperExceptionPage();
 
     //swagger ui
-    app.UseQuickApiSwagger();
+    app.UseQuickApiSwagger(uiConfig: o =>
+    {
+        //o.CustomJavaScriptPath = "/miniprofiler-sc";
+    });
 
     app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
+
 }
 else
 {

@@ -111,7 +111,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     [Authorize]
     [Authorize(policy: "admin")]
-    [QuickApi("an-auth")]
+    [QuickApi("an-auth",Group ="admin")]
     [QuickApiSummary("使用特性标记需要登录", "使用特性标记需要登录")]
     public class AuthorizationTestApi : BaseQuickApi
     {
