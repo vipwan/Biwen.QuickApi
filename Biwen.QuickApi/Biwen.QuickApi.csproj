@@ -36,7 +36,7 @@
 	<ItemGroup>
 		<PackageReference Include="NSwag.AspNetCore" Version="13.20.0" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.12" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
 	</ItemGroup>
 
 

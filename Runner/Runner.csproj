@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.13.9" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="7.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="7.0.13" />
   </ItemGroup>
 
   <ItemGroup>
