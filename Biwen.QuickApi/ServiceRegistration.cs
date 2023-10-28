@@ -9,7 +9,9 @@ using System.Dynamic;
 namespace Biwen.QuickApi
 {
     using Biwen.QuickApi.Http;
+#if NET8_0_OR_GREATER
     using Microsoft.AspNetCore.Antiforgery;
+#endif
     using Microsoft.AspNetCore.Http.Json;
 
     public static class ServiceRegistration
