@@ -60,8 +60,29 @@ namespace Biwen.QuickApi
 
         private class InnerValidator : AbstractValidator<T>
         {
+
+            private static bool? _hasAnnotationAttr = null;
+            private static bool HasAnnotationAttr
+            {
+                get
+                {
+                    if (_hasAnnotationAttr == null)
+                    {
+                        _hasAnnotationAttr = typeof(T).GetProperties().Any(
+                            prop => prop.GetCustomAttributes(true).Any(x => x is MSDA.ValidationAttribute));
+                    }
+                    return _hasAnnotationAttr.Value;
+                }
+            }
+
             protected override bool PreValidate(ValidationContext<T> context, ValidationResult result)
             {
+                //用于提升性能,如果没有DataAnnotation,则不再执行DataAnnotation的验证
+                if (!HasAnnotationAttr)
+                {
+                    return base.PreValidate(context, result);
+                }
+
                 var req = context.InstanceToValidate;
                 //ms内建的DataAnnotations验证器
                 var mc = new MSDA.ValidationContext(req);

@@ -123,6 +123,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     public class FromBodyRequest : BaseRequestFromBody<FromBodyRequest>
     {
         public int Id { get; set; }
+        [StringLength(20, MinimumLength = 2)]
         public string? Name { get; set; }
 
         public FromBodyRequest()
