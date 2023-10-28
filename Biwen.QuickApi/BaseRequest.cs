@@ -60,18 +60,21 @@ namespace Biwen.QuickApi
 
         private class InnerValidator : AbstractValidator<T>
         {
+            //private static bool? _hasAnnotationAttr = null;
 
-            private static bool? _hasAnnotationAttr = null;
             private static bool HasAnnotationAttr
             {
                 get
                 {
-                    if (_hasAnnotationAttr == null)
+                    if (Caching.TAnnotationAttrs.TryGetValue(typeof(T), out var attr))
                     {
-                        _hasAnnotationAttr = typeof(T).GetProperties().Any(
-                            prop => prop.GetCustomAttributes(true).Any(x => x is MSDA.ValidationAttribute));
+                        return attr;
                     }
-                    return _hasAnnotationAttr.Value;
+                    var has = typeof(T).GetProperties().Any(
+                        prop => prop.GetCustomAttributes(true).Any(x => x is MSDA.ValidationAttribute));
+
+                    Caching.TAnnotationAttrs.TryAdd(typeof(T), has);
+                    return has;
                 }
             }
 
@@ -95,6 +98,7 @@ namespace Biwen.QuickApi
                 return base.PreValidate(context, result);
             }
         }
+
     }
 
     /// <summary>
