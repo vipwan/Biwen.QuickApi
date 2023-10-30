@@ -11,6 +11,10 @@ namespace Biwen.QuickApi.SourceGenerator
         }
 
         public const string TypeName = "QuickApi";
+        /// <summary>
+        /// AutoAnnotation
+        /// </summary>
+        public const string AutoAnnotationName = "AutoAnnotation";
 
         public const string JustAsServiceTypeName = "JustAsService";
 
