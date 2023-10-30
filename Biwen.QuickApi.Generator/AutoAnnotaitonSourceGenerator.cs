@@ -10,6 +10,8 @@ using System.Text;
 namespace Biwen.QuickApi.SourceGenerator
 {
 
+    //https://github.com/dotnet/extensions/blob/89ba9815bf2bf672090a26ebab7f3c2615ec404c/src/Generators/Microsoft.Gen.EnumStrings/EnumStringsGenerator.cs
+
 
     [Generator(LanguageNames.CSharp)]
 #pragma warning disable RS1036 // 指定分析器禁止的 API 强制设置
