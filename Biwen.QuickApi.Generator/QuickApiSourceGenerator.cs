@@ -6,6 +6,7 @@
     using System.Text;
     //using System.Threading;
     using Microsoft.CodeAnalysis;
+    using Microsoft.CodeAnalysis.CSharp;
     //using Microsoft.CodeAnalysis.CSharp;
     using Microsoft.CodeAnalysis.CSharp.Syntax;
     using Microsoft.CodeAnalysis.Text;
@@ -211,13 +212,27 @@
 
                 //ctx.AddSource($"QuickApiExtentions.g.cs", SourceText.From(endpointSource, Encoding.UTF8));
 
+                //format:
+                genx = FormatContent(genx);
                 ctx.AddSource($"QuickApiExtentions.g.cs", SourceText.From(genx, Encoding.UTF8));
 
-
                 #endregion
-
             });
         }
+
+        /// <summary>
+        /// 格式化代码
+        /// </summary>
+        /// <param name="csCode"></param>
+        /// <returns></returns>
+        private static string FormatContent(string csCode)
+        {
+            var tree = CSharpSyntaxTree.ParseText(csCode);
+            var root = tree.GetRoot().NormalizeWhitespace();
+            var ret = root.ToFullString();
+            return ret;
+        }
+
 
         #region template
 
