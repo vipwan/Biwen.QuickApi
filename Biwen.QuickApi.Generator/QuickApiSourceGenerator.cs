@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Data;
     using System.Linq;
     using System.Text;
     //using System.Threading;
@@ -62,6 +63,28 @@
 
         #endregion
 
+
+        #region DiagnosticDescriptor
+
+        /// <summary>
+        /// JustAsService信息
+        /// </summary>
+#pragma warning disable RS2008 // 启用分析器发布跟踪
+        private static readonly DiagnosticDescriptor JustAsServiceInformation = new(id: "GEN002",
+#pragma warning restore RS2008 // 启用分析器发布跟踪
+                                                                              title: "来自Biwen.QuickApi.SourceGenerator的信息",
+#pragma warning disable RS1032 // 正确定义诊断消息
+                                                                              messageFormat: "标注特性[JustAsService]的QuickApi将不会生成路由.",
+#pragma warning restore RS1032 // 正确定义诊断消息
+                                                                              category: typeof(QuickApiSourceGenerator).Assembly.GetName().Name,
+                                                                              DiagnosticSeverity.Warning,
+                                                                              isEnabledByDefault: true);
+
+
+        #endregion
+
+
+
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
 
@@ -95,9 +118,13 @@
 
             //});
 
+            var compilationAndTypes = context.CompilationProvider.Combine(quickApiProvider);
 
-            context.RegisterSourceOutput(quickApiProvider, (ctx, source) =>
+            context.RegisterSourceOutput(compilationAndTypes, (ctx, source) =>
             {
+                var compilation = source.Left;
+                var types = source.Right;
+
                 #region 生成QuickApi代码
 
                 var sb = new StringBuilder();
@@ -108,7 +135,7 @@
                 //存储所有的路由信息
                 List<(string? Group, RouteInfo Info)> groups = new();
 
-                foreach (var classDeclarationSyntax in source.AsEnumerable())
+                foreach (var classDeclarationSyntax in types.AsEnumerable())
                 {
                     var fullname = classDeclarationSyntax.Identifier.ValueText;
                     var attrs = classDeclarationSyntax.AttributeLists.ToList();
@@ -129,6 +156,7 @@
                         //屏蔽JustAsService
                         if (attrs.Any(x => x.Attributes.Any(x => x.Name.ToString() == QuickApiType.JustAsServiceTypeName)))
                         {
+                            ctx.ReportDiagnostic(Diagnostic.Create(JustAsServiceInformation, attr.GetLocation()));
                             continue;
                         }
 

@@ -24,4 +24,18 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole.Api2
             return Task.FromResult(new IResultResponse(Results.Json(new { Hello = "world" })));
         }
     }
+
+
+    /// <summary>
+    /// JustAsService
+    /// </summary>
+    [QuickApi(""),JustAsService]
+    public class TJustAsServiceQuickApi : BaseQuickApiWithoutRequest<IResultResponse>
+    {
+        public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        {
+            return Task.FromResult(new IResultResponse(Results.Json(new { Hello = "world" })));
+        }
+    }
+
 }
