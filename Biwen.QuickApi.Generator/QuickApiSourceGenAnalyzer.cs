@@ -26,9 +26,7 @@ namespace Biwen.QuickApi.SourceGenerator
         private static readonly DiagnosticDescriptor NoMarkedAttribute = new(id: "GEN003",
 #pragma warning restore RS2008 // 启用分析器发布跟踪
                                                                               title: "QuickApi类没有标记[QuickApi]特性",
-#pragma warning disable RS1032 // 正确定义诊断消息
                                                                               messageFormat: "当前QuickApi类没有标记[QuickApi]特性,将无法生成路由,确定要这样做!?",
-#pragma warning restore RS1032 // 正确定义诊断消息
                                                                               category: typeof(QuickApiSourceGenerator).Assembly.GetName().Name,
                                                                               DiagnosticSeverity.Warning,
                                                                               helpLinkUri: helplink,
