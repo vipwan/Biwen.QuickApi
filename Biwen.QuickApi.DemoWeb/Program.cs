@@ -5,6 +5,7 @@ using Biwen.QuickApi.Swagger;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -145,6 +146,11 @@ new SecurityOptions());
 #endregion
 
 
+builder.Services.AddHttpLogging(options =>
+{
+    options.LoggingFields = HttpLoggingFields.All;
+    options.CombineLogs = true;
+});
 
 
 // Add services to the container.
@@ -192,6 +198,13 @@ app.UseAuthorization();
 
 app.UseOutputCache();
 app.UseResponseCaching();
+
+
+if (!app.Environment.IsProduction())
+{
+    //Http Logging
+    app.UseHttpLogging();
+}
 
 // Ä¬ÈÏ·½Ê½
 app.MapBiwenQuickApis();
