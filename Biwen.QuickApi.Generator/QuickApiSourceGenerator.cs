@@ -72,17 +72,16 @@
 #pragma warning disable RS2008 // 启用分析器发布跟踪
         private static readonly DiagnosticDescriptor JustAsServiceInformation = new(id: "GEN002",
 #pragma warning restore RS2008 // 启用分析器发布跟踪
-                                                                              title: "来自Biwen.QuickApi.SourceGenerator的信息",
+                                                                              title: "标记[JustAsService]将不会生成路由",
 #pragma warning disable RS1032 // 正确定义诊断消息
                                                                               messageFormat: "标注特性[JustAsService]的QuickApi将不会生成路由.",
 #pragma warning restore RS1032 // 正确定义诊断消息
                                                                               category: typeof(QuickApiSourceGenerator).Assembly.GetName().Name,
-                                                                              DiagnosticSeverity.Warning,
+                                                                              DiagnosticSeverity.Info,
                                                                               isEnabledByDefault: true);
 
 
         #endregion
-
 
 
         public void Initialize(IncrementalGeneratorInitializationContext context)

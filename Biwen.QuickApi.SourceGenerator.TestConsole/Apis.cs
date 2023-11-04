@@ -108,7 +108,7 @@
         }
     }
 
-    [QuickApi("test6")]
+    //[QuickApi("test6")]
     public class Test6 : BaseQuickApi
     {
         public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
