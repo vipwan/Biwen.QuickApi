@@ -50,7 +50,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("autogen", Verbs = Verb.POST)]
     [QuickApiSummary("自动生成的Request", "自动生成的接口")]
     [EndpointGroupName("group1")]
-    public class AutoGenApi : BaseQuickApi<AutoGenRequest, IResultResponse>
+    public  class AutoGenApi : BaseQuickApi<AutoGenRequest, IResultResponse>
     {
         public override async Task<IResultResponse> ExecuteAsync(AutoGenRequest request)
         {
