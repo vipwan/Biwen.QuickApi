@@ -3,6 +3,30 @@ using System.ComponentModel;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
 {
+    public class BaseEntity
+    {
+        public int Id { get; set; }
+    }
+
+    public class UserInfo : BaseEntity
+    {
+        public string? Name { get; set; }
+        public int Age { get; set; }
+
+        public string? Remark { get; set; }
+
+        public string? Address { get; set; }
+
+        public string? Phone { get; set; }
+
+        public string? EscapedCol { get; set; }
+    }
+
+
+    [AutoDto(typeof(UserInfo), nameof(UserInfo.Remark), "EscapedCol")]
+    public partial class UserInfoDto { }
+
+
     /// <summary>
     /// 分页
     /// </summary>
@@ -55,6 +79,15 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         public override async Task<IResultResponse> ExecuteAsync(AutoGenRequest request)
         {
             await Task.CompletedTask;
+
+            UserInfoDto userinfo = new()
+            {
+                Name = "张三",
+                Age = 18,
+                Address = "北京市朝阳区",
+                Phone = "13888888888"
+            };
+
             return Results.Json(request).AsRspOfResult();
         }
     }
