@@ -30,7 +30,8 @@ namespace Biwen.QuickApi.Infrastructure
             "YamlDotNet",
             "NJsonSchema",
             "Namotion.Reflection",
-            "MiniProfiler"
+            "MiniProfiler",
+            "Biwen.AutoClassGen" //AutoClassGen
         };
 
         private static Assembly[] _allRequiredAssemblies = null!;
