@@ -32,14 +32,12 @@
 			<PackagePath>\</PackagePath>
 		</None>
 	</ItemGroup>
-
 	<ItemGroup>
-		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.1.0.0" />
+		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.1.0.2" />
 		<PackageReference Include="NSwag.AspNetCore" Version="13.20.0" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
 	</ItemGroup>
-
 
 
 </Project>
