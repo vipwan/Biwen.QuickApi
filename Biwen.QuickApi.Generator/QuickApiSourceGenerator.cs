@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Data;
     using System.Linq;
     using System.Text;
     //using System.Threading;
@@ -13,9 +12,7 @@
     using Microsoft.CodeAnalysis.Text;
 
     [Generator(LanguageNames.CSharp)]
-#pragma warning disable RS1036 // 指定分析器禁止的 API 强制设置
     public class QuickApiSourceGenerator : IIncrementalGenerator
-#pragma warning restore RS1036 // 指定分析器禁止的 API 强制设置
     {
         #region helper
 
@@ -228,7 +225,7 @@
 
                 var genx = RootTemp
                     .Replace("$version", typeof(QuickApiSourceGenerator).Assembly.GetName().Version?.ToString() ?? "")
-                    .Replace("$namespace", string.Join(Environment.NewLine, namespacesSyntaxs))
+                    .Replace("$namespace", string.Join("\r\n", namespacesSyntaxs))
                     .Replace("$apis", groupRoot.ToString());
 
 

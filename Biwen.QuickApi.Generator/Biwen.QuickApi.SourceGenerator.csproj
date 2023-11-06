@@ -18,7 +18,7 @@
 		<AnalyzerLanguage>cs</AnalyzerLanguage>
 		<InjectIsExternalInitOnLegacy>true</InjectIsExternalInitOnLegacy>
 		<LangVersion>latest</LangVersion>
-
+		<EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
 		<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
 		<CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
 		<IsRoslynComponent>true</IsRoslynComponent>

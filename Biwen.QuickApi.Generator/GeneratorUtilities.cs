@@ -12,12 +12,10 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 [assembly: System.Resources.NeutralResourcesLanguage("en-us")]
 
-#pragma warning disable CA1716
 namespace Microsoft.Gen.Shared;
-#pragma warning restore CA1716
 
 #if !SHARED_PROJECT
-[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[ExcludeFromCodeCoverage]
 #endif
 internal static class GeneratorUtilities
 {

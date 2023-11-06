@@ -1,18 +1,14 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.CodeAnalysis.Text;
 using System.Collections.Immutable;
 using System.Linq;
-using System.Xml.Linq;
 
 namespace Biwen.QuickApi.SourceGenerator
 {
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-#pragma warning disable RS1036 // 指定分析器禁止的 API 强制设置
     public class QuickApiSourceGenAnalyzer : DiagnosticAnalyzer
-#pragma warning restore RS1036 // 指定分析器禁止的 API 强制设置
     {
         const string helplink = "https://github.com/vipwan/Biwen.QuickApi";
 
