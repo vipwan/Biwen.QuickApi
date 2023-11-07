@@ -1,10 +1,11 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
+﻿// <copyright file="EmitterBase.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace Microsoft.Gen.Shared;
 
 using System.Collections.Generic;
 using System.Text;
-
-namespace Microsoft.Gen.Shared;
 
 #if !SHARED_PROJECT
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -14,13 +15,13 @@ internal class EmitterBase
     private const int DefaultStringBuilderCapacity = 1024;
     private const int IndentChars = 4;
 
-    private readonly StringBuilder _sb = new(DefaultStringBuilderCapacity);
-    private readonly string[] _padding = new string[16];
-    private int _indent;
+    private readonly StringBuilder sb = new(DefaultStringBuilderCapacity);
+    private readonly string[] padding = new string[16];
+    private int indent;
 
     public EmitterBase(bool emitPreamble = true)
     {
-        var padding = _padding;
+        var padding = this.padding;
         for (int i = 0; i < padding.Length; i++)
         {
             padding[i] = new string(' ', i * IndentChars);
@@ -55,28 +56,28 @@ internal class EmitterBase
 
     protected void OutIndent()
     {
-        _ = _sb.Append(_padding[_indent]);
+        _ = sb.Append(padding[indent]);
     }
 
     protected string GetPaddingString(byte indent)
     {
-        return _padding[indent];
+        return padding[indent];
     }
 
     protected void OutLn()
     {
-        _ = _sb.AppendLine();
+        _ = sb.AppendLine();
     }
 
     protected void OutLn(string line)
     {
         OutIndent();
-        _ = _sb.AppendLine(line);
+        _ = sb.AppendLine(line);
     }
 
     protected void OutPP(string line)
     {
-        _ = _sb.AppendLine(line);
+        _ = sb.AppendLine(line);
     }
 
     protected void OutEnumeration(IEnumerable<string> e)
@@ -94,10 +95,15 @@ internal class EmitterBase
         }
     }
 
-    protected void Out(string text) => _ = _sb.Append(text);
-    protected void Out(char ch) => _ = _sb.Append(ch);
-    protected void Indent() => _indent++;
-    protected void Unindent() => _indent--;
+    protected void Out(string text) => _ = sb.Append(text);
+
+    protected void Out(char ch) => _ = sb.Append(ch);
+
+    protected void Indent() => indent++;
+
+    protected void Unindent() => indent--;
+
     protected void OutGeneratedCodeAttribute() => OutLn($"[{GeneratorUtilities.GeneratedCodeAttribute}]");
-    protected string Capture() => _sb.ToString();
+
+    protected string Capture() => sb.ToString();
 }

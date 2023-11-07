@@ -1,11 +1,9 @@
-﻿
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 
 namespace Biwen.QuickApi.SourceGenerator
 {
     internal static class SymbolLoader
     {
-
         internal const string RestApiAttribute = "Biwen.QuickApi.Attributes.QuickApiAttribute";
 
         internal const string JustAsServiceAttribute = "Biwen.QuickApi.Attributes.JustAsServiceAttribute";
@@ -33,7 +31,7 @@ namespace Biwen.QuickApi.SourceGenerator
             {
                 AliasAsAttribute = aliasAsAttribute,
                 JustAsServiceAttribute = justAsServiceAttribute,
-                RestApiAttribute = restApiAttribute
+                RestApiAttribute = restApiAttribute,
             };
         }
     }

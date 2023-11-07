@@ -1,5 +1,4 @@
-﻿
-namespace Biwen.QuickApi.SourceGenerator
+﻿namespace Biwen.QuickApi.SourceGenerator
 {
     using Microsoft.CodeAnalysis;
     using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -12,7 +11,6 @@ namespace Biwen.QuickApi.SourceGenerator
 #endif
     internal class QuickApiSyntaxReceivers : ISyntaxContextReceiver
     {
-
         internal static ISyntaxContextReceiver Create() => new QuickApiSyntaxReceivers();
 
         public List<ClassDeclarationSyntax> ClassDeclarationSyntaxes { get; } = new();
@@ -20,7 +18,7 @@ namespace Biwen.QuickApi.SourceGenerator
         /// <summary>
         /// QuickApi
         /// </summary>
-        const string QuickApiAttributeName = "QuickApi";
+        private const string QuickApiAttributeName = "QuickApi";
 
         /// <summary>
         /// 查找所有标记[QuickApi]的接口
@@ -38,11 +36,13 @@ namespace Biwen.QuickApi.SourceGenerator
 
                 if (quickApiAttribute != null)
                 {
-                    //TestQuickApi
+                    // TestQuickApi
                     var fullname = classDeclarationSyntax.Identifier.ValueText;
-                    //QuickApi(\"test1\")
+
+                    // QuickApi(\"test1\")
                     var fname2 = quickApiAttribute.ToFullString();
-                    //QuickApi
+
+                    // QuickApi
                     var name = quickApiAttribute.Name.ToString();
 
                     ClassDeclarationSyntaxes.Add(classDeclarationSyntax);

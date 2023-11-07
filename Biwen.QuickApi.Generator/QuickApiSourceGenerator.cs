@@ -1,13 +1,15 @@
-﻿namespace Biwen.QuickApi.SourceGenerator
+﻿// <copyright file="QuickApiSourceGenerator.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace Biwen.QuickApi.SourceGenerator
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    //using System.Threading;
     using Microsoft.CodeAnalysis;
     using Microsoft.CodeAnalysis.CSharp;
-    //using Microsoft.CodeAnalysis.CSharp;
     using Microsoft.CodeAnalysis.CSharp.Syntax;
     using Microsoft.CodeAnalysis.Text;
 
@@ -17,39 +19,46 @@
         #region helper
 
         /// <summary>
-        /// 将字符串转换为Verbs
+        /// 将字符串转换为Verbs.
         /// </summary>
-        /// <param name="verbs"></param>
-        /// <returns></returns>
-        static List<string> ToVerbs(string? verbs)
+        private static List<string> ToVerbs(string? verbs)
         {
+            if (string.IsNullOrEmpty(verbs))
+            {
+                return new List<string>() { "GET" };
+            }
 
-            if (string.IsNullOrEmpty(verbs)) { return new List<string>() { "GET" }; }
             var list = new List<string>();
             if (verbs!.Contains("GET"))
             {
                 list.Add("GET");
             }
+
             if (verbs.Contains("POST"))
             {
                 list.Add("POST");
             }
+
             if (verbs.Contains("PUT"))
             {
                 list.Add("PUT");
             }
+
             if (verbs.Contains("DELETE"))
             {
                 list.Add("DELETE");
             }
+
             if (verbs.Contains("PATCH"))
             {
                 list.Add("PATCH");
             }
+
             if (verbs.Contains("HEAD"))
             {
                 list.Add("HEAD");
             }
+
             if (verbs.Contains("OPTIONS"))
             {
                 list.Add("OPTIONS");
@@ -59,31 +68,26 @@
         }
 
         #endregion
-
-
         #region DiagnosticDescriptor
 
         /// <summary>
         /// JustAsService信息
         /// </summary>
 #pragma warning disable RS2008 // 启用分析器发布跟踪
-        private static readonly DiagnosticDescriptor JustAsServiceInformation = new(id: "GEN002",
+        private static readonly DiagnosticDescriptor JustAsServiceInformation = new(
+            id: "GEN002",
 #pragma warning restore RS2008 // 启用分析器发布跟踪
-                                                                              title: "标记[JustAsService]将不会生成路由",
+            title: "标记[JustAsService]将不会生成路由",
 #pragma warning disable RS1032 // 正确定义诊断消息
-                                                                              messageFormat: "标注特性[JustAsService]的QuickApi将不会生成路由.",
+            messageFormat: "标注特性[JustAsService]的QuickApi将不会生成路由.",
 #pragma warning restore RS1032 // 正确定义诊断消息
-                                                                              category: typeof(QuickApiSourceGenerator).Assembly.GetName().Name,
-                                                                              DiagnosticSeverity.Info,
-                                                                              isEnabledByDefault: true);
-
-
+            category: typeof(QuickApiSourceGenerator).Assembly.GetName().Name,
+            DiagnosticSeverity.Info,
+            isEnabledByDefault: true);
         #endregion
-
 
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
-
             // quickApi
             var quickApiProvider = context.SyntaxProvider.CreateSyntaxProvider(
                 (syntax, cancellationToken) => syntax is ClassDeclarationSyntax
@@ -96,10 +100,8 @@
                      .Where(x => x.AttributeLists.SelectMany(x => x.Attributes)
                      .Any(x => x.Name.ToString() == QuickApiType.TypeName)).Collect();
 
-
-
-            //顶级语句是没有main函数的
-            //var main = context.SyntaxProvider.CreateSyntaxProvider(
+            // 顶级语句是没有main函数的
+            // var main = context.SyntaxProvider.CreateSyntaxProvider(
             //                   (syntax, cancellationToken) => syntax is MethodDeclarationSyntax
             //                   {
             //                       Identifier: { ValueText: "Main" }
@@ -107,13 +109,11 @@
             //                   (context, cancellationToken) =>
             //                   (MethodDeclarationSyntax)context.Node).Collect();
 
-            //context.RegisterSourceOutput(main, (ctx, source) =>
-            //{
+            // context.RegisterSourceOutput(main, (ctx, source) =>
+            // {
             //    var method = source.AsEnumerable();
             //    var len = method.Count();
-
-            //});
-
+            // });
             var compilationAndTypes = context.CompilationProvider.Combine(quickApiProvider);
 
             context.RegisterSourceOutput(compilationAndTypes, (ctx, source) =>
@@ -125,10 +125,10 @@
 
                 var sb = new StringBuilder();
 
-                //存储所有的命名空间
+                // 存储所有的命名空间
                 IList<string> namespaces = new List<string>();
 
-                //存储所有的路由信息
+                // 存储所有的路由信息
                 List<(string? Group, RouteInfo Info)> groups = new();
 
                 foreach (var classDeclarationSyntax in types.AsEnumerable())
@@ -137,7 +137,7 @@
                     var attrs = classDeclarationSyntax.AttributeLists.ToList();
                     var nsName = string.Empty;
 
-                    //(classDeclarationSyntax.Parent as Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax).Name.ToString()
+                    // (classDeclarationSyntax.Parent as Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax).Name.ToString()
                     if (classDeclarationSyntax.Parent is NamespaceDeclarationSyntax ns)
                     {
                         nsName = ns.Name.ToString();
@@ -149,7 +149,7 @@
 
                     foreach (var attr in attrs)
                     {
-                        //屏蔽JustAsService
+                        // 屏蔽JustAsService
                         if (attrs.Any(x => x.Attributes.Any(x => x.Name.ToString() == QuickApiType.JustAsServiceTypeName)))
                         {
                             ctx.ReportDiagnostic(Diagnostic.Create(JustAsServiceInformation, attr.GetLocation()));
@@ -162,18 +162,22 @@
                             var args = x.ArgumentList?.Arguments.ToList();
                             if (name == QuickApiType.TypeName)
                             {
-                                //路由地址
+                                // 路由地址
                                 var route = args.First().Expression.ToString().ToRaw();
-                                //验证策略
+
+                                // 验证策略
                                 var policy = args.FirstOrDefault(x =>
                                 x.NameEquals?.Name.ToString() == nameof(QuickApiType.Policy))?.Expression.ToString().ToRaw();
-                                //请求类型
+
+                                // 请求类型
                                 var verbs = ToVerbs(args.FirstOrDefault(x =>
                                 x.NameEquals?.Name.ToString() == nameof(QuickApiType.Verbs))?.Expression.ToString().ToRaw());
-                                //分组
+
+                                // 分组
                                 var group = args.FirstOrDefault(x =>
                                 x.NameEquals?.Name.ToString() == nameof(QuickApiType.Group))?.Expression.ToString().ToRaw();
-                                //"GET","POST"
+
+                                // "GET","POST"
                                 var verbsStr = string.Join(",", verbs.Select(x => $"\"{x}\""));
 
                                 groups.Add((group, new RouteInfo
@@ -182,7 +186,7 @@
                                     Verb = verbsStr,
                                     Policy = policy,
                                     NameSpace = string.IsNullOrEmpty(nsName) ? fullname : $"{nsName}.{fullname}",
-                                    ClassName = $"{Guid.NewGuid().ToString().Substring(0, 8)}"
+                                    ClassName = $"{Guid.NewGuid().ToString().Substring(0, 8)}",
                                 }));
                             }
                         });
@@ -219,24 +223,20 @@
                     groupRoot.AppendLine(source1);
                 }
 
-
                 var namespacesSyntaxs = namespaces.Select(x => $"using {x};").ToList();
-
-
                 var genx = RootTemp
-                    .Replace("$version", typeof(QuickApiSourceGenerator).Assembly.GetName().Version?.ToString() ?? "")
+                    .Replace("$version", typeof(QuickApiSourceGenerator).Assembly.GetName().Version?.ToString() ?? string.Empty)
                     .Replace("$namespace", string.Join("\r\n", namespacesSyntaxs))
                     .Replace("$apis", groupRoot.ToString());
 
-
-                //var endpointSource = endpointTemp
+                // var endpointSource = endpointTemp
                 //    .Replace("$version", typeof(QuickApiSourceGenerator).Assembly.GetName().Version?.ToString() ?? "")
                 //    .Replace("$namespace", string.Join(Environment.NewLine, namespacesSyntaxs))
                 //    .Replace("$apis", sb.ToString());
 
-                //ctx.AddSource($"QuickApiExtentions.g.cs", SourceText.From(endpointSource, Encoding.UTF8));
+                // ctx.AddSource($"QuickApiExtentions.g.cs", SourceText.From(endpointSource, Encoding.UTF8));
 
-                //format:
+                // format:
                 genx = FormatContent(genx);
                 ctx.AddSource($"QuickApiExtentions.g.cs", SourceText.From(genx, Encoding.UTF8));
 
@@ -245,10 +245,8 @@
         }
 
         /// <summary>
-        /// 格式化代码
+        /// 格式化代码.
         /// </summary>
-        /// <param name="csCode"></param>
-        /// <returns></returns>
         private static string FormatContent(string csCode)
         {
             var tree = CSharpSyntaxTree.ParseText(csCode);
@@ -256,11 +254,9 @@
             var ret = root.ToFullString();
             return ret;
         }
-
-
         #region template
 
-        static string RootTemp = $@"
+        private static string RootTemp = $@"
 
 //code gen for Biwen.QuickApi
 //version :$version
@@ -393,7 +389,7 @@ public static partial class AppExtentions
 
 ";
 
-        static string GroupTemp = $@"
+        private static string GroupTemp = $@"
         //step1
         {{
             //step2
@@ -407,7 +403,7 @@ public static partial class AppExtentions
         }}
 ";
 
-        static string RouteTemp = $@"
+        private static string RouteTemp = $@"
                 var map$0 = group$4.MapMethods(""$1"", new[] {{ $2 }}, async (IHttpContextAccessor ctx, $3 api) =>
                 {{
                     var checkResult = await CheckPolicy(ctx, ""$5"");
@@ -480,9 +476,13 @@ public static partial class AppExtentions
         private class RouteInfo
         {
             public string? Route { get; set; }
+
             public string? Verb { get; set; }
+
             public string? Policy { get; set; }
+
             public string? NameSpace { get; set; }
+
             public string? ClassName { get; set; }
         }
     }
