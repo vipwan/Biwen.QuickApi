@@ -26,6 +26,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [AutoDto(typeof(UserInfo), nameof(UserInfo.Remark), "EscapedCol")]
     public partial class UserInfoDto { }
 
+    [AutoDto<UserInfo>(nameof(UserInfo.Remark), "EscapedCol")]
+    public partial class UserInfo2Dto { }
+
 
     /// <summary>
     /// 分页
