@@ -7,10 +7,12 @@ namespace Biwen.QuickApi
     /// <summary>
     /// 标记接口
     /// </summary>
+#pragma warning disable GEN031 // 使用[AutoGen]自动生成
     internal interface IQuickApi<Req, Rsp> : IHandlerBuilder, IQuickApiMiddlewareHandler, IAntiforgeryApi
     {
         Task<Rsp> ExecuteAsync(Req request);
     }
+#pragma warning restore GEN031 // 使用[AutoGen]自动生成
 
     /// <summary>
     /// HandlerBuilder
