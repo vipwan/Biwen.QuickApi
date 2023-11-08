@@ -179,7 +179,7 @@ public class HelloApi : BaseQuickApi<HelloApiRequest, HelloApiResponse>
     private readonly HelloService _service;
     private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public Hello4Api(HelloService service,IHttpContextAccessor httpContextAccessor)
+    public HelloApi(HelloService service,IHttpContextAccessor httpContextAccessor)
     {
         _service = service;
         _httpContextAccessor = httpContextAccessor;
@@ -303,6 +303,31 @@ public class JustAsService : BaseQuickApi<EmptyRequest, ContentResponse>
         return Task.FromResult(new ContentResponse("Hello World JustAsService!"));
     }
 }
+```
+
+### 提供QuickApi的Group扩展支持
+
+```csharp
+
+   // 当前模拟给所有 Group为空的QuickApi加上 Tag "Def" 
+    public class MyGroupRouteBuilder : IQuickApiGroupRouteBuilder
+    {
+        // 表述Group为空的QuickApi
+        public string Group => string.Empty;
+        // 执行顺序
+        public int Order => 1;
+        // 实现Builder方法
+        public RouteGroupBuilder Builder(RouteGroupBuilder routeBuilder)
+        {
+            // 给所有 Group为空的QuickApi加上 Tag "Def"
+            routeBuilder.WithTags("Def");
+            return routeBuilder;
+        }
+    }
+
+// 最后注册
+builder.Services.AddBiwenQuickApiGroupRouteBuilder<MyGroupRouteBuilder>();
+
 ```
 
 ### Step4 Enjoy !
