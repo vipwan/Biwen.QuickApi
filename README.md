@@ -3,7 +3,7 @@
 ## 项目介绍
 
 ```c#
-public class MySotre
+public class MyStore
 {
     public static Todo[] SampleTodos()
     {
@@ -14,11 +14,11 @@ public class MySotre
     }
 }
 [QuickApi("todos")]
-public class TodosApi : BaseQuickApi<EmptyRequest, IResultResponse>
+public class TodosApi : BaseQuickApi
 {
     public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
     {
-        return Task.FromResult(IResultResponse.Ok(MySotre.SampleTodos()));
+        return Task.FromResult(IResultResponse.OK(MyStore.SampleTodos()));
     }
 }
 ``` 
