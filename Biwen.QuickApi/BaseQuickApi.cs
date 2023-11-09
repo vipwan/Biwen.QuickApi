@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-
-namespace Biwen.QuickApi
+﻿namespace Biwen.QuickApi
 {
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Http;
     using NSwag.Annotations;
 
     /// <summary>
@@ -75,32 +74,39 @@ namespace Biwen.QuickApi
             //{
             //    builder?.Accepts(ReqType, "application/json");
             //}
-            //200
+            // 200
             if (RspType == typeof(ContentResponse))
             {
                 builder?.Produces(200, typeof(string), contentType: "text/plain");
             }
             else if (RspType == typeof(IResultResponse))
             {
-                //todo:IResultResponse不提供具体的类型，需执行时自行指定
+                // todo:IResultResponse不提供具体的类型，需执行时自行指定
             }
             else
             {
                 if (RspType != typeof(EmptyResponse))
                     builder?.Produces(200, RspType);
             }
-            //400
+            // 400
             if (RspType != typeof(EmptyRequest))
             {
                 builder?.ProducesValidationProblem();
             }
-            //500
+            // 500
             builder?.ProducesProblem(StatusCodes.Status500InternalServerError);
 
-            //todo:
+            // 上传文件必须使用 multipart/form-data
+            if (ReqType.GetProperties().Any(x =>
+                x.PropertyType == typeof(IFormFile) ||
+                x.PropertyType == typeof(IFormFileCollection)))
+            {
+                builder?.Accepts<Req>("multipart/form-data");
+            }
+
+            // todo:
             return builder!;
         }
-
 
         private static readonly string? AssemblyName = typeof(BaseQuickApi<Req, Rsp>).Assembly.GetName().Name;
 

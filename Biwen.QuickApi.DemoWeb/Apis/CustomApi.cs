@@ -182,12 +182,14 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return Results.File(request.File!.OpenReadStream(), "image/png").AsRspOfResult();
         }
 
-        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-        {
-            //上传文件必须使用 multipart/form-data
-            builder.Accepts<AntRequest>("multipart/form-data");
+        //public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        //{
+        //    //上传文件必须使用 multipart/form-data
+        //    builder.Accepts<AntRequest>("multipart/form-data");
 
-            return base.HandlerBuilder(builder);
-        }
+        //    return base.HandlerBuilder(builder);
+        //}
     }
+
+
 }

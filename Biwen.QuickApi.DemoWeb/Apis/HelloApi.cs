@@ -406,11 +406,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return Results.BadRequest("no file").AsRspOfResult();
         }
 
-        public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-        {
-            builder.Accepts<FileUploadRequest>("multipart/form-data");
-            return builder;
-        }
+        //public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+        //{
+        //    builder.Accepts<FileUploadRequest>("multipart/form-data");
+        //    return builder;
+        //}
     }
 
 }
