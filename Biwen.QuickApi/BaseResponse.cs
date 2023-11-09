@@ -65,12 +65,49 @@ namespace Biwen.QuickApi
         /// <summary>
         /// 直接返回OK
         /// </summary>
-        public static IResultResponse OK => Results.Ok().AsRspOfResult();
+        public static IResultResponse OK(object? value = null) => Results.Ok(value).AsRspOfResult();
 
         /// <summary>
         /// BadRequest
         /// </summary>
-        public static IResultResponse BadRequest => Results.BadRequest().AsRspOfResult();
+        public static IResultResponse BadRequest(object? error = null) => Results.BadRequest(error).AsRspOfResult();
+
+        /// <summary>
+        /// Empty
+        /// </summary>
+        public static IResultResponse Empty => Results.Empty.AsRspOfResult();
+
+        /// <summary>
+        /// Stream
+        /// </summary>
+        /// <param name="stream"></param>
+        /// <param name="contentType"></param>
+        /// <param name="fileDownloadName"></param>
+        /// <param name="enableRangeProcessing"></param>
+        /// <returns></returns>
+        public static IResultResponse Stream(
+            Stream stream,
+            string? contentType = null,
+            string? fileDownloadName = null,
+            bool enableRangeProcessing = false
+            ) =>
+            Results.Stream(stream, contentType, fileDownloadName, enableRangeProcessing: enableRangeProcessing).AsRspOfResult();
+
+        /// <summary>
+        /// File
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="contentType"></param>
+        /// <param name="fileDownloadName"></param>
+        /// <param name="enableRangeProcessing"></param>
+        /// <returns></returns>
+        public static IResultResponse File(
+            string path,
+            string? contentType = null,
+            string? fileDownloadName = null,
+             bool enableRangeProcessing = false
+            ) =>
+            Results.File(path, contentType, fileDownloadName, enableRangeProcessing: enableRangeProcessing).AsRspOfResult();
 
         /// <summary>
         /// NotFound
@@ -81,6 +118,45 @@ namespace Biwen.QuickApi
         /// Unauthorized
         /// </summary>
         public static IResultResponse Unauthorized => Results.Unauthorized().AsRspOfResult();
+
+        /// <summary>
+        /// Content
+        /// </summary>
+        /// <param name="content"></param>
+        /// <param name="contentType"></param>
+        /// <param name="encoding"></param>
+        /// <param name="statusCode"></param>
+        /// <returns></returns>
+        public static IResultResponse Content(
+            string? content,
+            string? contentType = null,
+            System.Text.Encoding? encoding = null,
+            int? statusCode = null
+            ) =>
+            Results.Content(content, contentType, encoding, statusCode).AsRspOfResult();
+
+
+        /// <summary>
+        /// Json
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static IResultResponse Json<T>(
+            T value,
+            JsonSerializerOptions? serializerOptions = null,
+            string? contentType = null,
+            int? statusCode = null
+            ) =>
+            Results.Json(value, serializerOptions, contentType, statusCode).AsRspOfResult();
+
+
+        /// <summary>
+        /// StatusCode
+        /// </summary>
+        /// <param name="statusCode"></param>
+        /// <returns></returns>
+        public static IResultResponse StatusCode(int statusCode) => Results.StatusCode(statusCode).AsRspOfResult();
 
     }
 }
