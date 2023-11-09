@@ -66,7 +66,7 @@ app.MapBiwenQuickApis();
 
 ### Step2 Define Request and Response
 
-- 推荐使用:[Biwen.AutoClassGen:已内置,点击查看使用方式](https://github.com/vipwan/Biwen.AutoClassGen)生成Partial Request & DTO对象
+- 推荐Biwen.AutoClassGen(已内置)生成Partial Request & DTO对象 [参考代码](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.DemoWeb/Apis/AutoClassGenApi.cs)
 
 ```csharp
 
