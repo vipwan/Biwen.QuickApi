@@ -285,11 +285,6 @@ public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
         }
         return Results.BadRequest("no file").AsRspOfResult();
     }
-    public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-    {
-        builder.Accepts<FileUploadRequest>("multipart/form-data");
-        return builder;
-    }
 }
 
 /// <summary>
