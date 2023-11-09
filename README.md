@@ -18,7 +18,7 @@ public class TodosApi : BaseQuickApi<EmptyRequest, IResultResponse>
 {
     public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
     {
-        return Task.FromResult(Results.Ok(MySotre.SampleTodos()).AsRspOfResult());
+        return Task.FromResult(IResultResponse.Ok(MySotre.SampleTodos()));
     }
 }
 ``` 
