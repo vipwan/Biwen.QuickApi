@@ -16,7 +16,7 @@
 		<Description>Biwen.QuickApi ,NET7+ MinimalApi CQRS</Description>
 		<Copyright>MIT</Copyright>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PackageTags>webapi;minimal;REPR;netcore</PackageTags>
+		<PackageTags>webapi;minimal;api;endpoint;REPR;netcore</PackageTags>
 		<PackageReleaseNotes>集成Biwen.AutoClassGen</PackageReleaseNotes>
 
 	</PropertyGroup>
