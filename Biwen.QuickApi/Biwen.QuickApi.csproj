@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-		<PackageVersion>1.4.0.0-preview</PackageVersion>
+		<PackageVersion>1.4.0.0</PackageVersion>
 
 		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
@@ -17,7 +17,7 @@
 		<Copyright>MIT</Copyright>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>webapi;minimal;api;endpoint;REPR;netcore</PackageTags>
-		<PackageReleaseNotes>集成Biwen.AutoClassGen</PackageReleaseNotes>
+		<PackageReleaseNotes>NET8 and NSwag14 support</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<AssemblyVersion>1.4.0</AssemblyVersion>
 		<FileVersion>1.4.0</FileVersion>
