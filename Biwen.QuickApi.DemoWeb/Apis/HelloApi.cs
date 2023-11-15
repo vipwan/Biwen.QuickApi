@@ -17,22 +17,22 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 {
 
     /// <summary>
-    /// 模拟请求需要登录信息
+    /// 公共请求的部分使用接口以复用  然后使用AutoGen生成实现类
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public abstract class AuthRequest<T> : BaseRequest<T> where T : class, new()
+    public interface IAuthRequest
     {
         [Description("登录用户名")]
         [DefaultValue("vipwan@ms.co.ltd")]
-        public string? UserName { get; set; }
+        string? UserName { get; set; }
 
         [Description("登录密码")]
-        public string? Password { get; set; }
-
+        string? Password { get; set; }
     }
 
+    [AutoGen("HelloApiRequest", "Biwen.QuickApi.DemoWeb.Apis")]
+    public interface IHelloApiRequest : IAuthRequest { }
 
-    public class HelloApiRequest : AuthRequest<HelloApiRequest>
+    public partial class HelloApiRequest : BaseRequest<HelloApiRequest>
     {
         public string? Name { get; set; } = "default";
 
@@ -77,7 +77,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         public int? OrderId { get; set; }
 
 
-        public record Member(string Id,string UserName);
+        public record Member(string Id, string UserName);
 
         /// <summary>
         /// enum测试
@@ -291,8 +291,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// 默认不需要Group
     /// </summary>
     [QuickApi("world5", Verbs = Verb.GET)]
-    [QuickApiSummary("过期测试", "过期测试",IsDeprecated =true)]
-    [Obsolete("过期测试",false)]
+    [QuickApiSummary("过期测试", "过期测试", IsDeprecated = true)]
+    [Obsolete("过期测试", false)]
     public class Hello5Api : BaseQuickApi
     {
         public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
