@@ -158,8 +158,8 @@ namespace Biwen.QuickApi.Swagger
                     // Apply the validator to the schema. Again, recursively
                     var childSchema = schema.ActualProperties[propertyName].ActualSchema;
                     // Check if it is an array (RuleForEach()). In this case we need to apply validator to an Item Schema
-                    childSchema = childSchema.Type == JsonObjectType.Array ? childSchema.Item.ActualSchema : childSchema;
-                    ApplyValidator(childSchema, childValidator, string.Empty);
+                    childSchema = childSchema.Type == JsonObjectType.Array ? childSchema?.Item?.ActualSchema : childSchema;
+                    ApplyValidator(childSchema!, childValidator, string.Empty);
 
                     continue;
                 }

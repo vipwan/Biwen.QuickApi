@@ -9,7 +9,6 @@
 	<ItemGroup>
 		<PackageReference Include="Biwen.QuickApi.SourceGenerator" Version="1.3.7.2" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="NSwag.AspNetCore" Version="13.20.0" />
 	</ItemGroup>
 
 	<ItemGroup>

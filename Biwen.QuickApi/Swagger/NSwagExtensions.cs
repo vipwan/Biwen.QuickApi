@@ -37,8 +37,22 @@ namespace Biwen.QuickApi
             serviceCollection.AddOpenApiDocument(delegate (AspNetCoreOpenApiDocumentGeneratorSettings settings, IServiceProvider services)
             {
                 settings.OperationProcessors.Add(new QuickApiOperationProcessor());
+
+
+                //.NET8中移除的部分
+#if !NET8_0_OR_GREATER
+
                 settings.SchemaProcessors.Add(new QuickApiSchemaProcessor());
                 settings.SchemaProcessors.Add(new QuickApiValidationSchemaProcessor());
+
+                settings.SerializerSettings = new JsonSerializerSettings()
+                {
+                    ContractResolver = new QuickApiContractResolver()
+                };
+                //EnumDescription
+                settings.GenerateEnumMappingDescription = true;
+
+#endif
                 if (securityOptions?.EnlableSecurityProcessor is true)
                 {
                     settings.OperationProcessors.Add(new QuickApiOperationSecurityProcessor(securityOptions));
@@ -59,13 +73,6 @@ namespace Biwen.QuickApi
                     //排除非QuickApi的接口
                     settings.OperationProcessors.Insert(0, new QuickApiFilter());
                 }
-                settings.SerializerSettings = new JsonSerializerSettings()
-                {
-                    ContractResolver = new QuickApiContractResolver()
-                };
-
-                //EnumDescription
-                settings.GenerateEnumMappingDescription = true;
 
                 configure?.Invoke(settings);
             });
