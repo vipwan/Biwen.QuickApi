@@ -3,6 +3,7 @@
 	<PropertyGroup>
 
 		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
 		<PackageVersion>1.4.0.0</PackageVersion>
@@ -21,7 +22,7 @@
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<AssemblyVersion>1.4.0</AssemblyVersion>
 		<FileVersion>1.4.0</FileVersion>
-	
+
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -49,7 +50,7 @@
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.2.1.2" />
-		<PackageReference Include="NSwag.AspNetCore" Version="14.0.0-preview009" />
+		<PackageReference Include="NSwag.AspNetCore" Version="14.0.0-preview010" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
 	</ItemGroup>

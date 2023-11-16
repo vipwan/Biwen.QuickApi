@@ -55,7 +55,10 @@ if (!app.Environment.IsProduction())
 {
     app.UseDeveloperExceptionPage();
     //swagger ui
-    app.UseQuickApiSwagger();
+    app.UseQuickApiSwagger(uiConfig: cfg =>
+    {
+        cfg.DefaultModelsExpandDepth = -1;
+    });
 
     app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 }

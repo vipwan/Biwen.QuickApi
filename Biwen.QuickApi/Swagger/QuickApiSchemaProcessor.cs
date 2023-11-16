@@ -2,6 +2,7 @@
 namespace Biwen.QuickApi.Swagger
 {
     using NJsonSchema.Generation;
+    using System.Xml.Linq;
 
     internal class QuickApiSchemaProcessor : ISchemaProcessor
     {
@@ -13,14 +14,13 @@ namespace Biwen.QuickApi.Swagger
             //    return;
             //}
 
-            //context.Settings.ExcludedTypeNames=new string[] { "BaseResponse" };
-
-            //if (tRequest.Type == typeof(BaseResponse))
+            //// 移除BaseRequestOf
+            //var BaseRequestOfT = "BaseRequest`1";
+            //if (tRequest.Type.Name.StartsWith(BaseRequestOfT))
             //{
             //    context.Schema.Definitions.Remove(tRequest.Type.Name);
             //    return;
             //}
-
         }
     }
 }

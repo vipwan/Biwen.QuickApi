@@ -7,6 +7,7 @@ using NSwag.AspNetCore;
 using NSwag.Generation.AspNetCore;
 using NSwag.Generation.Processors.Security;
 using System.Net;
+using System.Reflection.Emit;
 
 namespace Biwen.QuickApi
 {
@@ -52,16 +53,19 @@ namespace Biwen.QuickApi
                 {
                     ContractResolver = new QuickApiContractResolver()
                 };
-                //EnumDescription
+                // EnumDescription
                 settings.GenerateEnumMappingDescription = true;
+                // 隐藏AllOf的Scheme
+                settings.FlattenInheritanceHierarchy = true;
 #endif
                 // .NET 8.0 or above use NSawg 14+
 #if NET8_0_OR_GREATER
                 settings.SchemaSettings.SchemaProcessors.Add(new QuickApiSchemaProcessor());
                 settings.SchemaSettings.SchemaProcessors.Add(new QuickApiValidationSchemaProcessor());
-
                 // EnumDescription
                 settings.SchemaSettings.GenerateEnumMappingDescription = true;
+                // 隐藏AllOf的Scheme
+                settings.SchemaSettings.FlattenInheritanceHierarchy = true;
 #endif
 
                 if (securityOptions?.EnlableSecurityProcessor is true)
@@ -98,11 +102,22 @@ namespace Biwen.QuickApi
         /// <param name="config"></param>
         /// <param name="uiConfig"></param>
         /// <returns></returns>
+#if !NET8_0_OR_GREATER
         public static IApplicationBuilder UseQuickApiSwagger(this IApplicationBuilder app, Action<OpenApiDocumentMiddlewareSettings>? config = null, Action<SwaggerUi3Settings>? uiConfig = null)
         {
             app.UseOpenApi(config);
             app.UseSwaggerUi3(uiConfig);
             return app;
         }
+#endif
+#if NET8_0_OR_GREATER
+        public static IApplicationBuilder UseQuickApiSwagger(this IApplicationBuilder app, Action<OpenApiDocumentMiddlewareSettings>? config = null, Action<SwaggerUiSettings>? uiConfig = null)
+        {
+            app.UseOpenApi(config);
+            app.UseSwaggerUi(uiConfig);
+            return app;
+        }
+#endif
+
     }
 }

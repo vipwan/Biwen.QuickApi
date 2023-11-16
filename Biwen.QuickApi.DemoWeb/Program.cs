@@ -180,9 +180,9 @@ if (!app.Environment.IsProduction())
     app.UseDeveloperExceptionPage();
 
     //swagger ui
-    app.UseQuickApiSwagger(uiConfig: o =>
+    app.UseQuickApiSwagger(uiConfig: cfg =>
     {
-        //o.CustomJavaScriptPath = "/miniprofiler-sc";
+        //cfg.CustomJavaScriptPath = "/miniprofiler-sc";
     });
 
     app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();

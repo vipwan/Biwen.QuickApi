@@ -23,9 +23,11 @@ var app = builder.Build();
 app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
 
 
-
 //swagger
-app.UseQuickApiSwagger();
+app.UseQuickApiSwagger(uiConfig: cfg =>
+{
+    cfg.DefaultModelsExpandDepth = -1;
+});
 
 
 app.MapGroup("").MapGet("/world", (IHttpContextAccessor ctx) => Results.Content("hello world")).ExcludeFromDescription();
