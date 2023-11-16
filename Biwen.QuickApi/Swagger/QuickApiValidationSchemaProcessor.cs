@@ -100,7 +100,7 @@ namespace Biwen.QuickApi.Swagger
                     adapterMethod.GetParameters().First().ParameterType, new object[] { null! }
                 );
 
-                if (adapterMethod.Invoke(adapter, new[] { validationContext, null! }) is not IValidator includeValidator)
+                if (adapterMethod.Invoke(adapter, [validationContext, null!]) is not IValidator includeValidator)
                 {
                     break;
                 }

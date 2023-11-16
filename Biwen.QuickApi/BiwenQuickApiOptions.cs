@@ -1,6 +1,6 @@
 ﻿namespace Biwen.QuickApi
 {
-    using Microsoft.AspNetCore.Http;
+    //using Microsoft.AspNetCore.Http;
 
     public class BiwenQuickApiOptions
     {

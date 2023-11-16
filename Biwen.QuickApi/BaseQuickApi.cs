@@ -1,9 +1,9 @@
-﻿namespace Biwen.QuickApi
-{
-    using Microsoft.AspNetCore.Builder;
-    using Microsoft.AspNetCore.Http;
-    using NSwag.Annotations;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using NSwag.Annotations;
 
+namespace Biwen.QuickApi
+{
     /// <summary>
     /// BaseQuickApi
     /// </summary>

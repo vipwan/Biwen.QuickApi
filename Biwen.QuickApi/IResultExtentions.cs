@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+
 namespace Biwen.QuickApi
 {
     public static class IResultExtentions

@@ -2,7 +2,6 @@
 namespace Biwen.QuickApi.Swagger
 {
     using NJsonSchema.Generation;
-    using System.Xml.Linq;
 
     internal class QuickApiSchemaProcessor : ISchemaProcessor
     {

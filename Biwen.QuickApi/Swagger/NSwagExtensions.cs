@@ -7,7 +7,6 @@ using NSwag.AspNetCore;
 using NSwag.Generation.AspNetCore;
 using NSwag.Generation.Processors.Security;
 using System.Net;
-using System.Reflection.Emit;
 
 namespace Biwen.QuickApi
 {

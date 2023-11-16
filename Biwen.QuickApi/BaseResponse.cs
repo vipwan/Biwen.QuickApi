@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using NSwag.Annotations;
-using System.Text.Json;
-namespace Biwen.QuickApi
+﻿namespace Biwen.QuickApi
 {
+    using Microsoft.AspNetCore.Http;
+    using NSwag.Annotations;
+    using System.Text.Json;
 
     [OpenApiIgnore]
     public abstract class BaseResponse

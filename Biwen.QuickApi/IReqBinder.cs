@@ -1,16 +1,14 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Dynamic;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Primitives;
+using System.Collections;
+using System.Text;
+using System.Text.Json;
 
 namespace Biwen.QuickApi
 {
-    using Microsoft.AspNetCore.Builder;
-    using Microsoft.Extensions.Primitives;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Text;
-    using System.Text.Json;
-
     /// <summary>
     /// 请注意IReqBinder不支持构造器注入
     /// 如果需要DI,使用HttpContext.RequestServices获取Service
