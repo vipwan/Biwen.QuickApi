@@ -33,26 +33,37 @@ namespace Biwen.QuickApi
             //    x.Converters.Add(new JsonStringEnumConverter());
             //});
 
+#if NET8_0_OR_GREATER
+            // .NET 8.0 or above use NSawg 14 set ContractResolver
+            serviceCollection.Configure<JsonSerializerSettings>(settings =>
+            {
+                settings.ContractResolver = new QuickApiContractResolver();
+            });
+#endif
             serviceCollection.AddEndpointsApiExplorer();
             serviceCollection.AddOpenApiDocument(delegate (AspNetCoreOpenApiDocumentGeneratorSettings settings, IServiceProvider services)
             {
                 settings.OperationProcessors.Add(new QuickApiOperationProcessor());
-
-
-                //.NET8中移除的部分
+                // .NET 7.0 or below use NSawg 13
 #if !NET8_0_OR_GREATER
-
                 settings.SchemaProcessors.Add(new QuickApiSchemaProcessor());
                 settings.SchemaProcessors.Add(new QuickApiValidationSchemaProcessor());
-
                 settings.SerializerSettings = new JsonSerializerSettings()
                 {
                     ContractResolver = new QuickApiContractResolver()
                 };
                 //EnumDescription
                 settings.GenerateEnumMappingDescription = true;
-
 #endif
+                // .NET 8.0 or above use NSawg 14+
+#if NET8_0_OR_GREATER
+                settings.SchemaSettings.SchemaProcessors.Add(new QuickApiSchemaProcessor());
+                settings.SchemaSettings.SchemaProcessors.Add(new QuickApiValidationSchemaProcessor());
+
+                // EnumDescription
+                settings.SchemaSettings.GenerateEnumMappingDescription = true;
+#endif
+
                 if (securityOptions?.EnlableSecurityProcessor is true)
                 {
                     settings.OperationProcessors.Add(new QuickApiOperationSecurityProcessor(securityOptions));
