@@ -34,16 +34,16 @@ namespace BenchmarkTestAot.Apis
     [QuickApi("todos", Group = "my")]
     public class TodosApi : BaseQuickApi<EmptyRequest, IResultResponse>
     {
-        public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(Results.Ok(MySotre.SampleTodos()).AsRspOfResult());
+            return new ValueTask<IResultResponse>(Results.Ok(MySotre.SampleTodos()).AsRspOfResult());
         }
     }
 
     [QuickApi("todos/{id}", Group = "my")]
     public class TodoApi : BaseQuickApi<Req, IResultResponse>
     {
-        public override async Task<IResultResponse> ExecuteAsync(Req request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(Req request)
         {
             await Task.CompletedTask;
             return Results.Ok(MySotre.SampleTodos().FirstOrDefault(x => x.Id == request.Id)).AsRspOfResult();

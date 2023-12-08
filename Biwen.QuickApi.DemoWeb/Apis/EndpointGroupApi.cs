@@ -8,7 +8,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [EndpointGroupName("group1")]
     public class EndpointGroupApi : BaseQuickApi
     {
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return Results.Ok().AsRspOfResult();

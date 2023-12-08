@@ -19,7 +19,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
         {
             //模拟当前账号登录
             _httpContextAccessor.HttpContext?.SignInAsync(
@@ -31,7 +31,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 new Claim(ClaimTypes.Role, "admin"),
             }, "admin")));
 
-            return Task.FromResult(new ContentResponse("已经登录成功"));
+            return new ValueTask<ContentResponse>(new ContentResponse("已经登录成功"));
         }
     }
 
@@ -48,17 +48,17 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
         {
             _httpContextAccessor.HttpContext?.SignOutAsync();
-            return Task.FromResult(new ContentResponse("已经退出登录"));
+            return new ValueTask<ContentResponse>(new ContentResponse("已经退出登录"));
         }
     }
 
     //测试权限组
     public abstract class BaseAdminApi<Req, Rsp> : BaseQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new() where Rsp : BaseResponse
     {
-        public override Task<Rsp> ExecuteAsync(Req request)
+        public override ValueTask<Rsp> ExecuteAsync(Req request)
         {
             throw new NotImplementedException();
         }
@@ -78,9 +78,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("需要登录,NeedAuthApi", "NeedAuthApi")]
     public class NeedAuthApi : BaseQuickApiWithoutRequest<ContentResponse>
     {
-        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(new ContentResponse("恭喜你有权限访问当前接口!"));
+            return new ValueTask<ContentResponse>(new ContentResponse("恭喜你有权限访问当前接口!"));
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -102,20 +102,20 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("需要登录,EditDocumentApi", "需要登录,EditDocumentApi")]
     public class EditDocumentApi : BaseAdminApi<EmptyRequest, IResultResponse>
     {
-        public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(Results.Ok($"你有权限编辑!{DateTime.Now.ToLongTimeString()}").AsRspOfResult());
+            return new ValueTask<IResultResponse>(Results.Ok($"你有权限编辑!{DateTime.Now.ToLongTimeString()}").AsRspOfResult());
         }
     }
 
 
     [Authorize]
     [Authorize(policy: "admin")]
-    [QuickApi("an-auth",Group ="admin")]
+    [QuickApi("an-auth", Group = "admin")]
     [QuickApiSummary("使用特性标记需要登录", "使用特性标记需要登录")]
     public class AuthorizationTestApi : BaseQuickApi
     {
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return Results.Content("登录成功的请求!").AsRspOfResult();
@@ -134,7 +134,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("使用特性标记可以匿名", "使用特性标记可以匿名")]
     public class AllowAnonymousTestApi : BaseQuickApi
     {
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return Results.Content("无效登录的请求!").AsRspOfResult();

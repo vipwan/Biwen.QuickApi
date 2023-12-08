@@ -188,7 +188,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("world/{name}", Group = "hello", Verbs = Verb.GET | Verb.POST)]
     public class HelloApi : BaseQuickApi<HelloApiRequest, HelloApiResponse>
     {
-        public override async Task<HelloApiResponse> ExecuteAsync(HelloApiRequest request)
+        public override async ValueTask<HelloApiResponse> ExecuteAsync(HelloApiRequest request)
         {
             await Task.CompletedTask;
             return new HelloApiResponse
@@ -213,7 +213,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("WithExample()测试", "frombody")]
     public class Hello2Api : BaseQuickApi<HelloApiRequest, HelloApiResponse>
     {
-        public override async Task<HelloApiResponse> ExecuteAsync(HelloApiRequest request)
+        public override async ValueTask<HelloApiResponse> ExecuteAsync(HelloApiRequest request)
         {
             await Task.CompletedTask;
             return new HelloApiResponse
@@ -249,7 +249,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("world3", Group = "hello", Verbs = Verb.POST)]
     public class Hello3Api : BaseQuickApi<EmptyRequest, HelloApiResponse>
     {
-        public override async Task<HelloApiResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<HelloApiResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return new HelloApiResponse
@@ -275,7 +275,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public override async Task<HelloApiResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<HelloApiResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             var hello = _service.Hello($"hello world {_httpContextAccessor.HttpContext!.Request.Path} !");
@@ -295,7 +295,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [Obsolete("过期测试", false)]
     public class Hello5Api : BaseQuickApi
     {
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return Results.Ok().AsRspOfResult();
@@ -308,7 +308,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("world6", Verbs = Verb.GET)]
     public class Hello6Api : BaseQuickApiWithoutRequest<HelloApiResponse>
     {
-        public override async Task<HelloApiResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<HelloApiResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return new HelloApiResponse
@@ -326,7 +326,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("ContentApi", "ContentApi")]
     public class ContentApi : BaseQuickApi<EmptyRequest, ContentResponse>
     {
-        public override async Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return new ContentResponse("Hello World content!");
@@ -339,7 +339,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     public class JustAsService : BaseQuickApiJustAsService<EmptyRequest, ContentResponse>
     {
-        public override async Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
         {
             return new ContentResponse("Hello World content!");
         }
@@ -350,7 +350,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("IResult测试", "IResult测试")]
     public class IResultTestApi : BaseQuickApiWithoutRequest<IResultResponse>
     {
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             //return Results.Ok("Hello World IResult!").AsRsp();
 
@@ -372,7 +372,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("frombody", "当前接口Req来自整个FormBody")]
     public class FromBodyApi : BaseQuickApi<FromBodyRequest, ContentResponse>
     {
-        public override async Task<ContentResponse> ExecuteAsync(FromBodyRequest request)
+        public override async ValueTask<ContentResponse> ExecuteAsync(FromBodyRequest request)
         {
             return new ContentResponse($"FromBodyApi {request.Id} {request.Name}");
         }
@@ -392,7 +392,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
     {
 
-        public override async Task<IResultResponse> ExecuteAsync(FileUploadRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(FileUploadRequest request)
         {
             //测试上传一个文本文件并读取内容
             if (request.File != null)

@@ -48,7 +48,7 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public abstract Task<Rsp> ExecuteAsync(Req request);
+        public abstract ValueTask<Rsp> ExecuteAsync(Req request);
 
 
 
@@ -139,7 +139,7 @@ namespace Biwen.QuickApi
     /// <typeparam name="Req"></typeparam>
     public abstract class BaseQuickApi<Req> : BaseQuickApi<Req, IResultResponse> where Req : BaseRequest<Req>, new()
     {
-        public abstract override Task<IResultResponse> ExecuteAsync(Req request);
+        public abstract override ValueTask<IResultResponse> ExecuteAsync(Req request);
     }
 
     /// <summary>
@@ -158,7 +158,7 @@ namespace Biwen.QuickApi
             return base.HandlerBuilder(builder);
         }
 
-        public abstract override Task<IResultResponse> ExecuteAsync(EmptyRequest request);
+        public abstract override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request);
 
     }
 

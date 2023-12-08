@@ -17,7 +17,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             UseReqBinder<CustomApiRequestBinder>();
         }
 
-        public override async Task<IResultResponse> ExecuteAsync(HelloApiRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(HelloApiRequest request)
         {
             await Task.CompletedTask;
             Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
@@ -59,7 +59,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     public class DeprecatedApi : BaseQuickApi
     {
 
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return Results.Ok().AsRspOfResult();
@@ -85,7 +85,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("抛出异常的接口", "抛出异常,测试500错误格式化")]
     public class ThrowErrorApi : BaseQuickApi
     {
-        public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             throw new NotImplementedException();
         }
@@ -102,9 +102,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [OutputCache(Duration = 10)]
     public class CachedApi : BaseQuickApiWithoutRequest<ContentResponse>
     {
-        public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(new ContentResponse(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
+            return new ValueTask<ContentResponse>(new ContentResponse(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
         }
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
@@ -132,7 +132,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             var token = _antiforgery.GetAndStoreTokens(_httpContextAccessor.HttpContext!);
             var html = $"""
@@ -175,7 +175,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         /// </summary>
         public override bool IsAntiforgeryEnabled => true;
 
-        public override async Task<IResultResponse> ExecuteAsync(AntRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(AntRequest request)
         {
             await Task.CompletedTask;
             //return "Successed!".AsRspOfResult();

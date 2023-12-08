@@ -8,7 +8,7 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole.Api2
     [QuickApi("test1", Group = "api2", Verbs = Verb.GET)]
     public class TestQuickApi : BaseQuickApi
     {
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return Results.Ok().AsRspOfResult();
@@ -19,9 +19,9 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole.Api2
     [QuickApi("iresult", Verbs = Verb.GET)]
     public class TestIResultQuickApi : BaseQuickApiWithoutRequest<IResultResponse>
     {
-        public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(new IResultResponse(Results.Json(new { Hello = "world" })));
+            return new ValueTask<IResultResponse>(new IResultResponse(Results.Json(new { Hello = "world" })));
         }
     }
 
@@ -29,12 +29,12 @@ namespace Biwen.QuickApi.SourceGenerator.TestConsole.Api2
     /// <summary>
     /// JustAsService
     /// </summary>
-    [QuickApi(""),JustAsService]
+    [QuickApi(""), JustAsService]
     public class TJustAsServiceQuickApi : BaseQuickApiWithoutRequest<IResultResponse>
     {
-        public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return Task.FromResult(new IResultResponse(Results.Json(new { Hello = "world" })));
+            return new ValueTask<IResultResponse>(new IResultResponse(Results.Json(new { Hello = "world" })));
         }
     }
 

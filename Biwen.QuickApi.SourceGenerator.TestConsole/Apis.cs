@@ -39,7 +39,7 @@
     [Authorize("admin")]
     public class TestQuickApi : BaseQuickApi
     {
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return Results.Ok().AsRspOfResult();
@@ -52,7 +52,7 @@
     [QuickApi("test2", Verbs = Verb.POST)]
     public class TestPostQuickApi : BaseQuickApi
     {
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return Results.Ok().AsRspOfResult();
@@ -79,7 +79,7 @@
     [QuickApi("test3", Verbs = Verb.GET | Verb.POST), JustAsService]
     public class Test3PostQuickApi : BaseQuickApi<HelloRequest, ContentResponse>
     {
-        public override async Task<ContentResponse> ExecuteAsync(HelloRequest request)
+        public override async ValueTask<ContentResponse> ExecuteAsync(HelloRequest request)
         {
             await Task.CompletedTask;
             return new ContentResponse($"hello {request.Name}");
@@ -90,7 +90,7 @@
     public class Tset3QuickApi : BaseQuickApi<HelloRequest, HelloResponse>
     {
 
-        public override async Task<HelloResponse> ExecuteAsync(HelloRequest request)
+        public override async ValueTask<HelloResponse> ExecuteAsync(HelloRequest request)
         {
             await Task.CompletedTask;
             return new HelloResponse("hello", request.Name);
@@ -108,10 +108,10 @@
         }
     }
 
-    //[QuickApi("test6")]
+    [QuickApi("test6")]
     public class Test6 : BaseQuickApi
     {
-        public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
             return Results.Ok().AsRspOfResult();

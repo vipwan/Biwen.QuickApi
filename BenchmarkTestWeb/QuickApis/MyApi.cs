@@ -11,9 +11,9 @@ namespace BenchmarkTestWeb.QuickApis
     //[Tags("API")]
     public class MyApi : BaseQuickApi<MyRequest, IResultResponse>
     {
-        public override async Task<IResultResponse> ExecuteAsync(MyRequest request)
+        public override ValueTask<IResultResponse> ExecuteAsync(MyRequest request)
         {
-            return await Task.FromResult(Results.Ok(request).AsRspOfResult());
+            return new ValueTask<IResultResponse>(Results.Ok(request).AsRspOfResult());
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
