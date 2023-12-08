@@ -16,9 +16,9 @@ public class MyStore
 [QuickApi("todos")]
 public class TodosApi : BaseQuickApi
 {
-    public override Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+    public override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
     {
-        return Task.FromResult(IResultResponse.OK(MyStore.SampleTodos()));
+        return new ValueTask<IResultResponse>(IResultResponse.OK(MyStore.SampleTodos()));
     }
 }
 ``` 
@@ -135,7 +135,7 @@ public class FromBodyRequest : BaseRequest<FromBodyRequest>
 /// </summary>
 public class CustomApiRequestBinder : IReqBinder<CustomApiRequest>
 {
-    public async Task<CustomApiRequest> BindAsync(HttpContext context)
+    public async ValueTask<CustomApiRequest> BindAsync(HttpContext context)
     {
         var request = new CustomApiRequest
         {
@@ -207,7 +207,7 @@ public class CustomApi : BaseQuickApi<CustomApiRequest>
         UseReqBinder<CustomApiRequestBinder>();
     }
 
-    public override async Task<EmptyResponse> ExecuteAsync(CustomApiRequest request)
+    public override async ValueTask<EmptyResponse> ExecuteAsync(CustomApiRequest request)
     {
         await Task.CompletedTask;
         Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
@@ -250,9 +250,9 @@ public class CustomApi : BaseQuickApi<CustomApiRequest>
 [QuickApi("iresult", Verbs = Verb.GET)]
 public class IResultTestApi : BaseQuickApiWithoutRequest<IResultResponse>
 {
-    public override async Task<IResultResponse> ExecuteAsync(EmptyRequest request)
+    public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
     {
-        return Results.Ok("Hello World IResult!").AsRsp();
+        return new ValueTask<IResultResponse>(Results.Ok("Hello World IResult!").AsRsp());
     }
 
     public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -272,7 +272,7 @@ public class IResultTestApi : BaseQuickApiWithoutRequest<IResultResponse>
 [QuickApiSummary("上传文件测试", "上传文件测试")]
 public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
 {
-    public override async Task<IResultResponse> ExecuteAsync(FileUploadRequest request)
+    public override async ValueTask<IResultResponse> ExecuteAsync(FileUploadRequest request)
     {
         //测试上传一个文本文件并读取内容
         if (request.File != null)
@@ -283,7 +283,7 @@ public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
                 return Results.Ok(content).AsRspOfResult();
             }
         }
-        return Results.BadRequest("no file").AsRspOfResult();
+        return new ValueTask<IResultResponse>(Results.BadRequest("no file").AsRspOfResult());
     }
 }
 
@@ -293,9 +293,9 @@ public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
 [QuickApi(""), JustAsService]
 public class JustAsService : BaseQuickApi<EmptyRequest, ContentResponse>
 {
-    public override Task<ContentResponse> ExecuteAsync(EmptyRequest request)
+    public override ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
     {
-        return Task.FromResult(new ContentResponse("Hello World JustAsService!"));
+        return new ValueTask<ContentResponse>(new ContentResponse("Hello World JustAsService!"));
     }
 }
 ```

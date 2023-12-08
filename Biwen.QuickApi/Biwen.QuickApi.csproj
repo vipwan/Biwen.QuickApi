@@ -6,7 +6,7 @@
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-		<PackageVersion>1.4.0.0</PackageVersion>
+		<PackageVersion>1.4.1.0</PackageVersion>
 
 		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
@@ -20,8 +20,8 @@
 		<PackageTags>webapi;minimal;api;endpoint;REPR;netcore</PackageTags>
 		<PackageReleaseNotes>NET8 and NSwag14 support</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<AssemblyVersion>1.4.0</AssemblyVersion>
-		<FileVersion>1.4.0</FileVersion>
+		<AssemblyVersion>1.4.1</AssemblyVersion>
+		<FileVersion>1.4.1</FileVersion>
 
 	</PropertyGroup>
 
@@ -31,11 +31,11 @@
 
 	<ItemGroup>
 		<None Include="..\.editorconfig" Link=".editorconfig" />
-		<None Include="C:\Users\vipwa\source\repos\Biwen.QuickApi\README.md" Link="README.md">
+		<None Include="..\..\Biwen.QuickApi\README.md" Link="README.md">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
-		<None Include="C:\Users\vipwa\source\repos\Biwen.QuickApi\LICENSE.txt" Link="LICENSE.txt">
+		<None Include="..\..\Biwen.QuickApi\LICENSE.txt" Link="LICENSE.txt">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
