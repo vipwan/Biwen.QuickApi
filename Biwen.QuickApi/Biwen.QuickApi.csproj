@@ -30,7 +30,7 @@
 
 	<ItemGroup>
 		<None Include="..\.editorconfig" Link=".editorconfig" />
-		<None Include="C:\Users\Biwen\source\repos\Biwen.QuickApi\README.md" Link="README.md">
+		<None Include="..\..\Biwen.QuickApi\README.md" Link="README.md">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
