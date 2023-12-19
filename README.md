@@ -21,22 +21,28 @@ public class TodosApi : BaseQuickApi
         return new ValueTask<IResultResponse>(IResultResponse.OK(MyStore.SampleTodos()));
     }
 }
-``` 
+```
+
 - (MinimalApi as REPR) Biwen.QuickApi遵循了 REPR 设计 （Request-Endpoint-Response）
 - 开箱即用的Route, Policy,Binder,validator & 整合NSwag支持
 - 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi(gen版本=minimalApi,生成原生接口代码),遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
 - write less, do more ; write anywhere, do anything  
 - 欢迎小伙伴们star&issue共同学习进步 [Biwen.QuickApi](https://github.com/vipwan/Biwen.QuickApi)
 - 请注意Biwen.QuickApi因为提供的较多的特性,而很多特性却不被NET8中的`NativeAOT`支持,AOT有诸多优点,如果需要使用`NativeAOT`特性可以移步至[Biwen.MinimalApi](https://github.com/vipwan/Biwen.MinimalApi)
+
 ## SourceGenerator
+
 - 提供gen源代码生成器方案,以于显著提升性能(V1.0版本使用的Emit和dynamic会导致部分性能损失)
 - gen SourceGenerator已发布v1.1.2,[使用方式](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.Generator/readme.md)
 
 ## 开发工具
+
 - [Visual Studio 2022 17.8.0 +](https://learn.microsoft.com/zh-cn/visualstudio/releases/2022/release-notes-preview)
 - [Net 7.0.14](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0) , [Net 8.0.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
 - 调试Gen请在VS中安装 .NET Compiler Platform SDK 组件
+
 ## 依赖环境&库
+
 - Microsoft.AspNetCore.App
 - [FluentValidation.AspNetCore](https://www.nuget.org/packages/FluentValidation.AspNetCore/11.3.0)
 - [NSwag.AspNetCore](https://www.nuget.org/packages/NSwag.AspNetCore)
@@ -45,12 +51,15 @@ public class TodosApi : BaseQuickApi
 ## 使用方式
 
 ### Step0 Nuget Base & Generator
+
 ```bash
 dotnet add package Biwen.QuickApi
 ```
+
 ```bash
 dotnet add package Biwen.QuickApi.SourceGenerator
 ```
+
 ### Step1 UseBiwenQuickApis
 
 ```csharp
@@ -325,7 +334,7 @@ builder.Services.AddBiwenQuickApiGroupRouteBuilder<MyGroupRouteBuilder>();
 
 ```
 
-### Step4 Enjoy !
+### Step4 Enjoy
 
 ```csharp
 
@@ -357,7 +366,7 @@ app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
 
 ```
 
-### Step5 NSwag集成 
+### Step5 NSwag集成
 
 ```c#
 
@@ -398,8 +407,8 @@ new SecurityOptions());
 app.UseQuickApiSwagger();
 
 ```
-- 更多参考代码 [Issues 8](https://github.com/vipwan/Biwen.QuickApi/issues/8)
 
+- 更多参考代码 [Issues 8](https://github.com/vipwan/Biwen.QuickApi/issues/8)
 
 ### Step6 OpenApi 以及Client代理
 
@@ -433,11 +442,9 @@ app.MapGet("/from-quickapi", async (IBusiness bussiness) =>
 
 ```
 
-
 ### Benchmark性能测试
 
-```
-
+```txt
 BenchmarkDotNet v0.13.9, Windows 10 (10.0.19045.3570/22H2/2022Update)
 11th Gen Intel Core i7-11800H 2.30GHz, 1 CPU, 16 logical and 8 physical cores
 .NET SDK 8.0.100-rc.2.23502.2
@@ -448,6 +455,7 @@ Runtime=.NET 7.0  InvocationCount=2000  IterationCount=10
 LaunchCount=1  WarmupCount=1  
 
 ```
+
 | Method      | Mean     | Error     | StdDev    | Median   | Ratio | RatioSD | Gen0   | Allocated | Alloc Ratio |
 |------------ |---------:|----------:|----------:|---------:|------:|--------:|-------:|----------:|------------:|
 | WebApiCtrl      | 385.5 μs | 357.93 μs | 236.75 μs | 231.0 μs |  1.00 |    0.00 | 2.5000 |   33.5 KB |        1.00 |
@@ -469,8 +477,8 @@ LaunchCount=1  WarmupCount=1
 - 是否支持Minimal的中间件和拦截器?
 -- 支持的,本身QuickApi就是扩展了MinimalApi,底层也是Minimal的处理机制,所以请考虑全局的中间件和拦截器,以及重写QuickApi的HandlerBuilder方法
 -- 如果你仅仅需要使用中间件控制QuickApi的行为可以参考下面的代码:
-```c#
 
+```csharp
 var md = context.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>();
 if (md == null || md.QuickApiType == null)
 {
