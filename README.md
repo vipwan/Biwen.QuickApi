@@ -38,7 +38,7 @@ public class TodosApi : BaseQuickApi
 ## 开发工具
 
 - [Visual Studio 2022 17.8.0 +](https://learn.microsoft.com/zh-cn/visualstudio/releases/2022/release-notes-preview)
-- [Net 7.0.14](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0) , [Net 8.0.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
+- [Net 8.0.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
 - 调试Gen请在VS中安装 .NET Compiler Platform SDK 组件
 
 ## 依赖环境&库
@@ -445,13 +445,13 @@ app.MapGet("/from-quickapi", async (IBusiness bussiness) =>
 ### Benchmark性能测试
 
 ```txt
-BenchmarkDotNet v0.13.9, Windows 10 (10.0.19045.3570/22H2/2022Update)
+BenchmarkDotNet v0.13.12, Windows 10 (10.0.19045.3570/22H2/2022Update)
 11th Gen Intel Core i7-11800H 2.30GHz, 1 CPU, 16 logical and 8 physical cores
-.NET SDK 8.0.100-rc.2.23502.2
-[Host]     : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2 [AttachedDebugger]
-Job-WHDDIT : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2
+.NET SDK 8.0.100
+[Host]     : .NET 8.0.0 (8.0.0.100), X64 RyuJIT AVX2 [AttachedDebugger]
+Job-WHDDIT : .NET 8.0.0 (8.0.0.100), X64 RyuJIT AVX2
 
-Runtime=.NET 7.0  InvocationCount=2000  IterationCount=10  
+Runtime=.NET 8.0  InvocationCount=2000  IterationCount=10  
 LaunchCount=1  WarmupCount=1  
 
 ```
@@ -464,9 +464,6 @@ LaunchCount=1  WarmupCount=1
 | QuickApi    | 235.9 μs |  22.26 μs |  11.65 μs | 235.4 μs |  0.72 |    0.34 | 2.0000 |  27.59 KB |        0.82 |
 
 ### Q&A
-
-- 为什么不支持.NET6
--- 考虑到.NET8已经发布了RC,11月就会发布RTM,这个是未来3年的长期支持版本,并且.NET是可以无缝升级到.NET8的,所以我没有计划.NET6支持,直接拥抱新特性
 
 - 为什么不支持多个参数的绑定?
 -- 因为我认为这样的Api设计是不合理的,我们遵循REPR设计理念,如果你需要多个参数,请使用复杂化的Request对象
