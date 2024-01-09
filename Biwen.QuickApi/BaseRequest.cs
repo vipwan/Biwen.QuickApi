@@ -27,10 +27,6 @@ namespace Biwen.QuickApi
         /// </summary>
         private readonly InnerValidator Validator = new();
 
-        [JsonIgnore]
-        [Obsolete("请使用Validate(),以同时兼容DataAnnotation和FluentValidation,请注意该属性未来会被移除!", false)]
-        public IValidator<T> RealValidator => Validator;
-
         public ValidationResult Validate()
         {
             var req = (T)MemberwiseClone();
