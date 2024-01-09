@@ -8,12 +8,12 @@
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
 		<PackageVersion>1.4.1.0</PackageVersion>
 
-		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+		<TargetFrameworks>net8.0</TargetFrameworks>
 		<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>
 		<Authors>万雅虎</Authors>
 		<RepositoryUrl>https://github.com/vipwan/Biwen.QuickApi</RepositoryUrl>
 		<Title>Biwen.QuickApi</Title>
-		<Description>Biwen.QuickApi ,NET7+ MinimalApi CQRS</Description>
+		<Description>Biwen.QuickApi ,NET8+ MinimalApi CQRS</Description>
 		<Copyright>MIT</Copyright>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>webapi;minimal;api;endpoint;REPR;netcore</PackageTags>
@@ -40,20 +40,11 @@
 		</None>
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
-		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.2.1.2" />
-		<PackageReference Include="NSwag.AspNetCore" Version="13.20.0" />
-		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.14" />
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+	<ItemGroup>
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.2.1.2" />
 		<PackageReference Include="NSwag.AspNetCore" Version="14.0.0" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
 	</ItemGroup>
-
-
 
 </Project>
