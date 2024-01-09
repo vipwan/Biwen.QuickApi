@@ -1,6 +1,5 @@
 ﻿using NSwag.Annotations;
 using System.Linq.Expressions;
-using System.Text.Json.Serialization;
 
 namespace Biwen.QuickApi
 {
@@ -31,26 +30,6 @@ namespace Biwen.QuickApi
         {
             var req = (T)MemberwiseClone();
             return Validator.Validate(req);
-
-            #region 重写PreValidate实现
-
-            ////ms内建的DataAnnotations验证器
-            //var context = new MSDA.ValidationContext(req);
-            //var validationResults = new List<MSDA.ValidationResult>();
-            //var defaultFlag = MSDA.Validator.TryValidateObject(req, context, validationResults, true);
-
-            ////FluentValidation验证器
-            //var fluentValidationResult = Validator.Validate(req);
-
-            //if (!defaultFlag)
-            //{
-            //    fluentValidationResult.Errors.AddRange(validationResults.Select(x => new ValidationFailure(x.MemberNames.FirstOrDefault(), x.ErrorMessage)));
-            //}
-            ////var method = typeof(InnerValidator).GetMethods().First(x => x.Name == nameof(IValidator.Validate));
-            ////return (method!.Invoke(Validator, new object[] { this }) as ValidationResult)!;
-            //return fluentValidationResult;
-
-            #endregion
         }
         #endregion
 
