@@ -42,7 +42,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.2.1.2" />
-		<PackageReference Include="NSwag.AspNetCore" Version="14.0.0" />
+		<PackageReference Include="NSwag.AspNetCore" Version="14.0.2" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
 	</ItemGroup>
