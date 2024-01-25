@@ -19,7 +19,7 @@
 		<CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
 		<IsRoslynComponent>true</IsRoslynComponent>
 
-		<Description>Biwen.QuickApi ,NET7+ MinimalApi CQRS, CodeGEN</Description>
+		<Description>Biwen.QuickApi ,NET8+ MinimalApi CQRS, CodeGEN</Description>
 		<Copyright>MIT</Copyright>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>webapi;minimal;REPR;netcore,Biwen.QuickApi</PackageTags>
