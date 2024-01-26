@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
+
+		<!-- Enable the MSTest runner, this is an opt-in feature -->
+		<EnableMSTestRunner>true</EnableMSTestRunner>
+
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
@@ -11,7 +15,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.1" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0-release-23619-01" />
 		<PackageReference Include="xunit" Version="2.6.6" />
 		<PackageReference Include="xunit.runner.visualstudio" Version="2.5.6">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -22,6 +26,27 @@
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
 	</ItemGroup>
+
+	<ItemGroup>
+		<!-- 
+      MSTest meta package is the recommended way to reference MSTest.
+      It's equivalent to referencing:
+          Microsoft.NET.Test.Sdk
+          MSTest.TestAdapter
+          MSTest.TestFramework
+          MSTest.Analyzers
+    -->
+		<PackageReference Include="MSTest" Version="3.2.0" />
+
+		<!-- 
+      Coverlet collector isn't compatible with MSTest runner, you can 
+      either switch to Microsoft CodeCoverage (as shown below),
+      or switch to be using coverlet global tool
+      https://github.com/coverlet-coverage/coverlet#net-global-tool-guide-suffers-from-possible-known-issue
+    -->
+		<PackageReference Include="Microsoft.Testing.Platform.Extensions.CodeCoverage" Version="17.10.0-preview.23622.1" />
+	</ItemGroup>
+
 
 	<ItemGroup>
 		<ProjectReference Include="..\Biwen.QuickApi.DemoWeb\Biwen.QuickApi.DemoWeb.csproj" />
