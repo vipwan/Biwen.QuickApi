@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc.Testing;
+ï»¿using Microsoft.AspNetCore.Mvc.Testing;
 
 namespace Biwen.QuickApi.Test
 {
@@ -16,7 +16,7 @@ namespace Biwen.QuickApi.Test
         {
             var response = await TestClient.GetAsync("/quick/admin/logined");
             var content = await response.Content.ReadAsStringAsync();
-            Assert.Equal("ÒÑ¾­µÇÂ¼³É¹¦", content);
+            Assert.Equal("å·²ç»ç™»å½•æˆåŠŸ", content);
             Assert.True(response.IsSuccessStatusCode);
         }
 
@@ -25,7 +25,7 @@ namespace Biwen.QuickApi.Test
         {
             var response = await TestClient.GetAsync("/quick/admin/loginout");
             var content = await response.Content.ReadAsStringAsync();
-            Assert.Equal("ÒÑ¾­ÍË³öµÇÂ¼", content);
+            Assert.Equal("å·²ç»é€€å‡ºç™»å½•", content);
             Assert.True(response.IsSuccessStatusCode);
         }
 
@@ -35,7 +35,7 @@ namespace Biwen.QuickApi.Test
             var response = await TestClient.GetAsync("/quick/admin/an-auth");
             var content = await response.Content.ReadAsStringAsync();
             Assert.Equal(System.Net.HttpStatusCode.Unauthorized, response.StatusCode);
-           //Assert.True(response.IsSuccessStatusCode);
+            //Assert.True(response.IsSuccessStatusCode);
         }
 
 
