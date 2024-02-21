@@ -32,6 +32,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [AutoGen("HelloApiRequest", "Biwen.QuickApi.DemoWeb.Apis")]
     public interface IHelloApiRequest : IAuthRequest { }
 
+    [FromBody]
     public partial class HelloApiRequest : BaseRequest<HelloApiRequest>
     {
         public string? Name { get; set; } = "default";
@@ -226,7 +227,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
             //如果请求是POST,可以添加Example.否则会忽略
-            builder.WithExample(new HelloApiRequest
+            builder.WithExamples([new HelloApiRequest
             {
                 Name = "vipwan",
                 Alias = "alias",
@@ -234,7 +235,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 UserName = "vipwan@ms.co.ltd",
                 Password = "p234565",
                 Department = "vipwan@co.ltd"
-            });
+            }
+            ]);
 
             return base.HandlerBuilder(builder);
         }
@@ -379,6 +381,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
+            builder.WithExamples([new FromBodyRequest { Id = 100, Name = "vipwan" }]);
             return base.HandlerBuilder(builder);
         }
     }

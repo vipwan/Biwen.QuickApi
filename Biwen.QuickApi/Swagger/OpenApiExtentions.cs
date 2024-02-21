@@ -9,9 +9,9 @@ public static class OpenApiExtentions
     /// <param name="builder"></param>
     /// <param name="example"></param>
     /// <returns></returns>
-    public static RouteHandlerBuilder WithExample(this RouteHandlerBuilder builder, object? example)
+    public static RouteHandlerBuilder WithExamples(this RouteHandlerBuilder builder, ICollection<object?> examples)
     {
-        builder.WithMetadata(new QuickApiExampleMetadata(example));
+        builder.WithMetadata(new QuickApiExampleMetadata(examples));
         return builder;
     }
 }

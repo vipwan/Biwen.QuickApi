@@ -64,7 +64,7 @@
                     op.OperationId = quickApiSummaryAttribute.OperationId;
                 }
 
-                if(quickApiSummaryAttribute.IsDeprecated)
+                if (quickApiSummaryAttribute.IsDeprecated)
                 {
                     op.IsDeprecated = true;//标注为已过时
                 }
@@ -87,9 +87,10 @@
                     reqContent.Add(c);
             }
 
-            var reqDtoType = apiDescription.ParameterDescriptions.FirstOrDefault()?.Type;
-            var reqDtoIsList = reqDtoType?.GetInterfaces().Contains(typeof(IEnumerable));
-            var reqDtoProps = reqDtoIsList is true ? null : reqDtoType?.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.FlattenHierarchy).ToList();
+            var reqType = kuickApiDef.QuickApiType?.GetInterface($"{nameof(IQuickApi<EmptyRequest, EmptyResponse>)}`2")?.GenericTypeArguments[0];
+            //var reqDtoType = apiDescription.ParameterDescriptions.FirstOrDefault()?.Type;
+            var reqDtoIsList = reqType?.GetInterfaces().Contains(typeof(IEnumerable));
+            var reqDtoProps = reqDtoIsList is true ? null : reqType?.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.FlattenHierarchy).ToList();
             var isGETRequest = apiDescription.HttpMethod == HttpMethods.Get;
 
             //移除Get请求的Body以及Content没有属性的请求
@@ -103,8 +104,10 @@
                 }
             }
 
+            //包含Examples的情况:
+            var example = metaData.OfType<QuickApiExampleMetadata>().SingleOrDefault();
+
             //请求的Req要求为FromBody的情况:
-            var reqType = kuickApiDef.QuickApiType?.GetInterface($"{nameof(IQuickApi<EmptyRequest, EmptyResponse>)}`2")?.GenericTypeArguments[0];
             if (reqType?.GetCustomAttribute<QuickApi.FromBodyAttribute>() != null)
             {
                 op.RequestBody = new OpenApiRequestBody
@@ -113,11 +116,11 @@
                     {
                         ["application/json"] = new OpenApiMediaType
                         {
-                            Schema = context.SchemaGenerator.Generate(reqType.ToContextualType(),context.SchemaResolver)
+                            Schema = context.SchemaGenerator.Generate(reqType.ToContextualType(),context.SchemaResolver),
+                            Example =  getExample(example?.Examples.FirstOrDefault()),
                         }
                     }
                 };
-                return true;
             }
 
             var reqParams = new List<OpenApiParameter>();
@@ -178,8 +181,8 @@
                     if (prop.IsDefined(typeof(FromBodyAttribute)))
                     {
                         reqParams.Add(CreateParam(
-                            context, 
-                            prop:prop, 
+                            context,
+                            prop: prop,
                             paramName: prop.Name,
                             isRequired: !IsNullable(prop),
                             kind: OpenApiParameterKind.Body));
@@ -275,7 +278,6 @@
                 }
             }
 
-
             //移除空的schema
             //var slist = context.Document.Components.Schemas.AsEnumerable().
             //    Where(x => x.Value.ActualProperties.Count == 0 && x.Value.IsObject);
@@ -283,56 +285,76 @@
             //{
             //    context.OperationDescription.Operation.Parameters.Where(x => x.Name == s.Key).ToList().ForEach(
             //        x => context.OperationDescription.Operation.Parameters.Remove(x));
-                
+
             //    context.Document.Components.Schemas.Remove(s.Key);
             //}
 
             foreach (var p in reqParams)
                 op.Parameters.Add(p);
 
-            //包含Example的情况:
-            var example = metaData.OfType<QuickApiExampleMetadata>().SingleOrDefault();
-            if (example?.Example != null)
+            //Get Example
+            ExpandoObject getExample(object? o)
+            {
+                if (o is null)
+                {
+                    return null!;
+                }
+                var clone = new ExpandoObject();
+                foreach (var prop in o.GetType().GetProperties())
+                {
+                    if (prop.IsDefined(typeof(JsonIgnoreAttribute)))
+                    {
+                        continue;
+                    }
+                    if (prop.IsDefined(typeof(FromServicesAttribute)))
+                    {
+                        continue;
+                    }
+#if NET8_0_OR_GREATER
+                    if (prop.IsDefined(typeof(FromKeyedServicesAttribute)))
+                    {
+                        continue;
+                    }
+#endif
+                    if (prop.IsDefined(typeof(FromQueryAttribute)))
+                    {
+                        continue;
+                    }
+                    if (prop.IsDefined(typeof(FromRouteAttribute)))
+                    {
+                        continue;
+                    }
+                    if (prop.IsDefined(typeof(FromHeaderAttribute)))
+                    {
+                        continue;
+                    }
+                    if (!prop.CanRead || !prop.CanWrite)
+                    {
+                        continue;
+                    }
+                    clone.TryAdd(prop.Name, prop.GetValue(o));
+                }
+                return clone;
+            }
+
+            if (example?.Examples != null)
             {
                 foreach (var requestBody in op.Parameters.Where(x => x.Kind == OpenApiParameterKind.Body))
                 {
-                    var clone = new ExpandoObject();
-                    foreach (var prop in example.Example.GetType().GetProperties())
+                    if (example.Examples.Count == 1)
                     {
-                        if (prop.IsDefined(typeof(JsonIgnoreAttribute)))
-                        {
-                            continue;
-                        }
-                        if (prop.IsDefined(typeof(FromServicesAttribute)))
-                        {
-                            continue;
-                        }
-#if NET8_0_OR_GREATER
-                        if (prop.IsDefined(typeof(FromKeyedServicesAttribute)))
-                        {
-                            continue;
-                        }
-#endif
-                        if(prop.IsDefined(typeof(FromQueryAttribute)))
-                        {
-                            continue;
-                        }
-                        if(prop.IsDefined(typeof(FromRouteAttribute)))
-                        {
-                            continue;
-                        }
-                        if(prop.IsDefined(typeof(FromHeaderAttribute)))
-                        {
-                            continue;
-                        }
-                        if(!prop.CanRead || !prop.CanWrite)
-                        {
-                            continue;
-                        }
-
-                        clone.TryAdd(prop.Name, prop.GetValue(example.Example));
+                        requestBody.ActualSchema.Example = getExample(example.Examples.First());
                     }
-                    requestBody.ActualSchema.Example = clone;
+                    if (example.Examples.Count > 1)
+                    {
+                        var i = 0;
+                        foreach (var examp in example.Examples)
+                        {
+                            reqContent?.First().Value.Examples.Add(
+                                key: $"Example {++i}",
+                                value: new() { Value = getExample(examp) });
+                        }
+                    }
                     break;
                 }
             }
