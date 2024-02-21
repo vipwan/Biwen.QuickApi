@@ -244,13 +244,20 @@ namespace Biwen.QuickApi
                             //如果是上传文件,则跳过
                             if (hasFormFile) continue;
 
-                            ReadFromJsonDic ??= (await context.Request.ReadFromJsonAsync<ExpandoObject>())!;
+                            try
+                            {
+                                ReadFromJsonDic ??= (await context.Request.ReadFromJsonAsync<ExpandoObject>())!;
+                            }
+                            catch
+                            {
+                                throw new QuickApiExcetion("无法从RequestBody绑定对象!");
+                            }
 
                             //注意别名权重高于属性名
                             var currentKey = (alias?.Name ?? prop.Name).ToLower();
 
                             //忽略大小写
-                            var ignoreCasDic = ReadFromJsonDic.Select(x => new KeyValuePair<string, object>(x.Key.ToLower(), x.Value))
+                            var ignoreCasDic = ReadFromJsonDic!.Select(x => new KeyValuePair<string, object>(x.Key.ToLower(), x.Value))
                                 .ToDictionary(x => x.Key, x => x.Value);
 
                             if (ignoreCasDic.TryGetValue(currentKey, out object? value))
