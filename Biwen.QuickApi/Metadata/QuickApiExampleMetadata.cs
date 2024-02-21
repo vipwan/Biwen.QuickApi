@@ -3,12 +3,8 @@
     /// <summary>
     /// Example Metadata for QuickApi
     /// </summary>
-    public class QuickApiExampleMetadata
+    public class QuickApiExampleMetadata(ICollection<object?> examples)
     {
-        public QuickApiExampleMetadata(object? example)
-        {
-            Example = example;
-        }
-        public object? Example { get; set; }
+        public ICollection<object?> Examples { get; set; } = examples;
     }
 }
