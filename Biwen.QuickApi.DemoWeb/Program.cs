@@ -1,4 +1,4 @@
-using Biwen.QuickApi.DemoWeb;
+ï»¿using Biwen.QuickApi.DemoWeb;
 using Biwen.QuickApi.DemoWeb.Apis;
 using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
 using Biwen.QuickApi.Swagger;
@@ -47,7 +47,7 @@ builder.Services.Configure<AuthenticationOptions>(options =>
     options.DefaultChallengeScheme = "Cookies";
 });
 
-#region swagger ÎÄµµ
+#region swagger æ–‡æ¡£
 
 
 //swagger
@@ -56,7 +56,7 @@ builder.Services.AddQuickApiDocument(options =>
     options.UseControllerSummaryAsTagDescription = true;
     options.DocumentName = "Quick API ALL QuickApi";
 
-    //options.ApiGroupNames = new[] { };//Î´Ö¸¶¨Õ¹Ê¾È«²¿Api
+    //options.ApiGroupNames = new[] { };//æœªæŒ‡å®šå±•ç¤ºå…¨éƒ¨Api
 
     options.PostProcess = document =>
     {
@@ -64,11 +64,11 @@ builder.Services.AddQuickApiDocument(options =>
         {
             Version = "Quick API ALL QuickApi",
             Title = "Quick API testcase",
-            Description = "Biwen.QuickApi ²âÊÔÓÃÀı",
+            Description = "Biwen.QuickApi æµ‹è¯•ç”¨ä¾‹",
             TermsOfService = "https://github.com/vipwan",
             Contact = new OpenApiContact
             {
-                Name = "»¶Ó­ Star & issue",
+                Name = "æ¬¢è¿ Star & issue",
                 Url = "https://github.com/vipwan/Biwen.QuickApi"
             },
             License = new OpenApiLicense
@@ -86,7 +86,7 @@ builder.Services.AddQuickApiDocument(options =>
     options.UseControllerSummaryAsTagDescription = true;
     options.DocumentName = "Quick API Admin&Group1";
 
-    options.ApiGroupNames = new[] { "admin", "group1" }; //ÎÄµµ·Ö×éÖ¸¶¨
+    options.ApiGroupNames = new[] { "admin", "group1" }; //æ–‡æ¡£åˆ†ç»„æŒ‡å®š
 
     options.PostProcess = document =>
     {
@@ -94,11 +94,11 @@ builder.Services.AddQuickApiDocument(options =>
         {
             Version = "Quick API V2",
             Title = "Quick API testcase",
-            Description = "Biwen.QuickApi ²âÊÔÓÃÀı",
+            Description = "Biwen.QuickApi æµ‹è¯•ç”¨ä¾‹",
             TermsOfService = "https://github.com/vipwan",
             Contact = new OpenApiContact
             {
-                Name = "»¶Ó­ Star & issue",
+                Name = "æ¬¢è¿ Star & issue",
                 Url = "https://github.com/vipwan/Biwen.QuickApi"
             },
             License = new OpenApiLicense
@@ -117,7 +117,7 @@ builder.Services.AddQuickApiDocument(options =>
     options.UseControllerSummaryAsTagDescription = true;
     options.DocumentName = "Quick API ALL";
 
-    //options.ApiGroupNames = new[] { };//Î´Ö¸¶¨Õ¹Ê¾È«²¿Api
+    //options.ApiGroupNames = new[] { };//æœªæŒ‡å®šå±•ç¤ºå…¨éƒ¨Api
 
     options.PostProcess = document =>
     {
@@ -125,11 +125,11 @@ builder.Services.AddQuickApiDocument(options =>
         {
             Version = "Quick API ALL",
             Title = "Quick API testcase",
-            Description = "Biwen.QuickApi ²âÊÔÓÃÀı",
+            Description = "Biwen.QuickApi æµ‹è¯•ç”¨ä¾‹",
             TermsOfService = "https://github.com/vipwan",
             Contact = new OpenApiContact
             {
-                Name = "»¶Ó­ Star & issue",
+                Name = "æ¬¢è¿ Star & issue",
                 Url = "https://github.com/vipwan/Biwen.QuickApi"
             },
             License = new OpenApiLicense
@@ -165,11 +165,11 @@ builder.Services.AddBiwenQuickApis(o =>
     o.EnableAntiForgeryTokens = true;
 });
 
-//Èç¹ûĞèÒª×Ô¶¨Òå·Ö×éÂ·ÓÉ¹¹½¨Æ÷
+//å¦‚æœéœ€è¦è‡ªå®šä¹‰åˆ†ç»„è·¯ç”±æ„å»ºå™¨
 builder.Services.AddBiwenQuickApiGroupRouteBuilder<DefaultGroupRouteBuilder>();
-//Èç¹ûĞèÒª×Ô¶¨ÒåÒì³£·µ»Ø¸ñÊ½
+//å¦‚æœéœ€è¦è‡ªå®šä¹‰å¼‚å¸¸è¿”å›æ ¼å¼
 //builder.Services.AddSingleton<IQuickApiExceptionResultBuilder, CustomExceptionResultBuilder>();
-//×Ô¶¨ÒåÒì³£´¦Àí
+//è‡ªå®šä¹‰å¼‚å¸¸å¤„ç†
 builder.Services.AddScoped<IQuickApiExceptionHandler, CustomExceptionHandler>();
 
 var app = builder.Build();
@@ -206,33 +206,33 @@ if (!app.Environment.IsProduction())
     app.UseHttpLogging();
 }
 
-// Ä¬ÈÏ·½Ê½
+// é»˜è®¤æ–¹å¼
 app.MapBiwenQuickApis();
 
-// Gen·½Ê½
+// Genæ–¹å¼
 //app.MapGenQuickApis(app.Services);
 
-//²âÊÔÆäËûµØ·½µ÷ÓÃQuickApi
+//æµ‹è¯•å…¶ä»–åœ°æ–¹è°ƒç”¨QuickApi
 app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<string, string[]>>>>
     (JustAsService api) =>
 {
-    //Í¨¹ıÄãµÄ·½Ê½»ñÈ¡ÇëÇó¶ÔÏó
+    //é€šè¿‡ä½ çš„æ–¹å¼è·å–è¯·æ±‚å¯¹è±¡
     var req = new EmptyRequest();
-    //ÑéÖ¤ÇëÇó¶ÔÏó
+    //éªŒè¯è¯·æ±‚å¯¹è±¡
     var result = req.Validate();
     if (!result.IsValid)
     {
         return TypedResults.BadRequest(result.ToDictionary());
     }
 
-    //Ö´ĞĞÇëÇó
+    //æ‰§è¡Œè¯·æ±‚
     var x = await api.ExecuteAsync(req);
     return TypedResults.Ok(x.Content);
 
 });
 
-//·¢ÏÖmsµÄWithOpenApiµÄÒ»´¦BUG,µ±MethodÎª¶à¸öÊ±»á±¨´í!
-//ÇëÖ±½ÓÊ¹ÓÃQuickApiSummaryAttribute!
+//å‘ç°msçš„WithOpenApiçš„ä¸€å¤„BUG,å½“Methodä¸ºå¤šä¸ªæ—¶ä¼šæŠ¥é”™!
+//è¯·ç›´æ¥ä½¿ç”¨QuickApiSummaryAttribute!
 //app.MapMethods("hello-world", new[] { "GET", "POST" }, () => Results.Ok()).WithOpenApi(operation => new(operation)
 //{
 //    Summary = "NeedAuthApi",
@@ -243,7 +243,7 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
 app.Run();
 
 
-//ÓÃÓÚxunit Test
+//ç”¨äºxunit Test
 namespace Biwen.QuickApi.DemoWeb
 {
     public partial class Program { }
