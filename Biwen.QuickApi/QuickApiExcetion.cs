@@ -1,14 +1,9 @@
-﻿
-namespace Biwen.QuickApi
+﻿namespace Biwen.QuickApi
 {
     /// <summary>
     /// QuickApi异常
     /// </summary>
-    public class QuickApiExcetion : Exception
+    public class QuickApiExcetion(string message) : Exception(message)
     {
-        public QuickApiExcetion(string message) : base(message)
-        {
-        }
-
     }
 }

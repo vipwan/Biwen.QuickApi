@@ -41,14 +41,14 @@ namespace Biwen.QuickApi
             {
                 get
                 {
-                    if (Caching.TAnnotationAttrs.TryGetValue(typeof(T), out var attr))
+                    var type = typeof(T).FullName!;
+                    if (Caching.TAnnotationAttrs.TryGetValue(type, out var attr))
                     {
                         return attr;
                     }
                     var has = typeof(T).GetProperties().Any(
                         prop => prop.GetCustomAttributes(true).Any(x => x is MSDA.ValidationAttribute));
-
-                    Caching.TAnnotationAttrs.TryAdd(typeof(T), has);
+                    Caching.TAnnotationAttrs.TryAdd(type, has);
                     return has;
                 }
             }

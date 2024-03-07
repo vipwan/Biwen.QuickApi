@@ -1,17 +1,10 @@
-﻿using Microsoft.AspNetCore.Http.Metadata;
-
-namespace Biwen.QuickApi.Metadata
+﻿namespace Biwen.QuickApi.Metadata
 {
     /// <summary>
     /// Metadata for QuickApi
     /// </summary>
-    public class QuickApiMetadata
+    public class QuickApiMetadata(Type? quickApiType)
     {
-
-        public QuickApiMetadata(Type? quickApiType)
-        {
-            QuickApiType = quickApiType;
-        }
 
         //public QuickApiMetadata(
         //    Type? quickApiType,
@@ -23,7 +16,7 @@ namespace Biwen.QuickApi.Metadata
         //    EndpointDescriptionMetadata = endpointDescriptionMetadata;
         //}
 
-        public Type? QuickApiType { get; set; }
+        public Type? QuickApiType { get; set; } = quickApiType;
 
         //public IEndpointSummaryMetadata? EndpointSummaryMetadata { get; set; }
 

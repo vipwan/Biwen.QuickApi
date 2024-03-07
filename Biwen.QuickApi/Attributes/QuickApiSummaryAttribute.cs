@@ -7,22 +7,16 @@
     /// 用于标记QuickApi的描述信息,等效<see cref="OpenApiOperationAttribute"/>标注<seealso cref="BaseQuickApi.HandlerBuilder(RouteHandlerBuilder)"/>
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public class QuickApiSummaryAttribute : Attribute
+    public class QuickApiSummaryAttribute(string? summary, string? description) : Attribute
     {
-        public QuickApiSummaryAttribute(string? summary, string? description)
-        {
-            Summary = summary;
-            Description = description;
-        }
-
         /// <summary>
         /// Summary
         /// </summary>
-        public string? Summary { get; set; }
+        public string? Summary { get; set; } = summary;
         /// <summary>
         /// Description
         /// </summary>
-        public string? Description { get; set; }
+        public string? Description { get; set; } = description;
 
         /// <summary>
         /// OperationId

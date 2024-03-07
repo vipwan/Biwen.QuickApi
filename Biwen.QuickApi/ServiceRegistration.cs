@@ -24,7 +24,7 @@ namespace Biwen.QuickApi
         /// <param name="services"></param>
         /// <returns></returns>
         public static IServiceCollection AddBiwenQuickApis(
-            this IServiceCollection services, 
+            this IServiceCollection services,
             Action<BiwenQuickApiOptions>? options = null)
         {
             //JSON Options
@@ -161,7 +161,7 @@ namespace Biwen.QuickApi
                 (app as WebApplication)?.UseMiddleware<QuickApiAntiforgeryMiddleware>();
 #endif
 #if NET8_0_OR_GREATER
-            (app as WebApplication)?.UseAntiforgery();
+                (app as WebApplication)?.UseAntiforgery();
 #endif
             }
             //middleware:

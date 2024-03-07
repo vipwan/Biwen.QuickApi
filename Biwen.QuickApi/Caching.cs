@@ -10,7 +10,7 @@ namespace Biwen.QuickApi
         /// <summary>
         /// 缓存T是否有DataAnnotation
         /// </summary>
-        public static readonly ConcurrentDictionary<Type, bool> TAnnotationAttrs = new();
+        public static readonly ConcurrentDictionary<string, bool> TAnnotationAttrs = new();
 
     }
 }

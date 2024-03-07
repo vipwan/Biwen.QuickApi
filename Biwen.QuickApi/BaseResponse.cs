@@ -28,15 +28,9 @@
     /// <summary>
     /// 文本输出
     /// </summary>
-    public sealed class ContentResponse : BaseResponse
+    public sealed class ContentResponse(string content) : BaseResponse
     {
-        public ContentResponse(string content)
-        {
-            Content = content;
-        }
-
-        public string Content { get; set; }
-
+        public string Content { get; set; } = content;
 
         /// <summary>
         /// Content
@@ -53,14 +47,9 @@
     /// IResult输出.
     /// 针对IResultResponse 请自行重写BaseQuickApi.HandlerBuilder方法的OpenApi实现
     /// </summary>
-    public sealed class IResultResponse : BaseResponse
+    public sealed class IResultResponse(IResult result) : BaseResponse
     {
-        public IResultResponse(IResult result)
-        {
-            Result = result;
-        }
-
-        public IResult Result { get; set; }
+        public IResult Result { get; set; } = result;
 
         /// <summary>
         /// 直接返回OK
