@@ -6,7 +6,7 @@ namespace Biwen.QuickApi.SourceGenerator
 {
     using System;
 
-    internal static class StringExtentions
+    internal static class StringExtensions
     {
         public static string ToCamelCase(this string str)
         {

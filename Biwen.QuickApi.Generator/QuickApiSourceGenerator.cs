@@ -234,11 +234,11 @@ namespace Biwen.QuickApi.SourceGenerator
                 //    .Replace("$namespace", string.Join(Environment.NewLine, namespacesSyntaxs))
                 //    .Replace("$apis", sb.ToString());
 
-                // ctx.AddSource($"QuickApiExtentions.g.cs", SourceText.From(endpointSource, Encoding.UTF8));
+                // ctx.AddSource($"QuickApiExtensions.g.cs", SourceText.From(endpointSource, Encoding.UTF8));
 
                 // format:
                 genx = FormatContent(genx);
-                ctx.AddSource($"QuickApiExtentions.g.cs", SourceText.From(genx, Encoding.UTF8));
+                ctx.AddSource($"QuickApiExtensions.g.cs", SourceText.From(genx, Encoding.UTF8));
 
                 #endregion
             });
