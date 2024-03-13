@@ -9,7 +9,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     ///  模拟直接登录,并且给予admin的Policy
     /// </summary>
     [QuickApi("logined", Group = "admin")]
-    [QuickApiSummary("模拟直接登录,并且给予admin的Policy", "模拟直接登录,并且给予admin的Policy")]
+    [QuickApiSummary("模拟直接登录,并且给予admin的Policy", description: "模拟直接登录,并且给予admin的Policy")]
     public class Login : BaseQuickApiWithoutRequest<ContentResponse>
     {
 
@@ -99,7 +99,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// 
     /// </summary>
     [QuickApi("edit", Group = "admin", Verbs = Verb.GET)]
-    [QuickApiSummary("需要登录,EditDocumentApi", "需要登录,EditDocumentApi")]
+    [QuickApiSummary("需要登录,EditDocumentApi", description: "需要登录,EditDocumentApi")]
     public class EditDocumentApi : BaseAdminApi<EmptyRequest, IResultResponse>
     {
         public override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
@@ -131,7 +131,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     [AllowAnonymous]
     [QuickApi("an-anonymous")]
-    [QuickApiSummary("使用特性标记可以匿名", "使用特性标记可以匿名")]
+    [QuickApiSummary("description: 使用特性标记可以匿名", "使用特性标记可以匿名")]
     public class AllowAnonymousTestApi : BaseQuickApi
     {
         public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
