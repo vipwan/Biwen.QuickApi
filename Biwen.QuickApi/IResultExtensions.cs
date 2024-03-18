@@ -2,7 +2,7 @@
 
 namespace Biwen.QuickApi
 {
-    public static class IResultExtentions
+    public static class IResultExtensions
     {
         /// <summary>
         /// 转换为IResultResponse
