@@ -3,20 +3,21 @@ using Biwen.QuickApi.DemoWeb.Apis;
 using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
 using Biwen.QuickApi.Swagger;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.BearerToken;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using NSwag;
-using NSwag.AspNetCore;
-using System.Text;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAuthentication().AddCookie();
+builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
 
 builder.Services.AddOutputCache(options =>
@@ -26,17 +27,11 @@ builder.Services.AddOutputCache(options =>
 
 builder.Services.AddResponseCaching();
 
-//builder.Services.AddAuthorizationBuilder().AddPolicy("admin", policy =>
-//{
-//    policy.RequireClaim("admin");
-//    policy.RequireAuthenticatedUser();
-//});
-
 builder.Services.Configure<AuthorizationOptions>(options =>
 {
-    options.AddPolicy("admin", policy =>
+    options.AddPolicy("admin", configurePolicy: policy =>
     {
-        policy.RequireClaim("admin");
+        policy.RequireClaim("admin", "admin");
         policy.RequireAuthenticatedUser();
     });
 });
@@ -46,6 +41,16 @@ builder.Services.Configure<AuthenticationOptions>(options =>
     options.DefaultScheme = "Cookies";
     options.DefaultChallengeScheme = "Cookies";
 });
+
+
+builder.Services.AddDbContext<IdentityDbContext>(options => options.UseInMemoryDatabase("net8"));
+// adds a set of common identity services to the application
+builder.Services.AddIdentityApiEndpoints<IdentityUser>(o =>
+{
+    o.User.RequireUniqueEmail = true;
+
+}).AddEntityFrameworkStores<IdentityDbContext>();
+
 
 #region swagger 文档
 
@@ -193,6 +198,8 @@ else
     app.UseWelcomePage("/");
 }
 
+
+
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -230,6 +237,13 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
     return TypedResults.Ok(x.Content);
 
 });
+
+
+// Identity API {"email" : "vipwan@co.ltd","password" : "*******"}
+// ~/account/register    
+// ~/account/login 
+app.MapGroup("account").MapIdentityApi<IdentityUser>();
+
 
 //发现ms的WithOpenApi的一处BUG,当Method为多个时会报错!
 //请直接使用QuickApiSummaryAttribute!

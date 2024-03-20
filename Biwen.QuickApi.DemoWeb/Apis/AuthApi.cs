@@ -32,6 +32,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             }, "admin")));
 
             return new ValueTask<ContentResponse>(new ContentResponse("已经登录成功"));
+
+            //.net8当前支持 MapIdentityApi
+            // ~/account/login 得到token
+
         }
     }
 
