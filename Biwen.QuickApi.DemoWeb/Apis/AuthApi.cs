@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
@@ -14,28 +16,50 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
 
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public Login(IHttpContextAccessor httpContextAccessor)
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
+
+
+        public Login(IHttpContextAccessor httpContextAccessor,
+            UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
             _httpContextAccessor = httpContextAccessor;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
-        public override ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
         {
             //模拟当前账号登录
-            _httpContextAccessor.HttpContext?.SignInAsync(
-                new ClaimsPrincipal(new ClaimsIdentity(new[]
+            var result = await _userManager.CreateAsync(new IdentityUser
             {
-                new Claim(ClaimTypes.NameIdentifier, "123456"),
-                new Claim(ClaimTypes.Name, "vipwan@ms.co.ltd"),
-                new Claim("admin", "admin"),
-                new Claim(ClaimTypes.Role, "admin"),
-            }, "admin")));
+                Email = "viwan@sina.com",
+                UserName = "vipwan@sina.com"
+            }, "123456");
 
-            return new ValueTask<ContentResponse>(new ContentResponse("已经登录成功"));
+            if (result.Succeeded)
+            {
+                var user = await _userManager.FindByNameAsync("vipwan@sina.com");
+                var flag = await _userManager.CheckPasswordAsync(user!, "123456");
 
+                if (flag)
+                {
+                    await _signInManager.SignInWithClaimsAsync(new IdentityUser
+                    {
+                        Email = "viwan@sina.com",
+                        UserName = "vipwan@sina.com"
+                    }, true, [new Claim("admin", "admin")]);
+                    return new ContentResponse("已经登录成功");
+                }
+
+                return new ContentResponse("登录失败");
+            }
+            else
+            {
+                return new ContentResponse($"注册账号失败了:{result.Errors.First().Description}");
+            }
             //.net8当前支持 MapIdentityApi
             // ~/account/login 得到token
-
         }
     }
 

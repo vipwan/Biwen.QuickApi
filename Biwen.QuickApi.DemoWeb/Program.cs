@@ -17,7 +17,7 @@ using NSwag;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAuthentication();
+builder.Services.AddAuthentication().AddCookie();
 builder.Services.AddAuthorization();
 
 builder.Services.AddOutputCache(options =>
@@ -31,7 +31,7 @@ builder.Services.Configure<AuthorizationOptions>(options =>
 {
     options.AddPolicy("admin", configurePolicy: policy =>
     {
-        //policy.RequireClaim("admin", "admin");
+        policy.RequireClaim("admin", "admin");
         policy.RequireAuthenticatedUser();
     });
 });
@@ -242,6 +242,7 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
     return TypedResults.Ok(x.Content);
 
 });
+
 
 
 // Identity API {"email" : "vipwan@co.ltd","password" : "*******"}
