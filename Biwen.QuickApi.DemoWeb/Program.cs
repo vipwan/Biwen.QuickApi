@@ -48,6 +48,11 @@ builder.Services.AddDbContext<IdentityDbContext>(options => options.UseInMemoryD
 builder.Services.AddIdentityApiEndpoints<IdentityUser>(o =>
 {
     o.User.RequireUniqueEmail = true;
+    o.Password.RequiredUniqueChars = 0;
+    o.Password.RequireNonAlphanumeric = false;
+    o.Password.RequireLowercase = false;
+    o.Password.RequireDigit = false;
+    o.Password.RequireUppercase = false;
 
 }).AddEntityFrameworkStores<IdentityDbContext>();
 
