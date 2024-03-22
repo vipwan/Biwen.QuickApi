@@ -35,6 +35,7 @@ namespace Biwen.QuickApi.Infrastructure
         };
 
         private static Assembly[] _allRequiredAssemblies = null!;
+        private static bool _allRequiredAssembliesFound = false;
 
         /// <summary>
         /// 排除公共程序集后的所有程序集
@@ -43,11 +44,15 @@ namespace Biwen.QuickApi.Infrastructure
         {
             get
             {
-                // 装载所有引用的程序集
-                var ass = Assembly.GetEntryAssembly()!.GetReferencedAssemblies();
-                foreach (var @as in ass)
+                if (!_allRequiredAssembliesFound)
                 {
-                    Assembly.Load(@as);
+                    // 装载所有引用的程序集
+                    var ass = Assembly.GetEntryAssembly()!.GetReferencedAssemblies();
+                    foreach (var @as in ass)
+                    {
+                        Assembly.Load(@as);
+                    }
+                    _allRequiredAssembliesFound = true;
                 }
 
                 return _allRequiredAssemblies ??=
