@@ -42,13 +42,16 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 var user = await _userManager.FindByNameAsync("vipwan@sina.com");
                 var flag = await _userManager.CheckPasswordAsync(user!, "123456");
 
+                //添加claim
+                await _userManager.AddClaimAsync(user!, new Claim("admin", "admin"));
+
                 if (flag)
                 {
-                    await _signInManager.SignInWithClaimsAsync(new IdentityUser
+                    await _signInManager.SignInAsync(new IdentityUser
                     {
                         Email = "viwan@sina.com",
                         UserName = "vipwan@sina.com"
-                    }, true, [new Claim("admin", "admin")]);
+                    }, true);
                     return new ContentResponse("已经登录成功");
                 }
 
