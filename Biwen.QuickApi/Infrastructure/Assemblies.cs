@@ -43,6 +43,13 @@ namespace Biwen.QuickApi.Infrastructure
         {
             get
             {
+                // 装载所有引用的程序集
+                var ass = Assembly.GetEntryAssembly()!.GetReferencedAssemblies();
+                foreach (var @as in ass)
+                {
+                    Assembly.Load(@as);
+                }
+
                 return _allRequiredAssemblies ??=
                     AppDomain.CurrentDomain.GetAssemblies()
                     .Where(x => !EscapeAssemblies
