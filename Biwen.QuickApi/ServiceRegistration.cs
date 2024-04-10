@@ -290,6 +290,20 @@ namespace Biwen.QuickApi
         }
 
         /// <summary>
+        /// IApplicationBuilder.UseBiwenQuickApis();
+        /// </summary>
+        /// <param name="app"></param>
+        /// <returns></returns>
+        public static IApplicationBuilder UseBiwenQuickApis(this IApplicationBuilder app)
+        {
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapBiwenQuickApis();
+            });
+            return app;
+        }
+
+        /// <summary>
         /// 执行请求的委托
         /// </summary>
         /// <param name="ctx"></param>
