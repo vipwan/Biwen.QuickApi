@@ -67,7 +67,7 @@ dotnet add package Biwen.QuickApi.SourceGenerator
 builder.Services.AddBiwenQuickApis();
 
 //缺省方案
-app.MapBiwenQuickApis();
+app.UseBiwenQuickApis();
 
 //Gen方案
 //app.MapGenBiwenQuickApis();
