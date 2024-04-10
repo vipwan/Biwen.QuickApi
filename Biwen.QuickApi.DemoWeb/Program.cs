@@ -219,7 +219,8 @@ if (!app.Environment.IsProduction())
 }
 
 // 默认方式
-app.MapBiwenQuickApis();
+//app.MapBiwenQuickApis();
+app.UseBiwenQuickApis();
 
 // Gen方式
 //app.MapGenQuickApis(app.Services);

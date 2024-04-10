@@ -296,6 +296,7 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public static IApplicationBuilder UseBiwenQuickApis(this IApplicationBuilder app)
         {
+            app.UseRouting();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBiwenQuickApis();
