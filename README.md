@@ -16,9 +16,9 @@ public class MyStore
 [QuickApi("todos")]
 public class TodosApi : BaseQuickApi
 {
-    public override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
+    public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
     {
-        return new ValueTask<IResultResponse>(IResultResponse.OK(MyStore.SampleTodos()));
+        return IResultResponse.OK(MyStore.SampleTodos());
     }
 }
 ```
@@ -261,7 +261,7 @@ public class IResultTestApi : BaseQuickApiWithoutRequest<IResultResponse>
 {
     public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
     {
-        return new ValueTask<IResultResponse>(Results.Ok("Hello World IResult!").AsRsp());
+        return IResultResponse.Ok("Hello World IResult!");
     }
 
     public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -292,7 +292,7 @@ public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
                 return Results.Ok(content).AsRspOfResult();
             }
         }
-        return new ValueTask<IResultResponse>(Results.BadRequest("no file").AsRspOfResult());
+        return IResultResponse.BadRequest("no file");
     }
 }
 
@@ -302,9 +302,9 @@ public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
 [QuickApi(""), JustAsService]
 public class JustAsService : BaseQuickApi<EmptyRequest, ContentResponse>
 {
-    public override ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
+    public override async ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
     {
-        return new ValueTask<ContentResponse>(new ContentResponse("Hello World JustAsService!"));
+        return new ContentResponse("Hello World JustAsService!");
     }
 }
 ```
