@@ -21,7 +21,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             await Task.CompletedTask;
             Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
-            return Results.Ok().AsRspOfResult();
+            return IResultResponse.OK();
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return Results.Ok().AsRspOfResult();
+            return IResultResponse.OK();
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -100,11 +100,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("cache", Verbs = Verb.GET | Verb.POST)]
     [QuickApiSummary("Cache缓存测试", "测试缓存功能")]
     [OutputCache(Duration = 10)]
-    public class CachedApi : BaseQuickApiWithoutRequest<ContentResponse>
+    public class CachedApi : BaseQuickApiWithoutRequest<IResultResponse>
     {
-        public override ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return new ValueTask<ContentResponse>(new ContentResponse(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
+            await Task.CompletedTask;
+            return IResultResponse.Content(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {

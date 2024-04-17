@@ -300,7 +300,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return Results.Ok().AsRspOfResult();
+            return IResultResponse.OK();
         }
     }
 
@@ -326,14 +326,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     [QuickApi("content", Group = "hello", Verbs = Verb.GET)]
     [QuickApiSummary("ContentApi", "ContentApi")]
-    public class ContentApi : BaseQuickApi<EmptyRequest, ContentResponse>
+    public class ContentApi : BaseQuickApi<EmptyRequest, IResultResponse>
     {
-        public override async ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return new ContentResponse("Hello World content!");
+            return IResultResponse.Content("Hello World!");
         }
-
     }
 
     /// <summary>
@@ -372,11 +371,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     [QuickApi("frombody", Verbs = Verb.POST)]
     [QuickApiSummary("frombody", "当前接口Req来自整个FormBody")]
-    public class FromBodyApi : BaseQuickApi<FromBodyRequest, ContentResponse>
+    public class FromBodyApi : BaseQuickApi<FromBodyRequest>
     {
-        public override async ValueTask<ContentResponse> ExecuteAsync(FromBodyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(FromBodyRequest request)
         {
-            return new ContentResponse($"FromBodyApi {request.Id} {request.Name}");
+            await Task.CompletedTask;
+            return IResultResponse.OK($"FromBodyApi {request.Id} {request.Name}");
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -392,7 +392,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     [QuickApi("fromfile", Verbs = Verb.POST)]
     [QuickApiSummary("上传文件测试", "上传文件测试")]
-    public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
+    public class FromFileApi : BaseQuickApi<FileUploadRequest>
     {
 
         public override async ValueTask<IResultResponse> ExecuteAsync(FileUploadRequest request)
@@ -406,7 +406,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                     return Results.Ok(content).AsRspOfResult();
                 }
             }
-            return Results.BadRequest("no file").AsRspOfResult();
+            return IResultResponse.BadRequest("no file");
         }
 
         //public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)

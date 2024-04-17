@@ -11,7 +11,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return Results.Ok().AsRspOfResult();
+            return IResultResponse.OK();
         }
 
 
