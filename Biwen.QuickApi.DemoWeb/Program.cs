@@ -237,12 +237,18 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
 
 });
 
-
-
 // Identity API {"email" : "vipwan@co.ltd","password" : "*******"}
 // ~/account/register    
 // ~/account/login 
-app.MapGroup("account").MapIdentityApi<IdentityUser>();
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapGroup("account").MapIdentityApi<IdentityUser>().WithOpenApi();//swagger
+}
+else
+{
+    app.MapGroup("account").MapIdentityApi<IdentityUser>();
+}
 
 
 //发现ms的WithOpenApi的一处BUG,当Method为多个时会报错!
