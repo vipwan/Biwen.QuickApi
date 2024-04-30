@@ -365,10 +365,10 @@ namespace Biwen.QuickApi
                     dynamic expandoObject = new ExpandoObject();
                     foreach (var prop in type.GetProperties())
                     {
+                        if (prop is null) continue;
                         var alias = prop.GetCustomAttribute<AliasAsAttribute>();
-                        ((IDictionary<string, object>)expandoObject)[alias != null ? alias.Name : prop.Name] = prop.GetValue(rsp);
+                        ((IDictionary<string, object>)expandoObject)[alias != null ? alias.Name : prop.Name] = prop.GetValue(rsp)!;
                     }
-
                     return expandoObject;
                 };
 

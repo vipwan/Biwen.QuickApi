@@ -12,7 +12,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     [QuickApi("logined", Group = "admin")]
     [QuickApiSummary("模拟直接登录,并且给予admin的Policy", description: "模拟直接登录,并且给予admin的Policy")]
-    public class Login : BaseQuickApiWithoutRequest<ContentResponse>
+    public class Login : BaseQuickApi
     {
 
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -28,7 +28,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _signInManager = signInManager;
         }
 
-        public override async ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
             //模拟当前账号登录
             var result = await _userManager.CreateAsync(new IdentityUser
@@ -52,14 +52,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                         Email = "viwan@sina.com",
                         UserName = "vipwan@sina.com"
                     }, true);
-                    return new ContentResponse("已经登录成功");
+                    return IResultResponse.OK("已经登录成功");
                 }
-
-                return new ContentResponse("登录失败");
+                return IResultResponse.BadRequest("登录失败");
             }
             else
             {
-                return new ContentResponse($"注册账号失败了:{result.Errors.First().Description}");
+                return IResultResponse.BadRequest($"注册账号失败了:{result.Errors.First().Description}");
             }
             //.net8当前支持 MapIdentityApi
             // ~/account/login 得到token
@@ -107,11 +106,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     [QuickApi("index", Group = "admin", Verbs = Verb.GET, Policy = "admin")]
     [QuickApiSummary("需要登录,NeedAuthApi", "NeedAuthApi")]
-    public class NeedAuthApi : BaseQuickApiWithoutRequest<ContentResponse>
+    public class NeedAuthApi : BaseQuickApi
     {
-        public override ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
         {
-            return new ValueTask<ContentResponse>(new ContentResponse("恭喜你有权限访问当前接口!"));
+            return ValueTask.FromResult(IResultResponse.OK("恭喜你有权限访问当前接口!"));
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -123,7 +122,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             //});
             return base.HandlerBuilder(builder);
         }
-
     }
 
     /// <summary>

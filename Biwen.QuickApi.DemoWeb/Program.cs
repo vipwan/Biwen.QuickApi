@@ -1,9 +1,6 @@
-﻿using Biwen.QuickApi.DemoWeb;
-using Biwen.QuickApi.DemoWeb.Apis;
+﻿using Biwen.QuickApi.DemoWeb.Apis;
 using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
 using Biwen.QuickApi.Swagger;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.BearerToken;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.HttpLogging;
@@ -17,7 +14,12 @@ using NSwag;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAuthentication().AddCookie();
+builder.Services.AddAuthentication(o =>
+{
+    o.DefaultScheme = "Cookies";
+    o.DefaultChallengeScheme = "Cookies";
+}).AddCookie();
+
 builder.Services.AddAuthorization();
 
 builder.Services.AddOutputCache(options =>
@@ -35,13 +37,6 @@ builder.Services.Configure<AuthorizationOptions>(options =>
         policy.RequireAuthenticatedUser();
     });
 });
-
-builder.Services.Configure<AuthenticationOptions>(options =>
-{
-    options.DefaultScheme = "Cookies";
-    options.DefaultChallengeScheme = "Cookies";
-});
-
 
 builder.Services.AddDbContext<IdentityDbContext>(options => options.UseInMemoryDatabase("net8"));
 // adds a set of common identity services to the application
@@ -121,7 +116,6 @@ builder.Services.AddQuickApiDocument(options =>
 },
 new SecurityOptions());
 
-
 builder.Services.AddQuickApiDocument(options =>
 {
     options.UseControllerSummaryAsTagDescription = true;
@@ -151,7 +145,6 @@ builder.Services.AddQuickApiDocument(options =>
     };
 },
 new SecurityOptions());
-
 
 #endregion
 
