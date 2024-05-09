@@ -25,11 +25,11 @@ namespace Biwen.QuickApi
         /// <inheritdoc cref="IAntiforgery.IsAntiforgeryEnabled" />
         public virtual bool IsAntiforgeryEnabled => false;
 
-        public virtual async Task PublishAsync<T>(T @event) where T : IEvent
+        public virtual async Task PublishAsync<T>(T @event, CancellationToken cancellationToken = default) where T : IEvent
         {
             using var scope = ServiceRegistration.ServiceProvider.CreateScope();
             var publisher = scope.ServiceProvider.GetRequiredService<Publisher>();
-            await publisher.PublishAsync(@event);
+            await publisher.PublishAsync(@event, cancellationToken);
         }
 
         /// <summary>

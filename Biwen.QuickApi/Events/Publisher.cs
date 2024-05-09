@@ -9,7 +9,7 @@
             _serviceProvider = serviceProvider;
         }
 
-        public async Task PublishAsync<T>(T @event) where T : IEvent
+        public async Task PublishAsync<T>(T @event, CancellationToken ct) where T : IEvent
         {
             var handlers = _serviceProvider.GetServices<IEventHandler<T>>();
             //var handlers = (IEnumerable<IEventHandler<T>>)(_serviceProvider.GetService(typeof(IEnumerable<IEventHandler<T>>)) ?? throw new NotSupportedException());
@@ -19,7 +19,7 @@
             {
                 try
                 {
-                    await handler.HandleAsync(@event, default);
+                    await handler.HandleAsync(@event, ct);
                 }
                 catch
                 {

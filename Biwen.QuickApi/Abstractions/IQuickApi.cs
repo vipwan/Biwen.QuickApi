@@ -68,7 +68,7 @@ namespace Biwen.QuickApi.Abstractions
         /// <typeparam name="T"></typeparam>
         /// <param name="event">Event</param>
         /// <returns></returns>
-        Task PublishAsync<T>(T @event) where T : IEvent;
+        Task PublishAsync<T>(T @event, CancellationToken cancellationToken) where T : IEvent;
     }
 
 }
