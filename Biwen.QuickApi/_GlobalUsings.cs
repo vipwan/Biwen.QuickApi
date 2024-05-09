@@ -9,6 +9,8 @@ global using System.Collections.Generic;
 global using System.ComponentModel;
 global using System.Linq;
 global using System.Reflection;
+
+global using Biwen.QuickApi.Abstractions;
 global using Biwen.QuickApi.Attributes;
 global using Biwen.QuickApi.Metadata;
 

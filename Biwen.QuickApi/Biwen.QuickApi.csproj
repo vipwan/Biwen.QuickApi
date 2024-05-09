@@ -6,7 +6,7 @@
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-		<PackageVersion>1.4.2.1</PackageVersion>
+		<PackageVersion>1.4.2.2</PackageVersion>
 
 		<TargetFrameworks>net8.0</TargetFrameworks>
 		<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>

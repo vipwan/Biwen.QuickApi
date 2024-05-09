@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 
-namespace Biwen.QuickApi
+namespace Biwen.QuickApi.Abstractions
 {
     /// <summary>
     /// 标记接口

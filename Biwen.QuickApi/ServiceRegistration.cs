@@ -8,6 +8,7 @@ using System.Dynamic;
 
 namespace Biwen.QuickApi
 {
+    using Biwen.QuickApi.Abstractions;
     using Biwen.QuickApi.Http;
 #if NET8_0_OR_GREATER
     using Microsoft.AspNetCore.Antiforgery;

@@ -1,5 +1,6 @@
 ﻿namespace Biwen.QuickApi.Swagger
 {
+    using Biwen.QuickApi.Abstractions;
     using Biwen.QuickApi.Metadata;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;

@@ -1,4 +1,4 @@
-﻿namespace Biwen.QuickApi
+﻿namespace Biwen.QuickApi.Abstractions
 {
     /// <summary>
     /// 验证器接口

@@ -272,6 +272,7 @@ using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Options;
 using Biwen.QuickApi;
+using Biwen.QuickApi.Abstractions;
 using Biwen.QuickApi.Attributes;
 using Biwen.QuickApi.Http;
 using Biwen.QuickApi.Metadata;
