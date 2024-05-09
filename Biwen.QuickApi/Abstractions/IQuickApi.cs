@@ -3,11 +3,13 @@ using Microsoft.AspNetCore.Http;
 
 namespace Biwen.QuickApi.Abstractions
 {
+    using Biwen.QuickApi.Events;
+
     /// <summary>
     /// 标记接口
     /// </summary>
 #pragma warning disable GEN031 // 使用[AutoGen]自动生成
-    internal interface IQuickApi<Req, Rsp> : IHandlerBuilder, IQuickApiMiddlewareHandler, IAntiforgeryApi
+    internal interface IQuickApi<Req, Rsp> : IHandlerBuilder, IQuickApiMiddlewareHandler, IAntiforgeryApi, IPublisher
     {
         ValueTask<Rsp> ExecuteAsync(Req request);
     }
@@ -56,4 +58,17 @@ namespace Biwen.QuickApi.Abstractions
         /// </summary>
         bool IsAntiforgeryEnabled { get; }
     }
+
+
+    internal interface IPublisher
+    {
+        /// <summary>
+        /// Event Publish
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="event">Event</param>
+        /// <returns></returns>
+        Task PublishAsync<T>(T @event) where T : IEvent;
+    }
+
 }

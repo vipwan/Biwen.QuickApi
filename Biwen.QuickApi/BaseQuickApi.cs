@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Biwen.QuickApi.Events;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using NSwag.Annotations;
 
 namespace Biwen.QuickApi
 {
+    using Microsoft.Extensions.DependencyInjection.Extensions;
     /// <summary>
     /// BaseQuickApi
     /// </summary>
@@ -22,6 +24,13 @@ namespace Biwen.QuickApi
 
         /// <inheritdoc cref="IAntiforgery.IsAntiforgeryEnabled" />
         public virtual bool IsAntiforgeryEnabled => false;
+
+        public virtual async Task PublishAsync<T>(T @event) where T : IEvent
+        {
+            using var scope = ServiceRegistration.ServiceProvider.CreateScope();
+            var publisher = scope.ServiceProvider.GetRequiredService<Publisher>();
+            await publisher.PublishAsync(@event);
+        }
 
         /// <summary>
         /// 默认的请求参数绑定器

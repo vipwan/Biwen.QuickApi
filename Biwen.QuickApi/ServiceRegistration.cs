@@ -9,6 +9,7 @@ using System.Dynamic;
 namespace Biwen.QuickApi
 {
     using Biwen.QuickApi.Abstractions;
+    using Biwen.QuickApi.Events;
     using Biwen.QuickApi.Http;
 #if NET8_0_OR_GREATER
     using Microsoft.AspNetCore.Antiforgery;
@@ -17,6 +18,10 @@ namespace Biwen.QuickApi
 
     public static class ServiceRegistration
     {
+        /// <summary>
+        /// sp
+        /// </summary>
+        internal static IServiceProvider ServiceProvider { get; private set; } = null!;
 
         /// <summary>
         /// Add Biwen.QuickApis,默认Json序列化JsonSerializerDefaults.Web.
@@ -28,6 +33,7 @@ namespace Biwen.QuickApi
             this IServiceCollection services,
             Action<BiwenQuickApiOptions>? options = null)
         {
+
             //JSON Options
             services.ConfigureHttpJsonOptions(x => { });
 
@@ -56,8 +62,19 @@ namespace Biwen.QuickApi
             //AddProblemDetails
             services.AddProblemDetails();
 
+            //注册EventHanders
+            foreach (var handlerType in EventHandlers)
+            {
+                var baseType = handlerType.GetInterfaces().First(x => x.IsGenericType && x.GetGenericTypeDefinition() == InterfaceEventHandler);
+                services.AddScoped(baseType, handlerType);
+            }
+            //注册Publisher
+            services.AddScoped<Publisher>();
+
             //add quickapis
             foreach (var api in Apis) services.AddScoped(api);
+
+
             return services;
         }
 
@@ -96,6 +113,7 @@ namespace Biwen.QuickApi
 
         static readonly Type InterfaceQuickApi = typeof(IQuickApi<,>);
         static readonly Type InterfaceReqBinder = typeof(IReqBinder<>);
+        static readonly Type InterfaceEventHandler = typeof(IEventHandler<>);
 
         static readonly object _lock = new();//锁
 
@@ -132,6 +150,20 @@ namespace Biwen.QuickApi
             }
         }
 
+
+        static IEnumerable<Type> _eventHanlers = null!;
+
+        static IEnumerable<Type> EventHandlers
+        {
+            get
+            {
+                lock (_lock)
+                    return _eventHanlers ??= ASS.InAllRequiredAssemblies.Where(x =>
+                    !x.IsAbstract && x.IsPublic && x.IsClass && x.IsToGenericInterface(InterfaceEventHandler));
+            }
+        }
+
+
         #endregion
 
         /// <summary>
@@ -152,6 +184,9 @@ namespace Biwen.QuickApi
             {
                 throw new QuickApiExcetion($"所有QuickApi都必须标注QuickApi特性!");
             }
+
+            //sp
+            ServiceRegistration.ServiceProvider = app.ServiceProvider;
 
             var quickApiOptions = app.ServiceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
 
