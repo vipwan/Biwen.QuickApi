@@ -4,17 +4,33 @@
     {
         public async Task PublishAsync<T>(T @event, CancellationToken ct) where T : IEvent
         {
-            var handlers = serviceProvider.GetServices<IEventSubscriber<T>>();
-            if (handlers is null) return;
-            foreach (var handler in handlers.OrderBy(x => x.Order))
+            var subscribers = serviceProvider.GetServices<IEventSubscriber<T>>();
+            if (subscribers is null) return;
+
+            List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)> listWithMetadatas = [];
+
+            foreach (var subscriber in subscribers)
+            {
+                var metadata = subscriber.GetType().GetCustomAttribute<EventSubscriberAttribute>() ?? new EventSubscriberAttribute();
+                listWithMetadatas.Add((subscriber, metadata));
+            }
+
+            foreach (var (subscriber, metadata) in listWithMetadatas.OrderBy(x => x.Metadata.Order))
             {
                 try
                 {
-                    await handler.HandleAsync(@event, ct);
+                    if (!metadata.IsAsync)
+                    {
+                        await subscriber.HandleAsync(@event, ct);
+                    }
+                    else
+                    {
+                        _ = subscriber.HandleAsync(@event, ct);
+                    }
                 }
                 catch
                 {
-                    if (handler.ThrowIfError)
+                    if (metadata.ThrowIfError)
                     {
                         throw;
                     }

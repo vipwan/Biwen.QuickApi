@@ -16,6 +16,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     }
 
 
+    [EventSubscriber(Order = 0, IsAsync = true)]
     public class MyEventHandler : EventSubscriber<MyEvent>
     {
         private readonly ILogger<MyEventHandler> _logger;
@@ -24,16 +25,19 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _logger = logger;
         }
 
-        public override Task HandleAsync(MyEvent @event, CancellationToken ct)
+        public override async Task HandleAsync(MyEvent @event, CancellationToken ct)
         {
+            //模拟异步操作
+            await Task.Delay(5000, ct);
+
             _logger.LogInformation($"msg 2 : {@event.Message}");
-            return Task.CompletedTask;
         }
     }
 
     /// <summary>
     /// 更早执行的Handler
     /// </summary>
+    [EventSubscriber(Order = 1)]
     public class MyEventHandler2 : EventSubscriber<MyEvent>
     {
         private readonly ILogger<MyEventHandler2> _logger;
@@ -48,13 +52,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return Task.CompletedTask;
         }
 
-        public override int Order => -1;
-
     }
 
     /// <summary>
     /// 抛出异常的Handler
     /// </summary>
+    [EventSubscriber(Order =-2,ThrowIfError =false)]
     public class MyEventHandler3 : EventSubscriber<MyEvent>
     {
         private readonly ILogger<MyEventHandler3> _logger;
@@ -67,19 +70,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             throw new Exception("error");
         }
-
-        public override int Order => -2;
-
-        public override bool ThrowIfError => false;
-
     }
-
-
-
 
     /// <summary>
     /// 同时订阅多个事件
     /// </summary>
+    [EventSubscriber(IsAsync = true,Order =0, ThrowIfError =false)]
     public class MyEventHandler4 : IEventSubscriber<MyEvent>, IEventSubscriber<MyEvent2>
     {
         private readonly ILogger<MyEventHandler4> _logger;
@@ -87,9 +83,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             _logger = logger;
         }
-
-        public int Order => 0;
-        public bool ThrowIfError => false;
 
         public Task HandleAsync(MyEvent @event, CancellationToken ct)
         {
