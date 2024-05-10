@@ -63,10 +63,10 @@ namespace Biwen.QuickApi
             services.AddProblemDetails();
 
             //注册EventHanders
-            foreach (var handlerType in EventHandlers)
+            foreach (var subscriberType in EventSubscribers)
             {
-                var baseType = handlerType.GetInterfaces().First(x => x.IsGenericType && x.GetGenericTypeDefinition() == InterfaceEventSubscriber);
-                services.AddScoped(baseType, handlerType);
+                var baseType = subscriberType.GetInterfaces().First(x => x.IsGenericType && x.GetGenericTypeDefinition() == InterfaceEventSubscriber);
+                services.AddScoped(baseType, subscriberType);
             }
             //注册Publisher
             services.AddScoped<Publisher>();
@@ -151,14 +151,14 @@ namespace Biwen.QuickApi
         }
 
 
-        static IEnumerable<Type> _eventHanlers = null!;
+        static IEnumerable<Type> _eventSubscribers = null!;
 
-        static IEnumerable<Type> EventHandlers
+        static IEnumerable<Type> EventSubscribers
         {
             get
             {
                 lock (_lock)
-                    return _eventHanlers ??= ASS.InAllRequiredAssemblies.Where(x =>
+                    return _eventSubscribers ??= ASS.InAllRequiredAssemblies.Where(x =>
                     !x.IsAbstract && x.IsPublic && x.IsClass && x.IsToGenericInterface(InterfaceEventSubscriber));
             }
         }
