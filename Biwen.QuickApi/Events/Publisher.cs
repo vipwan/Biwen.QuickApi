@@ -5,7 +5,9 @@
         public async Task PublishAsync<T>(T @event, CancellationToken ct) where T : IEvent
         {
             var subscribers = serviceProvider.GetServices<IEventSubscriber<T>>();
+            //无订阅者直接返回
             if (subscribers is null) return;
+            if (subscribers.Any() == false) return;
 
             List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)> listWithMetadatas = [];
 
