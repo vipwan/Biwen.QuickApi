@@ -11,10 +11,8 @@
 
         public async Task PublishAsync<T>(T @event, CancellationToken ct) where T : IEvent
         {
-            var handlers = _serviceProvider.GetServices<IEventHandler<T>>();
-            //var handlers = (IEnumerable<IEventHandler<T>>)(_serviceProvider.GetService(typeof(IEnumerable<IEventHandler<T>>)) ?? throw new NotSupportedException());
+            var handlers = _serviceProvider.GetServices<IEventSubscriber<T>>();
             if (handlers is null) return;
-
             foreach (var handler in handlers.OrderBy(x => x.Order))
             {
                 try

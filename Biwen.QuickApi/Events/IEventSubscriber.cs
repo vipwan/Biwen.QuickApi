@@ -1,6 +1,6 @@
 ﻿namespace Biwen.QuickApi.Events
 {
-    public interface IEventHandler<T> where T : IEvent
+    public interface IEventSubscriber<T> where T : IEvent
     {
         Task HandleAsync(T @event, CancellationToken ct);
 
@@ -16,7 +16,7 @@
     }
 
 
-    public abstract class EventHandler<T> : IEventHandler<T> where T : IEvent
+    public abstract class EventSubscriber<T> : IEventSubscriber<T> where T : IEvent
     {
         public abstract Task HandleAsync(T @event, CancellationToken ct);
 

@@ -1,15 +1,15 @@
-﻿
-using Biwen.QuickApi.Events;
+﻿using Biwen.QuickApi.Events;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
 {
-
-    public class MyEvent : IEvent
+    public class MyEvent : BaseRequest<MyEvent>,IEvent
     {
+        [FromQuery]
         public string? Message { get; set; }
     }
 
-    public class MyEventHandler : Biwen.QuickApi.Events.EventHandler<MyEvent>
+    public class MyEventHandler : EventSubscriber<MyEvent>
     {
         private readonly ILogger<MyEventHandler> _logger;
         public MyEventHandler(ILogger<MyEventHandler> logger)
@@ -27,7 +27,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <summary>
     /// 更早执行的Handler
     /// </summary>
-    public class MyEventHandler2 : Biwen.QuickApi.Events.EventHandler<MyEvent>
+    public class MyEventHandler2 : EventSubscriber<MyEvent>
     {
         private readonly ILogger<MyEventHandler> _logger;
         public MyEventHandler2(ILogger<MyEventHandler> logger)
@@ -48,7 +48,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <summary>
     /// 抛出异常的Handler
     /// </summary>
-    public class MyEventHandler3 : Biwen.QuickApi.Events.EventHandler<MyEvent>
+    public class MyEventHandler3 : EventSubscriber<MyEvent>
     {
         private readonly ILogger<MyEventHandler> _logger;
         public MyEventHandler3(ILogger<MyEventHandler> logger)
@@ -63,19 +63,17 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public override int Order => -2;
 
-        public override bool ThrowIfError => true;
+        public override bool ThrowIfError => false;
 
     }
 
-
-
-
     [QuickApi("event")]
-    public class EventApi : BaseQuickApi
+    public class EventApi : BaseQuickApi<MyEvent>
     {
-        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResultResponse> ExecuteAsync(MyEvent request)
         {
-            await PublishAsync(new MyEvent { Message = "hello world!" });
+            //publish
+            await PublishAsync(request);
             return IResultResponse.Content("send event");
         }
     }

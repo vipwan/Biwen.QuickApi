@@ -65,7 +65,7 @@ namespace Biwen.QuickApi
             //注册EventHanders
             foreach (var handlerType in EventHandlers)
             {
-                var baseType = handlerType.GetInterfaces().First(x => x.IsGenericType && x.GetGenericTypeDefinition() == InterfaceEventHandler);
+                var baseType = handlerType.GetInterfaces().First(x => x.IsGenericType && x.GetGenericTypeDefinition() == InterfaceEventSubscriber);
                 services.AddScoped(baseType, handlerType);
             }
             //注册Publisher
@@ -113,7 +113,7 @@ namespace Biwen.QuickApi
 
         static readonly Type InterfaceQuickApi = typeof(IQuickApi<,>);
         static readonly Type InterfaceReqBinder = typeof(IReqBinder<>);
-        static readonly Type InterfaceEventHandler = typeof(IEventHandler<>);
+        static readonly Type InterfaceEventSubscriber = typeof(IEventSubscriber<>);
 
         static readonly object _lock = new();//锁
 
@@ -159,7 +159,7 @@ namespace Biwen.QuickApi
             {
                 lock (_lock)
                     return _eventHanlers ??= ASS.InAllRequiredAssemblies.Where(x =>
-                    !x.IsAbstract && x.IsPublic && x.IsClass && x.IsToGenericInterface(InterfaceEventHandler));
+                    !x.IsAbstract && x.IsPublic && x.IsClass && x.IsToGenericInterface(InterfaceEventSubscriber));
             }
         }
 
