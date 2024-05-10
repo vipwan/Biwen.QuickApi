@@ -1,17 +1,10 @@
 ﻿namespace Biwen.QuickApi.Events
 {
-    internal class Publisher
+    internal class Publisher(IServiceProvider serviceProvider)
     {
-        private readonly IServiceProvider _serviceProvider;
-
-        public Publisher(IServiceProvider serviceProvider)
-        {
-            _serviceProvider = serviceProvider;
-        }
-
         public async Task PublishAsync<T>(T @event, CancellationToken ct) where T : IEvent
         {
-            var handlers = _serviceProvider.GetServices<IEventSubscriber<T>>();
+            var handlers = serviceProvider.GetServices<IEventSubscriber<T>>();
             if (handlers is null) return;
             foreach (var handler in handlers.OrderBy(x => x.Order))
             {
@@ -28,7 +21,6 @@
                     //todo:
                 }
             }
-
         }
     }
 }

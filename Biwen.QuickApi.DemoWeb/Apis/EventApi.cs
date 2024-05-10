@@ -29,8 +29,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     public class MyEventHandler2 : EventSubscriber<MyEvent>
     {
-        private readonly ILogger<MyEventHandler> _logger;
-        public MyEventHandler2(ILogger<MyEventHandler> logger)
+        private readonly ILogger<MyEventHandler2> _logger;
+        public MyEventHandler2(ILogger<MyEventHandler2> logger)
         {
             _logger = logger;
         }
@@ -50,8 +50,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     public class MyEventHandler3 : EventSubscriber<MyEvent>
     {
-        private readonly ILogger<MyEventHandler> _logger;
-        public MyEventHandler3(ILogger<MyEventHandler> logger)
+        private readonly ILogger<MyEventHandler3> _logger;
+        public MyEventHandler3(ILogger<MyEventHandler3> logger)
         {
             _logger = logger;
         }
