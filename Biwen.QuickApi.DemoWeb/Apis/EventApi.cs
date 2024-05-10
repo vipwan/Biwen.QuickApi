@@ -9,6 +9,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         public string? Message { get; set; }
     }
 
+
+    public class MyEvent2: IEvent
+    {
+        public string? Message { get; set; }
+    }
+
+
     public class MyEventHandler : EventSubscriber<MyEvent>
     {
         private readonly ILogger<MyEventHandler> _logger;
@@ -67,6 +74,37 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     }
 
+
+
+
+    /// <summary>
+    /// 同时订阅多个事件
+    /// </summary>
+    public class MyEventHandler4 : IEventSubscriber<MyEvent>, IEventSubscriber<MyEvent2>
+    {
+        private readonly ILogger<MyEventHandler4> _logger;
+        public MyEventHandler4(ILogger<MyEventHandler4> logger)
+        {
+            _logger = logger;
+        }
+
+        public int Order => 0;
+        public bool ThrowIfError => false;
+
+        public Task HandleAsync(MyEvent @event, CancellationToken ct)
+        {
+            _logger.LogInformation($"muti msg 1 : {@event.Message}");
+            return Task.CompletedTask;
+        }
+
+        public Task HandleAsync(MyEvent2 @event, CancellationToken ct)
+        {
+            _logger.LogInformation($"muti msg 2 : {@event.Message}");
+            return Task.CompletedTask;
+        }
+    }
+
+
     [QuickApi("event")]
     public class EventApi : BaseQuickApi<MyEvent>
     {
@@ -74,6 +112,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         {
             //publish
             await PublishAsync(request);
+
+            //publish event2
+            await PublishAsync(new MyEvent2 { Message = "hello event2" });
+
             return IResultResponse.Content("send event");
         }
     }

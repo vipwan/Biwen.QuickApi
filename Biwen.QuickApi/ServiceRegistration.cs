@@ -65,8 +65,12 @@ namespace Biwen.QuickApi
             //注册EventHanders
             foreach (var subscriberType in EventSubscribers)
             {
-                var baseType = subscriberType.GetInterfaces().First(x => x.IsGenericType && x.GetGenericTypeDefinition() == InterfaceEventSubscriber);
-                services.AddScoped(baseType, subscriberType);
+                //存在一个订阅者订阅多个事件的情况:
+                var baseTypes = subscriberType.GetInterfaces().Where(x => x.IsGenericType && x.GetGenericTypeDefinition() == InterfaceEventSubscriber).ToArray();
+                foreach (var baseType in baseTypes)
+                {
+                    services.AddScoped(baseType, subscriberType);
+                }
             }
             //注册Publisher
             services.AddScoped<Publisher>();
