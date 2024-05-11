@@ -3,14 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
 {
-    public class MyEvent : BaseRequest<MyEvent>,IEvent
+    public class MyEvent : BaseRequest<MyEvent>, IEvent
     {
         [FromQuery]
         public string? Message { get; set; }
     }
 
 
-    public class MyEvent2: IEvent
+    public class MyEvent2 : IEvent
     {
         public string? Message { get; set; }
     }
@@ -57,7 +57,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <summary>
     /// 抛出异常的Handler
     /// </summary>
-    [EventSubscriber(Order =-2,ThrowIfError =false)]
+    [EventSubscriber(Order = -2, ThrowIfError = false)]
     public class MyEventHandler3 : EventSubscriber<MyEvent>
     {
         private readonly ILogger<MyEventHandler3> _logger;
@@ -75,7 +75,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <summary>
     /// 同时订阅多个事件
     /// </summary>
-    [EventSubscriber(IsAsync = true,Order =0, ThrowIfError =false)]
+    [EventSubscriber(IsAsync = true, Order = 0, ThrowIfError = false)]
     public class MyEventHandler4 : IEventSubscriber<MyEvent>, IEventSubscriber<MyEvent2>
     {
         private readonly ILogger<MyEventHandler4> _logger;
@@ -101,13 +101,16 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("event")]
     public class EventApi : BaseQuickApi<MyEvent>
     {
+
         public override async ValueTask<IResultResponse> ExecuteAsync(MyEvent request)
         {
             //publish
             await PublishAsync(request);
-
             //publish event2
             await PublishAsync(new MyEvent2 { Message = "hello event2" });
+
+            //可以使用IEvent扩展方法
+            await new MyEvent { Message = "1234567890" }.PublishAsync();
 
             return IResultResponse.Content("send event");
         }

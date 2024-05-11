@@ -27,6 +27,7 @@ namespace Biwen.QuickApi
 
         public virtual async Task PublishAsync<T>(T @event, CancellationToken cancellationToken = default) where T : IEvent
         {
+            if (ServiceRegistration.ServiceProvider is null) throw new InvalidOperationException("mush UseBiwenQuickApis() first!");
             using var scope = ServiceRegistration.ServiceProvider.CreateScope();
             var publisher = scope.ServiceProvider.GetRequiredService<Publisher>();
             await publisher.PublishAsync(@event, cancellationToken);
