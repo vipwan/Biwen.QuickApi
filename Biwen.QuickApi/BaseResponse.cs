@@ -1,6 +1,7 @@
 ﻿namespace Biwen.QuickApi
 {
     using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Mvc;
     using NSwag.Annotations;
     using System.Text.Json;
 
@@ -126,6 +127,64 @@
 
 
         /// <summary>
+        /// Problem
+        /// </summary>
+        /// <param name="problemDetails"></param>
+        /// <returns></returns>
+        public static IResultResponse Problem(ProblemDetails problemDetails) =>
+            Results.Problem(problemDetails).AsRspOfResult();
+
+        /// <summary>
+        /// Problem
+        /// </summary>
+        /// <param name="detail"></param>
+        /// <param name="instance"></param>
+        /// <param name="statusCode"></param>
+        /// <param name="title"></param>
+        /// <param name="type"></param>
+        /// <param name="extensions"></param>
+        /// <returns></returns>
+        public static IResultResponse Problem(
+            string? detail = null,
+            string? instance = null,
+            int? statusCode = null,
+            string? title = null,
+            string? type = null,
+            IDictionary<string, object?>? extensions = null
+
+            ) =>
+            Results.Problem(detail, instance, statusCode, title, type, extensions).AsRspOfResult();
+
+
+        /// <summary>
+        /// Text
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="contentType"></param>
+        /// <param name="encoding"></param>
+        /// <param name="statusCode"></param>
+        /// <returns></returns>
+        public static IResultResponse Text(
+            string text,
+            string? contentType = null,
+            System.Text.Encoding? encoding = null,
+            int? statusCode = null
+            ) =>
+            Results.Text(text, contentType, encoding, statusCode).AsRspOfResult();
+
+
+        /// <summary>
+        /// Redirect
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="permanent"></param>
+        /// <param name="preserveMethod"></param>
+        /// <returns></returns>
+        public static IResultResponse Redirect(string url, bool permanent = false, bool preserveMethod = false) =>
+            Results.Redirect(url, permanent, preserveMethod).AsRspOfResult();
+
+
+        /// <summary>
         /// Json
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -146,6 +205,7 @@
         /// <param name="statusCode"></param>
         /// <returns></returns>
         public static IResultResponse StatusCode(int statusCode) => Results.StatusCode(statusCode).AsRspOfResult();
+
 
     }
 }

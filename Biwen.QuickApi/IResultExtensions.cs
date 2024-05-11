@@ -21,7 +21,7 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public static IResultResponse AsRspOfResult(this string result)
         {
-            return new IResultResponse(TypedResults.Content(result));
+            return Results.Content(result).AsRspOfResult();
         }
 
         ///// <summary>
