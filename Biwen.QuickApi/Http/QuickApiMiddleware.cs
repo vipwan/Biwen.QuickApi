@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+
 namespace Biwen.QuickApi.Http
 {
     /// <summary>
@@ -6,6 +7,8 @@ namespace Biwen.QuickApi.Http
     /// </summary>
     public sealed class QuickApiMiddleware
     {
+        private static readonly string? AssemblyName = typeof(ServiceRegistration).Assembly.GetName().Name;
+
         private readonly RequestDelegate _next;
         public QuickApiMiddleware(RequestDelegate next)
         {
@@ -13,6 +16,9 @@ namespace Biwen.QuickApi.Http
         }
         public async Task Invoke(HttpContext context)
         {
+            //PoweredBy
+            context.Response.Headers.TryAdd("X-Powered-By", AssemblyName);
+
             var md = context.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>();
             if (md == null || md.QuickApiType == null)
             {

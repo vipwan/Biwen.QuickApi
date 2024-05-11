@@ -118,8 +118,6 @@ namespace Biwen.QuickApi
             return builder!;
         }
 
-        private static readonly string? AssemblyName = typeof(BaseQuickApi<Req, Rsp>).Assembly.GetName().Name;
-
         /// <summary>
         /// 请求QuickApi前的操作
         /// </summary>
@@ -128,7 +126,6 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public virtual Task InvokeBeforeAsync(HttpContext context)
         {
-            context.Response.Headers.TryAdd("X-Powered-By", AssemblyName);
             return Task.CompletedTask;
         }
         /// <summary>
