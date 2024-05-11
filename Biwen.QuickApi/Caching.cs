@@ -12,5 +12,11 @@ namespace Biwen.QuickApi
         /// </summary>
         public static readonly ConcurrentDictionary<string, bool> TAnnotationAttrs = new();
 
+
+        /// <summary>
+        /// 缓存订阅者的Metadata
+        /// </summary>
+        public static readonly ConcurrentDictionary<Type, object> SubscriberMetadatas = new();
+
     }
 }

@@ -2,6 +2,7 @@
 {
     internal class Publisher(IServiceProvider serviceProvider)
     {
+
         public async Task PublishAsync<T>(T @event, CancellationToken ct) where T : IEvent
         {
             var subscribers = serviceProvider.GetServices<IEventSubscriber<T>>();
@@ -11,10 +12,18 @@
 
             List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)> listWithMetadatas = [];
 
-            foreach (var subscriber in subscribers)
+            if (Caching.SubscriberMetadatas.ContainsKey(typeof(T)))
             {
-                var metadata = subscriber.GetType().GetCustomAttribute<EventSubscriberAttribute>() ?? new EventSubscriberAttribute();
-                listWithMetadatas.Add((subscriber, metadata));
+                listWithMetadatas = (List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)>)Caching.SubscriberMetadatas[typeof(T)];
+            }
+            else
+            {
+                foreach (var subscriber in subscribers)
+                {
+                    var metadata = subscriber.GetType().GetCustomAttribute<EventSubscriberAttribute>() ?? new EventSubscriberAttribute();
+                    listWithMetadatas.Add((subscriber, metadata));
+                }
+                Caching.SubscriberMetadatas.TryAdd(typeof(T), listWithMetadatas);
             }
 
             foreach (var (subscriber, metadata) in listWithMetadatas.OrderBy(x => x.Metadata.Order))
