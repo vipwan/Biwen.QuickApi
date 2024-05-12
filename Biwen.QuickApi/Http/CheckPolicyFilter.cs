@@ -22,6 +22,15 @@ namespace Biwen.QuickApi.Http
                         return result;
                     }
                 }
+                else if (quickApiMetadata is { } && quickApiMetadata.QuickApiAttribute == null)
+                {
+                    var attr = quickApiMetadata.QuickApiType!.GetCustomAttribute<QuickApiAttribute>() ?? throw new QuickApiExcetion($"{quickApiMetadata.QuickApiType!.Name}:必须标注QuickApi特性!");
+                    var (flag, result) = await CheckPolicy(httpContext, attr.Policy);
+                    if (!flag)
+                    {
+                        return result;
+                    }
+                }
             }
             return await next(context);
         }
