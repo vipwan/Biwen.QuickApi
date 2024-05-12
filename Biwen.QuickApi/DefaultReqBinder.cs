@@ -300,32 +300,6 @@ namespace Biwen.QuickApi
         }
     }
 
-    /// <summary>
-    /// 标记整个Request对象为FromBody
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public class FromBodyAttribute : Attribute
-    {
-
-    }
-
-
-#if NET8_0_OR_GREATER
-
-    /// <summary>
-    /// 标记绑定属性为FromKeyedServices
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
-    public class FromKeyedServicesAttribute : Attribute
-    {
-        public FromKeyedServicesAttribute(string key)
-        {
-            Key = key;
-        }
-        public string Key { get; set; }
-    }
-
-#endif
 
     #region BinderExtensions
 
