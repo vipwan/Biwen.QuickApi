@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Http;
 
 namespace Biwen.QuickApi.Http
 {
+    /// <summary>
+    /// 用于检查Policy的筛选器
+    /// </summary>
     internal class CheckPolicyFilter : IEndpointFilter
     {
         public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
