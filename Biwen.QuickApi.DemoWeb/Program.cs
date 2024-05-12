@@ -33,7 +33,7 @@ builder.Services.Configure<AuthorizationOptions>(options =>
 {
     options.AddPolicy("admin", configurePolicy: policy =>
     {
-        policy.RequireClaim("admin", "admin");
+        //policy.RequireClaim("admin", "admin");
         policy.RequireAuthenticatedUser();
     });
 });

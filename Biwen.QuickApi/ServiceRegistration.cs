@@ -261,7 +261,11 @@ namespace Biwen.QuickApi
                     rhBuilder = hb!.HandlerBuilder(rhBuilder);
 
                     //metadata
-                    rhBuilder.WithMetadata(new QuickApiMetadata(apiType));
+                    rhBuilder.WithMetadata(new QuickApiMetadata(apiType, attr));
+
+                    //验证策略
+                    rhBuilder.AddEndpointFilter<CheckPolicyFilter>();
+
                     //antiforgery
                     //net8.0以上使用UseAntiforgery,
                     //net7.0以下使用QuickApiAntiforgeryMiddleware
@@ -337,6 +341,7 @@ namespace Biwen.QuickApi
         public static IApplicationBuilder UseBiwenQuickApis(this IApplicationBuilder app)
         {
             app.UseRouting();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBiwenQuickApis();
@@ -359,8 +364,8 @@ namespace Biwen.QuickApi
             if (quickApiAttribute == null) throw new QuickApiExcetion($"quickApiAttribute is null!");
 
             //验证策略
-            var checkResult = await CheckPolicy(ctx, quickApiAttribute.Policy);
-            if (!checkResult.Flag) return checkResult.Result!;
+            //var checkResult = await CheckPolicy(ctx, quickApiAttribute.Policy);
+            //if (!checkResult.Flag) return checkResult.Result!;
 
             var sp = ctx.HttpContext!.RequestServices;
 
@@ -429,29 +434,6 @@ namespace Biwen.QuickApi
                 var exceptionResultBuilder = sp.GetRequiredService<IQuickApiExceptionResultBuilder>();
                 return await exceptionResultBuilder.ErrorResult(ex);
             }
-        }
-
-        /// <summary>
-        /// 验证Policy
-        /// </summary>
-        /// <exception cref="QuickApiExcetion"></exception>
-        async static Task<(bool Flag, IResult? Result)> CheckPolicy(IHttpContextAccessor ctx, string? policy)
-        {
-            if (string.IsNullOrEmpty(policy))
-            {
-                return (true, null);
-            }
-            if (!string.IsNullOrEmpty(policy))
-            {
-                var httpContext = ctx.HttpContext;
-                var authService = httpContext!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null, besure services.AddAuthorization() first!");
-                var authorizationResult = await authService.AuthorizeAsync(httpContext.User, policy);
-                if (!authorizationResult.Succeeded)
-                {
-                    return (false, TypedResults.Unauthorized());
-                }
-            }
-            return (true, null);
         }
 
         /// <summary>
