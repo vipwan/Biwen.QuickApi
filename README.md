@@ -22,15 +22,13 @@ public class TodosApi : BaseQuickApi
     }
 }
 ```
-
 - (MinimalApi as REPR) Biwen.QuickApi遵循了 REPR 设计 （Request-Endpoint-Response）
 - 开箱即用的Route, Policy,Binder,validator & 整合NSwag支持
 - 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi(gen版本=minimalApi,生成原生接口代码),遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
 - write less, do more ; write anywhere, do anything  
 - 欢迎小伙伴们star&issue共同学习进步 [Biwen.QuickApi](https://github.com/vipwan/Biwen.QuickApi)
-- 请注意Biwen.QuickApi因为提供的较多的特性,而很多特性却不被NET8中的`NativeAOT`支持,AOT有诸多优点,如果需要使用`NativeAOT`特性可以移步至[Biwen.MinimalApi](https://github.com/vipwan/Biwen.MinimalApi)
 
-## SourceGenerator
+## SourceGenerator 不支持AOT后续不再更新!
 
 - 提供gen源代码生成器方案,以于显著提升性能(V1.0版本使用的Emit和dynamic会导致部分性能损失)
 - gen SourceGenerator已发布v1.1.2,[使用方式](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.Generator/readme.md)
@@ -50,27 +48,16 @@ public class TodosApi : BaseQuickApi
 
 ## 使用方式
 
-### Step0 Nuget Base & Generator
+### Step0 Nuget 
 
 ```bash
 dotnet add package Biwen.QuickApi
 ```
-
-```bash
-dotnet add package Biwen.QuickApi.SourceGenerator
-```
-
 ### Step1 UseBiwenQuickApis
 
 ```csharp
-
 builder.Services.AddBiwenQuickApis();
-
-//缺省方案
 app.UseBiwenQuickApis();
-
-//Gen方案
-//app.MapGenBiwenQuickApis();
 ```
 
 ### Step2 Define Request and Response
