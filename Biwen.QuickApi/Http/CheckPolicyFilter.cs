@@ -14,15 +14,15 @@ namespace Biwen.QuickApi.Http
             if (httpContext != null)
             {
                 var quickApiMetadata = context.HttpContext.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>();
-                if (quickApiMetadata is QuickApiMetadata meta && meta.QuickApiAttribute != null)
+                if (quickApiMetadata is QuickApiMetadata { QuickApiAttribute: { } })
                 {
-                    var (flag, result) = await CheckPolicy(httpContext, meta.QuickApiAttribute.Policy);
+                    var (flag, result) = await CheckPolicy(httpContext, quickApiMetadata.QuickApiAttribute.Policy);
                     if (!flag)
                     {
                         return result;
                     }
                 }
-                else if (quickApiMetadata is { } && quickApiMetadata.QuickApiAttribute == null)
+                else if (quickApiMetadata is QuickApiMetadata { QuickApiAttribute: null })
                 {
                     var attr = quickApiMetadata.QuickApiType!.GetCustomAttribute<QuickApiAttribute>() ?? throw new QuickApiExcetion($"{quickApiMetadata.QuickApiType!.Name}:必须标注QuickApi特性!");
                     var (flag, result) = await CheckPolicy(httpContext, attr.Policy);

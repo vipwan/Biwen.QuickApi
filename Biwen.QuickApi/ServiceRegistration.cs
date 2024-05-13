@@ -441,24 +441,13 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="result"></param>
         /// <returns></returns>
-        static (bool Flag, IResult? Result) InnerResult(BaseResponse? result)
-        {
-            //返回空结果
-            if (result is EmptyResponse)
+        static (bool Flag, IResult? Result) InnerResult(BaseResponse? result) =>
+            result switch
             {
-                return (true, TypedResults.Ok());//返回空
-            }
-            //返回文本结果
-            if (result is ContentResponse content)
-            {
-                return (true, TypedResults.Content(content.ToString()));
-            }
-            //返回IResult结果
-            if (result is IResultResponse iresult)
-            {
-                return (true, iresult.Result);
-            }
-            return (false, null);
-        }
+                EmptyResponse _ => (true, TypedResults.Ok()),
+                ContentResponse content => (true, TypedResults.Content(content.Content)),
+                IResultResponse iresult => (true, iresult.Result),
+                _ => (false, null),
+            };
     }
 }
