@@ -100,20 +100,18 @@ namespace Biwen.QuickApi.Scheduling
             //store中的scheduler
             var stores = _serviceProvider.GetServices<IScheduleMetadataStore>().ToArray();
 
-            foreach (var store in stores)
+            //并行执行,提高性能
+            Parallel.ForEach(stores, async store =>
             {
                 if (stoppingToken.IsCancellationRequested)
                 {
-                    break;
+                    return;
                 }
-
                 var metadatas = await store.GetAllAsync();
-
                 if (metadatas is null || !metadatas.Any())
                 {
-                    continue;
+                    return;
                 }
-
                 foreach (var metadata in metadatas)
                 {
                     var attr = new ScheduleTaskAttribute(metadata.Cron)
@@ -126,11 +124,11 @@ namespace Biwen.QuickApi.Scheduling
                     var scheduler = scope.ServiceProvider.GetRequiredService(metadata.ScheduleTaskType) as IScheduleTask;
                     if (scheduler is null)
                     {
-                        continue;
+                        return;
                     }
                     await DoTaskAsync(scheduler, attr);
                 }
-            }
+            });
         }
 
         private static async Task WaitAsync(Task pollingDelay, CancellationToken stoppingToken)
