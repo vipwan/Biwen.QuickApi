@@ -90,7 +90,7 @@ namespace Biwen.QuickApi.Scheduling
             }
 
             //store中的scheduler
-            var stores = _serviceProvider.GetServices<IScheduleMetadaStore>().ToArray();
+            var stores = _serviceProvider.GetServices<IScheduleMetadataStore>().ToArray();
 
             foreach (var store in stores)
             {

@@ -17,7 +17,7 @@ namespace Biwen.QuickApi.DemoWeb.Schedules
     }
 
 
-    public class DemoStore : IScheduleMetadaStore
+    public class DemoStore : IScheduleMetadataStore
     {
         public Task<IEnumerable<ScheduleTaskMetadata>> GetAllAsync()
         {

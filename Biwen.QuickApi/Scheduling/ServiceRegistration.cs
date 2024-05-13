@@ -26,9 +26,9 @@ namespace Biwen.QuickApi.Scheduling
         /// <typeparam name="T"></typeparam>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddScheduleMetadaStore<T>(this IServiceCollection services) where T : class, IScheduleMetadaStore
+        public static IServiceCollection AddScheduleMetadaStore<T>(this IServiceCollection services) where T : class, IScheduleMetadataStore
         {
-            services.AddSingleton(typeof(IScheduleMetadaStore), typeof(T));
+            services.AddSingleton(typeof(IScheduleMetadataStore), typeof(T));
             return services;
         }
 
