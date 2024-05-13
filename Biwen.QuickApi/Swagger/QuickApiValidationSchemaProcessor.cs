@@ -37,19 +37,19 @@ namespace Biwen.QuickApi.Swagger
                 {
                     return;
                 }
-                if (tRequest?.Type.GetInterface(_iReqValidatorType.Name) is not null)
-                {
-                    try
-                    {
-                        //dynamic
-                        var validator = (dynamic)Activator.CreateInstance(tRequest.Type)!;
-                        ApplyValidator(context.Schema, (IValidator)validator.RealValidator, string.Empty);
-                    }
-                    catch
-                    {
-                        //todo:
-                    }
-                }
+                //if (tRequest?.Type.GetInterface(_iReqValidatorType.Name) is not null)
+                //{
+                //    try
+                //    {
+                //        //dynamic
+                //        var validator = (dynamic)Activator.CreateInstance(tRequest.Type)!;
+                //        ApplyValidator(context.Schema, (IValidator)validator.Validator, string.Empty);
+                //    }
+                //    catch
+                //    {
+                //        //todo:
+                //    }
+                //}
             }
         }
 
