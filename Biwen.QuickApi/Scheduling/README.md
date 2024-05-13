@@ -17,3 +17,44 @@ public class KeepAlive(ILogger<KeepAlive> logger) : IScheduleTask
     }
 }
 ```
+
+支持从Store中初始化任务调度列表，支持动态添加任务调度，支持动态删除任务调度。
+```csharp
+/// <summary>
+/// Demo ScheduleTask，用于Store演示
+/// </summary>
+/// <param name="logger"></param>
+public class DemoTask(ILogger<DemoTask> logger) : IScheduleTask
+{
+    public Task ExecuteAsync()
+    {
+        logger.LogInformation("Demo Schedule Done!");
+        return Task.CompletedTask;
+    }
+}
+
+/// <summary>
+/// DemoStore演示
+/// </summary>
+public class DemoStore : IScheduleMetadaStore
+{
+    public Task<IEnumerable<ScheduleTaskMetadata>> GetAllAsync()
+    {
+        //模拟从数据库或配置文件中获取ScheduleTaskMetadata
+        IEnumerable<ScheduleTaskMetadata> metadatas =
+            [
+                new ScheduleTaskMetadata(typeof(DemoTask), "* * * * *")
+                {
+                    Description="测试的Schedule"
+                }
+            ];
+
+        return Task.FromResult(metadatas);
+    }
+}
+
+```
+最后注册DemoStore到DI容器中即可。
+```csharp
+builder.Services.AddScheduleMetadaStore<DemoStore>();
+```

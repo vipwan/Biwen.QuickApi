@@ -1,13 +1,15 @@
-﻿namespace Biwen.QuickApi.Scheduling
+﻿using Biwen.QuickApi.Scheduling.Store;
+
+namespace Biwen.QuickApi.Scheduling
 {
-    internal static class ServiceRegistration
+    public static class ServiceRegistration
     {
         /// <summary>
         /// AddScheduleTask
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddScheduleTask(this IServiceCollection services)
+        internal static IServiceCollection AddScheduleTask(this IServiceCollection services)
         {
             foreach (var task in ScheduleTasks)
             {
@@ -15,6 +17,18 @@
                 services.AddSingleton(typeof(IScheduleTask), task);
             }
             services.AddHostedService<ScheduleBackgroundService>();
+            return services;
+        }
+
+        /// <summary>
+        /// 注册ScheduleMetadaStore
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddScheduleMetadaStore<T>(this IServiceCollection services) where T : class, IScheduleMetadaStore
+        {
+            services.AddSingleton(typeof(IScheduleMetadaStore), typeof(T));
             return services;
         }
 
