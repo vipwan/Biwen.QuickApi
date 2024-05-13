@@ -11,6 +11,7 @@
         {
             foreach (var task in ScheduleTasks)
             {
+                services.AddSingleton(task);
                 services.AddSingleton(typeof(IScheduleTask), task);
             }
             services.AddHostedService<ScheduleBackgroundService>();

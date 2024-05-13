@@ -1,5 +1,7 @@
 ﻿using Biwen.QuickApi.DemoWeb.Apis;
 using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
+using Biwen.QuickApi.DemoWeb.Schedules;
+using Biwen.QuickApi.Scheduling.Store;
 using Biwen.QuickApi.Swagger;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -160,6 +162,9 @@ builder.Services.AddHttpLogging(options =>
 builder.Services.AddScoped<HelloService>();
 // keyed services
 //builder.Services.AddKeyedScoped<HelloService>("hello");
+
+// Add ScheduleTaskStore
+builder.Services.AddSingleton<IScheduleMetadaStore, DemoStore>();
 
 //
 builder.Services.AddBiwenQuickApis(o =>
