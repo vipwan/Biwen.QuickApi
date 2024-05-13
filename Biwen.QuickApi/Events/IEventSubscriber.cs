@@ -1,30 +1,18 @@
 ﻿namespace Biwen.QuickApi.Events
 {
+    /// <summary>
+    /// 事件订阅者,如果需要排序&异步或者抛出异常请给订阅者标注特性<see cref="EventSubscriberAttribute"/>
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public interface IEventSubscriber<T> where T : IEvent
     {
         Task HandleAsync(T @event, CancellationToken ct);
-
-        ///// <summary>
-        ///// 执行排序
-        ///// </summary>
-        //int Order { get; }
-
-        ///// <summary>
-        ///// 如果发生错误是否抛出异常,将阻塞后续Handler
-        ///// </summary>
-        //bool ThrowIfError { get; }
     }
 
-
+    /// <inheritdoc cref = "IEventSubscriber{T}"/>
     public abstract class EventSubscriber<T> : IEventSubscriber<T> where T : IEvent
     {
         public abstract Task HandleAsync(T @event, CancellationToken ct);
-
-        //public virtual int Order => 0;
-        ///// <summary>
-        ///// 默认不抛出异常
-        ///// </summary>
-        //public virtual bool ThrowIfError => false;
     }
 
 }
