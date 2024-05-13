@@ -26,7 +26,7 @@ namespace Biwen.QuickApi.Scheduling
         }
 
         /// <summary>
-        /// 注册ScheduleMetadaStore
+        /// 注册ScheduleMetadataStore
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="services"></param>

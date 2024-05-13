@@ -2,6 +2,9 @@
 using Microsoft.Extensions.Hosting;
 namespace Biwen.QuickApi.Scheduling
 {
+    /// <summary>
+    /// ScheduleBackgroundService
+    /// </summary>
     internal class ScheduleBackgroundService : BackgroundService
     {
 

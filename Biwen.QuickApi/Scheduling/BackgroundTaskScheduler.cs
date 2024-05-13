@@ -2,6 +2,9 @@
 using System.Collections.Concurrent;
 namespace Biwen.QuickApi.Scheduling
 {
+    /// <summary>
+    /// BackgroundTaskScheduler 后台任务调度器,用于判断任务是否可以执行
+    /// </summary>
     internal class BackgroundTaskScheduler
     {
         /// <summary>

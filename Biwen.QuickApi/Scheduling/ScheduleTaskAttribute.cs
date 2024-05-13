@@ -1,7 +1,7 @@
 ﻿namespace Biwen.QuickApi.Scheduling
 {
     /// <summary>
-    /// 
+    /// ScheduleTaskAttribute
     /// </summary>
     /// <param name="cron"></param>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]

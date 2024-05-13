@@ -12,6 +12,9 @@
         Task ExecuteAsync();
     }
 
+    /// <summary>
+    /// ScheduleTask 抽象类
+    /// </summary>
     public abstract class ScheduleTask : IScheduleTask
     {
         public virtual async Task ExecuteAsync()
