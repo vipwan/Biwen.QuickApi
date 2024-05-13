@@ -4,13 +4,15 @@ namespace Biwen.QuickApi.Scheduling
 {
     internal class ScheduleBackgroundService : BackgroundService
     {
+
+        private static readonly TimeSpan _pollingTime
 #if DEBUG
-        //轮询20s 测试环境下，方便测试。
-        private static readonly TimeSpan _pollingTime = TimeSpan.FromSeconds(20);
+          //轮询20s 测试环境下，方便测试。
+          = TimeSpan.FromSeconds(20);
 #endif
 #if !DEBUG
-        //轮询45s 正式环境下，考虑性能轮询时间延长到45s
-        private static readonly TimeSpan _pollingTime = TimeSpan.FromSeconds(45);
+         //轮询45s 正式环境下，考虑性能轮询时间延长到45s
+         = TimeSpan.FromSeconds(45);
 #endif
 
         //延时10s,出于性能考虑,这里不做太频繁的轮询.
@@ -52,6 +54,24 @@ namespace Biwen.QuickApi.Scheduling
                 return;
             }
 
+            async Task DoTaskAsync(IScheduleTask scheduler, ScheduleTaskAttribute metadata)
+            {
+                var timeScheduler = new BackgroundTaskScheduler(metadata, DateTime.Now);
+                if (timeScheduler.CanRun())
+                {
+                    if (metadata.IsAsync)
+                    {
+                        //异步执行
+                        _ = scheduler.ExecuteAsync();
+                    }
+                    else
+                    {
+                        //同步执行
+                        await scheduler.ExecuteAsync();
+                    }
+                    _logger.LogInformation($"[{DateTime.Now}] ScheduleTask:{scheduler.GetType().FullName} Done!");
+                }
+            };
 
             //注解中的scheduler
             foreach (var scheduler in schedulers)
@@ -68,24 +88,9 @@ namespace Biwen.QuickApi.Scheduling
                 {
                     continue;
                 }
-
                 foreach (var metadata in metadatas)
                 {
-                    var timeScheduler = new BackgroundTaskScheduler(metadata, DateTime.Now);
-                    if (timeScheduler.CanRun())
-                    {
-                        if (metadata.IsAsync)
-                        {
-                            //异步执行
-                            _ = scheduler.ExecuteAsync();
-                        }
-                        else
-                        {
-                            //同步执行
-                            await scheduler.ExecuteAsync();
-                        }
-                        _logger.LogInformation($"[{DateTime.Now}] ScheduleTask:{scheduler.GetType().FullName} Done!");
-                    }
+                    await DoTaskAsync(scheduler, metadata);
                 }
             }
 
@@ -115,26 +120,12 @@ namespace Biwen.QuickApi.Scheduling
                         IsStartOnInit = metadata.IsStartOnInit,
                     };
 
-                    var timeScheduler = new BackgroundTaskScheduler(attr, DateTime.Now);
-                    if (timeScheduler.CanRun())
+                    var scheduler = scope.ServiceProvider.GetRequiredService(metadata.ScheduleTaskType) as IScheduleTask;
+                    if (scheduler is null)
                     {
-                        var scheduler = scope.ServiceProvider.GetRequiredService(metadata.ScheduleTaskType) as IScheduleTask;
-                        if (scheduler is null)
-                        {
-                            continue;
-                        }
-                        if (metadata.IsAsync)
-                        {
-                            //异步执行
-                            _ = scheduler.ExecuteAsync();
-                        }
-                        else
-                        {
-                            //同步执行
-                            await scheduler.ExecuteAsync();
-                        }
-                        _logger.LogInformation($"[{DateTime.Now}] ScheduleTask:{scheduler.GetType().FullName} Done!");
+                        continue;
                     }
+                    await DoTaskAsync(scheduler, attr);
                 }
             }
         }
