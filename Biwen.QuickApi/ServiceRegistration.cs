@@ -11,6 +11,7 @@ namespace Biwen.QuickApi
     using Biwen.QuickApi.Abstractions;
     using Biwen.QuickApi.Events;
     using Biwen.QuickApi.Http;
+    using Biwen.QuickApi.Scheduling;
 #if NET8_0_OR_GREATER
     using Microsoft.AspNetCore.Antiforgery;
 #endif
@@ -75,9 +76,11 @@ namespace Biwen.QuickApi
             //注册Publisher
             services.AddScoped<Publisher>();
 
+            //注册Schedule
+            services.AddScheduleTask();
+
             //add quickapis
             foreach (var api in Apis) services.AddScoped(api);
-
 
             return services;
         }
