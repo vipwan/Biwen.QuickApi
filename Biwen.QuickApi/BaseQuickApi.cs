@@ -5,7 +5,6 @@ using NSwag.Annotations;
 
 namespace Biwen.QuickApi
 {
-    using Microsoft.Extensions.DependencyInjection.Extensions;
     /// <summary>
     /// BaseQuickApi
     /// </summary>
@@ -27,7 +26,7 @@ namespace Biwen.QuickApi
 
         public virtual async Task PublishAsync<T>(T @event, CancellationToken cancellationToken = default) where T : IEvent
         {
-            if (ServiceRegistration.ServiceProvider is null) throw new InvalidOperationException("mush UseBiwenQuickApis() first!");
+            if (ServiceRegistration.ServiceProvider is null) throw new QuickApiExcetion("mush UseBiwenQuickApis() first!");
             using var scope = ServiceRegistration.ServiceProvider.CreateScope();
             var publisher = scope.ServiceProvider.GetRequiredService<Publisher>();
             await publisher.PublishAsync(@event, cancellationToken);
