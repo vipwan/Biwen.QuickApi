@@ -1,4 +1,5 @@
-﻿using Biwen.QuickApi.Scheduling.Store;
+﻿using Biwen.QuickApi.Scheduling.Stores;
+using Biwen.QuickApi.Scheduling.Stores.ConfigurationStore;
 
 namespace Biwen.QuickApi.Scheduling
 {
@@ -16,6 +17,10 @@ namespace Biwen.QuickApi.Scheduling
                 services.AddSingleton(task);
                 services.AddSingleton(typeof(IScheduleTask), task);
             }
+
+            //配置文件Store
+            services.AddScheduleMetadaStore<ConfigurationScheduleMetadataStore>();
+
             services.AddHostedService<ScheduleBackgroundService>();
             return services;
         }

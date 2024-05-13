@@ -1,4 +1,4 @@
-﻿using Biwen.QuickApi.Scheduling.Store;
+﻿using Biwen.QuickApi.Scheduling.Stores;
 using Microsoft.Extensions.Hosting;
 namespace Biwen.QuickApi.Scheduling
 {

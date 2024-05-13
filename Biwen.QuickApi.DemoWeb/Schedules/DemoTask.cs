@@ -1,5 +1,5 @@
 ﻿using Biwen.QuickApi.Scheduling;
-using Biwen.QuickApi.Scheduling.Store;
+using Biwen.QuickApi.Scheduling.Stores;
 
 namespace Biwen.QuickApi.DemoWeb.Schedules
 {
@@ -12,6 +12,19 @@ namespace Biwen.QuickApi.DemoWeb.Schedules
         public Task ExecuteAsync()
         {
             logger.LogInformation("Demo Schedule Done!");
+            return Task.CompletedTask;
+        }
+    }
+
+    /// <summary>
+    /// 配置store的 ScheduleTask，用于Store演示
+    /// </summary>
+    /// <param name="logger"></param>
+    public class DemoConfigTask(ILogger<DemoConfigTask> logger) : IScheduleTask
+    {
+        public Task ExecuteAsync()
+        {
+            logger.LogInformation("Demo Config Schedule Done!");
             return Task.CompletedTask;
         }
     }

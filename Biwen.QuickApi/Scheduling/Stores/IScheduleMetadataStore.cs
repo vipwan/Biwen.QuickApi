@@ -1,4 +1,4 @@
-﻿namespace Biwen.QuickApi.Scheduling.Store
+﻿namespace Biwen.QuickApi.Scheduling.Stores
 {
 
     /// <summary>
