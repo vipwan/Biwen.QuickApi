@@ -6,7 +6,7 @@
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-		<PackageVersion>1.4.3.2</PackageVersion>
+		<PackageVersion>1.5.0</PackageVersion>
 
 		<TargetFrameworks>net8.0</TargetFrameworks>
 		<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>
@@ -17,10 +17,10 @@
 		<Copyright>MIT</Copyright>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>webapi;minimal;api;endpoint;REPR;netcore</PackageTags>
-		<PackageReleaseNotes>提供发布订阅功能</PackageReleaseNotes>
+		<PackageReleaseNotes>提供任务调度功能 https://github.com/vipwan/Biwen.QuickApi/tree/master/Biwen.QuickApi/Scheduling</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<AssemblyVersion>1.4.3</AssemblyVersion>
-		<FileVersion>1.4.3</FileVersion>
+		<AssemblyVersion>1.5.0</AssemblyVersion>
+		<FileVersion>1.5.0</FileVersion>
 
 	</PropertyGroup>
 
