@@ -9,7 +9,7 @@
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         /// <exception cref="InvalidOperationException"></exception>
-        public static async Task PublishAsync<T>(this T @event, CancellationToken cancellationToken = default) where T : IEvent
+        public static async Task PublishAsync<T>(this T @event, CancellationToken cancellationToken = default) where T : class, IEvent
         {
             if (ServiceRegistration.ServiceProvider is null) throw new QuickApiExcetion("mush UseBiwenQuickApis() first!");
             using var scope = ServiceRegistration.ServiceProvider.CreateScope();

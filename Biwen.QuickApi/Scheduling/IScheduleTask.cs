@@ -17,10 +17,9 @@
     /// </summary>
     public abstract class ScheduleTask : IScheduleTask
     {
-        public virtual async Task ExecuteAsync()
+        public virtual Task ExecuteAsync()
         {
-            await Task.CompletedTask;
+            return Task.CompletedTask;
         }
     }
-
 }

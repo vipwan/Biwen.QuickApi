@@ -1,5 +1,8 @@
-﻿using Biwen.QuickApi.Scheduling.Stores;
+﻿using Biwen.QuickApi.Events;
+using Biwen.QuickApi.Scheduling.Events;
+using Biwen.QuickApi.Scheduling.Stores;
 using Microsoft.Extensions.Hosting;
+
 namespace Biwen.QuickApi.Scheduling
 {
     /// <summary>
@@ -62,17 +65,27 @@ namespace Biwen.QuickApi.Scheduling
                 var timeScheduler = new BackgroundTaskScheduler(metadata, DateTime.Now);
                 if (timeScheduler.CanRun())
                 {
-                    if (metadata.IsAsync)
+                    //通知启动
+                    _ = new ScheduleTaskStarted(scheduler, DateTime.Now).PublishAsync(default);
+                    try
                     {
-                        //异步执行
-                        _ = scheduler.ExecuteAsync();
+                        if (metadata.IsAsync)
+                        {
+                            //异步执行
+                            _ = scheduler.ExecuteAsync();
+                        }
+                        else
+                        {
+                            //同步执行
+                            await scheduler.ExecuteAsync();
+                        }
+                        //执行完成
+                        _ = new ScheduleTaskSuccessed(scheduler, DateTime.Now).PublishAsync(default);
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        //同步执行
-                        await scheduler.ExecuteAsync();
+                        _ = new ScheduleTaskFailed(scheduler, DateTime.Now, ex).PublishAsync(default);
                     }
-                    _logger.LogInformation($"[{DateTime.Now}] ScheduleTask:{scheduler.GetType().FullName} Done!");
                 }
             };
 
