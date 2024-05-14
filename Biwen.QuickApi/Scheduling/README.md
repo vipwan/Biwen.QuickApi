@@ -9,7 +9,7 @@
 /// KeepAlive ScheduleTask
 /// </summary>
 /// <param name="logger"></param>
-[ScheduleTask("* * * * *")] //每分钟一次
+[ScheduleTask(Constants.CronEveryMinute)] //每分钟一次
 [ScheduleTask("0/3 * * * *")]//每3分钟执行一次
 public class KeepAlive(ILogger<KeepAlive> logger) : IScheduleTask
 {
