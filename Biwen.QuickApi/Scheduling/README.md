@@ -1,6 +1,9 @@
 ﻿任务调度ScheduleTask：
 实现`IScheduleTask`接口，添加 ScheduleTask 特性，指定任务调度时间表达式，即可实现任务调度。
 
+请注意:NCrontab支持的粒度为分钟(5位码)
+提供Constants静态类，包含常用的时间表达式,如:`Constants.CronEveryMinute`,`Constants.CronEveryHour`,`Constants.CronEveryNMinutes()`等。
+
 ```csharp
 /// <summary>
 /// KeepAlive ScheduleTask

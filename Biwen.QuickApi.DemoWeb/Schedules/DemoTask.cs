@@ -37,7 +37,7 @@ namespace Biwen.QuickApi.DemoWeb.Schedules
             //模拟从数据库或配置文件中获取ScheduleTaskMetadata
             IEnumerable<ScheduleTaskMetadata> metadatas =
                 [
-                    new ScheduleTaskMetadata(typeof(DemoTask), "* * * * *")
+                    new ScheduleTaskMetadata(typeof(DemoTask),Constants.CronEveryNMinutes(2))
                     {
                         Description="测试的Schedule"
                     }
