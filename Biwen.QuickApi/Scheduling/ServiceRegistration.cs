@@ -19,8 +19,8 @@ namespace Biwen.QuickApi.Scheduling
             }
 
             //配置文件Store
-            services.AddScheduleMetadaStore<ConfigurationScheduleMetadataStore>();
-
+            services.AddScheduleMetadataStore<ConfigurationScheduleMetadataStore>();
+            //BackgroundService
             services.AddHostedService<ScheduleBackgroundService>();
             return services;
         }
@@ -31,7 +31,7 @@ namespace Biwen.QuickApi.Scheduling
         /// <typeparam name="T"></typeparam>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddScheduleMetadaStore<T>(this IServiceCollection services) where T : class, IScheduleMetadataStore
+        public static IServiceCollection AddScheduleMetadataStore<T>(this IServiceCollection services) where T : class, IScheduleMetadataStore
         {
             services.AddSingleton(typeof(IScheduleMetadataStore), typeof(T));
             return services;

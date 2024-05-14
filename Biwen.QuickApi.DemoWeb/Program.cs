@@ -166,7 +166,7 @@ builder.Services.AddScoped<HelloService>();
 //builder.Services.AddKeyedScoped<HelloService>("hello");
 
 // Add ScheduleTaskStore
-builder.Services.AddScheduleMetadaStore<DemoStore>();
+builder.Services.AddScheduleMetadataStore<DemoStore>();
 
 //
 builder.Services.AddBiwenQuickApis(o =>
