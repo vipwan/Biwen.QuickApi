@@ -14,11 +14,11 @@ namespace Biwen.QuickApi.Scheduling
           = TimeSpan.FromSeconds(20);
 #endif
 #if !DEBUG
-         //轮询45s 正式环境下，考虑性能轮询时间延长到45s
-         = TimeSpan.FromSeconds(45);
+         //轮询60s 正式环境下，考虑性能轮询时间延长到60s
+         = TimeSpan.FromSeconds(60);
 #endif
 
-        //延时10s,出于性能考虑,这里不做太频繁的轮询.
+        //延时10s.
         private static readonly TimeSpan _minIdleTime = TimeSpan.FromSeconds(10);
 
         private readonly ILogger<ScheduleBackgroundService> _logger;
