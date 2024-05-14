@@ -39,19 +39,18 @@ public class DemoTask(ILogger<DemoTask> logger) : IScheduleTask
 /// <summary>
 /// DemoStore演示
 /// </summary>
-public class DemoStore : IScheduleMetadaStore
+public class DemoStore : IScheduleMetadataStore
 {
     public Task<IEnumerable<ScheduleTaskMetadata>> GetAllAsync()
     {
         //模拟从数据库或配置文件中获取ScheduleTaskMetadata
         IEnumerable<ScheduleTaskMetadata> metadatas =
             [
-                new ScheduleTaskMetadata(typeof(DemoTask), "* * * * *")
+                new ScheduleTaskMetadata(typeof(DemoTask), Constants.CronEveryNMinutes(2))
                 {
-                    Description="测试的Schedule"
+                    Description="测试的Schedule,2分钟轮询"
                 }
             ];
-
         return Task.FromResult(metadatas);
     }
 }
@@ -59,7 +58,7 @@ public class DemoStore : IScheduleMetadaStore
 ```
 最后注册DemoStore到DI容器中即可。
 ```csharp
-builder.Services.AddScheduleMetadaStore<DemoStore>();
+builder.Services.AddScheduleMetadataStore<DemoStore>();
 ```
 
 系统自带ConfigurationStore,appsettings.json配置如下
