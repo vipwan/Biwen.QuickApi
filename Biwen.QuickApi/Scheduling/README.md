@@ -84,3 +84,24 @@ builder.Services.AddScheduleMetadaStore<DemoStore>();
 }
 
 ```
+
+您可以订阅Schedule任务的执行事件:
+- `ScheduleTaskSuccessed` 任务成功. 
+- `ScheduleTaskStarted` 任务开始.
+- `ScheduleTaskFailed` 任务失败.
+
+```csharp
+//以下演示任务成功,并且ScheduleTask为KeepAlive的事件订阅
+[EventSubscriber(IsAsync = true)]
+public class WhenDoneEvent(ILogger<WhenDoneEvent> logger) : IEventSubscriber<ScheduleTaskSuccessed>
+{
+    public Task HandleAsync(ScheduleTaskSuccessed @event, CancellationToken ct)
+    {
+        if (@event.ScheduleTask is KeepAlive)
+        {
+            logger.LogInformation($".KeepAlive Done!..............");
+        }
+        return Task.CompletedTask;
+    }
+}
+```
