@@ -6,7 +6,7 @@
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-		<PackageVersion>1.5.0</PackageVersion>
+		<PackageVersion>1.5.1</PackageVersion>
 
 		<TargetFrameworks>net8.0</TargetFrameworks>
 		<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>
@@ -46,7 +46,7 @@
 		<PackageReference Include="NCrontab" Version="3.3.3" />
 		<PackageReference Include="NSwag.AspNetCore" Version="14.0.7" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.5" />
 	</ItemGroup>
 
 </Project>
