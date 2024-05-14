@@ -14,8 +14,8 @@ namespace Biwen.QuickApi.Scheduling
         {
             foreach (var task in ScheduleTasks)
             {
-                services.AddSingleton(task);
-                services.AddSingleton(typeof(IScheduleTask), task);
+                services.AddTransient(task);
+                services.AddTransient(typeof(IScheduleTask), task);
             }
 
             //配置文件Store
