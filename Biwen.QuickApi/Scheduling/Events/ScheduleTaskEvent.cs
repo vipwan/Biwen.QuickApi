@@ -1,5 +1,4 @@
 ﻿using Biwen.QuickApi.Events;
-using System;
 
 namespace Biwen.QuickApi.Scheduling.Events
 {
@@ -21,8 +20,15 @@ namespace Biwen.QuickApi.Scheduling.Events
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="scheduleTask"></param>
-    /// <param name="eventTime"></param>
-    public sealed class ScheduleTaskSuccessed(IScheduleTask scheduleTask, DateTime eventTime) : ScheduleTaskEvent(scheduleTask, eventTime);
+    /// <param name="endTime">开始时间内</param>
+    /// <param name="eventTime">结束时间</param>
+    public sealed class TaskSuccessedEvent(IScheduleTask scheduleTask, DateTime eventTime, DateTime endTime) : ScheduleTaskEvent(scheduleTask, eventTime)
+    {
+        /// <summary>
+        /// 执行结束的时间
+        /// </summary>
+        public DateTime EndTime { get; set; } = endTime;
+    }
 
     /// <summary>
     /// 执行开始
@@ -30,7 +36,7 @@ namespace Biwen.QuickApi.Scheduling.Events
     /// <typeparam name="T"></typeparam>
     /// <param name="scheduleTask"></param>
     /// <param name="eventTime"></param>
-    public sealed class ScheduleTaskStarted(IScheduleTask scheduleTask, DateTime eventTime) : ScheduleTaskEvent(scheduleTask, eventTime);
+    public sealed class TaskStartedEvent(IScheduleTask scheduleTask, DateTime eventTime) : ScheduleTaskEvent(scheduleTask, eventTime);
 
     /// <summary>
     /// 执行失败
@@ -38,7 +44,7 @@ namespace Biwen.QuickApi.Scheduling.Events
     /// <typeparam name="T"></typeparam>
     /// <param name="scheduleTask"></param>
     /// <param name="eventTime"></param>
-    public sealed class ScheduleTaskFailed(IScheduleTask scheduleTask, DateTime eventTime, Exception exception) : ScheduleTaskEvent(scheduleTask, eventTime)
+    public sealed class TaskFailedEvent(IScheduleTask scheduleTask, DateTime eventTime, Exception exception) : ScheduleTaskEvent(scheduleTask, eventTime)
     {
         /// <summary>
         /// 异常信息

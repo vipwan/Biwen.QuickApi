@@ -2,6 +2,7 @@
 {
     /// <summary>
     /// ScheduleTask Metadata
+    /// 请注意如果如果ScheduleTaskType&&Cron&&Description&&IsAsync&&IsStartOnInit都相同，会被认为是同一个任务,所以请确保这些属性的唯一性
     /// </summary>
     /// <param name="scheduleTaskType"></param>
     /// <param name="cron"></param>

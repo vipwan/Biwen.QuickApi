@@ -18,10 +18,25 @@ namespace Biwen.QuickApi.Scheduling
                 services.AddTransient(typeof(IScheduleTask), task);
             }
 
+            //调度器
+            services.AddScheduler<SampleNCrontabScheduler>();
             //配置文件Store
             services.AddScheduleMetadataStore<ConfigurationScheduleMetadataStore>();
             //BackgroundService
             services.AddHostedService<ScheduleBackgroundService>();
+            return services;
+        }
+
+        /// <summary>
+        /// 注册调度器AddScheduler
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddScheduler<T>(this IServiceCollection services) where T : class, IScheduler
+        {
+            //调度器
+            services.AddSingleton<IScheduler, T>();
             return services;
         }
 
@@ -33,7 +48,7 @@ namespace Biwen.QuickApi.Scheduling
         /// <returns></returns>
         public static IServiceCollection AddScheduleMetadataStore<T>(this IServiceCollection services) where T : class, IScheduleMetadataStore
         {
-            services.AddSingleton(typeof(IScheduleMetadataStore), typeof(T));
+            services.AddSingleton<IScheduleMetadataStore, T>();
             return services;
         }
 

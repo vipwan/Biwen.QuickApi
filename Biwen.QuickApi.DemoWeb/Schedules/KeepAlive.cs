@@ -12,8 +12,9 @@ namespace Biwen.QuickApi.DemoWeb.Schedules
     {
         public async Task ExecuteAsync()
         {
+            //执行5s
+            await Task.Delay(TimeSpan.FromSeconds(5));
             logger.LogInformation("keep alive!");
-            await Task.CompletedTask;
         }
     }
 }

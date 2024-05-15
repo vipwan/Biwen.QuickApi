@@ -8,9 +8,9 @@ namespace Biwen.QuickApi.Scheduling
     /// </summary>
     /// <param name="logger"></param>
     [EventSubscriber(IsAsync = true)]
-    public class OnScheduleSuccessedHandler(ILogger<OnScheduleSuccessedHandler> logger) : IEventSubscriber<ScheduleTaskSuccessed>
+    public class SuccessedEventHandler(ILogger<SuccessedEventHandler> logger) : IEventSubscriber<TaskSuccessedEvent>
     {
-        public virtual Task HandleAsync(ScheduleTaskSuccessed @event, CancellationToken ct)
+        public virtual Task HandleAsync(TaskSuccessedEvent @event, CancellationToken ct)
         {
             logger.LogInformation($"[{@event.EventTime}] ScheduleTask:{@event.ScheduleTask.GetType().FullName} Successed!");
             return Task.CompletedTask;

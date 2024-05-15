@@ -54,43 +54,46 @@ namespace Biwen.QuickApi.Scheduling
         private async Task RunAsync(CancellationToken stoppingToken)
         {
             using var scope = _serviceProvider.CreateScope();
-            var schedulers = scope.ServiceProvider.GetServices<IScheduleTask>();
-            if (schedulers is null || !schedulers.Any())
+            var tasks = scope.ServiceProvider.GetServices<IScheduleTask>();
+            if (tasks is null || !tasks.Any())
             {
                 return;
             }
 
-            async Task DoTaskAsync(IScheduleTask scheduler, ScheduleTaskAttribute metadata)
+            //调度器
+            var scheduler = scope.ServiceProvider.GetRequiredService<IScheduler>();
+
+            async Task DoTaskAsync(IScheduleTask task, ScheduleTaskAttribute metadata)
             {
-                var timeScheduler = new BackgroundTaskScheduler(metadata, DateTime.Now);
-                if (timeScheduler.CanRun())
+                if (scheduler.CanRun(metadata, DateTime.Now))
                 {
+                    var eventTime = DateTime.Now;
                     //通知启动
-                    _ = new ScheduleTaskStarted(scheduler, DateTime.Now).PublishAsync(default);
+                    _ = new TaskStartedEvent(task, eventTime).PublishAsync(default);
                     try
                     {
                         if (metadata.IsAsync)
                         {
                             //异步执行
-                            _ = scheduler.ExecuteAsync();
+                            _ = task.ExecuteAsync();
                         }
                         else
                         {
                             //同步执行
-                            await scheduler.ExecuteAsync();
+                            await task.ExecuteAsync();
                         }
                         //执行完成
-                        _ = new ScheduleTaskSuccessed(scheduler, DateTime.Now).PublishAsync(default);
+                        _ = new TaskSuccessedEvent(task, eventTime, DateTime.Now).PublishAsync(default);
                     }
                     catch (Exception ex)
                     {
-                        _ = new ScheduleTaskFailed(scheduler, DateTime.Now, ex).PublishAsync(default);
+                        _ = new TaskFailedEvent(task, DateTime.Now, ex).PublishAsync(default);
                     }
                 }
             };
 
-            //注解中的scheduler
-            foreach (var scheduler in schedulers)
+            //注解中的task
+            foreach (var task in tasks)
             {
                 if (stoppingToken.IsCancellationRequested)
                 {
@@ -98,7 +101,7 @@ namespace Biwen.QuickApi.Scheduling
                 }
 
                 //标注的metadatas
-                var metadatas = scheduler.GetType().GetCustomAttributes<ScheduleTaskAttribute>();
+                var metadatas = task.GetType().GetCustomAttributes<ScheduleTaskAttribute>();
 
                 if (!metadatas.Any())
                 {
@@ -106,7 +109,7 @@ namespace Biwen.QuickApi.Scheduling
                 }
                 foreach (var metadata in metadatas)
                 {
-                    await DoTaskAsync(scheduler, metadata);
+                    await DoTaskAsync(task, metadata);
                 }
             }
 
@@ -134,12 +137,12 @@ namespace Biwen.QuickApi.Scheduling
                         IsStartOnInit = metadata.IsStartOnInit,
                     };
 
-                    var scheduler = scope.ServiceProvider.GetRequiredService(metadata.ScheduleTaskType) as IScheduleTask;
-                    if (scheduler is null)
+                    var task = scope.ServiceProvider.GetRequiredService(metadata.ScheduleTaskType) as IScheduleTask;
+                    if (task is null)
                     {
                         return;
                     }
-                    await DoTaskAsync(scheduler, attr);
+                    await DoTaskAsync(task, attr);
                 }
             });
         }

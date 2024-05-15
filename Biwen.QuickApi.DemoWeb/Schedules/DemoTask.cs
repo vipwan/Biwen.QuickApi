@@ -40,7 +40,7 @@ namespace Biwen.QuickApi.DemoWeb.Schedules
                     new ScheduleTaskMetadata(typeof(DemoTask),Constants.CronEveryNMinutes(2))
                     {
                         Description="测试的Schedule"
-                    }
+                    },
                 ];
 
             return Task.FromResult(metadatas);
