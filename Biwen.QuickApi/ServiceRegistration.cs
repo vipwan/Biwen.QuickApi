@@ -11,6 +11,7 @@ namespace Biwen.QuickApi
     using Biwen.QuickApi.Abstractions;
     using Biwen.QuickApi.Events;
     using Biwen.QuickApi.Http;
+    using Biwen.QuickApi.Infrastructure.Locking;
     using Biwen.QuickApi.Scheduling;
 #if NET8_0_OR_GREATER
     using Microsoft.AspNetCore.Antiforgery;
@@ -34,9 +35,11 @@ namespace Biwen.QuickApi
             this IServiceCollection services,
             Action<BiwenQuickApiOptions>? options = null)
         {
-
             //JSON Options
             services.ConfigureHttpJsonOptions(x => { });
+
+            //注册LocalLock
+            services.AddLocking();
 
             //注册验证器
             services.AddFluentValidationAutoValidation();
@@ -82,6 +85,18 @@ namespace Biwen.QuickApi
             //add quickapis
             foreach (var api in Apis) services.AddScoped(api);
 
+            return services;
+        }
+
+        /// <summary>
+        /// 提供LocalLock支持
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        internal static IServiceCollection AddLocking(this IServiceCollection services)
+        {
+            services.AddSingleton<LocalLock>();
+            services.AddSingleton<ILocalLock>(sp => sp.GetRequiredService<LocalLock>());
             return services;
         }
 

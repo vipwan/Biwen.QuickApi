@@ -1,18 +1,31 @@
-﻿using Biwen.QuickApi.Scheduling;
+﻿using Biwen.QuickApi.Infrastructure.Locking;
+using Biwen.QuickApi.Scheduling;
 using Biwen.QuickApi.Scheduling.Stores;
-
 namespace Biwen.QuickApi.DemoWeb.Schedules
 {
     /// <summary>
     /// Demo ScheduleTask，用于Store演示
     /// </summary>
     /// <param name="logger"></param>
-    public class DemoTask(ILogger<DemoTask> logger) : IScheduleTask
+    public class DemoTask(ILogger<DemoTask> logger, ILocalLock @lock) : IScheduleTask
     {
-        public Task ExecuteAsync()
+        public async Task ExecuteAsync()
         {
-            logger.LogInformation("Demo Schedule Done!");
-            return Task.CompletedTask;
+            var timeout = TimeSpan.FromMilliseconds(30_000);
+
+            //使用ILocalLock进行锁定,防止重复执行
+            var (locker, _) = await @lock.TryAcquireLockAsync("ONLY_ONE_ScheduleTask_OF_DemoTask", timeout, timeout);
+
+            if (locker is null)
+            {
+                return;//当前锁定,则不执行!
+            }
+
+            using (locker)
+            {
+                await Task.Delay(31_000);
+                logger.LogInformation("Demo memory store Schedule Done!");
+            }
         }
     }
 
@@ -24,7 +37,7 @@ namespace Biwen.QuickApi.DemoWeb.Schedules
     {
         public Task ExecuteAsync()
         {
-            logger.LogInformation("Demo Config Schedule Done!");
+            logger.LogInformation("Demo Config store Schedule Done!");
             return Task.CompletedTask;
         }
     }
@@ -39,6 +52,7 @@ namespace Biwen.QuickApi.DemoWeb.Schedules
                 [
                     new ScheduleTaskMetadata(typeof(DemoTask),Constants.CronEveryNMinutes(2))
                     {
+                        IsStartOnInit =true,
                         Description="测试的Schedule"
                     },
                 ];

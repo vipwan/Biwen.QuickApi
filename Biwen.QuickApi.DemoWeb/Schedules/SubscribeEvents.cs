@@ -1,11 +1,8 @@
 ﻿using Biwen.QuickApi.Events;
+using Biwen.QuickApi.Scheduling.Events;
 
 namespace Biwen.QuickApi.DemoWeb.Schedules
 {
-    using Biwen.QuickApi.Scheduling.Events;
-    using System.Threading;
-    using System.Threading.Tasks;
-
     [EventSubscriber(IsAsync = true)]
     public class DemoTaskSuccessedEvent(ILogger<DemoTaskSuccessedEvent> logger) : IEventSubscriber<TaskSuccessedEvent>
     {
