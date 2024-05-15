@@ -39,7 +39,7 @@ namespace Biwen.QuickApi
             services.ConfigureHttpJsonOptions(x => { });
 
             //注册LocalLock
-            services.AddLocking();
+            services.AddLocalLocking();
 
             //注册验证器
             services.AddFluentValidationAutoValidation();
@@ -93,7 +93,7 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        internal static IServiceCollection AddLocking(this IServiceCollection services)
+        private static IServiceCollection AddLocalLocking(this IServiceCollection services)
         {
             services.AddSingleton<LocalLock>();
             services.AddSingleton<ILocalLock>(sp => sp.GetRequiredService<LocalLock>());
