@@ -51,20 +51,13 @@ namespace Biwen.QuickApi.Scheduling
             }
         }
 
-        private async Task RunAsync(CancellationToken stoppingToken)
+        private Task RunAsync(CancellationToken stoppingToken)
         {
-            using var scope = _serviceProvider.CreateScope();
-            var tasks = scope.ServiceProvider.GetServices<IScheduleTask>();
-            if (tasks is null || !tasks.Any())
-            {
-                return;
-            }
-
-            //调度器
-            var scheduler = scope.ServiceProvider.GetRequiredService<IScheduler>();
-
             async Task DoTaskAsync(IScheduleTask task, ScheduleTaskAttribute metadata)
             {
+                using var scope = _serviceProvider.CreateScope();
+                //调度器
+                var scheduler = scope.ServiceProvider.GetRequiredService<IScheduler>();
                 if (scheduler.CanRun(metadata, DateTime.Now))
                 {
                     var eventTime = DateTime.Now;
@@ -92,27 +85,6 @@ namespace Biwen.QuickApi.Scheduling
                 }
             };
 
-            //注解中的task
-            foreach (var task in tasks)
-            {
-                if (stoppingToken.IsCancellationRequested)
-                {
-                    break;
-                }
-
-                //标注的metadatas
-                var metadatas = task.GetType().GetCustomAttributes<ScheduleTaskAttribute>();
-
-                if (!metadatas.Any())
-                {
-                    continue;
-                }
-                foreach (var metadata in metadatas)
-                {
-                    await DoTaskAsync(task, metadata);
-                }
-            }
-
             //store中的scheduler
             var stores = _serviceProvider.GetServices<IScheduleMetadataStore>().ToArray();
 
@@ -136,7 +108,7 @@ namespace Biwen.QuickApi.Scheduling
                         IsAsync = metadata.IsAsync,
                         IsStartOnInit = metadata.IsStartOnInit,
                     };
-
+                    using var scope = _serviceProvider.CreateScope();
                     var task = scope.ServiceProvider.GetRequiredService(metadata.ScheduleTaskType) as IScheduleTask;
                     if (task is null)
                     {
@@ -145,6 +117,8 @@ namespace Biwen.QuickApi.Scheduling
                     await DoTaskAsync(task, attr);
                 }
             });
+
+            return Task.CompletedTask;
         }
 
         private static async Task WaitAsync(Task pollingDelay, CancellationToken stoppingToken)

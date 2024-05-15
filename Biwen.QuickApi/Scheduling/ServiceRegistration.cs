@@ -20,6 +20,9 @@ namespace Biwen.QuickApi.Scheduling
 
             //调度器
             services.AddScheduler<SampleNCrontabScheduler>();
+
+            //元数据Store
+            services.AddScheduleMetadataStore<MetadataStore>();
             //配置文件Store
             services.AddScheduleMetadataStore<ConfigurationScheduleMetadataStore>();
             //BackgroundService
