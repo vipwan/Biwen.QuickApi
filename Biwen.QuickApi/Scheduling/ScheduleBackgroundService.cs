@@ -112,7 +112,7 @@ namespace Biwen.QuickApi.Scheduling
                     var task = scope.ServiceProvider.GetRequiredService(metadata.ScheduleTaskType) as IScheduleTask;
                     if (task is null)
                     {
-                        return;
+                        continue;
                     }
                     await DoTaskAsync(task, attr);
                 }
