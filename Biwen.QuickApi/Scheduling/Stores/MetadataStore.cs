@@ -36,12 +36,12 @@
                     var metadatas = taskType.GetCustomAttributes<ScheduleTaskAttribute>();
                     if (metadatas.Any())
                     {
-                        _cachedMetatas.AddRange(metadatas.Select(metadatas =>
-                        new ScheduleTaskMetadata(taskType, metadatas.Cron)
+                        _cachedMetatas.AddRange(metadatas.Select(metadata =>
+                        new ScheduleTaskMetadata(taskType, metadata.Cron)
                         {
-                            Description = metadatas.Description,
-                            IsAsync = metadatas.IsAsync,
-                            IsStartOnInit = metadatas.IsStartOnInit,
+                            Description = metadata.Description,
+                            IsAsync = metadata.IsAsync,
+                            IsStartOnInit = metadata.IsStartOnInit,
                         }));
                     }
                 }
