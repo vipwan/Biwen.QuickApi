@@ -1,6 +1,7 @@
 ﻿namespace Biwen.QuickApi.Scheduling.Stores.ConfigurationStore
 {
-    internal class ConfigurationScheduleOption
+    [Obsolete]
+    internal class ConfigurationScheduleOptions
     {
         public string ScheduleType { get; set; } = null!;
         public string Cron { get; set; } = null!;

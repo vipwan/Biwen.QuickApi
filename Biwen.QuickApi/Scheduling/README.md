@@ -68,14 +68,14 @@ builder.Services.AddScheduleMetadataStore<DemoStore>();
   "BiwenQuickApi": {
     "Schedules": [
       {
-        "ScheduleType": "Biwen.QuickApi.DemoWeb.Schedules.DemoConfigTask,Biwen.QuickApi.DemoWeb",
+        "ScheduleTaskType": "Biwen.QuickApi.DemoWeb.Schedules.DemoConfigTask,Biwen.QuickApi.DemoWeb",
         "Cron": "0/5 * * * *",
         "Description": "Every 5 mins",
         "IsAsync": false,
         "IsStartOnInit": false
       },
       {
-        "ScheduleType": "Biwen.QuickApi.DemoWeb.Schedules.DemoConfigTask,Biwen.QuickApi.DemoWeb",
+        "ScheduleTaskType": "Biwen.QuickApi.DemoWeb.Schedules.DemoConfigTask,Biwen.QuickApi.DemoWeb",
         "Cron": "0/10 * * * *",
         "Description": "Every 10 mins",
         "IsAsync": false,

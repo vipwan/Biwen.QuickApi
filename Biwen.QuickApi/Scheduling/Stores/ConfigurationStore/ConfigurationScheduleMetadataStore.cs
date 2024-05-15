@@ -18,15 +18,15 @@ namespace Biwen.QuickApi.Scheduling.Stores.ConfigurationStore
             {
                 var metadatas = options.Select(x =>
                 {
-                    var type = Type.GetType(x[nameof(ConfigurationScheduleOption.ScheduleType)]!);
+                    var type = Type.GetType(x[nameof(ScheduleTaskMetadata.ScheduleTaskType)]!);
                     if (type is null)
-                        throw new ArgumentException($"Type {x[nameof(ConfigurationScheduleOption.ScheduleType)]} not found!");
+                        throw new ArgumentException($"Type {x[nameof(ScheduleTaskMetadata.ScheduleTaskType)]} not found!");
 
-                    return new ScheduleTaskMetadata(type, x[nameof(ConfigurationScheduleOption.Cron)]!)
+                    return new ScheduleTaskMetadata(type, x[nameof(ScheduleTaskMetadata.Cron)]!)
                     {
-                        Description = x[nameof(ConfigurationScheduleOption.Description)],
-                        IsAsync = string.IsNullOrEmpty(x[nameof(ConfigurationScheduleOption.IsAsync)]) ? false : bool.Parse(x[nameof(ConfigurationScheduleOption.IsAsync)]!),
-                        IsStartOnInit = string.IsNullOrEmpty(x[nameof(ConfigurationScheduleOption.IsStartOnInit)]) ? false : bool.Parse(x[nameof(ConfigurationScheduleOption.IsStartOnInit)]!),
+                        Description = x[nameof(ScheduleTaskMetadata.Description)],
+                        IsAsync = string.IsNullOrEmpty(x[nameof(ScheduleTaskMetadata.IsAsync)]) ? false : bool.Parse(x[nameof(ScheduleTaskMetadata.IsAsync)]!),
+                        IsStartOnInit = string.IsNullOrEmpty(x[nameof(ScheduleTaskMetadata.IsStartOnInit)]) ? false : bool.Parse(x[nameof(ScheduleTaskMetadata.IsStartOnInit)]!),
                     };
                 });
                 return Task.FromResult(metadatas);
