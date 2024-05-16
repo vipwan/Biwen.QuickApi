@@ -12,15 +12,16 @@ namespace Biwen.QuickApi.DemoWeb.Schedules
     {
         public override Task OnAbort()
         {
-            logger.LogWarning("任务被打断.因为有一个相同的任务正在执行!");
+            logger.LogWarning($"[{DateTime.Now}]任务被打断.因为有一个相同的任务正在执行!");
             return Task.CompletedTask;
         }
 
-        public override Task ExecuteAsync()
+        public override async Task ExecuteAsync()
         {
-            logger.LogInformation("执行一个耗时两分钟的任务!");
+            var now = DateTime.Now;
             //模拟一个耗时2分钟的任务
-            return Task.Delay(TimeSpan.FromMinutes(2));
+            await Task.Delay(TimeSpan.FromMinutes(2));
+            logger.LogInformation($"[{now}] ~ {DateTime.Now} 执行一个耗时两分钟的任务!");
         }
     }
 }
