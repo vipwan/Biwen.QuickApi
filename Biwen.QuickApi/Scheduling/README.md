@@ -20,7 +20,6 @@ public class KeepAlive(ILogger<KeepAlive> logger) : IScheduleTask
     }
 }
 ```
-
 支持从Store中初始化任务调度列表，支持动态添加任务调度，支持动态删除任务调度。
 ```csharp
 /// <summary>
@@ -35,7 +34,6 @@ public class DemoTask(ILogger<DemoTask> logger) : IScheduleTask
         return Task.CompletedTask;
     }
 }
-
 /// <summary>
 /// DemoStore演示
 /// </summary>
@@ -85,6 +83,31 @@ builder.Services.AddScheduleMetadataStore<DemoStore>();
   }
 }
 
+```
+
+提供单一运行任务的支持(统一时间段指定的ScheduleTask只能存在一个执行中)
+您只需要继承`OnlyOneRunningScheduleTask`抽象类即可。以下是演示代码:
+```csharp
+/// <summary>
+/// 模拟一个只能同时存在一个执行中的任务.一分钟轮询执行一次,但是耗时两分钟.
+/// </summary>
+/// <param name="logger"></param>
+[ScheduleTask(Constants.CronEveryMinute, IsStartOnInit = true)]
+public class OnlyOneTask(ILogger<OnlyOneTask> logger) : OnlyOneRunningScheduleTask
+{
+    public override Task OnAbort()
+    {
+        logger.LogWarning("任务被打断.因为有一个相同的任务正在执行!");
+        return Task.CompletedTask;
+    }
+
+    public override Task ExecuteAsync()
+    {
+        logger.LogInformation("执行一个耗时两分钟的任务!");
+        //模拟一个耗时2分钟的任务
+        return Task.Delay(TimeSpan.FromMinutes(2));
+    }
+}
 ```
 
 您可以订阅Schedule任务的执行事件:
