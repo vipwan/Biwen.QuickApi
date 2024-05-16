@@ -1,4 +1,5 @@
 ﻿using Biwen.QuickApi.Events;
+using Biwen.QuickApi.Infrastructure.Locking;
 using Biwen.QuickApi.Scheduling.Events;
 using Biwen.QuickApi.Scheduling.Stores;
 using Microsoft.Extensions.Hosting;
@@ -26,10 +27,16 @@ namespace Biwen.QuickApi.Scheduling
 
         private readonly ILogger<ScheduleBackgroundService> _logger;
         private readonly IServiceProvider _serviceProvider;
-        public ScheduleBackgroundService(ILogger<ScheduleBackgroundService> logger, IServiceProvider serviceProvider)
+        private readonly ILocalLock _localLock;
+
+        public ScheduleBackgroundService(
+            ILogger<ScheduleBackgroundService> logger,
+            IServiceProvider serviceProvider,
+            ILocalLock localLock)
         {
             _logger = logger;
             _serviceProvider = serviceProvider;
+            _localLock = localLock;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -56,32 +63,57 @@ namespace Biwen.QuickApi.Scheduling
             async Task DoTaskAsync(IScheduleTask task, ScheduleTaskAttribute metadata)
             {
                 using var scope = _serviceProvider.CreateScope();
-                //调度器
-                var scheduler = scope.ServiceProvider.GetRequiredService<IScheduler>();
-                if (scheduler.CanRun(metadata, DateTime.Now))
+                //内部执行
+                async Task InnerExcute()
                 {
-                    var eventTime = DateTime.Now;
-                    //通知启动
-                    _ = new TaskStartedEvent(task, eventTime).PublishAsync(default);
-                    try
+                    //调度器
+                    var scheduler = scope.ServiceProvider.GetRequiredService<IScheduler>();
+                    if (scheduler.CanRun(metadata, DateTime.Now))
                     {
-                        if (metadata.IsAsync)
+                        var eventTime = DateTime.Now;
+                        //通知启动
+                        _ = new TaskStartedEvent(task, eventTime).PublishAsync(default);
+                        try
                         {
-                            //异步执行
-                            _ = task.ExecuteAsync();
+                            if (metadata.IsAsync)
+                            {
+                                //异步执行
+                                _ = task.ExecuteAsync();
+                            }
+                            else
+                            {
+                                //同步执行
+                                await task.ExecuteAsync();
+                            }
+                            //执行完成
+                            _ = new TaskSuccessedEvent(task, eventTime, DateTime.Now).PublishAsync(default);
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            //同步执行
-                            await task.ExecuteAsync();
+                            _ = new TaskFailedEvent(task, DateTime.Now, ex).PublishAsync(default);
                         }
-                        //执行完成
-                        _ = new TaskSuccessedEvent(task, eventTime, DateTime.Now).PublishAsync(default);
                     }
-                    catch (Exception ex)
+                }
+                //同一时间只能存在一个的任务
+                if (task is OnlyOneRunningScheduleTask onlyOneRunningScheduleTask)
+                {
+                    var (locker, _) = await _localLock.TryAcquireLockAsync(
+                        $"{onlyOneRunningScheduleTask.GetType().FullName}_LOCALLOCK", TimeSpan.FromSeconds(15d));
+
+                    if (locker is null)
                     {
-                        _ = new TaskFailedEvent(task, DateTime.Now, ex).PublishAsync(default);
+                        //如果有正在运行的相同任务,打断当前的执行的回调
+                        await onlyOneRunningScheduleTask.OnAbort();
+                        return;
                     }
+                    using (locker)
+                    {
+                        await InnerExcute();
+                    }
+                }
+                else
+                {
+                    await InnerExcute();
                 }
             };
 
