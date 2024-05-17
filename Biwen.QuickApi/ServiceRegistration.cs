@@ -389,19 +389,15 @@ namespace Biwen.QuickApi
             //验证策略
             //var checkResult = await CheckPolicy(ctx, quickApiAttribute.Policy);
             //if (!checkResult.Flag) return checkResult.Result!;
-
             var sp = ctx.HttpContext!.RequestServices;
-
             var api = sp.GetRequiredService(apiType);
-            var quickApiOptions = sp.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
-            //使用系统自带的JsonSerializerOptions配置
-            //var jsonSerializerOptions = sp.GetRequiredService<IOptions<JsonOptions>>().Value.SerializerOptions;
+            //var quickApiOptions = sp.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
             //执行请求
             try
             {
                 var req = await ((dynamic)api).ReqBinder.BindAsync(ctx.HttpContext!);
                 //验证DTO
-                if (req.Validate() is ValidationResult vresult && !vresult!.IsValid)
+                if (req.Validate() is ValidationResult { IsValid: false } vresult)
                 {
                     return TypedResults.ValidationProblem(vresult.ToDictionary());
                 }
@@ -427,17 +423,16 @@ namespace Biwen.QuickApi
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            static IResult InnerResult(object? result) =>
-                result switch
-                {
-                    null => TypedResults.Ok(),
-                    IResult iresult => iresult,
+            static IResult InnerResult(object? result) => result switch
+            {
+                null => TypedResults.Ok(),
+                IResult iresult => iresult,
 #pragma warning disable CS0618
-                    IResultResponse iresult => iresult.Result,
+                IResultResponse iresult => iresult.Result,
 #pragma warning restore CS0618
-                    string iresult => TypedResults.Content(iresult),
-                    _ => TypedResults.Json(result),
-                };
+                string iresult => TypedResults.Content(iresult),
+                _ => TypedResults.Json(result),
+            };
         }
     }
 }
