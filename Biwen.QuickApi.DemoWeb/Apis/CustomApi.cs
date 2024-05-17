@@ -17,11 +17,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             UseReqBinder<CustomApiRequestBinder>();
         }
 
-        public override async ValueTask<IResultResponse> ExecuteAsync(HelloApiRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(HelloApiRequest request)
         {
             await Task.CompletedTask;
             Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
-            return IResultResponse.OK();
+            return Results.Ok();
         }
 
         /// <summary>
@@ -59,10 +59,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     public class DeprecatedApi : BaseQuickApi
     {
 
-        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return IResultResponse.OK();
+            return Results.Ok();
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -85,7 +85,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("抛出异常的接口", "抛出异常,测试500错误格式化")]
     public class ThrowErrorApi : BaseQuickApi
     {
-        public override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<IResult> ExecuteAsync(EmptyRequest request)
         {
             throw new NotImplementedException();
         }
@@ -100,12 +100,12 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("cache", Verbs = Verb.GET | Verb.POST)]
     [QuickApiSummary("Cache缓存测试", "测试缓存功能")]
     [OutputCache(Duration = 10)]
-    public class CachedApi : BaseQuickApiWithoutRequest<IResultResponse>
+    public class CachedApi : BaseQuickApiWithoutRequest<IResult>
     {
-        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return IResultResponse.Content(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            return Results.Content(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
@@ -123,7 +123,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
 
     [QuickApi("ant-ui")]
-    public class AntUI : BaseQuickApiWithoutRequest<IResultResponse>
+    public class AntUI : BaseQuickApiWithoutRequest<IResult>
     {
         private readonly IAntiforgery _antiforgery;
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -133,7 +133,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
         {
             var token = _antiforgery.GetAndStoreTokens(_httpContextAccessor.HttpContext!);
             var html = $"""
@@ -149,7 +149,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
               </html>
             """;
             await Task.CompletedTask;
-            return Results.Content(html, "text/html").AsRspOfResult();
+            return Results.Content(html, "text/html");
         }
     }
 
@@ -169,18 +169,18 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     [QuickApi("ant", Verbs = Verb.POST)]
     [QuickApiSummary("请注意不能在swaggerUI中测试", "请注意不能在swaggerUI中测试,因为没有给定正确的RequestToken,请打开quick/ant-ui测试通过")]
-    public class AntApi : BaseQuickApi<AntRequest, IResultResponse>
+    public class AntApi : BaseQuickApi<AntRequest, IResult>
     {
         /// <summary>
         /// 启动防伪验证
         /// </summary>
         public override bool IsAntiforgeryEnabled => true;
 
-        public override async ValueTask<IResultResponse> ExecuteAsync(AntRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(AntRequest request)
         {
             await Task.CompletedTask;
             //return "Successed!".AsRspOfResult();
-            return Results.File(request.File!.OpenReadStream(), "image/png").AsRspOfResult();
+            return Results.File(request.File!.OpenReadStream(), "image/png");
         }
 
         //public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)

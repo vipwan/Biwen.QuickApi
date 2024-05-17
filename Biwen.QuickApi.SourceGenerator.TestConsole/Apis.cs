@@ -15,7 +15,7 @@
         }
     }
 
-    public class HelloResponse : BaseResponse
+    public class HelloResponse
     {
         public HelloResponse(string hello, string world)
         {
@@ -77,12 +77,12 @@
     /// 模拟一个自定义的请求
     /// </summary>
     [QuickApi("test3", Verbs = Verb.GET | Verb.POST), JustAsService]
-    public class Test3PostQuickApi : BaseQuickApi<HelloRequest, ContentResponse>
+    public class Test3PostQuickApi : BaseQuickApi<HelloRequest, string>
     {
-        public override async ValueTask<ContentResponse> ExecuteAsync(HelloRequest request)
+        public override async ValueTask<string> ExecuteAsync(HelloRequest request)
         {
             await Task.CompletedTask;
-            return new ContentResponse($"hello {request.Name}");
+            return $"hello {request.Name}";
         }
     }
 

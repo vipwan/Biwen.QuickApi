@@ -2,53 +2,54 @@
 {
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
-    using NSwag.Annotations;
     using System.Text.Json;
 
-    [OpenApiIgnore]
-    public abstract class BaseResponse
-    {
-        /// <summary>
-        /// ToJson
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
-        {
-            return JsonSerializer.Serialize(this);
-        }
-    }
+    //[OpenApiIgnore]
+    //public abstract class BaseResponse
+    //{
+    //    /// <summary>
+    //    /// ToJson
+    //    /// </summary>
+    //    /// <returns></returns>
+    //    public override string ToString()
+    //    {
+    //        return JsonSerializer.Serialize(this);
+    //    }
+    //}
 
-    /// <summary>
-    /// 空输出
-    /// </summary>
-    public sealed class EmptyResponse : BaseResponse
-    {
-        public static EmptyResponse New => new();
-    }
+    ///// <summary>
+    ///// 空输出
+    ///// </summary>
+    //public sealed class EmptyResponse : BaseResponse
+    //{
+    //    public static EmptyResponse New => new();
+    //}
 
     /// <summary>
     /// 文本输出
     /// </summary>
-    public sealed class ContentResponse(string content) : BaseResponse
-    {
-        public string Content { get; set; } = content;
+    //public sealed class ContentResponse(string content) : BaseResponse
+    //{
+    //    public string Content { get; set; } = content;
 
-        /// <summary>
-        /// Content
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
-        {
-            return Content;
-        }
+    //    /// <summary>
+    //    /// Content
+    //    /// </summary>
+    //    /// <returns></returns>
+    //    public override string ToString()
+    //    {
+    //        return Content;
+    //    }
 
-    }
+    //}
 
     /// <summary>
     /// IResult输出.
     /// 针对IResultResponse 请自行重写BaseQuickApi.HandlerBuilder方法的OpenApi实现
     /// </summary>
-    public sealed class IResultResponse(IResult result) : BaseResponse
+
+    [Obsolete("请直接使用IResult返回")]
+    public sealed class IResultResponse(IResult result)
     {
         public IResult Result { get; set; } = result;
 

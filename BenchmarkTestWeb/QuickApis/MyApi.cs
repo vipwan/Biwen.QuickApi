@@ -1,6 +1,5 @@
 ﻿using Biwen.QuickApi;
 using Biwen.QuickApi.Attributes;
-using NSwag.Annotations;
 
 namespace BenchmarkTestWeb.QuickApis
 {
@@ -9,11 +8,12 @@ namespace BenchmarkTestWeb.QuickApis
     [QuickApiSummary("quickapi", "quickapi")]
     //[OpenApiTags("API")]
     //[Tags("API")]
-    public class MyApi : BaseQuickApi<MyRequest, IResultResponse>
+    public class MyApi : BaseQuickApi<MyRequest, IResult>
     {
-        public override ValueTask<IResultResponse> ExecuteAsync(MyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(MyRequest request)
         {
-            return new ValueTask<IResultResponse>(Results.Ok(request).AsRspOfResult());
+            await Task.CompletedTask;
+            return Results.Ok(request);
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)

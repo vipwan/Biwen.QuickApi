@@ -11,12 +11,4 @@
 		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference
-			Include="..\Biwen.QuickApi.Generator\Biwen.QuickApi.SourceGenerator.csproj"
-			OutputItemType="Analyzer"
-			ReferenceOutputAssembly="false"/>
-
-	</ItemGroup>
-
 </Project>

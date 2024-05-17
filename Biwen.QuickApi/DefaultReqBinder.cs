@@ -175,15 +175,13 @@ namespace Biwen.QuickApi
                 }
                 //如果仍然未找到
                 {
-                    var alias = prop.GetCustomAttribute<AliasAsAttribute>();
-
                     var requestMethod = context.Request.Method!;
                     if (requestMethod == HttpMethods.Get)
                     {
                         //querystring
                         {
                             var qs = context.Request.Query;
-                            var value = StringValuesExtensions.DeserializeFromStringValues(qs[alias?.Name ?? prop.Name], prop.PropertyType);
+                            var value = StringValuesExtensions.DeserializeFromStringValues(qs[prop.Name], prop.PropertyType);
                             prop.SetValue(@default, value);
                             continue;
                         }
@@ -193,7 +191,7 @@ namespace Biwen.QuickApi
                         //header
                         {
                             var qs = context.Request.Headers;
-                            var value = qs[alias?.Name ?? prop.Name];
+                            var value = qs[prop.Name];
                             if (value.Count > 0)
                             {
                                 //转换
@@ -242,7 +240,7 @@ namespace Biwen.QuickApi
                             }
 
                             //注意别名权重高于属性名
-                            var currentKey = (alias?.Name ?? prop.Name).ToLower();
+                            var currentKey = (prop.Name).ToLower();
 
                             //忽略大小写
                             var ignoreCasDic = ReadFromJsonDic!.Select(x => new KeyValuePair<string, object>(x.Key.ToLower(), x.Value))
@@ -281,7 +279,6 @@ namespace Biwen.QuickApi
                 return null;
 
             var prop =
-                typeof(T).GetProperties().FirstOrDefault(x => x.GetCustomAttribute<AliasAsAttribute>()?.Name.Equals(name, StringComparison.OrdinalIgnoreCase) ?? false) ??
                 typeof(T).GetProperties().FirstOrDefault(x => x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
             return prop;
         };

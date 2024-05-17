@@ -390,55 +390,19 @@ namespace Biwen.QuickApi
             var api = sp.GetRequiredService(apiType);
             var quickApiOptions = sp.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
             //使用系统自带的JsonSerializerOptions配置
-            var jsonSerializerOptions = sp.GetRequiredService<IOptions<JsonOptions>>().Value.SerializerOptions;
-
+            //var jsonSerializerOptions = sp.GetRequiredService<IOptions<JsonOptions>>().Value.SerializerOptions;
             //执行请求
             try
             {
-                //var cache = ctx.HttpContext!.RequestServices.GetRequiredService<IMemoryCache>();
-                //var method = apiType.GetMethod("ExecuteAsync")!;
-                //var parameter = method.GetParameters()[0]!;
-                //var parameterType = parameter.ParameterType!;
                 var req = await ((dynamic)api).ReqBinder.BindAsync(ctx.HttpContext!);
-
                 //验证DTO
                 if (req.Validate() is ValidationResult vresult && !vresult!.IsValid)
                 {
                     return TypedResults.ValidationProblem(vresult.ToDictionary());
                 }
-
-                //var result = await method.Invoke(api, new object[] { req! })!;
                 var result = await ((dynamic)api)!.ExecuteAsync(req!);
-                var resultFlag = InnerResult(result as BaseResponse);
-                if (resultFlag.Flag) return resultFlag.Result!;
-
-                //针对返回结果的别名处理
-                Func<dynamic?, dynamic?> rspToExpandoObject = (rsp) =>
-                {
-                    if (rsp == null) return null;
-
-                    var type = rsp.GetType() as Type;
-
-                    var hasAlias = type!.GetProperties().Any(x => x.GetCustomAttribute<AliasAsAttribute>() != null);
-                    if (!hasAlias)
-                    {
-                        return rsp;
-                    }
-
-                    dynamic expandoObject = new ExpandoObject();
-                    foreach (var prop in type.GetProperties())
-                    {
-                        if (prop is null) continue;
-                        var alias = prop.GetCustomAttribute<AliasAsAttribute>();
-                        ((IDictionary<string, object>)expandoObject)[alias != null ? alias.Name : prop.Name] = prop.GetValue(rsp)!;
-                    }
-                    return expandoObject;
-                };
-
-                //返回JSON
-                var expandoResult = rspToExpandoObject(result);
-                //使用JsonSerializerOptions
-                return TypedResults.Json(expandoResult, jsonSerializerOptions);
+                var rawResult = InnerResult(result);
+                return rawResult;
             }
             catch (Exception ex)
             {
@@ -459,13 +423,16 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="result"></param>
         /// <returns></returns>
-        static (bool Flag, IResult? Result) InnerResult(BaseResponse? result) =>
+        static IResult InnerResult(object? result) =>
             result switch
             {
-                EmptyResponse _ => (true, TypedResults.Ok()),
-                ContentResponse content => (true, TypedResults.Content(content.Content)),
-                IResultResponse iresult => (true, iresult.Result),
-                _ => (false, null),
+                null => TypedResults.Ok(),
+                IResult iresult => iresult,
+#pragma warning disable CS0618
+                IResultResponse iresult => iresult.Result,
+#pragma warning restore CS0618
+                string iresult => TypedResults.Content(iresult),
+                _ => TypedResults.Json(result),
             };
     }
 }

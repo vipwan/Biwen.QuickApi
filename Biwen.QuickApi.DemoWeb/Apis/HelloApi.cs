@@ -171,7 +171,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     }
 
 
-    public class HelloApiResponse : BaseResponse
+    public class HelloApiResponse
     {
         public string? Message { get; set; }
 
@@ -297,10 +297,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [Obsolete("过期测试", false)]
     public class Hello5Api : BaseQuickApi
     {
-        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return IResultResponse.OK();
+            return Results.Ok();
         }
     }
 
@@ -338,11 +338,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// <summary>
     /// JustAsService 只会被服务发现，不会被注册到路由表
     /// </summary>
-    public class JustAsService : BaseQuickApiJustAsService<EmptyRequest, ContentResponse>
+    public class JustAsService : BaseQuickApiJustAsService<EmptyRequest, string>
     {
-        public override async ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<string> ExecuteAsync(EmptyRequest request)
         {
-            return new ContentResponse("Hello World content!");
+            return "Hello World content!";
         }
     }
 
@@ -373,10 +373,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApiSummary("frombody", "当前接口Req来自整个FormBody")]
     public class FromBodyApi : BaseQuickApi<FromBodyRequest>
     {
-        public override async ValueTask<IResultResponse> ExecuteAsync(FromBodyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(FromBodyRequest request)
         {
             await Task.CompletedTask;
-            return IResultResponse.OK($"FromBodyApi {request.Id} {request.Name}");
+            return Results.Ok($"FromBodyApi {request.Id} {request.Name}");
         }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -395,7 +395,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     public class FromFileApi : BaseQuickApi<FileUploadRequest>
     {
 
-        public override async ValueTask<IResultResponse> ExecuteAsync(FileUploadRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(FileUploadRequest request)
         {
             //测试上传一个文本文件并读取内容
             if (request.File != null)
@@ -403,10 +403,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 using (var sr = new StreamReader(request.File.OpenReadStream()))
                 {
                     var content = await sr.ReadToEndAsync();
-                    return Results.Ok(content).AsRspOfResult();
+                    return Results.Ok(content);
                 }
             }
-            return IResultResponse.BadRequest("no file");
+            return Results.BadRequest("no file");
         }
 
         //public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
@@ -416,6 +416,34 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         //}
     }
 
+
+    /// <summary>
+    /// 提供对Results<,>的支持
+    /// </summary>
+    [QuickApi("typed-result", Verbs = Verb.GET)]
+    [QuickApiSummary("TypedResult测试", "TypedResult测试")]
+    public class TypedResultTestApi : BaseQuickApi<EmptyRequest, Results<BadRequest, ValidationProblem, Ok<HelloApiResponse>>>
+    {
+        public override async ValueTask<Results<BadRequest, ValidationProblem, Ok<HelloApiResponse>>> ExecuteAsync(EmptyRequest request)
+        {
+            await Task.CompletedTask;
+
+            //返回okay
+            return TypedResults.Ok(new HelloApiResponse { Alias = "hello", Message = "typed result" });
+        }
+    }
+
+
+    [QuickApi("array-result")]
+    [QuickApiSummary("ArrayResult测试", "ArrayResult测试")]
+    public class ArrayTestApi : BaseQuickApi<EmptyRequest, string[]>
+    {
+        public override async ValueTask<string[]> ExecuteAsync(EmptyRequest request)
+        {
+            await Task.CompletedTask;
+            return ["hello", "biwen-quickapi"];
+        }
+    }
 }
 
 #pragma warning restore

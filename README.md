@@ -13,12 +13,21 @@ public class MyStore
         };
     }
 }
-[QuickApi("todos")]
+[QuickApi("todos")] //返回IResult方式
 public class TodosApi : BaseQuickApi
 {
-    public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
+    public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
     {
-        return IResultResponse.OK(MyStore.SampleTodos());
+        return Results.OK(MyStore.SampleTodos());
+    }
+}
+[QuickApi("todos2")] //返回对象方式
+public class TypedResultTestApi : BaseQuickApi<EmptyRequest,Todo[]>
+{
+    public override async ValueTask<Todo[]> ExecuteAsync(EmptyRequest request)
+    {
+        await Task.CompletedTask;
+        return MyStore.SampleTodos();
     }
 }
 ```
@@ -28,7 +37,7 @@ public class TodosApi : BaseQuickApi
 - write less, do more ; write anywhere, do anything  
 - 欢迎小伙伴们star&issue共同学习进步 [Biwen.QuickApi](https://github.com/vipwan/Biwen.QuickApi)
 
-## SourceGenerator 不支持AOT后续不再更新!
+## SourceGenerator (v1.6.0+停更)!
 
 - 提供gen源代码生成器方案,以于显著提升性能(V1.0版本使用的Emit和dynamic会导致部分性能损失)
 - gen SourceGenerator已发布v1.1.2,[使用方式](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.Generator/readme.md)
@@ -71,11 +80,6 @@ public class HelloApiRequest : BaseRequest<HelloApiRequest>
     [Description("Name Desc")]
     public string? Name { get; set; }
 
-    /// <summary>
-    /// 别名绑定字段
-    /// </summary>
-    [AliasAs("anotherAlias")]
-    public string? Alias { get; set; }
     /// <summary>
     /// FromQuery特性绑定字段
     /// </summary>

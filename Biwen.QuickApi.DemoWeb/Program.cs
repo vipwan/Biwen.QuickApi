@@ -240,7 +240,7 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
 
     //执行请求
     var x = await api.ExecuteAsync(req);
-    return TypedResults.Ok(x.Content);
+    return TypedResults.Ok(x);
 
 });
 

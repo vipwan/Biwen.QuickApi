@@ -88,7 +88,7 @@
                     reqContent.Add(c);
             }
 
-            var reqType = kuickApiDef.QuickApiType?.GetInterface($"{nameof(IQuickApi<EmptyRequest, EmptyResponse>)}`2")?.GenericTypeArguments[0];
+            var reqType = kuickApiDef.QuickApiType?.GetInterface($"{nameof(IQuickApi<EmptyRequest, IResult>)}`2")?.GenericTypeArguments[0];
             //var reqDtoType = apiDescription.ParameterDescriptions.FirstOrDefault()?.Type;
             var reqDtoIsList = reqType?.GetInterfaces().Contains(typeof(IEnumerable));
             var reqDtoProps = reqDtoIsList is true ? null : reqType?.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.FlattenHierarchy).ToList();
@@ -236,16 +236,17 @@
                     }
 
                     //别名
-                    if (prop.IsDefined(typeof(AliasAsAttribute)))
-                    {
-                        reqParams.Add(CreateParam(
-                            context,
-                            prop: prop,
-                            paramName: prop.GetCustomAttribute<AliasAsAttribute>()?.Name ?? prop.Name,
-                            isRequired: !IsNullable(prop),
-                            kind: OpenApiParameterKind.Query));
-                        continue;
-                    }
+                    //if (prop.IsDefined(typeof(AliasAsAttribute)))
+                    //{
+                    //    reqParams.Add(CreateParam(
+                    //        context,
+                    //        prop: prop,
+                    //        paramName: prop.GetCustomAttribute<AliasAsAttribute>()?.Name ?? prop.Name,
+                    //        isRequired: !IsNullable(prop),
+                    //        kind: OpenApiParameterKind.Query));
+                    //    continue;
+                    //}
+
                     //默认,如果不是来自路由则从Query中绑定
                     var isFromRoute =
                         opPath.Contains($"{{{prop.Name}}}", StringComparison.OrdinalIgnoreCase) ||

@@ -9,29 +9,12 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="result"></param>
         /// <returns></returns>
+#pragma warning disable CS0618 // 类型或成员已过时
         public static IResultResponse AsRspOfResult(this IResult result)
         {
             return new IResultResponse(result ?? throw new ArgumentNullException(nameof(result)));
         }
-
-        /// <summary>
-        /// 转换为IResultResponse
-        /// </summary>
-        /// <param name="result"></param>
-        /// <returns></returns>
-        public static IResultResponse AsRspOfResult(this string result)
-        {
-            return Results.Content(result).AsRspOfResult();
-        }
-
-        ///// <summary>
-        ///// 转换为ContentResponse
-        ///// </summary>
-        ///// <param name="result"></param>
-        ///// <returns></returns>
-        //public static ContentResponse AsRspOfContent(this string result)
-        //{
-        //    return new ContentResponse(result);
-        //}
     }
+#pragma warning restore CS0618 // 类型或成员已过时
+
 }

@@ -5,10 +5,10 @@
     public class MiddlewareApi : BaseQuickApi
     {
 
-        public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
         {
             await Task.CompletedTask;
-            return IResultResponse.OK();
+            return Results.Ok();
         }
 
 

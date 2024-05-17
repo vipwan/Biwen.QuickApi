@@ -102,17 +102,15 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     public class EventApi : BaseQuickApi<MyEvent>
     {
 
-        public override async ValueTask<IResultResponse> ExecuteAsync(MyEvent request)
+        public override async ValueTask<IResult> ExecuteAsync(MyEvent request)
         {
             //publish
             await PublishAsync(request);
             //publish event2
             await PublishAsync(new MyEvent2 { Message = "hello event2" });
-
             //可以使用IEvent扩展方法
             await new MyEvent { Message = "1234567890" }.PublishAsync();
-
-            return IResultResponse.Content("send event");
+            return Results.Content("send event");
         }
     }
 }

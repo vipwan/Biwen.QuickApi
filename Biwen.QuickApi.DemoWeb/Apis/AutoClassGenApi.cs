@@ -77,9 +77,9 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [QuickApi("autogen", Verbs = Verb.POST)]
     [QuickApiSummary("自动生成的Request", "自动生成的接口")]
     [EndpointGroupName("group1")]
-    public class AutoGenApi : BaseQuickApi<AutoGenRequest, IResultResponse>
+    public class AutoGenApi : BaseQuickApi<AutoGenRequest, IResult>
     {
-        public override async ValueTask<IResultResponse> ExecuteAsync(AutoGenRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(AutoGenRequest request)
         {
             await Task.CompletedTask;
 
@@ -91,7 +91,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 Phone = "13888888888"
             };
 
-            return Results.Json(request).AsRspOfResult();
+            return Results.Json(request);
         }
     }
 }

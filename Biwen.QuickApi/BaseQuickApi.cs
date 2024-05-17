@@ -1,7 +1,9 @@
 ﻿using Biwen.QuickApi.Events;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Metadata;
 using NSwag.Annotations;
+using System.Collections;
 
 namespace Biwen.QuickApi
 {
@@ -10,7 +12,7 @@ namespace Biwen.QuickApi
     /// </summary>
     /// <typeparam name="Req">请求对象</typeparam>
     /// <typeparam name="Rsp">输出对象</typeparam>
-    public abstract class BaseQuickApi<Req, Rsp> : IQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new() where Rsp : BaseResponse
+    public abstract class BaseQuickApi<Req, Rsp> : IQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new()
     {
         /// <summary>
         /// 获取请求类型
@@ -59,7 +61,28 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public abstract ValueTask<Rsp> ExecuteAsync(Req request);
 
+        /// <summary>
+        /// 处理IResult的特性
+        /// </summary>
+        static class ProducesIResult
+        {
+            static readonly MethodInfo _populateMethod =
+                typeof(ProducesIResult).GetMethod(nameof(Populate), BindingFlags.NonPublic | BindingFlags.Static)!;
 
+            public static void AddMetadata(EndpointBuilder builder, Type tResponse)
+            {
+                if (tResponse is not null && typeof(IEndpointMetadataProvider).IsAssignableFrom(tResponse))
+                {
+                    var invokeArgs = new object[] { builder };
+                    _populateMethod.MakeGenericMethod(tResponse).Invoke(null, invokeArgs);
+                }
+            }
+
+            static void Populate<T>(EndpointBuilder b) where T : IEndpointMetadataProvider
+            {
+                T.PopulateMetadata(_populateMethod, b);
+            }
+        }
 
         /*
          *  
@@ -78,32 +101,27 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public virtual RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
-            //Accepts
-            //if (ReqType != typeof(EmptyRequest))
-            //{
-            //    builder?.Accepts(ReqType, "application/json");
-            //}
             // 200
-            if (RspType == typeof(ContentResponse))
+            if (RspType == typeof(string))
             {
                 builder?.Produces(200, typeof(string), contentType: "text/plain");
             }
-            else if (RspType == typeof(IResultResponse))
+            else if (RspType.IsAssignableTo(typeof(IResult)))
             {
-                // todo:IResultResponse不提供具体的类型，需执行时自行指定
+                builder?.Add(eb => ProducesIResult.AddMetadata(eb, RspType));
             }
             else
             {
-                if (RspType != typeof(EmptyResponse))
-                    builder?.Produces(200, RspType);
+                builder?.Produces(200, RspType);
             }
+
             // 400
-            if (RspType != typeof(EmptyRequest))
+            if (ReqType != typeof(EmptyRequest))
             {
                 builder?.ProducesValidationProblem();
             }
             // 500
-            builder?.ProducesProblem(StatusCodes.Status500InternalServerError);
+            //builder?.ProducesProblem(StatusCodes.Status500InternalServerError);
 
             // 上传文件必须使用 multipart/form-data
             if (ReqType.GetProperties().Any(x =>
@@ -143,15 +161,15 @@ namespace Biwen.QuickApi
     /// 有请求参数的BaseQuickApi,返回IResultResponse
     /// </summary>
     /// <typeparam name="Req"></typeparam>
-    public abstract class BaseQuickApi<Req> : BaseQuickApi<Req, IResultResponse> where Req : BaseRequest<Req>, new()
+    public abstract class BaseQuickApi<Req> : BaseQuickApi<Req, IResult> where Req : BaseRequest<Req>, new()
     {
-        public abstract override ValueTask<IResultResponse> ExecuteAsync(Req request);
+        public abstract override ValueTask<IResult> ExecuteAsync(Req request);
     }
 
     /// <summary>
     /// 没有请求参数的BaseQuickApi,没有返回值
     /// </summary>
-    public abstract class BaseQuickApi : BaseQuickApi<EmptyRequest, IResultResponse>
+    public abstract class BaseQuickApi : BaseQuickApi<EmptyRequest, IResult>
     {
         public BaseQuickApi()
         {
@@ -164,7 +182,7 @@ namespace Biwen.QuickApi
             return base.HandlerBuilder(builder);
         }
 
-        public abstract override ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request);
+        public abstract override ValueTask<IResult> ExecuteAsync(EmptyRequest request);
 
     }
 
@@ -172,7 +190,7 @@ namespace Biwen.QuickApi
     /// 没有请求参数的BaseQuickApi,有返回值
     /// </summary>
     /// <typeparam name="Rsp"></typeparam>
-    public abstract class BaseQuickApiWithoutRequest<Rsp> : BaseQuickApi<EmptyRequest, Rsp> where Rsp : BaseResponse
+    public abstract class BaseQuickApiWithoutRequest<Rsp> : BaseQuickApi<EmptyRequest, Rsp> where Rsp : class
     {
         public BaseQuickApiWithoutRequest()
         {
@@ -187,7 +205,7 @@ namespace Biwen.QuickApi
     /// <typeparam name="Req"></typeparam>
     /// <typeparam name="Rsp"></typeparam>
     [QuickApi(""), JustAsService]
-    public abstract class BaseQuickApiJustAsService<Req, Rsp> : BaseQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new() where Rsp : BaseResponse
+    public abstract class BaseQuickApiJustAsService<Req, Rsp> : BaseQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new() where Rsp : class
     {
 
     }

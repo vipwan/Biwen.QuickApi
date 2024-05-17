@@ -63,7 +63,7 @@ public static partial class AppExtentions
             (app as WebApplication)?.UseMiddleware<QuickApiAntiforgeryMiddleware>();
 #endif
 #if NET8_0_OR_GREATER
-        (app as WebApplication)?.UseAntiforgery();
+            (app as WebApplication)?.UseAntiforgery();
 #endif
         }
 
@@ -159,35 +159,5 @@ public static partial class AppExtentions
             return (true, null);
         }
     }
-
-    /// <summary>
-    /// 内部返回的Result
-    /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:删除未使用的私有成员", Justification = "<挂起>")]
-    static (bool Flag, IResult? Result) InnerResult(object? result)
-    {
-        {
-            if (result is EmptyResponse)
-            {
-                {
-                    return (true, TypedResults.Ok());
-                }
-            }
-            if (result is ContentResponse content)
-            {
-                {
-                    return (true, TypedResults.Content(content.ToString()));
-                }
-            }
-            if (result is IResultResponse iresult)
-            {
-                {
-                    return (true, iresult.Result);
-                }
-            }
-            return (false, null);
-        }
-    }
-
 
 }

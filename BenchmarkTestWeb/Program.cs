@@ -91,9 +91,6 @@ app.MapPost("/my-minimal", ([Microsoft.AspNetCore.Mvc.FromBody] MyRequest reques
 //default方式
 app.MapBiwenQuickApis();
 
-// Gen方式
-app.MapGenQuickApis(app.Services, "gen");
-
 app.UseAuthorization();
 app.MapControllers();
 
