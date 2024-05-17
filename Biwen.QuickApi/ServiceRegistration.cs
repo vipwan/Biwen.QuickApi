@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.AspNetCore.Routing;
-using System.Dynamic;
 
 namespace Biwen.QuickApi
 {
@@ -16,7 +15,6 @@ namespace Biwen.QuickApi
 #if NET8_0_OR_GREATER
     using Microsoft.AspNetCore.Antiforgery;
 #endif
-    using Microsoft.AspNetCore.Http.Json;
 
     public static class ServiceRegistration
     {
@@ -66,6 +64,20 @@ namespace Biwen.QuickApi
             //AddProblemDetails
             services.AddProblemDetails();
 
+            //注册EventPubSub
+            services.AddEventPubSub();
+
+            //注册Schedule
+            services.AddScheduleTask();
+
+            //add quickapis
+            foreach (var api in Apis) services.AddScoped(api);
+
+            return services;
+        }
+
+        private static IServiceCollection AddEventPubSub(this IServiceCollection services)
+        {
             //注册EventHanders
             foreach (var subscriberType in EventSubscribers)
             {
@@ -78,13 +90,6 @@ namespace Biwen.QuickApi
             }
             //注册Publisher
             services.AddScoped<Publisher>();
-
-            //注册Schedule
-            services.AddScheduleTask();
-
-            //add quickapis
-            foreach (var api in Apis) services.AddScoped(api);
-
             return services;
         }
 
@@ -416,23 +421,23 @@ namespace Biwen.QuickApi
                 var exceptionResultBuilder = sp.GetRequiredService<IQuickApiExceptionResultBuilder>();
                 return await exceptionResultBuilder.ErrorResult(ex);
             }
-        }
 
-        /// <summary>
-        /// 内部返回的Result
-        /// </summary>
-        /// <param name="result"></param>
-        /// <returns></returns>
-        static IResult InnerResult(object? result) =>
-            result switch
-            {
-                null => TypedResults.Ok(),
-                IResult iresult => iresult,
+            /// <summary>
+            /// 内部返回的Result
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            static IResult InnerResult(object? result) =>
+                result switch
+                {
+                    null => TypedResults.Ok(),
+                    IResult iresult => iresult,
 #pragma warning disable CS0618
-                IResultResponse iresult => iresult.Result,
+                    IResultResponse iresult => iresult.Result,
 #pragma warning restore CS0618
-                string iresult => TypedResults.Content(iresult),
-                _ => TypedResults.Json(result),
-            };
+                    string iresult => TypedResults.Content(iresult),
+                    _ => TypedResults.Json(result),
+                };
+        }
     }
 }
