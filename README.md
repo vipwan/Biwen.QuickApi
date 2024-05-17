@@ -22,7 +22,7 @@ public class TodosApi : BaseQuickApi
     }
 }
 [QuickApi("todos2")] //返回对象方式
-public class TypedResultTestApi : BaseQuickApi<EmptyRequest,Todo[]>
+public class Todo2Api : BaseQuickApi<EmptyRequest,Todo[]>
 {
     public override async ValueTask<Todo[]> ExecuteAsync(EmptyRequest request)
     {
