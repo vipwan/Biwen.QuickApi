@@ -106,9 +106,9 @@ namespace Biwen.QuickApi
         /// <typeparam name="T"></typeparam>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddBiwenQuickApiGroupRouteBuilder<T>(this IServiceCollection services) where T : IQuickApiGroupRouteBuilder, new()
+        public static IServiceCollection AddBiwenQuickApiGroupRouteBuilder<T>(this IServiceCollection services) where T : class, IQuickApiGroupRouteBuilder
         {
-            services.AddSingleton<IQuickApiGroupRouteBuilder>((sp) => { return new T(); });
+            services.AddSingleton<IQuickApiGroupRouteBuilder, T>();
             return services;
         }
 
