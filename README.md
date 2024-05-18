@@ -151,7 +151,7 @@ public class CustomApiRequestBinder : IReqBinder<CustomApiRequest>
     }
 }
 
-public class HelloApiResponse : BaseResponse
+public class HelloApiResponse
 {
     public string? Message { get; set; }
 }
@@ -169,9 +169,9 @@ public class HelloApiResponse : BaseResponse
 [QuickApiSummary("this is summary","this is description")]
 public class NeedAuthApi : BaseQuickApi
 {
-    public override EmptyResponse Execute(EmptyRequest request)
+    public override IResult Execute(EmptyRequest request)
     {
-        return EmptyResponse.Instance;
+        return Results.Ok();
     }
 }
 
@@ -212,11 +212,11 @@ public class CustomApi : BaseQuickApi<CustomApiRequest>
         UseReqBinder<CustomApiRequestBinder>();
     }
 
-    public override async ValueTask<EmptyResponse> ExecuteAsync(CustomApiRequest request)
+    public override async ValueTask<IResult> ExecuteAsync(CustomApiRequest request)
     {
         await Task.CompletedTask;
         Console.WriteLine($"获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}");
-        return EmptyResponse.New;
+        return Results.Ok();
     }
 
     /// <summary>
@@ -248,26 +248,6 @@ public class CustomApi : BaseQuickApi<CustomApiRequest>
         //return builder;
         }
 }
-
-    /// <summary>
-/// 提供对IResult的封装支持
-/// </summary>
-[QuickApi("iresult", Verbs = Verb.GET)]
-public class IResultTestApi : BaseQuickApiWithoutRequest<IResultResponse>
-{
-    public override async ValueTask<IResultResponse> ExecuteAsync(EmptyRequest request)
-    {
-        return IResultResponse.Ok("Hello World IResult!");
-    }
-
-    public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
-    {
-        //针对IResultResponse,需要完全自定义Produces,QuickApi无法自动识别
-        builder.Produces(200, typeof(string), contentType: "text/plain");
-        return builder;
-        //return base.HandlerBuilder(builder);
-    }
-}
     
 /// <summary>
 /// 上传文件测试
@@ -275,9 +255,9 @@ public class IResultTestApi : BaseQuickApiWithoutRequest<IResultResponse>
 /// </summary>
 [QuickApi("fromfile", Verbs = Verb.POST)]
 [QuickApiSummary("上传文件测试", "上传文件测试")]
-public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
+public class FromFileApi : BaseQuickApi<FileUploadRequest, IResult>
 {
-    public override async ValueTask<IResultResponse> ExecuteAsync(FileUploadRequest request)
+    public override async ValueTask<IResult> ExecuteAsync(FileUploadRequest request)
     {
         //测试上传一个文本文件并读取内容
         if (request.File != null)
@@ -285,10 +265,10 @@ public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
             using (var sr = new StreamReader(request.File.OpenReadStream()))
             {
                 var content = await sr.ReadToEndAsync();
-                return Results.Ok(content).AsRspOfResult();
+                return Results.Ok(content);
             }
         }
-        return IResultResponse.BadRequest("no file");
+        return Results.BadRequest("no file");
     }
 }
 
@@ -296,11 +276,11 @@ public class FromFileApi : BaseQuickApi<FileUploadRequest, IResultResponse>
 /// JustAsService 只会被服务发现，不会被注册到路由表
 /// </summary>
 [QuickApi(""), JustAsService]
-public class JustAsService : BaseQuickApi<EmptyRequest, ContentResponse>
+public class JustAsService : BaseQuickApi<EmptyRequest, string>
 {
-    public override async ValueTask<ContentResponse> ExecuteAsync(EmptyRequest request)
+    public override async ValueTask<string> ExecuteAsync(EmptyRequest request)
     {
-        return new ContentResponse("Hello World JustAsService!");
+        return "Hello World JustAsService!";
     }
 }
 ```
@@ -345,7 +325,7 @@ builder.Services.AddBiwenQuickApiGroupRouteBuilder<MyGroupRouteBuilder>();
 ```csharp
 
 //你也可以把QuickApi当Service使用
-app.MapGet("/fromapi", async (Biwen.QuickApi.DemoWeb.Apis.Hello4Api api) =>
+app.MapGet("/fromapi", async (Apis.Hello4Api api) =>
 {
     //通过你的方式获取请求对象
     var req = new EmptyRequest();
