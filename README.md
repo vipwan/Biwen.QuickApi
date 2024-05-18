@@ -1,5 +1,10 @@
 ﻿# Biwen.QuickApi
 
+![Nuget](https://img.shields.io/nuget/v/Biwen.QuickApi)
+![Nuget](https://img.shields.io/nuget/dt/Biwen.QuickApi)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vipwan/Biwen.QuickApi/blob/master/LICENSE.txt) 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/vipwan/Biwen.QuickApi/pulls) 
+
 ## 项目介绍
 
 ```c#
