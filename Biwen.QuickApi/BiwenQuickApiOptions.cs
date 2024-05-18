@@ -14,5 +14,18 @@
         /// </summary>
         public bool EnableAntiForgeryTokens { get; set; } = true;
 
+
+        /// <summary>
+        /// 默认:true 是否启动发布订阅
+        /// </summary>
+        public bool EnablePubSub { get; set; } = true;
+
+        /// <summary>
+        /// 默认:true 是否启动ScheduleTask
+        /// </summary>
+        public bool EnableScheduling { get; set; } = true;
+
+
+
     }
 }

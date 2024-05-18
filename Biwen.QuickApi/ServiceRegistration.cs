@@ -64,11 +64,19 @@ namespace Biwen.QuickApi
             //AddProblemDetails
             services.AddProblemDetails();
 
-            //注册EventPubSub
-            services.AddEventPubSub();
+            var biwenQuickApiOptions = services.BuildServiceProvider().GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
 
+            //注册EventPubSub
+            services.AddIf(biwenQuickApiOptions.EnablePubSub, sp =>
+            {
+                sp.AddEventPubSub(); return sp;
+            });
             //注册Schedule
-            services.AddScheduleTask();
+            services.AddIf(biwenQuickApiOptions.EnableScheduling, sp =>
+            {
+                if (!biwenQuickApiOptions.EnablePubSub) throw new QuickApiExcetion("必须启用发布订阅功能,才可以开启Scheduling功能!");
+                sp.AddScheduleTask(); return sp;
+            });
 
             //add quickapis
             foreach (var api in Apis) services.AddScoped(api);
@@ -76,6 +84,11 @@ namespace Biwen.QuickApi
             return services;
         }
 
+        /// <summary>
+        /// PubSub
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         private static IServiceCollection AddEventPubSub(this IServiceCollection services)
         {
             //注册EventHanders
@@ -111,7 +124,7 @@ namespace Biwen.QuickApi
         /// <typeparam name="T"></typeparam>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddBiwenQuickApiGroupRouteBuilder<T>(this IServiceCollection services) where T : class, IQuickApiGroupRouteBuilder
+        public static IServiceCollection AddQuickApiGroupRouteBuilder<T>(this IServiceCollection services) where T : class, IQuickApiGroupRouteBuilder
         {
             services.AddSingleton<IQuickApiGroupRouteBuilder, T>();
             return services;

@@ -153,12 +153,14 @@ new SecurityOptions());
 #endregion
 
 
-builder.Services.AddHttpLogging(options =>
+builder.Services.AddIf(builder.Environment.IsDevelopment(), sp =>
 {
-    options.LoggingFields = HttpLoggingFields.All;
-    options.CombineLogs = true;
+    return sp.AddHttpLogging(options =>
+     {
+         options.LoggingFields = HttpLoggingFields.Request;
+         options.CombineLogs = true;
+     });
 });
-
 
 // Add services to the container.
 builder.Services.AddScoped<HelloService>();
@@ -173,10 +175,12 @@ builder.Services.AddBiwenQuickApis(o =>
 {
     o.RoutePrefix = "quick";
     o.EnableAntiForgeryTokens = true;
+    o.EnablePubSub = true;
+    o.EnableScheduling = true;
 });
 
 //如果需要自定义分组路由构建器
-builder.Services.AddBiwenQuickApiGroupRouteBuilder<DefaultGroupRouteBuilder>();
+builder.Services.AddQuickApiGroupRouteBuilder<DefaultGroupRouteBuilder>();
 //如果需要自定义异常返回格式
 //builder.Services.AddSingleton<IQuickApiExceptionResultBuilder, CustomExceptionResultBuilder>();
 //自定义异常处理
@@ -184,39 +188,34 @@ builder.Services.AddScoped<IQuickApiExceptionHandler, CustomExceptionHandler>();
 
 var app = builder.Build();
 
-
-if (!app.Environment.IsProduction())
+app.UseIfElse(app.Environment.IsDevelopment(), builder =>
 {
-    app.UseDeveloperExceptionPage();
+
+    //Http Logging
+    builder.UseHttpLogging();
+
+    builder.UseDeveloperExceptionPage();
 
     //swagger ui
-    app.UseQuickApiSwagger(uiConfig: cfg =>
+    builder.UseQuickApiSwagger(uiConfig: cfg =>
     {
         //cfg.CustomJavaScriptPath = "/miniprofiler-sc";
     });
 
-    app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
+    builder.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
+    return builder;
 
-}
-else
+}, builder =>
 {
-    app.UseWelcomePage("/");
-}
-
-
+    builder.UseWelcomePage("/");
+    return builder;
+});
 
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseOutputCache();
 app.UseResponseCaching();
-
-
-if (!app.Environment.IsProduction())
-{
-    //Http Logging
-    app.UseHttpLogging();
-}
 
 // 默认方式
 //app.MapBiwenQuickApis();
@@ -248,14 +247,17 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
 // ~/account/register    
 // ~/account/login 
 
-if (app.Environment.IsDevelopment())
+
+app.UseIfElse(app.Environment.IsDevelopment(), builder =>
 {
-    app.MapGroup("account").MapIdentityApi<IdentityUser>().WithOpenApi();//swagger
-}
-else
+    builder.MapGroup("account").MapIdentityApi<IdentityUser>().WithOpenApi();//swagger
+    return builder;
+}, builder =>
 {
-    app.MapGroup("account").MapIdentityApi<IdentityUser>();
-}
+    builder.MapGroup("account").MapIdentityApi<IdentityUser>();
+    return builder;
+});
+
 
 
 //发现ms的WithOpenApi的一处BUG,当Method为多个时会报错!
