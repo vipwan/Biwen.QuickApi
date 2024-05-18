@@ -190,7 +190,7 @@ namespace Biwen.QuickApi
     /// 没有请求参数的BaseQuickApi,有返回值
     /// </summary>
     /// <typeparam name="Rsp"></typeparam>
-    public abstract class BaseQuickApiWithoutRequest<Rsp> : BaseQuickApi<EmptyRequest, Rsp> where Rsp : class
+    public abstract class BaseQuickApiWithoutRequest<Rsp> : BaseQuickApi<EmptyRequest, Rsp>
     {
         public BaseQuickApiWithoutRequest()
         {
@@ -205,7 +205,7 @@ namespace Biwen.QuickApi
     /// <typeparam name="Req"></typeparam>
     /// <typeparam name="Rsp"></typeparam>
     [QuickApi(""), JustAsService]
-    public abstract class BaseQuickApiJustAsService<Req, Rsp> : BaseQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new() where Rsp : class
+    public abstract class BaseQuickApiJustAsService<Req, Rsp> : BaseQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new()
     {
 
     }
