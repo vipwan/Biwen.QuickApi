@@ -42,7 +42,7 @@ public class Todo2Api : BaseQuickApi<EmptyRequest,Todo[]>
 - write less, do more ; write anywhere, do anything  
 - 欢迎小伙伴们star&issue共同学习进步 [Biwen.QuickApi](https://github.com/vipwan/Biwen.QuickApi)
 
-## SourceGenerator (v1.6.0+停更)!
+## SourceGenerator (v1.6.0+不受支持)
 
 - 提供gen源代码生成器方案,以于显著提升性能(V1.0版本使用的Emit和dynamic会导致部分性能损失)
 - gen SourceGenerator已发布v1.1.2,[使用方式](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.Generator/readme.md)
@@ -58,7 +58,7 @@ public class Todo2Api : BaseQuickApi<EmptyRequest,Todo[]>
 - Microsoft.AspNetCore.App
 - [FluentValidation.AspNetCore](https://www.nuget.org/packages/FluentValidation.AspNetCore/11.3.0)
 - [NSwag.AspNetCore](https://www.nuget.org/packages/NSwag.AspNetCore)
-- [Microsoft.AspNetCore.OpenApi](https://www.nuget.org/packages/Microsoft.AspNetCore.OpenApi/8.0.0)
+- [Microsoft.AspNetCore.OpenApi](https://www.nuget.org/packages/Microsoft.AspNetCore.OpenApi/8.0.5)
 
 ## 使用方式
 
@@ -69,9 +69,15 @@ dotnet add package Biwen.QuickApi
 ```
 ### Step1 UseBiwenQuickApis
 
+#### BiwenQuickApiOptions配置项: 
+- `RoutePrefix`:前缀,默认:api,
+- `EnableAntiForgeryTokens`:是否启用防伪,默认:true,
+- `EnablePubSub`:是否启用发布订阅,默认:true,
+- `EnableScheduling`:是否启用调度,默认:true
+
 ```csharp
-builder.Services.AddBiwenQuickApis();
-app.UseBiwenQuickApis();
+services.AddBiwenQuickApis(Action<BiwenQuickApiOptions>? options);//add services
+app.UseBiwenQuickApis();//use middleware
 ```
 
 ### Step2 Define Request and Response
@@ -193,10 +199,7 @@ public class HelloApi : BaseQuickApi<HelloApiRequest, HelloApiResponse>
     public override HelloApiResponse Execute(HelloApiRequest request)
     {
         var hello = _service.Hello($"hello world {_httpContextAccessor.HttpContext!.Request.Path} !");
-        return new HelloApiResponse
-        {
-            Message = hello
-        };
+        return new HelloApiResponse{ Message = hello };
     }
 }
 
@@ -255,9 +258,9 @@ public class CustomApi : BaseQuickApi<CustomApiRequest>
 /// </summary>
 [QuickApi("fromfile", Verbs = Verb.POST)]
 [QuickApiSummary("上传文件测试", "上传文件测试")]
-public class FromFileApi : BaseQuickApi<FileUploadRequest, IResult>
+public class FromFileApi : BaseQuickApi<FileUploadRequest, Results<Ok<string>,BadRequest<string>>>
 {
-    public override async ValueTask<IResult> ExecuteAsync(FileUploadRequest request)
+    public override async ValueTask<Results<Ok<string>,BadRequest<string>> ExecuteAsync(FileUploadRequest request)
     {
         //测试上传一个文本文件并读取内容
         if (request.File != null)
@@ -265,10 +268,10 @@ public class FromFileApi : BaseQuickApi<FileUploadRequest, IResult>
             using (var sr = new StreamReader(request.File.OpenReadStream()))
             {
                 var content = await sr.ReadToEndAsync();
-                return Results.Ok(content);
+                return TypedResults.Ok(content);
             }
         }
-        return Results.BadRequest("no file");
+        return TypedResults.BadRequest("no file");
     }
 }
 
@@ -436,7 +439,6 @@ LaunchCount=1  WarmupCount=1
 |------------ |---------:|----------:|----------:|---------:|------:|--------:|-------:|----------:|------------:|
 | WebApiCtrl      | 385.5 μs | 357.93 μs | 236.75 μs | 231.0 μs |  1.00 |    0.00 | 2.5000 |   33.5 KB |        1.00 |
 | MinimalApi  | 221.2 μs |  13.02 μs |   6.81 μs | 220.9 μs |  0.68 |    0.34 | 2.0000 |  24.38 KB |        0.73 |
-| QuickApi/Gen | 224.7 μs |  16.05 μs |   8.39 μs | 225.8 μs |  0.69 |    0.34 | 2.0000 |  27.55 KB |        0.82 |
 | QuickApi    | 235.9 μs |  22.26 μs |  11.65 μs | 235.4 μs |  0.72 |    0.34 | 2.0000 |  27.59 KB |        0.82 |
 
 ### Q&A
