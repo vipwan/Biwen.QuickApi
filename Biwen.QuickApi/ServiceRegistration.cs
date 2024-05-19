@@ -69,13 +69,13 @@ namespace Biwen.QuickApi
             //注册EventPubSub
             services.AddIf(biwenQuickApiOptions.EnablePubSub, sp =>
             {
-                sp.AddEventPubSub(); return sp;
+                sp.AddEventPubSub();
             });
             //注册Schedule
             services.AddIf(biwenQuickApiOptions.EnableScheduling, sp =>
             {
                 if (!biwenQuickApiOptions.EnablePubSub) throw new QuickApiExcetion("必须启用发布订阅功能,才可以开启Scheduling功能!");
-                sp.AddScheduleTask(); return sp;
+                sp.AddScheduleTask();
             });
 
             //add quickapis

@@ -19,14 +19,13 @@ public static class WebApplicationBuilderExtensions
     public static WebApplication UseIf(
         this WebApplication application,
         bool condition,
-        Func<WebApplication, WebApplication> action)
+        Action<WebApplication> action)
     {
         ArgumentNullException.ThrowIfNull(application);
         ArgumentNullException.ThrowIfNull(action);
-
         if (condition)
         {
-            application = action(application);
+            action(application);
         }
         return application;
     }
@@ -47,8 +46,8 @@ public static class WebApplicationBuilderExtensions
     public static WebApplication UseIfElse(
         this WebApplication application,
         bool condition,
-        Func<WebApplication, WebApplication> ifAction,
-        Func<WebApplication, WebApplication> elseAction)
+        Action<WebApplication> ifAction,
+        Action<WebApplication> elseAction)
     {
         ArgumentNullException.ThrowIfNull(application);
         ArgumentNullException.ThrowIfNull(ifAction);
@@ -56,11 +55,11 @@ public static class WebApplicationBuilderExtensions
 
         if (condition)
         {
-            application = ifAction(application);
+            ifAction(application);
         }
         else
         {
-            application = elseAction(application);
+            elseAction(application);
         }
         return application;
     }

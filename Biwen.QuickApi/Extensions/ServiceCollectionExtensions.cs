@@ -21,16 +21,15 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddIf(
         this IServiceCollection services,
         bool condition,
-        Func<IServiceCollection, IServiceCollection> action)
+        Action<IServiceCollection> action)
     {
         ArgumentNullException.ThrowIfNull(services);
         ArgumentNullException.ThrowIfNull(action);
 
         if (condition)
         {
-            services = action(services);
+            action(services);
         }
-
         return services;
     }
 
@@ -48,8 +47,8 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddIfElse(
         this IServiceCollection services,
         bool condition,
-        Func<IServiceCollection, IServiceCollection> ifAction,
-        Func<IServiceCollection, IServiceCollection> elseAction)
+        Action<IServiceCollection> ifAction,
+        Action<IServiceCollection> elseAction)
     {
         ArgumentNullException.ThrowIfNull(services);
         ArgumentNullException.ThrowIfNull(ifAction);
@@ -57,13 +56,12 @@ public static class ServiceCollectionExtensions
 
         if (condition)
         {
-            services = ifAction(services);
+            ifAction(services);
         }
         else
         {
-            services = elseAction(services);
+            elseAction(services);
         }
-
         return services;
     }
 

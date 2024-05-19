@@ -155,7 +155,7 @@ new SecurityOptions());
 
 builder.Services.AddIf(builder.Environment.IsDevelopment(), sp =>
 {
-    return sp.AddHttpLogging(options =>
+    sp.AddHttpLogging(options =>
      {
          options.LoggingFields = HttpLoggingFields.Request;
          options.CombineLogs = true;
@@ -203,12 +203,10 @@ app.UseIfElse(app.Environment.IsDevelopment(), builder =>
     });
 
     builder.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
-    return builder;
 
 }, builder =>
 {
     builder.UseWelcomePage("/");
-    return builder;
 });
 
 app.UseAuthentication();
@@ -247,15 +245,12 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
 // ~/account/register    
 // ~/account/login 
 
-
 app.UseIfElse(app.Environment.IsDevelopment(), builder =>
 {
     builder.MapGroup("account").MapIdentityApi<IdentityUser>().WithOpenApi();//swagger
-    return builder;
 }, builder =>
 {
     builder.MapGroup("account").MapIdentityApi<IdentityUser>();
-    return builder;
 });
 
 
