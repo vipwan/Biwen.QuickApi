@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using NSwag;
+using System.Reflection;
 
 
 
@@ -243,6 +244,14 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
 
 });
 
+
+app.MapGet("/binder", (HttpContext context, BindRequest request) =>
+{
+    //测试默认绑定器
+    return Results.Content(request.Hello);
+});
+
+
 // Identity API {"email" : "vipwan@co.ltd","password" : "*******"}
 // ~/account/register    
 // ~/account/login 
@@ -273,4 +282,18 @@ app.Run();
 namespace Biwen.QuickApi.DemoWeb
 {
     public partial class Program { }
+
+
+    public partial class BindRequest : BaseRequest<BindRequest>, IReqBinder<BindRequest>
+    {
+        public string? Hello { get; set; }
+
+        public static async ValueTask<BindRequest?> BindAsync(HttpContext context, ParameterInfo parameter = null!)
+        {
+            //返回默认绑定
+            var req = await DefaultReqBinder<BindRequest>.BindAsync(context, parameter);
+            req!.Hello = "test binder";
+            return req;
+        }
+    }
 }
