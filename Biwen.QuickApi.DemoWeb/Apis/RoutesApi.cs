@@ -1,9 +1,13 @@
-﻿namespace Biwen.QuickApi.DemoWeb.Apis
+﻿using System.ComponentModel;
+
+namespace Biwen.QuickApi.DemoWeb.Apis
 {
     public class RouteData : BaseRequest<RouteData>
     {
+        [Description("hello的描述")]
         public string? Hello { get; set; }
 
+        [Description("world的描述")]
         public string? World { get; set; }
     }
 

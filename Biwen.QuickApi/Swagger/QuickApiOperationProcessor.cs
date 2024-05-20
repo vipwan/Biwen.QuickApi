@@ -406,9 +406,18 @@
                                             bool? isRequired,
                                             OpenApiParameterKind kind)
         {
+            var description = paramName;
+
+            //获取描述,如果存在的话
+            var descAttr = prop?.GetCustomAttribute<DescriptionAttribute>();
+            if (descAttr is not null)
+            {
+                description = descAttr.Description;
+            }
+
             var prm = ctx.DocumentGenerator.CreatePrimitiveParameter(
                 paramName,
-                paramName,
+                description,
                 (prop?.PropertyType ?? typeof(string)).ToContextualType());
             prm.Kind = kind;
             prm.IsRequired = isRequired ?? !IsNullable(prop!);
