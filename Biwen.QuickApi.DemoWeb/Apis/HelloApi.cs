@@ -139,7 +139,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     public class CustomApiRequestBinder : IReqBinder<HelloApiRequest>
     {
-        public async Task<HelloApiRequest> BindAsync(HttpContext context)
+        public static async Task<HelloApiRequest> BindAsync(HttpContext context)
         {
             var request = new HelloApiRequest();
 

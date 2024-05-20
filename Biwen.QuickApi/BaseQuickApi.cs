@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Metadata;
 using NSwag.Annotations;
-using System.Collections;
 
 namespace Biwen.QuickApi
 {
@@ -34,14 +33,22 @@ namespace Biwen.QuickApi
             await publisher.PublishAsync(@event, cancellationToken);
         }
 
-        /// <summary>
-        /// 默认的请求参数绑定器
-        /// </summary>
-        private IReqBinder<Req> _reqBinder = new DefaultReqBinder<Req>();
+        ///// <summary>
+        ///// 默认的请求参数绑定器
+        ///// </summary>
+        //private IReqBinder<Req> _reqBinder = new DefaultReqBinder<Req>();
 
-        public IReqBinder<Req> ReqBinder
+        //public IReqBinder<Req> ReqBinder
+        //{
+        //    get => _reqBinder;
+        //    private set => _reqBinder = value ?? throw new ArgumentNullException(nameof(value));
+        //}
+
+        private Type _reqBinder = typeof(DefaultReqBinder<Req>);
+
+        public Type ReqBinder
         {
-            get => _reqBinder;
+            get { return _reqBinder; }
             private set => _reqBinder = value ?? throw new ArgumentNullException(nameof(value));
         }
 
@@ -49,9 +56,9 @@ namespace Biwen.QuickApi
         /// 使用自定义的请求参数绑定器
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public void UseReqBinder<T>() where T : IReqBinder<Req>, new()
+        public void UseReqBinder<T>() where T : class, IReqBinder<Req>
         {
-            ReqBinder = new T();
+            ReqBinder = typeof(T);
         }
 
         /// <summary>
@@ -171,10 +178,10 @@ namespace Biwen.QuickApi
     /// </summary>
     public abstract class BaseQuickApi : BaseQuickApi<EmptyRequest, IResult>
     {
-        public BaseQuickApi()
-        {
-            UseReqBinder<EmptyReqBinder<EmptyRequest>>();
-        }
+        //public BaseQuickApi()
+        //{
+        //    UseReqBinder<EmptyReqBinder<EmptyRequest>>();
+        //}
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
@@ -192,10 +199,10 @@ namespace Biwen.QuickApi
     /// <typeparam name="Rsp"></typeparam>
     public abstract class BaseQuickApiWithoutRequest<Rsp> : BaseQuickApi<EmptyRequest, Rsp>
     {
-        public BaseQuickApiWithoutRequest()
-        {
-            UseReqBinder<EmptyReqBinder<EmptyRequest>>();
-        }
+        //public BaseQuickApiWithoutRequest()
+        //{
+        //    UseReqBinder<EmptyReqBinder<EmptyRequest>>();
+        //}
     }
 
 

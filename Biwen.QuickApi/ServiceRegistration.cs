@@ -156,7 +156,7 @@ namespace Biwen.QuickApi
         }
 
         static readonly Type InterfaceQuickApi = typeof(IQuickApi<,>);
-        static readonly Type InterfaceReqBinder = typeof(IReqBinder<>);
+        //static readonly Type InterfaceReqBinder = typeof(IReqBinder<>);
         static readonly Type InterfaceEventSubscriber = typeof(IEventSubscriber<>);
 
         static readonly object _lock = new();//锁
@@ -183,17 +183,16 @@ namespace Biwen.QuickApi
             }
         }
 
-        static IEnumerable<Type> _binders = null!;
-        static IEnumerable<Type> Binders
-        {
-            get
-            {
-                lock (_lock)
-                    return _binders ??= ASS.InAllRequiredAssemblies.Where(x =>
-                    !x.IsAbstract && x.IsPublic && x.IsClass && x.IsToGenericInterface(InterfaceReqBinder));
-            }
-        }
-
+        //static IEnumerable<Type> _binders = null!;
+        //static IEnumerable<Type> Binders
+        //{
+        //    get
+        //    {
+        //        lock (_lock)
+        //            return _binders ??= ASS.InAllRequiredAssemblies.Where(x =>
+        //            !x.IsAbstract && x.IsPublic && x.IsClass && x.IsToGenericInterface(InterfaceReqBinder));
+        //    }
+        //}
 
         static IEnumerable<Type> _eventSubscribers = null!;
 
@@ -418,7 +417,10 @@ namespace Biwen.QuickApi
             //执行请求
             try
             {
-                var req = await ((dynamic)api).ReqBinder.BindAsync(ctx.HttpContext!);
+                //使用接口静态成员重写代码:
+                MethodInfo methodInfo = (((dynamic)api).ReqBinder).GetMethod("BindAsync", BindingFlags.Static | BindingFlags.Public);
+                var req = await (dynamic)methodInfo.Invoke(null, [ctx.HttpContext])!;
+
                 //验证DTO
                 if (req.Validate() is ValidationResult { IsValid: false } vresult)
                 {

@@ -12,7 +12,7 @@ namespace Biwen.QuickApi
     /// 默认的内部绑定器
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class DefaultReqBinder<T> : IReqBinder<T> where T : class, new()
+    public class DefaultReqBinder<T> : IReqBinder<T> where T : BaseRequest<T>, new()
     {
         /// <summary>
         /// 可以重写此方法，实现自定义绑定,
@@ -20,8 +20,11 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
-        public virtual async Task<T> BindAsync(HttpContext context)
+        public static async Task<T> BindAsync(HttpContext context)
         {
+
+            IDictionary<string, object>? ReadFromJsonDic = null;
+
             //route > header > body(Post) = querystring(Get)
             var @default = new T();
             var type = typeof(T);
@@ -267,22 +270,6 @@ namespace Biwen.QuickApi
             //返回
             return @default ?? new();
         }
-
-        private IDictionary<string, object>? ReadFromJsonDic { get; set; }
-
-        /// <summary>
-        /// 定位属性
-        /// </summary>
-        private static readonly Func<string?, PropertyInfo?> GetProperty = (string? name) =>
-        {
-            if (string.IsNullOrEmpty(name))
-                return null;
-
-            var prop =
-                typeof(T).GetProperties().FirstOrDefault(x => x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
-            return prop;
-        };
-
     }
 
     /// <summary>
@@ -291,7 +278,7 @@ namespace Biwen.QuickApi
     /// <typeparam name="T"></typeparam>
     internal sealed class EmptyReqBinder<T> : IReqBinder<T> where T : class, new()
     {
-        public Task<T> BindAsync(HttpContext context)
+        public static Task<T> BindAsync(HttpContext context)
         {
             return Task.FromResult(new T());
         }

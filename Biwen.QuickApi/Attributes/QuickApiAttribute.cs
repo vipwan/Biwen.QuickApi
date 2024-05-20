@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.Attributes
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Biwen.QuickApi.Attributes
 {
     /// <summary>
     /// QuickApi特性
@@ -7,7 +9,7 @@
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
     public class QuickApiAttribute : Attribute
     {
-        public QuickApiAttribute(string route)
+        public QuickApiAttribute([StringSyntax("Route")] string route)
         {
             ArgumentNullException.ThrowIfNull(route);
             Route = route;
@@ -15,7 +17,7 @@
         /// <summary>
         /// 分组. 例如: hello,不可为Null
         /// </summary>
-        public string Group { get;set; } = string.Empty;
+        public string Group { get; set; } = string.Empty;
         /// <summary>
         /// 路由. 例如: hello/world/{name}
         /// </summary>

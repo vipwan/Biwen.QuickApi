@@ -1,11 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Dynamic;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Primitives;
-using System.Collections;
-using System.Text;
-using System.Text.Json;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 
 namespace Biwen.QuickApi.Abstractions
 {
@@ -17,6 +11,6 @@ namespace Biwen.QuickApi.Abstractions
     /// <typeparam name="T"></typeparam>
     public interface IReqBinder<T> where T : class, new()
     {
-        Task<T> BindAsync(HttpContext context);
+        static abstract Task<T> BindAsync(HttpContext context);
     }
 }
