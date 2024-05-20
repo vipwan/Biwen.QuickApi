@@ -419,7 +419,7 @@ namespace Biwen.QuickApi
             {
                 //使用接口静态成员重写代码:
                 MethodInfo methodInfo = (((dynamic)api).ReqBinder).GetMethod("BindAsync", BindingFlags.Static | BindingFlags.Public);
-                var req = await (dynamic)methodInfo.Invoke(null, [ctx.HttpContext])!;
+                var req = await (dynamic)methodInfo.Invoke(null, [ctx.HttpContext, null])!;
 
                 //验证DTO
                 if (req.Validate() is ValidationResult { IsValid: false } vresult)

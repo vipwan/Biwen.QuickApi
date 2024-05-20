@@ -20,7 +20,7 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
-        public static async Task<T> BindAsync(HttpContext context)
+        public static async Task<T> BindAsync(HttpContext context, ParameterInfo parameter = null!)
         {
 
             IDictionary<string, object>? ReadFromJsonDic = null;
@@ -278,7 +278,7 @@ namespace Biwen.QuickApi
     /// <typeparam name="T"></typeparam>
     internal sealed class EmptyReqBinder<T> : IReqBinder<T> where T : class, new()
     {
-        public static Task<T> BindAsync(HttpContext context)
+        public static Task<T> BindAsync(HttpContext context, ParameterInfo parameter = null!)
         {
             return Task.FromResult(new T());
         }

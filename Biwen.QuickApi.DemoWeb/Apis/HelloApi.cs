@@ -8,6 +8,7 @@ using Microsoft.OpenApi.Models;
 using NSwag.Annotations;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Reflection;
 using System.Text.Json.Serialization;
 
 
@@ -139,7 +140,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     public class CustomApiRequestBinder : IReqBinder<HelloApiRequest>
     {
-        public static async Task<HelloApiRequest> BindAsync(HttpContext context)
+        public static async Task<HelloApiRequest> BindAsync(HttpContext context, ParameterInfo parameter = null!)
         {
             var request = new HelloApiRequest();
 
