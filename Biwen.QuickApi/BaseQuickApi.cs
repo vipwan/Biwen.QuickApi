@@ -178,10 +178,10 @@ namespace Biwen.QuickApi
     /// </summary>
     public abstract class BaseQuickApi : BaseQuickApi<EmptyRequest, IResult>
     {
-        //public BaseQuickApi()
-        //{
-        //    UseReqBinder<EmptyReqBinder<EmptyRequest>>();
-        //}
+        public BaseQuickApi()
+        {
+            UseReqBinder<EmptyReqBinder<EmptyRequest>>();
+        }
 
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {
@@ -199,10 +199,10 @@ namespace Biwen.QuickApi
     /// <typeparam name="Rsp"></typeparam>
     public abstract class BaseQuickApiWithoutRequest<Rsp> : BaseQuickApi<EmptyRequest, Rsp>
     {
-        //public BaseQuickApiWithoutRequest()
-        //{
-        //    UseReqBinder<EmptyReqBinder<EmptyRequest>>();
-        //}
+        public BaseQuickApiWithoutRequest()
+        {
+            UseReqBinder<EmptyReqBinder<EmptyRequest>>();
+        }
     }
 
 

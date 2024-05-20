@@ -227,6 +227,7 @@ app.UseBiwenQuickApis();
 app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<string, string[]>>>>
     (JustAsService api) =>
 {
+
     //通过你的方式获取请求对象
     var req = new EmptyRequest();
     //验证请求对象
