@@ -140,7 +140,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     public class CustomApiRequestBinder : IReqBinder<HelloApiRequest>
     {
-        public static async Task<HelloApiRequest> BindAsync(HttpContext context, ParameterInfo parameter = null!)
+        public static ValueTask<HelloApiRequest?> BindAsync(HttpContext context, ParameterInfo parameter = null!)
         {
             var request = new HelloApiRequest();
 
@@ -166,8 +166,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             request.CurrentMember = new HelloApiRequest.Member("1234", "viwan@co.ltd");
             request.CurrentMemberFromHeader = new HelloApiRequest.Member("2346", "");
 
-            await Task.CompletedTask;
-            return request;
+            return ValueTask.FromResult(request);
         }
     }
 
