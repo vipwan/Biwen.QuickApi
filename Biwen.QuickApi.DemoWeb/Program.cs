@@ -177,6 +177,7 @@ builder.Services.AddBiwenQuickApis(o =>
     o.EnableAntiForgeryTokens = true;
     o.EnablePubSub = true;
     o.EnableScheduling = true;
+    o.UseQuickApiExceptionResultBuilder = true;
 });
 
 //如果需要自定义分组路由构建器

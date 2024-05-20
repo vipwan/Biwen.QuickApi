@@ -47,12 +47,18 @@ namespace Biwen.QuickApi
             //注册Antiforgery服务
             services.AddAntiforgery();
 
+            //options
+            services.AddOptions<BiwenQuickApiOptions>().Configure(o => { options?.Invoke(o); });
+
+            var biwenQuickApiOptions = services.BuildServiceProvider().GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
+
             //重写AuthorizationMiddlewareResultHandler
             services.AddSingleton<IAuthorizationMiddlewareResultHandler, QuickApiAuthorizationMiddlewareResultHandler>();
             //默认的异常返回构造器
-            services.AddSingleton<IQuickApiExceptionResultBuilder, DefaultExceptionResultBuilder>();
-            //options
-            services.AddOptions<BiwenQuickApiOptions>().Configure(o => { options?.Invoke(o); });
+            if (biwenQuickApiOptions.UseQuickApiExceptionResultBuilder)
+            {
+                services.AddSingleton<IQuickApiExceptionResultBuilder, DefaultExceptionResultBuilder>();
+            }
 
             /// <summary>
             /// 开启ProblemDetails
@@ -63,8 +69,6 @@ namespace Biwen.QuickApi
             /// </summary>
             //AddProblemDetails
             services.AddProblemDetails();
-
-            var biwenQuickApiOptions = services.BuildServiceProvider().GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
 
             //注册EventPubSub
             services.AddIf(biwenQuickApiOptions.EnablePubSub, sp =>
@@ -241,7 +245,13 @@ namespace Biwen.QuickApi
 #endif
             }
             //middleware:
-            (app as WebApplication)?.UseMiddleware<QuickApiMiddleware>();
+            (app as WebApplication)
+                //QuickApiMiddleware
+                ?.UseMiddleware<QuickApiMiddleware>()
+                //ExceptionHandler
+                .UseExceptionHandler(exceptionHandlerApp
+                => exceptionHandlerApp.Run(async context
+                => await Results.Problem().ExecuteAsync(context)));
 
             //分组:
             var groups = Apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
@@ -426,9 +436,15 @@ namespace Biwen.QuickApi
                 {
                     await handler.HandleAsync(ex);
                 }
+
                 //规范化异常返回
-                var exceptionResultBuilder = sp.GetRequiredService<IQuickApiExceptionResultBuilder>();
-                return await exceptionResultBuilder.ErrorResult(ex);
+                var exceptionResultBuilder = sp.GetService<IQuickApiExceptionResultBuilder>();
+                if (exceptionResultBuilder is not null)
+                {
+                    return await exceptionResultBuilder.ErrorResult(ex);
+                }
+                //默认使用ProblemDetails
+                throw;
             }
 
             /// <summary>

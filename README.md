@@ -73,7 +73,8 @@ dotnet add package Biwen.QuickApi
 - `RoutePrefix`:前缀,默认:api,
 - `EnableAntiForgeryTokens`:是否启用防伪,默认:true,
 - `EnablePubSub`:是否启用发布订阅,默认:true,
-- `EnableScheduling`:是否启用调度,默认:true
+- `EnableScheduling`:是否启用调度,默认:true,
+- `UseQuickApiExceptionResultBuilder`:是否启用QuickApi的规范化异常处理,默认:false,(true将返回详细的异常信息到前端.一般仅调试模式开启)
 
 ```csharp
 services.AddBiwenQuickApis(Action<BiwenQuickApiOptions>? options);//add services
