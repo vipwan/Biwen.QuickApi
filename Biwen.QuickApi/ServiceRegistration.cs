@@ -55,10 +55,10 @@ namespace Biwen.QuickApi
             //重写AuthorizationMiddlewareResultHandler
             services.AddSingleton<IAuthorizationMiddlewareResultHandler, QuickApiAuthorizationMiddlewareResultHandler>();
             //默认的异常返回构造器
-            if (biwenQuickApiOptions.UseQuickApiExceptionResultBuilder)
+            services.AddIf(biwenQuickApiOptions.UseQuickApiExceptionResultBuilder, sp =>
             {
                 services.AddSingleton<IQuickApiExceptionResultBuilder, DefaultExceptionResultBuilder>();
-            }
+            });
 
             /// <summary>
             /// 开启ProblemDetails
