@@ -2,6 +2,7 @@
 {
     using Biwen.QuickApi.Abstractions;
     using Biwen.QuickApi.Metadata;
+    using Biwen.QuickApi.Swagger.ValidationProcessor.Extensions;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
     using Namotion.Reflection;
@@ -15,12 +16,16 @@
     using System.Dynamic;
     using System.Text.Json.Serialization;
     using System.Text.RegularExpressions;
+    using YamlDotNet.Serialization;
 
     /// <summary>
     /// QuickApi Swagger OperationProcessor
     /// </summary>
     internal partial class QuickApiOperationProcessor : IOperationProcessor
     {
+
+        static readonly Regex _routeParamsRegex = RouteRegex();
+        static readonly Regex _routeConstraintsRegex = RouteStripRegex();
 
         public bool Process(OperationProcessorContext context)
         {
@@ -164,7 +169,7 @@
                         reqParams.Add(CreateParam(
                             context,
                             prop: prop,
-                            paramName: prop.Name,
+                            paramName: prop.Name.ToLowerCamelCase(),
                             isRequired: !IsNullable(prop),
                             kind: OpenApiParameterKind.Path));
                         continue;
@@ -248,18 +253,17 @@
                     //}
 
                     //默认,如果不是来自路由则从Query中绑定
-                    var isFromRoute =
-                        opPath.Contains($"{{{prop.Name}}}", StringComparison.OrdinalIgnoreCase) ||
-                        opPath.Contains($"{{{prop.Name}?}}", StringComparison.OrdinalIgnoreCase) ||
-                        opPath.Contains($"{{{prop.Name}?:}}", StringComparison.OrdinalIgnoreCase);
+                    var isFromRoute = _routeParamsRegex.Matches(opPath)
+                        .Any(x => x.Value.Equals(prop.Name, StringComparison.OrdinalIgnoreCase));
 
                     if (isFromRoute)
                     {
+
                         reqParams.Add(CreateParam(
                             context,
                             prop: prop,
-                            paramName: prop.Name,
-                            isRequired: !IsNullable(prop),
+                            paramName: prop.Name.ToLowerCamelCase(),//路由使用驼峰
+                            isRequired: true,//路由参数默认必填
                             kind: OpenApiParameterKind.Path));
                         continue;
                     }
@@ -291,8 +295,7 @@
             //    context.Document.Components.Schemas.Remove(s.Key);
             //}
 
-            foreach (var p in reqParams)
-                op.Parameters.Add(p);
+            reqParams.ForEach(param => op.Parameters.Add(param));
 
             //Get Example
             ExpandoObject getExample(object? o)
@@ -360,22 +363,15 @@
                     break;
                 }
             }
+
+            //剔除路由参数
+            //context.OperationDescription.Path =
+            //    _routeConstraintsRegex.Replace(context.OperationDescription.Path, "").Replace("/{}", "");
+
             return true;
         }
 
         #region Helper
-
-        [GeneratedRegex("(?<={)(?:.*?)*(?=})", RegexOptions.IgnoreCase | RegexOptions.Compiled)]
-        private static partial Regex RouteParamsRegex();
-
-        [GeneratedRegex("(?<={)([^?:}]+)[^}]*(?=})", RegexOptions.Compiled)]
-        private static partial Regex RouteConstraintsRegex();
-
-        /// <summary>
-        /// 路由Regex
-        /// </summary>
-        static readonly Regex routeParamsRegex = RouteParamsRegex();
-        static readonly Regex routeConstraintsRegex = RouteConstraintsRegex();
 
         static bool HasNoProperties(IDictionary<string, OpenApiMediaType> content)
              => !content.Any(c => GetAllProperties(c).Any());
@@ -392,17 +388,6 @@
 
         static readonly NullabilityInfoContext nullCtx = new();
         static bool IsNullable(PropertyInfo p) => nullCtx.Create(p).WriteState == NullabilityState.Nullable;
-
-        static string StripRouteConstraints(string relativePath)
-        {
-            var parts = relativePath.Split('/');
-
-            for (var i = 0; i < parts.Length; i++)
-                parts[i] = routeConstraintsRegex.Replace(parts[i], "$1");
-
-            return string.Join("/", parts);
-        }
-
 
         /// <summary>
         /// 创建参数
@@ -430,11 +415,27 @@
 
             //设置默认值,如果存在的话
             prm.Schema.Default = prop?.GetCustomAttribute<DefaultValueAttribute>()?.Value;
-
-
+            prm.Schema.IsNullableRaw = prm.IsRequired ? null : IsNullable(prop!);
             prm.IsNullableRaw = null; //if this is not null, nswag generates an incorrect swagger spec for some unknown reason.
+
             return prm;
         }
+
+
+        static string StripRouteConstraints(string relativePath)
+        {
+            var parts = relativePath.Split('/');
+
+            for (var i = 0; i < parts.Length; i++)
+                parts[i] = _routeConstraintsRegex.Replace(parts[i], "$1");
+
+            return string.Join("/", parts);
+        }
+
+        [GeneratedRegex("(?<={)(?:.*?)*(?=})", RegexOptions.Compiled)]
+        private static partial Regex RouteRegex();
+        [GeneratedRegex("(?<={)([^?:}]+)[^}]*(?=})", RegexOptions.Compiled)]
+        private static partial Regex RouteStripRegex();
 
         #endregion
     }
