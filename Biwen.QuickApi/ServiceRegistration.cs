@@ -295,7 +295,7 @@ namespace Biwen.QuickApi
                     var verbs = attr.Verbs.SplitEnum();//拆分枚举
 
                     //MapMethods
-                    var rhBuilder = g.MapMethods(attr.Route, verbs.Select(x => x.ToString()).ToArray(),
+                    var rhBuilder = g.MapMethods(attr.Route, verbs.Select(x => x.ToString()),
                        async Task<IResult> (IHttpContextAccessor ctx) =>
                         {
                             return await RequestHandler(ctx, apiType, attr);
