@@ -1,4 +1,5 @@
 ﻿using Biwen.QuickApi.DemoWeb.Apis;
+using Biwen.QuickApi.DemoWeb.Apis.Endpoints;
 using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
 using Biwen.QuickApi.DemoWeb.Schedules;
 using Biwen.QuickApi.Scheduling;
@@ -249,6 +250,13 @@ app.MapGet("/binder", (HttpContext context, BindRequest request) =>
 {
     //测试默认绑定器
     return Results.Content(request.Hello);
+});
+
+//提供IQuickEndpoint支持:
+app.MapGroup("endpoints", x =>
+{
+    //~/endpoints/hello/hello?key=world
+    x.MapMethods<HelloEndpoint>("hello/{hello}");
 });
 
 
