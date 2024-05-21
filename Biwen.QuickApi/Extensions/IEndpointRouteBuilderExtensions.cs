@@ -16,7 +16,7 @@ namespace Biwen.QuickApi
         public static RouteHandlerBuilder MapMethods<T>(this IEndpointRouteBuilder app, [StringSyntax("Route")] string pattern) where T : class, IQuickEndpoint
         {
             var verbs = T.Verbs.SplitEnum();
-            return app.MapMethods(pattern, verbs.Select(x => x.ToString()), T.Handler());
+            return app.MapMethods(pattern, verbs.Select(x => x.ToString()), T.Handler);
         }
 
         /// <summary>

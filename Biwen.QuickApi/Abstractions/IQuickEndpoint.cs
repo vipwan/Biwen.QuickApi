@@ -14,7 +14,7 @@
         /// MinimalApi执行的Handler
         /// </summary>
         /// <returns></returns>
-        public static abstract Delegate Handler();
+        public static abstract Delegate Handler { get; }
 
     }
 }
