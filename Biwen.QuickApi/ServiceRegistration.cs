@@ -401,11 +401,13 @@ namespace Biwen.QuickApi
                 //使用接口静态成员重写代码:
                 MethodInfo methodInfo = (((dynamic)api).ReqBinder).GetMethod("BindAsync", BindingFlags.Static | BindingFlags.Public);
                 var req = await (dynamic)methodInfo.Invoke(null, [ctx.HttpContext, null])!;
-
-                //验证DTO
-                if (req.Validate() is ValidationResult { IsValid: false } vresult)
+                if (req is not null)
                 {
-                    return TypedResults.ValidationProblem(vresult.ToDictionary());
+                    //验证DTO
+                    if (req.Validate() is ValidationResult { IsValid: false } vresult)
+                    {
+                        return TypedResults.ValidationProblem(vresult.ToDictionary());
+                    }
                 }
                 var result = await ((dynamic)api)!.ExecuteAsync(req!);
                 var rawResult = InnerResult(result);

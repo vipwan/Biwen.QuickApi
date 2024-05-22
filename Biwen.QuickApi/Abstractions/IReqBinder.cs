@@ -10,6 +10,6 @@ namespace Biwen.QuickApi.Abstractions
     /// <typeparam name="T"></typeparam>
     public interface IReqBinder<T> where T : class, new()
     {
-        static abstract ValueTask<T?> BindAsync(HttpContext context, ParameterInfo parameter = null!);
+        static abstract ValueTask<T> BindAsync(HttpContext context, ParameterInfo parameter = null!);
     }
 }

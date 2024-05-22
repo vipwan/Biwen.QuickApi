@@ -226,7 +226,7 @@ app.UseBiwenQuickApis();
 //app.MapGenQuickApis(app.Services);
 
 //测试其他地方调用QuickApi
-app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<string, string[]>>>>
+app.MapGet("/fromapi", async Task<Results<Ok<string>, ValidationProblem>>
     (JustAsService api) =>
 {
 
@@ -236,7 +236,7 @@ app.MapGet("/fromapi", async Task<Results<Ok<string>, BadRequest<IDictionary<str
     var result = req.Validate();
     if (!result.IsValid)
     {
-        return TypedResults.BadRequest(result.ToDictionary());
+        return TypedResults.ValidationProblem(result.ToDictionary());
     }
 
     //执行请求
@@ -296,7 +296,7 @@ namespace Biwen.QuickApi.DemoWeb
     {
         public string? Hello { get; set; }
 
-        public static async ValueTask<BindRequest?> BindAsync(HttpContext context, ParameterInfo parameter = null!)
+        public static async ValueTask<BindRequest> BindAsync(HttpContext context, ParameterInfo parameter = null!)
         {
             //返回默认绑定
             var req = await DefaultReqBinder<BindRequest>.BindAsync(context, parameter);
