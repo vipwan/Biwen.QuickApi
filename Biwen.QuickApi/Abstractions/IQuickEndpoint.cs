@@ -9,7 +9,7 @@
         /// 请求方式 支持多个,如: Verb.GET | Verb.POST,默认:Verb.GET
         /// </summary>
         /// <returns></returns>
-        public static virtual Verb Verbs { get; } = Verb.GET;
+        public static abstract Verb Verbs { get; }
         /// <summary>
         /// MinimalApi执行的Handler
         /// </summary>

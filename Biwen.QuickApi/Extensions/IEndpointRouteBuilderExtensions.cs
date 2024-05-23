@@ -13,8 +13,9 @@ namespace Biwen.QuickApi
         /// <typeparam name="T"></typeparam>
         /// <param name="app"></param>
         /// <param name="pattern"></param>
+        /// <param name="excludeFromDescription">是否从文档中排除</param>
         /// <returns></returns>
-        public static RouteHandlerBuilder MapMethods<T>(this IEndpointRouteBuilder app, [StringSyntax("Route")] string pattern) where T : class, IQuickEndpoint
+        public static RouteHandlerBuilder MapMethods<T>(this IEndpointRouteBuilder app, [StringSyntax("Route")] string pattern, bool excludeFromDescription = false) where T : class, IQuickEndpoint
         {
             var verbs = T.Verbs.SplitEnum();
             var builder = app.MapMethods(pattern, verbs.Select(x => x.ToString()), T.Handler);
@@ -24,7 +25,11 @@ namespace Biwen.QuickApi
             builder.WithMetadata(attrs);
             //添加验证器Filter:
             builder.AddEndpointFilter<ValidateRequestFilter>();
-
+            //添加OpenApi:
+            if (excludeFromDescription)
+            {
+                builder.ExcludeFromDescription();
+            }
             return builder;
         }
 
