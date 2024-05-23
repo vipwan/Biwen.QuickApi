@@ -6,10 +6,10 @@
     public interface IQuickEndpoint
     {
         /// <summary>
-        /// 请求方式 支持多个,如: Verb.GET | Verb.POST
+        /// 请求方式 支持多个,如: Verb.GET | Verb.POST,默认:Verb.GET
         /// </summary>
         /// <returns></returns>
-        public static abstract Verb Verbs { get; }
+        public static virtual Verb Verbs { get; } = Verb.GET;
         /// <summary>
         /// MinimalApi执行的Handler
         /// </summary>

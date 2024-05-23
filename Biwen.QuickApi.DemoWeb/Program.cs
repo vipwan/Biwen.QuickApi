@@ -60,6 +60,10 @@ builder.Services.AddIdentityApiEndpoints<IdentityUser>(o =>
 
 #region swagger 文档
 
+//builder.Services.AddOpenApiDocument(x =>
+//{
+//    //x.ApiGroupNames = [];
+//});
 
 //swagger
 builder.Services.AddQuickApiDocument(options =>

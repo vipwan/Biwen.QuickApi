@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
 {
     /// <summary>
     /// 测试IQuickEndpoint
     /// </summary>
-    [Authorize]
-    [Produces<string>]
+    //[Authorize]
+    [ProducesResponseType<ProblemDetails>(400)]
+    [ProducesResponseType<string>(200)]
     public class HelloEndpoint : IQuickEndpoint
     {
         /// <summary>
@@ -17,11 +19,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
             [FromRoute]
             public string? Hello { get; set; }
 
+            [Length(5, 12)]
             [FromQuery]
             public string? Key { get; set; }
 
         }
-
 
         public static Delegate Handler => ([AsParameters] HelloRequest request) =>
         {
@@ -29,6 +31,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
             return Results.Content($"{request.Hello}. {request.Key}");
         };
 
-        public static Verb Verbs => Verb.GET;
+        public static Verb Verbs => Verb.GET | Verb.POST;
     }
+
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using System.Diagnostics.CodeAnalysis;
 
@@ -21,7 +22,49 @@ namespace Biwen.QuickApi
             var attrs = typeof(T).GetCustomAttributes(true);
             //将所有的Attribute添加到metadatas中
             builder.WithMetadata(attrs);
+            //添加验证器Filter:
+            builder.AddEndpointFilter<ValidateRequestFilter>();
+
             return builder;
+        }
+
+        //验证Request的Endpoint Filter
+        private class ValidateRequestFilter : IEndpointFilter
+        {
+            public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
+            {
+                var httpContext = context.HttpContext;
+                if (httpContext != null)
+                {
+                    //验证Request:
+                    var args = context.Arguments;
+                    foreach (var arg in args)
+                    {
+                        if (arg is null) continue;
+                        var argType = arg?.GetType();
+                        if (argType is null) continue;
+                        var methodName = nameof(BaseRequest<EmptyRequest>.Validate);
+                        //使用反射验证参数:
+                        if (argType.GetMethod(methodName) is not null)
+                        {
+                            try
+                            {
+                                //验证DTO
+                                if (((dynamic)arg!).Validate() is ValidationResult { IsValid: false } vresult)
+                                {
+                                    return TypedResults.ValidationProblem(vresult.ToDictionary());
+                                }
+                            }
+                            catch
+                            {
+                                //特殊情况,不处理
+                                continue;
+                            }
+                        }
+                    }
+                }
+                return await next(context);
+            }
         }
 
         /// <summary>
