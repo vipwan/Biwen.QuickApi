@@ -334,19 +334,6 @@ namespace Biwen.QuickApi
                     var allowanonymous = apiType.GetCustomAttribute<AllowAnonymousAttribute>();
                     if (allowanonymous != null) rhBuilder.WithMetadata(allowanonymous);
 
-                    //return rhBuilder.RequireAuthorization(policyNames.Select(n => new AuthorizeAttribute(n)).ToArray());
-
-                    //OpenApi 生成
-                    //var method = apiType.GetMethod("ExecuteAsync")!;
-                    //var parameter = method.GetParameters()[0]!;
-                    //var parameterType = parameter.ParameterType!;
-
-                    //var parameterType = ((dynamic)currentApi).ReqType as Type;
-                    //if (!verbs.Contains(Verb.GET) && parameterType != typeof(EmptyRequest))
-                    //{
-                    //    rhBuilder!.Accepts(parameterType!, "application/json");
-                    //}
-
                     //401
                     if (!string.IsNullOrEmpty(attr.Policy))
                     {
@@ -394,12 +381,12 @@ namespace Biwen.QuickApi
             //if (!checkResult.Flag) return checkResult.Result!;
             var sp = ctx.HttpContext!.RequestServices;
             var api = sp.GetRequiredService(apiType);
-            //var quickApiOptions = sp.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
             //执行请求
             try
             {
                 //使用接口静态成员重写代码:
-                MethodInfo methodInfo = (((dynamic)api).ReqBinder).GetMethod("BindAsync", BindingFlags.Static | BindingFlags.Public);
+                var methodName = nameof(IReqBinder<EmptyRequest>.BindAsync);
+                MethodInfo methodInfo = (((dynamic)api).ReqBinder).GetMethod(methodName, BindingFlags.Static | BindingFlags.Public);
                 var req = await (dynamic)methodInfo.Invoke(null, [ctx.HttpContext, null])!;
                 if (req is not null)
                 {
