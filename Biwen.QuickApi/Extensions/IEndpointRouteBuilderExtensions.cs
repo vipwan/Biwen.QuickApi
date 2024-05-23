@@ -16,7 +16,12 @@ namespace Biwen.QuickApi
         public static RouteHandlerBuilder MapMethods<T>(this IEndpointRouteBuilder app, [StringSyntax("Route")] string pattern) where T : class, IQuickEndpoint
         {
             var verbs = T.Verbs.SplitEnum();
-            return app.MapMethods(pattern, verbs.Select(x => x.ToString()), T.Handler);
+            var builder = app.MapMethods(pattern, verbs.Select(x => x.ToString()), T.Handler);
+            //获取T的所有Attribute:
+            var attrs = typeof(T).GetCustomAttributes(true);
+            //将所有的Attribute添加到metadatas中
+            builder.WithMetadata(attrs);
+            return builder;
         }
 
         /// <summary>
