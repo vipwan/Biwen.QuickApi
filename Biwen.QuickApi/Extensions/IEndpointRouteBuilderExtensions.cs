@@ -47,7 +47,7 @@ namespace Biwen.QuickApi
                     {
                         if (arg is null) continue;
                         var argType = arg?.GetType();
-                        if (argType is null) continue;
+                        if (argType is null || !argType.IsClass) continue;
                         var methodName = nameof(BaseRequest<EmptyRequest>.Validate);
                         //使用反射验证参数:
                         if (argType.GetMethod(methodName) is not null)
