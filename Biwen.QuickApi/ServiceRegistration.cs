@@ -14,6 +14,9 @@ namespace Biwen.QuickApi
     using Biwen.QuickApi.Scheduling;
 #if NET8_0_OR_GREATER
     using Microsoft.AspNetCore.Antiforgery;
+    using Microsoft.Extensions.WebEncoders;
+    using System.Text.Encodings.Web;
+    using System.Text.Unicode;
 #endif
 
     public static class ServiceRegistration
@@ -33,6 +36,12 @@ namespace Biwen.QuickApi
             this IServiceCollection services,
             Action<BiwenQuickApiOptions>? options = null)
         {
+            //解决utf-8编码问题:
+            services.Configure<WebEncoderOptions>(options =>
+            {
+                options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.All);
+            });
+
             //JSON Options
             services.ConfigureHttpJsonOptions(x => { });
 
@@ -350,12 +359,16 @@ namespace Biwen.QuickApi
                         {
                             rhBuilder?.WithDescription(openApiMetadata.Description);
                         }
-                        if (openApiMetadata.IsDeprecated)
+                        //兼容性问题,Verbs数量>1将不会添加OperationId等信息
+                        if (verbs.Count == 1)
                         {
-                            //todo:
+                            rhBuilder?.WithOpenApi(operation => new(operation)
+                            {
+                                Deprecated = true,
+                                OperationId = openApiMetadata.OperationId,
+                            });
                         }
                     }
-
 
                     //401
                     if (!string.IsNullOrEmpty(attr.Policy))

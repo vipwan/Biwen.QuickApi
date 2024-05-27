@@ -34,15 +34,26 @@ namespace Biwen.QuickApi
                 }
                 if (!string.IsNullOrEmpty(openApiMetadata.Summary))
                 {
+                    //Summary 转 utf-8
+                    System.Text.Encoding.UTF8.GetBytes(openApiMetadata.Summary);
+
+
+
                     builder.WithSummary(openApiMetadata.Summary);
                 }
                 if (!string.IsNullOrEmpty(openApiMetadata.Description))
                 {
                     builder.WithDescription(openApiMetadata.Description);
                 }
-                if (openApiMetadata.IsDeprecated)
+
+                //兼容性问题,Verbs数量>1将不会添加OperationId等信息
+                if (verbs.Count == 1)
                 {
-                    //todo:
+                    builder.WithOpenApi(operation => new(operation)
+                    {
+                        Deprecated = true,
+                        OperationId = openApiMetadata.OperationId,
+                    });
                 }
             }
 

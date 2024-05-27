@@ -9,7 +9,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
     //[Authorize]
     [ProducesResponseType<ProblemDetails>(400)]
     [ProducesResponseType<string>(200)]
-    [OpenApiMetadata("测试IQuickEndpoint", "测试IQuickEndpoint", Tags = ["Endpoints"])]
+    [OpenApiMetadata("测试IQuickEndpoint", "测试IQuickEndpoint", Tags = ["Endpoints"], IsDeprecated = true, OperationId = "TestHelloEndpoint")]
     public class HelloEndpoint : IQuickEndpoint
     {
         /// <summary>
@@ -32,7 +32,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
             return Results.Content($"{request.Hello}. {request.Key}");
         };
 
-        public static Verb Verbs => Verb.GET | Verb.POST;
+        public static Verb Verbs => Verb.POST;
     }
 
 }

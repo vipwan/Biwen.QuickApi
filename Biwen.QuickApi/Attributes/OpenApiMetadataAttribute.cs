@@ -17,10 +17,10 @@
         /// </summary>
         public string? Description { get; set; } = description;
 
-        ///// <summary>
-        ///// OperationId
-        ///// </summary>
-        //public string? OperationId { get; set; }
+        /// <summary>
+        /// OperationId
+        /// </summary>
+        public string? OperationId { get; set; }
 
         /// <summary>
         /// 标记为是否已过时.
