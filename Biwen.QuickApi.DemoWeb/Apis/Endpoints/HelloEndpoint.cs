@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
 {
@@ -17,9 +18,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
         /// </summary>
         public class HelloRequest : BaseRequest<HelloRequest>//, IReqBinder<HelloRequest>
         {
+            [Description("Hello的描述")]
             [FromRoute]
             public string? Hello { get; set; }
 
+            [Description("Key的描述")]
             [Length(5, 12)]
             [FromQuery]
             public string? Key { get; set; }

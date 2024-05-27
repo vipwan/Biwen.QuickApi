@@ -143,6 +143,7 @@ app.MapGroup("endpoints", x =>
 {
     //~/endpoints/hello/hello?key=world
     x.MapMethods<HelloEndpoint>("hello/{hello}");
+    x.MapMethods<PostDataEndpoint>("hello/postdata");
 });
 
 

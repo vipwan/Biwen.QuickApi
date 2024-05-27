@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.OpenApi.Models;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Biwen.QuickApi
@@ -34,11 +35,6 @@ namespace Biwen.QuickApi
                 }
                 if (!string.IsNullOrEmpty(openApiMetadata.Summary))
                 {
-                    //Summary 转 utf-8
-                    System.Text.Encoding.UTF8.GetBytes(openApiMetadata.Summary);
-
-
-
                     builder.WithSummary(openApiMetadata.Summary);
                 }
                 if (!string.IsNullOrEmpty(openApiMetadata.Description))
@@ -51,8 +47,10 @@ namespace Biwen.QuickApi
                 {
                     builder.WithOpenApi(operation => new(operation)
                     {
-                        Deprecated = true,
+                        Deprecated = openApiMetadata.IsDeprecated,
                         OperationId = openApiMetadata.OperationId,
+                        //参数的备注和example等:
+                        //Parameters = GetParameters(T.Handler)
                     });
                 }
             }
@@ -105,6 +103,29 @@ namespace Biwen.QuickApi
                 return await next(context);
             }
         }
+
+        //private static List<OpenApiParameter> GetParameters(Delegate @delegate)
+        //{
+        //    var parameters = @delegate.Method.GetParameters();
+
+        //    if (parameters.Length != 1)
+        //    {
+        //        return [];
+        //    }
+        //    var param = parameters[0];
+        //    var result = new List<OpenApiParameter>();
+        //    var properties = param.ParameterType.GetProperties();
+        //    foreach (var property in properties)
+        //    {
+        //        result.Add(new OpenApiParameter
+        //        {
+        //            Name = property.Name,
+        //            Description = property.GetCustomAttribute<DescriptionAttribute>()?.Description,
+        //        });
+        //    }
+        //    return result;
+        //}
+
 
         /// <summary>
         /// MapGroup

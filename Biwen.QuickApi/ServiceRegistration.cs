@@ -15,6 +15,7 @@ namespace Biwen.QuickApi
 #if NET8_0_OR_GREATER
     using Microsoft.AspNetCore.Antiforgery;
     using Microsoft.Extensions.WebEncoders;
+    using Microsoft.OpenApi.Models;
     using System.Text.Encodings.Web;
     using System.Text.Unicode;
 #endif
@@ -285,10 +286,12 @@ namespace Biwen.QuickApi
 
                     //MapMethods
                     var rhBuilder = g.MapMethods(attr.Route, verbs.Select(x => x.ToString()),
-                       async Task<IResult> (IHttpContextAccessor ctx) =>
+                       async (IHttpContextAccessor ctx) =>
                         {
                             return await RequestHandler(ctx, apiType, attr);
                         });
+
+                    var reqType = apiType.GetMethod(nameof(BaseQuickApi.ExecuteAsync))!.GetParameters()[0].ParameterType;
 
                     //HandlerBuilder
                     using var scope = app.ServiceProvider.CreateAsyncScope();
@@ -319,33 +322,15 @@ namespace Biwen.QuickApi
                         rhBuilder.WithMetadata(new RequireAntiforgeryTokenAttribute(true));
                     }
 #endif
-                    //outputcache
-                    var outputCacheAttribute = apiType.GetCustomAttribute<OutputCacheAttribute>();
-                    if (outputCacheAttribute != null)
-                    {
-                        rhBuilder.WithMetadata(outputCacheAttribute);
-                    }
 
-                    //endpointgroup
-                    var endpointgroupAttribute = apiType.GetCustomAttribute<EndpointGroupNameAttribute>();
-                    if (endpointgroupAttribute != null)
-                    {
-                        rhBuilder.WithMetadata(endpointgroupAttribute);
-                    }
-                    //authorizeattribute
-                    var authorizeAttributes = apiType.GetCustomAttributes<AuthorizeAttribute>();
-                    if (authorizeAttributes.Any()) rhBuilder.WithMetadata(new AuthorizeAttribute());
-                    foreach (var authAttr in authorizeAttributes)
-                    {
-                        rhBuilder.WithMetadata(authAttr);
-                    }
-                    //allowanonymous
-                    var allowanonymous = apiType.GetCustomAttribute<AllowAnonymousAttribute>();
-                    if (allowanonymous != null) rhBuilder.WithMetadata(allowanonymous);
+                    //获取T的所有Attribute:
+                    var attrs = apiType.GetCustomAttributes(true);
+                    //将所有的Attribute添加到metadatas中
+                    rhBuilder?.WithMetadata(attrs);
 
                     //OpenApiMetadataAttribute
                     var openApiMetadata = apiType.GetCustomAttribute<OpenApiMetadataAttribute>();
-                    if (openApiMetadata != null)
+                    if (openApiMetadata is { })
                     {
                         if (openApiMetadata.Tags.Length > 0)
                         {
@@ -364,8 +349,38 @@ namespace Biwen.QuickApi
                         {
                             rhBuilder?.WithOpenApi(operation => new(operation)
                             {
-                                Deprecated = true,
+                                Deprecated = openApiMetadata.IsDeprecated,
                                 OperationId = openApiMetadata.OperationId,
+                                //参数的备注和example等:
+                                //Parameters = GetParameters(reqType),
+
+                                //RequestBody = new OpenApiRequestBody
+                                //{
+                                //    Required = true,
+                                //    Content =
+                                //    {
+                                //        {
+                                //            "application/json",
+                                //            new OpenApiMediaType
+                                //            {
+                                //               Schema=new OpenApiSchema
+                                //               {
+                                //                   Type="object",
+                                //                   Properties=GetParameters(reqType).ToDictionary(x=>x.Name,x=>new OpenApiSchema
+                                //                   {
+                                //                       Type=x.Name switch
+                                //                       {
+                                //                           "Hello"=>"string",
+                                //                           "World"=>"string",
+                                //                           _=>"string"
+                                //                       }
+                                //                   })
+                                //               }
+                                //        }
+                                //    }
+
+                                //}
+                                //}
                             });
                         }
                     }
@@ -381,6 +396,35 @@ namespace Biwen.QuickApi
 
             return routeGroups.ToArray();
         }
+
+        /// <summary>
+        /// 返回请求类型的OpenApiParameter
+        /// </summary>
+        /// <param name="reqType"></param>
+        /// <returns></returns>
+        private static List<OpenApiParameter> GetParameters(Type reqType)
+        {
+            var result = new List<OpenApiParameter>();
+            var properties = reqType.GetProperties();
+            if (properties.Length == 0) return [];
+            //var isFromBody = apiType.GetCustomAttribute<FromBodyAttribute>() != null;
+            foreach (var property in properties)
+            {
+                result.Add(new OpenApiParameter
+                {
+                    Name = property.Name,
+                    Description = property.GetCustomAttribute<DescriptionAttribute>()?.Description,
+                    Schema = new OpenApiSchema
+                    {
+                        Type = property.PropertyType.ToString(),
+                        Title = property.Name,
+                        Deprecated = property.GetCustomAttribute<ObsoleteAttribute>() != null,
+                    }
+                });
+            }
+            return result;
+        }
+
 
         /// <summary>
         /// IApplicationBuilder.UseBiwenQuickApis();

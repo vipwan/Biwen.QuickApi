@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
 {
@@ -75,11 +76,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     }
 
     [QuickApi("autogen", Verbs = Verb.POST)]
-    [OpenApiMetadata("自动生成的Request", "自动生成的接口")]
+    [OpenApiMetadata("自动生成的Request", "自动生成的接口", Tags = ["QuickApis"])]
     [EndpointGroupName("group1")]
-    public class AutoGenApi : BaseQuickApi<AutoGenRequest, IResult>
+    public class AutoGenApi : BaseQuickApi<AutoGenRequest, AutoGenRequest>
     {
-        public override async ValueTask<IResult> ExecuteAsync(AutoGenRequest request)
+        public override async ValueTask<AutoGenRequest> ExecuteAsync(AutoGenRequest request)
         {
             await Task.CompletedTask;
 
@@ -91,7 +92,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
                 Phone = "13888888888"
             };
 
-            return Results.Json(request);
+            return request;
         }
     }
 }
