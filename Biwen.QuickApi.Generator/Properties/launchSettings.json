@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "SourceGenerator": {
-      "commandName": "DebugRoslynComponent",
-      "targetProject": "..\\Biwen.QuickApi.SourceGenerator.TestConsole\\Biwen.QuickApi.SourceGenerator.TestConsole.csproj"
-    }
-  }
-}
