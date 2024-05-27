@@ -23,6 +23,29 @@ namespace Biwen.QuickApi
             var attrs = typeof(T).GetCustomAttributes(true);
             //将所有的Attribute添加到metadatas中
             builder.WithMetadata(attrs);
+
+            //OpenApiMetadataAttribute
+            var openApiMetadata = attrs.OfType<OpenApiMetadataAttribute>().FirstOrDefault();
+            if (openApiMetadata is not null)
+            {
+                if (openApiMetadata.Tags.Length > 0)
+                {
+                    builder.WithTags(openApiMetadata.Tags);
+                }
+                if (!string.IsNullOrEmpty(openApiMetadata.Summary))
+                {
+                    builder.WithSummary(openApiMetadata.Summary);
+                }
+                if (!string.IsNullOrEmpty(openApiMetadata.Description))
+                {
+                    builder.WithDescription(openApiMetadata.Description);
+                }
+                if (openApiMetadata.IsDeprecated)
+                {
+                    //todo:
+                }
+            }
+
             //添加验证器Filter:
             builder.AddEndpointFilter<ValidateRequestFilter>();
             //添加OpenApi:

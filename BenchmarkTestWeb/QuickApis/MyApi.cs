@@ -5,7 +5,7 @@ namespace BenchmarkTestWeb.QuickApis
 {
 
     [QuickApi("my-quickapi", Verbs = Verb.POST)]
-    [QuickApiSummary("quickapi", "quickapi")]
+    [OpenApiMetadata("quickapi", "quickapi")]
     //[OpenApiTags("API")]
     //[Tags("API")]
     public class MyApi : BaseQuickApi<MyRequest, IResult>

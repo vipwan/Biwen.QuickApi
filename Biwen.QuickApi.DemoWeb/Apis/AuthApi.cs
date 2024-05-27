@@ -10,7 +10,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     ///  模拟直接登录,并且给予admin的Policy
     /// </summary>
     [QuickApi("logined", Group = "admin")]
-    [QuickApiSummary("模拟直接登录,并且给予admin的Policy", description: "模拟直接登录,并且给予admin的Policy")]
+    [OpenApiMetadata("模拟直接登录", description: "模拟直接登录,并且给予admin的Policy")]
     public class Login : BaseQuickApi
     {
 
@@ -76,7 +76,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// 退出登录
     /// </summary>
     [QuickApi("loginout", Group = "admin")]
-    [QuickApiSummary("退出登录", "退出登录")]
+    [OpenApiMetadata("退出登录", "退出登录")]
     public class LoginOut : BaseQuickApiWithoutRequest<string>
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -112,7 +112,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// 基本的权限测试
     /// </summary>
     [QuickApi("index", Group = "admin", Verbs = Verb.GET, Policy = "admin")]
-    [QuickApiSummary("需要登录,NeedAuthApi", "NeedAuthApi")]
+    [OpenApiMetadata("需要登录", "需要登录,NeedAuthApi")]
     public class NeedAuthApi : BaseQuickApi
     {
         public override ValueTask<IResult> ExecuteAsync(EmptyRequest request)
@@ -135,7 +135,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// 
     /// </summary>
     [QuickApi("edit", Group = "admin", Verbs = Verb.GET)]
-    [QuickApiSummary("需要登录,EditDocumentApi", description: "需要登录,EditDocumentApi")]
+    [OpenApiMetadata("需要登录", description: "需要登录,EditDocumentApi")]
     public class EditDocumentApi : BaseAdminApi<EmptyRequest, IResult>
     {
         public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
@@ -149,7 +149,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [Authorize]
     [Authorize(policy: "admin")]
     [QuickApi("an-auth", Group = "admin")]
-    [QuickApiSummary("使用特性标记需要登录", "使用特性标记需要登录")]
+    [OpenApiMetadata("使用特性标记需要登录", "使用特性标记需要登录")]
     public class AuthorizationTestApi : BaseQuickApi
     {
         public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
@@ -168,7 +168,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     [AllowAnonymous]
     [QuickApi("an-anonymous")]
-    [QuickApiSummary("description: 使用特性标记可以匿名", "使用特性标记可以匿名")]
+    [OpenApiMetadata("使用特性标记可以匿名", "使用特性标记可以匿名")]
     public class AllowAnonymousTestApi : BaseQuickApi
     {
         public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)

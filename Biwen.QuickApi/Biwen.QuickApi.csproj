@@ -6,7 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
 		<PackageVersion>1.6.1</PackageVersion>
-		<TargetFrameworks>net8.0</TargetFrameworks>
+		<TargetFrameworks>net9.0</TargetFrameworks>
 		<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>
 		<Authors>万雅虎</Authors>
 		<RepositoryUrl>https://github.com/vipwan/Biwen.QuickApi</RepositoryUrl>
@@ -41,9 +41,8 @@
 		<PackageReference Include="Biwen.AutoClassGen" Version="1.3.2.3" />
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.3.2.3" />
 		<PackageReference Include="NCrontab" Version="3.3.3" />
-		<PackageReference Include="NSwag.AspNetCore" Version="14.0.7" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-preview.4.24267.6" />
 	</ItemGroup>
 
 </Project>

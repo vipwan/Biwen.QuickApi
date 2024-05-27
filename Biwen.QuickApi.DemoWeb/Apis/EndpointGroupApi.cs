@@ -4,7 +4,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 {
 
     [QuickApi("endpointgroup")]
-    [QuickApiSummary("分组测试", "分组测试")]
+    [OpenApiMetadata("分组测试", "分组测试")]
     [EndpointGroupName("group1")]
     public class EndpointGroupApi : BaseQuickApi
     {

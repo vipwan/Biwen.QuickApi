@@ -2,8 +2,8 @@
 using Biwen.QuickApi.DemoWeb.Apis.Endpoints;
 using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
 using Biwen.QuickApi.DemoWeb.Schedules;
+using Biwen.QuickApi.OpenApi;
 using Biwen.QuickApi.Scheduling;
-using Biwen.QuickApi.Swagger;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.HttpLogging;
@@ -13,12 +13,21 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using NSwag;
 using System.Reflection;
 
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddOpenApi(options =>
+{
+    options.ShouldInclude = (desc) =>
+    {
+        return true;
+    };
+});
+
 
 builder.Services.AddAuthentication(o =>
 {
@@ -56,108 +65,6 @@ builder.Services.AddIdentityApiEndpoints<IdentityUser>(o =>
     o.Password.RequireUppercase = false;
 
 }).AddEntityFrameworkStores<IdentityDbContext>();
-
-
-#region swagger 文档
-
-//builder.Services.AddOpenApiDocument(x =>
-//{
-//    //x.ApiGroupNames = [];
-//});
-
-//swagger
-builder.Services.AddQuickApiDocument(options =>
-{
-    options.UseControllerSummaryAsTagDescription = true;
-    options.DocumentName = "Quick API ALL QuickApi";
-
-    //options.ApiGroupNames = new[] { };//未指定展示全部Api
-
-    options.PostProcess = document =>
-    {
-        document.Info = new OpenApiInfo
-        {
-            Version = "Quick API ALL QuickApi",
-            Title = "Quick API testcase",
-            Description = "Biwen.QuickApi 测试用例",
-            TermsOfService = "https://github.com/vipwan",
-            Contact = new OpenApiContact
-            {
-                Name = "欢迎 Star & issue",
-                Url = "https://github.com/vipwan/Biwen.QuickApi"
-            },
-            License = new OpenApiLicense
-            {
-                Name = "MIT License",
-                Url = "https://github.com/vipwan/Biwen.QuickApi/blob/master/LICENSE.txt"
-            }
-        };
-    };
-},
-new SecurityOptions(), true);
-
-builder.Services.AddQuickApiDocument(options =>
-{
-    options.UseControllerSummaryAsTagDescription = true;
-    options.DocumentName = "Quick API Admin&Group1";
-
-    options.ApiGroupNames = new[] { "admin", "group1" }; //文档分组指定
-
-    options.PostProcess = document =>
-    {
-        document.Info = new OpenApiInfo
-        {
-            Version = "Quick API V2",
-            Title = "Quick API testcase",
-            Description = "Biwen.QuickApi 测试用例",
-            TermsOfService = "https://github.com/vipwan",
-            Contact = new OpenApiContact
-            {
-                Name = "欢迎 Star & issue",
-                Url = "https://github.com/vipwan/Biwen.QuickApi"
-            },
-            License = new OpenApiLicense
-            {
-                Name = "MIT License",
-                Url = "https://github.com/vipwan/Biwen.QuickApi/blob/master/LICENSE.txt"
-            }
-        };
-    };
-},
-new SecurityOptions());
-
-builder.Services.AddQuickApiDocument(options =>
-{
-    options.UseControllerSummaryAsTagDescription = true;
-    options.DocumentName = "Quick API ALL";
-
-    //options.ApiGroupNames = new[] { };//未指定展示全部Api
-
-    options.PostProcess = document =>
-    {
-        document.Info = new OpenApiInfo
-        {
-            Version = "Quick API ALL",
-            Title = "Quick API testcase",
-            Description = "Biwen.QuickApi 测试用例",
-            TermsOfService = "https://github.com/vipwan",
-            Contact = new OpenApiContact
-            {
-                Name = "欢迎 Star & issue",
-                Url = "https://github.com/vipwan/Biwen.QuickApi"
-            },
-            License = new OpenApiLicense
-            {
-                Name = "MIT License",
-                Url = "https://github.com/vipwan/Biwen.QuickApi/blob/master/LICENSE.txt"
-            }
-        };
-    };
-},
-new SecurityOptions());
-
-#endregion
-
 
 builder.Services.AddIf(builder.Environment.IsDevelopment(), sp =>
 {
@@ -204,12 +111,11 @@ app.UseIfElse(app.Environment.IsDevelopment(), builder =>
     builder.UseDeveloperExceptionPage();
 
     //swagger ui
-    builder.UseQuickApiSwagger(uiConfig: cfg =>
-    {
-        //cfg.CustomJavaScriptPath = "/miniprofiler-sc";
-    });
+    app.MapOpenApi("openapi/{documentName}.json");
+    app.MapScalarUi();
 
-    builder.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
+
+    builder.MapGet("/", () => Results.Redirect("/scalar/v1")).ExcludeFromDescription();
 
 }, builder =>
 {
@@ -225,30 +131,6 @@ app.UseResponseCaching();
 // 默认方式
 //app.MapBiwenQuickApis();
 app.UseBiwenQuickApis();
-
-// Gen方式
-//app.MapGenQuickApis(app.Services);
-
-//测试其他地方调用QuickApi
-app.MapGet("/fromapi", async Task<Results<Ok<string>, ValidationProblem>>
-    (JustAsService api) =>
-{
-
-    //通过你的方式获取请求对象
-    var req = new EmptyRequest();
-    //验证请求对象
-    var result = req.Validate();
-    if (!result.IsValid)
-    {
-        return TypedResults.ValidationProblem(result.ToDictionary());
-    }
-
-    //执行请求
-    var x = await api.ExecuteAsync(req);
-    return TypedResults.Ok(x);
-
-});
-
 
 app.MapGet("/binder", (HttpContext context, BindRequest request) =>
 {
@@ -270,22 +152,11 @@ app.MapGroup("endpoints", x =>
 
 app.UseIfElse(app.Environment.IsDevelopment(), builder =>
 {
-    builder.MapGroup("account").MapIdentityApi<IdentityUser>().WithOpenApi();//swagger
+    builder.MapGroup("account").MapIdentityApi<IdentityUser>().ExcludeFromDescription();//swagger
 }, builder =>
 {
-    builder.MapGroup("account").MapIdentityApi<IdentityUser>();
+    builder.MapGroup("account").MapIdentityApi<IdentityUser>().ExcludeFromDescription();
 });
-
-
-
-//发现ms的WithOpenApi的一处BUG,当Method为多个时会报错!
-//请直接使用QuickApiSummaryAttribute!
-//app.MapMethods("hello-world", new[] { "GET", "POST" }, () => Results.Ok()).WithOpenApi(operation => new(operation)
-//{
-//    Summary = "NeedAuthApi",
-//    Description = "NeedAuthApi"
-//});
-
 
 app.Run();
 

@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Metadata;
-using NSwag.Annotations;
 
 namespace Biwen.QuickApi
 {
@@ -101,7 +100,6 @@ namespace Biwen.QuickApi
 
         /// <summary>
         /// https://github.com/RicoSuter/NSwag/issues/4163
-        /// 请注意NSwag和AspnetCore-OpenApi的WithOpenApi(Summary,Description)不兼容,
         /// 请使用<see cref="OpenApiOperationAttribute"/>标记<seealso cref="BaseQuickApi.HandlerBuilder"/>方法!
         /// </summary>
         /// <param name="builder"></param>
@@ -121,14 +119,6 @@ namespace Biwen.QuickApi
             {
                 builder?.Produces(200, RspType);
             }
-
-            // 400
-            if (ReqType != typeof(EmptyRequest))
-            {
-                builder?.ProducesValidationProblem();
-            }
-            // 500
-            //builder?.ProducesProblem(StatusCodes.Status500InternalServerError);
 
             // 上传文件必须使用 multipart/form-data
             if (ReqType.GetProperties().Any(x =>

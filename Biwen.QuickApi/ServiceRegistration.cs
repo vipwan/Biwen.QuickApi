@@ -201,7 +201,7 @@ namespace Biwen.QuickApi
         {
             if (!Apis.Any())
             {
-                throw new QuickApiExcetion("确定你有添加任何继承了BaseQuickApi的Api吗!?");
+                return default!;
             }
 
             if (Apis.Any(x => x.GetCustomAttribute<QuickApiAttribute>() == null))
@@ -333,6 +333,29 @@ namespace Biwen.QuickApi
                     //allowanonymous
                     var allowanonymous = apiType.GetCustomAttribute<AllowAnonymousAttribute>();
                     if (allowanonymous != null) rhBuilder.WithMetadata(allowanonymous);
+
+                    //OpenApiMetadataAttribute
+                    var openApiMetadata = apiType.GetCustomAttribute<OpenApiMetadataAttribute>();
+                    if (openApiMetadata != null)
+                    {
+                        if (openApiMetadata.Tags.Length > 0)
+                        {
+                            rhBuilder?.WithTags(openApiMetadata.Tags);
+                        }
+                        if (!string.IsNullOrEmpty(openApiMetadata.Summary))
+                        {
+                            rhBuilder?.WithSummary(openApiMetadata.Summary);
+                        }
+                        if (!string.IsNullOrEmpty(openApiMetadata.Description))
+                        {
+                            rhBuilder?.WithDescription(openApiMetadata.Description);
+                        }
+                        if (openApiMetadata.IsDeprecated)
+                        {
+                            //todo:
+                        }
+                    }
+
 
                     //401
                     if (!string.IsNullOrEmpty(attr.Policy))

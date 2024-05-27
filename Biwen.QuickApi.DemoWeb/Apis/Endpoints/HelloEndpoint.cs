@@ -9,6 +9,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
     //[Authorize]
     [ProducesResponseType<ProblemDetails>(400)]
     [ProducesResponseType<string>(200)]
+    [OpenApiMetadata("测试IQuickEndpoint", "测试IQuickEndpoint", Tags = ["Endpoints"])]
     public class HelloEndpoint : IQuickEndpoint
     {
         /// <summary>

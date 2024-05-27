@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace BenchmarkTestWeb.Controllers
 {
@@ -14,15 +14,14 @@ namespace BenchmarkTestWeb.Controllers
         //}
 
         [HttpPost]
-        public IResult Post([FromBody] MyRequest request)
+        public IActionResult Post([FromBody] MyRequest request)
         {
             var validResult = request.Validate();
             if (!validResult.IsValid)
             {
-                return Results.ValidationProblem(validResult.ToDictionary());
-
+                return BadRequest();
             }
-            return Results.Ok(request);
+            return Ok(request);
         }
     }
 }
