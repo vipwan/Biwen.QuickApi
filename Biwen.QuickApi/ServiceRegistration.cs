@@ -310,29 +310,10 @@ namespace Biwen.QuickApi
                         rhBuilder.WithMetadata(new RequireAntiforgeryTokenAttribute(true));
                     }
 #endif
-                    //outputcache
-                    var outputCacheAttribute = apiType.GetCustomAttribute<OutputCacheAttribute>();
-                    if (outputCacheAttribute != null)
-                    {
-                        rhBuilder.WithMetadata(outputCacheAttribute);
-                    }
-
-                    //endpointgroup
-                    var endpointgroupAttribute = apiType.GetCustomAttribute<EndpointGroupNameAttribute>();
-                    if (endpointgroupAttribute != null)
-                    {
-                        rhBuilder.WithMetadata(endpointgroupAttribute);
-                    }
-                    //authorizeattribute
-                    var authorizeAttributes = apiType.GetCustomAttributes<AuthorizeAttribute>();
-                    if (authorizeAttributes.Any()) rhBuilder.WithMetadata(new AuthorizeAttribute());
-                    foreach (var authAttr in authorizeAttributes)
-                    {
-                        rhBuilder.WithMetadata(authAttr);
-                    }
-                    //allowanonymous
-                    var allowanonymous = apiType.GetCustomAttribute<AllowAnonymousAttribute>();
-                    if (allowanonymous != null) rhBuilder.WithMetadata(allowanonymous);
+                    //获取T的所有Attribute:
+                    var attrs = apiType.GetCustomAttributes(true);
+                    //将所有的Attribute添加到metadatas中
+                    rhBuilder?.WithMetadata(attrs);
 
                     //401
                     if (!string.IsNullOrEmpty(attr.Policy))
