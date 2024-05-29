@@ -142,7 +142,9 @@ namespace Biwen.QuickApi
                     continue;
                 }
 #if NET8_0_OR_GREATER
+#pragma warning disable CS0618 // 类型或成员已过时
                 var fromKeyedService = prop.GetCustomAttribute<FromKeyedServicesAttribute>();
+#pragma warning restore CS0618 // 类型或成员已过时
                 if (fromKeyedService != null)
                 {
                     //FromKeyedService,约定必须存在,否则抛出异常

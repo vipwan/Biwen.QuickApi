@@ -32,8 +32,10 @@ namespace Biwen.QuickApi.Swagger
             return contract;
         }
 
-
+        [Obsolete]
+#pragma warning disable CS0809 // 过时成员重写未过时成员
         protected override JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization)
+#pragma warning restore CS0809 // 过时成员重写未过时成员
         {
             var attributes = member.GetCustomAttributes(true);
 

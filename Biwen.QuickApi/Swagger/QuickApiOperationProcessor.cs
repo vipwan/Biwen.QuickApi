@@ -16,7 +16,6 @@
     using System.Dynamic;
     using System.Text.Json.Serialization;
     using System.Text.RegularExpressions;
-    using YamlDotNet.Serialization;
 
     /// <summary>
     /// QuickApi Swagger OperationProcessor
@@ -27,6 +26,7 @@
         static readonly Regex _routeParamsRegex = RouteRegex();
         static readonly Regex _routeConstraintsRegex = RouteStripRegex();
 
+        [Obsolete]
         public bool Process(OperationProcessorContext context)
         {
 

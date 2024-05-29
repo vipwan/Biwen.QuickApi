@@ -4,6 +4,7 @@
     /// <summary>
     /// 标记绑定属性为FromKeyedServices
     /// </summary>
+    [Obsolete("不再提供,如需要请直接构造器注入服务")]
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
     public class FromKeyedServicesAttribute : Attribute
     {
