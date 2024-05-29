@@ -111,16 +111,6 @@ namespace Biwen.QuickApi
                         continue;
                     }
                 }
-                var fromService = prop.GetCustomAttribute<FromServicesAttribute>();
-                if (fromService != null)
-                {
-                    var service = context.RequestServices.GetService(prop.PropertyType);
-                    if (service != null)
-                    {
-                        prop.SetValue(@default, service);
-                        continue;
-                    }
-                }
                 var fromForm = prop.GetCustomAttribute<FromFormAttribute>();
                 if (fromForm != null)
                 {
@@ -141,23 +131,10 @@ namespace Biwen.QuickApi
                     prop.SetValue(@default, value);
                     continue;
                 }
-#if NET8_0_OR_GREATER
-                var fromKeyedService = prop.GetCustomAttribute<FromKeyedServicesAttribute>();
-                if (fromKeyedService != null)
-                {
-                    //FromKeyedService,约定必须存在,否则抛出异常
-                    var service = context.RequestServices.GetRequiredKeyedService(prop.PropertyType, fromKeyedService.Key);
-                    prop.SetValue(@default, service);
-                    continue;
-                }
-#endif
+
                 if (fromQuery != null ||
                     fromHeader != null ||
                     fromRoute != null ||
-                    fromService != null ||
-#if NET8_0_OR_GREATER
-                    fromKeyedService != null ||
-#endif
                     fromForm != null ||
                     fromBody != null)
                 {

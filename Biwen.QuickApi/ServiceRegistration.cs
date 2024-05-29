@@ -14,9 +14,12 @@ namespace Biwen.QuickApi
     using Biwen.QuickApi.Scheduling;
 #if NET8_0_OR_GREATER
     using Microsoft.AspNetCore.Antiforgery;
+    using Microsoft.AspNetCore.Http.Metadata;
+    using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.WebEncoders;
     using Microsoft.OpenApi.Models;
     using System.Text.Encodings.Web;
+    using System.Text.Json.Serialization;
     using System.Text.Unicode;
 #endif
 
@@ -283,20 +286,23 @@ namespace Biwen.QuickApi
                         continue;
                     }
                     var verbs = attr.Verbs.SplitEnum();//拆分枚举
+                    //reqType
+                    var reqType = apiType.GetMethod(nameof(BaseQuickApi.ExecuteAsync))!.GetParameters()[0].ParameterType;
 
                     //MapMethods
                     var rhBuilder = g.MapMethods(attr.Route, verbs.Select(x => x.ToString()),
                        async (IHttpContextAccessor ctx) =>
                         {
-                            return await RequestHandler(ctx, apiType, attr);
+                            return await ProcessRequestAsync(ctx, apiType, attr);
                         });
 
-                    var reqType = apiType.GetMethod(nameof(BaseQuickApi.ExecuteAsync))!.GetParameters()[0].ParameterType;
+                    //Accept
+                    rhBuilder?.WithMetadata(new AcceptsMetadata(["application/json"], reqType));
 
                     //HandlerBuilder
                     using var scope = app.ServiceProvider.CreateAsyncScope();
                     var hb = scope.ServiceProvider.GetRequiredService(apiType) as IHandlerBuilder;
-                    rhBuilder = hb!.HandlerBuilder(rhBuilder);
+                    rhBuilder = hb!.HandlerBuilder(rhBuilder!);
 
                     //metadata
                     rhBuilder.WithMetadata(new QuickApiMetadata(apiType, attr));
@@ -398,35 +404,6 @@ namespace Biwen.QuickApi
         }
 
         /// <summary>
-        /// 返回请求类型的OpenApiParameter
-        /// </summary>
-        /// <param name="reqType"></param>
-        /// <returns></returns>
-        private static List<OpenApiParameter> GetParameters(Type reqType)
-        {
-            var result = new List<OpenApiParameter>();
-            var properties = reqType.GetProperties();
-            if (properties.Length == 0) return [];
-            //var isFromBody = apiType.GetCustomAttribute<FromBodyAttribute>() != null;
-            foreach (var property in properties)
-            {
-                result.Add(new OpenApiParameter
-                {
-                    Name = property.Name,
-                    Description = property.GetCustomAttribute<DescriptionAttribute>()?.Description,
-                    Schema = new OpenApiSchema
-                    {
-                        Type = property.PropertyType.ToString(),
-                        Title = property.Name,
-                        Deprecated = property.GetCustomAttribute<ObsoleteAttribute>() != null,
-                    }
-                });
-            }
-            return result;
-        }
-
-
-        /// <summary>
         /// IApplicationBuilder.UseBiwenQuickApis();
         /// </summary>
         /// <param name="app"></param>
@@ -450,15 +427,11 @@ namespace Biwen.QuickApi
         /// <param name="quickApiAttribute"></param>
         /// <returns></returns>
         /// <exception cref="QuickApiExcetion"></exception>
-        async static Task<IResult> RequestHandler(IHttpContextAccessor ctx, Type apiType, QuickApiAttribute quickApiAttribute)
+        async static Task<IResult> ProcessRequestAsync(IHttpContextAccessor ctx, Type apiType, QuickApiAttribute quickApiAttribute)
         {
             if (ctx == null) throw new QuickApiExcetion($"HttpContextAccessor is null!");
             if (apiType == null) throw new QuickApiExcetion($"apiType is null!");
             if (quickApiAttribute == null) throw new QuickApiExcetion($"quickApiAttribute is null!");
-
-            //验证策略
-            //var checkResult = await CheckPolicy(ctx, quickApiAttribute.Policy);
-            //if (!checkResult.Flag) return checkResult.Result!;
             var sp = ctx.HttpContext!.RequestServices;
             var api = sp.GetRequiredService(apiType);
             //执行请求

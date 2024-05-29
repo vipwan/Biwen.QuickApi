@@ -31,7 +31,7 @@
         /// <summary>
         /// Tags
         /// </summary>
-        public string[] Tags = [];
+        public string[] Tags { get; set; } = [];
 
 
     }

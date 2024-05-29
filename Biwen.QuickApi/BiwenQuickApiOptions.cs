@@ -26,7 +26,7 @@
         public bool EnableScheduling { get; set; } = true;
 
         /// <summary>
-        /// 使用QuickApi的方式返回规范化异常 默认:true,如果:false 仅返回:500
+        /// 使用QuickApi的方式返回规范化异常 默认:false,如果:false 仅返回:500
         /// </summary>
         public bool UseQuickApiExceptionResultBuilder { get; set; } = false;
 

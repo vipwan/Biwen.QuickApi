@@ -5,6 +5,7 @@ using Biwen.QuickApi.DemoWeb.Schedules;
 using Biwen.QuickApi.OpenApi;
 using Biwen.QuickApi.Scheduling;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Identity;
@@ -104,18 +105,18 @@ var app = builder.Build();
 
 app.UseIfElse(app.Environment.IsDevelopment(), builder =>
 {
-
     //Http Logging
     builder.UseHttpLogging();
-
     builder.UseDeveloperExceptionPage();
 
-    //swagger ui
-    app.MapOpenApi("openapi/{documentName}.json");
-    app.MapScalarUi();
+    app.MapGroup("openapi", app =>
+    {
+        //swagger ui
+        app.MapOpenApi("{documentName}.json");
+        app.MapScalarUi();
+    });
 
-
-    builder.MapGet("/", () => Results.Redirect("/scalar/v1")).ExcludeFromDescription();
+    builder.MapGet("/", () => Results.Redirect("openapi/scalar/v1")).ExcludeFromDescription();
 
 }, builder =>
 {
