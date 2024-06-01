@@ -43,7 +43,7 @@
 		<PackageReference Include="NCrontab" Version="3.3.3" />
 		<PackageReference Include="NSwag.AspNetCore" Version="14.0.7" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
 	</ItemGroup>
 
 </Project>
