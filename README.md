@@ -18,15 +18,8 @@ public class MyStore
         };
     }
 }
-[QuickApi("todos")] //返回IResult方式
-public class TodosApi : BaseQuickApi
-{
-    public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
-    {
-        return Results.OK(MyStore.SampleTodos());
-    }
-}
-[QuickApi("todos2")] //返回对象方式
+
+[QuickApi("todos")] //返回对象方式
 public class Todo2Api : BaseQuickApi<EmptyRequest,Todo[]>
 {
     public override async ValueTask<Todo[]> ExecuteAsync(EmptyRequest request)
