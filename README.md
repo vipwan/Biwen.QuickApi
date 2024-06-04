@@ -37,15 +37,10 @@ public class Todo2Api : BaseQuickApi<EmptyRequest,Todo[]>
 }
 ```
 - (MinimalApi as REPR) Biwen.QuickApi遵循了 REPR 设计 （Request-Endpoint-Response）
-- 开箱即用的Route, Policy,Binder,validator & 整合NSwag支持
+- 开箱即用的Route, Policy,Binder,validator & OpenApi支持
 - 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi(gen版本=minimalApi,生成原生接口代码),遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
 - write less, do more ; write anywhere, do anything  
 - 欢迎小伙伴们star&issue共同学习进步 [Biwen.QuickApi](https://github.com/vipwan/Biwen.QuickApi)
-
-## SourceGenerator (v1.6.0+不受支持)
-
-- 提供gen源代码生成器方案,以于显著提升性能(V1.0版本使用的Emit和dynamic会导致部分性能损失)
-- gen SourceGenerator已发布v1.1.2,[使用方式](https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.Generator/readme.md)
 
 ## 开发工具
 
@@ -57,7 +52,6 @@ public class Todo2Api : BaseQuickApi<EmptyRequest,Todo[]>
 
 - Microsoft.AspNetCore.App
 - [FluentValidation.AspNetCore](https://www.nuget.org/packages/FluentValidation.AspNetCore/11.3.0)
-- [NSwag.AspNetCore](https://www.nuget.org/packages/NSwag.AspNetCore)
 - [Microsoft.AspNetCore.OpenApi](https://www.nuget.org/packages/Microsoft.AspNetCore.OpenApi/8.0.5)
 
 ## 使用方式

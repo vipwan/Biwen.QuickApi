@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi(options =>
@@ -78,10 +77,10 @@ builder.Services.AddScheduleMetadataStore<DemoStore>();
 //
 builder.Services.AddBiwenQuickApis(o =>
 {
-    o.RoutePrefix = "quick";
-    o.EnableAntiForgeryTokens = true;
-    o.EnablePubSub = true;
-    o.EnableScheduling = true;
+    o.RoutePrefix = "quick";//默认QuickApi的路由前缀
+    o.EnableAntiForgeryTokens = true;//默认启动防伪
+    o.EnablePubSub = true;//默认启动发布订阅
+    o.EnableScheduling = true;//默认启动定时任务
     o.UseQuickApiExceptionResultBuilder = true;
 });
 
@@ -138,7 +137,6 @@ app.MapGroup("endpoints", x =>
     x.MapMethods<PostDataEndpoint>("hello/postdata");
 });
 
-
 // Identity API {"email" : "vipwan@co.ltd","password" : "*******"}
 // ~/account/register    
 // ~/account/login 
@@ -152,7 +150,6 @@ app.UseIfElse(app.Environment.IsDevelopment(), builder =>
 });
 
 app.Run();
-
 
 //用于xunit Test
 namespace Biwen.QuickApi.DemoWeb
