@@ -7,3 +7,4 @@ global using Biwen.QuickApi.Http;
 global using Biwen.AutoClassGen.Attributes;
 
 global using Microsoft.AspNetCore.Antiforgery;
+global using Microsoft.AspNetCore.Mvc;

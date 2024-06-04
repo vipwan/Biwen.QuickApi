@@ -1,34 +1,25 @@
-﻿using Biwen.QuickApi.DemoWeb.Apis;
-using Biwen.QuickApi.DemoWeb.Apis.Endpoints;
+﻿using Biwen.QuickApi.DemoWeb.Apis.Endpoints;
 using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
 using Biwen.QuickApi.DemoWeb.Schedules;
 using Biwen.QuickApi.OpenApi;
+using Biwen.QuickApi.OpenApi.Scalar;
 using Biwen.QuickApi.Scheduling;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using System.Reflection;
-
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddOpenApi(options =>
 {
-    options.ShouldInclude = (desc) =>
-    {
-        return true;
-    };
+    options.UseTransformer<BearerSecuritySchemeTransformer>();
+    options.ShouldInclude = (desc) => true;
 });
-
 
 builder.Services.AddAuthentication(o =>
 {

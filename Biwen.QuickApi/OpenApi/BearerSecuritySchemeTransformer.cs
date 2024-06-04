@@ -4,7 +4,11 @@ using Microsoft.OpenApi.Models;
 
 namespace Biwen.QuickApi.OpenApi
 {
-    internal sealed class BearerSecuritySchemeTransformer(IAuthenticationSchemeProvider authenticationSchemeProvider) : IOpenApiDocumentTransformer
+    /// <summary>
+    /// Bearer Security Scheme Transformer
+    /// </summary>
+    /// <param name="authenticationSchemeProvider"></param>
+    public sealed class BearerSecuritySchemeTransformer(IAuthenticationSchemeProvider authenticationSchemeProvider) : IOpenApiDocumentTransformer
     {
         public async Task TransformAsync(OpenApiDocument document, OpenApiDocumentTransformerContext context, CancellationToken cancellationToken)
         {
