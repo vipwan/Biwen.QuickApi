@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Text.Json.Serialization;
 namespace Scalar.AspNetCore;
 public class ScalarOptions
 {
@@ -11,9 +12,12 @@ public class ScalarOptions
     [JsonIgnore]
     public string? Title { get; set; } = "Biwen.QuickApi";
 
+    /// <summary>
+    /// default,alternate,moon,purple,solarized
+    /// </summary>
     public string Theme { get; set; } = "purple";
 
-    public bool? DarkMode { get; set; }
+    public bool? DarkMode { get; set; } = true;
     public bool? HideDownloadButton { get; set; }
     public bool? ShowSideBar { get; set; }
 

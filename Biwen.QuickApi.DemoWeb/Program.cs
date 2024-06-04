@@ -14,11 +14,7 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi(options =>
-{
-    options.UseTransformer<BearerSecuritySchemeTransformer>();
-    options.ShouldInclude = (desc) => true;
-});
+builder.Services.AddOpenApi("v1", onlyQuickApi: false);//当前全部展示
 
 builder.Services.AddAuthentication(o =>
 {
