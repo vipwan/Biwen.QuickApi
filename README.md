@@ -333,50 +333,27 @@ app.MapGet("/fromapi", async (Apis.Hello4Api api) =>
 
 ```
 
-### Step5 NSwag集成
+### Step5 OpenApi集成
 
 ```c#
 
-//register nswag & quickapi document
-
-builder.Services.AddQuickApiDocument(options =>
+//register openapi & quickapi document
+builder.Services.AddOpenApi(options =>
 {
-    options.UseControllerSummaryAsTagDescription = true;
-    options.DocumentName = "Quick API Admin&Group1";
-    options.ApiGroupNames = new[] { "admin", "group1" }; //文档分组指定
-    options.PostProcess = document =>
-    {
-        document.Info = new OpenApiInfo
-        {
-            Version = "Quick API V2",
-            Title = "Quick API testcase",
-            Description = "Biwen.QuickApi 测试用例",
-            TermsOfService = "https://github.com/vipwan",
-            Contact = new OpenApiContact
-            {
-                Name = "欢迎 Star & issue",
-                Url = "https://github.com/vipwan/Biwen.QuickApi"
-            },
-            License = new OpenApiLicense
-            {
-                Name = "MIT License",
-                Url = "https://github.com/vipwan/Biwen.QuickApi/blob/master/LICENSE.txt"
-            }
-        };
-    };
-},
-new SecurityOptions());
+    options.UseTransformer<BearerSecuritySchemeTransformer>();
+    options.ShouldInclude = (desc) => true;
+});
 
 //more doc group...
 
-
-//use swagger ui
-app.UseQuickApiSwagger();
-
+//map openapi doc & ui
+app.MapGroup("openapi", app =>
+{
+    //swagger ui
+    app.MapOpenApi("{documentName}.json");
+    app.MapScalarUi();
+});
 ```
-
-- 更多参考代码 [Issues 8](https://github.com/vipwan/Biwen.QuickApi/issues/8)
-
 ### Step6 OpenApi 以及Client代理
 
 - 你可以全局配置版本号,以及自定义的OpenApi描述
