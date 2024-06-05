@@ -41,19 +41,18 @@ namespace Biwen.QuickApi.Http
         /// <exception cref="QuickApiExcetion"></exception>
         async static Task<(bool Flag, IResult? Result)> CheckPolicy(HttpContext ctx, string? policy)
         {
-            if (string.IsNullOrEmpty(policy))
+            if (string.IsNullOrWhiteSpace(policy))
             {
                 return (true, null);
             }
-            if (!string.IsNullOrEmpty(policy))
+
+            var authService = ctx!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null, besure services.AddAuthorization() first!");
+            var authorizationResult = await authService.AuthorizeAsync(ctx.User, policy);
+            if (!authorizationResult.Succeeded)
             {
-                var authService = ctx!.RequestServices.GetService<IAuthorizationService>() ?? throw new QuickApiExcetion($"IAuthorizationService is null, besure services.AddAuthorization() first!");
-                var authorizationResult = await authService.AuthorizeAsync(ctx.User, policy);
-                if (!authorizationResult.Succeeded)
-                {
-                    return (false, TypedResults.Unauthorized());
-                }
+                return (false, TypedResults.Unauthorized());
             }
+
             return (true, null);
         }
 

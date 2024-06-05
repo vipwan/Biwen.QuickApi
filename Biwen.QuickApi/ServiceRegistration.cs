@@ -351,7 +351,7 @@ namespace Biwen.QuickApi
                             rhBuilder?.WithDescription(openApiMetadata.Description);
                         }
                         //兼容性问题,Verbs数量>1将不会添加OperationId等信息
-                        if (verbs.Count == 1)
+                        if (verbs.Count() == 1)
                         {
                             rhBuilder?.WithOpenApi(operation => new(operation)
                             {
