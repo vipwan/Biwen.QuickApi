@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.OpenApi.Models;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Biwen.QuickApi
@@ -16,7 +15,10 @@ namespace Biwen.QuickApi
         /// <param name="pattern"></param>
         /// <param name="excludeFromDescription">是否从文档中排除</param>
         /// <returns></returns>
-        public static RouteHandlerBuilder MapMethods<T>(this IEndpointRouteBuilder app, [StringSyntax("Route")] string pattern, bool excludeFromDescription = false) where T : class, IQuickEndpoint
+        public static RouteHandlerBuilder MapMethods<T>(
+            this IEndpointRouteBuilder app,
+            [StringSyntax("Route")] string pattern,
+            bool excludeFromDescription = false) where T : class, IQuickEndpoint
         {
             var verbs = T.Verbs.SplitEnum();
             var builder = app.MapMethods(pattern, verbs.Select(x => x.ToString()), T.Handler);
@@ -24,6 +26,8 @@ namespace Biwen.QuickApi
             var attrs = typeof(T).GetCustomAttributes(true);
             //将所有的Attribute添加到metadatas中
             builder.WithMetadata(attrs);
+            //QuickApiEndpointMetadata
+            builder.WithMetadata(new QuickApiEndpointMetadata());
 
             //OpenApiMetadataAttribute
             var openApiMetadata = attrs.OfType<OpenApiMetadataAttribute>().FirstOrDefault();
@@ -104,39 +108,20 @@ namespace Biwen.QuickApi
             }
         }
 
-        //private static List<OpenApiParameter> GetParameters(Delegate @delegate)
-        //{
-        //    var parameters = @delegate.Method.GetParameters();
-
-        //    if (parameters.Length != 1)
-        //    {
-        //        return [];
-        //    }
-        //    var param = parameters[0];
-        //    var result = new List<OpenApiParameter>();
-        //    var properties = param.ParameterType.GetProperties();
-        //    foreach (var property in properties)
-        //    {
-        //        result.Add(new OpenApiParameter
-        //        {
-        //            Name = property.Name,
-        //            Description = property.GetCustomAttribute<DescriptionAttribute>()?.Description,
-        //        });
-        //    }
-        //    return result;
-        //}
-
-
         /// <summary>
         /// MapGroup
         /// </summary>
         /// <param name="endpoints"></param>
         /// <param name="prefix"></param>
         /// <param name="action"></param>
-        public static void MapGroup(this IEndpointRouteBuilder endpoints, [StringSyntax("Route")] string prefix, Action<IEndpointRouteBuilder> action)
+        public static RouteGroupBuilder MapGroup(
+            this IEndpointRouteBuilder endpoints,
+            [StringSyntax("Route")] string prefix,
+            Action<IEndpointRouteBuilder> action)
         {
             var group = endpoints.MapGroup(prefix);
             action(group);
+            return group;
         }
     }
 }

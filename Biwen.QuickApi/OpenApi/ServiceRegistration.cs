@@ -9,35 +9,41 @@ namespace Biwen.QuickApi.OpenApi
         /// </summary>
         /// <param name="services"></param>
         /// <param name="documentName"></param>
-        /// <param name="configureOptions"></param>
         /// <param name="onlyQuickApi"></param>
+        /// <param name="groups">需要包含的分组.null表示全量</param>
         /// <returns></returns>
-        public static IServiceCollection AddOpenApi(this IServiceCollection services, string documentName, Action<OpenApiOptions>? configureOptions = null
-            , bool onlyQuickApi = false)
+        public static IServiceCollection AddOpenApi(
+            this IServiceCollection services,
+            string documentName = "v1",
+            bool onlyQuickApi = false,
+            string[]? groups = null)
         {
-            configureOptions = configureOptions ?? (_ => { });
-            services.Configure<OpenApiOptions>(documentName, options =>
+            Action<OpenApiOptions> configureOptions = options =>
             {
                 options.UseTransformer<BearerSecuritySchemeTransformer>();
                 if (onlyQuickApi)
                 {
                     options.ShouldInclude = desc =>
                     {
-                        //return true;
                         //如果包含QuickApiMetadata返回True,否则返回False:
-                        return desc.ActionDescriptor.EndpointMetadata.OfType<QuickApiMetadata>().Any();
+                        return
+                        (desc.ActionDescriptor.EndpointMetadata.OfType<QuickApiMetadata>().Any() ||
+                        desc.ActionDescriptor.EndpointMetadata.OfType<QuickApiEndpointMetadata>().Any())
+                        &&
+                        (groups?.Contains(desc.GroupName) is true || groups is null);
                     };
                 }
                 else
                 {
-                    options.ShouldInclude = _ => true;
+                    options.ShouldInclude = desc =>
+                    (groups?.Contains(desc.GroupName) is true || groups is null);
                 }
-                configureOptions(options);
-            });
+            };
 
             //AddOpenApi
             OpenApiServiceCollectionExtensions.AddOpenApi(services, documentName, configureOptions);
             return services;
         }
+
     }
 }

@@ -5,6 +5,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
 {
     [ProducesResponseType<PostData>(200)]
     [OpenApiMetadata("POST测试", "Post测试", Tags = ["Endpoints"])]
+    [EndpointGroupName("test")]
     public class PostDataEndpoint : IQuickEndpoint
     {
         [FromBody]

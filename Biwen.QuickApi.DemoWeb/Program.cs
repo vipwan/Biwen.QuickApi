@@ -14,7 +14,11 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi("v1", onlyQuickApi: false);//当前全部展示
+//all
+builder.Services.AddOpenApi("v1", onlyQuickApi: false);
+//just quickapi & group:[test,admin]
+builder.Services.AddOpenApi("v2", onlyQuickApi: true, ["test", "admin"]);
+
 
 builder.Services.AddAuthentication(o =>
 {

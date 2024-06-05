@@ -27,4 +27,14 @@
 
         //public IEndpointDescriptionMetadata? EndpointDescriptionMetadata { get; set; }
     }
+
+
+
+    /// <summary>
+    /// Metadata for QuickApiEndpoint
+    /// </summary>
+    public class QuickApiEndpointMetadata
+    {
+
+    }
 }
