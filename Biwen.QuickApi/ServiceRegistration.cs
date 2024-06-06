@@ -11,6 +11,7 @@ namespace Biwen.QuickApi
     using Biwen.QuickApi.Events;
     using Biwen.QuickApi.Http;
     using Biwen.QuickApi.Infrastructure.Locking;
+    using Biwen.QuickApi.OpenApi;
     using Biwen.QuickApi.Scheduling;
 #if NET8_0_OR_GREATER
     using Microsoft.AspNetCore.Antiforgery;
@@ -237,6 +238,10 @@ namespace Biwen.QuickApi
                 (app as WebApplication)?.UseAntiforgery();
 #endif
             }
+
+            //openapi doc middleware
+            (app as WebApplication)?.UseMiddleware<OpenApiDocMiddleware>();
+
             //middleware:
             (app as WebApplication)
                 //QuickApiMiddleware
