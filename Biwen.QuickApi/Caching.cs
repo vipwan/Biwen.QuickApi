@@ -18,5 +18,9 @@ namespace Biwen.QuickApi
         /// </summary>
         public static readonly ConcurrentDictionary<Type, object> SubscriberMetadatas = new();
 
+        /// <summary>
+        /// ReqType是否是:multipart/form-data
+        /// </summary>
+        public static readonly ConcurrentDictionary<Type, bool> ReqTypeIsFormdatas = new();
     }
 }
