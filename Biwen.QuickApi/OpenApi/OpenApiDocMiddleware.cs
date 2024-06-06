@@ -7,6 +7,7 @@ namespace Biwen.QuickApi.OpenApi
     /// 返回application/json,避免中文乱码
     /// https://github.com/dotnet/aspnetcore/issues/56095
     /// </summary>
+    [Obsolete("Net9-preview6将解决这个问题")]
     internal sealed class OpenApiDocMiddleware
     {
         private readonly RequestDelegate _next;
@@ -21,7 +22,7 @@ namespace Biwen.QuickApi.OpenApi
             if (context.GetEndpoint()?.Metadata.GetMetadata<IRouteDiagnosticsMetadata>() is { } route &&
                 route.Route.EndsWith("{documentName}.json"))
             {
-                context.Response.ContentType = "application/json";
+                context.Response.ContentType = "application/json;charset=utf-8";
             }
             await _next(context);
         }

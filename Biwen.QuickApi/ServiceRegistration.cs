@@ -240,7 +240,9 @@ namespace Biwen.QuickApi
             }
 
             //openapi doc middleware
+#pragma warning disable CS0618 // 类型或成员已过时
             (app as WebApplication)?.UseMiddleware<OpenApiDocMiddleware>();
+#pragma warning restore CS0618 // 类型或成员已过时
 
             //middleware:
             (app as WebApplication)
