@@ -120,16 +120,34 @@ namespace Biwen.QuickApi
                 builder?.Produces(200, RspType);
             }
 
-            // 上传文件必须使用 multipart/form-data
-            if (ReqType.GetProperties().Any(x =>
-                x.PropertyType == typeof(IFormFile) ||
-                x.PropertyType == typeof(IFormFileCollection)))
+            // multipart/form-data
+            if (IsFormdata)
             {
                 builder?.Accepts<Req>("multipart/form-data");
             }
 
             // todo:
             return builder!;
+        }
+        /// <summary>
+        /// 缓存请求类型是否form-data,避免重复反射
+        /// </summary>
+        private bool IsFormdata
+        {
+            get
+            {
+                if (Caching.ReqTypeIsFormdatas.TryGetValue(ReqType, out var flag))
+                {
+                    return flag;
+                }
+
+                flag = (ReqType.GetProperties().Any(x =>
+                x.PropertyType == typeof(IFormFile) ||
+                x.PropertyType == typeof(IFormFileCollection)));
+
+                Caching.ReqTypeIsFormdatas.TryAdd(ReqType, flag);
+                return flag;
+            }
         }
 
         /// <summary>
