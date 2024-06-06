@@ -167,6 +167,8 @@ app.UseIfElse(app.Environment.IsDevelopment(), builder =>
     builder.MapGroup("account").MapIdentityApi<IdentityUser>().ExcludeFromDescription();
 });
 
+app.UseStaticFiles();
+
 app.Run();
 
 //用于xunit Test

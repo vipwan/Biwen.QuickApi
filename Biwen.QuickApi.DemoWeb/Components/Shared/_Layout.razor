@@ -2,22 +2,34 @@
 
 <PageTitle>@Md</PageTitle>
 
-<header>
-    <h3>欢迎使用 @Md 组件进行开发!</h3>
-</header>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Biwen.QuickApi.DemoWeb.styles.css" />
+</head>
 
-<nav>
-    <a href="/openapi/scalar/v1">Api文档</a>
-    <a href="https://github.com/vipwan/Biwen.QuickApi">Githubs</a>
-    <a href="https://github.com/vipwan/Biwen.QuickApi/issues">Issues</a>
-    <a href="https://github.com/vipwan/Biwen.QuickApi?tab=MIT-1-ov-file">License</a>
-</nav>
+<body>
 
-@Body
+    <header>
+        <h3>欢迎使用 @Md 组件进行开发!</h3>
+    </header>
 
-<Footer>
-    @Md
-</Footer>
+    <nav>
+        <a href="/openapi/scalar/v1">Api文档</a>
+        <a href="https://github.com/vipwan/Biwen.QuickApi">Githubs</a>
+        <a href="https://github.com/vipwan/Biwen.QuickApi/issues">Issues</a>
+        <a href="https://github.com/vipwan/Biwen.QuickApi?tab=MIT-1-ov-file">License</a>
+    </nav>
+
+    @Body
+
+    <Footer>
+        @Md
+    </Footer>
+
+</body>
+</html>
 
 @code {
     public string Md { get; set; } = "Biwen.QuickApi";
