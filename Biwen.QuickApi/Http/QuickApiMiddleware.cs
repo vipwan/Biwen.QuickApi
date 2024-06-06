@@ -16,25 +16,30 @@ namespace Biwen.QuickApi.Http
         }
         public async Task Invoke(HttpContext context)
         {
+            var isQuickApiEndpoint = context.GetEndpoint()?.Metadata.OfType<QuickApiEndpointMetadata>().Any() is true;
+            if (isQuickApiEndpoint)
+            {
+                context.Response.Headers.TryAdd("X-Powered-By", AssemblyName);
+                await _next(context);
+                return;
+            }
+
             var md = context.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>();
-            if (md == null || md.QuickApiType == null)
+            if (md is { QuickApiType: not null })
             {
-                await _next(context);
-                return;
+                //PoweredBy
+                context.Response.Headers.TryAdd("X-Powered-By", AssemblyName);
+
+                if (context.RequestServices.GetService(md.QuickApiType) is IQuickApiMiddlewareHandler handler)
+                {
+                    await handler.BeforeAsync(context);
+                    await _next(context);
+                    await handler.AfterAsync(context);
+                    return;
+                }
             }
 
-            //PoweredBy
-            context.Response.Headers.TryAdd("X-Powered-By", AssemblyName);
-
-            var handler = context.RequestServices.GetRequiredService(md.QuickApiType) as IQuickApiMiddlewareHandler;
-            if (handler == null)
-            {
-                await _next(context);
-                return;
-            }
-            await handler.InvokeBeforeAsync(context);
             await _next(context);
-            await handler.InvokeAfterAsync(context);
         }
     }
 }
