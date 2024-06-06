@@ -8,6 +8,7 @@ namespace Biwen.QuickApi.Http
     public sealed class QuickApiMiddleware
     {
         private static readonly string? AssemblyName = typeof(ServiceRegistration).Assembly.GetName().Name;
+        private static readonly string version = $"{typeof(ServiceRegistration).Assembly.GetName().Version}";
 
         private readonly RequestDelegate _next;
         public QuickApiMiddleware(RequestDelegate next)
@@ -16,10 +17,18 @@ namespace Biwen.QuickApi.Http
         }
         public async Task Invoke(HttpContext context)
         {
+            var addHeader = () =>
+            {
+                //PoweredBy
+                context.Response.Headers.TryAdd("X-Powered-By", AssemblyName);
+                //Version
+                context.Response.Headers.TryAdd($"X-{nameof(QuickApi)}-Version", version);
+            };
+
             var isQuickApiEndpoint = context.GetEndpoint()?.Metadata.OfType<QuickApiEndpointMetadata>().Any() is true;
             if (isQuickApiEndpoint)
             {
-                context.Response.Headers.TryAdd("X-Powered-By", AssemblyName);
+                addHeader();
                 await _next(context);
                 return;
             }
@@ -27,9 +36,7 @@ namespace Biwen.QuickApi.Http
             var md = context.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>();
             if (md is { QuickApiType: not null })
             {
-                //PoweredBy
-                context.Response.Headers.TryAdd("X-Powered-By", AssemblyName);
-
+                addHeader();
                 if (context.RequestServices.GetService(md.QuickApiType) is IQuickApiMiddlewareHandler handler)
                 {
                     await handler.BeforeAsync(context);
