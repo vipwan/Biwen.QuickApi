@@ -1,18 +1,26 @@
 ﻿using Biwen.QuickApi.DemoWeb.Apis.Endpoints;
+using Biwen.QuickApi.DemoWeb.Components;
 using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
 using Biwen.QuickApi.DemoWeb.Schedules;
 using Biwen.QuickApi.OpenApi;
 using Biwen.QuickApi.OpenApi.Scalar;
 using Biwen.QuickApi.Scheduling;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+//add RazorComponents
+builder.Services.AddRazorComponents();
 
 //all
 builder.Services.AddOpenApi("v1", onlyQuickApi: false);
@@ -106,7 +114,7 @@ app.UseIfElse(app.Environment.IsDevelopment(), builder =>
         app.MapScalarUi();
     });
 
-    builder.MapGet("/", () => Results.Redirect("openapi/scalar/v1")).ExcludeFromDescription();
+    builder.MapGet("/", () => Results.Redirect("root/razor/welcome")).ExcludeFromDescription();
 
 }, builder =>
 {
@@ -123,11 +131,21 @@ app.UseResponseCaching();
 //app.MapBiwenQuickApis();
 app.UseBiwenQuickApis();
 
-app.MapGet("/binder", (HttpContext context, BindRequest request) =>
+app.MapGroup("root", x =>
 {
-    //测试默认绑定器
-    return Results.Content(request.Hello);
+    x.MapGet("/binder", (HttpContext context, BindRequest request) =>
+    {
+        //测试默认绑定器
+        return Results.Content(request.Hello);
+    });
+
+    x.MapGet("/razor/{key}", (string key) =>
+    {
+        //返回Razor页面
+        return new RazorComponentResult<HelloWorld>(new { Key = key });
+    });
 });
+
 
 //提供IQuickEndpoint支持:
 app.MapGroup("endpoints", x =>

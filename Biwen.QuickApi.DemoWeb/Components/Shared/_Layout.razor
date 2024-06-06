@@ -1,0 +1,24 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>@Md</PageTitle>
+
+<header>
+    <h3>欢迎使用 @Md 组件进行开发!</h3>
+</header>
+
+<nav>
+    <a href="/openapi/scalar/v1">Api文档</a>
+    <a href="https://github.com/vipwan/Biwen.QuickApi">Githubs</a>
+    <a href="https://github.com/vipwan/Biwen.QuickApi/issues">Issues</a>
+    <a href="https://github.com/vipwan/Biwen.QuickApi?tab=MIT-1-ov-file">License</a>
+</nav>
+
+@Body
+
+<Footer>
+    @Md
+</Footer>
+
+@code {
+    public string Md { get; set; } = "Biwen.QuickApi";
+}
