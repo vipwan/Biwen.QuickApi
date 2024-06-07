@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Routing;
 using System.Diagnostics.CodeAnalysis;
+using IComponent = Microsoft.AspNetCore.Components.IComponent;
 
 namespace Biwen.QuickApi
 {
@@ -69,6 +71,40 @@ namespace Biwen.QuickApi
             return builder;
         }
 
+
+        /// <summary>
+        /// 扩展MapComponent
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="app"></param>
+        /// <param name="pattern">路由地址</param>
+        /// <param name="parameters">new{}匿名类型</param>
+        /// <param name="verb">默认:GET</param>
+        /// <param name="excludeFromDescription">排除Openapi</param>
+        /// <returns></returns>
+        public static RouteHandlerBuilder MapComponent<T>(this IEndpointRouteBuilder app, [StringSyntax("Route")] string pattern,
+         Func<HttpContext, object>? paramsBuilder = null, Verb verb = Verb.GET, bool excludeFromDescription = true) where T : class, IComponent
+        {
+            var verbs = verb.SplitEnum();
+            var builder = app.MapMethods(pattern, verbs.Select(x => x.ToString()),
+            (IHttpContextAccessor httpContextAccessor) =>
+             {
+                 var parameters = paramsBuilder?.Invoke(httpContextAccessor.HttpContext!);
+                 //返回Razor页面
+                 return new RazorComponentResult<T>(parameters ?? new { });
+             });
+
+            //QuickApiEndpointMetadata
+            builder.WithMetadata(new QuickApiEndpointMetadata());
+
+            if (excludeFromDescription)
+            {
+                builder.ExcludeFromDescription();
+            }
+            return builder;
+        }
+
+
         //验证Request的Endpoint Filter
         private class ValidateRequestFilter : IEndpointFilter
         {
@@ -109,7 +145,7 @@ namespace Biwen.QuickApi
         }
 
         /// <summary>
-        /// MapGroup
+        /// 扩展MapGroup
         /// </summary>
         /// <param name="endpoints"></param>
         /// <param name="prefix"></param>

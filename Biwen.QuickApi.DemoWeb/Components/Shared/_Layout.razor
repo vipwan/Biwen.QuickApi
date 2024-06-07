@@ -7,27 +7,38 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Biwen.QuickApi.DemoWeb.styles.css" />
+    <link rel="stylesheet" href="_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.bundle.scp.css" />
+    <link rel="stylesheet" href="_content/Microsoft.FluentUI.AspNetCore.Components/css/reboot.css" />
+    <script src="_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js" type="module" async></script>
 </head>
 
 <body>
+    <div>
 
-    <header>
-        <h3>欢迎使用 @Md 组件进行开发!</h3>
-    </header>
+        <FluentToastProvider />
+        <FluentDialogProvider />
+        <FluentTooltipProvider />
+        <FluentMessageBarProvider />
 
-    <nav>
-        <a href="/openapi/scalar/v1">Api文档</a>
-        <a href="https://github.com/vipwan/Biwen.QuickApi">Githubs</a>
-        <a href="https://github.com/vipwan/Biwen.QuickApi/issues">Issues</a>
-        <a href="https://github.com/vipwan/Biwen.QuickApi?tab=MIT-1-ov-file">License</a>
-    </nav>
-
-    @Body
-
-    <Footer>
-        @Md
-    </Footer>
-
+        <FluentMainLayout NavMenuTitle="Navigation menu">
+            <Header><h3>欢迎使用 @Md 组件进行开发!</h3></Header>
+            <SubHeader><p>UI Tempelate</p></SubHeader>
+            <Body>
+                <FluentBodyContent>
+                    @Body
+                </FluentBodyContent>
+            </Body>
+            <NavMenuContent>
+                <FluentNavLink Href="/openapi/scalar/v1" Text="Home">Api文档</FluentNavLink>
+                <FluentNavLink Href="https://github.com/vipwan/Biwen.QuickApi">Githubs</FluentNavLink>
+                <FluentNavLink Href="https://github.com/vipwan/Biwen.QuickApi/issues">Issues</FluentNavLink>
+                <FluentNavLink Href="https://github.com/vipwan/Biwen.QuickApi?tab=MIT-1-ov-file">License</FluentNavLink>
+            </NavMenuContent>
+        </FluentMainLayout>
+        <Footer>
+            @Md
+        </Footer>
+    </div>
 </body>
 </html>
 

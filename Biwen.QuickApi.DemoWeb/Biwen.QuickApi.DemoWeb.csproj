@@ -9,6 +9,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.6" />
+		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.7.2" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -16,7 +17,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Pages\" />
+		<Folder Include="Pages\" />
 	</ItemGroup>
 
 </Project>

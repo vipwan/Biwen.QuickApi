@@ -11,16 +11,15 @@ using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc.Razor;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.FluentUI.AspNetCore.Components;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-//add RazorComponents
-builder.Services.AddRazorComponents();
+//FluentUIComponents
+builder.Services.AddFluentUIComponents();
+builder.Services.AddHttpClient();//default httpclient
 
 //all
 builder.Services.AddOpenApi("v1", onlyQuickApi: false);
@@ -139,11 +138,11 @@ app.MapGroup("root", x =>
         return Results.Content(request.Hello);
     });
 
-    x.MapGet("/razor/{key}", (string key) =>
-    {
-        //返回Razor页面
-        return new RazorComponentResult<HelloWorld>(new { Key = key });
-    });
+    x.MapComponent<HelloWorld>("/razor/{key}",
+        context =>
+        {
+            return new { Key = context.Request.RouteValues["key"] };
+        });
 });
 
 
@@ -166,8 +165,6 @@ app.UseIfElse(app.Environment.IsDevelopment(), builder =>
 {
     builder.MapGroup("account").MapIdentityApi<IdentityUser>().ExcludeFromDescription();
 });
-
-app.UseStaticFiles();
 
 app.Run();
 

@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.AspNetCore.Routing;
 
 namespace Biwen.QuickApi
@@ -16,11 +15,8 @@ namespace Biwen.QuickApi
 #if NET8_0_OR_GREATER
     using Microsoft.AspNetCore.Antiforgery;
     using Microsoft.AspNetCore.Http.Metadata;
-    using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.WebEncoders;
-    using Microsoft.OpenApi.Models;
     using System.Text.Encodings.Web;
-    using System.Text.Json.Serialization;
     using System.Text.Unicode;
 #endif
 
@@ -46,6 +42,9 @@ namespace Biwen.QuickApi
             {
                 options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.All);
             });
+
+            //add RazorComponents
+            services.AddRazorComponents().AddInteractiveServerComponents();
 
             //JSON Options
             services.ConfigureHttpJsonOptions(x => { });
@@ -422,7 +421,11 @@ namespace Biwen.QuickApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBiwenQuickApis();
+                //Server Render
+                //endpoints.MapRazorComponents<Components.App>().AddInteractiveServerRenderMode();
             });
+
+            app.UseStaticFiles();
             return app;
         }
 

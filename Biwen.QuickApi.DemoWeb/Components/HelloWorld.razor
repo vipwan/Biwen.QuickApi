@@ -1,8 +1,26 @@
-﻿@layout Shared._Layout;
+﻿@rendermode InteractiveServer
 
-<p class="hint">@(Key) from minimal api  !</p>
+@layout Shared._Layout
+@inject IHttpContextAccessor HttpContextAccessor
+@inject IToastService ToastService
+@inject ILogger<HelloWorld> Logger
+
+<FluentStack>
+    <FluentButton @onclick="@ShowToast" Appearance="Appearance.Accent">@(Key) from minimal api  !</FluentButton>
+</FluentStack>
 
 @code {
     [Parameter]
     public string? Key { get; set; }
+
+    protected override void OnInitialized()
+    {
+        //打印请求的路由数据,这里是从路由数据中获取的key和参数传递是两种方式!
+        Logger.LogInformation($"from route data key:{HttpContextAccessor.HttpContext!.Request.RouteValues["key"]}");
+    }
+
+    void ShowToast()
+    {
+        ToastService.ShowInfo("hello component from quickapi !");
+    }
 }
