@@ -10,21 +10,16 @@
             if (subscribers is null) return;
             if (subscribers.Any() == false) return;
 
-            List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)> listWithMetadatas = [];
-
-            if (Caching.SubscriberMetadatas.ContainsKey(typeof(T)))
-            {
-                listWithMetadatas = (List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)>)Caching.SubscriberMetadatas[typeof(T)];
-            }
-            else
-            {
-                foreach (var subscriber in subscribers)
-                {
-                    var metadata = subscriber.GetType().GetCustomAttribute<EventSubscriberAttribute>() ?? new EventSubscriberAttribute();
-                    listWithMetadatas.Add((subscriber, metadata));
-                }
-                Caching.SubscriberMetadatas.TryAdd(typeof(T), listWithMetadatas);
-            }
+            if (Caching.SubscriberMetadatas.GetOrAdd(typeof(T), type =>
+              {
+                  List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)> metas = [];
+                  foreach (var subscriber in subscribers)
+                  {
+                      var metadata = subscriber.GetType().GetCustomAttribute<EventSubscriberAttribute>() ?? new();
+                      metas.Add((subscriber, metadata));
+                  }
+                  return metas;
+              }) is not List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)> listWithMetadatas) return;
 
             foreach (var (subscriber, metadata) in listWithMetadatas.OrderBy(x => x.Metadata.Order))
             {

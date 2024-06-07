@@ -136,17 +136,12 @@ namespace Biwen.QuickApi
         {
             get
             {
-                if (Caching.ReqTypeIsFormdatas.TryGetValue(ReqType, out var flag))
+                return Caching.ReqTypeIsFormdatas.GetOrAdd(ReqType, type =>
                 {
-                    return flag;
-                }
-
-                flag = (ReqType.GetProperties().Any(x =>
-                x.PropertyType == typeof(IFormFile) ||
-                x.PropertyType == typeof(IFormFileCollection)));
-
-                Caching.ReqTypeIsFormdatas.TryAdd(ReqType, flag);
-                return flag;
+                    return (ReqType.GetProperties().Any(x =>
+                    x.PropertyType == typeof(IFormFile) ||
+                    x.PropertyType == typeof(IFormFileCollection)));
+                });
             }
         }
 
