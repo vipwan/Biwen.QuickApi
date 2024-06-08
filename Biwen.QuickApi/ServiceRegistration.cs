@@ -1,5 +1,4 @@
 ﻿using Biwen.QuickApi.Http;
-using Biwen.QuickApi.Infrastructure.Locking;
 using Biwen.QuickApi.OpenApi;
 
 using FluentValidation.AspNetCore;
@@ -351,6 +350,8 @@ namespace Biwen.QuickApi
             return routeGroups.ToArray();
         }
 
+        private const string EndpointRouteBuilder = "__EndpointRouteBuilder";
+
         /// <summary>
         /// IApplicationBuilder.UseBiwenQuickApis();
         /// </summary>
@@ -362,11 +363,13 @@ namespace Biwen.QuickApi
             app.UseAuthorization();
 
             // Try to retrieve the current 'IEndpointRouteBuilder'.
-            if (!app.Properties.TryGetValue("__EndpointRouteBuilder", out var obj) ||
+            if (!app.Properties.TryGetValue(EndpointRouteBuilder, out var obj) ||
                 obj is not IEndpointRouteBuilder routes)
             {
                 throw new InvalidOperationException("Failed to retrieve the current endpoint route builder.");
             }
+
+            routes.MapBiwenQuickApis();
 
             //内核模块:
             var coreModulars = app.ApplicationServices.GetServices<IStartup>()
@@ -374,23 +377,19 @@ namespace Biwen.QuickApi
                 .OrderBy(s => s.Order);
 
             //非内核模块:
-            var cnormalModulars = app.ApplicationServices.GetServices<IStartup>()
+            var normalModulars = app.ApplicationServices.GetServices<IStartup>()
                 .Where(x => x.GetType().GetCustomAttribute<CoreModularAttribute>() is null)
                 .OrderBy(s => s.Order);
 
-            foreach (var modularType in coreModulars.Concat(cnormalModulars))
+            foreach (var modularType in coreModulars.Concat(normalModulars))
             {
                 Configure(modularType, app, routes);
             }
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapBiwenQuickApis();
-                //Server Render
-                //endpoints.MapRazorComponents<Components.App>().AddInteractiveServerRenderMode();
-            });
-
+            // Knowing that routes are already configured.
+            app.UseEndpoints(routes => { });
             app.UseStaticFiles();
+
             return app;
         }
 
