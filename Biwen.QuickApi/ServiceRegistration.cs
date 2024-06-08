@@ -141,14 +141,15 @@ namespace Biwen.QuickApi
                     }
                 };
 
-                var pre = modularType.GetCustomAttribute(typeof(PreModularAttribute<>));
-                var pre2 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,>));
-                var pre3 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,>));
-                var pre4 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,>));
-                var pre5 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,>));
-                var pre6 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,>));
-                var pre7 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,>));
-                List<Attribute?> allPres = [pre, pre2, pre3, pre4, pre5, pre6, pre7];
+                List<Attribute?> allPres = [
+                    modularType.GetCustomAttribute(typeof(PreModularAttribute<>)),
+                    modularType.GetCustomAttribute(typeof(PreModularAttribute<,>)),
+                    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,>)),
+                    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,>)),
+                    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,>)),
+                    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,>)),
+                    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,>))
+                    ];
                 allPres.ForEach(preConfigure);
 
                 modular.Configure(app, routes, app.ApplicationServices);
