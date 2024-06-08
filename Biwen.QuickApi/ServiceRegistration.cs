@@ -117,27 +117,50 @@ namespace Biwen.QuickApi
         }
 
         static List<Type> configedTypes = new();
-        static void Configure(IStartup modularType, IApplicationBuilder app, IEndpointRouteBuilder routes)
+        static void Configure(IStartup modular, IApplicationBuilder app, IEndpointRouteBuilder routes, ILogger? logger)
         {
             lock (_lock)
             {
-                if (configedTypes.Contains(modularType.GetType()))
+                var modularType = modular.GetType();
+
+
+                if (configedTypes.Contains(modularType))
                     return;
 
-                var pres = modularType.GetType().GetCustomAttributes(typeof(PreModularAttribute<>));
-                if (pres.Any() is true)
+                var preConfigure = (Attribute? attribute) =>
                 {
-                    foreach (var pre in pres)
+                    if (attribute is null) return;
+                    var preTypes = attribute.GetType().GetGenericArguments();
+                    foreach (var preType in preTypes)
                     {
-                        //获取泛型参数
-                        var preType = pre.GetType().GetGenericArguments().First();
-                        var preModular = app.ApplicationServices.GetServices<IStartup>().First(x => x.GetType() == preType);
-                        Configure(preModular, app, routes);
+                        var preModular = app.ApplicationServices.GetServices<IStartup>().FirstOrDefault(x => x.GetType() == preType);
+                        if (preModular is not null)
+                        {
+                            Configure(preModular, app, routes, logger);
+                            configedTypes.Add(preModular.GetType());
+                        }
                     }
-                }
+                };
 
-                modularType.Configure(app, routes, app.ApplicationServices);
-                configedTypes.Add(modularType.GetType());
+                var pre = modularType.GetCustomAttribute(typeof(PreModularAttribute<>));
+                var pre2 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,>));
+                var pre3 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,>));
+                var pre4 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,>));
+                var pre5 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,>));
+                var pre6 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,>));
+                var pre7 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,>));
+
+                preConfigure(pre);
+                preConfigure(pre2);
+                preConfigure(pre3);
+                preConfigure(pre4);
+                preConfigure(pre5);
+                preConfigure(pre6);
+                preConfigure(pre7);
+
+                modular.Configure(app, routes, app.ApplicationServices);
+                logger?.LogDebug($"Modular：{modularType.FullName} is Configured!");
+                configedTypes.Add(modularType);
             }
         }
 
@@ -295,7 +318,7 @@ namespace Biwen.QuickApi
                         {
                             rhBuilder?.WithOpenApi(operation => new(operation)
                             {
-                                Deprecated = openApiMetadata.IsDeprecated,
+                                Deprecated = openApiMetadata.IsDeprecated || apiType.GetCustomAttribute<ObsoleteAttribute>() is { },
                                 OperationId = openApiMetadata.OperationId,
                                 //参数的备注和example等:
                                 //Parameters = GetParameters(reqType),
@@ -373,10 +396,9 @@ namespace Biwen.QuickApi
                 .OrderBy(s => s.Order);
 
             var logger = app.ApplicationServices.GetService<ILogger<ModularBase>>();
-            foreach (var modularType in coreModulars.Concat(normalModulars))
+            foreach (var modular in coreModulars.Concat(normalModulars))
             {
-                Configure(modularType, app, routes);
-                logger?.LogDebug($"Modular：{modularType.GetType().FullName} is Configured!");
+                Configure(modular, app, routes, logger);
             }
 
             routes.MapBiwenQuickApis();

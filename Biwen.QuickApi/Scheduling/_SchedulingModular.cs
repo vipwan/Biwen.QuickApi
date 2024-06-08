@@ -1,8 +1,9 @@
 ﻿using Biwen.QuickApi.Events;
+using Biwen.QuickApi.Infrastructure.Locking;
 
 namespace Biwen.QuickApi.Scheduling
 {
-    [CoreModular, PreModular<EventsModular>]
+    [CoreModular, PreModular<LockingModular, EventsModular>]
     internal class SchedulingModular(IServiceProvider serviceProvider) : ModularBase
     {
         public override Func<bool> IsEnable => () =>
