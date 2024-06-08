@@ -73,7 +73,7 @@ namespace Biwen.QuickApi
 
 
         /// <summary>
-        /// 扩展MapComponent
+        /// 扩展MapComponent,请注意只负责渲染,Component无法执行内部事件
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="app"></param>

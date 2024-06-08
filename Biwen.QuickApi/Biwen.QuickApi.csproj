@@ -19,6 +19,7 @@
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<AssemblyVersion>2.0.0</AssemblyVersion>
 		<FileVersion>2.0.0</FileVersion>
+		<NoWarn>CA2254</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>

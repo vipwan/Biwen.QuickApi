@@ -1,25 +1,19 @@
-﻿using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Authorization;
+﻿using Biwen.QuickApi.Http;
+using Biwen.QuickApi.Infrastructure.Locking;
+using Biwen.QuickApi.OpenApi;
+
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.WebEncoders;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 
 namespace Biwen.QuickApi
 {
-    using Biwen.QuickApi.Abstractions;
-    using Biwen.QuickApi.Events;
-    using Biwen.QuickApi.Http;
-    using Biwen.QuickApi.Infrastructure.Locking;
-    using Biwen.QuickApi.OpenApi;
-    using Biwen.QuickApi.Scheduling;
-#if NET8_0_OR_GREATER
-    using Microsoft.AspNetCore.Antiforgery;
-    using Microsoft.AspNetCore.Http.Metadata;
-    using Microsoft.Extensions.WebEncoders;
-    using System.Text.Encodings.Web;
-    using System.Text.Unicode;
-#endif
-
     public static class ServiceRegistration
     {
         /// <summary>
@@ -49,9 +43,6 @@ namespace Biwen.QuickApi
             //JSON Options
             services.ConfigureHttpJsonOptions(x => { });
 
-            //注册LocalLock
-            services.AddLocalLocking();
-
             //注册验证器
             services.AddFluentValidationAutoValidation();
             services.AddHttpContextAccessor();
@@ -63,16 +54,6 @@ namespace Biwen.QuickApi
             //options
             services.AddOptions<BiwenQuickApiOptions>().Configure(o => { options?.Invoke(o); });
 
-            var biwenQuickApiOptions = services.BuildServiceProvider().GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value;
-
-            //重写AuthorizationMiddlewareResultHandler
-            services.AddSingleton<IAuthorizationMiddlewareResultHandler, QuickApiAuthorizationMiddlewareResultHandler>();
-            //默认的异常返回构造器
-            services.AddIf(biwenQuickApiOptions.UseQuickApiExceptionResultBuilder, sp =>
-            {
-                services.AddSingleton<IQuickApiExceptionResultBuilder, DefaultExceptionResultBuilder>();
-            });
-
             /// <summary>
             /// 开启ProblemDetails
             /// 如需自定义请调用
@@ -83,55 +64,25 @@ namespace Biwen.QuickApi
             //AddProblemDetails
             services.AddProblemDetails();
 
-            //注册EventPubSub
-            services.AddIf(biwenQuickApiOptions.EnablePubSub, sp =>
-            {
-                sp.AddEventPubSub();
-            });
-            //注册Schedule
-            services.AddIf(biwenQuickApiOptions.EnableScheduling, sp =>
-            {
-                if (!biwenQuickApiOptions.EnablePubSub) throw new QuickApiExcetion("必须启用发布订阅功能,才可以开启Scheduling功能!");
-                sp.AddScheduleTask();
-            });
-
-            //add quickapis
-            foreach (var api in Apis) services.AddScoped(api);
+            //注册模块
+            services.AddModular();
 
             return services;
         }
 
-        /// <summary>
-        /// PubSub
-        /// </summary>
-        /// <param name="services"></param>
-        /// <returns></returns>
-        private static IServiceCollection AddEventPubSub(this IServiceCollection services)
+        //注册模块
+        private static IServiceCollection AddModular(this IServiceCollection services)
         {
-            //注册EventHanders
-            foreach (var subscriberType in EventSubscribers)
+            using var sp = services.BuildServiceProvider().CreateScope();
+            foreach (var modularType in Modulars)
             {
-                //存在一个订阅者订阅多个事件的情况:
-                var baseTypes = subscriberType.GetInterfaces().Where(x => x.IsGenericType && x.GetGenericTypeDefinition() == InterfaceEventSubscriber).ToArray();
-                foreach (var baseType in baseTypes)
+                if (ActivatorUtilities.CreateInstance(sp.ServiceProvider, modularType) is ModularBase { } modular && modular.IsEnable())
                 {
-                    services.AddScoped(baseType, subscriberType);
+                    modular.ConfigureServices(services);
+                    //DI
+                    services.AddTransient(typeof(IStartup), modularType);
                 }
             }
-            //注册Publisher
-            services.AddScoped<Publisher>();
-            return services;
-        }
-
-        /// <summary>
-        /// 提供LocalLock支持
-        /// </summary>
-        /// <param name="services"></param>
-        /// <returns></returns>
-        private static IServiceCollection AddLocalLocking(this IServiceCollection services)
-        {
-            services.AddSingleton<LocalLock>();
-            services.AddSingleton<ILocalLock>(sp => sp.GetRequiredService<LocalLock>());
             return services;
         }
 
@@ -149,57 +100,48 @@ namespace Biwen.QuickApi
 
         #region internal
 
-        static readonly Type InterfaceQuickApi = typeof(IQuickApi<,>);
+        //static readonly Type InterfaceQuickApi = typeof(IQuickApi<,>);
         //static readonly Type InterfaceReqBinder = typeof(IReqBinder<>);
-        static readonly Type InterfaceEventSubscriber = typeof(IEventSubscriber<>);
-
+        //static readonly Type InterfaceEventSubscriber = typeof(IEventSubscriber<>);
+        static readonly Type ModularBaseType = typeof(ModularBase);
         static readonly object _lock = new();//锁
 
-        static bool IsToGenericInterface(this Type type, Type baseInterface)
-        {
-            if (type == null) return false;
-            if (baseInterface == null) return false;
-
-            return type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == baseInterface);
-        }
-
-        static IEnumerable<Type> _apis = null!;
-        /// <summary>
-        /// 所有的QuickApi
-        /// </summary>
-        static IEnumerable<Type> Apis
+        static IEnumerable<Type> _modulars = null!;
+        static IEnumerable<Type> Modulars
         {
             get
             {
                 lock (_lock)
-                    return _apis ??= ASS.InAllRequiredAssemblies.Where(x =>
-                    !x.IsAbstract && x.IsPublic && x.IsClass && x.IsToGenericInterface(InterfaceQuickApi));
+                {
+                    return _modulars ??= ASS.InAllRequiredAssemblies.Where(x => !x.IsAbstract && x.IsClass && x.IsAssignableTo(ModularBaseType));
+                }
             }
         }
 
-        //static IEnumerable<Type> _binders = null!;
-        //static IEnumerable<Type> Binders
-        //{
-        //    get
-        //    {
-        //        lock (_lock)
-        //            return _binders ??= ASS.InAllRequiredAssemblies.Where(x =>
-        //            !x.IsAbstract && x.IsPublic && x.IsClass && x.IsToGenericInterface(InterfaceReqBinder));
-        //    }
-        //}
-
-        static IEnumerable<Type> _eventSubscribers = null!;
-
-        static IEnumerable<Type> EventSubscribers
+        static List<Type> configedTypes = new();
+        static void Configure(IStartup modularType, IApplicationBuilder app, IEndpointRouteBuilder routes)
         {
-            get
+            lock (_lock)
             {
-                lock (_lock)
-                    return _eventSubscribers ??= ASS.InAllRequiredAssemblies.Where(x =>
-                    !x.IsAbstract && x.IsPublic && x.IsClass && x.IsToGenericInterface(InterfaceEventSubscriber));
+                if (configedTypes.Contains(modularType.GetType()))
+                    return;
+
+                var pres = modularType.GetType().GetCustomAttributes(typeof(PreModularAttribute<>));
+                if (pres.Any() is true)
+                {
+                    foreach (var pre in pres)
+                    {
+                        //获取泛型参数
+                        var preType = pre.GetType().GetGenericArguments().First();
+                        var preModular = app.ApplicationServices.GetServices<IStartup>().First(x => x.GetType() == preType);
+                        Configure(preModular, app, routes);
+                    }
+                }
+
+                modularType.Configure(app, routes, app.ApplicationServices);
+                configedTypes.Add(modularType.GetType());
             }
         }
-
 
         #endregion
 
@@ -212,12 +154,12 @@ namespace Biwen.QuickApi
         /// <exception cref="QuickApiExcetion"></exception>
         public static (string Group, RouteGroupBuilder RouteGroupBuilder)[] MapBiwenQuickApis(this IEndpointRouteBuilder app)
         {
-            if (!Apis.Any())
+            if (!_CoreModular.Apis.Any())
             {
                 return default!;
             }
 
-            if (Apis.Any(x => x.GetCustomAttribute<QuickApiAttribute>() == null))
+            if (_CoreModular.Apis.Any(x => x.GetCustomAttribute<QuickApiAttribute>() == null))
             {
                 throw new QuickApiExcetion($"所有QuickApi都必须标注QuickApi特性!");
             }
@@ -253,7 +195,7 @@ namespace Biwen.QuickApi
                 => await Results.Problem().ExecuteAsync(context)));
 
             //分组:
-            var groups = Apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
+            var groups = _CoreModular.Apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
             var routeGroups = new List<(string, RouteGroupBuilder)>();
 
             //quickapi前缀
@@ -418,6 +360,29 @@ namespace Biwen.QuickApi
         {
             app.UseRouting();
             app.UseAuthorization();
+
+            // Try to retrieve the current 'IEndpointRouteBuilder'.
+            if (!app.Properties.TryGetValue("__EndpointRouteBuilder", out var obj) ||
+                obj is not IEndpointRouteBuilder routes)
+            {
+                throw new InvalidOperationException("Failed to retrieve the current endpoint route builder.");
+            }
+
+            //内核模块:
+            var coreModulars = app.ApplicationServices.GetServices<IStartup>()
+                .Where(x => x.GetType().GetCustomAttribute<CoreModularAttribute>() is { })
+                .OrderBy(s => s.Order);
+
+            //非内核模块:
+            var cnormalModulars = app.ApplicationServices.GetServices<IStartup>()
+                .Where(x => x.GetType().GetCustomAttribute<CoreModularAttribute>() is null)
+                .OrderBy(s => s.Order);
+
+            foreach (var modularType in coreModulars.Concat(cnormalModulars))
+            {
+                Configure(modularType, app, routes);
+            }
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBiwenQuickApis();

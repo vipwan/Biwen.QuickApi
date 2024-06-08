@@ -1,15 +1,11 @@
-﻿using Biwen.QuickApi.DemoWeb.Apis.Endpoints;
-using Biwen.QuickApi.DemoWeb.Components;
-using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
+﻿using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
 using Biwen.QuickApi.DemoWeb.Schedules;
 using Biwen.QuickApi.OpenApi;
 using Biwen.QuickApi.OpenApi.Scalar;
 using Biwen.QuickApi.Scheduling;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.FluentUI.AspNetCore.Components;
@@ -73,13 +69,6 @@ builder.Services.AddIf(builder.Environment.IsDevelopment(), sp =>
      });
 });
 
-// Add services to the container.
-builder.Services.AddScoped<HelloService>();
-// keyed services
-//builder.Services.AddKeyedScoped<HelloService>("hello");
-
-// Add ScheduleTaskStore
-builder.Services.AddScheduleMetadataStore<DemoStore>();
 
 //
 builder.Services.AddBiwenQuickApis(o =>
@@ -129,42 +118,6 @@ app.UseResponseCaching();
 // 默认方式
 //app.MapBiwenQuickApis();
 app.UseBiwenQuickApis();
-
-app.MapGroup("root", x =>
-{
-    x.MapGet("/binder", (HttpContext context, BindRequest request) =>
-    {
-        //测试默认绑定器
-        return Results.Content(request.Hello);
-    });
-
-    x.MapComponent<HelloWorld>("/razor/{key}",
-        context =>
-        {
-            return new { Key = context.Request.RouteValues["key"] };
-        });
-});
-
-
-//提供IQuickEndpoint支持:
-app.MapGroup("endpoints", x =>
-{
-    //~/endpoints/hello/hello?key=world
-    x.MapMethods<HelloEndpoint>("hello/{hello}");
-    x.MapMethods<PostDataEndpoint>("hello/postdata");
-});
-
-// Identity API {"email" : "vipwan@co.ltd","password" : "*******"}
-// ~/account/register    
-// ~/account/login 
-
-app.UseIfElse(app.Environment.IsDevelopment(), builder =>
-{
-    builder.MapGroup("account").MapIdentityApi<IdentityUser>().ExcludeFromDescription();//swagger
-}, builder =>
-{
-    builder.MapGroup("account").MapIdentityApi<IdentityUser>().ExcludeFromDescription();
-});
 
 app.Run();
 
