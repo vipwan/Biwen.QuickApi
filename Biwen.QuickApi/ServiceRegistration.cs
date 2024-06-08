@@ -123,7 +123,6 @@ namespace Biwen.QuickApi
             {
                 var modularType = modular.GetType();
 
-
                 if (configedTypes.Contains(modularType))
                     return;
 
@@ -133,8 +132,8 @@ namespace Biwen.QuickApi
                     var preTypes = attribute.GetType().GetGenericArguments();
                     foreach (var preType in preTypes)
                     {
-                        var preModular = app.ApplicationServices.GetServices<IStartup>().FirstOrDefault(x => x.GetType() == preType);
-                        if (preModular is not null)
+                        if (app.ApplicationServices.GetServices<IStartup>()
+                        .FirstOrDefault(x => x.GetType() == preType) is { } preModular)
                         {
                             Configure(preModular, app, routes, logger);
                             configedTypes.Add(preModular.GetType());
@@ -149,14 +148,8 @@ namespace Biwen.QuickApi
                 var pre5 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,>));
                 var pre6 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,>));
                 var pre7 = modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,>));
-
-                preConfigure(pre);
-                preConfigure(pre2);
-                preConfigure(pre3);
-                preConfigure(pre4);
-                preConfigure(pre5);
-                preConfigure(pre6);
-                preConfigure(pre7);
+                List<Attribute?> allPres = [pre, pre2, pre3, pre4, pre5, pre6, pre7];
+                allPres.ForEach(preConfigure);
 
                 modular.Configure(app, routes, app.ApplicationServices);
                 logger?.LogDebug($"Modular：{modularType.FullName} is Configured!");
