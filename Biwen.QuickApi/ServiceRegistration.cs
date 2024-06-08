@@ -281,21 +281,15 @@ namespace Biwen.QuickApi
                     rhBuilder?.WithMetadata(attrs);
 
                     //OpenApiMetadataAttribute
-                    var openApiMetadata = apiType.GetCustomAttribute<OpenApiMetadataAttribute>();
-                    if (openApiMetadata is { })
+                    if (apiType.GetCustomAttribute<OpenApiMetadataAttribute>() is { } openApiMetadata)
                     {
                         if (openApiMetadata.Tags.Length > 0)
-                        {
                             rhBuilder?.WithTags(openApiMetadata.Tags);
-                        }
                         if (!string.IsNullOrEmpty(openApiMetadata.Summary))
-                        {
                             rhBuilder?.WithSummary(openApiMetadata.Summary);
-                        }
                         if (!string.IsNullOrEmpty(openApiMetadata.Description))
-                        {
                             rhBuilder?.WithDescription(openApiMetadata.Description);
-                        }
+
                         //兼容性问题,Verbs数量>1将不会添加OperationId等信息
                         if (verbs.Count() == 1)
                         {
