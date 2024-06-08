@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using System.Collections.Concurrent;
+using System.Linq.Expressions;
 
 namespace Biwen.QuickApi
 {
@@ -34,13 +35,16 @@ namespace Biwen.QuickApi
 
         private class InnerValidator : AbstractValidator<T>
         {
-            //private static bool? _hasAnnotationAttr = null;
+            /// <summary>
+            /// 缓存T是否有DataAnnotation
+            /// </summary>
+            static readonly ConcurrentDictionary<string, bool> TAnnotationAttrs = new();
 
             private static bool HasAnnotationAttr
             {
                 get
                 {
-                    return Caching.TAnnotationAttrs.GetOrAdd(typeof(T).FullName!, type =>
+                    return TAnnotationAttrs.GetOrAdd(typeof(T).FullName!, type =>
                     {
                         return typeof(T).GetProperties().Any(
                             prop => prop.GetCustomAttributes(true).Any(x => x is MSDA.ValidationAttribute));

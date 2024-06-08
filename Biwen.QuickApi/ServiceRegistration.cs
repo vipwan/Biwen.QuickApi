@@ -45,7 +45,6 @@ namespace Biwen.QuickApi
             //注册验证器
             services.AddFluentValidationAutoValidation();
             services.AddHttpContextAccessor();
-            services.AddMemoryCache();
 
             //注册Antiforgery服务
             services.AddAntiforgery();
@@ -369,8 +368,6 @@ namespace Biwen.QuickApi
                 throw new InvalidOperationException("Failed to retrieve the current endpoint route builder.");
             }
 
-            routes.MapBiwenQuickApis();
-
             //内核模块:
             var coreModulars = app.ApplicationServices.GetServices<IStartup>()
                 .Where(x => x.GetType().GetCustomAttribute<CoreModularAttribute>() is { })
@@ -381,10 +378,14 @@ namespace Biwen.QuickApi
                 .Where(x => x.GetType().GetCustomAttribute<CoreModularAttribute>() is null)
                 .OrderBy(s => s.Order);
 
+            var logger = app.ApplicationServices.GetService<ILogger<ModularBase>>();
             foreach (var modularType in coreModulars.Concat(normalModulars))
             {
                 Configure(modularType, app, routes);
+                logger?.LogDebug($"Modular：{modularType.GetType().FullName} is Configured!");
             }
+
+            routes.MapBiwenQuickApis();
 
             // Knowing that routes are already configured.
             app.UseEndpoints(routes => { });

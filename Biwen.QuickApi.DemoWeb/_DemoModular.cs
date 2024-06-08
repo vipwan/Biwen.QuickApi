@@ -52,6 +52,15 @@ namespace Biwen.QuickApi.DemoWeb
                     return Results.Content(request.Hello);
                 });
 
+                x.MapGet("/cached", () =>
+                {
+                    return Results.Content(DateTime.Now.ToString());
+                }).CacheOutput(policy =>
+                {
+                    //缓存10s过期
+                    policy.Expire(TimeSpan.FromSeconds(10d));
+                });
+
                 x.MapComponent<HelloWorld>("/razor/{key}",
                     context =>
                     {

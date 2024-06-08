@@ -5,6 +5,9 @@ namespace Biwen.QuickApi.Http
     [CoreModular]
     internal class _CoreModular(IServiceProvider serviceProvider) : ModularBase
     {
+
+        public override int Order => base.Order;
+
         public override void ConfigureServices(IServiceCollection services)
         {
             //重写AuthorizationMiddlewareResultHandler

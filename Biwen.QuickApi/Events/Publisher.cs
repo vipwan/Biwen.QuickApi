@@ -1,7 +1,13 @@
-﻿namespace Biwen.QuickApi.Events
+﻿using System.Collections.Concurrent;
+
+namespace Biwen.QuickApi.Events
 {
     internal class Publisher(IServiceProvider serviceProvider)
     {
+        /// <summary>
+        /// 缓存订阅者的Metadata
+        /// </summary>
+        static readonly ConcurrentDictionary<Type, object> SubscriberMetadatas = new();
 
         public async Task PublishAsync<T>(T @event, CancellationToken ct) where T : IEvent
         {
@@ -10,7 +16,7 @@
             if (subscribers is null) return;
             if (subscribers.Any() == false) return;
 
-            if (Caching.SubscriberMetadatas.GetOrAdd(typeof(T), type =>
+            if (SubscriberMetadatas.GetOrAdd(typeof(T), type =>
               {
                   List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)> metas = [];
                   foreach (var subscriber in subscribers)

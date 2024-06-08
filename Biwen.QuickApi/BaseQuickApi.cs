@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Metadata;
+using System.Collections.Concurrent;
 
 namespace Biwen.QuickApi
 {
@@ -129,6 +130,13 @@ namespace Biwen.QuickApi
             // todo:
             return builder!;
         }
+
+
+        /// <summary>
+        /// ReqType是否是:multipart/form-data
+        /// </summary>
+        static readonly ConcurrentDictionary<Type, bool> ReqTypeIsFormdatas = new();
+
         /// <summary>
         /// 缓存请求类型是否form-data,避免重复反射
         /// </summary>
@@ -136,7 +144,7 @@ namespace Biwen.QuickApi
         {
             get
             {
-                return Caching.ReqTypeIsFormdatas.GetOrAdd(ReqType, type =>
+                return ReqTypeIsFormdatas.GetOrAdd(ReqType, type =>
                 {
                     return (ReqType.GetProperties().Any(x =>
                     x.PropertyType == typeof(IFormFile) ||

@@ -1,8 +1,6 @@
 ﻿using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
-using Biwen.QuickApi.DemoWeb.Schedules;
 using Biwen.QuickApi.OpenApi;
 using Biwen.QuickApi.OpenApi.Scalar;
-using Biwen.QuickApi.Scheduling;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Identity;
@@ -31,12 +29,6 @@ builder.Services.AddAuthentication(o =>
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddOutputCache(options =>
-{
-    //options.AddBasePolicy(builder => builder.Expire(TimeSpan.FromSeconds(10)));
-});
-
-builder.Services.AddResponseCaching();
 
 builder.Services.Configure<AuthorizationOptions>(options =>
 {
@@ -111,9 +103,6 @@ app.UseIfElse(app.Environment.IsDevelopment(), builder =>
 
 app.UseAuthentication();
 app.UseAuthorization();
-
-app.UseOutputCache();
-app.UseResponseCaching();
 
 // 默认方式
 //app.MapBiwenQuickApis();
