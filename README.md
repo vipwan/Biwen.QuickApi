@@ -6,21 +6,23 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/vipwan/Biwen.QuickApi/pulls) 
 
 ## 项目介绍
+Biwen.QuickApi 2+,是一个微型`aspnetcore`开发框架,提供minimalapi的QuickApi封装,提供`IQuickEndpoint`书写minimalapi,
+模块化支持`Modular`,内置事件:`IEvent`,内置作业调度:`IScheduleTask`,LocalLock,OpenApi ~~
 
 ```c#
 public class MyStore
 {
     public static Todo[] SampleTodos()
     {
-        return new Todo[] {
+        return [
             new(1, "Walk the dog"),
             new(2, "Do the dishes", DateOnly.FromDateTime(DateTime.Now)),
-        };
+            ];
     }
 }
 
 [QuickApi("todos")] //返回对象方式
-public class Todo2Api : BaseQuickApi<EmptyRequest,Todo[]>
+public class TodoApi : BaseQuickApi<EmptyRequest,Todo[]>
 {
     public override async ValueTask<Todo[]> ExecuteAsync(EmptyRequest request)
     {
@@ -30,16 +32,14 @@ public class Todo2Api : BaseQuickApi<EmptyRequest,Todo[]>
 }
 ```
 - (MinimalApi as REPR) Biwen.QuickApi遵循了 REPR 设计 （Request-Endpoint-Response）
-- 开箱即用的Route, Policy,Binder,validator & OpenApi支持
-- 该库是NET WebApi/Minimal Api的补充，性能≈MinimalApi(gen版本=minimalApi,生成原生接口代码),遥遥领先于MVC和WebApi，但是提供了最简单的的使用体验
+- 开箱即用
 - write less, do more ; write anywhere, do anything  
 - 欢迎小伙伴们star&issue共同学习进步 [Biwen.QuickApi](https://github.com/vipwan/Biwen.QuickApi)
 
 ## 开发工具
 
-- [Visual Studio 2022 17.8.0 +](https://learn.microsoft.com/zh-cn/visualstudio/releases/2022/release-notes-preview)
-- [Net 8.0.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
-- 调试Gen请在VS中安装 .NET Compiler Platform SDK 组件
+- [Visual Studio 2022 17.10.0 +](https://learn.microsoft.com/zh-cn/visualstudio/releases/2022/release-notes-preview)
+- [Net 9.0.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/9.0)
 
 ## 依赖环境&库
 
