@@ -7,7 +7,7 @@
 
 ## 项目介绍
 Biwen.QuickApi 2+,是一个微型`aspnetcore`开发框架,提供minimalapi的QuickApi封装,提供`IQuickEndpoint`书写minimalapi,
-模块化支持`Modular`,内置事件:`IEvent`,内置作业调度:`IScheduleTask`,LocalLock,OpenApi ~~
+模块化支持`Modular`,发布订阅:`IEvent`,作业调度:`IScheduleTask`,LocalLock,OpenApi ~~
 
 ```c#
 public class MyStore
@@ -358,7 +358,7 @@ app.MapGroup("openapi", app =>
 
 - 你可以全局配置版本号,以及自定义的OpenApi描述
 - 你可以重写QuickApi的HandlerBuilder方法,以便于你自定义的OpenApi描述
-- 我们强烈建议您使用Refit生成代理代码,以便于您的客户端和服务端保持一致的接口定义
+- 我们强烈建议您使用`Kiota`,`Refit`生成代理代码,以便于您的客户端和服务端保持一致的接口定义
 - 因为遵循REPR风格,所以不推荐SwaggerUI或使用SwaggerStudio生成代理代码,除非您的QuickApi定义的相当规范(如存在自定义绑定,别名绑定等)!
 
 ```csharp
