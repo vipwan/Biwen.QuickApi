@@ -7,9 +7,27 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.FluentUI.AspNetCore.Components;
+using Serilog;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+#region Logger
+
+builder.Logging.ClearProviders();
+
+builder.Host.UseSerilog((context, builder) =>
+{
+    builder.ReadFrom
+      .Configuration(context.Configuration)
+      .Enrich
+      .FromLogContext();
+});
+
+#endregion
+
+
 
 //FluentUIComponents
 builder.Services.AddFluentUIComponents();
