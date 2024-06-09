@@ -74,7 +74,7 @@ builder.Services.AddIf(builder.Environment.IsDevelopment(), sp =>
 {
     sp.AddHttpLogging(options =>
      {
-         options.LoggingFields = HttpLoggingFields.Request;
+         options.LoggingFields = HttpLoggingFields.Request | HttpLoggingFields.RequestQuery;
          options.CombineLogs = true;
      });
 });
