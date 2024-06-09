@@ -1,7 +1,6 @@
 ﻿using Biwen.QuickApi.DemoWeb.Apis.Endpoints;
 using Biwen.QuickApi.DemoWeb.Components;
 using Biwen.QuickApi.DemoWeb.Schedules;
-using Biwen.QuickApi.Scheduling;
 using Microsoft.AspNetCore.Identity;
 
 namespace Biwen.QuickApi.DemoWeb
@@ -55,9 +54,9 @@ namespace Biwen.QuickApi.DemoWeb
                 //测试HtmlSanitizer
                 x.MapGet("/xss", () => { return "<a href=\"javascript: alert('xss')\">Click me</a>".SanitizeHtml(); });
 
-                x.MapGet("/cached", () =>
+                x.MapGet("/cached/{id:int?}", (int? id) =>
                 {
-                    return Results.Content(DateTime.Now.ToString());
+                    return Results.Content($"{id}-{DateTime.Now}");
                 }).CacheOutput(policy =>
                 {
                     //缓存10s过期

@@ -20,21 +20,19 @@ namespace Biwen.QuickApi.Http
             var addHeader = () =>
             {
                 //PoweredBy
-                context.Response.Headers.TryAdd("X-Powered-By", AssemblyName);
+                context.Response.Headers.XPoweredBy = AssemblyName;
                 //Version
                 context.Response.Headers.TryAdd($"X-{nameof(QuickApi)}-Version", version);
             };
 
-            var isQuickApiEndpoint = context.GetEndpoint()?.Metadata.OfType<QuickApiEndpointMetadata>().Any() is true;
-            if (isQuickApiEndpoint)
+            if (context.GetEndpoint()?.Metadata.OfType<QuickApiEndpointMetadata>().Any() is true)
             {
                 addHeader();
                 await _next(context);
                 return;
             }
 
-            var md = context.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>();
-            if (md is { QuickApiType: not null })
+            if (context.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>() is { QuickApiType: not null } md)
             {
                 addHeader();
                 if (context.RequestServices.GetService(md.QuickApiType) is IQuickApiMiddlewareHandler handler)

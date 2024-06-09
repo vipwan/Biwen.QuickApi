@@ -14,10 +14,9 @@ namespace Biwen.QuickApi.Caching
         public override void ConfigureServices(IServiceCollection services)
         {
             services.AddMemoryCache();
-            services.AddOutputCache(options =>
-            {
-                //options.AddBasePolicy(builder => builder.Expire(TimeSpan.FromSeconds(10)));
-            });
+            services.AddDistributedMemoryCache();
+
+            services.AddOutputCache();
             services.AddResponseCaching();
         }
 
