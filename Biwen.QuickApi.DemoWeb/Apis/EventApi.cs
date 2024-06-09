@@ -1,7 +1,4 @@
-﻿using Biwen.QuickApi.Events;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Biwen.QuickApi.DemoWeb.Apis
+﻿namespace Biwen.QuickApi.DemoWeb.Apis
 {
     public class MyEvent : BaseRequest<MyEvent>, IEvent
     {

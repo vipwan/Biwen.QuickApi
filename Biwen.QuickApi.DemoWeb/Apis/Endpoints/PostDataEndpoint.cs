@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+
 namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
 {
     [ProducesResponseType<PostData>(200)]

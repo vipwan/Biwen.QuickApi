@@ -1,6 +1,4 @@
-﻿using Biwen.QuickApi.Scheduling;
-
-namespace Biwen.QuickApi.DemoWeb.Schedules
+﻿namespace Biwen.QuickApi.DemoWeb.Schedules
 {
     /// <summary>
     /// KeepAlive ScheduleTask

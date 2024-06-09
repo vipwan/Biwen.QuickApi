@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
 {

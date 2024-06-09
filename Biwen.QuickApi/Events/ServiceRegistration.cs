@@ -1,13 +1,8 @@
 ﻿namespace Biwen.QuickApi.Events
 {
-
-    [CoreModular]
-    internal class EventsModular(IServiceProvider serviceProvider) : ModularBase
+    public static class ServiceRegistration
     {
-        public override Func<bool> IsEnable => () =>
-        serviceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.EnablePubSub;
-
-        public override void ConfigureServices(IServiceCollection services)
+        internal static IServiceCollection AddEvent(this IServiceCollection services)
         {
             //注册EventHanders
             foreach (var subscriberType in EventSubscribers)
@@ -21,6 +16,7 @@
             }
             //注册Publisher
             services.AddScoped<Publisher>();
+            return services;
         }
 
         static readonly object _lock = new();//锁
@@ -43,6 +39,5 @@
                     !x.IsAbstract && x.IsPublic && x.IsClass && IsToGenericInterface(x, InterfaceEventSubscriber));
             }
         }
-
     }
 }

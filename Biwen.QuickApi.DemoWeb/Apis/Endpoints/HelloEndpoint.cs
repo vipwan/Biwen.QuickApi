@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+
 namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
 {
     /// <summary>
@@ -11,7 +10,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
     [ProducesResponseType<ProblemDetails>(400)]
     [ProducesResponseType<string>(200)]
     [EndpointGroupName("test")]
-    [OpenApiMetadata("测试IQuickEndpoint", "测试IQuickEndpoint", Tags = ["Endpoints"], IsDeprecated = true, OperationId = "TestHelloEndpoint")]
+    [OpenApiMetadata("IQuickEndpoint测试", "测试IQuickEndpoint", Tags = ["Endpoints"], IsDeprecated = true, OperationId = "TestHelloEndpoint")]
     public class HelloEndpoint : IQuickEndpoint
     {
         /// <summary>

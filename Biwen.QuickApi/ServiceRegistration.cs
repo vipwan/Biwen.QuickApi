@@ -169,12 +169,11 @@ namespace Biwen.QuickApi
         /// <exception cref="QuickApiExcetion"></exception>
         public static (string Group, RouteGroupBuilder RouteGroupBuilder)[] MapBiwenQuickApis(this IEndpointRouteBuilder app)
         {
-            if (!_CoreModular.Apis.Any())
+            if (!HttpModular.Apis.Any())
             {
                 return default!;
             }
-
-            if (_CoreModular.Apis.Any(x => x.GetCustomAttribute<QuickApiAttribute>() == null))
+            if (HttpModular.Apis.Any(x => x.GetCustomAttribute<QuickApiAttribute>() == null))
             {
                 throw new QuickApiExcetion($"所有QuickApi都必须标注QuickApi特性!");
             }
@@ -210,7 +209,7 @@ namespace Biwen.QuickApi
                 => await Results.Problem().ExecuteAsync(context)));
 
             //分组:
-            var groups = _CoreModular.Apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
+            var groups = HttpModular.Apis.GroupBy(x => x.GetCustomAttribute<QuickApiAttribute>()!.Group.ToLower());
             var routeGroups = new List<(string, RouteGroupBuilder)>();
 
             //quickapi前缀
@@ -448,8 +447,7 @@ namespace Biwen.QuickApi
                 }
 
                 //规范化异常返回
-                var exceptionResultBuilder = sp.GetService<IQuickApiExceptionResultBuilder>();
-                if (exceptionResultBuilder is not null)
+                if (sp.GetService<IQuickApiExceptionResultBuilder>() is { } exceptionResultBuilder)
                 {
                     return await exceptionResultBuilder.ErrorResult(ex);
                 }

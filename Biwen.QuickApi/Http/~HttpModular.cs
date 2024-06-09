@@ -3,7 +3,7 @@
 namespace Biwen.QuickApi.Http
 {
     [CoreModular]
-    internal class _CoreModular(IServiceProvider serviceProvider) : ModularBase
+    internal class HttpModular(IServiceProvider serviceProvider) : ModularBase
     {
 
         public override int Order => base.Order;

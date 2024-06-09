@@ -1,8 +1,5 @@
-﻿using Biwen.QuickApi.Scheduling;
-
-namespace Biwen.QuickApi.DemoWeb.Schedules
+﻿namespace Biwen.QuickApi.DemoWeb.Schedules
 {
-
     /// <summary>
     /// 模拟一个只能同时存在一个的任务.一分钟执行一次,但是耗时两分钟.
     /// </summary>

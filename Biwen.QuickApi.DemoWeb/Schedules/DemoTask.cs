@@ -1,8 +1,8 @@
-﻿using Biwen.QuickApi.Infrastructure.Locking;
-using Biwen.QuickApi.Scheduling;
-using Biwen.QuickApi.Scheduling.Stores;
-namespace Biwen.QuickApi.DemoWeb.Schedules
+﻿namespace Biwen.QuickApi.DemoWeb.Schedules
 {
+    using Biwen.QuickApi.Infrastructure.Locking;
+    using Biwen.QuickApi.Scheduling.Stores;
+
     /// <summary>
     /// Demo ScheduleTask，用于Store演示
     /// </summary>

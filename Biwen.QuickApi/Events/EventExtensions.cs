@@ -11,8 +11,8 @@
         /// <exception cref="InvalidOperationException"></exception>
         public static async Task PublishAsync<T>(this T @event, CancellationToken cancellationToken = default) where T : class, IEvent
         {
-            if (ServiceRegistration.ServiceProvider is null) throw new QuickApiExcetion("mush UseBiwenQuickApis() first!");
-            using var scope = ServiceRegistration.ServiceProvider.CreateScope();
+            if (QuickApi.ServiceRegistration.ServiceProvider is null) throw new QuickApiExcetion("mush UseBiwenQuickApis() first!");
+            using var scope = QuickApi.ServiceRegistration.ServiceProvider.CreateScope();
             var publisher = scope.ServiceProvider.GetRequiredService<Publisher>();
             await publisher.PublishAsync(@event, cancellationToken);
         }
