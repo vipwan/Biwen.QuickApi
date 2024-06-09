@@ -2,6 +2,9 @@
 using Biwen.QuickApi.DemoWeb.Components;
 using Biwen.QuickApi.DemoWeb.Schedules;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Caching.Hybrid;
+using System.Threading.Channels;
 
 namespace Biwen.QuickApi.DemoWeb
 {
@@ -35,6 +38,16 @@ namespace Biwen.QuickApi.DemoWeb
 
         public override void ConfigureServices(IServiceCollection services)
         {
+            //hybrid cache NET9 新功能,多级缓存避免分布式缓存的强制转换,需要引用Microsoft.Extensions.Caching.Hybri
+            services.AddHybridCache(options =>
+            {
+                options.DefaultEntryOptions = new HybridCacheEntryOptions
+                {
+                    Expiration = TimeSpan.FromSeconds(5 * 60),//默认5分钟缓存
+                    LocalCacheExpiration = TimeSpan.FromSeconds(5 * 60 - 1)//本地缓存提前1秒过期
+                };
+            });
+
             // Add services to the container.
             services.AddScoped<HelloService>();
             // keyed services
@@ -54,7 +67,7 @@ namespace Biwen.QuickApi.DemoWeb
                 //测试HtmlSanitizer
                 x.MapGet("/xss", () => { return "<a href=\"javascript: alert('xss')\">Click me</a>".SanitizeHtml(); });
 
-                x.MapGet("/cached/{id:int?}", (int? id) =>
+                x.MapGet("/outputcache/{id:int?}", (int? id) =>
                 {
                     return Results.Content($"{id}-{DateTime.Now}");
                 }).CacheOutput(policy =>
@@ -62,6 +75,31 @@ namespace Biwen.QuickApi.DemoWeb
                     //缓存10s过期
                     policy.Expire(TimeSpan.FromSeconds(10d));
                 });
+                //分布式缓存,性能不佳,建议使用.NET9新增hybrid缓存
+                x.MapGet("/cached-in-distribute", async (IDistributedCache distributedCache) =>
+                {
+                    if (await distributedCache.GetStringAsync("$cached-in-memory") is null)
+                    {
+                        await distributedCache.SetStringAsync("$cached-in-memory", $"cached-in-memory:{DateTime.Now}", new DistributedCacheEntryOptions
+                        {
+                            AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(10d)
+                        });
+                    }
+                    return Results.Content($"{await distributedCache.GetStringAsync("$cached-in-memory")}-{DateTime.Now}");
+                }).WithDescription("分布式缓存,存在序列化&反序列化,性能较差");
+                //hybrid缓存,避免分布式缓存的强制转换
+                x.MapGet("/cached-in-hybrid", async (HybridCache hybridCache) =>
+                {
+                    var cachedDate = await hybridCache.GetOrCreateAsync($"$cached-in-hybrid", async cancel =>
+                      {
+                          return await ValueTask.FromResult(DateTime.Now);
+                      }, options: new HybridCacheEntryOptions
+                      {
+                          Expiration = TimeSpan.FromSeconds(10d),//便于验证,设直10秒过期
+                          LocalCacheExpiration = TimeSpan.FromSeconds(10d),
+                      });
+                    return Results.Content($"缓存的数据:{cachedDate}");
+                }).WithDescription("多级缓存,避免分布式缓存的频繁序列化反序列化");
 
                 x.MapComponent<HelloWorld>("/razor/{key}",
                     context =>
