@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Biwen.QuickApi.Infrastructure.Html;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Biwen.QuickApi.Http
 {
-    [CoreModular]
+    [CoreModular, PreModular<HtmlSanitizerModular>]
     internal class HttpModular(IServiceProvider serviceProvider) : ModularBase
     {
 

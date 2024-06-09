@@ -52,6 +52,9 @@ namespace Biwen.QuickApi.DemoWeb
                     return Results.Content(request.Hello);
                 });
 
+                //测试HtmlSanitizer
+                x.MapGet("/xss", () => { return "<a href=\"javascript: alert('xss')\">Click me</a>".SanitizeHtml(); });
+
                 x.MapGet("/cached", () =>
                 {
                     return Results.Content(DateTime.Now.ToString());
