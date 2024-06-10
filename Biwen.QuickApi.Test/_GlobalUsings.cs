@@ -1,4 +1,5 @@
 global using Xunit;
+global using Xunit.Abstractions;
 
 global using Biwen.QuickApi;
 global using Biwen.QuickApi.Attributes;

@@ -1,6 +1,4 @@
-﻿using Xunit.Abstractions;
-
-namespace Biwen.QuickApi.Test
+﻿namespace Biwen.QuickApi.Test
 {
     public class StringExtensionsTest(ITestOutputHelper testOutput)
     {
