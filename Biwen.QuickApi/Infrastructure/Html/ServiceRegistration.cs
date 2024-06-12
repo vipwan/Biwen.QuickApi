@@ -18,7 +18,7 @@ namespace Microsoft.Extensions.DependencyInjection
                 sanitizer.AllowedTags.Remove("form");
             });
 
-            services.AddSingleton<IHtmlSanitizerService, HtmlSanitizerService>();
+            services.AddActivatedSingleton<IHtmlSanitizerService, HtmlSanitizerService>();
             return services;
 
         }

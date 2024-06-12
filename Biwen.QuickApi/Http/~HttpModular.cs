@@ -17,7 +17,7 @@ namespace Biwen.QuickApi.Http
             //默认的异常返回构造器
             services.AddIf(useQuickApiExceptionResultBuilder, sp =>
             {
-                services.AddSingleton<IQuickApiExceptionResultBuilder, DefaultExceptionResultBuilder>();
+                services.AddActivatedSingleton<IQuickApiExceptionResultBuilder, DefaultExceptionResultBuilder>();
             });
 
             //注册QuickApi
