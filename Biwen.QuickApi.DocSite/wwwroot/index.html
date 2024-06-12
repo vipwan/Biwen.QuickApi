@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+      <title>Biwen.QuickApi | Biwen.QuickApi 2.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Biwen.QuickApi | Biwen.QuickApi 2.0 ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="https://github.com/vipwan/Biwen.QuickApi">
+            <img id="logo" class="svg" src="logo.svg" alt="Biwen.QuickApi">
+            Biwen.QuickApi
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="biwenquickapi">Biwen.QuickApi</h1>
+
+<p><img src="https://img.shields.io/nuget/v/Biwen.QuickApi" alt="Nuget">
+<img src="https://img.shields.io/nuget/dt/Biwen.QuickApi" alt="Nuget">
+<a href="https://github.com/vipwan/Biwen.QuickApi/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a>
+<a href="https://github.com/vipwan/Biwen.QuickApi/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a></p>
+<h2 id="项目介绍">项目介绍</h2>
+<p>Biwen.QuickApi 2+,是一个微型<code>aspnetcore</code>开发框架,提供minimalapi的QuickApi封装,提供<code>IQuickEndpoint</code>书写minimalapi,
+模块化支持<code>Modular</code>,发布订阅:<code>IEvent</code>,作业调度:<code>IScheduleTask</code>,LocalLock,OpenApi ~~</p>
+<pre><code class="lang-csharp">public class MyStore
+{
+    public static Todo[] SampleTodos()
+    {
+        return [
+            new(1, &quot;Walk the dog&quot;),
+            new(2, &quot;Do the dishes&quot;, DateOnly.FromDateTime(DateTime.Now)),
+            ];
+    }
+}
+
+[QuickApi(&quot;todos&quot;)] //返回对象方式
+public class TodoApi : BaseQuickApi&lt;EmptyRequest,Todo[]&gt;
+{
+    public override async ValueTask&lt;Todo[]&gt; ExecuteAsync(EmptyRequest request)
+    {
+        await Task.CompletedTask;
+        return MyStore.SampleTodos();
+    }
+}
+</code></pre>
+<ul>
+<li>(MinimalApi as REPR) Biwen.QuickApi遵循了 REPR 设计 （Request-Endpoint-Response）</li>
+<li>开箱即用</li>
+<li>write less, do more ; write anywhere, do anything</li>
+<li>欢迎小伙伴们star&amp;issue共同学习进步 <a href="https://github.com/vipwan/Biwen.QuickApi">Biwen.QuickApi</a></li>
+</ul>
+<h2 id="开发工具">开发工具</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/zh-cn/visualstudio/releases/2022/release-notes-preview">Visual Studio 2022 17.10.0 +</a></li>
+<li><a href="https://dotnet.microsoft.com/zh-cn/download/dotnet/9.0">Net 9.0.0</a></li>
+</ul>
+<h2 id="依赖环境库">依赖环境&amp;库</h2>
+<ul>
+<li>Microsoft.AspNetCore.App</li>
+<li><a href="https://www.nuget.org/packages/FluentValidation.AspNetCore/11.3.0">FluentValidation.AspNetCore</a></li>
+<li><a href="https://www.nuget.org/packages/Microsoft.AspNetCore.OpenApi/8.0.5">Microsoft.AspNetCore.OpenApi</a></li>
+</ul>
+<h2 id="使用方式">使用方式</h2>
+<h3 id="step0-nuget">Step0 Nuget</h3>
+<pre><code class="lang-bash">dotnet add package Biwen.QuickApi
+</code></pre>
+<h3 id="step1-usebiwenquickapis">Step1 UseBiwenQuickApis</h3>
+<h4 id="biwenquickapioptions配置项">BiwenQuickApiOptions配置项:</h4>
+<ul>
+<li><code>RoutePrefix</code>:前缀,默认:api,</li>
+<li><code>EnableAntiForgeryTokens</code>:是否启用防伪,默认:true,</li>
+<li><code>EnablePubSub</code>:是否启用发布订阅,默认:true,<a href="https://github.com/vipwan/Biwen.QuickApi/issues/17">#17</a></li>
+<li><code>EnableScheduling</code>:是否启用调度,默认:true,<a href="https://github.com/vipwan/Biwen.QuickApi/issues/18">#18</a></li>
+<li><code>UseQuickApiExceptionResultBuilder</code>:是否启用QuickApi的规范化异常处理,默认:false,(true将返回详细的异常信息到前端.一般仅调试模式开启)</li>
+</ul>
+<pre><code class="lang-csharp">services.AddBiwenQuickApis(Action&lt;BiwenQuickApiOptions&gt;? options);//add services
+app.UseBiwenQuickApis();//use middleware
+</code></pre>
+<h3 id="step2-define-request-and-response">Step2 Define Request and Response</h3>
+<ul>
+<li>推荐Biwen.AutoClassGen(已内置)生成Partial Request &amp; DTO对象 <a href="https://github.com/vipwan/Biwen.QuickApi/blob/master/Biwen.QuickApi.DemoWeb/Apis/AutoClassGenApi.cs">参考代码</a></li>
+</ul>
+<pre><code class="lang-csharp">
+public class HelloApiRequest : BaseRequest&lt;HelloApiRequest&gt;
+{
+    [Description(&quot;Name Desc&quot;)]
+    public string? Name { get; set; }
+
+    /// &lt;summary&gt;
+    /// FromQuery特性绑定字段
+    /// &lt;/summary&gt;
+    [FromQuery(&quot;q&quot;)]
+    public string? Q { get; set; }
+    public HelloApiRequest()
+    {
+        RuleFor(x =&gt; x.Name).NotNull().Length(5, 10);
+    }
+}
+    
+/// &lt;summary&gt;
+/// 上传文件FileUploadRequest 
+/// &lt;/summary&gt;
+public class FileUploadRequest : BaseRequest&lt;FileUploadRequest&gt;
+{
+    public IFormFile? File { get; set; }
+
+    public FileUploadRequest()
+    {
+        RuleFor(x =&gt; x.File).NotNull();
+    }
+}
+
+/// &lt;summary&gt;
+/// 模拟自定义绑定的Request
+/// &lt;/summary&gt;
+public class CustomApiRequest : BaseRequest&lt;CustomApiRequest&gt;
+{
+    public string? Name { get; set; }
+
+    public CustomApiRequest()
+    {
+        RuleFor(x =&gt; x.Name).NotNull().Length(5, 10);
+    }
+}
+/// &lt;summary&gt;
+/// 标记FromBody,表示这个请求对象是FromBody的
+/// &lt;/summary&gt;
+[FromBody]
+public class FromBodyRequest : BaseRequest&lt;FromBodyRequest&gt;
+{
+    public int Id { get; set; }
+    public string? Name { get; set; }
+
+    public FromBodyRequest()
+    {
+        RuleFor(x =&gt; x.Id).InclusiveBetween(1, 100);//必须1~100
+    }
+}
+/// &lt;summary&gt;
+/// 自定义的绑定器
+/// &lt;/summary&gt;
+public class CustomApiRequestBinder : IReqBinder&lt;CustomApiRequest&gt;
+{
+    public static async ValueTask&lt;CustomApiRequest&gt; BindAsync(HttpContext context,ParameterInfo parameter = null)
+    {
+        var request = new CustomApiRequest
+        {
+            Name = context.Request.Query[&quot;c&quot;]
+        };
+        await Task.CompletedTask;
+        return request;
+    }
+}
+
+public class HelloApiResponse
+{
+    public string? Message { get; set; }
+}
+
+</code></pre>
+<h3 id="step3-define-quickapi">Step3 Define QuickApi</h3>
+<pre><code class="lang-csharp">
+/// &lt;summary&gt;
+/// get ~/admin/index
+/// &lt;/summary&gt;
+[QuickApi(&quot;index&quot;, Group = &quot;admin&quot;, Verbs = Verb.GET | Verb.POST, Policy = &quot;admin&quot;)]
+[QuickApiSummary(&quot;this is summary&quot;,&quot;this is description&quot;)]
+public class NeedAuthApi : BaseQuickApi
+{
+    public override IResult Execute(EmptyRequest request)
+    {
+        return Results.Ok();
+    }
+}
+
+/// &lt;summary&gt;
+/// get ~/hello/world/{name}
+/// &lt;/summary&gt;
+[QuickApi(&quot;world/{name}&quot;, Group = &quot;hello&quot;, Verbs = Verb.GET | Verb.POST)]
+public class HelloApi : BaseQuickApi&lt;HelloApiRequest, HelloApiResponse&gt;
+{
+    private readonly HelloService _service;
+    private readonly IHttpContextAccessor _httpContextAccessor;
+
+    public HelloApi(HelloService service,IHttpContextAccessor httpContextAccessor)
+    {
+        _service = service;
+        _httpContextAccessor = httpContextAccessor;
+    }
+
+    public override HelloApiResponse Execute(HelloApiRequest request)
+    {
+        var hello = _service.Hello($&quot;hello world {_httpContextAccessor.HttpContext!.Request.Path} !&quot;);
+        return new HelloApiResponse{ Message = hello };
+    }
+}
+
+/// &lt;summary&gt;
+/// get ~/custom?c=11112222
+/// &lt;/summary&gt;
+[QuickApi(&quot;custom&quot;, Verbs = Verb.GET)]
+public class CustomApi : BaseQuickApi&lt;CustomApiRequest&gt;
+{
+    public CustomApi()
+    {
+        //自定义绑定器
+        UseReqBinder&lt;CustomApiRequestBinder&gt;();
+    }
+
+    public override async ValueTask&lt;IResult&gt; ExecuteAsync(CustomApiRequest request)
+    {
+        await Task.CompletedTask;
+        Console.WriteLine($&quot;获取自定义的 CustomApi:,从querystring:c绑定,{request.Name}&quot;);
+        return Results.Ok();
+    }
+
+    /// &lt;summary&gt;
+    /// 提供minimal扩展
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;builder&quot;&gt;&lt;/param&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
+    {
+        //自定义描述
+        builder.WithOpenApi(operation =&gt; new(operation)
+        {
+            Summary = &quot;This is a summary&quot;,
+            Description = &quot;This is a description&quot;
+        });
+
+        //自定义标签
+        builder.WithTags(&quot;custom&quot;);
+
+        //自定义过滤器
+        builder.AddEndpointFilter(async (context, next) =&gt;
+        {
+            Console.WriteLine(&quot;自定义过滤器!&quot;);
+            return await next(context);
+        });
+        //默认实现了Accepts和Produces
+        return base.HandlerBuilder(builder);
+        //如果完全自定义直接返回Builder
+        //return builder;
+        }
+}
+    
+/// &lt;summary&gt;
+/// 上传文件测试
+/// 请使用postman &amp; apifox 测试
+/// &lt;/summary&gt;
+[QuickApi(&quot;fromfile&quot;, Verbs = Verb.POST)]
+[QuickApiSummary(&quot;上传文件测试&quot;, &quot;上传文件测试&quot;)]
+public class FromFileApi : BaseQuickApi&lt;FileUploadRequest, Results&lt;Ok&lt;string&gt;,BadRequest&lt;string&gt;&gt;&gt;
+{
+    public override async ValueTask&lt;Results&lt;Ok&lt;string&gt;,BadRequest&lt;string&gt;&gt; ExecuteAsync(FileUploadRequest request)
+    {
+        //测试上传一个文本文件并读取内容
+        if (request.File != null)
+        {
+            using (var sr = new StreamReader(request.File.OpenReadStream()))
+            {
+                var content = await sr.ReadToEndAsync();
+                return TypedResults.Ok(content);
+            }
+        }
+        return TypedResults.BadRequest(&quot;no file&quot;);
+    }
+}
+
+/// &lt;summary&gt;
+/// JustAsService 只会被服务发现，不会被注册到路由表
+/// &lt;/summary&gt;
+[QuickApi(&quot;&quot;), JustAsService]
+public class JustAsService : BaseQuickApi&lt;EmptyRequest, string&gt;
+{
+    public override async ValueTask&lt;string&gt; ExecuteAsync(EmptyRequest request)
+    {
+        return &quot;Hello World JustAsService!&quot;;
+    }
+}
+</code></pre>
+<h3 id="提供quickapi的group扩展支持">提供QuickApi的Group扩展支持</h3>
+<pre><code class="lang-csharp">
+   // 当前模拟给所有 Group为空的QuickApi加上 Tag &quot;Def&quot; 
+    public class MyGroupRouteBuilder : IQuickApiGroupRouteBuilder
+    {
+        // 表述Group为空的QuickApi
+        public string Group =&gt; string.Empty;
+        // 执行顺序
+        public int Order =&gt; 1;
+        // 实现Builder方法
+        public RouteGroupBuilder Builder(RouteGroupBuilder routeBuilder)
+        {
+            // 给所有 Group为空的QuickApi加上 Tag &quot;Def&quot;
+            routeBuilder.WithTags(&quot;Def&quot;);
+            return routeBuilder;
+        }
+    }
+
+// 最后注册
+builder.Services.AddBiwenQuickApiGroupRouteBuilder&lt;MyGroupRouteBuilder&gt;();
+
+</code></pre>
+<h3 id="step4-enjoy">Step4 Enjoy</h3>
+<pre><code class="lang-csharp">
+//直接访问
+// GET ~/hello/world/biwen
+// GET ~/hello/world/biwen?name=biwen
+// POST ~/hello/world/biwen
+// GET ~/custom?c=11112222
+
+</code></pre>
+<pre><code class="lang-csharp">
+//你也可以把QuickApi当Service使用
+app.MapGet(&quot;/fromapi&quot;, async (Apis.Hello4Api api) =&gt;
+{
+    //通过你的方式获取请求对象
+    var req = new EmptyRequest();
+    //验证请求对象
+    var result = req.RealValidator.Validate(req);
+    if (!result.IsValid)
+    {
+        return Results.BadRequest(result.ToDictionary());
+    }
+    //执行请求
+    var x = await api.ExecuteAsync(new EmptyRequest());
+    return Results.Ok(x);
+});
+
+</code></pre>
+<h3 id="step5-openapi集成">Step5 OpenApi集成</h3>
+<pre><code class="lang-c#">
+//register openapi &amp; quickapi document
+builder.Services.AddOpenApi(options =&gt;
+{
+    options.UseTransformer&lt;BearerSecuritySchemeTransformer&gt;();
+    options.ShouldInclude = (desc) =&gt; true;
+});
+
+//more doc group...
+
+//map openapi doc &amp; ui
+app.MapGroup(&quot;openapi&quot;, app =&gt;
+{
+    //swagger ui
+    app.MapOpenApi(&quot;{documentName}.json&quot;);
+    app.MapScalarUi();
+});
+</code></pre>
+<h3 id="step6-openapi-以及client代理">Step6 OpenApi 以及Client代理</h3>
+<ul>
+<li>你可以全局配置版本号,以及自定义的OpenApi描述</li>
+<li>你可以重写QuickApi的HandlerBuilder方法,以便于你自定义的OpenApi描述</li>
+<li>我们强烈建议您使用<code>Kiota</code>,<code>Refit</code>生成代理代码,以便于您的客户端和服务端保持一致的接口定义</li>
+<li>因为遵循REPR风格,所以不推荐SwaggerUI或使用SwaggerStudio生成代理代码,除非您的QuickApi定义的相当规范(如存在自定义绑定,别名绑定等)!</li>
+</ul>
+<pre><code class="lang-csharp">
+/// &lt;summary&gt;
+/// refit client
+/// &lt;/summary&gt;
+public interface IBusiness
+{
+    [Refit.Get(&quot;/fromapi&quot;)]
+    public Task&lt;TestRsp&gt; TestPost();
+}
+
+//Refit
+builder.Services.AddRefitClient&lt;IBusiness&gt;()
+    .ConfigureHttpClient(c =&gt; c.BaseAddress = new Uri(&quot;http://localhost:5101&quot;));
+
+var app = builder.Build();
+
+app.MapGet(&quot;/from-quickapi&quot;, async (IBusiness bussiness) =&gt;
+{
+    var resp = await bussiness.TestPost();
+    return Results.Content(resp.Message);
+});
+
+</code></pre>
+<h3 id="benchmark性能测试">Benchmark性能测试</h3>
+<pre><code class="lang-txt">BenchmarkDotNet v0.13.12, Windows 10 (10.0.19045.3570/22H2/2022Update)
+11th Gen Intel Core i7-11800H 2.30GHz, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 8.0.100
+[Host]     : .NET 8.0.0 (8.0.0.100), X64 RyuJIT AVX2 [AttachedDebugger]
+Job-WHDDIT : .NET 8.0.0 (8.0.0.100), X64 RyuJIT AVX2
+
+Runtime=.NET 8.0  InvocationCount=2000  IterationCount=10  
+LaunchCount=1  WarmupCount=1  
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Error</th>
+<th style="text-align: right;">StdDev</th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;">Ratio</th>
+<th style="text-align: right;">RatioSD</th>
+<th style="text-align: right;">Gen0</th>
+<th style="text-align: right;">Allocated</th>
+<th style="text-align: right;">Alloc Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WebApiCtrl</td>
+<td style="text-align: right;">385.5 μs</td>
+<td style="text-align: right;">357.93 μs</td>
+<td style="text-align: right;">236.75 μs</td>
+<td style="text-align: right;">231.0 μs</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">2.5000</td>
+<td style="text-align: right;">33.5 KB</td>
+<td style="text-align: right;">1.00</td>
+</tr>
+<tr>
+<td>MinimalApi</td>
+<td style="text-align: right;">221.2 μs</td>
+<td style="text-align: right;">13.02 μs</td>
+<td style="text-align: right;">6.81 μs</td>
+<td style="text-align: right;">220.9 μs</td>
+<td style="text-align: right;">0.68</td>
+<td style="text-align: right;">0.34</td>
+<td style="text-align: right;">2.0000</td>
+<td style="text-align: right;">24.38 KB</td>
+<td style="text-align: right;">0.73</td>
+</tr>
+<tr>
+<td>QuickApi</td>
+<td style="text-align: right;">235.9 μs</td>
+<td style="text-align: right;">22.26 μs</td>
+<td style="text-align: right;">11.65 μs</td>
+<td style="text-align: right;">235.4 μs</td>
+<td style="text-align: right;">0.72</td>
+<td style="text-align: right;">0.34</td>
+<td style="text-align: right;">2.0000</td>
+<td style="text-align: right;">27.59 KB</td>
+<td style="text-align: right;">0.82</td>
+</tr>
+</tbody>
+</table>
+<h3 id="qa">Q&amp;A</h3>
+<ul>
+<li><p>为什么不支持多个参数的绑定?
+-- 因为我认为这样的Api设计是不合理的,我们遵循REPR设计理念,如果你需要多个参数,请使用复杂化的Request对象</p>
+</li>
+<li><p>QuickApi中如何拿到HttpContext对象?
+-- 请在构造函数中注入IHttpContextAccessor获取</p>
+</li>
+<li><p>是否支持Minimal的中间件和拦截器?
+-- 支持的,本身QuickApi就是扩展了MinimalApi,底层也是Minimal的处理机制,所以请考虑全局的中间件和拦截器,以及重写QuickApi的HandlerBuilder方法
+-- 如果你仅仅需要使用中间件控制QuickApi的行为可以参考下面的代码:</p>
+</li>
+</ul>
+<pre><code class="lang-csharp">var md = context.GetEndpoint()?.Metadata.GetMetadata&lt;QuickApiMetadata&gt;();
+if (md == null || md.QuickApiType == null)
+{
+    await _next(context);
+    return;
+}
+
+//todo:
+
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

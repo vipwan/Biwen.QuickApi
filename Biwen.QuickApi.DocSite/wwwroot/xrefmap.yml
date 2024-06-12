@@ -1,0 +1,105 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: graph.windows.net/myorganization/Contacts/1.6
+  name: Contacts
+  href: restapi/contacts.html
+- uid: graph.windows.net/myorganization/Contacts/1.6/delete contact
+  name: delete contact
+  href: restapi/contacts.html#graph_windows_net_myorganization_Contacts_1_6_delete_contact
+- uid: graph.windows.net/myorganization/Contacts/1.6/delete contact manager by id
+  name: delete contact manager by id
+  href: restapi/contacts.html#graph_windows_net_myorganization_Contacts_1_6_delete_contact_manager_by_id
+- uid: graph.windows.net/myorganization/Contacts/1.6/get contact by id
+  name: get contact by id
+  href: restapi/contacts.html#graph_windows_net_myorganization_Contacts_1_6_get_contact_by_id
+- uid: graph.windows.net/myorganization/Contacts/1.6/get contact direct reports links
+  name: get contact direct reports links
+  href: restapi/contacts.html#graph_windows_net_myorganization_Contacts_1_6_get_contact_direct_reports_links
+- uid: graph.windows.net/myorganization/Contacts/1.6/get contact manager link
+  name: get contact manager link
+  href: restapi/contacts.html#graph_windows_net_myorganization_Contacts_1_6_get_contact_manager_link
+- uid: graph.windows.net/myorganization/Contacts/1.6/get contact memberOf links
+  name: get contact memberOf links
+  href: restapi/contacts.html#graph_windows_net_myorganization_Contacts_1_6_get_contact_memberOf_links
+- uid: graph.windows.net/myorganization/Contacts/1.6/get contacts
+  name: get contacts
+  href: restapi/contacts.html#graph_windows_net_myorganization_Contacts_1_6_get_contacts
+- uid: graph.windows.net/myorganization/Contacts/1.6/update contact
+  name: update contact
+  href: restapi/contacts.html#graph_windows_net_myorganization_Contacts_1_6_update_contact
+- uid: graph.windows.net/myorganization/Contacts/1.6/update contact manager
+  name: update contact manager
+  href: restapi/contacts.html#graph_windows_net_myorganization_Contacts_1_6_update_contact_manager
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0
+  name: Swagger Petstore
+  href: restapi/petstore.html
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/addPet
+  name: addPet
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_addPet
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/createUser
+  name: createUser
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_createUser
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/createUsersWithArrayInput
+  name: createUsersWithArrayInput
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_createUsersWithArrayInput
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/createUsersWithListInput
+  name: createUsersWithListInput
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_createUsersWithListInput
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/deleteOrder
+  name: deleteOrder
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_deleteOrder
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/deletePet
+  name: deletePet
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_deletePet
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/deleteUser
+  name: deleteUser
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_deleteUser
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/findPetsByStatus
+  name: findPetsByStatus
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_findPetsByStatus
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/findPetsByTags
+  name: findPetsByTags
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_findPetsByTags
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/getInventory
+  name: getInventory
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_getInventory
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/getOrderById
+  name: getOrderById
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_getOrderById
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/getPetById
+  name: getPetById
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_getPetById
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/getUserByName
+  name: getUserByName
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_getUserByName
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/loginUser
+  name: loginUser
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_loginUser
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/logoutUser
+  name: logoutUser
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_logoutUser
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/placeOrder
+  name: placeOrder
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_placeOrder
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/tag/pet
+  name: pet
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_tag_pet
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/tag/store
+  name: store
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_tag_store
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/tag/user
+  name: user
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_tag_user
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/updatePet
+  name: updatePet
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_updatePet
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/updatePetWithForm
+  name: updatePetWithForm
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_updatePetWithForm
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/updateUser
+  name: updateUser
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_updateUser
+- uid: petstore.swagger.io/v2/Swagger Petstore/1.0.0/uploadFile
+  name: uploadFile
+  href: restapi/petstore.html#petstore_swagger_io_v2_Swagger_Petstore_1_0_0_uploadFile

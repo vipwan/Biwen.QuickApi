@@ -7,9 +7,22 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="seed\**" />
+	  <Compile Remove="src\**" />
+	  <Content Remove="seed\**" />
+	  <Content Remove="src\**" />
+	  <EmbeddedResource Remove="seed\**" />
+	  <EmbeddedResource Remove="src\**" />
+	  <None Remove="seed\**" />
+	  <None Remove="src\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Biwen.Blazor.Components" Version="1.0.0-beta2" />
+		<PackageReference Include="Docfx.App" Version="2.76.0" />
 		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.7.2" />
 		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.7.2" />
+		<PackageReference Include="System.Security.Cryptography.Xml" Version="8.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>

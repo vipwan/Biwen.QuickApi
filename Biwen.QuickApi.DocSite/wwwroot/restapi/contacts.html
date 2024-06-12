@@ -1,0 +1,1314 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Contacts | Biwen.QuickApi 2.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Contacts | Biwen.QuickApi 2.0 ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/vipwan/Biwen.QuickApi/new/net9/apiSpec/new?filename=graph_windows_net_myorganization_Contacts_1_6.md&amp;value=---%0Auid%3A%20graph.windows.net%2Fmyorganization%2FContacts%2F1.6%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Biwen.QuickApi">
+            Biwen.QuickApi
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="graph.windows.net/myorganization/Contacts/1.6">
+
+<h1 id="graph_windows_net_myorganization_Contacts_1_6" data-uid="graph.windows.net/myorganization/Contacts/1.6" class="text-capitalize text-break">Contacts</h1>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vipwan/Biwen.QuickApi/new/net9/apiSpec/new?filename=graph_windows_net_myorganization_Contacts_1_6_get_contacts.md&amp;value=---%0Auid%3A%20graph.windows.net%2Fmyorganization%2FContacts%2F1.6%2Fget%20contacts%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/restapi/contacts_swagger2.json/#L1">View Source</a>
+  </span>
+  <h3 id="graph_windows_net_myorganization_Contacts_1_6_get_contacts" data-uid="graph.windows.net/myorganization/Contacts/1.6/get contacts" class="text-capitalize">get contacts</h3>
+  <div class="markdown level1 summary"><p>You can get a collection of contacts from your tenant.</p>
+</div>
+  <div class="markdown level1 description"><p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>
+</div>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">GET /contacts?api-version</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*api-version</span></td>
+        <td>
+            
+
+        </td>
+        <td>1.6</td>
+        <td><p>The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+            
+
+        </td>
+        <td><p>OK. Indicates success. The results are returned in the response body.</p>
+</td>
+        <td class="sample-response">
+          <div class="mime-type">
+            <i>Mime type: </i><span class="mime">application/json</span>
+          </div>
+          <pre class="response-content"><code class="lang-js json hljs">{
+  &quot;odata.metadata&quot;: &quot;https://graph.windows.net/myorganization/$metadata#directoryObjects/Microsoft.DirectoryServices.Contact&quot;,
+  &quot;value&quot;: [
+    {
+      &quot;odata.type&quot;: &quot;Microsoft.DirectoryServices.Contact&quot;,
+      &quot;objectType&quot;: &quot;Contact&quot;,
+      &quot;objectId&quot;: &quot;31944231-fd52-4a7f-b32e-7902a01fddf9&quot;,
+      &quot;deletionTimestamp&quot;: null,
+      &quot;city&quot;: null,
+      &quot;companyName&quot;: null,
+      &quot;country&quot;: null,
+      &quot;department&quot;: null,
+      &quot;dirSyncEnabled&quot;: null,
+      &quot;displayName&quot;: &quot;Marcus Breyer&quot;,
+      &quot;facsimileTelephoneNumber&quot;: null,
+      &quot;givenName&quot;: &quot;Marcus&quot;,
+      &quot;jobTitle&quot;: null,
+      &quot;lastDirSyncTime&quot;: null,
+      &quot;mail&quot;: &quot;Marcus@contoso.com&quot;,
+      &quot;mailNickname&quot;: &quot;MarcusBreyer&quot;,
+      &quot;mobile&quot;: null,
+      &quot;physicalDeliveryOfficeName&quot;: null,
+      &quot;postalCode&quot;: null,
+      &quot;provisioningErrors&quot;: [],
+      &quot;proxyAddresses&quot;: [
+        &quot;SMTP:Marcus@contoso.com&quot;
+      ],
+      &quot;sipProxyAddress&quot;: null,
+      &quot;state&quot;: null,
+      &quot;streetAddress&quot;: null,
+      &quot;surname&quot;: &quot;Breyer&quot;,
+      &quot;telephoneNumber&quot;: null
+    },
+    {
+      &quot;odata.type&quot;: &quot;Microsoft.DirectoryServices.Contact&quot;,
+      &quot;objectType&quot;: &quot;Contact&quot;,
+      &quot;objectId&quot;: &quot;35110b16-360c-4c4a-93b2-03f065fabd93&quot;,
+      &quot;deletionTimestamp&quot;: null,
+      &quot;city&quot;: null,
+      &quot;companyName&quot;: null,
+      &quot;country&quot;: null,
+      &quot;department&quot;: null,
+      &quot;dirSyncEnabled&quot;: null,
+      &quot;displayName&quot;: &quot;Yossi Ran&quot;,
+      &quot;facsimileTelephoneNumber&quot;: null,
+      &quot;givenName&quot;: &quot;Yossi&quot;,
+      &quot;jobTitle&quot;: null,
+      &quot;lastDirSyncTime&quot;: null,
+      &quot;mail&quot;: &quot;Yossi@contoso.com&quot;,
+      &quot;mailNickname&quot;: &quot;YossiRan&quot;,
+      &quot;mobile&quot;: null,
+      &quot;physicalDeliveryOfficeName&quot;: null,
+      &quot;postalCode&quot;: null,
+      &quot;provisioningErrors&quot;: [],
+      &quot;proxyAddresses&quot;: [
+        &quot;SMTP:Yossi@contoso.com&quot;
+      ],
+      &quot;sipProxyAddress&quot;: null,
+      &quot;state&quot;: null,
+      &quot;streetAddress&quot;: null,
+      &quot;surname&quot;: &quot;Ran&quot;,
+      &quot;telephoneNumber&quot;: null
+    },
+    {
+      &quot;odata.type&quot;: &quot;Microsoft.DirectoryServices.Contact&quot;,
+      &quot;objectType&quot;: &quot;Contact&quot;,
+      &quot;objectId&quot;: &quot;7163f3b8-70c9-43d2-b9e1-4467ddaf087a&quot;,
+      &quot;deletionTimestamp&quot;: null,
+      &quot;city&quot;: null,
+      &quot;companyName&quot;: null,
+      &quot;country&quot;: null,
+      &quot;department&quot;: null,
+      &quot;dirSyncEnabled&quot;: null,
+      &quot;displayName&quot;: &quot;Jeremy Nelson&quot;,
+      &quot;facsimileTelephoneNumber&quot;: null,
+      &quot;givenName&quot;: &quot;Jeremy&quot;,
+      &quot;jobTitle&quot;: null,
+      &quot;lastDirSyncTime&quot;: null,
+      &quot;mail&quot;: &quot;Jeremy@contoso.com&quot;,
+      &quot;mailNickname&quot;: &quot;JeremyNelson&quot;,
+      &quot;mobile&quot;: null,
+      &quot;physicalDeliveryOfficeName&quot;: null,
+      &quot;postalCode&quot;: null,
+      &quot;provisioningErrors&quot;: [],
+      &quot;proxyAddresses&quot;: [
+        &quot;SMTP:Jeremy@contoso.com&quot;
+      ],
+      &quot;sipProxyAddress&quot;: null,
+      &quot;state&quot;: null,
+      &quot;streetAddress&quot;: null,
+      &quot;surname&quot;: &quot;Nelson&quot;,
+      &quot;telephoneNumber&quot;: null
+    },
+    {
+      &quot;odata.type&quot;: &quot;Microsoft.DirectoryServices.Contact&quot;,
+      &quot;objectType&quot;: &quot;Contact&quot;,
+      &quot;objectId&quot;: &quot;83234b5c-3a10-4108-8f36-39b1addadfdb&quot;,
+      &quot;deletionTimestamp&quot;: null,
+      &quot;city&quot;: null,
+      &quot;companyName&quot;: null,
+      &quot;country&quot;: null,
+      &quot;department&quot;: null,
+      &quot;dirSyncEnabled&quot;: null,
+      &quot;displayName&quot;: &quot;David Strome&quot;,
+      &quot;facsimileTelephoneNumber&quot;: null,
+      &quot;givenName&quot;: &quot;David&quot;,
+      &quot;jobTitle&quot;: null,
+      &quot;lastDirSyncTime&quot;: null,
+      &quot;mail&quot;: &quot;David@contoso.com&quot;,
+      &quot;mailNickname&quot;: &quot;DavidStrome&quot;,
+      &quot;mobile&quot;: null,
+      &quot;physicalDeliveryOfficeName&quot;: null,
+      &quot;postalCode&quot;: null,
+      &quot;provisioningErrors&quot;: [],
+      &quot;proxyAddresses&quot;: [
+        &quot;SMTP:David@contoso.com&quot;
+      ],
+      &quot;sipProxyAddress&quot;: null,
+      &quot;state&quot;: null,
+      &quot;streetAddress&quot;: null,
+      &quot;surname&quot;: &quot;Strome&quot;,
+      &quot;telephoneNumber&quot;: null
+    },
+    {
+      &quot;odata.type&quot;: &quot;Microsoft.DirectoryServices.Contact&quot;,
+      &quot;objectType&quot;: &quot;Contact&quot;,
+      &quot;objectId&quot;: &quot;8c1315ce-bf6f-4e26-b24f-c830606ef41c&quot;,
+      &quot;deletionTimestamp&quot;: null,
+      &quot;city&quot;: null,
+      &quot;companyName&quot;: null,
+      &quot;country&quot;: null,
+      &quot;department&quot;: null,
+      &quot;dirSyncEnabled&quot;: null,
+      &quot;displayName&quot;: &quot;Holly Holt&quot;,
+      &quot;facsimileTelephoneNumber&quot;: null,
+      &quot;givenName&quot;: &quot;Holly&quot;,
+      &quot;jobTitle&quot;: null,
+      &quot;lastDirSyncTime&quot;: null,
+      &quot;mail&quot;: &quot;Holly@contoso.com&quot;,
+      &quot;mailNickname&quot;: &quot;HollyHolt&quot;,
+      &quot;mobile&quot;: null,
+      &quot;physicalDeliveryOfficeName&quot;: null,
+      &quot;postalCode&quot;: null,
+      &quot;provisioningErrors&quot;: [],
+      &quot;proxyAddresses&quot;: [
+        &quot;SMTP:Holly@contoso.com&quot;
+      ],
+      &quot;sipProxyAddress&quot;: null,
+      &quot;state&quot;: null,
+      &quot;streetAddress&quot;: null,
+      &quot;surname&quot;: &quot;Holt&quot;,
+      &quot;telephoneNumber&quot;: null
+    }
+  ]
+}</code></pre>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vipwan/Biwen.QuickApi/new/net9/apiSpec/new?filename=graph_windows_net_myorganization_Contacts_1_6_get_contact_by_id.md&amp;value=---%0Auid%3A%20graph.windows.net%2Fmyorganization%2FContacts%2F1.6%2Fget%20contact%20by%20id%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/restapi/contacts_swagger2.json/#L1">View Source</a>
+  </span>
+  <h3 id="graph_windows_net_myorganization_Contacts_1_6_get_contact_by_id" data-uid="graph.windows.net/myorganization/Contacts/1.6/get contact by id" class="text-capitalize">get contact by id</h3>
+  <div class="markdown level1 summary"><p>Get a contact by using the object ID.</p>
+</div>
+  <div class="markdown level1 description"><p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>
+</div>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">GET /contacts/{object_id}?api-version</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*object_id</span></td>
+        <td>
+            
+
+        </td>
+        <td>31944231-fd52-4a7f-b32e-7902a01fddf9</td>
+        <td><p>The object ID (GUID) of the target contact.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*api-version</span></td>
+        <td>
+            
+
+        </td>
+        <td>1.6</td>
+        <td><p>Specifies the version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+            
+
+        </td>
+        <td><p>OK. Indicates success. The contact is returned in the response body.</p>
+</td>
+        <td class="sample-response">
+          <div class="mime-type">
+            <i>Mime type: </i><span class="mime">application/json</span>
+          </div>
+          <pre class="response-content"><code class="lang-js json hljs">{
+  &quot;odata.metadata&quot;: &quot;https://graph.windows.net/graphdir1.onmicrosoft.com/$metadata#directoryObjects/Microsoft.DirectoryServices.Contact/@Element&quot;,
+  &quot;odata.type&quot;: &quot;Microsoft.DirectoryServices.Contact&quot;,
+  &quot;objectType&quot;: &quot;Contact&quot;,
+  &quot;objectId&quot;: &quot;31944231-fd52-4a7f-b32e-7902a01fddf9&quot;,
+  &quot;deletionTimestamp&quot;: null,
+  &quot;city&quot;: null,
+  &quot;companyName&quot;: null,
+  &quot;country&quot;: null,
+  &quot;department&quot;: null,
+  &quot;dirSyncEnabled&quot;: null,
+  &quot;displayName&quot;: &quot;Marcus Breyer&quot;,
+  &quot;facsimileTelephoneNumber&quot;: null,
+  &quot;givenName&quot;: &quot;Marcus&quot;,
+  &quot;jobTitle&quot;: null,
+  &quot;lastDirSyncTime&quot;: null,
+  &quot;mail&quot;: &quot;Marcus@contoso.com&quot;,
+  &quot;mailNickname&quot;: &quot;MarcusBreyer&quot;,
+  &quot;mobile&quot;: null,
+  &quot;physicalDeliveryOfficeName&quot;: null,
+  &quot;postalCode&quot;: null,
+  &quot;provisioningErrors&quot;: [],
+  &quot;proxyAddresses&quot;: [
+    &quot;SMTP:Marcus@contoso.com&quot;
+  ],
+  &quot;sipProxyAddress&quot;: null,
+  &quot;state&quot;: null,
+  &quot;streetAddress&quot;: null,
+  &quot;surname&quot;: &quot;Breyer&quot;,
+  &quot;telephoneNumber&quot;: null
+}</code></pre>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vipwan/Biwen.QuickApi/new/net9/apiSpec/new?filename=graph_windows_net_myorganization_Contacts_1_6_update_contact.md&amp;value=---%0Auid%3A%20graph.windows.net%2Fmyorganization%2FContacts%2F1.6%2Fupdate%20contact%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/restapi/contacts_swagger2.json/#L1">View Source</a>
+  </span>
+  <h3 id="graph_windows_net_myorganization_Contacts_1_6_update_contact" data-uid="graph.windows.net/myorganization/Contacts/1.6/update contact" class="text-capitalize">update contact</h3>
+  <div class="markdown level1 summary"><p>Change a contact's properties.</p>
+</div>
+  <div class="markdown level1 description"><p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>
+</div>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">PATCH /contacts/{object_id}?api-version</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*object_id</span></td>
+        <td>
+            
+
+        </td>
+        <td>7163f3b8-70c9-43d2-b9e1-4467ddaf087a</td>
+        <td><p>The object ID (GUID) of the target contact.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*api-version</span></td>
+        <td>
+            
+
+        </td>
+        <td>1.6</td>
+        <td><p>The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">bodyparam</span></td>
+        <td>
+
+              <a href="#contact" class="typelink">contact</a>
+        </td>
+        <td></td>
+        <td><p>this is request body, not real parameter</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">204</span></td>
+        <td>
+            
+
+        </td>
+        <td><p>No Content. Indicates success. No response body is returned.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vipwan/Biwen.QuickApi/new/net9/apiSpec/new?filename=graph_windows_net_myorganization_Contacts_1_6_delete_contact.md&amp;value=---%0Auid%3A%20graph.windows.net%2Fmyorganization%2FContacts%2F1.6%2Fdelete%20contact%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/restapi/contacts_swagger2.json/#L1">View Source</a>
+  </span>
+  <h3 id="graph_windows_net_myorganization_Contacts_1_6_delete_contact" data-uid="graph.windows.net/myorganization/Contacts/1.6/delete contact" class="text-capitalize">delete contact</h3>
+  <div class="markdown level1 summary"><p>Delete a contact.</p>
+</div>
+  <div class="markdown level1 description"><p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>
+</div>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">DELETE /contacts/{object_id}[?api-version]</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*object_id</span></td>
+        <td>
+            
+
+        </td>
+        <td>7163f3b8-70c9-43d2-b9e1-4467ddaf087a</td>
+        <td><p>The object ID (GUID) of the target contact.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">api-version</span></td>
+        <td>
+            
+
+        </td>
+        <td>1.6</td>
+        <td><p>Specifies the version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">204</span></td>
+        <td>
+            
+
+        </td>
+        <td><p>No Content. Indicates success.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vipwan/Biwen.QuickApi/new/net9/apiSpec/new?filename=graph_windows_net_myorganization_Contacts_1_6_get_contact_manager_link.md&amp;value=---%0Auid%3A%20graph.windows.net%2Fmyorganization%2FContacts%2F1.6%2Fget%20contact%20manager%20link%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/restapi/contacts_swagger2.json/#L1">View Source</a>
+  </span>
+  <h3 id="graph_windows_net_myorganization_Contacts_1_6_get_contact_manager_link" data-uid="graph.windows.net/myorganization/Contacts/1.6/get contact manager link" class="text-capitalize">get contact manager link</h3>
+  <div class="markdown level1 summary"><p>Get a link to the contact's manager.</p>
+</div>
+  <div class="markdown level1 description"><p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>
+</div>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">GET /contacts/{object_id}/$links/manager?api-version</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*object_id</span></td>
+        <td>
+            
+
+        </td>
+        <td>31944231-fd52-4a7f-b32e-7902a01fddf9</td>
+        <td><p>The object ID (GUID) of the target contact.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*api-version</span></td>
+        <td>
+            
+
+        </td>
+        <td>1.6</td>
+        <td><p>The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+            
+
+        </td>
+        <td><p>OK. Indicates success. A link to the contact's manager is returned.</p>
+</td>
+        <td class="sample-response">
+          <div class="mime-type">
+            <i>Mime type: </i><span class="mime">application/json</span>
+          </div>
+          <pre class="response-content"><code class="lang-js json hljs">{
+  &quot;odata.metadata&quot;: &quot;https://graph.windows.net/myorganization/$metadata#directoryObjects/$links/manager&quot;,
+  &quot;url&quot;: &quot;https://graph.windows.net/myorganization/directoryObjects/35110b16-360c-4c4a-93b2-03f065fabd93/Microsoft.WindowsAzure.ActiveDirectory.Contact&quot;
+}</code></pre>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td>
+            
+
+        </td>
+        <td><p>Not Found. The requested resource was not found. This can occur if the manager property is not currently set for the specified contact. It can also have other causes, for example, a bad domain. A code and associated message is returned with the error.</p>
+</td>
+        <td class="sample-response">
+          <div class="mime-type">
+            <i>Mime type: </i><span class="mime">application/json</span>
+          </div>
+          <pre class="response-content"><code class="lang-js json hljs">{
+  &quot;odata.error&quot;: {
+    &quot;code&quot;: &quot;Request_ResourceNotFound&quot;,
+    &quot;message&quot;: {
+      &quot;lang&quot;: &quot;en&quot;,
+      &quot;value&quot;: &quot;Resource not found for the segment &#39;manager&#39;.&quot;
+    }
+  }
+}</code></pre>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vipwan/Biwen.QuickApi/new/net9/apiSpec/new?filename=graph_windows_net_myorganization_Contacts_1_6_update_contact_manager.md&amp;value=---%0Auid%3A%20graph.windows.net%2Fmyorganization%2FContacts%2F1.6%2Fupdate%20contact%20manager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/restapi/contacts_swagger2.json/#L1">View Source</a>
+  </span>
+  <h3 id="graph_windows_net_myorganization_Contacts_1_6_update_contact_manager" data-uid="graph.windows.net/myorganization/Contacts/1.6/update contact manager" class="text-capitalize">update contact manager</h3>
+  <div class="markdown level1 summary"><p>Update the contact's manager</p>
+</div>
+  <div class="markdown level1 description"><p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>
+</div>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">PUT /contacts/{object_id}/$links/manager?api-version</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*object_id</span></td>
+        <td>
+            
+
+        </td>
+        <td>31944231-fd52-4a7f-b32e-7902a01fddf9</td>
+        <td><p>The object ID (GUID) of the target contact.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*api-version</span></td>
+        <td>
+            
+
+        </td>
+        <td>1.6</td>
+        <td><p>The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*bodyparam</span></td>
+        <td>
+            
+
+        </td>
+        <td></td>
+        <td><p>The request body contains a single property that specifies the URL of the user or contact to add as manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">204</span></td>
+        <td>
+            
+
+        </td>
+        <td><p>No Content. Indicates success. No response body is returned.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vipwan/Biwen.QuickApi/new/net9/apiSpec/new?filename=graph_windows_net_myorganization_Contacts_1_6_delete_contact_manager_by_id.md&amp;value=---%0Auid%3A%20graph.windows.net%2Fmyorganization%2FContacts%2F1.6%2Fdelete%20contact%20manager%20by%20id%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/restapi/contacts_swagger2.json/#L1">View Source</a>
+  </span>
+  <h3 id="graph_windows_net_myorganization_Contacts_1_6_delete_contact_manager_by_id" data-uid="graph.windows.net/myorganization/Contacts/1.6/delete contact manager by id" class="text-capitalize">delete contact manager by id</h3>
+  <div class="markdown level1 summary"><p>Delete the contact's manager.</p>
+</div>
+  <div class="markdown level1 description"><p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>
+</div>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">DELETE /contacts/{object_id}/$links/manager?api-version</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*object_id</span></td>
+        <td>
+            
+
+        </td>
+        <td>31944231-fd52-4a7f-b32e-7902a01fddf9</td>
+        <td><p>The object ID (GUID) of the target contact.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*api-version</span></td>
+        <td>
+            
+
+        </td>
+        <td>1.6</td>
+        <td><p>The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">204</span></td>
+        <td>
+            
+
+        </td>
+        <td><p>No Content. Indicates success. N response body is returned.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vipwan/Biwen.QuickApi/new/net9/apiSpec/new?filename=graph_windows_net_myorganization_Contacts_1_6_get_contact_direct_reports_links.md&amp;value=---%0Auid%3A%20graph.windows.net%2Fmyorganization%2FContacts%2F1.6%2Fget%20contact%20direct%20reports%20links%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/restapi/contacts_swagger2.json/#L1">View Source</a>
+  </span>
+  <h3 id="graph_windows_net_myorganization_Contacts_1_6_get_contact_direct_reports_links" data-uid="graph.windows.net/myorganization/Contacts/1.6/get contact direct reports links" class="text-capitalize">get contact direct reports links</h3>
+  <div class="markdown level1 summary"><p>Get a links to the contact's direct reports.</p>
+</div>
+  <div class="markdown level1 description"><p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>
+</div>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">GET /contacts/{object_id}/$links/directReports?api-version</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*object_id</span></td>
+        <td>
+            
+
+        </td>
+        <td>31944231-fd52-4a7f-b32e-7902a01fddf9</td>
+        <td><p>The object ID (GUID) of the target contact.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*api-version</span></td>
+        <td>
+            
+
+        </td>
+        <td>1.6</td>
+        <td><p>The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+            
+
+        </td>
+        <td><p>OK. Indicates success. One or more direct reports are returned.</p>
+</td>
+        <td class="sample-response">
+          <div class="mime-type">
+            <i>Mime type: </i><span class="mime">application/json</span>
+          </div>
+          <pre class="response-content"><code class="lang-js json hljs">{
+  &quot;odata.metadata&quot;: &quot;https://graph.windows.net/myorganization/$metadata#directoryObjects/$links/directReports&quot;,
+  &quot;value&quot;: [
+    {
+      &quot;url&quot;: &quot;https://graph.windows.net/myorganization/directoryObjects/8c1315ce-bf6f-4e26-b24f-c830606ef41c/Microsoft.DirectoryServices.Contact&quot;
+    }
+  ]
+}</code></pre>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vipwan/Biwen.QuickApi/new/net9/apiSpec/new?filename=graph_windows_net_myorganization_Contacts_1_6_get_contact_memberOf_links.md&amp;value=---%0Auid%3A%20graph.windows.net%2Fmyorganization%2FContacts%2F1.6%2Fget%20contact%20memberOf%20links%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/restapi/contacts_swagger2.json/#L1">View Source</a>
+  </span>
+  <h3 id="graph_windows_net_myorganization_Contacts_1_6_get_contact_memberOf_links" data-uid="graph.windows.net/myorganization/Contacts/1.6/get contact memberOf links" class="text-capitalize">get contact memberOf links</h3>
+  <div class="markdown level1 summary"><p>Get a links to the contact's direct group and directory role memberships.</p>
+</div>
+  <div class="markdown level1 description"><p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>
+</div>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">GET /contacts/{object_id}/$links/memberOf?api-version</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*object_id</span></td>
+        <td>
+            
+
+        </td>
+        <td>31944231-fd52-4a7f-b32e-7902a01fddf9</td>
+        <td><p>The object ID (GUID) of the target contact.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*api-version</span></td>
+        <td>
+            
+
+        </td>
+        <td>1.6</td>
+        <td><p>The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+            
+
+        </td>
+        <td><p>OK. Indicates success. One or more groups and/or directory roles are returned.</p>
+</td>
+        <td class="sample-response">
+          <div class="mime-type">
+            <i>Mime type: </i><span class="mime">application/json</span>
+          </div>
+          <pre class="response-content"><code class="lang-js json hljs">{
+  &quot;odata.metadata&quot;: &quot;https://graph.windows.net/myorganization/$metadata#directoryObjects/$links/memberOf&quot;,
+  &quot;value&quot;: [
+    {
+      &quot;url&quot;: &quot;https://graph.windows.net/myorganization/directoryObjects/12345678-b942-47c9-a10e-a4bee353ce60/Microsoft.DirectoryServices.Group&quot;
+    }
+  ]
+}</code></pre>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<h2 id="definitions">Definitions</h2>
+
+  <h3 id="contact" class="text-capitalize">contact</h3>
+  <table class="table table-bordered table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">objectType</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">objectId</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">deletionTimestamp</span></td>
+              <td>
+                  string
+                      (date-time)
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">city</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">country</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">department</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">dirSyncEnabled</span></td>
+              <td>
+                  boolean
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">displayName</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">facsimileTelephoneNumber</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">givenName</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">jobTitle</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">lastDirSyncTime</span></td>
+              <td>
+                  string
+                      (date-time)
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">mail</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">mailNickname</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">mobile</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">physicalDeliveryOfficeName</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">postalCode</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">provisioningErrors</span></td>
+              <td>
+
+                      <a href="#ProvisioningError" class="typelink"><wbr>Provisioning<wbr>Error</a>[]
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">proxyAddresses</span></td>
+              <td>
+                  array
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">sipProxyAddress</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">state</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">streetAddress</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">surname</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">telephoneNumber</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">thumbnailPhoto</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+
+  <h3 id="ProvisioningError" class="text-capitalize"><wbr>Provisioning<wbr>Error</h3>
+  <table class="table table-bordered table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">errorDetail</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">resolved</span></td>
+              <td>
+                  boolean
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">serviceInstance</span></td>
+              <td>
+                  string
+
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">timestamp</span></td>
+              <td>
+                  string
+                      (date-time)
+
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/vipwan/Biwen.QuickApi/blob/net9/Biwen.QuickApi.DocSite/seed/restapi/contacts_swagger2.json/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

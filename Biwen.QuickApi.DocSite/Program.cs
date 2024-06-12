@@ -45,4 +45,10 @@ app.UseStaticFiles(new StaticFileOptions
 
 app.MapRazorComponents<App>().AddInteractiveServerRenderMode()
     .AddAdditionalAssemblies(typeof(Biwen.Blazor.Components._Imports).Assembly);
+
+
+await Docfx.Docset.Build("seed/docfx.json");
+
+app.MapGet("/", () => { return Results.Redirect("/index.html"); }).ExcludeFromDescription();
+
 app.Run();
