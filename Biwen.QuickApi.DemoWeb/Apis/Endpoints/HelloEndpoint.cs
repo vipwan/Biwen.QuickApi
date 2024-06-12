@@ -18,9 +18,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
         /// </summary>
         public class HelloRequest : BaseRequest<HelloRequest>//, IReqBinder<HelloRequest>
         {
+            [Required, Length(5, 12)]
             [Description("Hello的描述")]
             [FromRoute]
-            public string? Hello { get; set; }
+            public string Hello { get; set; } = null!;
 
             [Description("Key的描述")]
             [Length(5, 12)]

@@ -27,7 +27,7 @@ namespace Biwen.QuickApi
 
         public virtual async Task PublishAsync<T>(T @event, CancellationToken cancellationToken = default) where T : class, IEvent
         {
-            await @event.PublishAsync();
+            await @event.PublishAsync(cancellationToken);
         }
 
         ///// <summary>

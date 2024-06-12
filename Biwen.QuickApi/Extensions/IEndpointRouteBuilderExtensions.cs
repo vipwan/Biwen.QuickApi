@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Biwen.QuickApi.Abstractions;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Routing;
@@ -108,6 +109,8 @@ namespace Biwen.QuickApi
         //验证Request的Endpoint Filter
         private class ValidateRequestFilter : IEndpointFilter
         {
+            private static readonly string _validatorType = typeof(IReqValidator<>).FullName!;
+
             public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
             {
                 var httpContext = context.HttpContext;
@@ -120,9 +123,8 @@ namespace Biwen.QuickApi
                         if (arg is null) continue;
                         var argType = arg?.GetType();
                         if (argType is null || !argType.IsClass) continue;
-                        var methodName = nameof(BaseRequest<EmptyRequest>.Validate);
-                        //使用反射验证参数:
-                        if (argType.GetMethod(methodName) is not null)
+                        //判断 argType 是否为 IReqValidator<T>
+                        if (argType?.GetInterface(_validatorType) is { })
                         {
                             try
                             {

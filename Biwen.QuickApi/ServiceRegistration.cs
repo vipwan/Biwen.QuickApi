@@ -426,13 +426,10 @@ namespace Biwen.QuickApi
                 var methodName = nameof(IReqBinder<EmptyRequest>.BindAsync);
                 MethodInfo methodInfo = (((dynamic)api).ReqBinder).GetMethod(methodName, BindingFlags.Static | BindingFlags.Public);
                 var req = await (dynamic)methodInfo.Invoke(null, [ctx.HttpContext, null])!;
-                if (req is not null)
+                //验证DTO
+                if (req is { } && req.Validate() is ValidationResult { IsValid: false } vresult)
                 {
-                    //验证DTO
-                    if (req.Validate() is ValidationResult { IsValid: false } vresult)
-                    {
-                        return TypedResults.ValidationProblem(vresult.ToDictionary());
-                    }
+                    return TypedResults.ValidationProblem(vresult.ToDictionary());
                 }
                 var result = await ((dynamic)api)!.ExecuteAsync(req!);
                 var rawResult = InnerResult(result);
