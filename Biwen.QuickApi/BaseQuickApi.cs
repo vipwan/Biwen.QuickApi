@@ -25,12 +25,9 @@ namespace Biwen.QuickApi
         /// <inheritdoc cref="IAntiforgery.IsAntiforgeryEnabled" />
         public virtual bool IsAntiforgeryEnabled => false;
 
-        public virtual async Task PublishAsync<T>(T @event, CancellationToken cancellationToken = default) where T : IEvent
+        public virtual async Task PublishAsync<T>(T @event, CancellationToken cancellationToken = default) where T : class, IEvent
         {
-            if (ServiceRegistration.ServiceProvider is null) throw new QuickApiExcetion("mush UseBiwenQuickApis() first!");
-            using var scope = ServiceRegistration.ServiceProvider.CreateScope();
-            var publisher = scope.ServiceProvider.GetRequiredService<Publisher>();
-            await publisher.PublishAsync(@event, cancellationToken);
+            await @event.PublishAsync();
         }
 
         ///// <summary>

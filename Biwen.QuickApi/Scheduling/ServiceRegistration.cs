@@ -39,7 +39,7 @@ namespace Biwen.QuickApi.Scheduling
         public static IServiceCollection AddScheduler<T>(this IServiceCollection services) where T : class, IScheduler
         {
             //调度器
-            services.AddSingleton<IScheduler, T>();
+            services.AddActivatedSingleton<IScheduler, T>();
             return services;
         }
 
@@ -51,7 +51,7 @@ namespace Biwen.QuickApi.Scheduling
         /// <returns></returns>
         public static IServiceCollection AddScheduleMetadataStore<T>(this IServiceCollection services) where T : class, IScheduleMetadataStore
         {
-            services.AddSingleton<IScheduleMetadataStore, T>();
+            services.AddActivatedSingleton<IScheduleMetadataStore, T>();
             return services;
         }
 

@@ -15,7 +15,7 @@
                 }
             }
             //注册Publisher
-            services.AddScoped<Publisher>();
+            services.AddActivatedSingleton<Publisher>();
             return services;
         }
 

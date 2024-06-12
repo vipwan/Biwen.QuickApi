@@ -51,6 +51,7 @@ namespace Biwen.QuickApi.DemoWeb
 
             // Add services to the container.
             services.AddScoped<HelloService>();
+
             // keyed services
             //builder.Services.AddKeyedScoped<HelloService>("hello");
         }

@@ -44,7 +44,8 @@ namespace Biwen.QuickApi
 
             //注册验证器
             services.AddFluentValidationAutoValidation();
-            services.AddHttpContextAccessor();
+            //注册AsyncStateHttpContext
+            services.AddAsyncStateHttpContext();
 
             //注册Antiforgery服务
             services.AddAntiforgery();
@@ -71,10 +72,10 @@ namespace Biwen.QuickApi
         //注册模块
         private static IServiceCollection AddModular(this IServiceCollection services)
         {
-            using var sp = services.BuildServiceProvider().CreateScope();
+            var serviceProvider = services.BuildServiceProvider();
             foreach (var modularType in Modulars)
             {
-                if (ActivatorUtilities.CreateInstance(sp.ServiceProvider, modularType) is ModularBase { } modular && modular.IsEnable())
+                if (ActivatorUtilities.CreateInstance(serviceProvider, modularType) is ModularBase { } modular && modular.IsEnable())
                 {
                     modular.ConfigureServices(services);
                     //DI
