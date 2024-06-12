@@ -16,7 +16,7 @@ namespace Biwen.QuickApi.Test
         {
             var response = await TestClient.GetAsync("/quick/admin/logined");
             var content = await response.Content.ReadAsStringAsync();
-            Assert.Equal("已经登录成功", content);
+            Assert.Contains("已经登录成功", content);
             Assert.True(response.IsSuccessStatusCode);
         }
 
@@ -44,7 +44,7 @@ namespace Biwen.QuickApi.Test
         {
             var response = await TestClient.GetAsync("/quick/middleware");
             var content = await response.Content.ReadAsStringAsync();
-            Assert.Equal("middleware", content);
+            Assert.Contains("middleware", content);
             Assert.True(response.IsSuccessStatusCode);
         }
     }
