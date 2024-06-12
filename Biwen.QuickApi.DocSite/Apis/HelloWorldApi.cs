@@ -1,0 +1,17 @@
+﻿
+using Microsoft.AspNetCore.Mvc;
+
+namespace Biwen.QuickApi.DocSite.Apis
+{
+
+    [QuickApi("/hello-world")]
+    [ProducesResponseType<string>(200)]
+    public class HelloWorldApi : BaseQuickApi
+    {
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
+        {
+            await Task.CompletedTask;
+            return Results.Content("Hello World");
+        }
+    }
+}

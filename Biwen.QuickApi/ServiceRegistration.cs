@@ -172,7 +172,7 @@ namespace Biwen.QuickApi
         {
             if (!HttpModular.Apis.Any())
             {
-                return default!;
+                throw new QuickApiExcetion($"未找到任何QuickApi!,请添加一个HelloWorldApi吧 (#^.^#)");
             }
             if (HttpModular.Apis.Any(x => x.GetCustomAttribute<QuickApiAttribute>() == null))
             {
