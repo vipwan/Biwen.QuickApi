@@ -17,6 +17,10 @@
 		<None Remove="src\**" />
 		<None Remove="_Statics\**" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Include="seed\articles\files\HelloWorldApi.cs.txt" />
+	</ItemGroup>
 	<ItemGroup>
 		<Content Include="_statics\placeholder.txt" />
 	</ItemGroup>
@@ -30,7 +34,4 @@
 		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<Folder Include="_Statics\" />
-	</ItemGroup>
 </Project>

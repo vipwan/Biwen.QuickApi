@@ -1,18 +1,14 @@
 ﻿using Microsoft.Extensions.FileProviders;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateSlimBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents().AddInteractiveServerComponents();
-
 builder.Services.AddHttpClient();
-
 builder.Services.AddAuthentication(o =>
 {
     o.DefaultScheme = "Cookies";
     o.DefaultChallengeScheme = "Cookies";
 }).AddCookie();
-
 builder.Services.AddAuthorization();
 
 // Add services to the container.
@@ -32,7 +28,6 @@ if (!app.Environment.IsDevelopment())
 //use quick api
 app.UseBiwenQuickApis();
 
-
 app.UseStaticFiles(new StaticFileOptions
 {
     RequestPath = "/docs",
@@ -45,7 +40,6 @@ app.UseStaticFiles(new StaticFileOptions
     FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "_statics")),
     ServeUnknownFileTypes = true
 });
-
 
 //静态生成:
 await Docfx.Docset.Build("seed/docfx.json");

@@ -1,17 +1,12 @@
 {
   "build": {
+    "xref": [
+      "https://learn.microsoft.com/en-us/dotnet/.xrefmap.json"
+    ],
     "content": [
       {
-        "files": [ "**/*.yml" ],
-        "src": "obj/api",
-        "dest": "api"
-      },
-      {
-        "files": [ "**" ],
-        "src": "obj/md",
-        "dest": "md"
-      },
-      { "files": [ "articles/**/*.{md,yml}", "*.md", "toc.yml", "restapi/**" ] },
+        "files": [ "articles/**/*.{md,yml}", "*.md", "toc.yml", "restapi/**" ]
+      }
     ],
     "resource": [
       {

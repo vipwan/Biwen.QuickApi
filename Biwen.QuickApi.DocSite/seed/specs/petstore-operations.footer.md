@@ -7,5 +7,4 @@ footer: *content
 ### See Alsos
 
 See other REST APIs:
-* [Contacts API](../restapi/contacts_swagger2.json)
 
