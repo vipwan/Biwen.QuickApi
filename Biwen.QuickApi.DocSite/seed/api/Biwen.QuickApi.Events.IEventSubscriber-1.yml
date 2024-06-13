@@ -1,0 +1,194 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Events.IEventSubscriber`1
+  commentId: T:Biwen.QuickApi.Events.IEventSubscriber`1
+  id: IEventSubscriber`1
+  parent: Biwen.QuickApi.Events
+  children:
+  - Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync(`0,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IEventSubscriber<T>
+  nameWithType: IEventSubscriber<T>
+  fullName: Biwen.QuickApi.Events.IEventSubscriber<T>
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Events/IEventSubscriber.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Events
+  syntax:
+    content: 'public interface IEventSubscriber<T> where T : IEvent'
+    typeParameters:
+    - id: T
+    content.vb: Public Interface IEventSubscriber(Of T As IEvent)
+  nameWithType.vb: IEventSubscriber(Of T)
+  fullName.vb: Biwen.QuickApi.Events.IEventSubscriber(Of T)
+  name.vb: IEventSubscriber(Of T)
+- uid: Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync(`0,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync(`0,System.Threading.CancellationToken)
+  id: HandleAsync(`0,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Events.IEventSubscriber`1
+  langs:
+  - csharp
+  - vb
+  name: HandleAsync(T, CancellationToken)
+  nameWithType: IEventSubscriber<T>.HandleAsync(T, CancellationToken)
+  fullName: Biwen.QuickApi.Events.IEventSubscriber<T>.HandleAsync(T, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Events/IEventSubscriber.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Events
+  syntax:
+    content: Task HandleAsync(T @event, CancellationToken ct)
+    parameters:
+    - id: event
+      type: '{T}'
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function HandleAsync([event] As T, ct As CancellationToken) As Task
+  overload: Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync*
+  nameWithType.vb: IEventSubscriber(Of T).HandleAsync(T, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Events.IEventSubscriber(Of T).HandleAsync(T, System.Threading.CancellationToken)
+references:
+- uid: Biwen.QuickApi.Events
+  commentId: N:Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Events
+  nameWithType: Biwen.QuickApi.Events
+  fullName: Biwen.QuickApi.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+- uid: Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync*
+  commentId: Overload:Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync
+  isExternal: true
+  href: Biwen.QuickApi.Events.IEventSubscriber-1.html#Biwen_QuickApi_Events_IEventSubscriber_1_HandleAsync__0_System_Threading_CancellationToken_
+  name: HandleAsync
+  nameWithType: IEventSubscriber<T>.HandleAsync
+  fullName: Biwen.QuickApi.Events.IEventSubscriber<T>.HandleAsync
+  nameWithType.vb: IEventSubscriber(Of T).HandleAsync
+  fullName.vb: Biwen.QuickApi.Events.IEventSubscriber(Of T).HandleAsync
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

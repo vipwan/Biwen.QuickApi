@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILocker
+  commentId: T:Biwen.QuickApi.Infrastructure.Locking.ILocker
+  id: ILocker
+  parent: Biwen.QuickApi.Infrastructure.Locking
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ILocker
+  nameWithType: ILocker
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILocker
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/ILocker.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.Locking
+  syntax:
+    content: 'public interface ILocker : IDisposable, IAsyncDisposable'
+    content.vb: Public Interface ILocker Inherits IDisposable, IAsyncDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  - System.IAsyncDisposable.DisposeAsync
+references:
+- uid: Biwen.QuickApi.Infrastructure.Locking
+  commentId: N:Biwen.QuickApi.Infrastructure.Locking
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.Locking
+  nameWithType: Biwen.QuickApi.Infrastructure.Locking
+  fullName: Biwen.QuickApi.Infrastructure.Locking
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Locking
+    name: Locking
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Locking
+    name: Locking
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IAsyncDisposable.DisposeAsync
+  commentId: M:System.IAsyncDisposable.DisposeAsync
+  parent: System.IAsyncDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync
+  name: DisposeAsync()
+  nameWithType: IAsyncDisposable.DisposeAsync()
+  fullName: System.IAsyncDisposable.DisposeAsync()
+  spec.csharp:
+  - uid: System.IAsyncDisposable.DisposeAsync
+    name: DisposeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IAsyncDisposable.DisposeAsync
+    name: DisposeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.IAsyncDisposable
+  commentId: T:System.IAsyncDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable
+  name: IAsyncDisposable
+  nameWithType: IAsyncDisposable
+  fullName: System.IAsyncDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

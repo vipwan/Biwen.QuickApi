@@ -51,7 +51,7 @@ namespace Biwen.QuickApi.Abstractions
     /// <summary>
     /// 防伪令牌检测
     /// </summary>
-    public interface IAntiforgeryApi
+    internal interface IAntiforgeryApi
     {
         /// <summary>
         /// 是否启动防伪令牌检测

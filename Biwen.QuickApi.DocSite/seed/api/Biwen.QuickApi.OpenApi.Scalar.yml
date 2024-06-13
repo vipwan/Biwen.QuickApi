@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.OpenApi.Scalar
+  commentId: N:Biwen.QuickApi.OpenApi.Scalar
+  id: Biwen.QuickApi.OpenApi.Scalar
+  children:
+  - Biwen.QuickApi.OpenApi.Scalar.IEndpointRouteBuilderExtensions
+  - Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationApiKey
+  - Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationOptions
+  - Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationoAuth2
+  - Biwen.QuickApi.OpenApi.Scalar.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.OpenApi.Scalar
+  nameWithType: Biwen.QuickApi.OpenApi.Scalar
+  fullName: Biwen.QuickApi.OpenApi.Scalar
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.OpenApi.Scalar.IEndpointRouteBuilderExtensions
+  commentId: T:Biwen.QuickApi.OpenApi.Scalar.IEndpointRouteBuilderExtensions
+  isExternal: true
+  href: Biwen.QuickApi.OpenApi.Scalar.IEndpointRouteBuilderExtensions.html
+  name: IEndpointRouteBuilderExtensions
+  nameWithType: IEndpointRouteBuilderExtensions
+  fullName: Biwen.QuickApi.OpenApi.Scalar.IEndpointRouteBuilderExtensions
+- uid: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions
+  commentId: T:Biwen.QuickApi.OpenApi.Scalar.ScalarOptions
+  isExternal: true
+  href: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.html
+  name: ScalarOptions
+  nameWithType: ScalarOptions
+  fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions
+- uid: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationOptions
+  commentId: T:Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationOptions
+  parent: Biwen.QuickApi.OpenApi.Scalar
+  isExternal: true
+  href: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationOptions.html
+  name: ScalarAuthenticationOptions
+  nameWithType: ScalarAuthenticationOptions
+  fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationOptions
+- uid: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationoAuth2
+  commentId: T:Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationoAuth2
+  isExternal: true
+  href: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationoAuth2.html
+  name: ScalarAuthenticationoAuth2
+  nameWithType: ScalarAuthenticationoAuth2
+  fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationoAuth2
+- uid: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationApiKey
+  commentId: T:Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationApiKey
+  parent: Biwen.QuickApi.OpenApi.Scalar
+  isExternal: true
+  href: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationApiKey.html
+  name: ScalarAuthenticationApiKey
+  nameWithType: ScalarAuthenticationApiKey
+  fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationApiKey
+- uid: Biwen.QuickApi.OpenApi.Scalar
+  commentId: N:Biwen.QuickApi.OpenApi.Scalar
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.OpenApi.Scalar
+  nameWithType: Biwen.QuickApi.OpenApi.Scalar
+  fullName: Biwen.QuickApi.OpenApi.Scalar
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.OpenApi
+    name: OpenApi
+    isExternal: true
+    href: Biwen.QuickApi.OpenApi.html
+  - name: .
+  - uid: Biwen.QuickApi.OpenApi.Scalar
+    name: Scalar
+    isExternal: true
+    href: Biwen.QuickApi.OpenApi.Scalar.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.OpenApi
+    name: OpenApi
+    isExternal: true
+    href: Biwen.QuickApi.OpenApi.html
+  - name: .
+  - uid: Biwen.QuickApi.OpenApi.Scalar
+    name: Scalar
+    isExternal: true
+    href: Biwen.QuickApi.OpenApi.Scalar.html

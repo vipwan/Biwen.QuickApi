@@ -1,0 +1,43 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Contacts",
+    "version": "1.6"
+  },
+  "host": "microsoft.com",
+  "basePath": "/docfx",
+  "schemes": [
+    "https"
+  ],
+  "tags": [
+    {
+      "name": "Basic",
+      "x-bookmark-id": "BasicBookmark",
+      "description": "Basic description"
+    },
+    {
+      "name": "Advanced",
+      "description": "Advanced description"
+    }
+  ],
+  "paths": {
+    "/contacts": {
+      "get": {
+        "operationId": "get_contacts",
+        "tags": [
+          "Basic",
+          "Advanced"
+        ]
+      },
+      "set": {
+        "operationId": "set_contacts",
+        "tags": [
+          "Advanced"
+        ]
+      },
+      "delete": {
+        "operationId": "delete_contacts"
+      }
+    }
+  }
+}

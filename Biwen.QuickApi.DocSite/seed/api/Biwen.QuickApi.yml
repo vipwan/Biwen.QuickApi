@@ -1,0 +1,382 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi
+  commentId: N:Biwen.QuickApi
+  id: Biwen.QuickApi
+  children:
+  - Biwen.QuickApi.BaseQuickApi
+  - Biwen.QuickApi.BaseQuickApiJustAsService`2
+  - Biwen.QuickApi.BaseQuickApiWithoutRequest`1
+  - Biwen.QuickApi.BaseQuickApi`1
+  - Biwen.QuickApi.BaseQuickApi`2
+  - Biwen.QuickApi.BaseRequestFromBody`1
+  - Biwen.QuickApi.BaseRequest`1
+  - Biwen.QuickApi.BiwenQuickApiOptions
+  - Biwen.QuickApi.DefaultReqBinder`1
+  - Biwen.QuickApi.EmptyRequest
+  - Biwen.QuickApi.FromBodyAttribute
+  - Biwen.QuickApi.FromKeyedServicesAttribute
+  - Biwen.QuickApi.IEndpointRouteBuilderExtensions
+  - Biwen.QuickApi.IResultExtensions
+  - Biwen.QuickApi.IResultResponse
+  - Biwen.QuickApi.IdGenerator
+  - Biwen.QuickApi.QuickApiExcetion
+  - Biwen.QuickApi.ServiceCollectionExtensions
+  - Biwen.QuickApi.ServiceRegistration
+  - Biwen.QuickApi.StringExtensions
+  - Biwen.QuickApi.Verb
+  - Biwen.QuickApi.WebApplicationBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi
+  nameWithType: Biwen.QuickApi
+  fullName: Biwen.QuickApi
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.IdGenerator
+  commentId: T:Biwen.QuickApi.IdGenerator
+  isExternal: true
+  href: Biwen.QuickApi.IdGenerator.html
+  name: IdGenerator
+  nameWithType: IdGenerator
+  fullName: Biwen.QuickApi.IdGenerator
+- uid: Biwen.QuickApi.FromBodyAttribute
+  commentId: T:Biwen.QuickApi.FromBodyAttribute
+  parent: Biwen.QuickApi
+  isExternal: true
+  href: Biwen.QuickApi.FromBodyAttribute.html
+  name: FromBodyAttribute
+  nameWithType: FromBodyAttribute
+  fullName: Biwen.QuickApi.FromBodyAttribute
+- uid: Biwen.QuickApi.FromKeyedServicesAttribute
+  commentId: T:Biwen.QuickApi.FromKeyedServicesAttribute
+  isExternal: true
+  href: Biwen.QuickApi.FromKeyedServicesAttribute.html
+  name: FromKeyedServicesAttribute
+  nameWithType: FromKeyedServicesAttribute
+  fullName: Biwen.QuickApi.FromKeyedServicesAttribute
+- uid: Biwen.QuickApi.BaseQuickApi`2
+  commentId: T:Biwen.QuickApi.BaseQuickApi`2
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-2.html
+  name: BaseQuickApi<Req, Rsp>
+  nameWithType: BaseQuickApi<Req, Rsp>
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp)
+  name.vb: BaseQuickApi(Of Req, Rsp)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi`2
+    name: BaseQuickApi
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html
+  - name: <
+  - name: Req
+  - name: ','
+  - name: " "
+  - name: Rsp
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi`2
+    name: BaseQuickApi
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: Req
+  - name: ','
+  - name: " "
+  - name: Rsp
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi`1
+  commentId: T:Biwen.QuickApi.BaseQuickApi`1
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-1.html
+  name: BaseQuickApi<Req>
+  nameWithType: BaseQuickApi<Req>
+  fullName: Biwen.QuickApi.BaseQuickApi<Req>
+  nameWithType.vb: BaseQuickApi(Of Req)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req)
+  name.vb: BaseQuickApi(Of Req)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi`1
+    name: BaseQuickApi
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-1.html
+  - name: <
+  - name: Req
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi`1
+    name: BaseQuickApi
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: Req
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi
+  commentId: T:Biwen.QuickApi.BaseQuickApi
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi.html
+  name: BaseQuickApi
+  nameWithType: BaseQuickApi
+  fullName: Biwen.QuickApi.BaseQuickApi
+- uid: Biwen.QuickApi.BaseQuickApiWithoutRequest`1
+  commentId: T:Biwen.QuickApi.BaseQuickApiWithoutRequest`1
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApiWithoutRequest-1.html
+  name: BaseQuickApiWithoutRequest<Rsp>
+  nameWithType: BaseQuickApiWithoutRequest<Rsp>
+  fullName: Biwen.QuickApi.BaseQuickApiWithoutRequest<Rsp>
+  nameWithType.vb: BaseQuickApiWithoutRequest(Of Rsp)
+  fullName.vb: Biwen.QuickApi.BaseQuickApiWithoutRequest(Of Rsp)
+  name.vb: BaseQuickApiWithoutRequest(Of Rsp)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApiWithoutRequest`1
+    name: BaseQuickApiWithoutRequest
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApiWithoutRequest-1.html
+  - name: <
+  - name: Rsp
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApiWithoutRequest`1
+    name: BaseQuickApiWithoutRequest
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApiWithoutRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: Rsp
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApiJustAsService`2
+  commentId: T:Biwen.QuickApi.BaseQuickApiJustAsService`2
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApiJustAsService-2.html
+  name: BaseQuickApiJustAsService<Req, Rsp>
+  nameWithType: BaseQuickApiJustAsService<Req, Rsp>
+  fullName: Biwen.QuickApi.BaseQuickApiJustAsService<Req, Rsp>
+  nameWithType.vb: BaseQuickApiJustAsService(Of Req, Rsp)
+  fullName.vb: Biwen.QuickApi.BaseQuickApiJustAsService(Of Req, Rsp)
+  name.vb: BaseQuickApiJustAsService(Of Req, Rsp)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApiJustAsService`2
+    name: BaseQuickApiJustAsService
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApiJustAsService-2.html
+  - name: <
+  - name: Req
+  - name: ','
+  - name: " "
+  - name: Rsp
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApiJustAsService`2
+    name: BaseQuickApiJustAsService
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApiJustAsService-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: Req
+  - name: ','
+  - name: " "
+  - name: Rsp
+  - name: )
+- uid: Biwen.QuickApi.BaseRequest`1
+  commentId: T:Biwen.QuickApi.BaseRequest`1
+  isExternal: true
+  href: Biwen.QuickApi.BaseRequest-1.html
+  name: BaseRequest<T>
+  nameWithType: BaseRequest<T>
+  fullName: Biwen.QuickApi.BaseRequest<T>
+  nameWithType.vb: BaseRequest(Of T)
+  fullName.vb: Biwen.QuickApi.BaseRequest(Of T)
+  name.vb: BaseRequest(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseRequest`1
+    name: BaseRequest
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseRequest`1
+    name: BaseRequest
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.BaseRequestFromBody`1
+  commentId: T:Biwen.QuickApi.BaseRequestFromBody`1
+  isExternal: true
+  href: Biwen.QuickApi.BaseRequestFromBody-1.html
+  name: BaseRequestFromBody<T>
+  nameWithType: BaseRequestFromBody<T>
+  fullName: Biwen.QuickApi.BaseRequestFromBody<T>
+  nameWithType.vb: BaseRequestFromBody(Of T)
+  fullName.vb: Biwen.QuickApi.BaseRequestFromBody(Of T)
+  name.vb: BaseRequestFromBody(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseRequestFromBody`1
+    name: BaseRequestFromBody
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequestFromBody-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseRequestFromBody`1
+    name: BaseRequestFromBody
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequestFromBody-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.EmptyRequest
+  commentId: T:Biwen.QuickApi.EmptyRequest
+  parent: Biwen.QuickApi
+  isExternal: true
+  href: Biwen.QuickApi.EmptyRequest.html
+  name: EmptyRequest
+  nameWithType: EmptyRequest
+  fullName: Biwen.QuickApi.EmptyRequest
+- uid: Biwen.QuickApi.IResultResponse
+  commentId: T:Biwen.QuickApi.IResultResponse
+  parent: Biwen.QuickApi
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html
+  name: IResultResponse
+  nameWithType: IResultResponse
+  fullName: Biwen.QuickApi.IResultResponse
+- uid: Biwen.QuickApi.BiwenQuickApiOptions
+  commentId: T:Biwen.QuickApi.BiwenQuickApiOptions
+  isExternal: true
+  href: Biwen.QuickApi.BiwenQuickApiOptions.html
+  name: BiwenQuickApiOptions
+  nameWithType: BiwenQuickApiOptions
+  fullName: Biwen.QuickApi.BiwenQuickApiOptions
+- uid: Biwen.QuickApi.DefaultReqBinder`1
+  commentId: T:Biwen.QuickApi.DefaultReqBinder`1
+  isExternal: true
+  href: Biwen.QuickApi.DefaultReqBinder-1.html
+  name: DefaultReqBinder<T>
+  nameWithType: DefaultReqBinder<T>
+  fullName: Biwen.QuickApi.DefaultReqBinder<T>
+  nameWithType.vb: DefaultReqBinder(Of T)
+  fullName.vb: Biwen.QuickApi.DefaultReqBinder(Of T)
+  name.vb: DefaultReqBinder(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.DefaultReqBinder`1
+    name: DefaultReqBinder
+    isExternal: true
+    href: Biwen.QuickApi.DefaultReqBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.DefaultReqBinder`1
+    name: DefaultReqBinder
+    isExternal: true
+    href: Biwen.QuickApi.DefaultReqBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions
+  commentId: T:Biwen.QuickApi.IEndpointRouteBuilderExtensions
+  isExternal: true
+  href: Biwen.QuickApi.IEndpointRouteBuilderExtensions.html
+  name: IEndpointRouteBuilderExtensions
+  nameWithType: IEndpointRouteBuilderExtensions
+  fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions
+- uid: Biwen.QuickApi.ServiceCollectionExtensions
+  commentId: T:Biwen.QuickApi.ServiceCollectionExtensions
+  isExternal: true
+  href: Biwen.QuickApi.ServiceCollectionExtensions.html
+  name: ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions
+- uid: Biwen.QuickApi.WebApplicationBuilderExtensions
+  commentId: T:Biwen.QuickApi.WebApplicationBuilderExtensions
+  isExternal: true
+  href: Biwen.QuickApi.WebApplicationBuilderExtensions.html
+  name: WebApplicationBuilderExtensions
+  nameWithType: WebApplicationBuilderExtensions
+  fullName: Biwen.QuickApi.WebApplicationBuilderExtensions
+- uid: Biwen.QuickApi.StringExtensions
+  commentId: T:Biwen.QuickApi.StringExtensions
+  isExternal: true
+  href: Biwen.QuickApi.StringExtensions.html
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: Biwen.QuickApi.StringExtensions
+- uid: Biwen.QuickApi.IResultExtensions
+  commentId: T:Biwen.QuickApi.IResultExtensions
+  isExternal: true
+  href: Biwen.QuickApi.IResultExtensions.html
+  name: IResultExtensions
+  nameWithType: IResultExtensions
+  fullName: Biwen.QuickApi.IResultExtensions
+- uid: Biwen.QuickApi.QuickApiExcetion
+  commentId: T:Biwen.QuickApi.QuickApiExcetion
+  isExternal: true
+  href: Biwen.QuickApi.QuickApiExcetion.html
+  name: QuickApiExcetion
+  nameWithType: QuickApiExcetion
+  fullName: Biwen.QuickApi.QuickApiExcetion
+- uid: Biwen.QuickApi.ServiceRegistration
+  commentId: T:Biwen.QuickApi.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.ServiceRegistration
+- uid: Biwen.QuickApi.Verb
+  commentId: T:Biwen.QuickApi.Verb
+  parent: Biwen.QuickApi
+  isExternal: true
+  href: Biwen.QuickApi.Verb.html
+  name: Verb
+  nameWithType: Verb
+  fullName: Biwen.QuickApi.Verb
+- uid: Biwen.QuickApi
+  commentId: N:Biwen.QuickApi
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi
+  nameWithType: Biwen.QuickApi
+  fullName: Biwen.QuickApi
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html

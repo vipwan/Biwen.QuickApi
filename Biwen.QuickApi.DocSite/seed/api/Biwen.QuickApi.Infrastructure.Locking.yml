@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure.Locking
+  commentId: N:Biwen.QuickApi.Infrastructure.Locking
+  id: Biwen.QuickApi.Infrastructure.Locking
+  children:
+  - Biwen.QuickApi.Infrastructure.Locking.ILocalLock
+  - Biwen.QuickApi.Infrastructure.Locking.ILock
+  - Biwen.QuickApi.Infrastructure.Locking.ILocker
+  - Biwen.QuickApi.Infrastructure.Locking.LocalLock
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Infrastructure.Locking
+  nameWithType: Biwen.QuickApi.Infrastructure.Locking
+  fullName: Biwen.QuickApi.Infrastructure.Locking
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILocalLock
+  commentId: T:Biwen.QuickApi.Infrastructure.Locking.ILocalLock
+  parent: Biwen.QuickApi.Infrastructure.Locking
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Locking.ILocalLock.html
+  name: ILocalLock
+  nameWithType: ILocalLock
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILocalLock
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock
+  commentId: T:Biwen.QuickApi.Infrastructure.Locking.ILock
+  parent: Biwen.QuickApi.Infrastructure.Locking
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Locking.ILock.html
+  name: ILock
+  nameWithType: ILock
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILocker
+  commentId: T:Biwen.QuickApi.Infrastructure.Locking.ILocker
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Locking.ILocker.html
+  name: ILocker
+  nameWithType: ILocker
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILocker
+- uid: Biwen.QuickApi.Infrastructure.Locking.LocalLock
+  commentId: T:Biwen.QuickApi.Infrastructure.Locking.LocalLock
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Locking.LocalLock.html
+  name: LocalLock
+  nameWithType: LocalLock
+  fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock
+- uid: Biwen.QuickApi.Infrastructure.Locking
+  commentId: N:Biwen.QuickApi.Infrastructure.Locking
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.Locking
+  nameWithType: Biwen.QuickApi.Infrastructure.Locking
+  fullName: Biwen.QuickApi.Infrastructure.Locking
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Locking
+    name: Locking
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Locking
+    name: Locking
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.html

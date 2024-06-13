@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: System
+  commentId: N:System
+  id: System
+  children:
+  - System.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: System
+  nameWithType: System
+  fullName: System
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: System.StringExtensions
+  commentId: T:System.StringExtensions
+  isExternal: true
+  href: System.StringExtensions.html
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: System.StringExtensions

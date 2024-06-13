@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService
+  commentId: T:Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService
+  id: IHtmlSanitizerService
+  parent: Biwen.QuickApi.Infrastructure.Html
+  children:
+  - Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.Sanitize(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IHtmlSanitizerService
+  nameWithType: IHtmlSanitizerService
+  fullName: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Html/IHtmlSanitizerService.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.Html
+  syntax:
+    content: public interface IHtmlSanitizerService
+    content.vb: Public Interface IHtmlSanitizerService
+- uid: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.Sanitize(System.String)
+  commentId: M:Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.Sanitize(System.String)
+  id: Sanitize(System.String)
+  parent: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService
+  langs:
+  - csharp
+  - vb
+  name: Sanitize(string)
+  nameWithType: IHtmlSanitizerService.Sanitize(string)
+  fullName: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.Sanitize(string)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Html/IHtmlSanitizerService.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.Html
+  syntax:
+    content: string Sanitize(string html)
+    parameters:
+    - id: html
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Function Sanitize(html As String) As String
+  overload: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.Sanitize*
+  nameWithType.vb: IHtmlSanitizerService.Sanitize(String)
+  fullName.vb: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.Sanitize(String)
+  name.vb: Sanitize(String)
+references:
+- uid: Biwen.QuickApi.Infrastructure.Html
+  commentId: N:Biwen.QuickApi.Infrastructure.Html
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.Html
+  nameWithType: Biwen.QuickApi.Infrastructure.Html
+  fullName: Biwen.QuickApi.Infrastructure.Html
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Html
+    name: Html
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Html.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Html
+    name: Html
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Html.html
+- uid: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.Sanitize*
+  commentId: Overload:Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.Sanitize
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.html#Biwen_QuickApi_Infrastructure_Html_IHtmlSanitizerService_Sanitize_System_String_
+  name: Sanitize
+  nameWithType: IHtmlSanitizerService.Sanitize
+  fullName: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.Sanitize
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,80 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure.StartupTask
+  commentId: N:Biwen.QuickApi.Infrastructure.StartupTask
+  id: Biwen.QuickApi.Infrastructure.StartupTask
+  children:
+  - Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
+  - Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Infrastructure.StartupTask
+  nameWithType: Biwen.QuickApi.Infrastructure.StartupTask
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
+  commentId: T:Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
+  parent: Biwen.QuickApi.Infrastructure.StartupTask
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.html
+  name: IStartupTask
+  nameWithType: IStartupTask
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
+- uid: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase
+  commentId: T:Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase.html
+  name: StartupTaskBase
+  nameWithType: StartupTaskBase
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase
+- uid: Biwen.QuickApi.Infrastructure.StartupTask
+  commentId: N:Biwen.QuickApi.Infrastructure.StartupTask
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.StartupTask
+  nameWithType: Biwen.QuickApi.Infrastructure.StartupTask
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.StartupTask
+    name: StartupTask
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.StartupTask.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.StartupTask
+    name: StartupTask
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.StartupTask.html

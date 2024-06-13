@@ -1,0 +1,221 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILocalLock
+  commentId: T:Biwen.QuickApi.Infrastructure.Locking.ILocalLock
+  id: ILocalLock
+  parent: Biwen.QuickApi.Infrastructure.Locking
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ILocalLock
+  nameWithType: ILocalLock
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILocalLock
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.Locking
+  syntax:
+    content: 'public interface ILocalLock : ILock'
+    content.vb: Public Interface ILocalLock Inherits ILock
+  inheritedMembers:
+  - Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(System.String,System.Nullable{System.TimeSpan})
+  - Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(System.String,System.TimeSpan,System.Nullable{System.TimeSpan})
+  - Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(System.String)
+references:
+- uid: Biwen.QuickApi.Infrastructure.Locking
+  commentId: N:Biwen.QuickApi.Infrastructure.Locking
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.Locking
+  nameWithType: Biwen.QuickApi.Infrastructure.Locking
+  fullName: Biwen.QuickApi.Infrastructure.Locking
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Locking
+    name: Locking
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Locking
+    name: Locking
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.html
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(System.String,System.Nullable{System.TimeSpan})
+  commentId: M:Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(System.String,System.Nullable{System.TimeSpan})
+  parent: Biwen.QuickApi.Infrastructure.Locking.ILock
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_AcquireLockAsync_System_String_System_Nullable_System_TimeSpan__
+  name: AcquireLockAsync(string, TimeSpan?)
+  nameWithType: ILock.AcquireLockAsync(string, TimeSpan?)
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(string, System.TimeSpan?)
+  nameWithType.vb: ILock.AcquireLockAsync(String, TimeSpan?)
+  fullName.vb: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(String, System.TimeSpan?)
+  name.vb: AcquireLockAsync(String, TimeSpan?)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(System.String,System.Nullable{System.TimeSpan})
+    name: AcquireLockAsync
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_AcquireLockAsync_System_String_System_Nullable_System_TimeSpan__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(System.String,System.Nullable{System.TimeSpan})
+    name: AcquireLockAsync
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_AcquireLockAsync_System_String_System_Nullable_System_TimeSpan__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(System.String,System.TimeSpan,System.Nullable{System.TimeSpan})
+  commentId: M:Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(System.String,System.TimeSpan,System.Nullable{System.TimeSpan})
+  parent: Biwen.QuickApi.Infrastructure.Locking.ILock
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_TryAcquireLockAsync_System_String_System_TimeSpan_System_Nullable_System_TimeSpan__
+  name: TryAcquireLockAsync(string, TimeSpan, TimeSpan?)
+  nameWithType: ILock.TryAcquireLockAsync(string, TimeSpan, TimeSpan?)
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(string, System.TimeSpan, System.TimeSpan?)
+  nameWithType.vb: ILock.TryAcquireLockAsync(String, TimeSpan, TimeSpan?)
+  fullName.vb: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(String, System.TimeSpan, System.TimeSpan?)
+  name.vb: TryAcquireLockAsync(String, TimeSpan, TimeSpan?)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(System.String,System.TimeSpan,System.Nullable{System.TimeSpan})
+    name: TryAcquireLockAsync
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_TryAcquireLockAsync_System_String_System_TimeSpan_System_Nullable_System_TimeSpan__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(System.String,System.TimeSpan,System.Nullable{System.TimeSpan})
+    name: TryAcquireLockAsync
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_TryAcquireLockAsync_System_String_System_TimeSpan_System_Nullable_System_TimeSpan__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(System.String)
+  commentId: M:Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(System.String)
+  parent: Biwen.QuickApi.Infrastructure.Locking.ILock
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_IsLockAcquiredAsync_System_String_
+  name: IsLockAcquiredAsync(string)
+  nameWithType: ILock.IsLockAcquiredAsync(string)
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(string)
+  nameWithType.vb: ILock.IsLockAcquiredAsync(String)
+  fullName.vb: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(String)
+  name.vb: IsLockAcquiredAsync(String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(System.String)
+    name: IsLockAcquiredAsync
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_IsLockAcquiredAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(System.String)
+    name: IsLockAcquiredAsync
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_IsLockAcquiredAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock
+  commentId: T:Biwen.QuickApi.Infrastructure.Locking.ILock
+  parent: Biwen.QuickApi.Infrastructure.Locking
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Locking.ILock.html
+  name: ILock
+  nameWithType: ILock
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock

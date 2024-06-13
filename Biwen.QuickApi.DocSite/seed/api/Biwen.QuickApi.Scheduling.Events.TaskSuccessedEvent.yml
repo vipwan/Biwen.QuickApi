@@ -1,0 +1,609 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+  commentId: T:Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+  id: TaskSuccessedEvent
+  parent: Biwen.QuickApi.Scheduling.Events
+  children:
+  - Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.#ctor(Biwen.QuickApi.Scheduling.IScheduleTask,System.DateTime,System.DateTime)
+  - Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.EndTime
+  langs:
+  - csharp
+  - vb
+  name: TaskSuccessedEvent
+  nameWithType: TaskSuccessedEvent
+  fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Scheduling.Events
+  syntax:
+    content: 'public sealed class TaskSuccessedEvent : ScheduleTaskEvent, IEvent'
+    content.vb: Public NotInheritable Class TaskSuccessedEvent Inherits ScheduleTaskEvent Implements IEvent
+  inheritance:
+  - System.Object
+  - Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+  implements:
+  - Biwen.QuickApi.Events.IEvent
+  inheritedMembers:
+  - Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.ScheduleTask
+  - Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.EventTime
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  extensionMethods:
+  - Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.Biwen.QuickApi.Events.EventExtensions.PublishAsync``1(System.Threading.CancellationToken)
+- uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.#ctor(Biwen.QuickApi.Scheduling.IScheduleTask,System.DateTime,System.DateTime)
+  commentId: M:Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.#ctor(Biwen.QuickApi.Scheduling.IScheduleTask,System.DateTime,System.DateTime)
+  id: '#ctor(Biwen.QuickApi.Scheduling.IScheduleTask,System.DateTime,System.DateTime)'
+  parent: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+  langs:
+  - csharp
+  - vb
+  name: TaskSuccessedEvent(IScheduleTask, DateTime, DateTime)
+  nameWithType: TaskSuccessedEvent.TaskSuccessedEvent(IScheduleTask, DateTime, DateTime)
+  fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.TaskSuccessedEvent(Biwen.QuickApi.Scheduling.IScheduleTask, System.DateTime, System.DateTime)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Scheduling.Events
+  syntax:
+    content: public TaskSuccessedEvent(IScheduleTask scheduleTask, DateTime eventTime, DateTime endTime)
+    parameters:
+    - id: scheduleTask
+      type: Biwen.QuickApi.Scheduling.IScheduleTask
+    - id: eventTime
+      type: System.DateTime
+    - id: endTime
+      type: System.DateTime
+    content.vb: Public Sub New(scheduleTask As IScheduleTask, eventTime As Date, endTime As Date)
+  overload: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.#ctor*
+  nameWithType.vb: TaskSuccessedEvent.New(IScheduleTask, Date, Date)
+  fullName.vb: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.New(Biwen.QuickApi.Scheduling.IScheduleTask, Date, Date)
+  name.vb: New(IScheduleTask, Date, Date)
+- uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.EndTime
+  commentId: P:Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.EndTime
+  id: EndTime
+  parent: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+  langs:
+  - csharp
+  - vb
+  name: EndTime
+  nameWithType: TaskSuccessedEvent.EndTime
+  fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.EndTime
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Scheduling.Events
+  syntax:
+    content: public DateTime EndTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property EndTime As Date
+  overload: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.EndTime*
+references:
+- uid: Biwen.QuickApi.Scheduling.Events
+  commentId: N:Biwen.QuickApi.Scheduling.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Scheduling.Events
+  nameWithType: Biwen.QuickApi.Scheduling.Events
+  fullName: Biwen.QuickApi.Scheduling.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+  commentId: T:Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+  parent: Biwen.QuickApi.Scheduling.Events
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.html
+  name: ScheduleTaskEvent
+  nameWithType: ScheduleTaskEvent
+  fullName: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+- uid: Biwen.QuickApi.Events.IEvent
+  commentId: T:Biwen.QuickApi.Events.IEvent
+  parent: Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.QuickApi.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: Biwen.QuickApi.Events.IEvent
+- uid: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.ScheduleTask
+  commentId: P:Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.ScheduleTask
+  parent: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.html#Biwen_QuickApi_Scheduling_Events_ScheduleTaskEvent_ScheduleTask
+  name: ScheduleTask
+  nameWithType: ScheduleTaskEvent.ScheduleTask
+  fullName: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.ScheduleTask
+- uid: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.EventTime
+  commentId: P:Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.EventTime
+  parent: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.html#Biwen_QuickApi_Scheduling_Events_ScheduleTaskEvent_EventTime
+  name: EventTime
+  nameWithType: ScheduleTaskEvent.EventTime
+  fullName: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.EventTime
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.Biwen.QuickApi.Events.EventExtensions.PublishAsync``1(System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Events.EventExtensions.PublishAsync``1(``0,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Events.EventExtensions
+  definition: Biwen.QuickApi.Events.EventExtensions.PublishAsync``1(``0,System.Threading.CancellationToken)
+  href: Biwen.QuickApi.Events.EventExtensions.html#Biwen_QuickApi_Events_EventExtensions_PublishAsync__1___0_System_Threading_CancellationToken_
+  name: PublishAsync<TaskSuccessedEvent>(TaskSuccessedEvent, CancellationToken)
+  nameWithType: EventExtensions.PublishAsync<TaskSuccessedEvent>(TaskSuccessedEvent, CancellationToken)
+  fullName: Biwen.QuickApi.Events.EventExtensions.PublishAsync<Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent>(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent, System.Threading.CancellationToken)
+  nameWithType.vb: EventExtensions.PublishAsync(Of TaskSuccessedEvent)(TaskSuccessedEvent, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Events.EventExtensions.PublishAsync(Of Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent)(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent, System.Threading.CancellationToken)
+  name.vb: PublishAsync(Of TaskSuccessedEvent)(TaskSuccessedEvent, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Events.EventExtensions.PublishAsync``1(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+    name: PublishAsync
+    isExternal: true
+    href: Biwen.QuickApi.Events.EventExtensions.html#Biwen_QuickApi_Events_EventExtensions_PublishAsync__1___0_System_Threading_CancellationToken_
+  - name: <
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+    name: TaskSuccessedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+    name: TaskSuccessedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Events.EventExtensions.PublishAsync``1(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+    name: PublishAsync
+    isExternal: true
+    href: Biwen.QuickApi.Events.EventExtensions.html#Biwen_QuickApi_Events_EventExtensions_PublishAsync__1___0_System_Threading_CancellationToken_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+    name: TaskSuccessedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+    name: TaskSuccessedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Events
+  commentId: N:Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Events
+  nameWithType: Biwen.QuickApi.Events
+  fullName: Biwen.QuickApi.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+- uid: Biwen.QuickApi.Events.EventExtensions.PublishAsync``1(``0,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Events.EventExtensions.PublishAsync``1(``0,System.Threading.CancellationToken)
+  isExternal: true
+  href: Biwen.QuickApi.Events.EventExtensions.html#Biwen_QuickApi_Events_EventExtensions_PublishAsync__1___0_System_Threading_CancellationToken_
+  name: PublishAsync<T>(T, CancellationToken)
+  nameWithType: EventExtensions.PublishAsync<T>(T, CancellationToken)
+  fullName: Biwen.QuickApi.Events.EventExtensions.PublishAsync<T>(T, System.Threading.CancellationToken)
+  nameWithType.vb: EventExtensions.PublishAsync(Of T)(T, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Events.EventExtensions.PublishAsync(Of T)(T, System.Threading.CancellationToken)
+  name.vb: PublishAsync(Of T)(T, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Events.EventExtensions.PublishAsync``1(``0,System.Threading.CancellationToken)
+    name: PublishAsync
+    isExternal: true
+    href: Biwen.QuickApi.Events.EventExtensions.html#Biwen_QuickApi_Events_EventExtensions_PublishAsync__1___0_System_Threading_CancellationToken_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Events.EventExtensions.PublishAsync``1(``0,System.Threading.CancellationToken)
+    name: PublishAsync
+    isExternal: true
+    href: Biwen.QuickApi.Events.EventExtensions.html#Biwen_QuickApi_Events_EventExtensions_PublishAsync__1___0_System_Threading_CancellationToken_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.Events.EventExtensions
+  commentId: T:Biwen.QuickApi.Events.EventExtensions
+  parent: Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.QuickApi.Events.EventExtensions.html
+  name: EventExtensions
+  nameWithType: EventExtensions
+  fullName: Biwen.QuickApi.Events.EventExtensions
+- uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.#ctor*
+  commentId: Overload:Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html#Biwen_QuickApi_Scheduling_Events_TaskSuccessedEvent__ctor_Biwen_QuickApi_Scheduling_IScheduleTask_System_DateTime_System_DateTime_
+  name: TaskSuccessedEvent
+  nameWithType: TaskSuccessedEvent.TaskSuccessedEvent
+  fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.TaskSuccessedEvent
+  nameWithType.vb: TaskSuccessedEvent.New
+  fullName.vb: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.New
+  name.vb: New
+- uid: Biwen.QuickApi.Scheduling.IScheduleTask
+  commentId: T:Biwen.QuickApi.Scheduling.IScheduleTask
+  parent: Biwen.QuickApi.Scheduling
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.IScheduleTask.html
+  name: IScheduleTask
+  nameWithType: IScheduleTask
+  fullName: Biwen.QuickApi.Scheduling.IScheduleTask
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Biwen.QuickApi.Scheduling
+  commentId: N:Biwen.QuickApi.Scheduling
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Scheduling
+  nameWithType: Biwen.QuickApi.Scheduling
+  fullName: Biwen.QuickApi.Scheduling
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+- uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.EndTime*
+  commentId: Overload:Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.EndTime
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html#Biwen_QuickApi_Scheduling_Events_TaskSuccessedEvent_EndTime
+  name: EndTime
+  nameWithType: TaskSuccessedEvent.EndTime
+  fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.EndTime

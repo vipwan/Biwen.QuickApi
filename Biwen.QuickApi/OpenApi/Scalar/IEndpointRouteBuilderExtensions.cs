@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Scalar.AspNetCore;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 

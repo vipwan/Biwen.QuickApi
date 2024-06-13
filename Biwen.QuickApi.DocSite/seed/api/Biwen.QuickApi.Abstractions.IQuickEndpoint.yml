@@ -1,0 +1,172 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Abstractions.IQuickEndpoint
+  commentId: T:Biwen.QuickApi.Abstractions.IQuickEndpoint
+  id: IQuickEndpoint
+  parent: Biwen.QuickApi.Abstractions
+  children:
+  - Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler
+  - Biwen.QuickApi.Abstractions.IQuickEndpoint.Verbs
+  langs:
+  - csharp
+  - vb
+  name: IQuickEndpoint
+  nameWithType: IQuickEndpoint
+  fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Abstractions
+  syntax:
+    content: public interface IQuickEndpoint
+    content.vb: Public Interface IQuickEndpoint
+- uid: Biwen.QuickApi.Abstractions.IQuickEndpoint.Verbs
+  commentId: P:Biwen.QuickApi.Abstractions.IQuickEndpoint.Verbs
+  id: Verbs
+  parent: Biwen.QuickApi.Abstractions.IQuickEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Verbs
+  nameWithType: IQuickEndpoint.Verbs
+  fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint.Verbs
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Abstractions
+  syntax:
+    content: public static abstract Verb Verbs { get; }
+    parameters: []
+    return:
+      type: Biwen.QuickApi.Verb
+    content.vb: Public Shared MustInherit ReadOnly Property Verbs As Verb
+  overload: Biwen.QuickApi.Abstractions.IQuickEndpoint.Verbs*
+- uid: Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler
+  commentId: P:Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler
+  id: Handler
+  parent: Biwen.QuickApi.Abstractions.IQuickEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Handler
+  nameWithType: IQuickEndpoint.Handler
+  fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Abstractions
+  syntax:
+    content: public static abstract Delegate Handler { get; }
+    parameters: []
+    return:
+      type: System.Delegate
+    content.vb: Public Shared MustInherit ReadOnly Property Handler As [Delegate]
+  overload: Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler*
+references:
+- uid: Biwen.QuickApi.Abstractions
+  commentId: N:Biwen.QuickApi.Abstractions
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Abstractions
+  nameWithType: Biwen.QuickApi.Abstractions
+  fullName: Biwen.QuickApi.Abstractions
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.html
+- uid: Biwen.QuickApi.Abstractions.IQuickEndpoint.Verbs*
+  commentId: Overload:Biwen.QuickApi.Abstractions.IQuickEndpoint.Verbs
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.IQuickEndpoint.html#Biwen_QuickApi_Abstractions_IQuickEndpoint_Verbs
+  name: Verbs
+  nameWithType: IQuickEndpoint.Verbs
+  fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint.Verbs
+- uid: Biwen.QuickApi.Verb
+  commentId: T:Biwen.QuickApi.Verb
+  parent: Biwen.QuickApi
+  isExternal: true
+  href: Biwen.QuickApi.Verb.html
+  name: Verb
+  nameWithType: Verb
+  fullName: Biwen.QuickApi.Verb
+- uid: Biwen.QuickApi
+  commentId: N:Biwen.QuickApi
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi
+  nameWithType: Biwen.QuickApi
+  fullName: Biwen.QuickApi
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+- uid: Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler*
+  commentId: Overload:Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.IQuickEndpoint.html#Biwen_QuickApi_Abstractions_IQuickEndpoint_Handler
+  name: Handler
+  nameWithType: IQuickEndpoint.Handler
+  fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler
+- uid: System.Delegate
+  commentId: T:System.Delegate
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.delegate
+  name: Delegate
+  nameWithType: Delegate
+  fullName: System.Delegate
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

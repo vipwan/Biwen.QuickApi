@@ -19,10 +19,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Include="seed\articles\files\HelloWorldApi.cs.txt" />
-	</ItemGroup>
-	<ItemGroup>
 		<Content Include="_statics\placeholder.txt" />
+		<Content Include="seed\articles\files\HelloWorldApi.cs.txt" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -32,6 +30,10 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="seed\api\" />
 	</ItemGroup>
 
 </Project>

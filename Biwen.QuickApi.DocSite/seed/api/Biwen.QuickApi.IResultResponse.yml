@@ -1,0 +1,1302 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.IResultResponse
+  commentId: T:Biwen.QuickApi.IResultResponse
+  id: IResultResponse
+  parent: Biwen.QuickApi
+  children:
+  - Biwen.QuickApi.IResultResponse.#ctor(Microsoft.AspNetCore.Http.IResult)
+  - Biwen.QuickApi.IResultResponse.BadRequest(System.Object)
+  - Biwen.QuickApi.IResultResponse.Content(System.String,System.String,System.Text.Encoding,System.Nullable{System.Int32})
+  - Biwen.QuickApi.IResultResponse.Empty
+  - Biwen.QuickApi.IResultResponse.File(System.String,System.String,System.String,System.Boolean)
+  - Biwen.QuickApi.IResultResponse.Json``1(``0,System.Text.Json.JsonSerializerOptions,System.String,System.Nullable{System.Int32})
+  - Biwen.QuickApi.IResultResponse.NotFound
+  - Biwen.QuickApi.IResultResponse.OK(System.Object)
+  - Biwen.QuickApi.IResultResponse.Problem(Microsoft.AspNetCore.Mvc.ProblemDetails)
+  - Biwen.QuickApi.IResultResponse.Problem(System.String,System.String,System.Nullable{System.Int32},System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  - Biwen.QuickApi.IResultResponse.Redirect(System.String,System.Boolean,System.Boolean)
+  - Biwen.QuickApi.IResultResponse.Result
+  - Biwen.QuickApi.IResultResponse.StatusCode(System.Int32)
+  - Biwen.QuickApi.IResultResponse.Stream(System.IO.Stream,System.String,System.String,System.Boolean)
+  - Biwen.QuickApi.IResultResponse.Text(System.String,System.String,System.Text.Encoding,System.Nullable{System.Int32})
+  - Biwen.QuickApi.IResultResponse.Unauthorized
+  langs:
+  - csharp
+  - vb
+  name: IResultResponse
+  nameWithType: IResultResponse
+  fullName: Biwen.QuickApi.IResultResponse
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: >-
+      [Obsolete("请直接使用IResult返回")]
+
+      public sealed class IResultResponse
+    content.vb: >-
+      <Obsolete("请直接使用IResult返回")>
+
+      Public NotInheritable Class IResultResponse
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 请直接使用IResult返回
+- uid: Biwen.QuickApi.IResultResponse.#ctor(Microsoft.AspNetCore.Http.IResult)
+  commentId: M:Biwen.QuickApi.IResultResponse.#ctor(Microsoft.AspNetCore.Http.IResult)
+  id: '#ctor(Microsoft.AspNetCore.Http.IResult)'
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: IResultResponse(IResult)
+  nameWithType: IResultResponse.IResultResponse(IResult)
+  fullName: Biwen.QuickApi.IResultResponse.IResultResponse(Microsoft.AspNetCore.Http.IResult)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public IResultResponse(IResult result)
+    parameters:
+    - id: result
+      type: Microsoft.AspNetCore.Http.IResult
+    content.vb: Public Sub New(result As IResult)
+  overload: Biwen.QuickApi.IResultResponse.#ctor*
+  nameWithType.vb: IResultResponse.New(IResult)
+  fullName.vb: Biwen.QuickApi.IResultResponse.New(Microsoft.AspNetCore.Http.IResult)
+  name.vb: New(IResult)
+- uid: Biwen.QuickApi.IResultResponse.OK(System.Object)
+  commentId: M:Biwen.QuickApi.IResultResponse.OK(System.Object)
+  id: OK(System.Object)
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: OK(object?)
+  nameWithType: IResultResponse.OK(object?)
+  fullName: Biwen.QuickApi.IResultResponse.OK(object?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse OK(object? value = null)
+    parameters:
+    - id: value
+      type: System.Object
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared Function OK(value As Object = Nothing) As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.OK*
+  nameWithType.vb: IResultResponse.OK(Object)
+  fullName.vb: Biwen.QuickApi.IResultResponse.OK(Object)
+  name.vb: OK(Object)
+- uid: Biwen.QuickApi.IResultResponse.BadRequest(System.Object)
+  commentId: M:Biwen.QuickApi.IResultResponse.BadRequest(System.Object)
+  id: BadRequest(System.Object)
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: BadRequest(object?)
+  nameWithType: IResultResponse.BadRequest(object?)
+  fullName: Biwen.QuickApi.IResultResponse.BadRequest(object?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse BadRequest(object? error = null)
+    parameters:
+    - id: error
+      type: System.Object
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared Function BadRequest([error] As Object = Nothing) As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.BadRequest*
+  nameWithType.vb: IResultResponse.BadRequest(Object)
+  fullName.vb: Biwen.QuickApi.IResultResponse.BadRequest(Object)
+  name.vb: BadRequest(Object)
+- uid: Biwen.QuickApi.IResultResponse.Stream(System.IO.Stream,System.String,System.String,System.Boolean)
+  commentId: M:Biwen.QuickApi.IResultResponse.Stream(System.IO.Stream,System.String,System.String,System.Boolean)
+  id: Stream(System.IO.Stream,System.String,System.String,System.Boolean)
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: Stream(Stream, string?, string?, bool)
+  nameWithType: IResultResponse.Stream(Stream, string?, string?, bool)
+  fullName: Biwen.QuickApi.IResultResponse.Stream(System.IO.Stream, string?, string?, bool)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse Stream(Stream stream, string? contentType = null, string? fileDownloadName = null, bool enableRangeProcessing = false)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+    - id: contentType
+      type: System.String
+    - id: fileDownloadName
+      type: System.String
+    - id: enableRangeProcessing
+      type: System.Boolean
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared Function Stream(stream As Stream, contentType As String = Nothing, fileDownloadName As String = Nothing, enableRangeProcessing As Boolean = False) As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.Stream*
+  nameWithType.vb: IResultResponse.Stream(Stream, String, String, Boolean)
+  fullName.vb: Biwen.QuickApi.IResultResponse.Stream(System.IO.Stream, String, String, Boolean)
+  name.vb: Stream(Stream, String, String, Boolean)
+- uid: Biwen.QuickApi.IResultResponse.File(System.String,System.String,System.String,System.Boolean)
+  commentId: M:Biwen.QuickApi.IResultResponse.File(System.String,System.String,System.String,System.Boolean)
+  id: File(System.String,System.String,System.String,System.Boolean)
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: File(string, string?, string?, bool)
+  nameWithType: IResultResponse.File(string, string?, string?, bool)
+  fullName: Biwen.QuickApi.IResultResponse.File(string, string?, string?, bool)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse File(string path, string? contentType = null, string? fileDownloadName = null, bool enableRangeProcessing = false)
+    parameters:
+    - id: path
+      type: System.String
+    - id: contentType
+      type: System.String
+    - id: fileDownloadName
+      type: System.String
+    - id: enableRangeProcessing
+      type: System.Boolean
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared Function File(path As String, contentType As String = Nothing, fileDownloadName As String = Nothing, enableRangeProcessing As Boolean = False) As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.File*
+  nameWithType.vb: IResultResponse.File(String, String, String, Boolean)
+  fullName.vb: Biwen.QuickApi.IResultResponse.File(String, String, String, Boolean)
+  name.vb: File(String, String, String, Boolean)
+- uid: Biwen.QuickApi.IResultResponse.Content(System.String,System.String,System.Text.Encoding,System.Nullable{System.Int32})
+  commentId: M:Biwen.QuickApi.IResultResponse.Content(System.String,System.String,System.Text.Encoding,System.Nullable{System.Int32})
+  id: Content(System.String,System.String,System.Text.Encoding,System.Nullable{System.Int32})
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: Content(string?, string?, Encoding?, int?)
+  nameWithType: IResultResponse.Content(string?, string?, Encoding?, int?)
+  fullName: Biwen.QuickApi.IResultResponse.Content(string?, string?, System.Text.Encoding?, int?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse Content(string? content, string? contentType = null, Encoding? encoding = null, int? statusCode = null)
+    parameters:
+    - id: content
+      type: System.String
+    - id: contentType
+      type: System.String
+    - id: encoding
+      type: System.Text.Encoding
+    - id: statusCode
+      type: System.Nullable{System.Int32}
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared Function Content(content As String, contentType As String = Nothing, encoding As Encoding = Nothing, statusCode As Integer? = Nothing) As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.Content*
+  nameWithType.vb: IResultResponse.Content(String, String, Encoding, Integer?)
+  fullName.vb: Biwen.QuickApi.IResultResponse.Content(String, String, System.Text.Encoding, Integer?)
+  name.vb: Content(String, String, Encoding, Integer?)
+- uid: Biwen.QuickApi.IResultResponse.Problem(Microsoft.AspNetCore.Mvc.ProblemDetails)
+  commentId: M:Biwen.QuickApi.IResultResponse.Problem(Microsoft.AspNetCore.Mvc.ProblemDetails)
+  id: Problem(Microsoft.AspNetCore.Mvc.ProblemDetails)
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: Problem(ProblemDetails)
+  nameWithType: IResultResponse.Problem(ProblemDetails)
+  fullName: Biwen.QuickApi.IResultResponse.Problem(Microsoft.AspNetCore.Mvc.ProblemDetails)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse Problem(ProblemDetails problemDetails)
+    parameters:
+    - id: problemDetails
+      type: Microsoft.AspNetCore.Mvc.ProblemDetails
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared Function Problem(problemDetails As ProblemDetails) As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.Problem*
+- uid: Biwen.QuickApi.IResultResponse.Problem(System.String,System.String,System.Nullable{System.Int32},System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  commentId: M:Biwen.QuickApi.IResultResponse.Problem(System.String,System.String,System.Nullable{System.Int32},System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  id: Problem(System.String,System.String,System.Nullable{System.Int32},System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: Problem(string?, string?, int?, string?, string?, IDictionary<string, object?>?)
+  nameWithType: IResultResponse.Problem(string?, string?, int?, string?, string?, IDictionary<string, object?>?)
+  fullName: Biwen.QuickApi.IResultResponse.Problem(string?, string?, int?, string?, string?, System.Collections.Generic.IDictionary<string, object?>?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse Problem(string? detail = null, string? instance = null, int? statusCode = null, string? title = null, string? type = null, IDictionary<string, object?>? extensions = null)
+    parameters:
+    - id: detail
+      type: System.String
+    - id: instance
+      type: System.String
+    - id: statusCode
+      type: System.Nullable{System.Int32}
+    - id: title
+      type: System.String
+    - id: type
+      type: System.String
+    - id: extensions
+      type: System.Collections.Generic.IDictionary{System.String,System.Object}
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared Function Problem(detail As String = Nothing, instance As String = Nothing, statusCode As Integer? = Nothing, title As String = Nothing, type As String = Nothing, extensions As IDictionary(Of String, Object) = Nothing) As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.Problem*
+  nameWithType.vb: IResultResponse.Problem(String, String, Integer?, String, String, IDictionary(Of String, Object))
+  fullName.vb: Biwen.QuickApi.IResultResponse.Problem(String, String, Integer?, String, String, System.Collections.Generic.IDictionary(Of String, Object))
+  name.vb: Problem(String, String, Integer?, String, String, IDictionary(Of String, Object))
+- uid: Biwen.QuickApi.IResultResponse.Text(System.String,System.String,System.Text.Encoding,System.Nullable{System.Int32})
+  commentId: M:Biwen.QuickApi.IResultResponse.Text(System.String,System.String,System.Text.Encoding,System.Nullable{System.Int32})
+  id: Text(System.String,System.String,System.Text.Encoding,System.Nullable{System.Int32})
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: Text(string, string?, Encoding?, int?)
+  nameWithType: IResultResponse.Text(string, string?, Encoding?, int?)
+  fullName: Biwen.QuickApi.IResultResponse.Text(string, string?, System.Text.Encoding?, int?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse Text(string text, string? contentType = null, Encoding? encoding = null, int? statusCode = null)
+    parameters:
+    - id: text
+      type: System.String
+    - id: contentType
+      type: System.String
+    - id: encoding
+      type: System.Text.Encoding
+    - id: statusCode
+      type: System.Nullable{System.Int32}
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared Function Text(text As String, contentType As String = Nothing, encoding As Encoding = Nothing, statusCode As Integer? = Nothing) As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.Text*
+  nameWithType.vb: IResultResponse.Text(String, String, Encoding, Integer?)
+  fullName.vb: Biwen.QuickApi.IResultResponse.Text(String, String, System.Text.Encoding, Integer?)
+  name.vb: Text(String, String, Encoding, Integer?)
+- uid: Biwen.QuickApi.IResultResponse.Redirect(System.String,System.Boolean,System.Boolean)
+  commentId: M:Biwen.QuickApi.IResultResponse.Redirect(System.String,System.Boolean,System.Boolean)
+  id: Redirect(System.String,System.Boolean,System.Boolean)
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: Redirect(string, bool, bool)
+  nameWithType: IResultResponse.Redirect(string, bool, bool)
+  fullName: Biwen.QuickApi.IResultResponse.Redirect(string, bool, bool)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse Redirect(string url, bool permanent = false, bool preserveMethod = false)
+    parameters:
+    - id: url
+      type: System.String
+    - id: permanent
+      type: System.Boolean
+    - id: preserveMethod
+      type: System.Boolean
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared Function Redirect(url As String, permanent As Boolean = False, preserveMethod As Boolean = False) As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.Redirect*
+  nameWithType.vb: IResultResponse.Redirect(String, Boolean, Boolean)
+  fullName.vb: Biwen.QuickApi.IResultResponse.Redirect(String, Boolean, Boolean)
+  name.vb: Redirect(String, Boolean, Boolean)
+- uid: Biwen.QuickApi.IResultResponse.Json``1(``0,System.Text.Json.JsonSerializerOptions,System.String,System.Nullable{System.Int32})
+  commentId: M:Biwen.QuickApi.IResultResponse.Json``1(``0,System.Text.Json.JsonSerializerOptions,System.String,System.Nullable{System.Int32})
+  id: Json``1(``0,System.Text.Json.JsonSerializerOptions,System.String,System.Nullable{System.Int32})
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: Json<T>(T, JsonSerializerOptions?, string?, int?)
+  nameWithType: IResultResponse.Json<T>(T, JsonSerializerOptions?, string?, int?)
+  fullName: Biwen.QuickApi.IResultResponse.Json<T>(T, System.Text.Json.JsonSerializerOptions?, string?, int?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse Json<T>(T value, JsonSerializerOptions? serializerOptions = null, string? contentType = null, int? statusCode = null)
+    parameters:
+    - id: value
+      type: '{T}'
+    - id: serializerOptions
+      type: System.Text.Json.JsonSerializerOptions
+    - id: contentType
+      type: System.String
+    - id: statusCode
+      type: System.Nullable{System.Int32}
+    typeParameters:
+    - id: T
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared Function Json(Of T)(value As T, serializerOptions As JsonSerializerOptions = Nothing, contentType As String = Nothing, statusCode As Integer? = Nothing) As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.Json*
+  nameWithType.vb: IResultResponse.Json(Of T)(T, JsonSerializerOptions, String, Integer?)
+  fullName.vb: Biwen.QuickApi.IResultResponse.Json(Of T)(T, System.Text.Json.JsonSerializerOptions, String, Integer?)
+  name.vb: Json(Of T)(T, JsonSerializerOptions, String, Integer?)
+- uid: Biwen.QuickApi.IResultResponse.StatusCode(System.Int32)
+  commentId: M:Biwen.QuickApi.IResultResponse.StatusCode(System.Int32)
+  id: StatusCode(System.Int32)
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: StatusCode(int)
+  nameWithType: IResultResponse.StatusCode(int)
+  fullName: Biwen.QuickApi.IResultResponse.StatusCode(int)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse StatusCode(int statusCode)
+    parameters:
+    - id: statusCode
+      type: System.Int32
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared Function StatusCode(statusCode As Integer) As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.StatusCode*
+  nameWithType.vb: IResultResponse.StatusCode(Integer)
+  fullName.vb: Biwen.QuickApi.IResultResponse.StatusCode(Integer)
+  name.vb: StatusCode(Integer)
+- uid: Biwen.QuickApi.IResultResponse.Result
+  commentId: P:Biwen.QuickApi.IResultResponse.Result
+  id: Result
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: IResultResponse.Result
+  fullName: Biwen.QuickApi.IResultResponse.Result
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public IResult Result { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.AspNetCore.Http.IResult
+    content.vb: Public Property Result As IResult
+  overload: Biwen.QuickApi.IResultResponse.Result*
+- uid: Biwen.QuickApi.IResultResponse.Empty
+  commentId: P:Biwen.QuickApi.IResultResponse.Empty
+  id: Empty
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: IResultResponse.Empty
+  fullName: Biwen.QuickApi.IResultResponse.Empty
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse Empty { get; }
+    parameters: []
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared ReadOnly Property Empty As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.Empty*
+- uid: Biwen.QuickApi.IResultResponse.NotFound
+  commentId: P:Biwen.QuickApi.IResultResponse.NotFound
+  id: NotFound
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: NotFound
+  nameWithType: IResultResponse.NotFound
+  fullName: Biwen.QuickApi.IResultResponse.NotFound
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse NotFound { get; }
+    parameters: []
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared ReadOnly Property NotFound As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.NotFound*
+- uid: Biwen.QuickApi.IResultResponse.Unauthorized
+  commentId: P:Biwen.QuickApi.IResultResponse.Unauthorized
+  id: Unauthorized
+  parent: Biwen.QuickApi.IResultResponse
+  langs:
+  - csharp
+  - vb
+  name: Unauthorized
+  nameWithType: IResultResponse.Unauthorized
+  fullName: Biwen.QuickApi.IResultResponse.Unauthorized
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IResultResponse Unauthorized { get; }
+    parameters: []
+    return:
+      type: Biwen.QuickApi.IResultResponse
+    content.vb: Public Shared ReadOnly Property Unauthorized As IResultResponse
+  overload: Biwen.QuickApi.IResultResponse.Unauthorized*
+references:
+- uid: Biwen.QuickApi
+  commentId: N:Biwen.QuickApi
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi
+  nameWithType: Biwen.QuickApi
+  fullName: Biwen.QuickApi
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.IResultResponse.#ctor*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse__ctor_Microsoft_AspNetCore_Http_IResult_
+  name: IResultResponse
+  nameWithType: IResultResponse.IResultResponse
+  fullName: Biwen.QuickApi.IResultResponse.IResultResponse
+  nameWithType.vb: IResultResponse.New
+  fullName.vb: Biwen.QuickApi.IResultResponse.New
+  name.vb: New
+- uid: Microsoft.AspNetCore.Http.IResult
+  commentId: T:Microsoft.AspNetCore.Http.IResult
+  parent: Microsoft.AspNetCore.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.iresult
+  name: IResult
+  nameWithType: IResult
+  fullName: Microsoft.AspNetCore.Http.IResult
+- uid: Microsoft.AspNetCore.Http
+  commentId: N:Microsoft.AspNetCore.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Http
+  nameWithType: Microsoft.AspNetCore.Http
+  fullName: Microsoft.AspNetCore.Http
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http
+- uid: Biwen.QuickApi.IResultResponse.OK*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.OK
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_OK_System_Object_
+  name: OK
+  nameWithType: IResultResponse.OK
+  fullName: Biwen.QuickApi.IResultResponse.OK
+- uid: Biwen.QuickApi.IResultResponse
+  commentId: T:Biwen.QuickApi.IResultResponse
+  parent: Biwen.QuickApi
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html
+  name: IResultResponse
+  nameWithType: IResultResponse
+  fullName: Biwen.QuickApi.IResultResponse
+- uid: Biwen.QuickApi.IResultResponse.BadRequest*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.BadRequest
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_BadRequest_System_Object_
+  name: BadRequest
+  nameWithType: IResultResponse.BadRequest
+  fullName: Biwen.QuickApi.IResultResponse.BadRequest
+- uid: Biwen.QuickApi.IResultResponse.Stream*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.Stream
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_Stream_System_IO_Stream_System_String_System_String_System_Boolean_
+  name: Stream
+  nameWithType: IResultResponse.Stream
+  fullName: Biwen.QuickApi.IResultResponse.Stream
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: Biwen.QuickApi.IResultResponse.File*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.File
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_File_System_String_System_String_System_String_System_Boolean_
+  name: File
+  nameWithType: IResultResponse.File
+  fullName: Biwen.QuickApi.IResultResponse.File
+- uid: Biwen.QuickApi.IResultResponse.Content*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.Content
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_Content_System_String_System_String_System_Text_Encoding_System_Nullable_System_Int32__
+  name: Content
+  nameWithType: IResultResponse.Content
+  fullName: Biwen.QuickApi.IResultResponse.Content
+- uid: System.Text.Encoding
+  commentId: T:System.Text.Encoding
+  parent: System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.encoding
+  name: Encoding
+  nameWithType: Encoding
+  fullName: System.Text.Encoding
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.IResultResponse.Problem*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.Problem
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_Problem_Microsoft_AspNetCore_Mvc_ProblemDetails_
+  name: Problem
+  nameWithType: IResultResponse.Problem
+  fullName: Biwen.QuickApi.IResultResponse.Problem
+- uid: Microsoft.AspNetCore.Mvc.ProblemDetails
+  commentId: T:Microsoft.AspNetCore.Mvc.ProblemDetails
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.problemdetails
+  name: ProblemDetails
+  nameWithType: ProblemDetails
+  fullName: Microsoft.AspNetCore.Mvc.ProblemDetails
+- uid: Microsoft.AspNetCore.Mvc
+  commentId: N:Microsoft.AspNetCore.Mvc
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Mvc
+  nameWithType: Microsoft.AspNetCore.Mvc
+  fullName: Microsoft.AspNetCore.Mvc
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+- uid: System.Collections.Generic.IDictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<string, object>
+  nameWithType: IDictionary<string, object>
+  fullName: System.Collections.Generic.IDictionary<string, object>
+  nameWithType.vb: IDictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.IDictionary(Of String, Object)
+  name.vb: IDictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Biwen.QuickApi.IResultResponse.Text*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.Text
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_Text_System_String_System_String_System_Text_Encoding_System_Nullable_System_Int32__
+  name: Text
+  nameWithType: IResultResponse.Text
+  fullName: Biwen.QuickApi.IResultResponse.Text
+- uid: Biwen.QuickApi.IResultResponse.Redirect*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.Redirect
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_Redirect_System_String_System_Boolean_System_Boolean_
+  name: Redirect
+  nameWithType: IResultResponse.Redirect
+  fullName: Biwen.QuickApi.IResultResponse.Redirect
+- uid: Biwen.QuickApi.IResultResponse.Json*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.Json
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_Json__1___0_System_Text_Json_JsonSerializerOptions_System_String_System_Nullable_System_Int32__
+  name: Json
+  nameWithType: IResultResponse.Json
+  fullName: Biwen.QuickApi.IResultResponse.Json
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Text.Json.JsonSerializerOptions
+  commentId: T:System.Text.Json.JsonSerializerOptions
+  parent: System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  name: JsonSerializerOptions
+  nameWithType: JsonSerializerOptions
+  fullName: System.Text.Json.JsonSerializerOptions
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Text.Json
+  commentId: N:System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json
+  nameWithType: System.Text.Json
+  fullName: System.Text.Json
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+- uid: Biwen.QuickApi.IResultResponse.StatusCode*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.StatusCode
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_StatusCode_System_Int32_
+  name: StatusCode
+  nameWithType: IResultResponse.StatusCode
+  fullName: Biwen.QuickApi.IResultResponse.StatusCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Biwen.QuickApi.IResultResponse.Result*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.Result
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_Result
+  name: Result
+  nameWithType: IResultResponse.Result
+  fullName: Biwen.QuickApi.IResultResponse.Result
+- uid: Biwen.QuickApi.IResultResponse.Empty*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.Empty
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_Empty
+  name: Empty
+  nameWithType: IResultResponse.Empty
+  fullName: Biwen.QuickApi.IResultResponse.Empty
+- uid: Biwen.QuickApi.IResultResponse.NotFound*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.NotFound
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_NotFound
+  name: NotFound
+  nameWithType: IResultResponse.NotFound
+  fullName: Biwen.QuickApi.IResultResponse.NotFound
+- uid: Biwen.QuickApi.IResultResponse.Unauthorized*
+  commentId: Overload:Biwen.QuickApi.IResultResponse.Unauthorized
+  isExternal: true
+  href: Biwen.QuickApi.IResultResponse.html#Biwen_QuickApi_IResultResponse_Unauthorized
+  name: Unauthorized
+  nameWithType: IResultResponse.Unauthorized
+  fullName: Biwen.QuickApi.IResultResponse.Unauthorized

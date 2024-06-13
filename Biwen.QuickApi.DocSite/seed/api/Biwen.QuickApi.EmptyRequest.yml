@@ -1,0 +1,562 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.EmptyRequest
+  commentId: T:Biwen.QuickApi.EmptyRequest
+  id: EmptyRequest
+  parent: Biwen.QuickApi
+  children:
+  - Biwen.QuickApi.EmptyRequest.#ctor
+  langs:
+  - csharp
+  - vb
+  name: EmptyRequest
+  nameWithType: EmptyRequest
+  fullName: Biwen.QuickApi.EmptyRequest
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseRequest.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public sealed class EmptyRequest : BaseRequest<EmptyRequest>'
+    content.vb: Public NotInheritable Class EmptyRequest Inherits BaseRequest(Of EmptyRequest)
+  inheritance:
+  - System.Object
+  - Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}
+  inheritedMembers:
+  - Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}.RuleFor``1(System.Linq.Expressions.Expression{System.Func{Biwen.QuickApi.EmptyRequest,{TProperty}}})
+  - Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}.Validate
+  - System.Object.GetType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Biwen.QuickApi.EmptyRequest.#ctor
+  commentId: M:Biwen.QuickApi.EmptyRequest.#ctor
+  id: '#ctor'
+  parent: Biwen.QuickApi.EmptyRequest
+  langs:
+  - csharp
+  - vb
+  name: EmptyRequest()
+  nameWithType: EmptyRequest.EmptyRequest()
+  fullName: Biwen.QuickApi.EmptyRequest.EmptyRequest()
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseRequest.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public EmptyRequest()
+    content.vb: Public Sub New()
+  overload: Biwen.QuickApi.EmptyRequest.#ctor*
+  nameWithType.vb: EmptyRequest.New()
+  fullName.vb: Biwen.QuickApi.EmptyRequest.New()
+  name.vb: New()
+references:
+- uid: Biwen.QuickApi
+  commentId: N:Biwen.QuickApi
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi
+  nameWithType: Biwen.QuickApi
+  fullName: Biwen.QuickApi
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}
+  commentId: T:Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}
+  parent: Biwen.QuickApi
+  definition: Biwen.QuickApi.BaseRequest`1
+  href: Biwen.QuickApi.BaseRequest-1.html
+  name: BaseRequest<EmptyRequest>
+  nameWithType: BaseRequest<EmptyRequest>
+  fullName: Biwen.QuickApi.BaseRequest<Biwen.QuickApi.EmptyRequest>
+  nameWithType.vb: BaseRequest(Of EmptyRequest)
+  fullName.vb: Biwen.QuickApi.BaseRequest(Of Biwen.QuickApi.EmptyRequest)
+  name.vb: BaseRequest(Of EmptyRequest)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseRequest`1
+    name: BaseRequest
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html
+  - name: <
+  - uid: Biwen.QuickApi.EmptyRequest
+    name: EmptyRequest
+    isExternal: true
+    href: Biwen.QuickApi.EmptyRequest.html
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseRequest`1
+    name: BaseRequest
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.EmptyRequest
+    name: EmptyRequest
+    isExternal: true
+    href: Biwen.QuickApi.EmptyRequest.html
+  - name: )
+- uid: Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}.RuleFor``1(System.Linq.Expressions.Expression{System.Func{Biwen.QuickApi.EmptyRequest,{TProperty}}})
+  commentId: M:Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}.RuleFor``1(System.Linq.Expressions.Expression{System.Func{Biwen.QuickApi.EmptyRequest,``0}})
+  parent: Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}
+  definition: Biwen.QuickApi.BaseRequest`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_RuleFor__1_System_Linq_Expressions_Expression_System_Func__0___0___
+  name: RuleFor<TProperty>(Expression<Func<EmptyRequest, TProperty>>)
+  nameWithType: BaseRequest<EmptyRequest>.RuleFor<TProperty>(Expression<Func<EmptyRequest, TProperty>>)
+  fullName: Biwen.QuickApi.BaseRequest<Biwen.QuickApi.EmptyRequest>.RuleFor<TProperty>(System.Linq.Expressions.Expression<System.Func<Biwen.QuickApi.EmptyRequest, TProperty>>)
+  nameWithType.vb: BaseRequest(Of EmptyRequest).RuleFor(Of TProperty)(Expression(Of Func(Of EmptyRequest, TProperty)))
+  fullName.vb: Biwen.QuickApi.BaseRequest(Of Biwen.QuickApi.EmptyRequest).RuleFor(Of TProperty)(System.Linq.Expressions.Expression(Of System.Func(Of Biwen.QuickApi.EmptyRequest, TProperty)))
+  name.vb: RuleFor(Of TProperty)(Expression(Of Func(Of EmptyRequest, TProperty)))
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}.RuleFor``1(System.Linq.Expressions.Expression{System.Func{Biwen.QuickApi.EmptyRequest,``0}})
+    name: RuleFor
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_RuleFor__1_System_Linq_Expressions_Expression_System_Func__0___0___
+  - name: <
+  - name: TProperty
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Biwen.QuickApi.EmptyRequest
+    name: EmptyRequest
+    isExternal: true
+    href: Biwen.QuickApi.EmptyRequest.html
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}.RuleFor``1(System.Linq.Expressions.Expression{System.Func{Biwen.QuickApi.EmptyRequest,``0}})
+    name: RuleFor
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_RuleFor__1_System_Linq_Expressions_Expression_System_Func__0___0___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.EmptyRequest
+    name: EmptyRequest
+    isExternal: true
+    href: Biwen.QuickApi.EmptyRequest.html
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}.Validate
+  commentId: M:Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}.Validate
+  parent: Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}
+  definition: Biwen.QuickApi.BaseRequest`1.Validate
+  href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_Validate
+  name: Validate()
+  nameWithType: BaseRequest<EmptyRequest>.Validate()
+  fullName: Biwen.QuickApi.BaseRequest<Biwen.QuickApi.EmptyRequest>.Validate()
+  nameWithType.vb: BaseRequest(Of EmptyRequest).Validate()
+  fullName.vb: Biwen.QuickApi.BaseRequest(Of Biwen.QuickApi.EmptyRequest).Validate()
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}.Validate
+    name: Validate
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_Validate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseRequest{Biwen.QuickApi.EmptyRequest}.Validate
+    name: Validate
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_Validate
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.BaseRequest`1
+  commentId: T:Biwen.QuickApi.BaseRequest`1
+  isExternal: true
+  href: Biwen.QuickApi.BaseRequest-1.html
+  name: BaseRequest<T>
+  nameWithType: BaseRequest<T>
+  fullName: Biwen.QuickApi.BaseRequest<T>
+  nameWithType.vb: BaseRequest(Of T)
+  fullName.vb: Biwen.QuickApi.BaseRequest(Of T)
+  name.vb: BaseRequest(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseRequest`1
+    name: BaseRequest
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseRequest`1
+    name: BaseRequest
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.BaseRequest`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  commentId: M:Biwen.QuickApi.BaseRequest`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  isExternal: true
+  href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_RuleFor__1_System_Linq_Expressions_Expression_System_Func__0___0___
+  name: RuleFor<TProperty>(Expression<Func<T, TProperty>>)
+  nameWithType: BaseRequest<T>.RuleFor<TProperty>(Expression<Func<T, TProperty>>)
+  fullName: Biwen.QuickApi.BaseRequest<T>.RuleFor<TProperty>(System.Linq.Expressions.Expression<System.Func<T, TProperty>>)
+  nameWithType.vb: BaseRequest(Of T).RuleFor(Of TProperty)(Expression(Of Func(Of T, TProperty)))
+  fullName.vb: Biwen.QuickApi.BaseRequest(Of T).RuleFor(Of TProperty)(System.Linq.Expressions.Expression(Of System.Func(Of T, TProperty)))
+  name.vb: RuleFor(Of TProperty)(Expression(Of Func(Of T, TProperty)))
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseRequest`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+    name: RuleFor
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_RuleFor__1_System_Linq_Expressions_Expression_System_Func__0___0___
+  - name: <
+  - name: TProperty
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseRequest`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+    name: RuleFor
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_RuleFor__1_System_Linq_Expressions_Expression_System_Func__0___0___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.BaseRequest`1.Validate
+  commentId: M:Biwen.QuickApi.BaseRequest`1.Validate
+  isExternal: true
+  href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_Validate
+  name: Validate()
+  nameWithType: BaseRequest<T>.Validate()
+  fullName: Biwen.QuickApi.BaseRequest<T>.Validate()
+  nameWithType.vb: BaseRequest(Of T).Validate()
+  fullName.vb: Biwen.QuickApi.BaseRequest(Of T).Validate()
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseRequest`1.Validate
+    name: Validate
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_Validate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseRequest`1.Validate
+    name: Validate
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_Validate
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.EmptyRequest.#ctor*
+  commentId: Overload:Biwen.QuickApi.EmptyRequest.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.EmptyRequest.html#Biwen_QuickApi_EmptyRequest__ctor
+  name: EmptyRequest
+  nameWithType: EmptyRequest.EmptyRequest
+  fullName: Biwen.QuickApi.EmptyRequest.EmptyRequest
+  nameWithType.vb: EmptyRequest.New
+  fullName.vb: Biwen.QuickApi.EmptyRequest.New
+  name.vb: New

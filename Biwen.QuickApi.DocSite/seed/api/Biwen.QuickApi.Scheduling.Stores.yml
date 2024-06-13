@@ -1,0 +1,32 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Scheduling.Stores
+  commentId: N:Biwen.QuickApi.Scheduling.Stores
+  id: Biwen.QuickApi.Scheduling.Stores
+  children:
+  - Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
+  - Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Scheduling.Stores
+  nameWithType: Biwen.QuickApi.Scheduling.Stores
+  fullName: Biwen.QuickApi.Scheduling.Stores
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
+  commentId: T:Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.html
+  name: IScheduleMetadataStore
+  nameWithType: IScheduleMetadataStore
+  fullName: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
+- uid: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
+  commentId: T:Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata.html
+  name: ScheduleTaskMetadata
+  nameWithType: ScheduleTaskMetadata
+  fullName: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata

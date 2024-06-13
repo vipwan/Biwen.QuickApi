@@ -1,0 +1,32 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.OpenApi
+  commentId: N:Biwen.QuickApi.OpenApi
+  id: Biwen.QuickApi.OpenApi
+  children:
+  - Biwen.QuickApi.OpenApi.BearerSecuritySchemeTransformer
+  - Biwen.QuickApi.OpenApi.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.OpenApi
+  nameWithType: Biwen.QuickApi.OpenApi
+  fullName: Biwen.QuickApi.OpenApi
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.OpenApi.BearerSecuritySchemeTransformer
+  commentId: T:Biwen.QuickApi.OpenApi.BearerSecuritySchemeTransformer
+  isExternal: true
+  href: Biwen.QuickApi.OpenApi.BearerSecuritySchemeTransformer.html
+  name: BearerSecuritySchemeTransformer
+  nameWithType: BearerSecuritySchemeTransformer
+  fullName: Biwen.QuickApi.OpenApi.BearerSecuritySchemeTransformer
+- uid: Biwen.QuickApi.OpenApi.ServiceRegistration
+  commentId: T:Biwen.QuickApi.OpenApi.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.OpenApi.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.OpenApi.ServiceRegistration

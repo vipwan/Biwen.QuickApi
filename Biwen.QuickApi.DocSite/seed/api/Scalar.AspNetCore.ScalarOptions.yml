@@ -1,0 +1,952 @@
+### YamlMime:ManagedReference
+items:
+- uid: Scalar.AspNetCore.ScalarOptions
+  commentId: T:Scalar.AspNetCore.ScalarOptions
+  id: ScalarOptions
+  parent: Scalar.AspNetCore
+  children:
+  - Scalar.AspNetCore.ScalarOptions.#ctor
+  - Scalar.AspNetCore.ScalarOptions.Authentication
+  - Scalar.AspNetCore.ScalarOptions.CustomCss
+  - Scalar.AspNetCore.ScalarOptions.DarkMode
+  - Scalar.AspNetCore.ScalarOptions.EndpointPathPrefix
+  - Scalar.AspNetCore.ScalarOptions.HideDownloadButton
+  - Scalar.AspNetCore.ScalarOptions.Layout
+  - Scalar.AspNetCore.ScalarOptions.Metadata
+  - Scalar.AspNetCore.ScalarOptions.OpenApiPathPrefix
+  - Scalar.AspNetCore.ScalarOptions.SearchHotkey
+  - Scalar.AspNetCore.ScalarOptions.ShowSideBar
+  - Scalar.AspNetCore.ScalarOptions.Theme
+  - Scalar.AspNetCore.ScalarOptions.Title
+  - Scalar.AspNetCore.ScalarOptions.WithDefaultFonts
+  langs:
+  - csharp
+  - vb
+  name: ScalarOptions
+  nameWithType: ScalarOptions
+  fullName: Scalar.AspNetCore.ScalarOptions
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public class ScalarOptions
+    content.vb: Public Class ScalarOptions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Scalar.AspNetCore.ScalarOptions.#ctor
+  commentId: M:Scalar.AspNetCore.ScalarOptions.#ctor
+  id: '#ctor'
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: ScalarOptions()
+  nameWithType: ScalarOptions.ScalarOptions()
+  fullName: Scalar.AspNetCore.ScalarOptions.ScalarOptions()
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public ScalarOptions()
+    content.vb: Public Sub New()
+  overload: Scalar.AspNetCore.ScalarOptions.#ctor*
+  nameWithType.vb: ScalarOptions.New()
+  fullName.vb: Scalar.AspNetCore.ScalarOptions.New()
+  name.vb: New()
+- uid: Scalar.AspNetCore.ScalarOptions.EndpointPathPrefix
+  commentId: P:Scalar.AspNetCore.ScalarOptions.EndpointPathPrefix
+  id: EndpointPathPrefix
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: EndpointPathPrefix
+  nameWithType: ScalarOptions.EndpointPathPrefix
+  fullName: Scalar.AspNetCore.ScalarOptions.EndpointPathPrefix
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string EndpointPathPrefix { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property EndpointPathPrefix As String
+  overload: Scalar.AspNetCore.ScalarOptions.EndpointPathPrefix*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: Scalar.AspNetCore.ScalarOptions.OpenApiPathPrefix
+  commentId: P:Scalar.AspNetCore.ScalarOptions.OpenApiPathPrefix
+  id: OpenApiPathPrefix
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: OpenApiPathPrefix
+  nameWithType: ScalarOptions.OpenApiPathPrefix
+  fullName: Scalar.AspNetCore.ScalarOptions.OpenApiPathPrefix
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string OpenApiPathPrefix { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property OpenApiPathPrefix As String
+  overload: Scalar.AspNetCore.ScalarOptions.OpenApiPathPrefix*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: Scalar.AspNetCore.ScalarOptions.Title
+  commentId: P:Scalar.AspNetCore.ScalarOptions.Title
+  id: Title
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: ScalarOptions.Title
+  fullName: Scalar.AspNetCore.ScalarOptions.Title
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string? Title { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property Title As String
+  overload: Scalar.AspNetCore.ScalarOptions.Title*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: Scalar.AspNetCore.ScalarOptions.Theme
+  commentId: P:Scalar.AspNetCore.ScalarOptions.Theme
+  id: Theme
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: Theme
+  nameWithType: ScalarOptions.Theme
+  fullName: Scalar.AspNetCore.ScalarOptions.Theme
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public string Theme { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Theme As String
+  overload: Scalar.AspNetCore.ScalarOptions.Theme*
+- uid: Scalar.AspNetCore.ScalarOptions.DarkMode
+  commentId: P:Scalar.AspNetCore.ScalarOptions.DarkMode
+  id: DarkMode
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: DarkMode
+  nameWithType: ScalarOptions.DarkMode
+  fullName: Scalar.AspNetCore.ScalarOptions.DarkMode
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public bool? DarkMode { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property DarkMode As Boolean?
+  overload: Scalar.AspNetCore.ScalarOptions.DarkMode*
+- uid: Scalar.AspNetCore.ScalarOptions.HideDownloadButton
+  commentId: P:Scalar.AspNetCore.ScalarOptions.HideDownloadButton
+  id: HideDownloadButton
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: HideDownloadButton
+  nameWithType: ScalarOptions.HideDownloadButton
+  fullName: Scalar.AspNetCore.ScalarOptions.HideDownloadButton
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public bool? HideDownloadButton { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property HideDownloadButton As Boolean?
+  overload: Scalar.AspNetCore.ScalarOptions.HideDownloadButton*
+- uid: Scalar.AspNetCore.ScalarOptions.ShowSideBar
+  commentId: P:Scalar.AspNetCore.ScalarOptions.ShowSideBar
+  id: ShowSideBar
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: ShowSideBar
+  nameWithType: ScalarOptions.ShowSideBar
+  fullName: Scalar.AspNetCore.ScalarOptions.ShowSideBar
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public bool? ShowSideBar { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property ShowSideBar As Boolean?
+  overload: Scalar.AspNetCore.ScalarOptions.ShowSideBar*
+- uid: Scalar.AspNetCore.ScalarOptions.WithDefaultFonts
+  commentId: P:Scalar.AspNetCore.ScalarOptions.WithDefaultFonts
+  id: WithDefaultFonts
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: WithDefaultFonts
+  nameWithType: ScalarOptions.WithDefaultFonts
+  fullName: Scalar.AspNetCore.ScalarOptions.WithDefaultFonts
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public bool? WithDefaultFonts { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property WithDefaultFonts As Boolean?
+  overload: Scalar.AspNetCore.ScalarOptions.WithDefaultFonts*
+- uid: Scalar.AspNetCore.ScalarOptions.Layout
+  commentId: P:Scalar.AspNetCore.ScalarOptions.Layout
+  id: Layout
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: Layout
+  nameWithType: ScalarOptions.Layout
+  fullName: Scalar.AspNetCore.ScalarOptions.Layout
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public string? Layout { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Layout As String
+  overload: Scalar.AspNetCore.ScalarOptions.Layout*
+- uid: Scalar.AspNetCore.ScalarOptions.CustomCss
+  commentId: P:Scalar.AspNetCore.ScalarOptions.CustomCss
+  id: CustomCss
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: CustomCss
+  nameWithType: ScalarOptions.CustomCss
+  fullName: Scalar.AspNetCore.ScalarOptions.CustomCss
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public string? CustomCss { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CustomCss As String
+  overload: Scalar.AspNetCore.ScalarOptions.CustomCss*
+- uid: Scalar.AspNetCore.ScalarOptions.SearchHotkey
+  commentId: P:Scalar.AspNetCore.ScalarOptions.SearchHotkey
+  id: SearchHotkey
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: SearchHotkey
+  nameWithType: ScalarOptions.SearchHotkey
+  fullName: Scalar.AspNetCore.ScalarOptions.SearchHotkey
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public string? SearchHotkey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SearchHotkey As String
+  overload: Scalar.AspNetCore.ScalarOptions.SearchHotkey*
+- uid: Scalar.AspNetCore.ScalarOptions.Metadata
+  commentId: P:Scalar.AspNetCore.ScalarOptions.Metadata
+  id: Metadata
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: ScalarOptions.Metadata
+  fullName: Scalar.AspNetCore.ScalarOptions.Metadata
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public Dictionary<string, string>? Metadata { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: Public Property Metadata As Dictionary(Of String, String)
+  overload: Scalar.AspNetCore.ScalarOptions.Metadata*
+- uid: Scalar.AspNetCore.ScalarOptions.Authentication
+  commentId: P:Scalar.AspNetCore.ScalarOptions.Authentication
+  id: Authentication
+  parent: Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: Authentication
+  nameWithType: ScalarOptions.Authentication
+  fullName: Scalar.AspNetCore.ScalarOptions.Authentication
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public ScalarAuthenticationOptions? Authentication { get; set; }
+    parameters: []
+    return:
+      type: Scalar.AspNetCore.ScalarAuthenticationOptions
+    content.vb: Public Property Authentication As ScalarAuthenticationOptions
+  overload: Scalar.AspNetCore.ScalarOptions.Authentication*
+references:
+- uid: Scalar.AspNetCore
+  commentId: N:Scalar.AspNetCore
+  isExternal: true
+  href: Scalar.html
+  name: Scalar.AspNetCore
+  nameWithType: Scalar.AspNetCore
+  fullName: Scalar.AspNetCore
+  spec.csharp:
+  - uid: Scalar
+    name: Scalar
+    isExternal: true
+    href: Scalar.html
+  - name: .
+  - uid: Scalar.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: Scalar.AspNetCore.html
+  spec.vb:
+  - uid: Scalar
+    name: Scalar
+    isExternal: true
+    href: Scalar.html
+  - name: .
+  - uid: Scalar.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: Scalar.AspNetCore.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Scalar.AspNetCore.ScalarOptions.#ctor*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.#ctor
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions__ctor
+  name: ScalarOptions
+  nameWithType: ScalarOptions.ScalarOptions
+  fullName: Scalar.AspNetCore.ScalarOptions.ScalarOptions
+  nameWithType.vb: ScalarOptions.New
+  fullName.vb: Scalar.AspNetCore.ScalarOptions.New
+  name.vb: New
+- uid: Scalar.AspNetCore.ScalarOptions.EndpointPathPrefix*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.EndpointPathPrefix
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_EndpointPathPrefix
+  name: EndpointPathPrefix
+  nameWithType: ScalarOptions.EndpointPathPrefix
+  fullName: Scalar.AspNetCore.ScalarOptions.EndpointPathPrefix
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Scalar.AspNetCore.ScalarOptions.OpenApiPathPrefix*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.OpenApiPathPrefix
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_OpenApiPathPrefix
+  name: OpenApiPathPrefix
+  nameWithType: ScalarOptions.OpenApiPathPrefix
+  fullName: Scalar.AspNetCore.ScalarOptions.OpenApiPathPrefix
+- uid: Scalar.AspNetCore.ScalarOptions.Title*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.Title
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_Title
+  name: Title
+  nameWithType: ScalarOptions.Title
+  fullName: Scalar.AspNetCore.ScalarOptions.Title
+- uid: Scalar.AspNetCore.ScalarOptions.Theme*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.Theme
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_Theme
+  name: Theme
+  nameWithType: ScalarOptions.Theme
+  fullName: Scalar.AspNetCore.ScalarOptions.Theme
+- uid: Scalar.AspNetCore.ScalarOptions.DarkMode*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.DarkMode
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_DarkMode
+  name: DarkMode
+  nameWithType: ScalarOptions.DarkMode
+  fullName: Scalar.AspNetCore.ScalarOptions.DarkMode
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Scalar.AspNetCore.ScalarOptions.HideDownloadButton*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.HideDownloadButton
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_HideDownloadButton
+  name: HideDownloadButton
+  nameWithType: ScalarOptions.HideDownloadButton
+  fullName: Scalar.AspNetCore.ScalarOptions.HideDownloadButton
+- uid: Scalar.AspNetCore.ScalarOptions.ShowSideBar*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.ShowSideBar
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_ShowSideBar
+  name: ShowSideBar
+  nameWithType: ScalarOptions.ShowSideBar
+  fullName: Scalar.AspNetCore.ScalarOptions.ShowSideBar
+- uid: Scalar.AspNetCore.ScalarOptions.WithDefaultFonts*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.WithDefaultFonts
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_WithDefaultFonts
+  name: WithDefaultFonts
+  nameWithType: ScalarOptions.WithDefaultFonts
+  fullName: Scalar.AspNetCore.ScalarOptions.WithDefaultFonts
+- uid: Scalar.AspNetCore.ScalarOptions.Layout*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.Layout
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_Layout
+  name: Layout
+  nameWithType: ScalarOptions.Layout
+  fullName: Scalar.AspNetCore.ScalarOptions.Layout
+- uid: Scalar.AspNetCore.ScalarOptions.CustomCss*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.CustomCss
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_CustomCss
+  name: CustomCss
+  nameWithType: ScalarOptions.CustomCss
+  fullName: Scalar.AspNetCore.ScalarOptions.CustomCss
+- uid: Scalar.AspNetCore.ScalarOptions.SearchHotkey*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.SearchHotkey
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_SearchHotkey
+  name: SearchHotkey
+  nameWithType: ScalarOptions.SearchHotkey
+  fullName: Scalar.AspNetCore.ScalarOptions.SearchHotkey
+- uid: Scalar.AspNetCore.ScalarOptions.Metadata*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.Metadata
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_Metadata
+  name: Metadata
+  nameWithType: ScalarOptions.Metadata
+  fullName: Scalar.AspNetCore.ScalarOptions.Metadata
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string>
+  nameWithType: Dictionary<string, string>
+  fullName: System.Collections.Generic.Dictionary<string, string>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Scalar.AspNetCore.ScalarOptions.Authentication*
+  commentId: Overload:Scalar.AspNetCore.ScalarOptions.Authentication
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html#Scalar_AspNetCore_ScalarOptions_Authentication
+  name: Authentication
+  nameWithType: ScalarOptions.Authentication
+  fullName: Scalar.AspNetCore.ScalarOptions.Authentication
+- uid: Scalar.AspNetCore.ScalarAuthenticationOptions
+  commentId: T:Scalar.AspNetCore.ScalarAuthenticationOptions
+  parent: Scalar.AspNetCore
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarAuthenticationOptions.html
+  name: ScalarAuthenticationOptions
+  nameWithType: ScalarAuthenticationOptions
+  fullName: Scalar.AspNetCore.ScalarAuthenticationOptions

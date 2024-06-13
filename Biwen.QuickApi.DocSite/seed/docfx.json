@@ -1,11 +1,22 @@
 {
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "**/bin/Debug/net9.0/Biwen.QuickApi.dll" ],
+          "src": "../"
+        }
+      ],
+      "dest": "api"
+    }
+  ],
   "build": {
     "xref": [
       "https://learn.microsoft.com/en-us/dotnet/.xrefmap.json"
     ],
     "content": [
       {
-        "files": [ "articles/**/*.{md,yml}", "*.md", "toc.yml", "restapi/**" ]
+        "files": [ "articles/**/*.{md,yml}", "*.md", "toc.yml", "restapi/**", "api/*.yml" ]
       }
     ],
     "resource": [
@@ -13,7 +24,6 @@
         "files": [ "articles/images/**" ]
       }
     ],
-    "overwrite": "specs/*.md",
     "globalMetadata": {
       "_appTitle": "Biwen.QuickApi 2.0",
       "_appName": "Biwen.QuickApi",

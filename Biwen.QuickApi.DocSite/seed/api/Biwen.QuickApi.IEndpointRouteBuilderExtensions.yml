@@ -1,0 +1,700 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions
+  commentId: T:Biwen.QuickApi.IEndpointRouteBuilderExtensions
+  id: IEndpointRouteBuilderExtensions
+  parent: Biwen.QuickApi
+  children:
+  - Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Object},Biwen.QuickApi.Verb,System.Boolean)
+  - Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder})
+  - Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: IEndpointRouteBuilderExtensions
+  nameWithType: IEndpointRouteBuilderExtensions
+  fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static class IEndpointRouteBuilderExtensions
+    content.vb: Public Module IEndpointRouteBuilderExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Boolean)
+  commentId: M:Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Boolean)
+  id: MapMethods``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Boolean)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.IEndpointRouteBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: MapMethods<T>(IEndpointRouteBuilder, string, bool)
+  nameWithType: IEndpointRouteBuilderExtensions.MapMethods<T>(IEndpointRouteBuilder, string, bool)
+  fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods<T>(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, string, bool)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public static RouteHandlerBuilder MapMethods<T>(this IEndpointRouteBuilder app, string pattern, bool excludeFromDescription = false) where T : class, IQuickEndpoint'
+    parameters:
+    - id: app
+      type: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+    - id: pattern
+      type: System.String
+    - id: excludeFromDescription
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+    content.vb: Public Shared Function MapMethods(Of T As {Class, IQuickEndpoint})(app As IEndpointRouteBuilder, pattern As String, excludeFromDescription As Boolean = False) As RouteHandlerBuilder
+  overload: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods*
+  nameWithType.vb: IEndpointRouteBuilderExtensions.MapMethods(Of T)(IEndpointRouteBuilder, String, Boolean)
+  fullName.vb: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods(Of T)(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, String, Boolean)
+  name.vb: MapMethods(Of T)(IEndpointRouteBuilder, String, Boolean)
+- uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Object},Biwen.QuickApi.Verb,System.Boolean)
+  commentId: M:Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Object},Biwen.QuickApi.Verb,System.Boolean)
+  id: MapComponent``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Object},Biwen.QuickApi.Verb,System.Boolean)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.IEndpointRouteBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: MapComponent<T>(IEndpointRouteBuilder, string, Func<HttpContext, object>?, Verb, bool)
+  nameWithType: IEndpointRouteBuilderExtensions.MapComponent<T>(IEndpointRouteBuilder, string, Func<HttpContext, object>?, Verb, bool)
+  fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent<T>(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, string, System.Func<Microsoft.AspNetCore.Http.HttpContext, object>?, Biwen.QuickApi.Verb, bool)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public static RouteHandlerBuilder MapComponent<T>(this IEndpointRouteBuilder app, string pattern, Func<HttpContext, object>? paramsBuilder = null, Verb verb = Verb.GET, bool excludeFromDescription = true) where T : class, IComponent'
+    parameters:
+    - id: app
+      type: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+    - id: pattern
+      type: System.String
+    - id: paramsBuilder
+      type: System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Object}
+    - id: verb
+      type: Biwen.QuickApi.Verb
+    - id: excludeFromDescription
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+    content.vb: Public Shared Function MapComponent(Of T As {Class, IComponent})(app As IEndpointRouteBuilder, pattern As String, paramsBuilder As Func(Of HttpContext, Object) = Nothing, verb As Verb = Verb.GET, excludeFromDescription As Boolean = True) As RouteHandlerBuilder
+  overload: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent*
+  nameWithType.vb: IEndpointRouteBuilderExtensions.MapComponent(Of T)(IEndpointRouteBuilder, String, Func(Of HttpContext, Object), Verb, Boolean)
+  fullName.vb: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent(Of T)(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, String, System.Func(Of Microsoft.AspNetCore.Http.HttpContext, Object), Biwen.QuickApi.Verb, Boolean)
+  name.vb: MapComponent(Of T)(IEndpointRouteBuilder, String, Func(Of HttpContext, Object), Verb, Boolean)
+- uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder})
+  commentId: M:Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder})
+  id: MapGroup(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder})
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.IEndpointRouteBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: MapGroup(IEndpointRouteBuilder, string, Action<IEndpointRouteBuilder>)
+  nameWithType: IEndpointRouteBuilderExtensions.MapGroup(IEndpointRouteBuilder, string, Action<IEndpointRouteBuilder>)
+  fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, string, System.Action<Microsoft.AspNetCore.Routing.IEndpointRouteBuilder>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static RouteGroupBuilder MapGroup(this IEndpointRouteBuilder endpoints, string prefix, Action<IEndpointRouteBuilder> action)
+    parameters:
+    - id: endpoints
+      type: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+    - id: prefix
+      type: System.String
+    - id: action
+      type: System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder}
+    return:
+      type: Microsoft.AspNetCore.Routing.RouteGroupBuilder
+    content.vb: Public Shared Function MapGroup(endpoints As IEndpointRouteBuilder, prefix As String, action As Action(Of IEndpointRouteBuilder)) As RouteGroupBuilder
+  overload: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup*
+  nameWithType.vb: IEndpointRouteBuilderExtensions.MapGroup(IEndpointRouteBuilder, String, Action(Of IEndpointRouteBuilder))
+  fullName.vb: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, String, System.Action(Of Microsoft.AspNetCore.Routing.IEndpointRouteBuilder))
+  name.vb: MapGroup(IEndpointRouteBuilder, String, Action(Of IEndpointRouteBuilder))
+references:
+- uid: Biwen.QuickApi
+  commentId: N:Biwen.QuickApi
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi
+  nameWithType: Biwen.QuickApi
+  fullName: Biwen.QuickApi
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods*
+  commentId: Overload:Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods
+  isExternal: true
+  href: Biwen.QuickApi.IEndpointRouteBuilderExtensions.html#Biwen_QuickApi_IEndpointRouteBuilderExtensions_MapMethods__1_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_System_String_System_Boolean_
+  name: MapMethods
+  nameWithType: IEndpointRouteBuilderExtensions.MapMethods
+  fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods
+- uid: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+  commentId: T:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+  parent: Microsoft.AspNetCore.Routing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.iendpointroutebuilder
+  name: IEndpointRouteBuilder
+  nameWithType: IEndpointRouteBuilder
+  fullName: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+  commentId: T:Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+  parent: Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.routehandlerbuilder
+  name: RouteHandlerBuilder
+  nameWithType: RouteHandlerBuilder
+  fullName: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+- uid: Microsoft.AspNetCore.Routing
+  commentId: N:Microsoft.AspNetCore.Routing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Routing
+  nameWithType: Microsoft.AspNetCore.Routing
+  fullName: Microsoft.AspNetCore.Routing
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+- uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent*
+  commentId: Overload:Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent
+  isExternal: true
+  href: Biwen.QuickApi.IEndpointRouteBuilderExtensions.html#Biwen_QuickApi_IEndpointRouteBuilderExtensions_MapComponent__1_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_System_String_System_Func_Microsoft_AspNetCore_Http_HttpContext_System_Object__Biwen_QuickApi_Verb_System_Boolean_
+  name: MapComponent
+  nameWithType: IEndpointRouteBuilderExtensions.MapComponent
+  fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent
+- uid: System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Object}
+  commentId: T:System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Object}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<HttpContext, object>
+  nameWithType: Func<HttpContext, object>
+  fullName: System.Func<Microsoft.AspNetCore.Http.HttpContext, object>
+  nameWithType.vb: Func(Of HttpContext, Object)
+  fullName.vb: System.Func(Of Microsoft.AspNetCore.Http.HttpContext, Object)
+  name.vb: Func(Of HttpContext, Object)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Biwen.QuickApi.Verb
+  commentId: T:Biwen.QuickApi.Verb
+  parent: Biwen.QuickApi
+  isExternal: true
+  href: Biwen.QuickApi.Verb.html
+  name: Verb
+  nameWithType: Verb
+  fullName: Biwen.QuickApi.Verb
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup*
+  commentId: Overload:Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup
+  isExternal: true
+  href: Biwen.QuickApi.IEndpointRouteBuilderExtensions.html#Biwen_QuickApi_IEndpointRouteBuilderExtensions_MapGroup_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_System_String_System_Action_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder__
+  name: MapGroup
+  nameWithType: IEndpointRouteBuilderExtensions.MapGroup
+  fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup
+- uid: System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder}
+  commentId: T:System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<IEndpointRouteBuilder>
+  nameWithType: Action<IEndpointRouteBuilder>
+  fullName: System.Action<Microsoft.AspNetCore.Routing.IEndpointRouteBuilder>
+  nameWithType.vb: Action(Of IEndpointRouteBuilder)
+  fullName.vb: System.Action(Of Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+  name.vb: Action(Of IEndpointRouteBuilder)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+    name: IEndpointRouteBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.iendpointroutebuilder
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+    name: IEndpointRouteBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.iendpointroutebuilder
+  - name: )
+- uid: Microsoft.AspNetCore.Routing.RouteGroupBuilder
+  commentId: T:Microsoft.AspNetCore.Routing.RouteGroupBuilder
+  parent: Microsoft.AspNetCore.Routing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.routegroupbuilder
+  name: RouteGroupBuilder
+  nameWithType: RouteGroupBuilder
+  fullName: Microsoft.AspNetCore.Routing.RouteGroupBuilder
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

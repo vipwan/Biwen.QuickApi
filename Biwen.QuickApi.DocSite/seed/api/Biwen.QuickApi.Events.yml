@@ -1,0 +1,146 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Events
+  commentId: N:Biwen.QuickApi.Events
+  id: Biwen.QuickApi.Events
+  children:
+  - Biwen.QuickApi.Events.EventExtensions
+  - Biwen.QuickApi.Events.EventSubscriberAttribute
+  - Biwen.QuickApi.Events.EventSubscriber`1
+  - Biwen.QuickApi.Events.IEvent
+  - Biwen.QuickApi.Events.IEventSubscriber`1
+  - Biwen.QuickApi.Events.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Events
+  nameWithType: Biwen.QuickApi.Events
+  fullName: Biwen.QuickApi.Events
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Events.EventExtensions
+  commentId: T:Biwen.QuickApi.Events.EventExtensions
+  parent: Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.QuickApi.Events.EventExtensions.html
+  name: EventExtensions
+  nameWithType: EventExtensions
+  fullName: Biwen.QuickApi.Events.EventExtensions
+- uid: Biwen.QuickApi.Events.EventSubscriberAttribute
+  commentId: T:Biwen.QuickApi.Events.EventSubscriberAttribute
+  parent: Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.QuickApi.Events.EventSubscriberAttribute.html
+  name: EventSubscriberAttribute
+  nameWithType: EventSubscriberAttribute
+  fullName: Biwen.QuickApi.Events.EventSubscriberAttribute
+- uid: Biwen.QuickApi.Events.IEvent
+  commentId: T:Biwen.QuickApi.Events.IEvent
+  parent: Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.QuickApi.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: Biwen.QuickApi.Events.IEvent
+- uid: Biwen.QuickApi.Events.IEventSubscriber`1
+  commentId: T:Biwen.QuickApi.Events.IEventSubscriber`1
+  isExternal: true
+  href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+  name: IEventSubscriber<T>
+  nameWithType: IEventSubscriber<T>
+  fullName: Biwen.QuickApi.Events.IEventSubscriber<T>
+  nameWithType.vb: IEventSubscriber(Of T)
+  fullName.vb: Biwen.QuickApi.Events.IEventSubscriber(Of T)
+  name.vb: IEventSubscriber(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
+    name: IEventSubscriber
+    isExternal: true
+    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
+    name: IEventSubscriber
+    isExternal: true
+    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Events.EventSubscriber`1
+  commentId: T:Biwen.QuickApi.Events.EventSubscriber`1
+  isExternal: true
+  href: Biwen.QuickApi.Events.EventSubscriber-1.html
+  name: EventSubscriber<T>
+  nameWithType: EventSubscriber<T>
+  fullName: Biwen.QuickApi.Events.EventSubscriber<T>
+  nameWithType.vb: EventSubscriber(Of T)
+  fullName.vb: Biwen.QuickApi.Events.EventSubscriber(Of T)
+  name.vb: EventSubscriber(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Events.EventSubscriber`1
+    name: EventSubscriber
+    isExternal: true
+    href: Biwen.QuickApi.Events.EventSubscriber-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Events.EventSubscriber`1
+    name: EventSubscriber
+    isExternal: true
+    href: Biwen.QuickApi.Events.EventSubscriber-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Events.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Events.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.Events.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Events.ServiceRegistration
+- uid: Biwen.QuickApi.Events
+  commentId: N:Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Events
+  nameWithType: Biwen.QuickApi.Events
+  fullName: Biwen.QuickApi.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html

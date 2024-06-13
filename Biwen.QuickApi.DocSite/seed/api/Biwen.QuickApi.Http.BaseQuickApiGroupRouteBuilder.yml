@@ -1,0 +1,568 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+  commentId: T:Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+  id: BaseQuickApiGroupRouteBuilder
+  parent: Biwen.QuickApi.Http
+  children:
+  - Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.#ctor
+  - Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
+  - Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Group
+  - Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Order
+  langs:
+  - csharp
+  - vb
+  name: BaseQuickApiGroupRouteBuilder
+  nameWithType: BaseQuickApiGroupRouteBuilder
+  fullName: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Http
+  syntax:
+    content: 'public abstract class BaseQuickApiGroupRouteBuilder : IQuickApiGroupRouteBuilder'
+    content.vb: Public MustInherit Class BaseQuickApiGroupRouteBuilder Implements IQuickApiGroupRouteBuilder
+  inheritance:
+  - System.Object
+  implements:
+  - Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
+  commentId: M:Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
+  id: Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
+  parent: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+  langs:
+  - csharp
+  - vb
+  name: Builder(RouteGroupBuilder)
+  nameWithType: BaseQuickApiGroupRouteBuilder.Builder(RouteGroupBuilder)
+  fullName: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Http
+  example: []
+  syntax:
+    content: public virtual RouteGroupBuilder Builder(RouteGroupBuilder builder)
+    parameters:
+    - id: builder
+      type: Microsoft.AspNetCore.Routing.RouteGroupBuilder
+    return:
+      type: Microsoft.AspNetCore.Routing.RouteGroupBuilder
+    content.vb: Public Overridable Function Builder(builder As RouteGroupBuilder) As RouteGroupBuilder
+  overload: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Builder*
+  implements:
+  - Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
+- uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.#ctor
+  commentId: M:Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.#ctor
+  id: '#ctor'
+  parent: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+  langs:
+  - csharp
+  - vb
+  name: BaseQuickApiGroupRouteBuilder()
+  nameWithType: BaseQuickApiGroupRouteBuilder.BaseQuickApiGroupRouteBuilder()
+  fullName: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.BaseQuickApiGroupRouteBuilder()
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Http
+  syntax:
+    content: protected BaseQuickApiGroupRouteBuilder()
+    content.vb: Protected Sub New()
+  overload: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.#ctor*
+  nameWithType.vb: BaseQuickApiGroupRouteBuilder.New()
+  fullName.vb: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.New()
+  name.vb: New()
+- uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Group
+  commentId: P:Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Group
+  id: Group
+  parent: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+  langs:
+  - csharp
+  - vb
+  name: Group
+  nameWithType: BaseQuickApiGroupRouteBuilder.Group
+  fullName: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Group
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Http
+  example: []
+  syntax:
+    content: public abstract string Group { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public MustOverride ReadOnly Property Group As String
+  overload: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Group*
+  implements:
+  - Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Group
+- uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Order
+  commentId: P:Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Order
+  id: Order
+  parent: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+  langs:
+  - csharp
+  - vb
+  name: Order
+  nameWithType: BaseQuickApiGroupRouteBuilder.Order
+  fullName: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Order
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Http
+  example: []
+  syntax:
+    content: public abstract int Order { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public MustOverride ReadOnly Property Order As Integer
+  overload: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Order*
+  implements:
+  - Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Order
+references:
+- uid: Biwen.QuickApi.Http
+  commentId: N:Biwen.QuickApi.Http
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Http
+  nameWithType: Biwen.QuickApi.Http
+  fullName: Biwen.QuickApi.Http
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Http
+    name: Http
+    isExternal: true
+    href: Biwen.QuickApi.Http.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Http
+    name: Http
+    isExternal: true
+    href: Biwen.QuickApi.Http.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+  commentId: T:Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+  parent: Biwen.QuickApi.Http
+  isExternal: true
+  href: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.html
+  name: IQuickApiGroupRouteBuilder
+  nameWithType: IQuickApiGroupRouteBuilder
+  fullName: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Builder*
+  commentId: Overload:Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Builder
+  isExternal: true
+  href: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.html#Biwen_QuickApi_Http_BaseQuickApiGroupRouteBuilder_Builder_Microsoft_AspNetCore_Routing_RouteGroupBuilder_
+  name: Builder
+  nameWithType: BaseQuickApiGroupRouteBuilder.Builder
+  fullName: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Builder
+- uid: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
+  commentId: M:Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
+  parent: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+  isExternal: true
+  href: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.html#Biwen_QuickApi_Http_IQuickApiGroupRouteBuilder_Builder_Microsoft_AspNetCore_Routing_RouteGroupBuilder_
+  name: Builder(RouteGroupBuilder)
+  nameWithType: IQuickApiGroupRouteBuilder.Builder(RouteGroupBuilder)
+  fullName: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
+    name: Builder
+    isExternal: true
+    href: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.html#Biwen_QuickApi_Http_IQuickApiGroupRouteBuilder_Builder_Microsoft_AspNetCore_Routing_RouteGroupBuilder_
+  - name: (
+  - uid: Microsoft.AspNetCore.Routing.RouteGroupBuilder
+    name: RouteGroupBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.routegroupbuilder
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
+    name: Builder
+    isExternal: true
+    href: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.html#Biwen_QuickApi_Http_IQuickApiGroupRouteBuilder_Builder_Microsoft_AspNetCore_Routing_RouteGroupBuilder_
+  - name: (
+  - uid: Microsoft.AspNetCore.Routing.RouteGroupBuilder
+    name: RouteGroupBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.routegroupbuilder
+  - name: )
+- uid: Microsoft.AspNetCore.Routing.RouteGroupBuilder
+  commentId: T:Microsoft.AspNetCore.Routing.RouteGroupBuilder
+  parent: Microsoft.AspNetCore.Routing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.routegroupbuilder
+  name: RouteGroupBuilder
+  nameWithType: RouteGroupBuilder
+  fullName: Microsoft.AspNetCore.Routing.RouteGroupBuilder
+- uid: Microsoft.AspNetCore.Routing
+  commentId: N:Microsoft.AspNetCore.Routing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Routing
+  nameWithType: Microsoft.AspNetCore.Routing
+  fullName: Microsoft.AspNetCore.Routing
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
+- uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.#ctor*
+  commentId: Overload:Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.html#Biwen_QuickApi_Http_BaseQuickApiGroupRouteBuilder__ctor
+  name: BaseQuickApiGroupRouteBuilder
+  nameWithType: BaseQuickApiGroupRouteBuilder.BaseQuickApiGroupRouteBuilder
+  fullName: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.BaseQuickApiGroupRouteBuilder
+  nameWithType.vb: BaseQuickApiGroupRouteBuilder.New
+  fullName.vb: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.New
+  name.vb: New
+- uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Group*
+  commentId: Overload:Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Group
+  isExternal: true
+  href: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.html#Biwen_QuickApi_Http_BaseQuickApiGroupRouteBuilder_Group
+  name: Group
+  nameWithType: BaseQuickApiGroupRouteBuilder.Group
+  fullName: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Group
+- uid: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Group
+  commentId: P:Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Group
+  parent: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+  isExternal: true
+  href: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.html#Biwen_QuickApi_Http_IQuickApiGroupRouteBuilder_Group
+  name: Group
+  nameWithType: IQuickApiGroupRouteBuilder.Group
+  fullName: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Group
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Order*
+  commentId: Overload:Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Order
+  isExternal: true
+  href: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.html#Biwen_QuickApi_Http_BaseQuickApiGroupRouteBuilder_Order
+  name: Order
+  nameWithType: BaseQuickApiGroupRouteBuilder.Order
+  fullName: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Order
+- uid: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Order
+  commentId: P:Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Order
+  parent: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+  isExternal: true
+  href: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.html#Biwen_QuickApi_Http_IQuickApiGroupRouteBuilder_Order
+  name: Order
+  nameWithType: IQuickApiGroupRouteBuilder.Order
+  fullName: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Order
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

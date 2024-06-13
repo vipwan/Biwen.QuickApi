@@ -1,0 +1,468 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock
+  commentId: T:Biwen.QuickApi.Infrastructure.Locking.ILock
+  id: ILock
+  parent: Biwen.QuickApi.Infrastructure.Locking
+  children:
+  - Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(System.String,System.Nullable{System.TimeSpan})
+  - Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(System.String)
+  - Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(System.String,System.TimeSpan,System.Nullable{System.TimeSpan})
+  langs:
+  - csharp
+  - vb
+  name: ILock
+  nameWithType: ILock
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.Locking
+  syntax:
+    content: public interface ILock
+    content.vb: Public Interface ILock
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(System.String,System.Nullable{System.TimeSpan})
+  commentId: M:Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(System.String,System.Nullable{System.TimeSpan})
+  id: AcquireLockAsync(System.String,System.Nullable{System.TimeSpan})
+  parent: Biwen.QuickApi.Infrastructure.Locking.ILock
+  langs:
+  - csharp
+  - vb
+  name: AcquireLockAsync(string, TimeSpan?)
+  nameWithType: ILock.AcquireLockAsync(string, TimeSpan?)
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(string, System.TimeSpan?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.Locking
+  syntax:
+    content: Task<ILocker> AcquireLockAsync(string key, TimeSpan? expiration = null)
+    parameters:
+    - id: key
+      type: System.String
+    - id: expiration
+      type: System.Nullable{System.TimeSpan}
+    return:
+      type: System.Threading.Tasks.Task{Biwen.QuickApi.Infrastructure.Locking.ILocker}
+    content.vb: Function AcquireLockAsync(key As String, expiration As TimeSpan? = Nothing) As Task(Of ILocker)
+  overload: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync*
+  nameWithType.vb: ILock.AcquireLockAsync(String, TimeSpan?)
+  fullName.vb: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(String, System.TimeSpan?)
+  name.vb: AcquireLockAsync(String, TimeSpan?)
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(System.String,System.TimeSpan,System.Nullable{System.TimeSpan})
+  commentId: M:Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(System.String,System.TimeSpan,System.Nullable{System.TimeSpan})
+  id: TryAcquireLockAsync(System.String,System.TimeSpan,System.Nullable{System.TimeSpan})
+  parent: Biwen.QuickApi.Infrastructure.Locking.ILock
+  langs:
+  - csharp
+  - vb
+  name: TryAcquireLockAsync(string, TimeSpan, TimeSpan?)
+  nameWithType: ILock.TryAcquireLockAsync(string, TimeSpan, TimeSpan?)
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(string, System.TimeSpan, System.TimeSpan?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.Locking
+  syntax:
+    content: Task<(ILocker locker, bool locked)> TryAcquireLockAsync(string key, TimeSpan timeout, TimeSpan? expiration = null)
+    parameters:
+    - id: key
+      type: System.String
+    - id: timeout
+      type: System.TimeSpan
+    - id: expiration
+      type: System.Nullable{System.TimeSpan}
+    return:
+      type: System.Threading.Tasks.Task{System.ValueTuple{Biwen.QuickApi.Infrastructure.Locking.ILocker,System.Boolean}}
+    content.vb: Function TryAcquireLockAsync(key As String, timeout As TimeSpan, expiration As TimeSpan? = Nothing) As Task(Of (locker As ILocker, locked As Boolean))
+  overload: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync*
+  nameWithType.vb: ILock.TryAcquireLockAsync(String, TimeSpan, TimeSpan?)
+  fullName.vb: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(String, System.TimeSpan, System.TimeSpan?)
+  name.vb: TryAcquireLockAsync(String, TimeSpan, TimeSpan?)
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(System.String)
+  commentId: M:Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(System.String)
+  id: IsLockAcquiredAsync(System.String)
+  parent: Biwen.QuickApi.Infrastructure.Locking.ILock
+  langs:
+  - csharp
+  - vb
+  name: IsLockAcquiredAsync(string)
+  nameWithType: ILock.IsLockAcquiredAsync(string)
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(string)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.Locking
+  syntax:
+    content: Task<bool> IsLockAcquiredAsync(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function IsLockAcquiredAsync(key As String) As Task(Of Boolean)
+  overload: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync*
+  nameWithType.vb: ILock.IsLockAcquiredAsync(String)
+  fullName.vb: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(String)
+  name.vb: IsLockAcquiredAsync(String)
+references:
+- uid: Biwen.QuickApi.Infrastructure.Locking
+  commentId: N:Biwen.QuickApi.Infrastructure.Locking
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.Locking
+  nameWithType: Biwen.QuickApi.Infrastructure.Locking
+  fullName: Biwen.QuickApi.Infrastructure.Locking
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Locking
+    name: Locking
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Locking
+    name: Locking
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.html
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync*
+  commentId: Overload:Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_AcquireLockAsync_System_String_System_Nullable_System_TimeSpan__
+  name: AcquireLockAsync
+  nameWithType: ILock.AcquireLockAsync
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan?
+  nameWithType: TimeSpan?
+  fullName: System.TimeSpan?
+  spec.csharp:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  spec.vb:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+- uid: System.Threading.Tasks.Task{Biwen.QuickApi.Infrastructure.Locking.ILocker}
+  commentId: T:System.Threading.Tasks.Task{Biwen.QuickApi.Infrastructure.Locking.ILocker}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ILocker>
+  nameWithType: Task<ILocker>
+  fullName: System.Threading.Tasks.Task<Biwen.QuickApi.Infrastructure.Locking.ILocker>
+  nameWithType.vb: Task(Of ILocker)
+  fullName.vb: System.Threading.Tasks.Task(Of Biwen.QuickApi.Infrastructure.Locking.ILocker)
+  name.vb: Task(Of ILocker)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILocker
+    name: ILocker
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.ILocker.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILocker
+    name: ILocker
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.ILocker.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync*
+  commentId: Overload:Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_TryAcquireLockAsync_System_String_System_TimeSpan_System_Nullable_System_TimeSpan__
+  name: TryAcquireLockAsync
+  nameWithType: ILock.TryAcquireLockAsync
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: System.Threading.Tasks.Task{System.ValueTuple{Biwen.QuickApi.Infrastructure.Locking.ILocker,System.Boolean}}
+  commentId: T:System.Threading.Tasks.Task{System.ValueTuple{Biwen.QuickApi.Infrastructure.Locking.ILocker,System.Boolean}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<(ILocker locker, bool locked)>
+  nameWithType: Task<(ILocker locker, bool locked)>
+  fullName: System.Threading.Tasks.Task<(Biwen.QuickApi.Infrastructure.Locking.ILocker locker, bool locked)>
+  nameWithType.vb: Task(Of (locker As ILocker, locked As Boolean))
+  fullName.vb: System.Threading.Tasks.Task(Of (locker As Biwen.QuickApi.Infrastructure.Locking.ILocker, locked As Boolean))
+  name.vb: Task(Of (locker As ILocker, locked As Boolean))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILocker
+    name: ILocker
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.ILocker.html
+  - name: " "
+  - uid: System.ValueTuple{Biwen.QuickApi.Infrastructure.Locking.ILocker,System.Boolean}.locker
+    name: locker
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-biwen.quickapi.infrastructure.locking.ilocker,system.boolean-.locker
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: " "
+  - uid: System.ValueTuple{Biwen.QuickApi.Infrastructure.Locking.ILocker,System.Boolean}.locked
+    name: locked
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-biwen.quickapi.infrastructure.locking.ilocker,system.boolean-.locked
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{Biwen.QuickApi.Infrastructure.Locking.ILocker,System.Boolean}.locker
+    name: locker
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-biwen.quickapi.infrastructure.locking.ilocker,system.boolean-.locker
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILocker
+    name: ILocker
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Locking.ILocker.html
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{Biwen.QuickApi.Infrastructure.Locking.ILocker,System.Boolean}.locked
+    name: locked
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-biwen.quickapi.infrastructure.locking.ilocker,system.boolean-.locked
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync*
+  commentId: Overload:Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Locking.ILock.html#Biwen_QuickApi_Infrastructure_Locking_ILock_IsLockAcquiredAsync_System_String_
+  name: IsLockAcquiredAsync
+  nameWithType: ILock.IsLockAcquiredAsync
+  fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )

@@ -1,0 +1,311 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
+  commentId: T:Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
+  id: IStartupTask
+  parent: Biwen.QuickApi.Infrastructure.StartupTask
+  children:
+  - Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Delay
+  - Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.ExecuteAsync(System.Threading.CancellationToken)
+  - Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Order
+  langs:
+  - csharp
+  - vb
+  name: IStartupTask
+  nameWithType: IStartupTask
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.StartupTask
+  syntax:
+    content: public interface IStartupTask
+    content.vb: Public Interface IStartupTask
+- uid: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.ExecuteAsync(System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.ExecuteAsync(System.Threading.CancellationToken)
+  id: ExecuteAsync(System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAsync(CancellationToken)
+  nameWithType: IStartupTask.ExecuteAsync(CancellationToken)
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.ExecuteAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.StartupTask
+  syntax:
+    content: Task ExecuteAsync(CancellationToken ct)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function ExecuteAsync(ct As CancellationToken) As Task
+  overload: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.ExecuteAsync*
+- uid: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Order
+  commentId: P:Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Order
+  id: Order
+  parent: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
+  langs:
+  - csharp
+  - vb
+  name: Order
+  nameWithType: IStartupTask.Order
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Order
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.StartupTask
+  syntax:
+    content: int Order { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property Order As Integer
+  overload: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Order*
+- uid: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Delay
+  commentId: P:Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Delay
+  id: Delay
+  parent: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
+  langs:
+  - csharp
+  - vb
+  name: Delay
+  nameWithType: IStartupTask.Delay
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Delay
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.StartupTask
+  syntax:
+    content: TimeSpan? Delay { get; }
+    parameters: []
+    return:
+      type: System.Nullable{System.TimeSpan}
+    content.vb: ReadOnly Property Delay As TimeSpan?
+  overload: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Delay*
+references:
+- uid: Biwen.QuickApi.Infrastructure.StartupTask
+  commentId: N:Biwen.QuickApi.Infrastructure.StartupTask
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.StartupTask
+  nameWithType: Biwen.QuickApi.Infrastructure.StartupTask
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.StartupTask
+    name: StartupTask
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.StartupTask.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.StartupTask
+    name: StartupTask
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.StartupTask.html
+- uid: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.ExecuteAsync*
+  commentId: Overload:Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.ExecuteAsync
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.html#Biwen_QuickApi_Infrastructure_StartupTask_IStartupTask_ExecuteAsync_System_Threading_CancellationToken_
+  name: ExecuteAsync
+  nameWithType: IStartupTask.ExecuteAsync
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.ExecuteAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Order*
+  commentId: Overload:Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Order
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.html#Biwen_QuickApi_Infrastructure_StartupTask_IStartupTask_Order
+  name: Order
+  nameWithType: IStartupTask.Order
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Order
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Delay*
+  commentId: Overload:Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Delay
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.html#Biwen_QuickApi_Infrastructure_StartupTask_IStartupTask_Delay
+  name: Delay
+  nameWithType: IStartupTask.Delay
+  fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Delay
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan?
+  nameWithType: TimeSpan?
+  fullName: System.TimeSpan?
+  spec.csharp:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  spec.vb:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

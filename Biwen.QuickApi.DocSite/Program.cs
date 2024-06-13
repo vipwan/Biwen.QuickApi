@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.FileProviders;
+﻿using Docfx.Dotnet;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
@@ -40,6 +41,22 @@ app.UseStaticFiles(new StaticFileOptions
     FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "_statics")),
     ServeUnknownFileTypes = true
 });
+
+var options = new DotnetApiOptions
+{
+    IncludeApi = symbol =>
+    {
+        return symbol.ToDisplayString() switch
+        {
+            null => SymbolIncludeState.Exclude,
+            { } ns when ns.StartsWith("Biwen.QuickApi.DocSite") => SymbolIncludeState.Exclude,
+            _ => SymbolIncludeState.Include,
+        };
+    },
+};
+
+//当变更的时候生成yaml文件:
+//await DotnetApiCatalog.GenerateManagedReferenceYamlFiles("seed/docfx.json", options);
 
 //静态生成:
 await Docfx.Docset.Build("seed/docfx.json");

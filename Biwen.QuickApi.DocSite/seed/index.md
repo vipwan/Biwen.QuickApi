@@ -52,4 +52,4 @@ public class TodoApi : BaseQuickApi<EmptyRequest,Todo[]>
 
 - Microsoft.AspNetCore.App
 - [FluentValidation.AspNetCore](https://www.nuget.org/packages/FluentValidation.AspNetCore/11.3.0)
-- [Microsoft.AspNetCore.OpenApi](https://www.nuget.org/packages/Microsoft.AspNetCore.OpenApi/8.0.5)
+- [Microsoft.AspNetCore.OpenApi](https://www.nuget.org/packages/Microsoft.AspNetCore.OpenApi/8.0.6)

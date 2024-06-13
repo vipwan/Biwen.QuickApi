@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: Scalar.AspNetCore
+  commentId: N:Scalar.AspNetCore
+  id: Scalar.AspNetCore
+  children:
+  - Scalar.AspNetCore.ScalarAuthenticationApiKey
+  - Scalar.AspNetCore.ScalarAuthenticationOptions
+  - Scalar.AspNetCore.ScalarAuthenticationoAuth2
+  - Scalar.AspNetCore.ScalarOptions
+  langs:
+  - csharp
+  - vb
+  name: Scalar.AspNetCore
+  nameWithType: Scalar.AspNetCore
+  fullName: Scalar.AspNetCore
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Scalar.AspNetCore.ScalarOptions
+  commentId: T:Scalar.AspNetCore.ScalarOptions
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarOptions.html
+  name: ScalarOptions
+  nameWithType: ScalarOptions
+  fullName: Scalar.AspNetCore.ScalarOptions
+- uid: Scalar.AspNetCore.ScalarAuthenticationOptions
+  commentId: T:Scalar.AspNetCore.ScalarAuthenticationOptions
+  parent: Scalar.AspNetCore
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarAuthenticationOptions.html
+  name: ScalarAuthenticationOptions
+  nameWithType: ScalarAuthenticationOptions
+  fullName: Scalar.AspNetCore.ScalarAuthenticationOptions
+- uid: Scalar.AspNetCore.ScalarAuthenticationoAuth2
+  commentId: T:Scalar.AspNetCore.ScalarAuthenticationoAuth2
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarAuthenticationoAuth2.html
+  name: ScalarAuthenticationoAuth2
+  nameWithType: ScalarAuthenticationoAuth2
+  fullName: Scalar.AspNetCore.ScalarAuthenticationoAuth2
+- uid: Scalar.AspNetCore.ScalarAuthenticationApiKey
+  commentId: T:Scalar.AspNetCore.ScalarAuthenticationApiKey
+  parent: Scalar.AspNetCore
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarAuthenticationApiKey.html
+  name: ScalarAuthenticationApiKey
+  nameWithType: ScalarAuthenticationApiKey
+  fullName: Scalar.AspNetCore.ScalarAuthenticationApiKey
+- uid: Scalar.AspNetCore
+  commentId: N:Scalar.AspNetCore
+  isExternal: true
+  href: Scalar.html
+  name: Scalar.AspNetCore
+  nameWithType: Scalar.AspNetCore
+  fullName: Scalar.AspNetCore
+  spec.csharp:
+  - uid: Scalar
+    name: Scalar
+    isExternal: true
+    href: Scalar.html
+  - name: .
+  - uid: Scalar.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: Scalar.AspNetCore.html
+  spec.vb:
+  - uid: Scalar
+    name: Scalar
+    isExternal: true
+    href: Scalar.html
+  - name: .
+  - uid: Scalar.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: Scalar.AspNetCore.html

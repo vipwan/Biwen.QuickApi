@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Metadata
+  commentId: N:Biwen.QuickApi.Metadata
+  id: Biwen.QuickApi.Metadata
+  children:
+  - Biwen.QuickApi.Metadata.QuickApiEndpointMetadata
+  - Biwen.QuickApi.Metadata.QuickApiExampleMetadata
+  - Biwen.QuickApi.Metadata.QuickApiMetadata
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Metadata
+  nameWithType: Biwen.QuickApi.Metadata
+  fullName: Biwen.QuickApi.Metadata
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Metadata.QuickApiExampleMetadata
+  commentId: T:Biwen.QuickApi.Metadata.QuickApiExampleMetadata
+  isExternal: true
+  href: Biwen.QuickApi.Metadata.QuickApiExampleMetadata.html
+  name: QuickApiExampleMetadata
+  nameWithType: QuickApiExampleMetadata
+  fullName: Biwen.QuickApi.Metadata.QuickApiExampleMetadata
+- uid: Biwen.QuickApi.Metadata.QuickApiMetadata
+  commentId: T:Biwen.QuickApi.Metadata.QuickApiMetadata
+  isExternal: true
+  href: Biwen.QuickApi.Metadata.QuickApiMetadata.html
+  name: QuickApiMetadata
+  nameWithType: QuickApiMetadata
+  fullName: Biwen.QuickApi.Metadata.QuickApiMetadata
+- uid: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata
+  commentId: T:Biwen.QuickApi.Metadata.QuickApiEndpointMetadata
+  isExternal: true
+  href: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.html
+  name: QuickApiEndpointMetadata
+  nameWithType: QuickApiEndpointMetadata
+  fullName: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata

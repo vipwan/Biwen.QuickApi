@@ -1,0 +1,214 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
+  commentId: T:Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
+  id: IScheduleMetadataStore
+  parent: Biwen.QuickApi.Scheduling.Stores
+  children:
+  - Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync
+  langs:
+  - csharp
+  - vb
+  name: IScheduleMetadataStore
+  nameWithType: IScheduleMetadataStore
+  fullName: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Scheduling.Stores
+  syntax:
+    content: public interface IScheduleMetadataStore
+    content.vb: Public Interface IScheduleMetadataStore
+- uid: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync
+  commentId: M:Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync
+  id: GetAllAsync
+  parent: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: IScheduleMetadataStore.GetAllAsync()
+  fullName: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Scheduling.Stores
+  syntax:
+    content: Task<IEnumerable<ScheduleTaskMetadata>> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata}}
+    content.vb: Function GetAllAsync() As Task(Of IEnumerable(Of ScheduleTaskMetadata))
+  overload: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync*
+references:
+- uid: Biwen.QuickApi.Scheduling.Stores
+  commentId: N:Biwen.QuickApi.Scheduling.Stores
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Scheduling.Stores
+  nameWithType: Biwen.QuickApi.Scheduling.Stores
+  fullName: Biwen.QuickApi.Scheduling.Stores
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling.Stores
+    name: Stores
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Stores.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling.Stores
+    name: Stores
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Stores.html
+- uid: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync*
+  commentId: Overload:Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.html#Biwen_QuickApi_Scheduling_Stores_IScheduleMetadataStore_GetAllAsync
+  name: GetAllAsync
+  nameWithType: IScheduleMetadataStore.GetAllAsync
+  fullName: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<ScheduleTaskMetadata>>
+  nameWithType: Task<IEnumerable<ScheduleTaskMetadata>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata>>
+  nameWithType.vb: Task(Of IEnumerable(Of ScheduleTaskMetadata))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata))
+  name.vb: Task(Of IEnumerable(Of ScheduleTaskMetadata))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
+    name: ScheduleTaskMetadata
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
+    name: ScheduleTaskMetadata
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

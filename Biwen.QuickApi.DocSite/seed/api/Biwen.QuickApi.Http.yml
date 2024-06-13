@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Http
+  commentId: N:Biwen.QuickApi.Http
+  id: Biwen.QuickApi.Http
+  children:
+  - Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+  - Biwen.QuickApi.Http.IQuickApiExceptionHandler
+  - Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder
+  - Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+  - Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware
+  - Biwen.QuickApi.Http.QuickApiMiddleware
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Http
+  nameWithType: Biwen.QuickApi.Http
+  fullName: Biwen.QuickApi.Http
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Http.IQuickApiExceptionHandler
+  commentId: T:Biwen.QuickApi.Http.IQuickApiExceptionHandler
+  isExternal: true
+  href: Biwen.QuickApi.Http.IQuickApiExceptionHandler.html
+  name: IQuickApiExceptionHandler
+  nameWithType: IQuickApiExceptionHandler
+  fullName: Biwen.QuickApi.Http.IQuickApiExceptionHandler
+- uid: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder
+  commentId: T:Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder
+  isExternal: true
+  href: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.html
+  name: IQuickApiExceptionResultBuilder
+  nameWithType: IQuickApiExceptionResultBuilder
+  fullName: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder
+- uid: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+  commentId: T:Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+  parent: Biwen.QuickApi.Http
+  isExternal: true
+  href: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.html
+  name: IQuickApiGroupRouteBuilder
+  nameWithType: IQuickApiGroupRouteBuilder
+  fullName: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+- uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+  commentId: T:Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+  isExternal: true
+  href: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.html
+  name: BaseQuickApiGroupRouteBuilder
+  nameWithType: BaseQuickApiGroupRouteBuilder
+  fullName: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+- uid: Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware
+  commentId: T:Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware
+  isExternal: true
+  href: Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware.html
+  name: QuickApiAntiforgeryMiddleware
+  nameWithType: QuickApiAntiforgeryMiddleware
+  fullName: Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware
+- uid: Biwen.QuickApi.Http.QuickApiMiddleware
+  commentId: T:Biwen.QuickApi.Http.QuickApiMiddleware
+  isExternal: true
+  href: Biwen.QuickApi.Http.QuickApiMiddleware.html
+  name: QuickApiMiddleware
+  nameWithType: QuickApiMiddleware
+  fullName: Biwen.QuickApi.Http.QuickApiMiddleware
+- uid: Biwen.QuickApi.Http
+  commentId: N:Biwen.QuickApi.Http
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Http
+  nameWithType: Biwen.QuickApi.Http
+  fullName: Biwen.QuickApi.Http
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Http
+    name: Http
+    isExternal: true
+    href: Biwen.QuickApi.Http.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Http
+    name: Http
+    isExternal: true
+    href: Biwen.QuickApi.Http.html

@@ -1,0 +1,1005 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.BaseQuickApi`1
+  commentId: T:Biwen.QuickApi.BaseQuickApi`1
+  id: BaseQuickApi`1
+  parent: Biwen.QuickApi
+  children:
+  - Biwen.QuickApi.BaseQuickApi`1.#ctor
+  - Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync(`0)
+  langs:
+  - csharp
+  - vb
+  name: BaseQuickApi<Req>
+  nameWithType: BaseQuickApi<Req>
+  fullName: Biwen.QuickApi.BaseQuickApi<Req>
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public abstract class BaseQuickApi<Req> : BaseQuickApi<Req, IResult> where Req : BaseRequest<Req>, new()'
+    typeParameters:
+    - id: Req
+    content.vb: Public MustInherit Class BaseQuickApi(Of Req As {BaseRequest(Of Req), New}) Inherits BaseQuickApi(Of Req, IResult)
+  inheritance:
+  - System.Object
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
+  inheritedMembers:
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.PublishAsync``1({T},System.Threading.CancellationToken)
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.UseReqBinder``1
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ExecuteAsync({Req})
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.IsAntiforgeryEnabled
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ReqBinder
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  nameWithType.vb: BaseQuickApi(Of Req)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req)
+  name.vb: BaseQuickApi(Of Req)
+- uid: Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync(`0)
+  commentId: M:Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync(`0)
+  id: ExecuteAsync(`0)
+  parent: Biwen.QuickApi.BaseQuickApi`1
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAsync(Req)
+  nameWithType: BaseQuickApi<Req>.ExecuteAsync(Req)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req>.ExecuteAsync(Req)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  example: []
+  syntax:
+    content: public override abstract ValueTask<IResult> ExecuteAsync(Req request)
+    parameters:
+    - id: request
+      type: '{Req}'
+    return:
+      type: System.Threading.Tasks.ValueTask{Microsoft.AspNetCore.Http.IResult}
+    content.vb: Public MustOverride Overrides Function ExecuteAsync(request As Req) As ValueTask(Of IResult)
+  overridden: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ExecuteAsync({Req})
+  overload: Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync*
+  nameWithType.vb: BaseQuickApi(Of Req).ExecuteAsync(Req)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req).ExecuteAsync(Req)
+- uid: Biwen.QuickApi.BaseQuickApi`1.#ctor
+  commentId: M:Biwen.QuickApi.BaseQuickApi`1.#ctor
+  id: '#ctor'
+  parent: Biwen.QuickApi.BaseQuickApi`1
+  langs:
+  - csharp
+  - vb
+  name: BaseQuickApi()
+  nameWithType: BaseQuickApi<Req>.BaseQuickApi()
+  fullName: Biwen.QuickApi.BaseQuickApi<Req>.BaseQuickApi()
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: protected BaseQuickApi()
+    content.vb: Protected Sub New()
+  overload: Biwen.QuickApi.BaseQuickApi`1.#ctor*
+  nameWithType.vb: BaseQuickApi(Of Req).New()
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req).New()
+  name.vb: New()
+references:
+- uid: Biwen.QuickApi
+  commentId: N:Biwen.QuickApi
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi
+  nameWithType: Biwen.QuickApi
+  fullName: Biwen.QuickApi
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
+  commentId: T:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}
+  parent: Biwen.QuickApi
+  definition: Biwen.QuickApi.BaseQuickApi`2
+  href: Biwen.QuickApi.BaseQuickApi-2.html
+  name: BaseQuickApi<Req, IResult>
+  nameWithType: BaseQuickApi<Req, IResult>
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>
+  nameWithType.vb: BaseQuickApi(Of Req, IResult)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult)
+  name.vb: BaseQuickApi(Of Req, IResult)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi`2
+    name: BaseQuickApi
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html
+  - name: <
+  - name: Req
+  - name: ','
+  - name: " "
+  - uid: Microsoft.AspNetCore.Http.IResult
+    name: IResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.iresult
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi`2
+    name: BaseQuickApi
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: Req
+  - name: ','
+  - name: " "
+  - uid: Microsoft.AspNetCore.Http.IResult
+    name: IResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.iresult
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.PublishAsync``1({T},System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.PublishAsync``1(``0,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
+  definition: Biwen.QuickApi.BaseQuickApi`2.PublishAsync``1(``0,System.Threading.CancellationToken)
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_PublishAsync__1___0_System_Threading_CancellationToken_
+  name: PublishAsync<T>(T, CancellationToken)
+  nameWithType: BaseQuickApi<Req, IResult>.PublishAsync<T>(T, CancellationToken)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.PublishAsync<T>(T, System.Threading.CancellationToken)
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).PublishAsync(Of T)(T, CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).PublishAsync(Of T)(T, System.Threading.CancellationToken)
+  name.vb: PublishAsync(Of T)(T, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.PublishAsync``1(``0,System.Threading.CancellationToken)
+    name: PublishAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_PublishAsync__1___0_System_Threading_CancellationToken_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.PublishAsync``1(``0,System.Threading.CancellationToken)
+    name: PublishAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_PublishAsync__1___0_System_Threading_CancellationToken_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.UseReqBinder``1
+  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.UseReqBinder``1
+  parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
+  definition: Biwen.QuickApi.BaseQuickApi`2.UseReqBinder``1
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_UseReqBinder__1
+  name: UseReqBinder<T>()
+  nameWithType: BaseQuickApi<Req, IResult>.UseReqBinder<T>()
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.UseReqBinder<T>()
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).UseReqBinder(Of T)()
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).UseReqBinder(Of T)()
+  name.vb: UseReqBinder(Of T)()
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.UseReqBinder``1
+    name: UseReqBinder
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_UseReqBinder__1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.UseReqBinder``1
+    name: UseReqBinder
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_UseReqBinder__1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ExecuteAsync({Req})
+  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.ExecuteAsync(`0)
+  parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
+  definition: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0)
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
+  name: ExecuteAsync(Req)
+  nameWithType: BaseQuickApi<Req, IResult>.ExecuteAsync(Req)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.ExecuteAsync(Req)
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).ExecuteAsync(Req)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).ExecuteAsync(Req)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.ExecuteAsync(`0)
+    name: ExecuteAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
+  - name: (
+  - name: Req
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.ExecuteAsync(`0)
+    name: ExecuteAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
+  - name: (
+  - name: Req
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
+  definition: Biwen.QuickApi.BaseQuickApi`2.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+  name: HandlerBuilder(RouteHandlerBuilder)
+  nameWithType: BaseQuickApi<Req, IResult>.HandlerBuilder(RouteHandlerBuilder)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).HandlerBuilder(RouteHandlerBuilder)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+    name: HandlerBuilder
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+  - name: (
+  - uid: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+    name: RouteHandlerBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.routehandlerbuilder
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+    name: HandlerBuilder
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+  - name: (
+  - uid: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+    name: RouteHandlerBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.routehandlerbuilder
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
+  definition: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
+  name: BeforeAsync(HttpContext)
+  nameWithType: BaseQuickApi<Req, IResult>.BeforeAsync(HttpContext)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).BeforeAsync(HttpContext)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+    name: BeforeAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
+  - name: (
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+    name: BeforeAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
+  - name: (
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
+  definition: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
+  name: AfterAsync(HttpContext)
+  nameWithType: BaseQuickApi<Req, IResult>.AfterAsync(HttpContext)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).AfterAsync(HttpContext)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+    name: AfterAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
+  - name: (
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+    name: AfterAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
+  - name: (
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.IsAntiforgeryEnabled
+  commentId: P:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.IsAntiforgeryEnabled
+  parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
+  definition: Biwen.QuickApi.BaseQuickApi`2.IsAntiforgeryEnabled
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_IsAntiforgeryEnabled
+  name: IsAntiforgeryEnabled
+  nameWithType: BaseQuickApi<Req, IResult>.IsAntiforgeryEnabled
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.IsAntiforgeryEnabled
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).IsAntiforgeryEnabled
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).IsAntiforgeryEnabled
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ReqBinder
+  commentId: P:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.ReqBinder
+  parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
+  definition: Biwen.QuickApi.BaseQuickApi`2.ReqBinder
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ReqBinder
+  name: ReqBinder
+  nameWithType: BaseQuickApi<Req, IResult>.ReqBinder
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.ReqBinder
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).ReqBinder
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).ReqBinder
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.BaseQuickApi`2
+  commentId: T:Biwen.QuickApi.BaseQuickApi`2
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-2.html
+  name: BaseQuickApi<Req, Rsp>
+  nameWithType: BaseQuickApi<Req, Rsp>
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp)
+  name.vb: BaseQuickApi(Of Req, Rsp)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi`2
+    name: BaseQuickApi
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html
+  - name: <
+  - name: Req
+  - name: ','
+  - name: " "
+  - name: Rsp
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi`2
+    name: BaseQuickApi
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: Req
+  - name: ','
+  - name: " "
+  - name: Rsp
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi`2.PublishAsync``1(``0,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseQuickApi`2.PublishAsync``1(``0,System.Threading.CancellationToken)
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_PublishAsync__1___0_System_Threading_CancellationToken_
+  name: PublishAsync<T>(T, CancellationToken)
+  nameWithType: BaseQuickApi<Req, Rsp>.PublishAsync<T>(T, CancellationToken)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.PublishAsync<T>(T, System.Threading.CancellationToken)
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).PublishAsync(Of T)(T, CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).PublishAsync(Of T)(T, System.Threading.CancellationToken)
+  name.vb: PublishAsync(Of T)(T, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.PublishAsync``1(``0,System.Threading.CancellationToken)
+    name: PublishAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_PublishAsync__1___0_System_Threading_CancellationToken_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.PublishAsync``1(``0,System.Threading.CancellationToken)
+    name: PublishAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_PublishAsync__1___0_System_Threading_CancellationToken_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi`2.UseReqBinder``1
+  commentId: M:Biwen.QuickApi.BaseQuickApi`2.UseReqBinder``1
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_UseReqBinder__1
+  name: UseReqBinder<T>()
+  nameWithType: BaseQuickApi<Req, Rsp>.UseReqBinder<T>()
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.UseReqBinder<T>()
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).UseReqBinder(Of T)()
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).UseReqBinder(Of T)()
+  name.vb: UseReqBinder(Of T)()
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.UseReqBinder``1
+    name: UseReqBinder
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_UseReqBinder__1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.UseReqBinder``1
+    name: UseReqBinder
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_UseReqBinder__1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0)
+  commentId: M:Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0)
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
+  name: ExecuteAsync(Req)
+  nameWithType: BaseQuickApi<Req, Rsp>.ExecuteAsync(Req)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.ExecuteAsync(Req)
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).ExecuteAsync(Req)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).ExecuteAsync(Req)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0)
+    name: ExecuteAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
+  - name: (
+  - name: Req
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0)
+    name: ExecuteAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
+  - name: (
+  - name: Req
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi`2.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  commentId: M:Biwen.QuickApi.BaseQuickApi`2.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+  name: HandlerBuilder(RouteHandlerBuilder)
+  nameWithType: BaseQuickApi<Req, Rsp>.HandlerBuilder(RouteHandlerBuilder)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).HandlerBuilder(RouteHandlerBuilder)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+    name: HandlerBuilder
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+  - name: (
+  - uid: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+    name: RouteHandlerBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.routehandlerbuilder
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+    name: HandlerBuilder
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+  - name: (
+  - uid: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+    name: RouteHandlerBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.routehandlerbuilder
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  commentId: M:Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
+  name: BeforeAsync(HttpContext)
+  nameWithType: BaseQuickApi<Req, Rsp>.BeforeAsync(HttpContext)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).BeforeAsync(HttpContext)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+    name: BeforeAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
+  - name: (
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+    name: BeforeAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
+  - name: (
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  commentId: M:Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
+  name: AfterAsync(HttpContext)
+  nameWithType: BaseQuickApi<Req, Rsp>.AfterAsync(HttpContext)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).AfterAsync(HttpContext)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+    name: AfterAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
+  - name: (
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+    name: AfterAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
+  - name: (
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi`2.IsAntiforgeryEnabled
+  commentId: P:Biwen.QuickApi.BaseQuickApi`2.IsAntiforgeryEnabled
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_IsAntiforgeryEnabled
+  name: IsAntiforgeryEnabled
+  nameWithType: BaseQuickApi<Req, Rsp>.IsAntiforgeryEnabled
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.IsAntiforgeryEnabled
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).IsAntiforgeryEnabled
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).IsAntiforgeryEnabled
+- uid: Biwen.QuickApi.BaseQuickApi`2.ReqBinder
+  commentId: P:Biwen.QuickApi.BaseQuickApi`2.ReqBinder
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ReqBinder
+  name: ReqBinder
+  nameWithType: BaseQuickApi<Req, Rsp>.ReqBinder
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.ReqBinder
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).ReqBinder
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).ReqBinder
+- uid: Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync*
+  commentId: Overload:Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-1.html#Biwen_QuickApi_BaseQuickApi_1_ExecuteAsync__0_
+  name: ExecuteAsync
+  nameWithType: BaseQuickApi<Req>.ExecuteAsync
+  fullName: Biwen.QuickApi.BaseQuickApi<Req>.ExecuteAsync
+  nameWithType.vb: BaseQuickApi(Of Req).ExecuteAsync
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req).ExecuteAsync
+- uid: '{Req}'
+  commentId: '!:Req'
+  definition: Req
+  name: Req
+  nameWithType: Req
+  fullName: Req
+- uid: System.Threading.Tasks.ValueTask{Microsoft.AspNetCore.Http.IResult}
+  commentId: T:System.Threading.Tasks.ValueTask{Microsoft.AspNetCore.Http.IResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.ValueTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  name: ValueTask<IResult>
+  nameWithType: ValueTask<IResult>
+  fullName: System.Threading.Tasks.ValueTask<Microsoft.AspNetCore.Http.IResult>
+  nameWithType.vb: ValueTask(Of IResult)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of Microsoft.AspNetCore.Http.IResult)
+  name.vb: ValueTask(Of IResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: <
+  - uid: Microsoft.AspNetCore.Http.IResult
+    name: IResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.iresult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Http.IResult
+    name: IResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.iresult
+  - name: )
+- uid: Req
+  name: Req
+  nameWithType: Req
+  fullName: Req
+- uid: System.Threading.Tasks.ValueTask`1
+  commentId: T:System.Threading.Tasks.ValueTask`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  name: ValueTask<TResult>
+  nameWithType: ValueTask<TResult>
+  fullName: System.Threading.Tasks.ValueTask<TResult>
+  nameWithType.vb: ValueTask(Of TResult)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of TResult)
+  name.vb: ValueTask(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Biwen.QuickApi.BaseQuickApi`1.#ctor*
+  commentId: Overload:Biwen.QuickApi.BaseQuickApi`1.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-1.html#Biwen_QuickApi_BaseQuickApi_1__ctor
+  name: BaseQuickApi
+  nameWithType: BaseQuickApi<Req>.BaseQuickApi
+  fullName: Biwen.QuickApi.BaseQuickApi<Req>.BaseQuickApi
+  nameWithType.vb: BaseQuickApi(Of Req).New
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req).New
+  name.vb: New

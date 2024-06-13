@@ -1,0 +1,353 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Abstractions.Modular
+  commentId: N:Biwen.QuickApi.Abstractions.Modular
+  id: Biwen.QuickApi.Abstractions.Modular
+  children:
+  - Biwen.QuickApi.Abstractions.Modular.ModularBase
+  - Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
+  - Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`2
+  - Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`3
+  - Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`4
+  - Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`5
+  - Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`6
+  - Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`7
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Abstractions.Modular
+  nameWithType: Biwen.QuickApi.Abstractions.Modular
+  fullName: Biwen.QuickApi.Abstractions.Modular
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Abstractions.Modular.ModularBase
+  commentId: T:Biwen.QuickApi.Abstractions.Modular.ModularBase
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.Modular.ModularBase.html
+  name: ModularBase
+  nameWithType: ModularBase
+  fullName: Biwen.QuickApi.Abstractions.Modular.ModularBase
+- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
+  commentId: T:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html
+  name: PreModularAttribute<T>
+  nameWithType: PreModularAttribute<T>
+  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>
+  nameWithType.vb: PreModularAttribute(Of T)
+  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T)
+  name.vb: PreModularAttribute(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`2
+  commentId: T:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`2
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-2.html
+  name: PreModularAttribute<T, T2>
+  nameWithType: PreModularAttribute<T, T2>
+  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T, T2>
+  nameWithType.vb: PreModularAttribute(Of T, T2)
+  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T, T2)
+  name.vb: PreModularAttribute(Of T, T2)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`2
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`2
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`3
+  commentId: T:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`3
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-3.html
+  name: PreModularAttribute<T, T2, T3>
+  nameWithType: PreModularAttribute<T, T2, T3>
+  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T, T2, T3>
+  nameWithType.vb: PreModularAttribute(Of T, T2, T3)
+  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T, T2, T3)
+  name.vb: PreModularAttribute(Of T, T2, T3)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`3
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-3.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`3
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`4
+  commentId: T:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`4
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-4.html
+  name: PreModularAttribute<T, T2, T3, T4>
+  nameWithType: PreModularAttribute<T, T2, T3, T4>
+  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T, T2, T3, T4>
+  nameWithType.vb: PreModularAttribute(Of T, T2, T3, T4)
+  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T, T2, T3, T4)
+  name.vb: PreModularAttribute(Of T, T2, T3, T4)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`4
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-4.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`4
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-4.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: )
+- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`5
+  commentId: T:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`5
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-5.html
+  name: PreModularAttribute<T, T2, T3, T4, T5>
+  nameWithType: PreModularAttribute<T, T2, T3, T4, T5>
+  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T, T2, T3, T4, T5>
+  nameWithType.vb: PreModularAttribute(Of T, T2, T3, T4, T5)
+  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T, T2, T3, T4, T5)
+  name.vb: PreModularAttribute(Of T, T2, T3, T4, T5)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`5
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-5.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`5
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-5.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: )
+- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`6
+  commentId: T:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`6
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-6.html
+  name: PreModularAttribute<T, T2, T3, T4, T5, T6>
+  nameWithType: PreModularAttribute<T, T2, T3, T4, T5, T6>
+  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T, T2, T3, T4, T5, T6>
+  nameWithType.vb: PreModularAttribute(Of T, T2, T3, T4, T5, T6)
+  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T, T2, T3, T4, T5, T6)
+  name.vb: PreModularAttribute(Of T, T2, T3, T4, T5, T6)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`6
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-6.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`6
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-6.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: )
+- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`7
+  commentId: T:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`7
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-7.html
+  name: PreModularAttribute<T, T2, T3, T4, T5, T6, T7>
+  nameWithType: PreModularAttribute<T, T2, T3, T4, T5, T6, T7>
+  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T, T2, T3, T4, T5, T6, T7>
+  nameWithType.vb: PreModularAttribute(Of T, T2, T3, T4, T5, T6, T7)
+  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T, T2, T3, T4, T5, T6, T7)
+  name.vb: PreModularAttribute(Of T, T2, T3, T4, T5, T6, T7)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`7
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-7.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: ','
+  - name: " "
+  - name: T7
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`7
+    name: PreModularAttribute
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-7.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: ','
+  - name: " "
+  - name: T7
+  - name: )

@@ -1,1 +1,1 @@
-﻿# [Pet Store API](petstore.swagger.json)
+﻿# [Biwen.QuickApi.DemoWeb API](openapi.json)

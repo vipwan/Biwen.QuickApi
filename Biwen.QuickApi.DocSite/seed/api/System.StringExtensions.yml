@@ -1,0 +1,733 @@
+### YamlMime:ManagedReference
+items:
+- uid: System.StringExtensions
+  commentId: T:System.StringExtensions
+  id: StringExtensions
+  parent: System
+  children:
+  - System.StringExtensions.IsJson(System.String,System.Text.Json.JsonDocumentOptions)
+  - System.StringExtensions.IsLetter(System.Char)
+  - System.StringExtensions.IsSpace(System.Char)
+  - System.StringExtensions.RemoveTags(System.String,System.Boolean)
+  - System.StringExtensions.ReplaceAll(System.String,System.Collections.Generic.IDictionary{System.String,System.String})
+  - System.StringExtensions.ToCamalCase(System.String)
+  - System.StringExtensions.ToPascalCase(System.String,System.Char)
+  langs:
+  - csharp
+  - vb
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: System.StringExtensions
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: System
+  syntax:
+    content: public static class StringExtensions
+    content.vb: Public Module StringExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: System.StringExtensions.IsLetter(System.Char)
+  commentId: M:System.StringExtensions.IsLetter(System.Char)
+  id: IsLetter(System.Char)
+  isExtensionMethod: true
+  parent: System.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsLetter(char)
+  nameWithType: StringExtensions.IsLetter(char)
+  fullName: System.StringExtensions.IsLetter(char)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: System
+  syntax:
+    content: public static bool IsLetter(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsLetter(c As Char) As Boolean
+  overload: System.StringExtensions.IsLetter*
+  nameWithType.vb: StringExtensions.IsLetter(Char)
+  fullName.vb: System.StringExtensions.IsLetter(Char)
+  name.vb: IsLetter(Char)
+- uid: System.StringExtensions.IsSpace(System.Char)
+  commentId: M:System.StringExtensions.IsSpace(System.Char)
+  id: IsSpace(System.Char)
+  isExtensionMethod: true
+  parent: System.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsSpace(char)
+  nameWithType: StringExtensions.IsSpace(char)
+  fullName: System.StringExtensions.IsSpace(char)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: System
+  syntax:
+    content: public static bool IsSpace(this char c)
+    parameters:
+    - id: c
+      type: System.Char
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsSpace(c As Char) As Boolean
+  overload: System.StringExtensions.IsSpace*
+  nameWithType.vb: StringExtensions.IsSpace(Char)
+  fullName.vb: System.StringExtensions.IsSpace(Char)
+  name.vb: IsSpace(Char)
+- uid: System.StringExtensions.RemoveTags(System.String,System.Boolean)
+  commentId: M:System.StringExtensions.RemoveTags(System.String,System.Boolean)
+  id: RemoveTags(System.String,System.Boolean)
+  isExtensionMethod: true
+  parent: System.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveTags(string, bool)
+  nameWithType: StringExtensions.RemoveTags(string, bool)
+  fullName: System.StringExtensions.RemoveTags(string, bool)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: System
+  syntax:
+    content: public static string RemoveTags(this string html, bool htmlDecode = false)
+    parameters:
+    - id: html
+      type: System.String
+    - id: htmlDecode
+      type: System.Boolean
+    return:
+      type: System.String
+    content.vb: Public Shared Function RemoveTags(html As String, htmlDecode As Boolean = False) As String
+  overload: System.StringExtensions.RemoveTags*
+  nameWithType.vb: StringExtensions.RemoveTags(String, Boolean)
+  fullName.vb: System.StringExtensions.RemoveTags(String, Boolean)
+  name.vb: RemoveTags(String, Boolean)
+- uid: System.StringExtensions.ToPascalCase(System.String,System.Char)
+  commentId: M:System.StringExtensions.ToPascalCase(System.String,System.Char)
+  id: ToPascalCase(System.String,System.Char)
+  isExtensionMethod: true
+  parent: System.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToPascalCase(string, char)
+  nameWithType: StringExtensions.ToPascalCase(string, char)
+  fullName: System.StringExtensions.ToPascalCase(string, char)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: System
+  syntax:
+    content: public static string ToPascalCase(this string attribute, char upperAfterDelimiter = ' ')
+    parameters:
+    - id: attribute
+      type: System.String
+    - id: upperAfterDelimiter
+      type: System.Char
+    return:
+      type: System.String
+    content.vb: Public Shared Function ToPascalCase(attribute As String, upperAfterDelimiter As Char = " "c) As String
+  overload: System.StringExtensions.ToPascalCase*
+  nameWithType.vb: StringExtensions.ToPascalCase(String, Char)
+  fullName.vb: System.StringExtensions.ToPascalCase(String, Char)
+  name.vb: ToPascalCase(String, Char)
+- uid: System.StringExtensions.ToCamalCase(System.String)
+  commentId: M:System.StringExtensions.ToCamalCase(System.String)
+  id: ToCamalCase(System.String)
+  isExtensionMethod: true
+  parent: System.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToCamalCase(string)
+  nameWithType: StringExtensions.ToCamalCase(string)
+  fullName: System.StringExtensions.ToCamalCase(string)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: System
+  syntax:
+    content: public static string ToCamalCase(this string attribute)
+    parameters:
+    - id: attribute
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function ToCamalCase(attribute As String) As String
+  overload: System.StringExtensions.ToCamalCase*
+  nameWithType.vb: StringExtensions.ToCamalCase(String)
+  fullName.vb: System.StringExtensions.ToCamalCase(String)
+  name.vb: ToCamalCase(String)
+- uid: System.StringExtensions.ReplaceAll(System.String,System.Collections.Generic.IDictionary{System.String,System.String})
+  commentId: M:System.StringExtensions.ReplaceAll(System.String,System.Collections.Generic.IDictionary{System.String,System.String})
+  id: ReplaceAll(System.String,System.Collections.Generic.IDictionary{System.String,System.String})
+  isExtensionMethod: true
+  parent: System.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReplaceAll(string, IDictionary<string, string>)
+  nameWithType: StringExtensions.ReplaceAll(string, IDictionary<string, string>)
+  fullName: System.StringExtensions.ReplaceAll(string, System.Collections.Generic.IDictionary<string, string>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: System
+  syntax:
+    content: public static string ReplaceAll(this string original, IDictionary<string, string> replacements)
+    parameters:
+    - id: original
+      type: System.String
+    - id: replacements
+      type: System.Collections.Generic.IDictionary{System.String,System.String}
+    return:
+      type: System.String
+    content.vb: Public Shared Function ReplaceAll(original As String, replacements As IDictionary(Of String, String)) As String
+  overload: System.StringExtensions.ReplaceAll*
+  nameWithType.vb: StringExtensions.ReplaceAll(String, IDictionary(Of String, String))
+  fullName.vb: System.StringExtensions.ReplaceAll(String, System.Collections.Generic.IDictionary(Of String, String))
+  name.vb: ReplaceAll(String, IDictionary(Of String, String))
+- uid: System.StringExtensions.IsJson(System.String,System.Text.Json.JsonDocumentOptions)
+  commentId: M:System.StringExtensions.IsJson(System.String,System.Text.Json.JsonDocumentOptions)
+  id: IsJson(System.String,System.Text.Json.JsonDocumentOptions)
+  isExtensionMethod: true
+  parent: System.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsJson(string, JsonDocumentOptions)
+  nameWithType: StringExtensions.IsJson(string, JsonDocumentOptions)
+  fullName: System.StringExtensions.IsJson(string, System.Text.Json.JsonDocumentOptions)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: System
+  syntax:
+    content: public static bool IsJson(this string json, JsonDocumentOptions jsonDocumentOptions = default)
+    parameters:
+    - id: json
+      type: System.String
+    - id: jsonDocumentOptions
+      type: System.Text.Json.JsonDocumentOptions
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsJson(json As String, jsonDocumentOptions As JsonDocumentOptions = Nothing) As Boolean
+  overload: System.StringExtensions.IsJson*
+  nameWithType.vb: StringExtensions.IsJson(String, JsonDocumentOptions)
+  fullName.vb: System.StringExtensions.IsJson(String, System.Text.Json.JsonDocumentOptions)
+  name.vb: IsJson(String, JsonDocumentOptions)
+references:
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.StringExtensions.IsLetter*
+  commentId: Overload:System.StringExtensions.IsLetter
+  isExternal: true
+  href: System.StringExtensions.html#System_StringExtensions_IsLetter_System_Char_
+  name: IsLetter
+  nameWithType: StringExtensions.IsLetter
+  fullName: System.StringExtensions.IsLetter
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.StringExtensions.IsSpace*
+  commentId: Overload:System.StringExtensions.IsSpace
+  isExternal: true
+  href: System.StringExtensions.html#System_StringExtensions_IsSpace_System_Char_
+  name: IsSpace
+  nameWithType: StringExtensions.IsSpace
+  fullName: System.StringExtensions.IsSpace
+- uid: System.StringExtensions.RemoveTags*
+  commentId: Overload:System.StringExtensions.RemoveTags
+  isExternal: true
+  href: System.StringExtensions.html#System_StringExtensions_RemoveTags_System_String_System_Boolean_
+  name: RemoveTags
+  nameWithType: StringExtensions.RemoveTags
+  fullName: System.StringExtensions.RemoveTags
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.StringExtensions.ToPascalCase*
+  commentId: Overload:System.StringExtensions.ToPascalCase
+  isExternal: true
+  href: System.StringExtensions.html#System_StringExtensions_ToPascalCase_System_String_System_Char_
+  name: ToPascalCase
+  nameWithType: StringExtensions.ToPascalCase
+  fullName: System.StringExtensions.ToPascalCase
+- uid: System.StringExtensions.ToCamalCase*
+  commentId: Overload:System.StringExtensions.ToCamalCase
+  isExternal: true
+  href: System.StringExtensions.html#System_StringExtensions_ToCamalCase_System_String_
+  name: ToCamalCase
+  nameWithType: StringExtensions.ToCamalCase
+  fullName: System.StringExtensions.ToCamalCase
+- uid: System.StringExtensions.ReplaceAll*
+  commentId: Overload:System.StringExtensions.ReplaceAll
+  isExternal: true
+  href: System.StringExtensions.html#System_StringExtensions_ReplaceAll_System_String_System_Collections_Generic_IDictionary_System_String_System_String__
+  name: ReplaceAll
+  nameWithType: StringExtensions.ReplaceAll
+  fullName: System.StringExtensions.ReplaceAll
+- uid: System.Collections.Generic.IDictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<string, string>
+  nameWithType: IDictionary<string, string>
+  fullName: System.Collections.Generic.IDictionary<string, string>
+  nameWithType.vb: IDictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.IDictionary(Of String, String)
+  name.vb: IDictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.StringExtensions.IsJson*
+  commentId: Overload:System.StringExtensions.IsJson
+  isExternal: true
+  href: System.StringExtensions.html#System_StringExtensions_IsJson_System_String_System_Text_Json_JsonDocumentOptions_
+  name: IsJson
+  nameWithType: StringExtensions.IsJson
+  fullName: System.StringExtensions.IsJson
+- uid: System.Text.Json.JsonDocumentOptions
+  commentId: T:System.Text.Json.JsonDocumentOptions
+  parent: System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsondocumentoptions
+  name: JsonDocumentOptions
+  nameWithType: JsonDocumentOptions
+  fullName: System.Text.Json.JsonDocumentOptions
+- uid: System.Text.Json
+  commentId: N:System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json
+  nameWithType: System.Text.Json
+  fullName: System.Text.Json
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json

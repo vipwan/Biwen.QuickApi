@@ -1,6 +1,5 @@
-﻿using System;
-using System.Text.Json.Serialization;
-namespace Scalar.AspNetCore;
+﻿using System.Text.Json.Serialization;
+namespace Biwen.QuickApi.OpenApi.Scalar;
 public class ScalarOptions
 {
     [JsonIgnore]

@@ -1,0 +1,814 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  commentId: T:Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  id: SuccessedEventHandler
+  parent: Biwen.QuickApi.Scheduling
+  children:
+  - Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler})
+  - Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: SuccessedEventHandler
+  nameWithType: SuccessedEventHandler
+  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Scheduling
+  syntax:
+    content: >-
+      [EventSubscriber(IsAsync = true)]
+
+      public class SuccessedEventHandler : IEventSubscriber<TaskSuccessedEvent>
+    content.vb: >-
+      <EventSubscriber(IsAsync:=True)>
+
+      Public Class SuccessedEventHandler Implements IEventSubscriber(Of TaskSuccessedEvent)
+  inheritance:
+  - System.Object
+  implements:
+  - Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  attributes:
+  - type: Biwen.QuickApi.Events.EventSubscriberAttribute
+    ctor: Biwen.QuickApi.Events.EventSubscriberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: IsAsync
+      type: System.Boolean
+      value: true
+- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler})
+  commentId: M:Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler})
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler})'
+  parent: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  langs:
+  - csharp
+  - vb
+  name: SuccessedEventHandler(ILogger<SuccessedEventHandler>)
+  nameWithType: SuccessedEventHandler.SuccessedEventHandler(ILogger<SuccessedEventHandler>)
+  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler.SuccessedEventHandler(Microsoft.Extensions.Logging.ILogger<Biwen.QuickApi.Scheduling.SuccessedEventHandler>)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Scheduling
+  syntax:
+    content: public SuccessedEventHandler(ILogger<SuccessedEventHandler> logger)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler}
+    content.vb: Public Sub New(logger As ILogger(Of SuccessedEventHandler))
+  overload: Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor*
+  nameWithType.vb: SuccessedEventHandler.New(ILogger(Of SuccessedEventHandler))
+  fullName.vb: Biwen.QuickApi.Scheduling.SuccessedEventHandler.New(Microsoft.Extensions.Logging.ILogger(Of Biwen.QuickApi.Scheduling.SuccessedEventHandler))
+  name.vb: New(ILogger(Of SuccessedEventHandler))
+- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+  id: HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleAsync(TaskSuccessedEvent, CancellationToken)
+  nameWithType: SuccessedEventHandler.HandleAsync(TaskSuccessedEvent, CancellationToken)
+  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Scheduling
+  example: []
+  syntax:
+    content: public virtual Task HandleAsync(TaskSuccessedEvent @event, CancellationToken ct)
+    parameters:
+    - id: event
+      type: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overridable Function HandleAsync([event] As TaskSuccessedEvent, ct As CancellationToken) As Task
+  overload: Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync*
+  implements:
+  - Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+references:
+- uid: Biwen.QuickApi.Scheduling
+  commentId: N:Biwen.QuickApi.Scheduling
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Scheduling
+  nameWithType: Biwen.QuickApi.Scheduling
+  fullName: Biwen.QuickApi.Scheduling
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}
+  commentId: T:Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}
+  parent: Biwen.QuickApi.Events
+  definition: Biwen.QuickApi.Events.IEventSubscriber`1
+  href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+  name: IEventSubscriber<TaskSuccessedEvent>
+  nameWithType: IEventSubscriber<TaskSuccessedEvent>
+  fullName: Biwen.QuickApi.Events.IEventSubscriber<Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent>
+  nameWithType.vb: IEventSubscriber(Of TaskSuccessedEvent)
+  fullName.vb: Biwen.QuickApi.Events.IEventSubscriber(Of Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent)
+  name.vb: IEventSubscriber(Of TaskSuccessedEvent)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
+    name: IEventSubscriber
+    isExternal: true
+    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+  - name: <
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+    name: TaskSuccessedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
+    name: IEventSubscriber
+    isExternal: true
+    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+    name: TaskSuccessedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Events.IEventSubscriber`1
+  commentId: T:Biwen.QuickApi.Events.IEventSubscriber`1
+  isExternal: true
+  href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+  name: IEventSubscriber<T>
+  nameWithType: IEventSubscriber<T>
+  fullName: Biwen.QuickApi.Events.IEventSubscriber<T>
+  nameWithType.vb: IEventSubscriber(Of T)
+  fullName.vb: Biwen.QuickApi.Events.IEventSubscriber(Of T)
+  name.vb: IEventSubscriber(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
+    name: IEventSubscriber
+    isExternal: true
+    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
+    name: IEventSubscriber
+    isExternal: true
+    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Events
+  commentId: N:Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Events
+  nameWithType: Biwen.QuickApi.Events
+  fullName: Biwen.QuickApi.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor*
+  commentId: Overload:Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.SuccessedEventHandler.html#Biwen_QuickApi_Scheduling_SuccessedEventHandler__ctor_Microsoft_Extensions_Logging_ILogger_Biwen_QuickApi_Scheduling_SuccessedEventHandler__
+  name: SuccessedEventHandler
+  nameWithType: SuccessedEventHandler.SuccessedEventHandler
+  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler.SuccessedEventHandler
+  nameWithType.vb: SuccessedEventHandler.New
+  fullName.vb: Biwen.QuickApi.Scheduling.SuccessedEventHandler.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<SuccessedEventHandler>
+  nameWithType: ILogger<SuccessedEventHandler>
+  fullName: Microsoft.Extensions.Logging.ILogger<Biwen.QuickApi.Scheduling.SuccessedEventHandler>
+  nameWithType.vb: ILogger(Of SuccessedEventHandler)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Biwen.QuickApi.Scheduling.SuccessedEventHandler)
+  name.vb: ILogger(Of SuccessedEventHandler)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+    name: SuccessedEventHandler
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.SuccessedEventHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+    name: SuccessedEventHandler
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.SuccessedEventHandler.html
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync*
+  commentId: Overload:Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.SuccessedEventHandler.html#Biwen_QuickApi_Scheduling_SuccessedEventHandler_HandleAsync_Biwen_QuickApi_Scheduling_Events_TaskSuccessedEvent_System_Threading_CancellationToken_
+  name: HandleAsync
+  nameWithType: SuccessedEventHandler.HandleAsync
+  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync
+- uid: Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}
+  definition: Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync(`0,System.Threading.CancellationToken)
+  href: Biwen.QuickApi.Events.IEventSubscriber-1.html#Biwen_QuickApi_Events_IEventSubscriber_1_HandleAsync__0_System_Threading_CancellationToken_
+  name: HandleAsync(TaskSuccessedEvent, CancellationToken)
+  nameWithType: IEventSubscriber<TaskSuccessedEvent>.HandleAsync(TaskSuccessedEvent, CancellationToken)
+  fullName: Biwen.QuickApi.Events.IEventSubscriber<Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent>.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent, System.Threading.CancellationToken)
+  nameWithType.vb: IEventSubscriber(Of TaskSuccessedEvent).HandleAsync(TaskSuccessedEvent, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Events.IEventSubscriber(Of Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent).HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+    name: HandleAsync
+    isExternal: true
+    href: Biwen.QuickApi.Events.IEventSubscriber-1.html#Biwen_QuickApi_Events_IEventSubscriber_1_HandleAsync__0_System_Threading_CancellationToken_
+  - name: (
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+    name: TaskSuccessedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+    name: HandleAsync
+    isExternal: true
+    href: Biwen.QuickApi.Events.IEventSubscriber-1.html#Biwen_QuickApi_Events_IEventSubscriber_1_HandleAsync__0_System_Threading_CancellationToken_
+  - name: (
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+    name: TaskSuccessedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+  commentId: T:Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+  parent: Biwen.QuickApi.Scheduling.Events
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html
+  name: TaskSuccessedEvent
+  nameWithType: TaskSuccessedEvent
+  fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync(`0,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: Biwen.QuickApi.Events.IEventSubscriber-1.html#Biwen_QuickApi_Events_IEventSubscriber_1_HandleAsync__0_System_Threading_CancellationToken_
+  name: HandleAsync(T, CancellationToken)
+  nameWithType: IEventSubscriber<T>.HandleAsync(T, CancellationToken)
+  fullName: Biwen.QuickApi.Events.IEventSubscriber<T>.HandleAsync(T, System.Threading.CancellationToken)
+  nameWithType.vb: IEventSubscriber(Of T).HandleAsync(T, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Events.IEventSubscriber(Of T).HandleAsync(T, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync(`0,System.Threading.CancellationToken)
+    name: HandleAsync
+    isExternal: true
+    href: Biwen.QuickApi.Events.IEventSubscriber-1.html#Biwen_QuickApi_Events_IEventSubscriber_1_HandleAsync__0_System_Threading_CancellationToken_
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync(`0,System.Threading.CancellationToken)
+    name: HandleAsync
+    isExternal: true
+    href: Biwen.QuickApi.Events.IEventSubscriber-1.html#Biwen_QuickApi_Events_IEventSubscriber_1_HandleAsync__0_System_Threading_CancellationToken_
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.Scheduling.Events
+  commentId: N:Biwen.QuickApi.Scheduling.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Scheduling.Events
+  nameWithType: Biwen.QuickApi.Scheduling.Events
+  fullName: Biwen.QuickApi.Scheduling.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

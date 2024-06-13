@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Scheduling.Events
+  commentId: N:Biwen.QuickApi.Scheduling.Events
+  id: Biwen.QuickApi.Scheduling.Events
+  children:
+  - Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+  - Biwen.QuickApi.Scheduling.Events.TaskFailedEvent
+  - Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+  - Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Scheduling.Events
+  nameWithType: Biwen.QuickApi.Scheduling.Events
+  fullName: Biwen.QuickApi.Scheduling.Events
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+  commentId: T:Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+  parent: Biwen.QuickApi.Scheduling.Events
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent.html
+  name: ScheduleTaskEvent
+  nameWithType: ScheduleTaskEvent
+  fullName: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+- uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+  commentId: T:Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+  parent: Biwen.QuickApi.Scheduling.Events
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.html
+  name: TaskSuccessedEvent
+  nameWithType: TaskSuccessedEvent
+  fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+- uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+  commentId: T:Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  name: TaskStartedEvent
+  nameWithType: TaskStartedEvent
+  fullName: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+- uid: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent
+  commentId: T:Biwen.QuickApi.Scheduling.Events.TaskFailedEvent
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent.html
+  name: TaskFailedEvent
+  nameWithType: TaskFailedEvent
+  fullName: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent
+- uid: Biwen.QuickApi.Scheduling.Events
+  commentId: N:Biwen.QuickApi.Scheduling.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Scheduling.Events
+  nameWithType: Biwen.QuickApi.Scheduling.Events
+  fullName: Biwen.QuickApi.Scheduling.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.html

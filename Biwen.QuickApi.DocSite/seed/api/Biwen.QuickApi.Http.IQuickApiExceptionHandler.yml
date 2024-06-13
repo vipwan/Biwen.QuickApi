@@ -1,0 +1,153 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Http.IQuickApiExceptionHandler
+  commentId: T:Biwen.QuickApi.Http.IQuickApiExceptionHandler
+  id: IQuickApiExceptionHandler
+  parent: Biwen.QuickApi.Http
+  children:
+  - Biwen.QuickApi.Http.IQuickApiExceptionHandler.HandleAsync(System.Exception)
+  langs:
+  - csharp
+  - vb
+  name: IQuickApiExceptionHandler
+  nameWithType: IQuickApiExceptionHandler
+  fullName: Biwen.QuickApi.Http.IQuickApiExceptionHandler
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiExceptionHandler.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Http
+  syntax:
+    content: public interface IQuickApiExceptionHandler
+    content.vb: Public Interface IQuickApiExceptionHandler
+- uid: Biwen.QuickApi.Http.IQuickApiExceptionHandler.HandleAsync(System.Exception)
+  commentId: M:Biwen.QuickApi.Http.IQuickApiExceptionHandler.HandleAsync(System.Exception)
+  id: HandleAsync(System.Exception)
+  parent: Biwen.QuickApi.Http.IQuickApiExceptionHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleAsync(Exception)
+  nameWithType: IQuickApiExceptionHandler.HandleAsync(Exception)
+  fullName: Biwen.QuickApi.Http.IQuickApiExceptionHandler.HandleAsync(System.Exception)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiExceptionHandler.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Http
+  syntax:
+    content: Task HandleAsync(Exception exception)
+    parameters:
+    - id: exception
+      type: System.Exception
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function HandleAsync(exception As Exception) As Task
+  overload: Biwen.QuickApi.Http.IQuickApiExceptionHandler.HandleAsync*
+references:
+- uid: Biwen.QuickApi.Http
+  commentId: N:Biwen.QuickApi.Http
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Http
+  nameWithType: Biwen.QuickApi.Http
+  fullName: Biwen.QuickApi.Http
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Http
+    name: Http
+    isExternal: true
+    href: Biwen.QuickApi.Http.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Http
+    name: Http
+    isExternal: true
+    href: Biwen.QuickApi.Http.html
+- uid: Biwen.QuickApi.Http.IQuickApiExceptionHandler.HandleAsync*
+  commentId: Overload:Biwen.QuickApi.Http.IQuickApiExceptionHandler.HandleAsync
+  isExternal: true
+  href: Biwen.QuickApi.Http.IQuickApiExceptionHandler.html#Biwen_QuickApi_Http_IQuickApiExceptionHandler_HandleAsync_System_Exception_
+  name: HandleAsync
+  nameWithType: IQuickApiExceptionHandler.HandleAsync
+  fullName: Biwen.QuickApi.Http.IQuickApiExceptionHandler.HandleAsync
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

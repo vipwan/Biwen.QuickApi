@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Attributes
+  commentId: N:Biwen.QuickApi.Attributes
+  id: Biwen.QuickApi.Attributes
+  children:
+  - Biwen.QuickApi.Attributes.AliasAsAttribute
+  - Biwen.QuickApi.Attributes.JustAsServiceAttribute
+  - Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
+  - Biwen.QuickApi.Attributes.QuickApiAttribute
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Attributes
+  nameWithType: Biwen.QuickApi.Attributes
+  fullName: Biwen.QuickApi.Attributes
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Attributes.AliasAsAttribute
+  commentId: T:Biwen.QuickApi.Attributes.AliasAsAttribute
+  isExternal: true
+  href: Biwen.QuickApi.Attributes.AliasAsAttribute.html
+  name: AliasAsAttribute
+  nameWithType: AliasAsAttribute
+  fullName: Biwen.QuickApi.Attributes.AliasAsAttribute
+- uid: Biwen.QuickApi.Attributes.JustAsServiceAttribute
+  commentId: T:Biwen.QuickApi.Attributes.JustAsServiceAttribute
+  parent: Biwen.QuickApi.Attributes
+  isExternal: true
+  href: Biwen.QuickApi.Attributes.JustAsServiceAttribute.html
+  name: JustAsServiceAttribute
+  nameWithType: JustAsServiceAttribute
+  fullName: Biwen.QuickApi.Attributes.JustAsServiceAttribute
+- uid: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
+  commentId: T:Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
+  isExternal: true
+  href: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.html
+  name: OpenApiMetadataAttribute
+  nameWithType: OpenApiMetadataAttribute
+  fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
+- uid: Biwen.QuickApi.Attributes.QuickApiAttribute
+  commentId: T:Biwen.QuickApi.Attributes.QuickApiAttribute
+  parent: Biwen.QuickApi.Attributes
+  isExternal: true
+  href: Biwen.QuickApi.Attributes.QuickApiAttribute.html
+  name: QuickApiAttribute
+  nameWithType: QuickApiAttribute
+  fullName: Biwen.QuickApi.Attributes.QuickApiAttribute
+- uid: Biwen.QuickApi.Attributes
+  commentId: N:Biwen.QuickApi.Attributes
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Attributes
+  nameWithType: Biwen.QuickApi.Attributes
+  fullName: Biwen.QuickApi.Attributes
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Attributes
+    name: Attributes
+    isExternal: true
+    href: Biwen.QuickApi.Attributes.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Attributes
+    name: Attributes
+    isExternal: true
+    href: Biwen.QuickApi.Attributes.html

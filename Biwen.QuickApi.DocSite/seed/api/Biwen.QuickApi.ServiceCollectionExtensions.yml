@@ -1,0 +1,972 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.ServiceCollectionExtensions
+  commentId: T:Biwen.QuickApi.ServiceCollectionExtensions
+  id: ServiceCollectionExtensions
+  parent: Biwen.QuickApi
+  children:
+  - Biwen.QuickApi.ServiceCollectionExtensions.AddIf(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  - Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  - Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  - Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  - Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean})
+  - Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  - Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.String)
+  - Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.String,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  - Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  - Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  langs:
+  - csharp
+  - vb
+  name: ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static class ServiceCollectionExtensions
+    content.vb: Public Module ServiceCollectionExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.AddIf(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  commentId: M:Biwen.QuickApi.ServiceCollectionExtensions.AddIf(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  id: AddIf(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddIf(IServiceCollection, bool, Action<IServiceCollection>)
+  nameWithType: ServiceCollectionExtensions.AddIf(IServiceCollection, bool, Action<IServiceCollection>)
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.AddIf(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool, System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IServiceCollection AddIf(this IServiceCollection services, bool condition, Action<IServiceCollection> action)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: condition
+      type: System.Boolean
+    - id: action
+      type: System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection}
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function AddIf(services As IServiceCollection, condition As Boolean, action As Action(Of IServiceCollection)) As IServiceCollection
+  overload: Biwen.QuickApi.ServiceCollectionExtensions.AddIf*
+  nameWithType.vb: ServiceCollectionExtensions.AddIf(IServiceCollection, Boolean, Action(Of IServiceCollection))
+  fullName.vb: Biwen.QuickApi.ServiceCollectionExtensions.AddIf(Microsoft.Extensions.DependencyInjection.IServiceCollection, Boolean, System.Action(Of Microsoft.Extensions.DependencyInjection.IServiceCollection))
+  name.vb: AddIf(IServiceCollection, Boolean, Action(Of IServiceCollection))
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  commentId: M:Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  id: AddIfElse(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddIfElse(IServiceCollection, bool, Action<IServiceCollection>, Action<IServiceCollection>)
+  nameWithType: ServiceCollectionExtensions.AddIfElse(IServiceCollection, bool, Action<IServiceCollection>, Action<IServiceCollection>)
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool, System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>, System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: public static IServiceCollection AddIfElse(this IServiceCollection services, bool condition, Action<IServiceCollection> ifAction, Action<IServiceCollection> elseAction)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: condition
+      type: System.Boolean
+    - id: ifAction
+      type: System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection}
+    - id: elseAction
+      type: System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection}
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function AddIfElse(services As IServiceCollection, condition As Boolean, ifAction As Action(Of IServiceCollection), elseAction As Action(Of IServiceCollection)) As IServiceCollection
+  overload: Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse*
+  nameWithType.vb: ServiceCollectionExtensions.AddIfElse(IServiceCollection, Boolean, Action(Of IServiceCollection), Action(Of IServiceCollection))
+  fullName.vb: Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse(Microsoft.Extensions.DependencyInjection.IServiceCollection, Boolean, System.Action(Of Microsoft.Extensions.DependencyInjection.IServiceCollection), System.Action(Of Microsoft.Extensions.DependencyInjection.IServiceCollection))
+  name.vb: AddIfElse(IServiceCollection, Boolean, Action(Of IServiceCollection), Action(Of IServiceCollection))
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  id: ConfigureSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConfigureSingleton<TOptions>(IServiceCollection, IConfiguration)
+  nameWithType: ServiceCollectionExtensions.ConfigureSingleton<TOptions>(IServiceCollection, IConfiguration)
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public static IServiceCollection ConfigureSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration) where TOptions : class'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    typeParameters:
+    - id: TOptions
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function ConfigureSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration) As IServiceCollection
+  overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton*
+  nameWithType.vb: ServiceCollectionExtensions.ConfigureSingleton(Of TOptions)(IServiceCollection, IConfiguration)
+  fullName.vb: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton(Of TOptions)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  name.vb: ConfigureSingleton(Of TOptions)(IServiceCollection, IConfiguration)
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  commentId: M:Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  id: ConfigureSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConfigureSingleton<TOptions>(IServiceCollection, IConfiguration, Action<BinderOptions>)
+  nameWithType: ServiceCollectionExtensions.ConfigureSingleton<TOptions>(IServiceCollection, IConfiguration, Action<BinderOptions>)
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public static IServiceCollection ConfigureSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Action<BinderOptions> configureBinder) where TOptions : class'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    - id: configureBinder
+      type: System.Action{Microsoft.Extensions.Configuration.BinderOptions}
+    typeParameters:
+    - id: TOptions
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function ConfigureSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, configureBinder As Action(Of BinderOptions)) As IServiceCollection
+  overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton*
+  nameWithType.vb: ServiceCollectionExtensions.ConfigureSingleton(Of TOptions)(IServiceCollection, IConfiguration, Action(Of BinderOptions))
+  fullName.vb: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton(Of TOptions)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Action(Of Microsoft.Extensions.Configuration.BinderOptions))
+  name.vb: ConfigureSingleton(Of TOptions)(IServiceCollection, IConfiguration, Action(Of BinderOptions))
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  id: ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration)
+  nameWithType: ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration)
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration) where TOptions : class'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    typeParameters:
+    - id: TOptions
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration) As IServiceCollection
+  overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
+  nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration)
+  fullName.vb: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  name.vb: ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration)
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  commentId: M:Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  id: ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration, Action<BinderOptions>)
+  nameWithType: ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration, Action<BinderOptions>)
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Action<BinderOptions> configureBinder) where TOptions : class'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    - id: configureBinder
+      type: System.Action{Microsoft.Extensions.Configuration.BinderOptions}
+    typeParameters:
+    - id: TOptions
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, configureBinder As Action(Of BinderOptions)) As IServiceCollection
+  overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
+  nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Action(Of BinderOptions))
+  fullName.vb: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Action(Of Microsoft.Extensions.Configuration.BinderOptions))
+  name.vb: ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Action(Of BinderOptions))
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean})
+  commentId: M:Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean})
+  id: ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean})
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration, Func<TOptions, bool>)
+  nameWithType: ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration, Func<TOptions, bool>)
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Func<TOptions, bool> validation) where TOptions : class'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    - id: validation
+      type: System.Func{{TOptions},System.Boolean}
+    typeParameters:
+    - id: TOptions
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, validation As Func(Of TOptions, Boolean)) As IServiceCollection
+  overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
+  nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean))
+  fullName.vb: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func(Of TOptions, Boolean))
+  name.vb: ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean))
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  commentId: M:Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  id: ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration, Func<TOptions, bool>, Action<BinderOptions>)
+  nameWithType: ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration, Func<TOptions, bool>, Action<BinderOptions>)
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Func<TOptions, bool> validation, Action<BinderOptions> configureBinder) where TOptions : class'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    - id: validation
+      type: System.Func{{TOptions},System.Boolean}
+    - id: configureBinder
+      type: System.Action{Microsoft.Extensions.Configuration.BinderOptions}
+    typeParameters:
+    - id: TOptions
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, validation As Func(Of TOptions, Boolean), configureBinder As Action(Of BinderOptions)) As IServiceCollection
+  overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
+  nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean), Action(Of BinderOptions))
+  fullName.vb: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func(Of TOptions, Boolean), System.Action(Of Microsoft.Extensions.Configuration.BinderOptions))
+  name.vb: ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean), Action(Of BinderOptions))
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.String)
+  commentId: M:Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.String)
+  id: ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.String)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration, Func<TOptions, bool>, string)
+  nameWithType: ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration, Func<TOptions, bool>, string)
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>, string)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Func<TOptions, bool> validation, string failureMessage) where TOptions : class'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    - id: validation
+      type: System.Func{{TOptions},System.Boolean}
+    - id: failureMessage
+      type: System.String
+    typeParameters:
+    - id: TOptions
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, validation As Func(Of TOptions, Boolean), failureMessage As String) As IServiceCollection
+  overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
+  nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean), String)
+  fullName.vb: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func(Of TOptions, Boolean), String)
+  name.vb: ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean), String)
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.String,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  commentId: M:Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.String,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  id: ConfigureAndValidateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Func{``0,System.Boolean},System.String,System.Action{Microsoft.Extensions.Configuration.BinderOptions})
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration, Func<TOptions, bool>, string, Action<BinderOptions>)
+  nameWithType: ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(IServiceCollection, IConfiguration, Func<TOptions, bool>, string, Action<BinderOptions>)
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>, string, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Func<TOptions, bool> validation, string failureMessage, Action<BinderOptions> configureBinder) where TOptions : class'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    - id: validation
+      type: System.Func{{TOptions},System.Boolean}
+    - id: failureMessage
+      type: System.String
+    - id: configureBinder
+      type: System.Action{Microsoft.Extensions.Configuration.BinderOptions}
+    typeParameters:
+    - id: TOptions
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, validation As Func(Of TOptions, Boolean), failureMessage As String, configureBinder As Action(Of BinderOptions)) As IServiceCollection
+  overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
+  nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean), String, Action(Of BinderOptions))
+  fullName.vb: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func(Of TOptions, Boolean), String, System.Action(Of Microsoft.Extensions.Configuration.BinderOptions))
+  name.vb: ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean), String, Action(Of BinderOptions))
+references:
+- uid: Biwen.QuickApi
+  commentId: N:Biwen.QuickApi
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi
+  nameWithType: Biwen.QuickApi
+  fullName: Biwen.QuickApi
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.AddIf*
+  commentId: Overload:Biwen.QuickApi.ServiceCollectionExtensions.AddIf
+  isExternal: true
+  href: Biwen.QuickApi.ServiceCollectionExtensions.html#Biwen_QuickApi_ServiceCollectionExtensions_AddIf_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Boolean_System_Action_Microsoft_Extensions_DependencyInjection_IServiceCollection__
+  name: AddIf
+  nameWithType: ServiceCollectionExtensions.AddIf
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.AddIf
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection}
+  commentId: T:System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<IServiceCollection>
+  nameWithType: Action<IServiceCollection>
+  fullName: System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>
+  nameWithType.vb: Action(Of IServiceCollection)
+  fullName.vb: System.Action(Of Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: Action(Of IServiceCollection)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: )
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse*
+  commentId: Overload:Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse
+  isExternal: true
+  href: Biwen.QuickApi.ServiceCollectionExtensions.html#Biwen_QuickApi_ServiceCollectionExtensions_AddIfElse_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Boolean_System_Action_Microsoft_Extensions_DependencyInjection_IServiceCollection__System_Action_Microsoft_Extensions_DependencyInjection_IServiceCollection__
+  name: AddIfElse
+  nameWithType: ServiceCollectionExtensions.AddIfElse
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton*
+  commentId: Overload:Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton
+  isExternal: true
+  href: Biwen.QuickApi.ServiceCollectionExtensions.html#Biwen_QuickApi_ServiceCollectionExtensions_ConfigureSingleton__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
+  name: ConfigureSingleton
+  nameWithType: ServiceCollectionExtensions.ConfigureSingleton
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+- uid: System.Action{Microsoft.Extensions.Configuration.BinderOptions}
+  commentId: T:System.Action{Microsoft.Extensions.Configuration.BinderOptions}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<BinderOptions>
+  nameWithType: Action<BinderOptions>
+  fullName: System.Action<Microsoft.Extensions.Configuration.BinderOptions>
+  nameWithType.vb: Action(Of BinderOptions)
+  fullName.vb: System.Action(Of Microsoft.Extensions.Configuration.BinderOptions)
+  name.vb: Action(Of BinderOptions)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.Configuration.BinderOptions
+    name: BinderOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.binderoptions
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.Configuration.BinderOptions
+    name: BinderOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.binderoptions
+  - name: )
+- uid: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
+  commentId: Overload:Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton
+  isExternal: true
+  href: Biwen.QuickApi.ServiceCollectionExtensions.html#Biwen_QuickApi_ServiceCollectionExtensions_ConfigureAndValidateSingleton__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
+  name: ConfigureAndValidateSingleton
+  nameWithType: ServiceCollectionExtensions.ConfigureAndValidateSingleton
+  fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton
+- uid: System.Func{{TOptions},System.Boolean}
+  commentId: T:System.Func{``0,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TOptions, bool>
+  nameWithType: Func<TOptions, bool>
+  fullName: System.Func<TOptions, bool>
+  nameWithType.vb: Func(Of TOptions, Boolean)
+  fullName.vb: System.Func(Of TOptions, Boolean)
+  name.vb: Func(Of TOptions, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TOptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Scheduling
+  commentId: N:Biwen.QuickApi.Scheduling
+  id: Biwen.QuickApi.Scheduling
+  children:
+  - Biwen.QuickApi.Scheduling.Constants
+  - Biwen.QuickApi.Scheduling.IScheduleTask
+  - Biwen.QuickApi.Scheduling.IScheduler
+  - Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask
+  - Biwen.QuickApi.Scheduling.ScheduleTask
+  - Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
+  - Biwen.QuickApi.Scheduling.ServiceRegistration
+  - Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Scheduling
+  nameWithType: Biwen.QuickApi.Scheduling
+  fullName: Biwen.QuickApi.Scheduling
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Scheduling.Constants
+  commentId: T:Biwen.QuickApi.Scheduling.Constants
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Constants.html
+  name: Constants
+  nameWithType: Constants
+  fullName: Biwen.QuickApi.Scheduling.Constants
+- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  commentId: T:Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.SuccessedEventHandler.html
+  name: SuccessedEventHandler
+  nameWithType: SuccessedEventHandler
+  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+- uid: Biwen.QuickApi.Scheduling.IScheduler
+  commentId: T:Biwen.QuickApi.Scheduling.IScheduler
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.IScheduler.html
+  name: IScheduler
+  nameWithType: IScheduler
+  fullName: Biwen.QuickApi.Scheduling.IScheduler
+- uid: Biwen.QuickApi.Scheduling.IScheduleTask
+  commentId: T:Biwen.QuickApi.Scheduling.IScheduleTask
+  parent: Biwen.QuickApi.Scheduling
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.IScheduleTask.html
+  name: IScheduleTask
+  nameWithType: IScheduleTask
+  fullName: Biwen.QuickApi.Scheduling.IScheduleTask
+- uid: Biwen.QuickApi.Scheduling.ScheduleTask
+  commentId: T:Biwen.QuickApi.Scheduling.ScheduleTask
+  parent: Biwen.QuickApi.Scheduling
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.ScheduleTask.html
+  name: ScheduleTask
+  nameWithType: ScheduleTask
+  fullName: Biwen.QuickApi.Scheduling.ScheduleTask
+- uid: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask
+  commentId: T:Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.html
+  name: OnlyOneRunningScheduleTask
+  nameWithType: OnlyOneRunningScheduleTask
+  fullName: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask
+- uid: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
+  commentId: T:Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
+  parent: Biwen.QuickApi.Scheduling
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute.html
+  name: ScheduleTaskAttribute
+  nameWithType: ScheduleTaskAttribute
+  fullName: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
+- uid: Biwen.QuickApi.Scheduling.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Scheduling.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Scheduling.ServiceRegistration
+- uid: Biwen.QuickApi.Scheduling
+  commentId: N:Biwen.QuickApi.Scheduling
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Scheduling
+  nameWithType: Biwen.QuickApi.Scheduling
+  fullName: Biwen.QuickApi.Scheduling
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling
+    name: Scheduling
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.html

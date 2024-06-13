@@ -1,0 +1,412 @@
+### YamlMime:ManagedReference
+items:
+- uid: Scalar.AspNetCore.ScalarAuthenticationOptions
+  commentId: T:Scalar.AspNetCore.ScalarAuthenticationOptions
+  id: ScalarAuthenticationOptions
+  parent: Scalar.AspNetCore
+  children:
+  - Scalar.AspNetCore.ScalarAuthenticationOptions.#ctor
+  - Scalar.AspNetCore.ScalarAuthenticationOptions.ApiKey
+  - Scalar.AspNetCore.ScalarAuthenticationOptions.PreferredSecurityScheme
+  langs:
+  - csharp
+  - vb
+  name: ScalarAuthenticationOptions
+  nameWithType: ScalarAuthenticationOptions
+  fullName: Scalar.AspNetCore.ScalarAuthenticationOptions
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public class ScalarAuthenticationOptions
+    content.vb: Public Class ScalarAuthenticationOptions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Scalar.AspNetCore.ScalarAuthenticationOptions.#ctor
+  commentId: M:Scalar.AspNetCore.ScalarAuthenticationOptions.#ctor
+  id: '#ctor'
+  parent: Scalar.AspNetCore.ScalarAuthenticationOptions
+  langs:
+  - csharp
+  - vb
+  name: ScalarAuthenticationOptions()
+  nameWithType: ScalarAuthenticationOptions.ScalarAuthenticationOptions()
+  fullName: Scalar.AspNetCore.ScalarAuthenticationOptions.ScalarAuthenticationOptions()
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public ScalarAuthenticationOptions()
+    content.vb: Public Sub New()
+  overload: Scalar.AspNetCore.ScalarAuthenticationOptions.#ctor*
+  nameWithType.vb: ScalarAuthenticationOptions.New()
+  fullName.vb: Scalar.AspNetCore.ScalarAuthenticationOptions.New()
+  name.vb: New()
+- uid: Scalar.AspNetCore.ScalarAuthenticationOptions.PreferredSecurityScheme
+  commentId: P:Scalar.AspNetCore.ScalarAuthenticationOptions.PreferredSecurityScheme
+  id: PreferredSecurityScheme
+  parent: Scalar.AspNetCore.ScalarAuthenticationOptions
+  langs:
+  - csharp
+  - vb
+  name: PreferredSecurityScheme
+  nameWithType: ScalarAuthenticationOptions.PreferredSecurityScheme
+  fullName: Scalar.AspNetCore.ScalarAuthenticationOptions.PreferredSecurityScheme
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public string? PreferredSecurityScheme { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PreferredSecurityScheme As String
+  overload: Scalar.AspNetCore.ScalarAuthenticationOptions.PreferredSecurityScheme*
+- uid: Scalar.AspNetCore.ScalarAuthenticationOptions.ApiKey
+  commentId: P:Scalar.AspNetCore.ScalarAuthenticationOptions.ApiKey
+  id: ApiKey
+  parent: Scalar.AspNetCore.ScalarAuthenticationOptions
+  langs:
+  - csharp
+  - vb
+  name: ApiKey
+  nameWithType: ScalarAuthenticationOptions.ApiKey
+  fullName: Scalar.AspNetCore.ScalarAuthenticationOptions.ApiKey
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Scalar.AspNetCore
+  syntax:
+    content: public ScalarAuthenticationApiKey? ApiKey { get; set; }
+    parameters: []
+    return:
+      type: Scalar.AspNetCore.ScalarAuthenticationApiKey
+    content.vb: Public Property ApiKey As ScalarAuthenticationApiKey
+  overload: Scalar.AspNetCore.ScalarAuthenticationOptions.ApiKey*
+references:
+- uid: Scalar.AspNetCore
+  commentId: N:Scalar.AspNetCore
+  isExternal: true
+  href: Scalar.html
+  name: Scalar.AspNetCore
+  nameWithType: Scalar.AspNetCore
+  fullName: Scalar.AspNetCore
+  spec.csharp:
+  - uid: Scalar
+    name: Scalar
+    isExternal: true
+    href: Scalar.html
+  - name: .
+  - uid: Scalar.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: Scalar.AspNetCore.html
+  spec.vb:
+  - uid: Scalar
+    name: Scalar
+    isExternal: true
+    href: Scalar.html
+  - name: .
+  - uid: Scalar.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: Scalar.AspNetCore.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Scalar.AspNetCore.ScalarAuthenticationOptions.#ctor*
+  commentId: Overload:Scalar.AspNetCore.ScalarAuthenticationOptions.#ctor
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarAuthenticationOptions.html#Scalar_AspNetCore_ScalarAuthenticationOptions__ctor
+  name: ScalarAuthenticationOptions
+  nameWithType: ScalarAuthenticationOptions.ScalarAuthenticationOptions
+  fullName: Scalar.AspNetCore.ScalarAuthenticationOptions.ScalarAuthenticationOptions
+  nameWithType.vb: ScalarAuthenticationOptions.New
+  fullName.vb: Scalar.AspNetCore.ScalarAuthenticationOptions.New
+  name.vb: New
+- uid: Scalar.AspNetCore.ScalarAuthenticationOptions.PreferredSecurityScheme*
+  commentId: Overload:Scalar.AspNetCore.ScalarAuthenticationOptions.PreferredSecurityScheme
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarAuthenticationOptions.html#Scalar_AspNetCore_ScalarAuthenticationOptions_PreferredSecurityScheme
+  name: PreferredSecurityScheme
+  nameWithType: ScalarAuthenticationOptions.PreferredSecurityScheme
+  fullName: Scalar.AspNetCore.ScalarAuthenticationOptions.PreferredSecurityScheme
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Scalar.AspNetCore.ScalarAuthenticationOptions.ApiKey*
+  commentId: Overload:Scalar.AspNetCore.ScalarAuthenticationOptions.ApiKey
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarAuthenticationOptions.html#Scalar_AspNetCore_ScalarAuthenticationOptions_ApiKey
+  name: ApiKey
+  nameWithType: ScalarAuthenticationOptions.ApiKey
+  fullName: Scalar.AspNetCore.ScalarAuthenticationOptions.ApiKey
+- uid: Scalar.AspNetCore.ScalarAuthenticationApiKey
+  commentId: T:Scalar.AspNetCore.ScalarAuthenticationApiKey
+  parent: Scalar.AspNetCore
+  isExternal: true
+  href: Scalar.AspNetCore.ScalarAuthenticationApiKey.html
+  name: ScalarAuthenticationApiKey
+  nameWithType: ScalarAuthenticationApiKey
+  fullName: Scalar.AspNetCore.ScalarAuthenticationApiKey

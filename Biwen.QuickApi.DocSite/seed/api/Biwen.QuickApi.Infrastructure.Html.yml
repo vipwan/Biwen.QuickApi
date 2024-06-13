@@ -1,0 +1,88 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure.Html
+  commentId: N:Biwen.QuickApi.Infrastructure.Html
+  id: Biwen.QuickApi.Infrastructure.Html
+  children:
+  - Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions
+  - Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerService
+  - Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Infrastructure.Html
+  nameWithType: Biwen.QuickApi.Infrastructure.Html
+  fullName: Biwen.QuickApi.Infrastructure.Html
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions
+  commentId: T:Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions.html
+  name: HtmlSanitizerOptions
+  nameWithType: HtmlSanitizerOptions
+  fullName: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions
+- uid: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerService
+  commentId: T:Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerService
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerService.html
+  name: HtmlSanitizerService
+  nameWithType: HtmlSanitizerService
+  fullName: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerService
+- uid: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService
+  commentId: T:Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService
+  parent: Biwen.QuickApi.Infrastructure.Html
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.html
+  name: IHtmlSanitizerService
+  nameWithType: IHtmlSanitizerService
+  fullName: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService
+- uid: Biwen.QuickApi.Infrastructure.Html
+  commentId: N:Biwen.QuickApi.Infrastructure.Html
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.Html
+  nameWithType: Biwen.QuickApi.Infrastructure.Html
+  fullName: Biwen.QuickApi.Infrastructure.Html
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Html
+    name: Html
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Html.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.Html
+    name: Html
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.Html.html

@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Verb
+  commentId: T:Biwen.QuickApi.Verb
+  id: Verb
+  parent: Biwen.QuickApi
+  children:
+  - Biwen.QuickApi.Verb.DELETE
+  - Biwen.QuickApi.Verb.GET
+  - Biwen.QuickApi.Verb.HEAD
+  - Biwen.QuickApi.Verb.OPTIONS
+  - Biwen.QuickApi.Verb.PATCH
+  - Biwen.QuickApi.Verb.POST
+  - Biwen.QuickApi.Verb.PUT
+  langs:
+  - csharp
+  - vb
+  name: Verb
+  nameWithType: Verb
+  fullName: Biwen.QuickApi.Verb
+  type: Enum
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Verb.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum Verb
+    content.vb: >-
+      <Flags>
+
+      Public Enum Verb
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: Biwen.QuickApi.Verb.GET
+  commentId: F:Biwen.QuickApi.Verb.GET
+  id: GET
+  parent: Biwen.QuickApi.Verb
+  langs:
+  - csharp
+  - vb
+  name: GET
+  nameWithType: Verb.GET
+  fullName: Biwen.QuickApi.Verb.GET
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Verb.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: GET = 1
+    return:
+      type: Biwen.QuickApi.Verb
+- uid: Biwen.QuickApi.Verb.POST
+  commentId: F:Biwen.QuickApi.Verb.POST
+  id: POST
+  parent: Biwen.QuickApi.Verb
+  langs:
+  - csharp
+  - vb
+  name: POST
+  nameWithType: Verb.POST
+  fullName: Biwen.QuickApi.Verb.POST
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Verb.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: POST = 2
+    return:
+      type: Biwen.QuickApi.Verb
+- uid: Biwen.QuickApi.Verb.PUT
+  commentId: F:Biwen.QuickApi.Verb.PUT
+  id: PUT
+  parent: Biwen.QuickApi.Verb
+  langs:
+  - csharp
+  - vb
+  name: PUT
+  nameWithType: Verb.PUT
+  fullName: Biwen.QuickApi.Verb.PUT
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Verb.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: PUT = 4
+    return:
+      type: Biwen.QuickApi.Verb
+- uid: Biwen.QuickApi.Verb.DELETE
+  commentId: F:Biwen.QuickApi.Verb.DELETE
+  id: DELETE
+  parent: Biwen.QuickApi.Verb
+  langs:
+  - csharp
+  - vb
+  name: DELETE
+  nameWithType: Verb.DELETE
+  fullName: Biwen.QuickApi.Verb.DELETE
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Verb.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: DELETE = 8
+    return:
+      type: Biwen.QuickApi.Verb
+- uid: Biwen.QuickApi.Verb.PATCH
+  commentId: F:Biwen.QuickApi.Verb.PATCH
+  id: PATCH
+  parent: Biwen.QuickApi.Verb
+  langs:
+  - csharp
+  - vb
+  name: PATCH
+  nameWithType: Verb.PATCH
+  fullName: Biwen.QuickApi.Verb.PATCH
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Verb.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: PATCH = 16
+    return:
+      type: Biwen.QuickApi.Verb
+- uid: Biwen.QuickApi.Verb.HEAD
+  commentId: F:Biwen.QuickApi.Verb.HEAD
+  id: HEAD
+  parent: Biwen.QuickApi.Verb
+  langs:
+  - csharp
+  - vb
+  name: HEAD
+  nameWithType: Verb.HEAD
+  fullName: Biwen.QuickApi.Verb.HEAD
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Verb.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: HEAD = 32
+    return:
+      type: Biwen.QuickApi.Verb
+- uid: Biwen.QuickApi.Verb.OPTIONS
+  commentId: F:Biwen.QuickApi.Verb.OPTIONS
+  id: OPTIONS
+  parent: Biwen.QuickApi.Verb
+  langs:
+  - csharp
+  - vb
+  name: OPTIONS
+  nameWithType: Verb.OPTIONS
+  fullName: Biwen.QuickApi.Verb.OPTIONS
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Verb.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  syntax:
+    content: OPTIONS = 64
+    return:
+      type: Biwen.QuickApi.Verb
+references:
+- uid: Biwen.QuickApi
+  commentId: N:Biwen.QuickApi
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi
+  nameWithType: Biwen.QuickApi
+  fullName: Biwen.QuickApi
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+- uid: Biwen.QuickApi.Verb
+  commentId: T:Biwen.QuickApi.Verb
+  parent: Biwen.QuickApi
+  isExternal: true
+  href: Biwen.QuickApi.Verb.html
+  name: Verb
+  nameWithType: Verb
+  fullName: Biwen.QuickApi.Verb

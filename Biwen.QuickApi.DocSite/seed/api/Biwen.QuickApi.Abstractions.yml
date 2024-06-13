@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Abstractions
+  commentId: N:Biwen.QuickApi.Abstractions
+  id: Biwen.QuickApi.Abstractions
+  children:
+  - Biwen.QuickApi.Abstractions.IQuickEndpoint
+  - Biwen.QuickApi.Abstractions.IReqBinder`1
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Abstractions
+  nameWithType: Biwen.QuickApi.Abstractions
+  fullName: Biwen.QuickApi.Abstractions
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Abstractions.IQuickEndpoint
+  commentId: T:Biwen.QuickApi.Abstractions.IQuickEndpoint
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.IQuickEndpoint.html
+  name: IQuickEndpoint
+  nameWithType: IQuickEndpoint
+  fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint
+- uid: Biwen.QuickApi.Abstractions.IReqBinder`1
+  commentId: T:Biwen.QuickApi.Abstractions.IReqBinder`1
+  isExternal: true
+  href: Biwen.QuickApi.Abstractions.IReqBinder-1.html
+  name: IReqBinder<T>
+  nameWithType: IReqBinder<T>
+  fullName: Biwen.QuickApi.Abstractions.IReqBinder<T>
+  nameWithType.vb: IReqBinder(Of T)
+  fullName.vb: Biwen.QuickApi.Abstractions.IReqBinder(Of T)
+  name.vb: IReqBinder(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Abstractions.IReqBinder`1
+    name: IReqBinder
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.IReqBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Abstractions.IReqBinder`1
+    name: IReqBinder
+    isExternal: true
+    href: Biwen.QuickApi.Abstractions.IReqBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

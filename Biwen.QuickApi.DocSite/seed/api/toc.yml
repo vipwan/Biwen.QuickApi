@@ -1,0 +1,222 @@
+### YamlMime:TableOfContent
+items:
+- uid: Biwen.QuickApi
+  name: Biwen.QuickApi
+  items:
+  - uid: Biwen.QuickApi.BaseQuickApi
+    name: BaseQuickApi
+  - uid: Biwen.QuickApi.BaseQuickApi`1
+    name: BaseQuickApi<Req>
+  - uid: Biwen.QuickApi.BaseQuickApi`2
+    name: BaseQuickApi<Req, Rsp>
+  - uid: Biwen.QuickApi.BaseQuickApiJustAsService`2
+    name: BaseQuickApiJustAsService<Req, Rsp>
+  - uid: Biwen.QuickApi.BaseQuickApiWithoutRequest`1
+    name: BaseQuickApiWithoutRequest<Rsp>
+  - uid: Biwen.QuickApi.BaseRequest`1
+    name: BaseRequest<T>
+  - uid: Biwen.QuickApi.BaseRequestFromBody`1
+    name: BaseRequestFromBody<T>
+  - uid: Biwen.QuickApi.BiwenQuickApiOptions
+    name: BiwenQuickApiOptions
+  - uid: Biwen.QuickApi.DefaultReqBinder`1
+    name: DefaultReqBinder<T>
+  - uid: Biwen.QuickApi.EmptyRequest
+    name: EmptyRequest
+  - uid: Biwen.QuickApi.FromBodyAttribute
+    name: FromBodyAttribute
+  - uid: Biwen.QuickApi.FromKeyedServicesAttribute
+    name: FromKeyedServicesAttribute
+  - uid: Biwen.QuickApi.IdGenerator
+    name: IdGenerator
+  - uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions
+    name: IEndpointRouteBuilderExtensions
+  - uid: Biwen.QuickApi.IResultExtensions
+    name: IResultExtensions
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+  - uid: Biwen.QuickApi.QuickApiExcetion
+    name: QuickApiExcetion
+  - uid: Biwen.QuickApi.ServiceCollectionExtensions
+    name: ServiceCollectionExtensions
+  - uid: Biwen.QuickApi.ServiceRegistration
+    name: ServiceRegistration
+  - uid: Biwen.QuickApi.StringExtensions
+    name: StringExtensions
+  - uid: Biwen.QuickApi.Verb
+    name: Verb
+  - uid: Biwen.QuickApi.WebApplicationBuilderExtensions
+    name: WebApplicationBuilderExtensions
+- uid: Biwen.QuickApi.Abstractions
+  name: Biwen.QuickApi.Abstractions
+  items:
+  - uid: Biwen.QuickApi.Abstractions.IQuickEndpoint
+    name: IQuickEndpoint
+  - uid: Biwen.QuickApi.Abstractions.IReqBinder`1
+    name: IReqBinder<T>
+- uid: Biwen.QuickApi.Abstractions.Modular
+  name: Biwen.QuickApi.Abstractions.Modular
+  items:
+  - uid: Biwen.QuickApi.Abstractions.Modular.ModularBase
+    name: ModularBase
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
+    name: PreModularAttribute<T>
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`2
+    name: PreModularAttribute<T, T2>
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`3
+    name: PreModularAttribute<T, T2, T3>
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`4
+    name: PreModularAttribute<T, T2, T3, T4>
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`5
+    name: PreModularAttribute<T, T2, T3, T4, T5>
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`6
+    name: PreModularAttribute<T, T2, T3, T4, T5, T6>
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`7
+    name: PreModularAttribute<T, T2, T3, T4, T5, T6, T7>
+- uid: Biwen.QuickApi.Attributes
+  name: Biwen.QuickApi.Attributes
+  items:
+  - uid: Biwen.QuickApi.Attributes.AliasAsAttribute
+    name: AliasAsAttribute
+  - uid: Biwen.QuickApi.Attributes.JustAsServiceAttribute
+    name: JustAsServiceAttribute
+  - uid: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
+    name: OpenApiMetadataAttribute
+  - uid: Biwen.QuickApi.Attributes.QuickApiAttribute
+    name: QuickApiAttribute
+- uid: Biwen.QuickApi.Events
+  name: Biwen.QuickApi.Events
+  items:
+  - uid: Biwen.QuickApi.Events.EventExtensions
+    name: EventExtensions
+  - uid: Biwen.QuickApi.Events.EventSubscriber`1
+    name: EventSubscriber<T>
+  - uid: Biwen.QuickApi.Events.EventSubscriberAttribute
+    name: EventSubscriberAttribute
+  - uid: Biwen.QuickApi.Events.IEvent
+    name: IEvent
+  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
+    name: IEventSubscriber<T>
+  - uid: Biwen.QuickApi.Events.ServiceRegistration
+    name: ServiceRegistration
+- uid: Biwen.QuickApi.Http
+  name: Biwen.QuickApi.Http
+  items:
+  - uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+    name: BaseQuickApiGroupRouteBuilder
+  - uid: Biwen.QuickApi.Http.IQuickApiExceptionHandler
+    name: IQuickApiExceptionHandler
+  - uid: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder
+    name: IQuickApiExceptionResultBuilder
+  - uid: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
+    name: IQuickApiGroupRouteBuilder
+  - uid: Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware
+    name: QuickApiAntiforgeryMiddleware
+  - uid: Biwen.QuickApi.Http.QuickApiMiddleware
+    name: QuickApiMiddleware
+- uid: Biwen.QuickApi.Infrastructure.Html
+  name: Biwen.QuickApi.Infrastructure.Html
+  items:
+  - uid: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions
+    name: HtmlSanitizerOptions
+  - uid: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerService
+    name: HtmlSanitizerService
+  - uid: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService
+    name: IHtmlSanitizerService
+- uid: Biwen.QuickApi.Infrastructure.Locking
+  name: Biwen.QuickApi.Infrastructure.Locking
+  items:
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILocalLock
+    name: ILocalLock
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILock
+    name: ILock
+  - uid: Biwen.QuickApi.Infrastructure.Locking.ILocker
+    name: ILocker
+  - uid: Biwen.QuickApi.Infrastructure.Locking.LocalLock
+    name: LocalLock
+- uid: Biwen.QuickApi.Infrastructure.StartupTask
+  name: Biwen.QuickApi.Infrastructure.StartupTask
+  items:
+  - uid: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
+    name: IStartupTask
+  - uid: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase
+    name: StartupTaskBase
+- uid: Biwen.QuickApi.Metadata
+  name: Biwen.QuickApi.Metadata
+  items:
+  - uid: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata
+    name: QuickApiEndpointMetadata
+  - uid: Biwen.QuickApi.Metadata.QuickApiExampleMetadata
+    name: QuickApiExampleMetadata
+  - uid: Biwen.QuickApi.Metadata.QuickApiMetadata
+    name: QuickApiMetadata
+- uid: Biwen.QuickApi.OpenApi
+  name: Biwen.QuickApi.OpenApi
+  items:
+  - uid: Biwen.QuickApi.OpenApi.BearerSecuritySchemeTransformer
+    name: BearerSecuritySchemeTransformer
+  - uid: Biwen.QuickApi.OpenApi.ServiceRegistration
+    name: ServiceRegistration
+- uid: Biwen.QuickApi.OpenApi.Scalar
+  name: Biwen.QuickApi.OpenApi.Scalar
+  items:
+  - uid: Biwen.QuickApi.OpenApi.Scalar.IEndpointRouteBuilderExtensions
+    name: IEndpointRouteBuilderExtensions
+  - uid: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationApiKey
+    name: ScalarAuthenticationApiKey
+  - uid: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationoAuth2
+    name: ScalarAuthenticationoAuth2
+  - uid: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationOptions
+    name: ScalarAuthenticationOptions
+  - uid: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions
+    name: ScalarOptions
+- uid: Biwen.QuickApi.Scheduling
+  name: Biwen.QuickApi.Scheduling
+  items:
+  - uid: Biwen.QuickApi.Scheduling.Constants
+    name: Constants
+  - uid: Biwen.QuickApi.Scheduling.IScheduler
+    name: IScheduler
+  - uid: Biwen.QuickApi.Scheduling.IScheduleTask
+    name: IScheduleTask
+  - uid: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask
+    name: OnlyOneRunningScheduleTask
+  - uid: Biwen.QuickApi.Scheduling.ScheduleTask
+    name: ScheduleTask
+  - uid: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
+    name: ScheduleTaskAttribute
+  - uid: Biwen.QuickApi.Scheduling.ServiceRegistration
+    name: ServiceRegistration
+  - uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+    name: SuccessedEventHandler
+- uid: Biwen.QuickApi.Scheduling.Events
+  name: Biwen.QuickApi.Scheduling.Events
+  items:
+  - uid: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+    name: ScheduleTaskEvent
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent
+    name: TaskFailedEvent
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
+    name: TaskSuccessedEvent
+- uid: Biwen.QuickApi.Scheduling.Stores
+  name: Biwen.QuickApi.Scheduling.Stores
+  items:
+  - uid: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
+    name: IScheduleMetadataStore
+  - uid: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
+    name: ScheduleTaskMetadata
+- uid: Microsoft.Extensions.DependencyInjection
+  name: Microsoft.Extensions.DependencyInjection
+  items:
+  - uid: Microsoft.Extensions.DependencyInjection.HtmlSanitizerOptionsExtensions
+    name: HtmlSanitizerOptionsExtensions
+  - uid: Microsoft.Extensions.DependencyInjection.ServiceRegistration
+    name: ServiceRegistration
+- uid: System
+  name: System
+  items:
+  - uid: System.StringExtensions
+    name: StringExtensions
+memberLayout: SamePage

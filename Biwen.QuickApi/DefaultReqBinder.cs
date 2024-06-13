@@ -264,7 +264,7 @@ namespace Biwen.QuickApi
 
     #region BinderExtensions
 
-    public struct ParseResult
+    internal struct ParseResult
     {
         public bool IsSuccess { get; set; }
 
