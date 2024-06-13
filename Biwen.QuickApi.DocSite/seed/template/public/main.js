@@ -1,4 +1,4 @@
-import { bicep } from './bicep.js'
+﻿import { bicep } from './bicep.js'
 
 export default {
     iconLinks: [
@@ -9,8 +9,8 @@ export default {
         },
         {
             icon: 'twitter',
-            href: 'https://twitter.com/',
-            title: 'Twitter'
+            href: 'https://www.cnblogs.com/vipwan/',
+            title: 'Myblogs'
         }
     ],
     start() {

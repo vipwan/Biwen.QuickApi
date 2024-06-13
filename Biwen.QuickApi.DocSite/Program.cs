@@ -1,4 +1,4 @@
-using Microsoft.Extensions.FileProviders;
+﻿using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,7 +47,7 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 
-
+//静态生成:
 await Docfx.Docset.Build("seed/docfx.json");
 
 app.MapGet("/", () => { return Results.Redirect("/index.html"); }).ExcludeFromDescription();

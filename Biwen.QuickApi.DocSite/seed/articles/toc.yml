@@ -1,6 +1,4 @@
-﻿pdfFileName: seed.pdf
-pdfCoverPage: pdf/cover.html
-items:
+﻿items:
 - href: docfx_getting_started.md
 - name: Engineering Docs
   expanded: true

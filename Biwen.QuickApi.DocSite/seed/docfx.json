@@ -1,68 +1,4 @@
 {
-  "metadata": [
-    {
-      "src": [
-        {
-          "files": [
-            "assembly/bin/**/*.dll",
-            "project/**/*.csproj",
-            "solution/**/*.sln",
-            "csharp/**/*.cs",
-            "vb/**/*.vb"
-          ],
-          "exclude": [
-            "project/Project.Core/**"
-          ],
-          "src": "dotnet"
-        }
-      ],
-      "namespaceLayout": "nested",
-      "enumSortOrder": "declaringOrder",
-      "output": "obj/api"
-    },
-    {
-      "src": [
-        {
-          "files": [
-            "assembly/bin/**/*.dll",
-            "project/**/*.csproj",
-            "solution/**/*.sln",
-            "csharp/**/*.cs",
-            "vb/**/*.vb"
-          ],
-          "exclude": [
-            "project/Project.Core/**"
-          ],
-          "src": "dotnet"
-        }
-      ],
-      "namespaceLayout": "nested",
-      "enumSortOrder": "declaringOrder",
-      "outputFormat": "markdown",
-      "output": "obj/md"
-    },
-    {
-      "src": [
-        {
-          "files": [
-            "assembly/bin/**/*.dll",
-            "project/**/*.csproj",
-            "solution/**/*.sln",
-            "csharp/**/*.cs",
-            "vb/**/*.vb"
-          ],
-          "exclude": [
-            "project/Project.Core/**"
-          ],
-          "src": "dotnet"
-        }
-      ],
-      "namespaceLayout": "nested",
-      "enumSortOrder": "declaringOrder",
-      "outputFormat": "apiPage",
-      "output": "obj/apipage"
-    }
-  ],
   "build": {
     "content": [
       {
@@ -75,13 +11,7 @@
         "src": "obj/md",
         "dest": "md"
       },
-      {
-        "files": [ "**" ],
-        "src": "obj/apipage",
-        "dest": "apipage"
-      },
       { "files": [ "articles/**/*.{md,yml}", "*.md", "toc.yml", "restapi/**" ] },
-      { "files": [ "pdf/**" ] }
     ],
     "resource": [
       {
@@ -92,9 +22,9 @@
     "globalMetadata": {
       "_appTitle": "Biwen.QuickApi 2.0",
       "_appName": "Biwen.QuickApi",
-      "_enableSearch": true,
-      "pdf": true,
-      "pdfTocPage": true
+      "_appFooter": "&copy; MIT 2024 万雅虎",
+
+      "_enableSearch": true
     },
     "output": "../_statics",
     "exportViewModel": true,
