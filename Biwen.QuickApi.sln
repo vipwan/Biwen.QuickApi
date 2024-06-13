@@ -16,6 +16,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C972BD5C-0F5C-4C85-A1FE-500A46DA5B42}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Benchmark", "Benchmark", "{81A129FD-9B47-4F4A-B80C-1785A3DDB6CA}"
@@ -31,13 +33,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biwen.QuickApi.Test", "Biwen.QuickApi.Test\Biwen.QuickApi.Test.csproj", "{A719FF32-F507-439A-87A4-DDE59354B01C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biwen.QuickApi.DocSite", "Biwen.QuickApi.DocSite\Biwen.QuickApi.DocSite.csproj", "{E05260DF-AE1C-4451-83DB-51324113C8AA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{48BA7647-9478-412A-B6A8-8D8A4431D261}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-		.gitattributes = .gitattributes
-		.gitignore = .gitignore
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
