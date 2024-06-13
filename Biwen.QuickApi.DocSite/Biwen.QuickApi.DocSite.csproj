@@ -17,7 +17,6 @@
 		<None Remove="src\**" />
 		<None Remove="_Statics\**" />
 	</ItemGroup>
-
 	<ItemGroup>
 		<Content Include="_statics\placeholder.txt" />
 	</ItemGroup>
@@ -32,7 +31,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Components\" />
 		<Folder Include="_Statics\" />
 	</ItemGroup>
 </Project>
