@@ -1,12 +1,9 @@
-using Biwen.QuickApi.DocSite.Components;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.FluentUI.AspNetCore.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
-builder.Services.AddFluentUIComponents();
 
 builder.Services.AddHttpClient();
 
@@ -43,8 +40,12 @@ app.UseStaticFiles(new StaticFileOptions
     ServeUnknownFileTypes = true
 });
 
-app.MapRazorComponents<App>().AddInteractiveServerRenderMode()
-    .AddAdditionalAssemblies(typeof(Biwen.Blazor.Components._Imports).Assembly);
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "_statics")),
+    ServeUnknownFileTypes = true
+});
+
 
 
 await Docfx.Docset.Build("seed/docfx.json");

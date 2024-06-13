@@ -96,7 +96,7 @@
       "pdf": true,
       "pdfTocPage": true
     },
-    "output": "../wwwroot",
+    "output": "../_statics",
     "exportViewModel": true,
     "template": [ "default", "modern", "template" ],
     "markdownEngineProperties": {
