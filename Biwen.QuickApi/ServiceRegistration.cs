@@ -25,6 +25,7 @@ namespace Biwen.QuickApi
         /// 你也可以自行调用配置更多选项<see cref="HttpJsonServiceExtensions.ConfigureHttpJsonOptions"/>
         /// </summary>
         /// <param name="services"></param>
+        /// <param name="options"></param>
         /// <returns></returns>
         public static IServiceCollection AddBiwenQuickApis(
             this IServiceCollection services,

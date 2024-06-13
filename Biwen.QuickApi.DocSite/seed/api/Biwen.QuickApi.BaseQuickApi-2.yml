@@ -22,15 +22,19 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: BaseQuickApi
+  example: []
   syntax:
     content: 'public abstract class BaseQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new()'
     typeParameters:
     - id: Req
+      description: 请求对象
     - id: Rsp
+      description: 输出对象
     content.vb: Public MustInherit Class BaseQuickApi(Of Req As {BaseRequest(Of Req), New}, Rsp)
   inheritance:
   - System.Object
@@ -62,22 +66,27 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.PublishAsync<T>(T, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Event Publish
   example: []
   syntax:
     content: 'public virtual Task PublishAsync<T>(T @event, CancellationToken cancellationToken = default) where T : class, IEvent'
     parameters:
     - id: event
       type: '{T}'
+      description: Event
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: ''
     typeParameters:
     - id: T
+      description: ''
     return:
       type: System.Threading.Tasks.Task
+      description: ''
     content.vb: Public Overridable Function PublishAsync(Of T As {Class, IEvent})([event] As T, cancellationToken As CancellationToken = Nothing) As Task
   overload: Biwen.QuickApi.BaseQuickApi`2.PublishAsync*
   nameWithType.vb: BaseQuickApi(Of Req, Rsp).PublishAsync(Of T)(T, CancellationToken)
@@ -95,14 +104,17 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.UseReqBinder<T>()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 使用自定义的请求参数绑定器
+  example: []
   syntax:
     content: 'public void UseReqBinder<T>() where T : class, IReqBinder<Req>'
     typeParameters:
     - id: T
+      description: ''
     content.vb: Public Sub UseReqBinder(Of T As {Class, IReqBinder(Of Req)})()
   overload: Biwen.QuickApi.BaseQuickApi`2.UseReqBinder*
   nameWithType.vb: BaseQuickApi(Of Req, Rsp).UseReqBinder(Of T)()
@@ -120,18 +132,21 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.ExecuteAsync(Req)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 执行请求,如需要HttpContext对象，请使用<xref href="Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext" data-throw-if-not-resolved="false"></xref>获取
   example: []
   syntax:
     content: public abstract ValueTask<Rsp> ExecuteAsync(Req request)
     parameters:
     - id: request
       type: '{Req}'
+      description: ''
     return:
       type: System.Threading.Tasks.ValueTask{{Rsp}}
+      description: ''
     content.vb: Public MustOverride Function ExecuteAsync(request As Req) As ValueTask(Of Rsp)
   overload: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync*
   nameWithType.vb: BaseQuickApi(Of Req, Rsp).ExecuteAsync(Req)
@@ -148,18 +163,21 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: HandlerBuilder
   example: []
   syntax:
     content: public virtual RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
     parameters:
     - id: builder
       type: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+      description: ''
     return:
       type: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+      description: ''
     content.vb: Public Overridable Function HandlerBuilder(builder As RouteHandlerBuilder) As RouteHandlerBuilder
   overload: Biwen.QuickApi.BaseQuickApi`2.HandlerBuilder*
   nameWithType.vb: BaseQuickApi(Of Req, Rsp).HandlerBuilder(RouteHandlerBuilder)
@@ -176,18 +194,21 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 请求QuickApi前的操作
   example: []
   syntax:
     content: public virtual Task BeforeAsync(HttpContext context)
     parameters:
     - id: context
       type: Microsoft.AspNetCore.Http.HttpContext
+      description: ''
     return:
       type: System.Threading.Tasks.Task
+      description: ''
     content.vb: Public Overridable Function BeforeAsync(context As HttpContext) As Task
   overload: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync*
   nameWithType.vb: BaseQuickApi(Of Req, Rsp).BeforeAsync(HttpContext)
@@ -204,18 +225,21 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 请求QuickApi后的操作
   example: []
   syntax:
     content: public virtual Task AfterAsync(HttpContext context)
     parameters:
     - id: context
       type: Microsoft.AspNetCore.Http.HttpContext
+      description: ''
     return:
       type: System.Threading.Tasks.Task
+      description: ''
     content.vb: Public Overridable Function AfterAsync(context As HttpContext) As Task
   overload: Biwen.QuickApi.BaseQuickApi`2.AfterAsync*
   nameWithType.vb: BaseQuickApi(Of Req, Rsp).AfterAsync(HttpContext)
@@ -232,7 +256,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.BaseQuickApi()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -255,7 +279,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.IsAntiforgeryEnabled
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -281,7 +305,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.ReqBinder
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -667,6 +691,13 @@ references:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.UseReqBinder
   nameWithType.vb: BaseQuickApi(Of Req, Rsp).UseReqBinder
   fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).UseReqBinder
+- uid: Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
+  commentId: P:Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor.httpcontext
+  name: HttpContext
+  nameWithType: IHttpContextAccessor.HttpContext
+  fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
 - uid: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync*
   commentId: Overload:Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync
   isExternal: true

@@ -15,10 +15,12 @@ items:
   fullName: Biwen.QuickApi.WebApplicationBuilderExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: <xref href="Microsoft.AspNetCore.Builder.IApplicationBuilder" data-throw-if-not-resolved="false"></xref> extension methods.
+  example: []
   syntax:
     content: public static class WebApplicationBuilderExtensions
     content.vb: Public Module WebApplicationBuilderExtensions
@@ -45,21 +47,30 @@ items:
   fullName: Biwen.QuickApi.WebApplicationBuilderExtensions.UseIf(Microsoft.AspNetCore.Builder.WebApplication, bool, System.Action<Microsoft.AspNetCore.Builder.WebApplication>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Executes the specified action if the specified <code class="paramref">condition</code> is <code>true</code> which can be
+
+    used to conditionally add to the request execution pipeline.
+  example: []
   syntax:
     content: public static WebApplication UseIf(this WebApplication application, bool condition, Action<WebApplication> action)
     parameters:
     - id: application
       type: Microsoft.AspNetCore.Builder.WebApplication
+      description: The application builder.
     - id: condition
       type: System.Boolean
+      description: If set to <code>true</code> the action is executed.
     - id: action
       type: System.Action{Microsoft.AspNetCore.Builder.WebApplication}
+      description: The action used to add to the request execution pipeline.
     return:
       type: Microsoft.AspNetCore.Builder.WebApplication
+      description: The same application builder.
     content.vb: Public Shared Function UseIf(application As WebApplication, condition As Boolean, action As Action(Of WebApplication)) As WebApplication
   overload: Biwen.QuickApi.WebApplicationBuilderExtensions.UseIf*
   nameWithType.vb: WebApplicationBuilderExtensions.UseIf(WebApplication, Boolean, Action(Of WebApplication))
@@ -78,29 +89,55 @@ items:
   fullName: Biwen.QuickApi.WebApplicationBuilderExtensions.UseIfElse(Microsoft.AspNetCore.Builder.WebApplication, bool, System.Action<Microsoft.AspNetCore.Builder.WebApplication>, System.Action<Microsoft.AspNetCore.Builder.WebApplication>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Executes the specified <code class="paramref">ifAction</code> if the specified <code class="paramref">condition</code> is
+
+    <code>true</code>, otherwise executes the <code class="paramref">elseAction</code>. This can be used to conditionally add to
+
+    the request execution pipeline.
+  example: []
   syntax:
     content: public static WebApplication UseIfElse(this WebApplication application, bool condition, Action<WebApplication> ifAction, Action<WebApplication> elseAction)
     parameters:
     - id: application
       type: Microsoft.AspNetCore.Builder.WebApplication
+      description: The application builder.
     - id: condition
       type: System.Boolean
+      description: >-
+        If set to <code>true</code> the <code class="paramref">ifAction</code> is executed, otherwise the
+                    <code class="paramref">elseAction</code> is executed.
     - id: ifAction
       type: System.Action{Microsoft.AspNetCore.Builder.WebApplication}
+      description: >-
+        The action used to add to the request execution pipeline if the condition is
+                    <code>true</code>.
     - id: elseAction
       type: System.Action{Microsoft.AspNetCore.Builder.WebApplication}
+      description: >-
+        The action used to add to the request execution pipeline if the condition is
+                    <code>false</code>.
     return:
       type: Microsoft.AspNetCore.Builder.WebApplication
+      description: The same application builder.
     content.vb: Public Shared Function UseIfElse(application As WebApplication, condition As Boolean, ifAction As Action(Of WebApplication), elseAction As Action(Of WebApplication)) As WebApplication
   overload: Biwen.QuickApi.WebApplicationBuilderExtensions.UseIfElse*
   nameWithType.vb: WebApplicationBuilderExtensions.UseIfElse(WebApplication, Boolean, Action(Of WebApplication), Action(Of WebApplication))
   fullName.vb: Biwen.QuickApi.WebApplicationBuilderExtensions.UseIfElse(Microsoft.AspNetCore.Builder.WebApplication, Boolean, System.Action(Of Microsoft.AspNetCore.Builder.WebApplication), System.Action(Of Microsoft.AspNetCore.Builder.WebApplication))
   name.vb: UseIfElse(WebApplication, Boolean, Action(Of WebApplication), Action(Of WebApplication))
 references:
+- uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
+  commentId: T:Microsoft.AspNetCore.Builder.IApplicationBuilder
+  parent: Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.iapplicationbuilder
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: Microsoft.AspNetCore.Builder.IApplicationBuilder
 - uid: Biwen.QuickApi
   commentId: N:Biwen.QuickApi
   isExternal: true
@@ -358,6 +395,43 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
 - uid: System
   commentId: N:System
   isExternal: true
@@ -426,43 +500,6 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.webapplication
   - name: )
-- uid: Microsoft.AspNetCore.Builder
-  commentId: N:Microsoft.AspNetCore.Builder
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft
-  name: Microsoft.AspNetCore.Builder
-  nameWithType: Microsoft.AspNetCore.Builder
-  fullName: Microsoft.AspNetCore.Builder
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft
-  - name: .
-  - uid: Microsoft.AspNetCore
-    name: AspNetCore
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
-  - name: .
-  - uid: Microsoft.AspNetCore.Builder
-    name: Builder
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft
-  - name: .
-  - uid: Microsoft.AspNetCore
-    name: AspNetCore
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
-  - name: .
-  - uid: Microsoft.AspNetCore.Builder
-    name: Builder
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
 - uid: System.Action`1
   commentId: T:System.Action`1
   isExternal: true

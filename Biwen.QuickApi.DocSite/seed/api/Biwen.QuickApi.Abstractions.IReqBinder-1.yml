@@ -14,14 +14,20 @@ items:
   fullName: Biwen.QuickApi.Abstractions.IReqBinder<T>
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/IReqBinder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Abstractions/IReqBinder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions
+  summary: >-
+    IReqBinder绑定器约定接口,当前同时支持QuickApi和MinimalApi
+
+    请注意IReqBinder,会导致Swagger无法生成正确的Schema,请务必重写<xref href="Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)" data-throw-if-not-resolved="false"></xref>
+  example: []
   syntax:
     content: 'public interface IReqBinder<T> where T : class, new()'
     typeParameters:
     - id: T
+      description: ''
     content.vb: Public Interface IReqBinder(Of T As {Class, New})
   nameWithType.vb: IReqBinder(Of T)
   fullName.vb: Biwen.QuickApi.Abstractions.IReqBinder(Of T)
@@ -38,7 +44,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.IReqBinder<T>.BindAsync(Microsoft.AspNetCore.Http.HttpContext, System.Reflection.ParameterInfo)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/IReqBinder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Abstractions/IReqBinder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions
@@ -56,6 +62,35 @@ items:
   nameWithType.vb: IReqBinder(Of T).BindAsync(HttpContext, ParameterInfo)
   fullName.vb: Biwen.QuickApi.Abstractions.IReqBinder(Of T).BindAsync(Microsoft.AspNetCore.Http.HttpContext, System.Reflection.ParameterInfo)
 references:
+- uid: Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  commentId: M:Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi.html#Biwen_QuickApi_BaseQuickApi_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+  name: HandlerBuilder(RouteHandlerBuilder)
+  nameWithType: BaseQuickApi.HandlerBuilder(RouteHandlerBuilder)
+  fullName: Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+    name: HandlerBuilder
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi.html#Biwen_QuickApi_BaseQuickApi_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+  - name: (
+  - uid: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+    name: RouteHandlerBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.routehandlerbuilder
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+    name: HandlerBuilder
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi.html#Biwen_QuickApi_BaseQuickApi_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+  - name: (
+  - uid: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+    name: RouteHandlerBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.routehandlerbuilder
+  - name: )
 - uid: Biwen.QuickApi.Abstractions
   commentId: N:Biwen.QuickApi.Abstractions
   isExternal: true

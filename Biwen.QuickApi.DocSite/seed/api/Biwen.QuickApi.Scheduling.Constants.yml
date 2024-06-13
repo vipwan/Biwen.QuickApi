@@ -22,10 +22,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: Constants for Scheduling Cron
+  example: []
   syntax:
     content: public static class Constants
     content.vb: Public Module Constants
@@ -51,10 +53,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryMinute
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: Cron for every minute
+  example: []
   syntax:
     content: public const string CronEveryMinute = "* * * * *"
     return:
@@ -72,10 +76,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEvery15Minutes
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: Cron for every 15 minutes
+  example: []
   syntax:
     content: public const string CronEvery15Minutes = "0/15 * * * *"
     return:
@@ -93,10 +99,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryHour
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: Cron for every hour
+  example: []
   syntax:
     content: public const string CronEveryHour = "0 * * * *"
     return:
@@ -114,10 +122,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryDay
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: Cron for every day
+  example: []
   syntax:
     content: public const string CronEveryDay = "0 0 * * *"
     return:
@@ -135,10 +145,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryWeek
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: Cron for every week
+  example: []
   syntax:
     content: public const string CronEveryWeek = "0 0 * * 0"
     return:
@@ -156,10 +168,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryMonth
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: Cron for every month
+  example: []
   syntax:
     content: public const string CronEveryMonth = "0 0 1 * *"
     return:
@@ -177,10 +191,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryYear
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: Cron for every year
+  example: []
   syntax:
     content: public const string CronEveryYear = "0 0 1 1 *"
     return:
@@ -199,19 +215,27 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryNMinutes(int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: Cron for every N minutes
+  example: []
   syntax:
     content: public static string CronEveryNMinutes(this int n)
     parameters:
     - id: n
       type: System.Int32
+      description: 1~59
     return:
       type: System.String
+      description: ''
     content.vb: Public Shared Function CronEveryNMinutes(n As Integer) As String
   overload: Biwen.QuickApi.Scheduling.Constants.CronEveryNMinutes*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: ''
   nameWithType.vb: Constants.CronEveryNMinutes(Integer)
   fullName.vb: Biwen.QuickApi.Scheduling.Constants.CronEveryNMinutes(Integer)
   name.vb: CronEveryNMinutes(Integer)
@@ -228,17 +252,21 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryNHours(int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: Cron for every N hours
+  example: []
   syntax:
     content: public static string CronEveryNHours(this int n)
     parameters:
     - id: n
       type: System.Int32
+      description: ''
     return:
       type: System.String
+      description: ''
     content.vb: Public Shared Function CronEveryNHours(n As Integer) As String
   overload: Biwen.QuickApi.Scheduling.Constants.CronEveryNHours*
   nameWithType.vb: Constants.CronEveryNHours(Integer)
@@ -530,6 +558,13 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
 - uid: Biwen.QuickApi.Scheduling.Constants.CronEveryNMinutes*
   commentId: Overload:Biwen.QuickApi.Scheduling.Constants.CronEveryNMinutes
   isExternal: true

@@ -19,7 +19,8 @@
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<AssemblyVersion>2.0.0</AssemblyVersion>
 		<FileVersion>2.0.0</FileVersion>
-		<NoWarn>CA2254</NoWarn>
+		<NoWarn>CA2254;CS1570;CS1587;CS1591;CS1712;CS1734</NoWarn>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>

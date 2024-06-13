@@ -15,10 +15,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
+  summary: 执行失败
+  example: []
   syntax:
     content: 'public sealed class TaskFailedEvent : ScheduleTaskEvent, IEvent'
     content.vb: Public NotInheritable Class TaskFailedEvent Inherits ScheduleTaskEvent Implements IEvent
@@ -50,19 +52,24 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent.TaskFailedEvent(Biwen.QuickApi.Scheduling.IScheduleTask, System.DateTime, System.Exception)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
+  summary: 执行失败
+  example: []
   syntax:
     content: public TaskFailedEvent(IScheduleTask scheduleTask, DateTime eventTime, Exception exception)
     parameters:
     - id: scheduleTask
       type: Biwen.QuickApi.Scheduling.IScheduleTask
+      description: ''
     - id: eventTime
       type: System.DateTime
+      description: ''
     - id: exception
       type: System.Exception
+      description: ''
     content.vb: Public Sub New(scheduleTask As IScheduleTask, eventTime As Date, exception As Exception)
   overload: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent.#ctor*
   nameWithType.vb: TaskFailedEvent.New(IScheduleTask, Date, Exception)
@@ -80,10 +87,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent.Exception
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
+  summary: 异常信息
+  example: []
   syntax:
     content: public Exception Exception { get; }
     parameters: []

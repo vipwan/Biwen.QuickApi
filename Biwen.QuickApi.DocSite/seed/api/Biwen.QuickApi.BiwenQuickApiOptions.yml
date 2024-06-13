@@ -19,7 +19,7 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -48,7 +48,7 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.BiwenQuickApiOptions()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -71,10 +71,12 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.RoutePrefix
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 全局路径前缀
+  example: []
   syntax:
     content: public string RoutePrefix { get; set; }
     parameters: []
@@ -94,10 +96,12 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.EnableAntiForgeryTokens
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 默认:true 是否启动防伪令牌检测,如果启动,会自动注册中间件,请确保客户端请求时带上__RequestVerificationToken参数
+  example: []
   syntax:
     content: public bool EnableAntiForgeryTokens { get; set; }
     parameters: []
@@ -117,10 +121,12 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.EnablePubSub
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 默认:true 是否启动发布订阅
+  example: []
   syntax:
     content: public bool EnablePubSub { get; set; }
     parameters: []
@@ -140,10 +146,12 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.EnableScheduling
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 默认:true 是否启动ScheduleTask
+  example: []
   syntax:
     content: public bool EnableScheduling { get; set; }
     parameters: []
@@ -163,10 +171,12 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.UseQuickApiExceptionResultBuilder
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 使用QuickApi的方式返回规范化异常 默认:false,如果:false 仅返回:500
+  example: []
   syntax:
     content: public bool UseQuickApiExceptionResultBuilder { get; set; }
     parameters: []

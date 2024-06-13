@@ -16,10 +16,12 @@ items:
   fullName: Biwen.QuickApi.Metadata.QuickApiMetadata
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Metadata
+  summary: Metadata for QuickApi
+  example: []
   syntax:
     content: public class QuickApiMetadata
     content.vb: Public Class QuickApiMetadata
@@ -45,10 +47,12 @@ items:
   fullName: Biwen.QuickApi.Metadata.QuickApiMetadata.QuickApiMetadata(System.Type?, Biwen.QuickApi.Attributes.QuickApiAttribute?)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Metadata
+  summary: Metadata for QuickApi
+  example: []
   syntax:
     content: public QuickApiMetadata(Type? quickApiType, QuickApiAttribute? quickApiAttribute = null)
     parameters:
@@ -73,7 +77,7 @@ items:
   fullName: Biwen.QuickApi.Metadata.QuickApiMetadata.QuickApiType
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Metadata
@@ -96,10 +100,12 @@ items:
   fullName: Biwen.QuickApi.Metadata.QuickApiMetadata.QuickApiAttribute
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Metadata
+  summary: 源代码生成器的metadata可能该项为null.
+  example: []
   syntax:
     content: public QuickApiAttribute? QuickApiAttribute { get; set; }
     parameters: []

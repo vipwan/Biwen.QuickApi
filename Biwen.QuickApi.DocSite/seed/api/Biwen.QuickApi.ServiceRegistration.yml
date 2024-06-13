@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -47,19 +47,27 @@ items:
   fullName: Biwen.QuickApi.ServiceRegistration.AddBiwenQuickApis(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Biwen.QuickApi.BiwenQuickApiOptions>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Add Biwen.QuickApis,默认Json序列化JsonSerializerDefaults.Web.
+
+    你也可以自行调用配置更多选项<xref href="Microsoft.Extensions.DependencyInjection.HttpJsonServiceExtensions.ConfigureHttpJsonOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection%2cSystem.Action%7bMicrosoft.AspNetCore.Http.Json.JsonOptions%7d)" data-throw-if-not-resolved="false"></xref>
+  example: []
   syntax:
     content: public static IServiceCollection AddBiwenQuickApis(this IServiceCollection services, Action<BiwenQuickApiOptions>? options = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
     - id: options
       type: System.Action{Biwen.QuickApi.BiwenQuickApiOptions}
+      description: ''
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
     content.vb: Public Shared Function AddBiwenQuickApis(services As IServiceCollection, options As Action(Of BiwenQuickApiOptions) = Nothing) As IServiceCollection
   overload: Biwen.QuickApi.ServiceRegistration.AddBiwenQuickApis*
   nameWithType.vb: ServiceRegistration.AddBiwenQuickApis(IServiceCollection, Action(Of BiwenQuickApiOptions))
@@ -78,19 +86,24 @@ items:
   fullName: Biwen.QuickApi.ServiceRegistration.AddQuickApiGroupRouteBuilder<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 添加对Group的的扩展支持
+  example: []
   syntax:
     content: 'public static IServiceCollection AddQuickApiGroupRouteBuilder<T>(this IServiceCollection services) where T : class, IQuickApiGroupRouteBuilder'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
     typeParameters:
     - id: T
+      description: ''
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
     content.vb: Public Shared Function AddQuickApiGroupRouteBuilder(Of T As {Class, IQuickApiGroupRouteBuilder})(services As IServiceCollection) As IServiceCollection
   overload: Biwen.QuickApi.ServiceRegistration.AddQuickApiGroupRouteBuilder*
   nameWithType.vb: ServiceRegistration.AddQuickApiGroupRouteBuilder(Of T)(IServiceCollection)
@@ -109,19 +122,30 @@ items:
   fullName: Biwen.QuickApi.ServiceRegistration.MapBiwenQuickApis(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Map Biwen.QuickApis
+
+    推荐安装Biwen.QuickApi.SourceGenerator代码生成器调用:app.MapGenQuickApis();
+  example: []
   syntax:
     content: public static (string Group, RouteGroupBuilder RouteGroupBuilder)[] MapBiwenQuickApis(this IEndpointRouteBuilder app)
     parameters:
     - id: app
       type: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+      description: ''
     return:
       type: System.ValueTuple{System.String,Microsoft.AspNetCore.Routing.RouteGroupBuilder}[]
+      description: ''
     content.vb: Public Shared Function MapBiwenQuickApis(app As IEndpointRouteBuilder) As (Group As String, RouteGroupBuilder As RouteGroupBuilder)()
   overload: Biwen.QuickApi.ServiceRegistration.MapBiwenQuickApis*
+  exceptions:
+  - type: Biwen.QuickApi.QuickApiExcetion
+    commentId: T:Biwen.QuickApi.QuickApiExcetion
+    description: ''
 - uid: Biwen.QuickApi.ServiceRegistration.UseBiwenQuickApis(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   commentId: M:Biwen.QuickApi.ServiceRegistration.UseBiwenQuickApis(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   id: UseBiwenQuickApis(Microsoft.AspNetCore.Builder.IApplicationBuilder)
@@ -135,17 +159,21 @@ items:
   fullName: Biwen.QuickApi.ServiceRegistration.UseBiwenQuickApis(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: IApplicationBuilder.UseBiwenQuickApis();
+  example: []
   syntax:
     content: public static IApplicationBuilder UseBiwenQuickApis(this IApplicationBuilder app)
     parameters:
     - id: app
       type: Microsoft.AspNetCore.Builder.IApplicationBuilder
+      description: ''
     return:
       type: Microsoft.AspNetCore.Builder.IApplicationBuilder
+      description: ''
     content.vb: Public Shared Function UseBiwenQuickApis(app As IApplicationBuilder) As IApplicationBuilder
   overload: Biwen.QuickApi.ServiceRegistration.UseBiwenQuickApis*
 references:
@@ -413,6 +441,64 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Microsoft.Extensions.DependencyInjection.HttpJsonServiceExtensions.ConfigureHttpJsonOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.AspNetCore.Http.Json.JsonOptions})
+  commentId: M:Microsoft.Extensions.DependencyInjection.HttpJsonServiceExtensions.ConfigureHttpJsonOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.AspNetCore.Http.Json.JsonOptions})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.httpjsonserviceextensions.configurehttpjsonoptions
+  name: ConfigureHttpJsonOptions(IServiceCollection, Action<JsonOptions>)
+  nameWithType: HttpJsonServiceExtensions.ConfigureHttpJsonOptions(IServiceCollection, Action<JsonOptions>)
+  fullName: Microsoft.Extensions.DependencyInjection.HttpJsonServiceExtensions.ConfigureHttpJsonOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Microsoft.AspNetCore.Http.Json.JsonOptions>)
+  nameWithType.vb: HttpJsonServiceExtensions.ConfigureHttpJsonOptions(IServiceCollection, Action(Of JsonOptions))
+  fullName.vb: Microsoft.Extensions.DependencyInjection.HttpJsonServiceExtensions.ConfigureHttpJsonOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of Microsoft.AspNetCore.Http.Json.JsonOptions))
+  name.vb: ConfigureHttpJsonOptions(IServiceCollection, Action(Of JsonOptions))
+  spec.csharp:
+  - uid: Microsoft.Extensions.DependencyInjection.HttpJsonServiceExtensions.ConfigureHttpJsonOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.AspNetCore.Http.Json.JsonOptions})
+    name: ConfigureHttpJsonOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.httpjsonserviceextensions.configurehttpjsonoptions
+  - name: (
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.AspNetCore.Http.Json.JsonOptions
+    name: JsonOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.json.jsonoptions
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.Extensions.DependencyInjection.HttpJsonServiceExtensions.ConfigureHttpJsonOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.AspNetCore.Http.Json.JsonOptions})
+    name: ConfigureHttpJsonOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.httpjsonserviceextensions.configurehttpjsonoptions
+  - name: (
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Http.Json.JsonOptions
+    name: JsonOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.json.jsonoptions
+  - name: )
+  - name: )
 - uid: Biwen.QuickApi.ServiceRegistration.AddBiwenQuickApis*
   commentId: Overload:Biwen.QuickApi.ServiceRegistration.AddBiwenQuickApis
   isExternal: true
@@ -535,6 +621,13 @@ references:
   name: AddQuickApiGroupRouteBuilder
   nameWithType: ServiceRegistration.AddQuickApiGroupRouteBuilder
   fullName: Biwen.QuickApi.ServiceRegistration.AddQuickApiGroupRouteBuilder
+- uid: Biwen.QuickApi.QuickApiExcetion
+  commentId: T:Biwen.QuickApi.QuickApiExcetion
+  isExternal: true
+  href: Biwen.QuickApi.QuickApiExcetion.html
+  name: QuickApiExcetion
+  nameWithType: QuickApiExcetion
+  fullName: Biwen.QuickApi.QuickApiExcetion
 - uid: Biwen.QuickApi.ServiceRegistration.MapBiwenQuickApis*
   commentId: Overload:Biwen.QuickApi.ServiceRegistration.MapBiwenQuickApis
   isExternal: true

@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -46,23 +46,30 @@ items:
   fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods<T>(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, string, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 扩展MapMethods
+  example: []
   syntax:
     content: 'public static RouteHandlerBuilder MapMethods<T>(this IEndpointRouteBuilder app, string pattern, bool excludeFromDescription = false) where T : class, IQuickEndpoint'
     parameters:
     - id: app
       type: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+      description: ''
     - id: pattern
       type: System.String
+      description: ''
     - id: excludeFromDescription
       type: System.Boolean
+      description: 是否从文档中排除
     typeParameters:
     - id: T
+      description: ''
     return:
       type: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+      description: ''
     content.vb: Public Shared Function MapMethods(Of T As {Class, IQuickEndpoint})(app As IEndpointRouteBuilder, pattern As String, excludeFromDescription As Boolean = False) As RouteHandlerBuilder
   overload: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods*
   nameWithType.vb: IEndpointRouteBuilderExtensions.MapMethods(Of T)(IEndpointRouteBuilder, String, Boolean)
@@ -81,27 +88,36 @@ items:
   fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent<T>(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, string, System.Func<Microsoft.AspNetCore.Http.HttpContext, object>?, Biwen.QuickApi.Verb, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 扩展MapComponent,请注意只负责渲染,Component无法执行内部事件
+  example: []
   syntax:
     content: 'public static RouteHandlerBuilder MapComponent<T>(this IEndpointRouteBuilder app, string pattern, Func<HttpContext, object>? paramsBuilder = null, Verb verb = Verb.GET, bool excludeFromDescription = true) where T : class, IComponent'
     parameters:
     - id: app
       type: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+      description: ''
     - id: pattern
       type: System.String
+      description: 路由地址
     - id: paramsBuilder
       type: System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Object}
+      description: new{}匿名类型
     - id: verb
       type: Biwen.QuickApi.Verb
+      description: 默认:GET
     - id: excludeFromDescription
       type: System.Boolean
+      description: 排除Openapi
     typeParameters:
     - id: T
+      description: ''
     return:
       type: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+      description: ''
     content.vb: Public Shared Function MapComponent(Of T As {Class, IComponent})(app As IEndpointRouteBuilder, pattern As String, paramsBuilder As Func(Of HttpContext, Object) = Nothing, verb As Verb = Verb.GET, excludeFromDescription As Boolean = True) As RouteHandlerBuilder
   overload: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent*
   nameWithType.vb: IEndpointRouteBuilderExtensions.MapComponent(Of T)(IEndpointRouteBuilder, String, Func(Of HttpContext, Object), Verb, Boolean)
@@ -120,19 +136,24 @@ items:
   fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, string, System.Action<Microsoft.AspNetCore.Routing.IEndpointRouteBuilder>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 扩展MapGroup
+  example: []
   syntax:
     content: public static RouteGroupBuilder MapGroup(this IEndpointRouteBuilder endpoints, string prefix, Action<IEndpointRouteBuilder> action)
     parameters:
     - id: endpoints
       type: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+      description: ''
     - id: prefix
       type: System.String
+      description: ''
     - id: action
       type: System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder}
+      description: ''
     return:
       type: Microsoft.AspNetCore.Routing.RouteGroupBuilder
     content.vb: Public Shared Function MapGroup(endpoints As IEndpointRouteBuilder, prefix As String, action As Action(Of IEndpointRouteBuilder)) As RouteGroupBuilder

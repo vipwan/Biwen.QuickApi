@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi
@@ -44,23 +44,30 @@ items:
   fullName: Biwen.QuickApi.OpenApi.ServiceRegistration.AddOpenApi(Microsoft.Extensions.DependencyInjection.IServiceCollection, string, bool, string[]?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi
+  summary: AddOpenApi扩展,支持只包含QuickApiMetadata的Api
+  example: []
   syntax:
     content: public static IServiceCollection AddOpenApi(this IServiceCollection services, string documentName = "v1", bool onlyQuickApi = false, string[]? groups = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
     - id: documentName
       type: System.String
+      description: ''
     - id: onlyQuickApi
       type: System.Boolean
+      description: ''
     - id: groups
       type: System.String[]
+      description: 需要包含的分组.null表示全量
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
     content.vb: Public Shared Function AddOpenApi(services As IServiceCollection, documentName As String = "v1", onlyQuickApi As Boolean = False, groups As String() = Nothing) As IServiceCollection
   overload: Biwen.QuickApi.OpenApi.ServiceRegistration.AddOpenApi*
   nameWithType.vb: ServiceRegistration.AddOpenApi(IServiceCollection, String, Boolean, String())

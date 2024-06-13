@@ -22,7 +22,7 @@ namespace Biwen.QuickApi
         /// </summary>
         internal Type RspType => typeof(Rsp);
 
-        /// <inheritdoc cref="IAntiforgery.IsAntiforgeryEnabled" />
+        /// <inheritdoc cref="IsAntiforgeryEnabled" />
         public virtual bool IsAntiforgeryEnabled => false;
 
         public virtual async Task PublishAsync<T>(T @event, CancellationToken cancellationToken = default) where T : class, IEvent
@@ -97,8 +97,7 @@ namespace Biwen.QuickApi
          */
 
         /// <summary>
-        /// https://github.com/RicoSuter/NSwag/issues/4163
-        /// 请使用<see cref="OpenApiOperationAttribute"/>标记<seealso cref="BaseQuickApi.HandlerBuilder"/>方法!
+        /// HandlerBuilder
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
@@ -154,7 +153,6 @@ namespace Biwen.QuickApi
         /// 请求QuickApi前的操作
         /// </summary>
         /// <param name="context"></param>
-        /// <param name="next"></param>
         /// <returns></returns>
         public virtual Task BeforeAsync(HttpContext context)
         {
@@ -164,7 +162,6 @@ namespace Biwen.QuickApi
         /// 请求QuickApi后的操作
         /// </summary>
         /// <param name="context"></param>
-        /// <param name="next"></param>
         /// <returns></returns>
         public virtual Task AfterAsync(HttpContext context)
         {

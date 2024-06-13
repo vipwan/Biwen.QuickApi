@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Html/IHtmlSanitizerService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Html/IHtmlSanitizerService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Html
@@ -33,17 +33,21 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.Sanitize(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Html/IHtmlSanitizerService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Html/IHtmlSanitizerService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Html
+  summary: 消除HTML中的XSS攻击
+  example: []
   syntax:
     content: string Sanitize(string html)
     parameters:
     - id: html
       type: System.String
+      description: ''
     return:
       type: System.String
+      description: ''
     content.vb: Function Sanitize(html As String) As String
   overload: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService.Sanitize*
   nameWithType.vb: IHtmlSanitizerService.Sanitize(String)

@@ -13,10 +13,12 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.ILocalLock
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
+  summary: ILocalLock
+  example: []
   syntax:
     content: 'public interface ILocalLock : ILock'
     content.vb: Public Interface ILocalLock Inherits ILock

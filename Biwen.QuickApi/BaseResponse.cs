@@ -190,6 +190,9 @@
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="value"></param>
+        /// <param name="serializerOptions"></param>
+        /// <param name="contentType"></param>
+        /// <param name="statusCode"></param>
         /// <returns></returns>
         public static IResultResponse Json<T>(
             T value,

@@ -14,10 +14,12 @@ items:
   fullName: Biwen.QuickApi.Http.IQuickApiExceptionHandler
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiExceptionHandler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Http/IQuickApiExceptionHandler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
+  summary: 全局QuickApi异常处理
+  example: []
   syntax:
     content: public interface IQuickApiExceptionHandler
     content.vb: Public Interface IQuickApiExceptionHandler
@@ -33,7 +35,7 @@ items:
   fullName: Biwen.QuickApi.Http.IQuickApiExceptionHandler.HandleAsync(System.Exception)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiExceptionHandler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Http/IQuickApiExceptionHandler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http

@@ -8,7 +8,6 @@
         /// <summary>
         /// 验证当前的Request
         /// </summary>
-        /// <param name="req"></param>
         /// <returns></returns>
         ValidationResult Validate();
 

@@ -14,10 +14,12 @@ items:
   fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T, T2, T3, T4, T5, T6, T7>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular
+  summary: 前置模块
+  example: []
   syntax:
     content: >-
       [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
@@ -25,6 +27,7 @@ items:
       public class PreModularAttribute<T, T2, T3, T4, T5, T6, T7> : Attribute where T : ModularBase where T2 : ModularBase where T3 : ModularBase where T4 : ModularBase where T5 : ModularBase where T6 : ModularBase where T7 : ModularBase
     typeParameters:
     - id: T
+      description: ''
     - id: T2
     - id: T3
     - id: T4
@@ -106,7 +109,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T, T2, T3, T4, T5, T6, T7>.PreModularAttribute()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular

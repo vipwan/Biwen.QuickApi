@@ -20,7 +20,7 @@ items:
   fullName: System.StringExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -50,10 +50,12 @@ items:
   fullName: System.StringExtensions.IsLetter(char)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
+  summary: 判定是否为字母a-z,A-Z
+  example: []
   syntax:
     content: public static bool IsLetter(this char c)
     parameters:
@@ -79,17 +81,21 @@ items:
   fullName: System.StringExtensions.IsSpace(char)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
+  summary: 判定是否为空格
+  example: []
   syntax:
     content: public static bool IsSpace(this char c)
     parameters:
     - id: c
       type: System.Char
+      description: ''
     return:
       type: System.Boolean
+      description: ''
     content.vb: Public Shared Function IsSpace(c As Char) As Boolean
   overload: System.StringExtensions.IsSpace*
   nameWithType.vb: StringExtensions.IsSpace(Char)
@@ -108,19 +114,24 @@ items:
   fullName: System.StringExtensions.RemoveTags(string, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
+  summary: 移除字符串中的html标签
+  example: []
   syntax:
     content: public static string RemoveTags(this string html, bool htmlDecode = false)
     parameters:
     - id: html
       type: System.String
+      description: ''
     - id: htmlDecode
       type: System.Boolean
+      description: ''
     return:
       type: System.String
+      description: ''
     content.vb: Public Shared Function RemoveTags(html As String, htmlDecode As Boolean = False) As String
   overload: System.StringExtensions.RemoveTags*
   nameWithType.vb: StringExtensions.RemoveTags(String, Boolean)
@@ -139,10 +150,12 @@ items:
   fullName: System.StringExtensions.ToPascalCase(string, char)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
+  summary: 将字符串转换为帕斯卡命名法
+  example: []
   syntax:
     content: public static string ToPascalCase(this string attribute, char upperAfterDelimiter = ' ')
     parameters:
@@ -170,17 +183,21 @@ items:
   fullName: System.StringExtensions.ToCamalCase(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
+  summary: 将字符串中的空格转换为驼峰
+  example: []
   syntax:
     content: public static string ToCamalCase(this string attribute)
     parameters:
     - id: attribute
       type: System.String
+      description: ''
     return:
       type: System.String
+      description: ''
     content.vb: Public Shared Function ToCamalCase(attribute As String) As String
   overload: System.StringExtensions.ToCamalCase*
   nameWithType.vb: StringExtensions.ToCamalCase(String)
@@ -199,19 +216,24 @@ items:
   fullName: System.StringExtensions.ReplaceAll(string, System.Collections.Generic.IDictionary<string, string>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
+  summary: 字符串替换
+  example: []
   syntax:
     content: public static string ReplaceAll(this string original, IDictionary<string, string> replacements)
     parameters:
     - id: original
       type: System.String
+      description: ''
     - id: replacements
       type: System.Collections.Generic.IDictionary{System.String,System.String}
+      description: ''
     return:
       type: System.String
+      description: ''
     content.vb: Public Shared Function ReplaceAll(original As String, replacements As IDictionary(Of String, String)) As String
   overload: System.StringExtensions.ReplaceAll*
   nameWithType.vb: StringExtensions.ReplaceAll(String, IDictionary(Of String, String))
@@ -230,10 +252,12 @@ items:
   fullName: System.StringExtensions.IsJson(string, System.Text.Json.JsonDocumentOptions)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
+  summary: 判定是否为json字符串
+  example: []
   syntax:
     content: public static bool IsJson(this string json, JsonDocumentOptions jsonDocumentOptions = default)
     parameters:

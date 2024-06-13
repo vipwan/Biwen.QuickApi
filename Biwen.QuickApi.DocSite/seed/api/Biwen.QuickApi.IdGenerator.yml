@@ -14,10 +14,12 @@ items:
   fullName: Biwen.QuickApi.IdGenerator
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/IdGenerator.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Abstractions/IdGenerator.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: IdGenerator
+  example: []
   syntax:
     content: public static class IdGenerator
     content.vb: Public Module IdGenerator
@@ -43,14 +45,17 @@ items:
   fullName: Biwen.QuickApi.IdGenerator.GenerateId()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/IdGenerator.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Abstractions/IdGenerator.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 生成26位长度的随机Id
+  example: []
   syntax:
     content: public static string GenerateId()
     return:
       type: System.String
+      description: ''
     content.vb: Public Shared Function GenerateId() As String
   overload: Biwen.QuickApi.IdGenerator.GenerateId*
 references:

@@ -19,6 +19,7 @@ namespace Biwen.QuickApi
         /// 如果需要表单绑定,以及IFormFile绑定，请务必重写此方法
         /// </summary>
         /// <param name="context"></param>
+        /// <param name="parameter"></param>
         /// <returns></returns>
         public static async ValueTask<T> BindAsync(HttpContext context, ParameterInfo parameter = null!)
         {

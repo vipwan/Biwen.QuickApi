@@ -15,10 +15,15 @@ items:
   fullName: Biwen.QuickApi.Attributes.AliasAsAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/AliasAsAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/AliasAsAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
+  summary: >-
+    针对属性的别名,
+
+    一般用于Rsp,如果需要用于Req,请自定义Binder或者修改传输对象属性为Alias
+  example: []
   syntax:
     content: >-
       [Obsolete("不再提供别名支持")]
@@ -108,10 +113,15 @@ items:
   fullName: Biwen.QuickApi.Attributes.AliasAsAttribute.AliasAsAttribute(string)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/AliasAsAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/AliasAsAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
+  summary: >-
+    针对属性的别名,
+
+    一般用于Rsp,如果需要用于Req,请自定义Binder或者修改传输对象属性为Alias
+  example: []
   syntax:
     content: public AliasAsAttribute(string name)
     parameters:
@@ -134,7 +144,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.AliasAsAttribute.Name
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/AliasAsAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/AliasAsAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes

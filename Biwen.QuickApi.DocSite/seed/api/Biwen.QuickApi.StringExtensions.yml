@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.StringExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Html/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Html/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -44,19 +44,27 @@ items:
   fullName: Biwen.QuickApi.StringExtensions.SanitizeHtml(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Html/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Html/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: xss过滤
+  example: []
   syntax:
     content: public static string SanitizeHtml(this string html)
     parameters:
     - id: html
       type: System.String
+      description: ''
     return:
       type: System.String
+      description: ''
     content.vb: Public Shared Function SanitizeHtml(html As String) As String
   overload: Biwen.QuickApi.StringExtensions.SanitizeHtml*
+  exceptions:
+  - type: Biwen.QuickApi.QuickApiExcetion
+    commentId: T:Biwen.QuickApi.QuickApiExcetion
+    description: 必须启用UseBiwenQuickApis()
   nameWithType.vb: StringExtensions.SanitizeHtml(String)
   fullName.vb: Biwen.QuickApi.StringExtensions.SanitizeHtml(String)
   name.vb: SanitizeHtml(String)
@@ -325,6 +333,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Biwen.QuickApi.QuickApiExcetion
+  commentId: T:Biwen.QuickApi.QuickApiExcetion
+  isExternal: true
+  href: Biwen.QuickApi.QuickApiExcetion.html
+  name: QuickApiExcetion
+  nameWithType: QuickApiExcetion
+  fullName: Biwen.QuickApi.QuickApiExcetion
 - uid: Biwen.QuickApi.StringExtensions.SanitizeHtml*
   commentId: Overload:Biwen.QuickApi.StringExtensions.SanitizeHtml
   isExternal: true

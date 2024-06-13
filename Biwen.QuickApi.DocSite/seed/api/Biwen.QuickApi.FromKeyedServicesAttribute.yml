@@ -15,10 +15,12 @@ items:
   fullName: Biwen.QuickApi.FromKeyedServicesAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/FromKeyedServicesAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/FromKeyedServicesAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 标记绑定属性为FromKeyedServices
+  example: []
   syntax:
     content: >-
       [Obsolete("不再提供,如需要注入服务,请直接在构造器中注入即可!")]
@@ -108,7 +110,7 @@ items:
   fullName: Biwen.QuickApi.FromKeyedServicesAttribute.FromKeyedServicesAttribute(string)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/FromKeyedServicesAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/FromKeyedServicesAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -134,7 +136,7 @@ items:
   fullName: Biwen.QuickApi.FromKeyedServicesAttribute.Key
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/FromKeyedServicesAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/FromKeyedServicesAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

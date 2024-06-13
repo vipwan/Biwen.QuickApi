@@ -18,10 +18,12 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
+  summary: LocalLock
+  example: []
   syntax:
     content: 'public sealed class LocalLock : ILocalLock, ILock, IDisposable'
     content.vb: Public NotInheritable Class LocalLock Implements ILocalLock, ILock, IDisposable
@@ -50,7 +52,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock.LocalLock(Microsoft.Extensions.Logging.ILogger<Biwen.QuickApi.Infrastructure.Locking.LocalLock>)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
@@ -76,10 +78,14 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock.AcquireLockAsync(string, System.TimeSpan?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
+  summary: >-
+    Waits indefinitely until acquiring a named lock with a given expiration for the current tenant.
+
+    After 'expiration' the lock is auto released, a null value is equivalent to 'TimeSpan.MaxValue'.
   example: []
   syntax:
     content: public Task<ILocker> AcquireLockAsync(string key, TimeSpan? expiration = null)
@@ -109,10 +115,14 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock.TryAcquireLockAsync(string, System.TimeSpan, System.TimeSpan?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
+  summary: >-
+    Tries to acquire a named lock in a given timeout with a given expiration for the current tenant.
+
+    After 'expiration' the lock is auto released, a null value is equivalent to 'TimeSpan.MaxValue'.
   example: []
   syntax:
     content: public Task<(ILocker locker, bool locked)> TryAcquireLockAsync(string key, TimeSpan timeout, TimeSpan? expiration = null)
@@ -144,10 +154,11 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock.IsLockAcquiredAsync(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
+  summary: Whether a named lock is already acquired.
   example: []
   syntax:
     content: public Task<bool> IsLockAcquiredAsync(string key)
@@ -175,7 +186,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock.Dispose()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking

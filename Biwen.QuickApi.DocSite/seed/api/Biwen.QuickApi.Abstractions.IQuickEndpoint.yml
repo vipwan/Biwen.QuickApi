@@ -15,10 +15,12 @@ items:
   fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions
+  summary: 对Minimal Api的扩展
+  example: []
   syntax:
     content: public interface IQuickEndpoint
     content.vb: Public Interface IQuickEndpoint
@@ -34,15 +36,18 @@ items:
   fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint.Verbs
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions
+  summary: '请求方式 支持多个,如: Verb.GET | Verb.POST,默认:Verb.GET'
+  example: []
   syntax:
     content: public static abstract Verb Verbs { get; }
     parameters: []
     return:
       type: Biwen.QuickApi.Verb
+      description: ''
     content.vb: Public Shared MustInherit ReadOnly Property Verbs As Verb
   overload: Biwen.QuickApi.Abstractions.IQuickEndpoint.Verbs*
 - uid: Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler
@@ -57,15 +62,18 @@ items:
   fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions
+  summary: MinimalApi执行的Handler
+  example: []
   syntax:
     content: public static abstract Delegate Handler { get; }
     parameters: []
     return:
       type: System.Delegate
+      description: ''
     content.vb: Public Shared MustInherit ReadOnly Property Handler As [Delegate]
   overload: Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler*
 references:

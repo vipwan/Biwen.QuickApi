@@ -29,10 +29,15 @@ items:
   fullName: Biwen.QuickApi.IResultResponse
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    IResult输出.
+
+    针对IResultResponse 请自行重写BaseQuickApi.HandlerBuilder方法的OpenApi实现
+  example: []
   syntax:
     content: >-
       [Obsolete("请直接使用IResult返回")]
@@ -69,10 +74,15 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.IResultResponse(Microsoft.AspNetCore.Http.IResult)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    IResult输出.
+
+    针对IResultResponse 请自行重写BaseQuickApi.HandlerBuilder方法的OpenApi实现
+  example: []
   syntax:
     content: public IResultResponse(IResult result)
     parameters:
@@ -95,10 +105,12 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.OK(object?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 直接返回OK
+  example: []
   syntax:
     content: public static IResultResponse OK(object? value = null)
     parameters:
@@ -123,10 +135,12 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.BadRequest(object?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: BadRequest
+  example: []
   syntax:
     content: public static IResultResponse BadRequest(object? error = null)
     parameters:
@@ -151,23 +165,30 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Stream(System.IO.Stream, string?, string?, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Stream
+  example: []
   syntax:
     content: public static IResultResponse Stream(Stream stream, string? contentType = null, string? fileDownloadName = null, bool enableRangeProcessing = false)
     parameters:
     - id: stream
       type: System.IO.Stream
+      description: ''
     - id: contentType
       type: System.String
+      description: ''
     - id: fileDownloadName
       type: System.String
+      description: ''
     - id: enableRangeProcessing
       type: System.Boolean
+      description: ''
     return:
       type: Biwen.QuickApi.IResultResponse
+      description: ''
     content.vb: Public Shared Function Stream(stream As Stream, contentType As String = Nothing, fileDownloadName As String = Nothing, enableRangeProcessing As Boolean = False) As IResultResponse
   overload: Biwen.QuickApi.IResultResponse.Stream*
   nameWithType.vb: IResultResponse.Stream(Stream, String, String, Boolean)
@@ -185,23 +206,30 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.File(string, string?, string?, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: File
+  example: []
   syntax:
     content: public static IResultResponse File(string path, string? contentType = null, string? fileDownloadName = null, bool enableRangeProcessing = false)
     parameters:
     - id: path
       type: System.String
+      description: ''
     - id: contentType
       type: System.String
+      description: ''
     - id: fileDownloadName
       type: System.String
+      description: ''
     - id: enableRangeProcessing
       type: System.Boolean
+      description: ''
     return:
       type: Biwen.QuickApi.IResultResponse
+      description: ''
     content.vb: Public Shared Function File(path As String, contentType As String = Nothing, fileDownloadName As String = Nothing, enableRangeProcessing As Boolean = False) As IResultResponse
   overload: Biwen.QuickApi.IResultResponse.File*
   nameWithType.vb: IResultResponse.File(String, String, String, Boolean)
@@ -219,23 +247,30 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Content(string?, string?, System.Text.Encoding?, int?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Content
+  example: []
   syntax:
     content: public static IResultResponse Content(string? content, string? contentType = null, Encoding? encoding = null, int? statusCode = null)
     parameters:
     - id: content
       type: System.String
+      description: ''
     - id: contentType
       type: System.String
+      description: ''
     - id: encoding
       type: System.Text.Encoding
+      description: ''
     - id: statusCode
       type: System.Nullable{System.Int32}
+      description: ''
     return:
       type: Biwen.QuickApi.IResultResponse
+      description: ''
     content.vb: Public Shared Function Content(content As String, contentType As String = Nothing, encoding As Encoding = Nothing, statusCode As Integer? = Nothing) As IResultResponse
   overload: Biwen.QuickApi.IResultResponse.Content*
   nameWithType.vb: IResultResponse.Content(String, String, Encoding, Integer?)
@@ -253,17 +288,21 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Problem(Microsoft.AspNetCore.Mvc.ProblemDetails)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Problem
+  example: []
   syntax:
     content: public static IResultResponse Problem(ProblemDetails problemDetails)
     parameters:
     - id: problemDetails
       type: Microsoft.AspNetCore.Mvc.ProblemDetails
+      description: ''
     return:
       type: Biwen.QuickApi.IResultResponse
+      description: ''
     content.vb: Public Shared Function Problem(problemDetails As ProblemDetails) As IResultResponse
   overload: Biwen.QuickApi.IResultResponse.Problem*
 - uid: Biwen.QuickApi.IResultResponse.Problem(System.String,System.String,System.Nullable{System.Int32},System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
@@ -278,27 +317,36 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Problem(string?, string?, int?, string?, string?, System.Collections.Generic.IDictionary<string, object?>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Problem
+  example: []
   syntax:
     content: public static IResultResponse Problem(string? detail = null, string? instance = null, int? statusCode = null, string? title = null, string? type = null, IDictionary<string, object?>? extensions = null)
     parameters:
     - id: detail
       type: System.String
+      description: ''
     - id: instance
       type: System.String
+      description: ''
     - id: statusCode
       type: System.Nullable{System.Int32}
+      description: ''
     - id: title
       type: System.String
+      description: ''
     - id: type
       type: System.String
+      description: ''
     - id: extensions
       type: System.Collections.Generic.IDictionary{System.String,System.Object}
+      description: ''
     return:
       type: Biwen.QuickApi.IResultResponse
+      description: ''
     content.vb: Public Shared Function Problem(detail As String = Nothing, instance As String = Nothing, statusCode As Integer? = Nothing, title As String = Nothing, type As String = Nothing, extensions As IDictionary(Of String, Object) = Nothing) As IResultResponse
   overload: Biwen.QuickApi.IResultResponse.Problem*
   nameWithType.vb: IResultResponse.Problem(String, String, Integer?, String, String, IDictionary(Of String, Object))
@@ -316,23 +364,30 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Text(string, string?, System.Text.Encoding?, int?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Text
+  example: []
   syntax:
     content: public static IResultResponse Text(string text, string? contentType = null, Encoding? encoding = null, int? statusCode = null)
     parameters:
     - id: text
       type: System.String
+      description: ''
     - id: contentType
       type: System.String
+      description: ''
     - id: encoding
       type: System.Text.Encoding
+      description: ''
     - id: statusCode
       type: System.Nullable{System.Int32}
+      description: ''
     return:
       type: Biwen.QuickApi.IResultResponse
+      description: ''
     content.vb: Public Shared Function Text(text As String, contentType As String = Nothing, encoding As Encoding = Nothing, statusCode As Integer? = Nothing) As IResultResponse
   overload: Biwen.QuickApi.IResultResponse.Text*
   nameWithType.vb: IResultResponse.Text(String, String, Encoding, Integer?)
@@ -350,21 +405,27 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Redirect(string, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Redirect
+  example: []
   syntax:
     content: public static IResultResponse Redirect(string url, bool permanent = false, bool preserveMethod = false)
     parameters:
     - id: url
       type: System.String
+      description: ''
     - id: permanent
       type: System.Boolean
+      description: ''
     - id: preserveMethod
       type: System.Boolean
+      description: ''
     return:
       type: Biwen.QuickApi.IResultResponse
+      description: ''
     content.vb: Public Shared Function Redirect(url As String, permanent As Boolean = False, preserveMethod As Boolean = False) As IResultResponse
   overload: Biwen.QuickApi.IResultResponse.Redirect*
   nameWithType.vb: IResultResponse.Redirect(String, Boolean, Boolean)
@@ -382,25 +443,33 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Json<T>(T, System.Text.Json.JsonSerializerOptions?, string?, int?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Json
+  example: []
   syntax:
     content: public static IResultResponse Json<T>(T value, JsonSerializerOptions? serializerOptions = null, string? contentType = null, int? statusCode = null)
     parameters:
     - id: value
       type: '{T}'
+      description: ''
     - id: serializerOptions
       type: System.Text.Json.JsonSerializerOptions
+      description: ''
     - id: contentType
       type: System.String
+      description: ''
     - id: statusCode
       type: System.Nullable{System.Int32}
+      description: ''
     typeParameters:
     - id: T
+      description: ''
     return:
       type: Biwen.QuickApi.IResultResponse
+      description: ''
     content.vb: Public Shared Function Json(Of T)(value As T, serializerOptions As JsonSerializerOptions = Nothing, contentType As String = Nothing, statusCode As Integer? = Nothing) As IResultResponse
   overload: Biwen.QuickApi.IResultResponse.Json*
   nameWithType.vb: IResultResponse.Json(Of T)(T, JsonSerializerOptions, String, Integer?)
@@ -418,17 +487,21 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.StatusCode(int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: StatusCode
+  example: []
   syntax:
     content: public static IResultResponse StatusCode(int statusCode)
     parameters:
     - id: statusCode
       type: System.Int32
+      description: ''
     return:
       type: Biwen.QuickApi.IResultResponse
+      description: ''
     content.vb: Public Shared Function StatusCode(statusCode As Integer) As IResultResponse
   overload: Biwen.QuickApi.IResultResponse.StatusCode*
   nameWithType.vb: IResultResponse.StatusCode(Integer)
@@ -446,7 +519,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Result
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -469,10 +542,12 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Empty
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Empty
+  example: []
   syntax:
     content: public static IResultResponse Empty { get; }
     parameters: []
@@ -492,10 +567,12 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.NotFound
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: NotFound
+  example: []
   syntax:
     content: public static IResultResponse NotFound { get; }
     parameters: []
@@ -515,10 +592,12 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Unauthorized
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Unauthorized
+  example: []
   syntax:
     content: public static IResultResponse Unauthorized { get; }
     parameters: []

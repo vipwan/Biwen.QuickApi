@@ -79,7 +79,7 @@ namespace Biwen.QuickApi
         /// <typeparam name="T"></typeparam>
         /// <param name="app"></param>
         /// <param name="pattern">路由地址</param>
-        /// <param name="parameters">new{}匿名类型</param>
+        /// <param name="paramsBuilder">new{}匿名类型</param>
         /// <param name="verb">默认:GET</param>
         /// <param name="excludeFromDescription">排除Openapi</param>
         /// <returns></returns>

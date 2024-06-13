@@ -3,7 +3,7 @@
     using Microsoft.AspNetCore.Builder;
 
     /// <summary>
-    /// 用于标记QuickApi的描述信息,等效<see cref="OpenApiOperationAttribute"/>标注<seealso cref="BaseQuickApi.HandlerBuilder(RouteHandlerBuilder)"/>
+    /// 用于标记QuickApi的描述信息,标注<seealso cref="BaseQuickApi.HandlerBuilder(RouteHandlerBuilder)"/>
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
     public class OpenApiMetadataAttribute(string? summary, string? description) : Attribute

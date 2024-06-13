@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.ILock
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
@@ -35,10 +35,15 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(string, System.TimeSpan?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
+  summary: >-
+    Waits indefinitely until acquiring a named lock with a given expiration for the current tenant.
+
+    After 'expiration' the lock is auto released, a null value is equivalent to 'TimeSpan.MaxValue'.
+  example: []
   syntax:
     content: Task<ILocker> AcquireLockAsync(string key, TimeSpan? expiration = null)
     parameters:
@@ -65,10 +70,15 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(string, System.TimeSpan, System.TimeSpan?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
+  summary: >-
+    Tries to acquire a named lock in a given timeout with a given expiration for the current tenant.
+
+    After 'expiration' the lock is auto released, a null value is equivalent to 'TimeSpan.MaxValue'.
+  example: []
   syntax:
     content: Task<(ILocker locker, bool locked)> TryAcquireLockAsync(string key, TimeSpan timeout, TimeSpan? expiration = null)
     parameters:
@@ -97,10 +107,12 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
+  summary: Whether a named lock is already acquired.
+  example: []
   syntax:
     content: Task<bool> IsLockAcquiredAsync(string key)
     parameters:

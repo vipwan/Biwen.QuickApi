@@ -15,10 +15,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: 订阅Schedule完成通知
+  example: []
   syntax:
     content: >-
       [EventSubscriber(IsAsync = true)]
@@ -60,15 +62,18 @@ items:
   fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler.SuccessedEventHandler(Microsoft.Extensions.Logging.ILogger<Biwen.QuickApi.Scheduling.SuccessedEventHandler>)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: 订阅Schedule完成通知
+  example: []
   syntax:
     content: public SuccessedEventHandler(ILogger<SuccessedEventHandler> logger)
     parameters:
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler}
+      description: ''
     content.vb: Public Sub New(logger As ILogger(Of SuccessedEventHandler))
   overload: Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor*
   nameWithType.vb: SuccessedEventHandler.New(ILogger(Of SuccessedEventHandler))
@@ -86,7 +91,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling

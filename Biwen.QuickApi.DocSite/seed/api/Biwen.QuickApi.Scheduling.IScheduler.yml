@@ -14,10 +14,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.IScheduler
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/IScheduler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/IScheduler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: 调度器
+  example: []
   syntax:
     content: public interface IScheduler
     content.vb: Public Interface IScheduler
@@ -33,19 +35,24 @@ items:
   fullName: Biwen.QuickApi.Scheduling.IScheduler.CanRun(Biwen.QuickApi.Scheduling.ScheduleTaskAttribute, System.DateTime)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/IScheduler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/IScheduler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
+  summary: 判断当前的任务是否可以执行
+  example: []
   syntax:
     content: bool CanRun(ScheduleTaskAttribute scheduleMetadata, DateTime referenceTime)
     parameters:
     - id: scheduleMetadata
       type: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
+      description: ''
     - id: referenceTime
       type: System.DateTime
+      description: ''
     return:
       type: System.Boolean
+      description: ''
     content.vb: Function CanRun(scheduleMetadata As ScheduleTaskAttribute, referenceTime As Date) As Boolean
   overload: Biwen.QuickApi.Scheduling.IScheduler.CanRun*
   nameWithType.vb: IScheduler.CanRun(ScheduleTaskAttribute, Date)

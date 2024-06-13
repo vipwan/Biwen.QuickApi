@@ -16,10 +16,12 @@ items:
   fullName: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
+  summary: Group HanderBuilder
+  example: []
   syntax:
     content: public interface IQuickApiGroupRouteBuilder
     content.vb: Public Interface IQuickApiGroupRouteBuilder
@@ -35,7 +37,7 @@ items:
   fullName: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Builder(Microsoft.AspNetCore.Routing.RouteGroupBuilder)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
@@ -60,10 +62,12 @@ items:
   fullName: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Group
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
+  summary: 分组
+  example: []
   syntax:
     content: string Group { get; }
     parameters: []
@@ -83,10 +87,12 @@ items:
   fullName: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.Order
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Http/IQuickApiGroupRouteBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
+  summary: 执行顺序
+  example: []
   syntax:
     content: int Order { get; }
     parameters: []

@@ -15,10 +15,12 @@ items:
   fullName: Biwen.QuickApi.Http.QuickApiMiddleware
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/QuickApiMiddleware.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Http/QuickApiMiddleware.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
+  summary: QuickApiMiddleware
+  example: []
   syntax:
     content: public sealed class QuickApiMiddleware
     content.vb: Public NotInheritable Class QuickApiMiddleware
@@ -43,7 +45,7 @@ items:
   fullName: Biwen.QuickApi.Http.QuickApiMiddleware.QuickApiMiddleware(Microsoft.AspNetCore.Http.RequestDelegate)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/QuickApiMiddleware.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Http/QuickApiMiddleware.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
@@ -69,7 +71,7 @@ items:
   fullName: Biwen.QuickApi.Http.QuickApiMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Http/QuickApiMiddleware.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Http/QuickApiMiddleware.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http

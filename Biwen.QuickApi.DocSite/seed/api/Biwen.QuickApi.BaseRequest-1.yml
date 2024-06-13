@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -53,19 +53,24 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>.RuleFor<TProperty>(System.Linq.Expressions.Expression<System.Func<T, TProperty>>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 添加验证规则
+  example: []
   syntax:
     content: public IRuleBuilderInitial<T, TProperty> RuleFor<TProperty>(Expression<Func<T, TProperty>> expression)
     parameters:
     - id: expression
       type: System.Linq.Expressions.Expression{System.Func{{T},{TProperty}}}
+      description: ''
     typeParameters:
     - id: TProperty
+      description: ''
     return:
       type: FluentValidation.IRuleBuilderInitial{{T},{TProperty}}
+      description: ''
     content.vb: Public Function RuleFor(Of TProperty)(expression As Expression(Of Func(Of T, TProperty))) As IRuleBuilderInitial(Of T, TProperty)
   overload: Biwen.QuickApi.BaseRequest`1.RuleFor*
   nameWithType.vb: BaseRequest(Of T).RuleFor(Of TProperty)(Expression(Of Func(Of T, TProperty)))
@@ -83,15 +88,17 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>.Validate()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 验证当前的Request
   example: []
   syntax:
     content: public ValidationResult Validate()
     return:
       type: FluentValidation.Results.ValidationResult
+      description: ''
     content.vb: Public Function Validate() As ValidationResult
   overload: Biwen.QuickApi.BaseRequest`1.Validate*
   nameWithType.vb: BaseRequest(Of T).Validate()
@@ -108,7 +115,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>.BaseRequest()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

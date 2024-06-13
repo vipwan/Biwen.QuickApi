@@ -16,10 +16,12 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.StartupTask
+  summary: 启动任务,系统启动后只执行一次的任务
+  example: []
   syntax:
     content: public interface IStartupTask
     content.vb: Public Interface IStartupTask
@@ -35,17 +37,21 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.ExecuteAsync(System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.StartupTask
+  summary: 启动系统后执行的任务
+  example: []
   syntax:
     content: Task ExecuteAsync(CancellationToken ct)
     parameters:
     - id: ct
       type: System.Threading.CancellationToken
+      description: ''
     return:
       type: System.Threading.Tasks.Task
+      description: ''
     content.vb: Function ExecuteAsync(ct As CancellationToken) As Task
   overload: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.ExecuteAsync*
 - uid: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Order
@@ -60,10 +66,12 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Order
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.StartupTask
+  summary: 执行顺序
+  example: []
   syntax:
     content: int Order { get; }
     parameters: []
@@ -83,10 +91,12 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask.Delay
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.StartupTask
+  summary: 启动延迟 默认为null,不延迟
+  example: []
   syntax:
     content: TimeSpan? Delay { get; }
     parameters: []

@@ -17,10 +17,12 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriberAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
+  summary: 事件订阅的Metadata
+  example: []
   syntax:
     content: >-
       [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
@@ -101,7 +103,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriberAttribute.EventSubscriberAttribute()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
@@ -124,10 +126,12 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriberAttribute.ThrowIfError
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
+  summary: 如果发生错误是否抛出异常,将阻塞后续订阅 默认:false
+  example: []
   syntax:
     content: public bool ThrowIfError { get; set; }
     parameters: []
@@ -147,10 +151,12 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriberAttribute.Order
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
+  summary: 执行排序 默认:0
+  example: []
   syntax:
     content: public int Order { get; set; }
     parameters: []
@@ -170,10 +176,12 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriberAttribute.IsAsync
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
+  summary: 是否异步执行(非阻塞模式),默认:false
+  example: []
   syntax:
     content: public bool IsAsync { get; set; }
     parameters: []

@@ -23,10 +23,12 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: <xref href="Microsoft.Extensions.DependencyInjection.IServiceCollection" data-throw-if-not-resolved="false"></xref> extension methods.
+  example: []
   syntax:
     content: public static class ServiceCollectionExtensions
     content.vb: Public Module ServiceCollectionExtensions
@@ -53,21 +55,30 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.AddIf(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool, System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Executes the specified action if the specified <code class="paramref">condition</code> is <code>true</code> which can be
+
+    used to conditionally configure the MVC services.
+  example: []
   syntax:
     content: public static IServiceCollection AddIf(this IServiceCollection services, bool condition, Action<IServiceCollection> action)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The services collection.
     - id: condition
       type: System.Boolean
+      description: If set to <code>true</code> the action is executed.
     - id: action
       type: System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection}
+      description: The action used to configure the MVC services.
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The same services collection.
     content.vb: Public Shared Function AddIf(services As IServiceCollection, condition As Boolean, action As Action(Of IServiceCollection)) As IServiceCollection
   overload: Biwen.QuickApi.ServiceCollectionExtensions.AddIf*
   nameWithType.vb: ServiceCollectionExtensions.AddIf(IServiceCollection, Boolean, Action(Of IServiceCollection))
@@ -86,23 +97,37 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool, System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>, System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Executes the specified <code class="paramref">ifAction</code> if the specified <code class="paramref">condition</code> is
+
+    <code>true</code>, otherwise executes the <code class="paramref">elseAction</code>. This can be used to conditionally
+
+    configure the MVC services.
+  example: []
   syntax:
     content: public static IServiceCollection AddIfElse(this IServiceCollection services, bool condition, Action<IServiceCollection> ifAction, Action<IServiceCollection> elseAction)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The services collection.
     - id: condition
       type: System.Boolean
+      description: >-
+        If set to <code>true</code> the <code class="paramref">ifAction</code> is executed, otherwise the
+                    <code class="paramref">elseAction</code> is executed.
     - id: ifAction
       type: System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection}
+      description: The action used to configure the MVC services if the condition is <code>true</code>.
     - id: elseAction
       type: System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection}
+      description: The action used to configure the MVC services if the condition is <code>false</code>.
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The same services collection.
     content.vb: Public Shared Function AddIfElse(services As IServiceCollection, condition As Boolean, ifAction As Action(Of IServiceCollection), elseAction As Action(Of IServiceCollection)) As IServiceCollection
   overload: Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse*
   nameWithType.vb: ServiceCollectionExtensions.AddIfElse(IServiceCollection, Boolean, Action(Of IServiceCollection), Action(Of IServiceCollection))
@@ -121,21 +146,27 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Registers <xref href="Microsoft.Extensions.Options.IOptions%601" data-throw-if-not-resolved="false"></xref> and <code class="typeparamref">TOptions</code> to the services container.
+  example: []
   syntax:
     content: 'public static IServiceCollection ConfigureSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration) where TOptions : class'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The services collection.
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The configuration.
     typeParameters:
     - id: TOptions
+      description: The type of the options.
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The same services collection.
     content.vb: Public Shared Function ConfigureSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration) As IServiceCollection
   overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton*
   nameWithType.vb: ServiceCollectionExtensions.ConfigureSingleton(Of TOptions)(IServiceCollection, IConfiguration)
@@ -154,23 +185,30 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: Registers <xref href="Microsoft.Extensions.Options.IOptions%601" data-throw-if-not-resolved="false"></xref> and <code class="typeparamref">TOptions</code> to the services container.
+  example: []
   syntax:
     content: 'public static IServiceCollection ConfigureSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Action<BinderOptions> configureBinder) where TOptions : class'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The services collection.
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The configuration.
     - id: configureBinder
       type: System.Action{Microsoft.Extensions.Configuration.BinderOptions}
+      description: Used to configure the binder options.
     typeParameters:
     - id: TOptions
+      description: The type of the options.
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The same services collection.
     content.vb: Public Shared Function ConfigureSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, configureBinder As Action(Of BinderOptions)) As IServiceCollection
   overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton*
   nameWithType.vb: ServiceCollectionExtensions.ConfigureSingleton(Of TOptions)(IServiceCollection, IConfiguration, Action(Of BinderOptions))
@@ -189,21 +227,30 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Registers <xref href="Microsoft.Extensions.Options.IOptions%601" data-throw-if-not-resolved="false"></xref> and <code class="typeparamref">TOptions</code> to the services container.
+
+    Also runs data annotation validation on application startup.
+  example: []
   syntax:
     content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration) where TOptions : class'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The services collection.
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The configuration.
     typeParameters:
     - id: TOptions
+      description: The type of the options.
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The same services collection.
     content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration) As IServiceCollection
   overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
   nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration)
@@ -222,23 +269,33 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Registers <xref href="Microsoft.Extensions.Options.IOptions%601" data-throw-if-not-resolved="false"></xref> and <code class="typeparamref">TOptions</code> to the services container.
+
+    Also runs data annotation validation on application startup.
+  example: []
   syntax:
     content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Action<BinderOptions> configureBinder) where TOptions : class'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The services collection.
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The configuration.
     - id: configureBinder
       type: System.Action{Microsoft.Extensions.Configuration.BinderOptions}
+      description: Used to configure the binder options.
     typeParameters:
     - id: TOptions
+      description: The type of the options.
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The same services collection.
     content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, configureBinder As Action(Of BinderOptions)) As IServiceCollection
   overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
   nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Action(Of BinderOptions))
@@ -257,23 +314,33 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Registers <xref href="Microsoft.Extensions.Options.IOptions%601" data-throw-if-not-resolved="false"></xref> and <code class="typeparamref">TOptions</code> to the services container.
+
+    Also runs data annotation validation and custom validation using the default failure message on application startup.
+  example: []
   syntax:
     content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Func<TOptions, bool> validation) where TOptions : class'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The services collection.
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The configuration.
     - id: validation
       type: System.Func{{TOptions},System.Boolean}
+      description: The validation function.
     typeParameters:
     - id: TOptions
+      description: The type of the options.
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The same services collection.
     content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, validation As Func(Of TOptions, Boolean)) As IServiceCollection
   overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
   nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean))
@@ -292,25 +359,36 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Registers <xref href="Microsoft.Extensions.Options.IOptions%601" data-throw-if-not-resolved="false"></xref> and <code class="typeparamref">TOptions</code> to the services container.
+
+    Also runs data annotation validation and custom validation using the default failure message on application startup.
+  example: []
   syntax:
     content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Func<TOptions, bool> validation, Action<BinderOptions> configureBinder) where TOptions : class'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The services collection.
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The configuration.
     - id: validation
       type: System.Func{{TOptions},System.Boolean}
+      description: The validation function.
     - id: configureBinder
       type: System.Action{Microsoft.Extensions.Configuration.BinderOptions}
+      description: Used to configure the binder options.
     typeParameters:
     - id: TOptions
+      description: The type of the options.
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The same services collection.
     content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, validation As Func(Of TOptions, Boolean), configureBinder As Action(Of BinderOptions)) As IServiceCollection
   overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
   nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean), Action(Of BinderOptions))
@@ -329,25 +407,36 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>, string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Registers <xref href="Microsoft.Extensions.Options.IOptions%601" data-throw-if-not-resolved="false"></xref> and <code class="typeparamref">TOptions</code> to the services container.
+
+    Also runs data annotation validation and custom validation on application startup.
+  example: []
   syntax:
     content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Func<TOptions, bool> validation, string failureMessage) where TOptions : class'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The services collection.
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The configuration.
     - id: validation
       type: System.Func{{TOptions},System.Boolean}
+      description: The validation function.
     - id: failureMessage
       type: System.String
+      description: The failure message to use when validation fails.
     typeParameters:
     - id: TOptions
+      description: The type of the options.
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The same services collection.
     content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, validation As Func(Of TOptions, Boolean), failureMessage As String) As IServiceCollection
   overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
   nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean), String)
@@ -366,33 +455,53 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>, string, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: >-
+    Registers <xref href="Microsoft.Extensions.Options.IOptions%601" data-throw-if-not-resolved="false"></xref> and <code class="typeparamref">TOptions</code> to the services container.
+
+    Also runs data annotation validation and custom validation on application startup.
+  example: []
   syntax:
     content: 'public static IServiceCollection ConfigureAndValidateSingleton<TOptions>(this IServiceCollection services, IConfiguration configuration, Func<TOptions, bool> validation, string failureMessage, Action<BinderOptions> configureBinder) where TOptions : class'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The services collection.
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The configuration.
     - id: validation
       type: System.Func{{TOptions},System.Boolean}
+      description: The validation function.
     - id: failureMessage
       type: System.String
+      description: The failure message to use when validation fails.
     - id: configureBinder
       type: System.Action{Microsoft.Extensions.Configuration.BinderOptions}
+      description: Used to configure the binder options.
     typeParameters:
     - id: TOptions
+      description: The type of the options.
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The same services collection.
     content.vb: Public Shared Function ConfigureAndValidateSingleton(Of TOptions As Class)(services As IServiceCollection, configuration As IConfiguration, validation As Func(Of TOptions, Boolean), failureMessage As String, configureBinder As Action(Of BinderOptions)) As IServiceCollection
   overload: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton*
   nameWithType.vb: ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean), String, Action(Of BinderOptions))
   fullName.vb: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton(Of TOptions)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func(Of TOptions, Boolean), String, System.Action(Of Microsoft.Extensions.Configuration.BinderOptions))
   name.vb: ConfigureAndValidateSingleton(Of TOptions)(IServiceCollection, IConfiguration, Func(Of TOptions, Boolean), String, Action(Of BinderOptions))
 references:
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
 - uid: Biwen.QuickApi
   commentId: N:Biwen.QuickApi
   isExternal: true
@@ -650,6 +759,43 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
 - uid: System
   commentId: N:System
   isExternal: true
@@ -664,14 +810,6 @@ references:
   name: AddIf
   nameWithType: ServiceCollectionExtensions.AddIf
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.AddIf
-- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
-  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
-  parent: Microsoft.Extensions.DependencyInjection
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
-  name: IServiceCollection
-  nameWithType: IServiceCollection
-  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -718,43 +856,6 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
   - name: )
-- uid: Microsoft.Extensions.DependencyInjection
-  commentId: N:Microsoft.Extensions.DependencyInjection
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft
-  name: Microsoft.Extensions.DependencyInjection
-  nameWithType: Microsoft.Extensions.DependencyInjection
-  fullName: Microsoft.Extensions.DependencyInjection
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft
-  - name: .
-  - uid: Microsoft.Extensions
-    name: Extensions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
-  - name: .
-  - uid: Microsoft.Extensions.DependencyInjection
-    name: DependencyInjection
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft
-  - name: .
-  - uid: Microsoft.Extensions
-    name: Extensions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
-  - name: .
-  - uid: Microsoft.Extensions.DependencyInjection
-    name: DependencyInjection
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
 - uid: System.Action`1
   commentId: T:System.Action`1
   isExternal: true
@@ -790,6 +891,34 @@ references:
   name: AddIfElse
   nameWithType: ServiceCollectionExtensions.AddIfElse
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - name: TOptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOptions
+  - name: )
 - uid: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton*
   commentId: Overload:Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton
   isExternal: true

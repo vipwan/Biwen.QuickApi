@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Events/EventExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Events/EventExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
@@ -44,23 +44,32 @@ items:
   fullName: Biwen.QuickApi.Events.EventExtensions.PublishAsync<T>(T, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Events/EventExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Events/EventExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
+  summary: 事件广播扩展
+  example: []
   syntax:
     content: 'public static Task PublishAsync<T>(this T @event, CancellationToken cancellationToken = default) where T : class, IEvent'
     parameters:
     - id: event
       type: '{T}'
+      description: ''
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: ''
     typeParameters:
     - id: T
     return:
       type: System.Threading.Tasks.Task
+      description: ''
     content.vb: Public Shared Function PublishAsync(Of T As {Class, IEvent})([event] As T, cancellationToken As CancellationToken = Nothing) As Task
   overload: Biwen.QuickApi.Events.EventExtensions.PublishAsync*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: ''
   nameWithType.vb: EventExtensions.PublishAsync(Of T)(T, CancellationToken)
   fullName.vb: Biwen.QuickApi.Events.EventExtensions.PublishAsync(Of T)(T, System.Threading.CancellationToken)
   name.vb: PublishAsync(Of T)(T, CancellationToken)
@@ -339,6 +348,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
 - uid: Biwen.QuickApi.Events.EventExtensions.PublishAsync*
   commentId: Overload:Biwen.QuickApi.Events.EventExtensions.PublishAsync
   isExternal: true

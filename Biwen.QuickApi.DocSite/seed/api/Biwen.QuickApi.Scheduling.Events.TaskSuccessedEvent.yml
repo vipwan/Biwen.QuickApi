@@ -15,10 +15,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
+  summary: 执行完成
+  example: []
   syntax:
     content: 'public sealed class TaskSuccessedEvent : ScheduleTaskEvent, IEvent'
     content.vb: Public NotInheritable Class TaskSuccessedEvent Inherits ScheduleTaskEvent Implements IEvent
@@ -50,19 +52,24 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.TaskSuccessedEvent(Biwen.QuickApi.Scheduling.IScheduleTask, System.DateTime, System.DateTime)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
+  summary: 执行完成
+  example: []
   syntax:
     content: public TaskSuccessedEvent(IScheduleTask scheduleTask, DateTime eventTime, DateTime endTime)
     parameters:
     - id: scheduleTask
       type: Biwen.QuickApi.Scheduling.IScheduleTask
+      description: ''
     - id: eventTime
       type: System.DateTime
+      description: 结束时间
     - id: endTime
       type: System.DateTime
+      description: 开始时间内
     content.vb: Public Sub New(scheduleTask As IScheduleTask, eventTime As Date, endTime As Date)
   overload: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.#ctor*
   nameWithType.vb: TaskSuccessedEvent.New(IScheduleTask, Date, Date)
@@ -80,10 +87,12 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.EndTime
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
+  summary: 执行结束的时间
+  example: []
   syntax:
     content: public DateTime EndTime { get; set; }
     parameters: []

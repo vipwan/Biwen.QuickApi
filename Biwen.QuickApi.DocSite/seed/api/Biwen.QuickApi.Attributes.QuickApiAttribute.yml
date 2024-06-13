@@ -18,10 +18,12 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
+  summary: QuickApi特性
+  example: []
   syntax:
     content: >-
       [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
@@ -102,7 +104,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute.QuickApiAttribute(string)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -128,10 +130,12 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute.Group
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
+  summary: '分组. 例如: hello,不可为Null'
+  example: []
   syntax:
     content: public string Group { get; set; }
     parameters: []
@@ -151,10 +155,12 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute.Route
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
+  summary: '路由. 例如: hello/world/{name}'
+  example: []
   syntax:
     content: public string Route { get; set; }
     parameters: []
@@ -174,10 +180,12 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute.Verbs
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
+  summary: 请求方式. 默认为GET, 如果需要多种方式，可以使用 | 运算符
+  example: []
   syntax:
     content: public Verb Verbs { get; set; }
     parameters: []
@@ -197,10 +205,15 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute.Policy
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
+  summary: >-
+    请求策略. 默认为null，表示不需要验证
+
+    推荐使用HandlerBuilder的方式实现强大的鉴权功能
+  example: []
   syntax:
     content: public string? Policy { get; set; }
     parameters: []

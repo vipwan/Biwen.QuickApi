@@ -14,14 +14,17 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApiWithoutRequest<Rsp>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 没有请求参数的BaseQuickApi,有返回值
+  example: []
   syntax:
     content: 'public abstract class BaseQuickApiWithoutRequest<Rsp> : BaseQuickApi<EmptyRequest, Rsp>'
     typeParameters:
     - id: Rsp
+      description: ''
     content.vb: Public MustInherit Class BaseQuickApiWithoutRequest(Of Rsp) Inherits BaseQuickApi(Of EmptyRequest, Rsp)
   inheritance:
   - System.Object
@@ -57,7 +60,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApiWithoutRequest<Rsp>.BaseQuickApiWithoutRequest()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

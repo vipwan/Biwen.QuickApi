@@ -15,10 +15,12 @@ items:
   fullName: Biwen.QuickApi.Metadata.QuickApiExampleMetadata
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Metadata/QuickApiExampleMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Metadata/QuickApiExampleMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Metadata
+  summary: Example Metadata for QuickApi
+  example: []
   syntax:
     content: public class QuickApiExampleMetadata
     content.vb: Public Class QuickApiExampleMetadata
@@ -44,10 +46,12 @@ items:
   fullName: Biwen.QuickApi.Metadata.QuickApiExampleMetadata.QuickApiExampleMetadata(System.Collections.Generic.ICollection<object?>)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Metadata/QuickApiExampleMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Metadata/QuickApiExampleMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Metadata
+  summary: Example Metadata for QuickApi
+  example: []
   syntax:
     content: public QuickApiExampleMetadata(ICollection<object?> examples)
     parameters:
@@ -70,7 +74,7 @@ items:
   fullName: Biwen.QuickApi.Metadata.QuickApiExampleMetadata.Examples
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Metadata/QuickApiExampleMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Metadata/QuickApiExampleMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Metadata

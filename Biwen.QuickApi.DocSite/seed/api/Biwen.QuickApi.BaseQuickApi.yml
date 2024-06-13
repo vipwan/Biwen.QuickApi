@@ -16,10 +16,12 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 没有请求参数的BaseQuickApi,没有返回值
+  example: []
   syntax:
     content: 'public abstract class BaseQuickApi : BaseQuickApi<EmptyRequest, IResult>'
     content.vb: Public MustInherit Class BaseQuickApi Inherits BaseQuickApi(Of EmptyRequest, IResult)
@@ -54,7 +56,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi.BaseQuickApi()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -77,18 +79,21 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: HandlerBuilder
   example: []
   syntax:
     content: public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
     parameters:
     - id: builder
       type: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+      description: ''
     return:
       type: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
+      description: ''
     content.vb: Public Overrides Function HandlerBuilder(builder As RouteHandlerBuilder) As RouteHandlerBuilder
   overridden: Biwen.QuickApi.BaseQuickApi{Biwen.QuickApi.EmptyRequest,Microsoft.AspNetCore.Http.IResult}.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
   overload: Biwen.QuickApi.BaseQuickApi.HandlerBuilder*
@@ -104,18 +109,21 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi.ExecuteAsync(Biwen.QuickApi.EmptyRequest)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 执行请求,如需要HttpContext对象，请使用<xref href="Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext" data-throw-if-not-resolved="false"></xref>获取
   example: []
   syntax:
     content: public override abstract ValueTask<IResult> ExecuteAsync(EmptyRequest request)
     parameters:
     - id: request
       type: Biwen.QuickApi.EmptyRequest
+      description: ''
     return:
       type: System.Threading.Tasks.ValueTask{Microsoft.AspNetCore.Http.IResult}
+      description: ''
     content.vb: Public MustOverride Overrides Function ExecuteAsync(request As EmptyRequest) As ValueTask(Of IResult)
   overridden: Biwen.QuickApi.BaseQuickApi{Biwen.QuickApi.EmptyRequest,Microsoft.AspNetCore.Http.IResult}.ExecuteAsync(Biwen.QuickApi.EmptyRequest)
   overload: Biwen.QuickApi.BaseQuickApi.ExecuteAsync*
@@ -969,6 +977,13 @@ references:
     name: Builder
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+- uid: Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
+  commentId: P:Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor.httpcontext
+  name: HttpContext
+  nameWithType: IHttpContextAccessor.HttpContext
+  fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
 - uid: Biwen.QuickApi.BaseQuickApi.ExecuteAsync*
   commentId: Overload:Biwen.QuickApi.BaseQuickApi.ExecuteAsync
   isExternal: true

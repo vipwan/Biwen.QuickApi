@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.IResultExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/IResultExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/IResultExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -44,17 +44,21 @@ items:
   fullName: Biwen.QuickApi.IResultExtensions.AsRspOfResult(Microsoft.AspNetCore.Http.IResult)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/IResultExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/IResultExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 转换为IResultResponse
+  example: []
   syntax:
     content: public static IResultResponse AsRspOfResult(this IResult result)
     parameters:
     - id: result
       type: Microsoft.AspNetCore.Http.IResult
+      description: ''
     return:
       type: Biwen.QuickApi.IResultResponse
+      description: ''
     content.vb: Public Shared Function AsRspOfResult(result As IResult) As IResultResponse
   overload: Biwen.QuickApi.IResultExtensions.AsRspOfResult*
 references:

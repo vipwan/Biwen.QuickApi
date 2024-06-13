@@ -14,10 +14,12 @@ items:
   fullName: Biwen.QuickApi.FromBodyAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
+  summary: 标记整个Request对象为FromBody
+  example: []
   syntax:
     content: >-
       [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
@@ -98,7 +100,7 @@ items:
   fullName: Biwen.QuickApi.FromBodyAttribute.FromBodyAttribute()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/396b7daef4fddaaf7673191c018a3f1edfec0561/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
