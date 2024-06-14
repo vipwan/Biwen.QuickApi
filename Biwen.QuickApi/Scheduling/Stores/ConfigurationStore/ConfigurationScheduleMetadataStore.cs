@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using System.Collections.Concurrent;
 
 namespace Biwen.QuickApi.Scheduling.Stores.ConfigurationStore
 {
@@ -9,8 +10,9 @@ namespace Biwen.QuickApi.Scheduling.Stores.ConfigurationStore
     internal class ConfigurationScheduleMetadataStore(IConfiguration configuration) : IScheduleMetadataStore
     {
         const string Key = "BiwenQuickApi:Schedules";
+        private static readonly ConcurrentDictionary<string, ScheduleTaskMetadata> ScheduleTaskTypes = new();
 
-        public Task<IEnumerable<ScheduleTaskMetadata>> GetAllAsync()
+        public Task<ScheduleTaskMetadata[]> GetAllAsync()
         {
             var options = configuration.GetSection(Key).GetChildren();
 
@@ -18,20 +20,26 @@ namespace Biwen.QuickApi.Scheduling.Stores.ConfigurationStore
             {
                 var metadatas = options.Select(x =>
                 {
-                    var type = Type.GetType(x[nameof(ScheduleTaskMetadata.ScheduleTaskType)]!);
-                    if (type is null)
-                        throw new ArgumentException($"Type {x[nameof(ScheduleTaskMetadata.ScheduleTaskType)]} not found!");
+                    //cacheKey = x值的拼接
+                    var cacheKey = string.Join(":", x.GetChildren().Select(x => x.Value));
 
-                    return new ScheduleTaskMetadata(type, x[nameof(ScheduleTaskMetadata.Cron)]!)
+                    return ScheduleTaskTypes.GetOrAdd(cacheKey, _ =>
                     {
-                        Description = x[nameof(ScheduleTaskMetadata.Description)],
-                        IsAsync = string.IsNullOrEmpty(x[nameof(ScheduleTaskMetadata.IsAsync)]) ? false : bool.Parse(x[nameof(ScheduleTaskMetadata.IsAsync)]!),
-                        IsStartOnInit = string.IsNullOrEmpty(x[nameof(ScheduleTaskMetadata.IsStartOnInit)]) ? false : bool.Parse(x[nameof(ScheduleTaskMetadata.IsStartOnInit)]!),
-                    };
-                });
+                        var type =
+                            Type.GetType(x[nameof(ScheduleTaskMetadata.ScheduleTaskType)]!) ??
+                            throw new ArgumentException($"Type {x[nameof(ScheduleTaskMetadata.ScheduleTaskType)]} not found!");
+
+                        return new ScheduleTaskMetadata(type, x[nameof(ScheduleTaskMetadata.Cron)]!)
+                        {
+                            Description = x[nameof(ScheduleTaskMetadata.Description)],
+                            IsAsync = string.IsNullOrEmpty(x[nameof(ScheduleTaskMetadata.IsAsync)]) ? false : bool.Parse(x[nameof(ScheduleTaskMetadata.IsAsync)]!),
+                            IsStartOnInit = string.IsNullOrEmpty(x[nameof(ScheduleTaskMetadata.IsStartOnInit)]) ? false : bool.Parse(x[nameof(ScheduleTaskMetadata.IsStartOnInit)]!),
+                        };
+                    });
+                }).ToArray();
                 return Task.FromResult(metadatas);
             }
-            return Task.FromResult(Enumerable.Empty<ScheduleTaskMetadata>());
+            return Task.FromResult(Array.Empty<ScheduleTaskMetadata>());
         }
     }
 }

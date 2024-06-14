@@ -128,7 +128,7 @@ namespace Biwen.QuickApi.Scheduling
                     return;
                 }
                 var metadatas = await store.GetAllAsync();
-                if (metadatas is null || !metadatas.Any())
+                if (metadatas is null || metadatas.Length == 0)
                 {
                     return;
                 }

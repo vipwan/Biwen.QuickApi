@@ -12,7 +12,7 @@ namespace Biwen.QuickApi.Scheduling
     {
         public virtual Task HandleAsync(TaskSuccessedEvent @event, CancellationToken ct)
         {
-            logger.LogInformation($"[{@event.EventTime}] ScheduleTask:{@event.ScheduleTask.GetType().FullName} Successed!");
+            logger.LogDebug($"[{@event.EventTime}] ScheduleTask:{@event.ScheduleTask.GetType().FullName} Successed!");
             return Task.CompletedTask;
         }
     }

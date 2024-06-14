@@ -3,29 +3,21 @@
     /// <summary>
     /// MetadataStore
     /// </summary>
-    /// <param name="serviceProvider"></param>
-    internal sealed class MetadataStore(IServiceProvider serviceProvider) : IScheduleMetadataStore
+    internal sealed class MetadataStore : IScheduleMetadataStore
     {
         /// <summary>
         /// 特性中的metadatas缓存起来
         /// </summary>
-        private static List<ScheduleTaskMetadata> _cachedMetatas = null!;
+        private static List<ScheduleTaskMetadata> _cachedMetatas = [];
 
-        private static object _lock = new object();//锁
-
-        public Task<IEnumerable<ScheduleTaskMetadata>> GetAllAsync()
+        public MetadataStore(IServiceProvider serviceProvider)
         {
-            if (_cachedMetatas is not null)
-                return Task.FromResult(_cachedMetatas.AsEnumerable());
-
-            lock (_lock)
+            lock (this)
             {
-                _cachedMetatas = [];
-
                 var tasks = serviceProvider.GetServices<IScheduleTask>();
                 if (tasks is null || !tasks.Any())
                 {
-                    return Task.FromResult(Enumerable.Empty<ScheduleTaskMetadata>());
+                    return;
                 }
 
                 //注解中的task
@@ -46,8 +38,11 @@
                     }
                 }
             }
+        }
 
-            return Task.FromResult(_cachedMetatas.AsEnumerable());
+        public Task<ScheduleTaskMetadata[]> GetAllAsync()
+        {
+            return Task.FromResult(_cachedMetatas.ToArray());
         }
     }
 }

@@ -10,6 +10,6 @@
         /// 获取所有ScheduleTaskMetadata
         /// </summary>
         /// <returns></returns>
-        Task<IEnumerable<ScheduleTaskMetadata>> GetAllAsync();
+        Task<ScheduleTaskMetadata[]> GetAllAsync();
     }
 }

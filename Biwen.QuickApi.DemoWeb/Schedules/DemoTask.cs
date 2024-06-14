@@ -45,10 +45,10 @@
 
     public class DemoStore : IScheduleMetadataStore
     {
-        public Task<IEnumerable<ScheduleTaskMetadata>> GetAllAsync()
+        public Task<ScheduleTaskMetadata[]> GetAllAsync()
         {
             //模拟从数据库或配置文件中获取ScheduleTaskMetadata
-            IEnumerable<ScheduleTaskMetadata> metadatas =
+            ScheduleTaskMetadata[] metadatas =
                 [
                     new ScheduleTaskMetadata(typeof(DemoTask),Constants.CronEveryNMinutes(2))
                     {

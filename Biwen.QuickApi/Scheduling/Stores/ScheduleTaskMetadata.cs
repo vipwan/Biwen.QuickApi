@@ -8,10 +8,19 @@
     /// <param name="cron"></param>
     public class ScheduleTaskMetadata(Type scheduleTaskType, string cron)
     {
+        /// <summary>
+        /// ScheduleTaskType
+        /// </summary>
         public Type ScheduleTaskType { get; set; } = scheduleTaskType;
 
+        /// <summary>
+        /// Cron表达式:五位码 https://en.wikipedia.org/wiki/Cron 
+        /// </summary>
         public string Cron { get; set; } = cron;
 
+        /// <summary>
+        /// 描述信息
+        /// </summary>
         public string? Description { get; set; }
 
         /// <summary>
