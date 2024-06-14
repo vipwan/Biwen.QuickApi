@@ -1,4 +1,5 @@
 ﻿using NSwag.Annotations;
+using System.Collections.Concurrent;
 using System.Linq.Expressions;
 
 namespace Biwen.QuickApi
@@ -17,19 +18,22 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public IRuleBuilderInitial<T, TProperty> RuleFor<TProperty>(Expression<Func<T, TProperty>> expression)
         {
-            return Validator.RuleFor(expression);
+            var valiadtor = InnerValidators.GetOrAdd(typeof(T), type => new InnerValidator());
+            return valiadtor.RuleFor(expression);
         }
 
         #region 内部属性
+
         /// <summary>
-        /// 全局仅有一个T的内部验证器
+        /// 验证器集合
         /// </summary>
-        private readonly InnerValidator Validator = new();
+        private static readonly ConcurrentDictionary<Type, InnerValidator> InnerValidators = new();
 
         public ValidationResult Validate()
         {
             var req = (T)MemberwiseClone();
-            return Validator.Validate(req);
+            var valiadtor = InnerValidators.GetOrAdd(typeof(T), type => new InnerValidator());
+            return valiadtor.Validate(req);
         }
         #endregion
 

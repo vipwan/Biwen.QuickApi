@@ -82,8 +82,12 @@ namespace Biwen.QuickApi
                 sp.AddScheduleTask();
             });
 
+            //绑定服务
+            services.AddScoped<RequestBindService>();
+
             //add quickapis
             foreach (var api in Apis) services.AddScoped(api);
+
 
             return services;
         }
@@ -362,20 +366,15 @@ namespace Biwen.QuickApi
             //if (!checkResult.Flag) return checkResult.Result!;
             var sp = ctx.HttpContext!.RequestServices;
             var api = sp.GetRequiredService(apiType);
+            var bindService = sp.GetRequiredService<RequestBindService>();
             //执行请求
             try
             {
-                //使用接口静态成员重写代码:
-                var methodName = nameof(IReqBinder<EmptyRequest>.BindAsync);
-                MethodInfo methodInfo = (((dynamic)api).ReqBinder).GetMethod(methodName, BindingFlags.Static | BindingFlags.Public);
-                var req = await (dynamic)methodInfo.Invoke(null, [ctx.HttpContext, null])!;
-                if (req is not null)
+                var req = await bindService.BindAsync(apiType);
+                //验证DTO
+                if (req is IReqValidator { } validator && validator.Validate() is { IsValid: false } vresult)
                 {
-                    //验证DTO
-                    if (req.Validate() is ValidationResult { IsValid: false } vresult)
-                    {
-                        return TypedResults.ValidationProblem(vresult.ToDictionary());
-                    }
+                    return TypedResults.ValidationProblem(vresult.ToDictionary());
                 }
                 var result = await ((dynamic)api)!.ExecuteAsync(req!);
                 var rawResult = InnerResult(result);

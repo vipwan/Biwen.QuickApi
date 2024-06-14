@@ -45,25 +45,12 @@ namespace Biwen.QuickApi
                     var args = context.Arguments;
                     foreach (var arg in args)
                     {
-                        if (arg is null) continue;
-                        var argType = arg?.GetType();
-                        if (argType is null || !argType.IsClass) continue;
-                        var methodName = nameof(BaseRequest<EmptyRequest>.Validate);
-                        //使用反射验证参数:
-                        if (argType.GetMethod(methodName) is not null)
+                        if (arg is IReqValidator { } validator)
                         {
-                            try
+                            //验证Req
+                            if (validator.Validate() is ValidationResult { IsValid: false } vresult)
                             {
-                                //验证DTO
-                                if (((dynamic)arg!).Validate() is ValidationResult { IsValid: false } vresult)
-                                {
-                                    return TypedResults.ValidationProblem(vresult.ToDictionary());
-                                }
-                            }
-                            catch
-                            {
-                                //特殊情况,不处理
-                                continue;
+                                return TypedResults.ValidationProblem(vresult.ToDictionary());
                             }
                         }
                     }
