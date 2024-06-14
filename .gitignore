@@ -3,6 +3,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# QuickApi2的生成静态文档
+*/_Statics/
+
+
+
 # User-specific files
 *.rsuser
 *.suo
