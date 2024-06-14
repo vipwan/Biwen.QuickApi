@@ -1,7 +1,13 @@
-﻿namespace Biwen.QuickApi.Events
+﻿using System.Collections.Concurrent;
+
+namespace Biwen.QuickApi.Events
 {
     internal class Publisher(IServiceProvider serviceProvider)
     {
+        /// <summary>
+        /// 缓存订阅者的Metadata
+        /// </summary>
+        private static readonly ConcurrentDictionary<Type, object> SubscriberMetadatas = new();
 
         public async Task PublishAsync<T>(T @event, CancellationToken ct) where T : IEvent
         {
@@ -10,21 +16,16 @@
             if (subscribers is null) return;
             if (subscribers.Any() == false) return;
 
-            List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)> listWithMetadatas = [];
-
-            if (Caching.SubscriberMetadatas.ContainsKey(typeof(T)))
+            if (SubscriberMetadatas.GetOrAdd(typeof(T), type =>
             {
-                listWithMetadatas = (List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)>)Caching.SubscriberMetadatas[typeof(T)];
-            }
-            else
-            {
+                List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)> metas = [];
                 foreach (var subscriber in subscribers)
                 {
-                    var metadata = subscriber.GetType().GetCustomAttribute<EventSubscriberAttribute>() ?? new EventSubscriberAttribute();
-                    listWithMetadatas.Add((subscriber, metadata));
+                    var metadata = subscriber.GetType().GetCustomAttribute<EventSubscriberAttribute>() ?? new();
+                    metas.Add((subscriber, metadata));
                 }
-                Caching.SubscriberMetadatas.TryAdd(typeof(T), listWithMetadatas);
-            }
+                return metas;
+            }) is not List<(IEventSubscriber<T> Subscriber, EventSubscriberAttribute Metadata)> listWithMetadatas) return;
 
             foreach (var (subscriber, metadata) in listWithMetadatas.OrderBy(x => x.Metadata.Order))
             {

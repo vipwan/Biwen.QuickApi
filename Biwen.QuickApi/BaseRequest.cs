@@ -39,21 +39,19 @@ namespace Biwen.QuickApi
 
         private class InnerValidator : AbstractValidator<T>
         {
-            //private static bool? _hasAnnotationAttr = null;
-
+            /// <summary>
+            /// 缓存T是否有DataAnnotation
+            /// </summary>
+            static readonly ConcurrentDictionary<string, bool> TAnnotationAttrs = new();
             private static bool HasAnnotationAttr
             {
                 get
                 {
-                    var type = typeof(T).FullName!;
-                    if (Caching.TAnnotationAttrs.TryGetValue(type, out var attr))
+                    return TAnnotationAttrs.GetOrAdd(typeof(T).FullName!, type =>
                     {
-                        return attr;
-                    }
-                    var has = typeof(T).GetProperties().Any(
-                        prop => prop.GetCustomAttributes(true).Any(x => x is MSDA.ValidationAttribute));
-                    Caching.TAnnotationAttrs.TryAdd(type, has);
-                    return has;
+                        return typeof(T).GetProperties().Any(
+                            prop => prop.GetCustomAttributes(true).Any(x => x is MSDA.ValidationAttribute));
+                    });
                 }
             }
 
