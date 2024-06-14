@@ -109,8 +109,6 @@ namespace Biwen.QuickApi
         //验证Request的Endpoint Filter
         private class ValidateRequestFilter : IEndpointFilter
         {
-            private static readonly string _validatorType = typeof(IReqValidator<>).FullName!;
-
             public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
             {
                 var httpContext = context.HttpContext;
@@ -120,24 +118,12 @@ namespace Biwen.QuickApi
                     var args = context.Arguments;
                     foreach (var arg in args)
                     {
-                        if (arg is null) continue;
-                        var argType = arg?.GetType();
-                        if (argType is null || !argType.IsClass) continue;
-                        //判断 argType 是否为 IReqValidator<T>
-                        if (argType?.GetInterface(_validatorType) is { })
+                        if (arg is IReqValidator { } validator)
                         {
-                            try
+                            //验证Req
+                            if (validator.Validate() is ValidationResult { IsValid: false } vresult)
                             {
-                                //验证DTO
-                                if (((dynamic)arg!).Validate() is ValidationResult { IsValid: false } vresult)
-                                {
-                                    return TypedResults.ValidationProblem(vresult.ToDictionary());
-                                }
-                            }
-                            catch
-                            {
-                                //特殊情况,不处理
-                                continue;
+                                return TypedResults.ValidationProblem(vresult.ToDictionary());
                             }
                         }
                     }

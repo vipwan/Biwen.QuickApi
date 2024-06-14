@@ -22,6 +22,9 @@ namespace Biwen.QuickApi.Http
 
             //注册QuickApi
             foreach (var api in Apis) services.AddScoped(api);
+
+            //注册绑定服务
+            services.AddScoped<RequestBindService>();
         }
 
         static readonly Type InterfaceQuickApi = typeof(IQuickApi<,>);

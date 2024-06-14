@@ -420,15 +420,14 @@ namespace Biwen.QuickApi
             if (quickApiAttribute == null) throw new QuickApiExcetion($"quickApiAttribute is null!");
             var sp = ctx.HttpContext!.RequestServices;
             var api = sp.GetRequiredService(apiType);
+            var bindService = sp.GetRequiredService<RequestBindService>();
+
             //执行请求
             try
             {
-                //使用接口静态成员重写代码:
-                var methodName = nameof(IReqBinder<EmptyRequest>.BindAsync);
-                MethodInfo methodInfo = (((dynamic)api).ReqBinder).GetMethod(methodName, BindingFlags.Static | BindingFlags.Public);
-                var req = await (dynamic)methodInfo.Invoke(null, [ctx.HttpContext, null])!;
+                var req = await bindService.BindAsync(apiType);
                 //验证DTO
-                if (req is { } && req.Validate() is ValidationResult { IsValid: false } vresult)
+                if (req is IReqValidator { } validator && validator.Validate() is { IsValid: false } vresult)
                 {
                     return TypedResults.ValidationProblem(vresult.ToDictionary());
                 }
