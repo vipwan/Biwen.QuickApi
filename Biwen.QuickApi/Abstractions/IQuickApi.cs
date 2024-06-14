@@ -39,13 +39,13 @@ namespace Biwen.QuickApi.Abstractions
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
-        Task InvokeBeforeAsync(HttpContext context);
+        Task BeforeAsync(HttpContext context);
         /// <summary>
         /// 请求QuickApi后的操作
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
-        Task InvokeAfterAsync(HttpContext context);
+        Task AfterAsync(HttpContext context);
     }
 
     /// <summary>

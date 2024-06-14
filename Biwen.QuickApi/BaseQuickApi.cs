@@ -167,7 +167,7 @@ namespace Biwen.QuickApi
         /// <param name="context"></param>
         /// <param name="next"></param>
         /// <returns></returns>
-        public virtual Task InvokeBeforeAsync(HttpContext context)
+        public virtual Task BeforeAsync(HttpContext context)
         {
             return Task.CompletedTask;
         }
@@ -177,7 +177,7 @@ namespace Biwen.QuickApi
         /// <param name="context"></param>
         /// <param name="next"></param>
         /// <returns></returns>
-        public virtual Task InvokeAfterAsync(HttpContext context)
+        public virtual Task AfterAsync(HttpContext context)
         {
             return Task.CompletedTask;
         }

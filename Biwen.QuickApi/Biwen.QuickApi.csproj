@@ -5,7 +5,7 @@
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-		<PackageVersion>1.6.1</PackageVersion>
+		<PackageVersion>1.6.2</PackageVersion>
 		<TargetFrameworks>net8.0</TargetFrameworks>
 		<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>
 		<Authors>万雅虎</Authors>
@@ -17,8 +17,8 @@
 		<PackageTags>webapi;minimal;api;endpoint;REPR;netcore</PackageTags>
 		<PackageReleaseNotes>重构BaseQuickApi提供IResult TypedResults直接支持</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<AssemblyVersion>1.6.0</AssemblyVersion>
-		<FileVersion>1.6.0</FileVersion>
+		<AssemblyVersion>1.6.2</AssemblyVersion>
+		<FileVersion>1.6.2</FileVersion>
 	</PropertyGroup>
 
 	<ItemGroup>

@@ -8,6 +8,7 @@ namespace Biwen.QuickApi.Http
     public sealed class QuickApiMiddleware
     {
         private static readonly string? AssemblyName = typeof(ServiceRegistration).Assembly.GetName().Name;
+        private static readonly string version = $"{typeof(ServiceRegistration).Assembly.GetName().Version}";
 
         private readonly RequestDelegate _next;
         public QuickApiMiddleware(RequestDelegate next)
@@ -24,7 +25,9 @@ namespace Biwen.QuickApi.Http
             }
 
             //PoweredBy
-            context.Response.Headers.TryAdd("X-Powered-By", AssemblyName);
+            context.Response.Headers.XPoweredBy = AssemblyName;
+            //Version
+            context.Response.Headers.TryAdd($"X-{nameof(QuickApi)}-Version", version);
 
             var handler = context.RequestServices.GetRequiredService(md.QuickApiType) as IQuickApiMiddlewareHandler;
             if (handler == null)
@@ -32,9 +35,9 @@ namespace Biwen.QuickApi.Http
                 await _next(context);
                 return;
             }
-            await handler.InvokeBeforeAsync(context);
+            await handler.BeforeAsync(context);
             await _next(context);
-            await handler.InvokeAfterAsync(context);
+            await handler.AfterAsync(context);
         }
     }
 }
