@@ -14,7 +14,7 @@
         public Type ScheduleTaskType { get; set; } = scheduleTaskType;
 
         /// <summary>
-        /// Cron表达式:五位码 https://en.wikipedia.org/wiki/Cron 
+        /// Cron表达式:五位码 <see href="https://en.wikipedia.org/wiki/Cron"/>
         /// </summary>
         public string Cron { get; set; } = cron;
 

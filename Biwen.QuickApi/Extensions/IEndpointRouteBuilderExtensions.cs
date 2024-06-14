@@ -15,7 +15,7 @@ namespace Biwen.QuickApi
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="app"></param>
-        /// <param name="pattern"></param>
+        /// <param name="pattern">路由地址</param>
         /// <param name="excludeFromDescription">是否从文档中排除</param>
         /// <returns></returns>
         public static RouteHandlerBuilder MapMethods<T>(

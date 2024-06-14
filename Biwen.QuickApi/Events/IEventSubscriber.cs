@@ -6,6 +6,12 @@
     /// <typeparam name="T"></typeparam>
     public interface IEventSubscriber<T> where T : IEvent
     {
+        /// <summary>
+        /// 处理事件
+        /// </summary>
+        /// <param name="event">事件</param>
+        /// <param name="ct"></param>
+        /// <returns></returns>
         Task HandleAsync(T @event, CancellationToken ct);
     }
 

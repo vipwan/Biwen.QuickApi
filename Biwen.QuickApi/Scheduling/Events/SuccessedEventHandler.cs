@@ -1,7 +1,6 @@
 ﻿using Biwen.QuickApi.Events;
-using Biwen.QuickApi.Scheduling.Events;
 
-namespace Biwen.QuickApi.Scheduling
+namespace Biwen.QuickApi.Scheduling.Events
 {
     /// <summary>
     /// 订阅Schedule完成通知

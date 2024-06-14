@@ -5,6 +5,7 @@ items:
   id: Biwen.QuickApi.Scheduling.Events
   children:
   - Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
+  - Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
   - Biwen.QuickApi.Scheduling.Events.TaskFailedEvent
   - Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
   - Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
@@ -48,6 +49,13 @@ references:
   name: TaskFailedEvent
   nameWithType: TaskFailedEvent
   fullName: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent
+- uid: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
+  commentId: T:Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.html
+  name: SuccessedEventHandler
+  nameWithType: SuccessedEventHandler
+  fullName: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
 - uid: Biwen.QuickApi.Scheduling.Events
   commentId: N:Biwen.QuickApi.Scheduling.Events
   isExternal: true

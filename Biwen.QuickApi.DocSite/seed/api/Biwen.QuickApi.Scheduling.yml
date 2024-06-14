@@ -8,10 +8,10 @@ items:
   - Biwen.QuickApi.Scheduling.IScheduleTask
   - Biwen.QuickApi.Scheduling.IScheduler
   - Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask
+  - Biwen.QuickApi.Scheduling.SampleNCrontabScheduler
   - Biwen.QuickApi.Scheduling.ScheduleTask
   - Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
   - Biwen.QuickApi.Scheduling.ServiceRegistration
-  - Biwen.QuickApi.Scheduling.SuccessedEventHandler
   langs:
   - csharp
   - vb
@@ -29,15 +29,9 @@ references:
   name: Constants
   nameWithType: Constants
   fullName: Biwen.QuickApi.Scheduling.Constants
-- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler
-  commentId: T:Biwen.QuickApi.Scheduling.SuccessedEventHandler
-  isExternal: true
-  href: Biwen.QuickApi.Scheduling.SuccessedEventHandler.html
-  name: SuccessedEventHandler
-  nameWithType: SuccessedEventHandler
-  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler
 - uid: Biwen.QuickApi.Scheduling.IScheduler
   commentId: T:Biwen.QuickApi.Scheduling.IScheduler
+  parent: Biwen.QuickApi.Scheduling
   isExternal: true
   href: Biwen.QuickApi.Scheduling.IScheduler.html
   name: IScheduler
@@ -66,6 +60,13 @@ references:
   name: OnlyOneRunningScheduleTask
   nameWithType: OnlyOneRunningScheduleTask
   fullName: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask
+- uid: Biwen.QuickApi.Scheduling.SampleNCrontabScheduler
+  commentId: T:Biwen.QuickApi.Scheduling.SampleNCrontabScheduler
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.SampleNCrontabScheduler.html
+  name: SampleNCrontabScheduler
+  nameWithType: SampleNCrontabScheduler
+  fullName: Biwen.QuickApi.Scheduling.SampleNCrontabScheduler
 - uid: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
   commentId: T:Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
   parent: Biwen.QuickApi.Scheduling

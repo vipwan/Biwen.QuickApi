@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Routing;
 
 namespace Biwen.QuickApi.Abstractions.Modular
 {
+    /// <summary>
+    /// 模块基类
+    /// </summary>
     public abstract class ModularBase : IStartup
     {
         /// <inheritdoc />

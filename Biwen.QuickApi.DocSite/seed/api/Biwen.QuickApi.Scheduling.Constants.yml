@@ -22,7 +22,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -53,7 +53,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryMinute
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -76,7 +76,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEvery15Minutes
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -99,7 +99,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryHour
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -122,7 +122,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryDay
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -145,7 +145,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryWeek
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -168,7 +168,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryMonth
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -191,7 +191,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryYear
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -215,7 +215,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryNMinutes(int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -252,7 +252,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryNHours(int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling

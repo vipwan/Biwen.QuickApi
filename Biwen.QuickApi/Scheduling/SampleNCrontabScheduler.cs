@@ -3,9 +3,9 @@ using System.Collections.Concurrent;
 namespace Biwen.QuickApi.Scheduling
 {
     /// <summary>
-    /// BackgroundTaskScheduler 后台任务调度器,用于判断任务是否可以执行
+    /// 使用NCrontab实现的调度器,不支持秒级,这是默认调度器
     /// </summary>
-    internal class SampleNCrontabScheduler : IScheduler
+    public sealed class SampleNCrontabScheduler : IScheduler
     {
         /// <summary>
         /// 暂存上次执行时间

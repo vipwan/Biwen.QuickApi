@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Events.IEventSubscriber<T>
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Events/IEventSubscriber.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Events/IEventSubscriber.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
@@ -38,19 +38,24 @@ items:
   fullName: Biwen.QuickApi.Events.IEventSubscriber<T>.HandleAsync(T, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Events/IEventSubscriber.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Events/IEventSubscriber.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
+  summary: 处理事件
+  example: []
   syntax:
     content: Task HandleAsync(T @event, CancellationToken ct)
     parameters:
     - id: event
       type: '{T}'
+      description: 事件
     - id: ct
       type: System.Threading.CancellationToken
+      description: ''
     return:
       type: System.Threading.Tasks.Task
+      description: ''
     content.vb: Function HandleAsync([event] As T, ct As CancellationToken) As Task
   overload: Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync*
   nameWithType.vb: IEventSubscriber(Of T).HandleAsync(T, CancellationToken)

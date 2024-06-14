@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.Scheduling
+﻿using static System.Net.WebRequestMethods;
+
+namespace Biwen.QuickApi.Scheduling
 {
     /// <summary>
     /// ScheduleTaskAttribute
@@ -8,12 +10,15 @@
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
     public class ScheduleTaskAttribute(string cron) : Attribute
     {
+
         /// <summary>
-        /// 支持的cron表达式格式 * * * * *：https://en.wikipedia.org/wiki/Cron
-        /// 最小单位为分钟
+        /// Cron表达式,5位码: * * * * *,不支持秒 <see href="https://en.wikipedia.org/wiki/Cron"/>
         /// </summary>
         public string Cron { get; set; } = cron;
 
+        /// <summary>
+        /// 描述信息
+        /// </summary>
         public string? Description { get; set; }
 
         /// <summary>

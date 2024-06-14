@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
@@ -35,18 +35,18 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
   summary: 获取所有ScheduleTaskMetadata
   example: []
   syntax:
-    content: Task<IEnumerable<ScheduleTaskMetadata>> GetAllAsync()
+    content: Task<ScheduleTaskMetadata[]> GetAllAsync()
     return:
-      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata}}
+      type: System.Threading.Tasks.Task{Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata[]}
       description: ''
-    content.vb: Function GetAllAsync() As Task(Of IEnumerable(Of ScheduleTaskMetadata))
+    content.vb: Function GetAllAsync() As Task(Of ScheduleTaskMetadata())
   overload: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync*
 references:
 - uid: Biwen.QuickApi.Scheduling.Stores
@@ -103,33 +103,29 @@ references:
   name: GetAllAsync
   nameWithType: IScheduleMetadataStore.GetAllAsync
   fullName: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync
-- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata}}
-  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata}}
+- uid: System.Threading.Tasks.Task{Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata[]}
+  commentId: T:System.Threading.Tasks.Task{Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata[]}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<IEnumerable<ScheduleTaskMetadata>>
-  nameWithType: Task<IEnumerable<ScheduleTaskMetadata>>
-  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata>>
-  nameWithType.vb: Task(Of IEnumerable(Of ScheduleTaskMetadata))
-  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata))
-  name.vb: Task(Of IEnumerable(Of ScheduleTaskMetadata))
+  name: Task<ScheduleTaskMetadata[]>
+  nameWithType: Task<ScheduleTaskMetadata[]>
+  fullName: System.Threading.Tasks.Task<Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata[]>
+  nameWithType.vb: Task(Of ScheduleTaskMetadata())
+  fullName.vb: System.Threading.Tasks.Task(Of Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata())
+  name.vb: Task(Of ScheduleTaskMetadata())
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: <
   - uid: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
     name: ScheduleTaskMetadata
     isExternal: true
     href: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata.html
-  - name: '>'
+  - name: '['
+  - name: ']'
   - name: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
@@ -139,17 +135,11 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
   - uid: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
     name: ScheduleTaskMetadata
     isExternal: true
     href: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata.html
+  - name: (
   - name: )
   - name: )
 - uid: System.Threading.Tasks.Task`1

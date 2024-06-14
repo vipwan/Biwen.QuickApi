@@ -97,8 +97,6 @@ items:
     name: IEvent
   - uid: Biwen.QuickApi.Events.IEventSubscriber`1
     name: IEventSubscriber<T>
-  - uid: Biwen.QuickApi.Events.ServiceRegistration
-    name: ServiceRegistration
 - uid: Biwen.QuickApi.Http
   name: Biwen.QuickApi.Http
   items:
@@ -181,19 +179,21 @@ items:
     name: IScheduleTask
   - uid: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask
     name: OnlyOneRunningScheduleTask
+  - uid: Biwen.QuickApi.Scheduling.SampleNCrontabScheduler
+    name: SampleNCrontabScheduler
   - uid: Biwen.QuickApi.Scheduling.ScheduleTask
     name: ScheduleTask
   - uid: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
     name: ScheduleTaskAttribute
   - uid: Biwen.QuickApi.Scheduling.ServiceRegistration
     name: ServiceRegistration
-  - uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler
-    name: SuccessedEventHandler
 - uid: Biwen.QuickApi.Scheduling.Events
   name: Biwen.QuickApi.Scheduling.Events
   items:
   - uid: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
     name: ScheduleTaskEvent
+  - uid: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
+    name: SuccessedEventHandler
   - uid: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent
     name: TaskFailedEvent
   - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
@@ -212,8 +212,6 @@ items:
   items:
   - uid: Microsoft.Extensions.DependencyInjection.HtmlSanitizerOptionsExtensions
     name: HtmlSanitizerOptionsExtensions
-  - uid: Microsoft.Extensions.DependencyInjection.ServiceRegistration
-    name: ServiceRegistration
 - uid: System
   name: System
   items:

@@ -2,7 +2,7 @@ using Biwen.QuickApi.Infrastructure.Html;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
-    public static partial class ServiceRegistration
+    internal static partial class ServiceRegistration
     {
         /// <summary>
         /// Adds html script sanitization services.

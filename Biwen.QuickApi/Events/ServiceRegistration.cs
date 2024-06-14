@@ -1,6 +1,6 @@
 ﻿namespace Biwen.QuickApi.Events
 {
-    public static class ServiceRegistration
+    internal static class ServiceRegistration
     {
         internal static IServiceCollection AddEvent(this IServiceCollection services)
         {

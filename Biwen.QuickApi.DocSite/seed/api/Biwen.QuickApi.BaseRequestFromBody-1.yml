@@ -14,11 +14,11 @@ items:
   fullName: Biwen.QuickApi.BaseRequestFromBody<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
-  summary: BaseRequest FromBody:Json
+  summary: 请求来自表单:JSON序列化
   example: []
   syntax:
     content: >-
@@ -64,7 +64,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequestFromBody<T>.BaseRequestFromBody()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/ec833803899c20cc9cb06cd5c88aaaffa6f24a01/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

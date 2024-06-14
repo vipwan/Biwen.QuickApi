@@ -1,24 +1,24 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler
-  commentId: T:Biwen.QuickApi.Scheduling.SuccessedEventHandler
+- uid: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
+  commentId: T:Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
   id: SuccessedEventHandler
-  parent: Biwen.QuickApi.Scheduling
+  parent: Biwen.QuickApi.Scheduling.Events
   children:
-  - Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler})
-  - Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+  - Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler})
+  - Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
   langs:
   - csharp
   - vb
   name: SuccessedEventHandler
   nameWithType: SuccessedEventHandler
-  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  fullName: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
   type: Class
   source:
     href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
   assemblies:
   - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Scheduling
+  namespace: Biwen.QuickApi.Scheduling.Events
   summary: 订阅Schedule完成通知
   example: []
   syntax:
@@ -50,51 +50,51 @@ items:
     - name: IsAsync
       type: System.Boolean
       value: true
-- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler})
-  commentId: M:Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler})
-  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler})'
-  parent: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+- uid: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler})
+  commentId: M:Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler})
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler})'
+  parent: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
   langs:
   - csharp
   - vb
   name: SuccessedEventHandler(ILogger<SuccessedEventHandler>)
   nameWithType: SuccessedEventHandler.SuccessedEventHandler(ILogger<SuccessedEventHandler>)
-  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler.SuccessedEventHandler(Microsoft.Extensions.Logging.ILogger<Biwen.QuickApi.Scheduling.SuccessedEventHandler>)
+  fullName: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.SuccessedEventHandler(Microsoft.Extensions.Logging.ILogger<Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler>)
   type: Constructor
   source:
     href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
   assemblies:
   - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Scheduling
+  namespace: Biwen.QuickApi.Scheduling.Events
   summary: 订阅Schedule完成通知
   example: []
   syntax:
     content: public SuccessedEventHandler(ILogger<SuccessedEventHandler> logger)
     parameters:
     - id: logger
-      type: Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler}
+      type: Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler}
       description: ''
     content.vb: Public Sub New(logger As ILogger(Of SuccessedEventHandler))
-  overload: Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor*
+  overload: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.#ctor*
   nameWithType.vb: SuccessedEventHandler.New(ILogger(Of SuccessedEventHandler))
-  fullName.vb: Biwen.QuickApi.Scheduling.SuccessedEventHandler.New(Microsoft.Extensions.Logging.ILogger(Of Biwen.QuickApi.Scheduling.SuccessedEventHandler))
+  fullName.vb: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.New(Microsoft.Extensions.Logging.ILogger(Of Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler))
   name.vb: New(ILogger(Of SuccessedEventHandler))
-- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
-  commentId: M:Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+- uid: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
   id: HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
-  parent: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  parent: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
   langs:
   - csharp
   - vb
   name: HandleAsync(TaskSuccessedEvent, CancellationToken)
   nameWithType: SuccessedEventHandler.HandleAsync(TaskSuccessedEvent, CancellationToken)
-  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent, System.Threading.CancellationToken)
+  fullName: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent, System.Threading.CancellationToken)
   type: Method
   source:
     href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
   assemblies:
   - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Scheduling
+  namespace: Biwen.QuickApi.Scheduling.Events
   summary: 处理事件
   example: []
   syntax:
@@ -110,17 +110,17 @@ items:
       type: System.Threading.Tasks.Task
       description: ''
     content.vb: Public Overridable Function HandleAsync([event] As TaskSuccessedEvent, ct As CancellationToken) As Task
-  overload: Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync*
+  overload: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.HandleAsync*
   implements:
   - Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
 references:
-- uid: Biwen.QuickApi.Scheduling
-  commentId: N:Biwen.QuickApi.Scheduling
+- uid: Biwen.QuickApi.Scheduling.Events
+  commentId: N:Biwen.QuickApi.Scheduling.Events
   isExternal: true
   href: Biwen.html
-  name: Biwen.QuickApi.Scheduling
-  nameWithType: Biwen.QuickApi.Scheduling
-  fullName: Biwen.QuickApi.Scheduling
+  name: Biwen.QuickApi.Scheduling.Events
+  nameWithType: Biwen.QuickApi.Scheduling.Events
+  fullName: Biwen.QuickApi.Scheduling.Events
   spec.csharp:
   - uid: Biwen
     name: Biwen
@@ -136,6 +136,11 @@ references:
     name: Scheduling
     isExternal: true
     href: Biwen.QuickApi.Scheduling.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.html
   spec.vb:
   - uid: Biwen
     name: Biwen
@@ -151,6 +156,11 @@ references:
     name: Scheduling
     isExternal: true
     href: Biwen.QuickApi.Scheduling.html
+  - name: .
+  - uid: Biwen.QuickApi.Scheduling.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -488,26 +498,26 @@ references:
     name: Events
     isExternal: true
     href: Biwen.QuickApi.Events.html
-- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor*
-  commentId: Overload:Biwen.QuickApi.Scheduling.SuccessedEventHandler.#ctor
+- uid: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.#ctor*
+  commentId: Overload:Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.#ctor
   isExternal: true
-  href: Biwen.QuickApi.Scheduling.SuccessedEventHandler.html#Biwen_QuickApi_Scheduling_SuccessedEventHandler__ctor_Microsoft_Extensions_Logging_ILogger_Biwen_QuickApi_Scheduling_SuccessedEventHandler__
+  href: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.html#Biwen_QuickApi_Scheduling_Events_SuccessedEventHandler__ctor_Microsoft_Extensions_Logging_ILogger_Biwen_QuickApi_Scheduling_Events_SuccessedEventHandler__
   name: SuccessedEventHandler
   nameWithType: SuccessedEventHandler.SuccessedEventHandler
-  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler.SuccessedEventHandler
+  fullName: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.SuccessedEventHandler
   nameWithType.vb: SuccessedEventHandler.New
-  fullName.vb: Biwen.QuickApi.Scheduling.SuccessedEventHandler.New
+  fullName.vb: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.New
   name.vb: New
-- uid: Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler}
-  commentId: T:Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.SuccessedEventHandler}
+- uid: Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler}
   parent: Microsoft.Extensions.Logging
   definition: Microsoft.Extensions.Logging.ILogger`1
   href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
   name: ILogger<SuccessedEventHandler>
   nameWithType: ILogger<SuccessedEventHandler>
-  fullName: Microsoft.Extensions.Logging.ILogger<Biwen.QuickApi.Scheduling.SuccessedEventHandler>
+  fullName: Microsoft.Extensions.Logging.ILogger<Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler>
   nameWithType.vb: ILogger(Of SuccessedEventHandler)
-  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Biwen.QuickApi.Scheduling.SuccessedEventHandler)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler)
   name.vb: ILogger(Of SuccessedEventHandler)
   spec.csharp:
   - uid: Microsoft.Extensions.Logging.ILogger`1
@@ -515,10 +525,10 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
   - name: <
-  - uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  - uid: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
     name: SuccessedEventHandler
     isExternal: true
-    href: Biwen.QuickApi.Scheduling.SuccessedEventHandler.html
+    href: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.html
   - name: '>'
   spec.vb:
   - uid: Microsoft.Extensions.Logging.ILogger`1
@@ -528,10 +538,10 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler
+  - uid: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
     name: SuccessedEventHandler
     isExternal: true
-    href: Biwen.QuickApi.Scheduling.SuccessedEventHandler.html
+    href: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.html
   - name: )
 - uid: Microsoft.Extensions.Logging.ILogger`1
   commentId: T:Microsoft.Extensions.Logging.ILogger`1
@@ -598,13 +608,13 @@ references:
     name: Logging
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
-- uid: Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync*
-  commentId: Overload:Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync
+- uid: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.HandleAsync*
+  commentId: Overload:Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.HandleAsync
   isExternal: true
-  href: Biwen.QuickApi.Scheduling.SuccessedEventHandler.html#Biwen_QuickApi_Scheduling_SuccessedEventHandler_HandleAsync_Biwen_QuickApi_Scheduling_Events_TaskSuccessedEvent_System_Threading_CancellationToken_
+  href: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.html#Biwen_QuickApi_Scheduling_Events_SuccessedEventHandler_HandleAsync_Biwen_QuickApi_Scheduling_Events_TaskSuccessedEvent_System_Threading_CancellationToken_
   name: HandleAsync
   nameWithType: SuccessedEventHandler.HandleAsync
-  fullName: Biwen.QuickApi.Scheduling.SuccessedEventHandler.HandleAsync
+  fullName: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.HandleAsync
 - uid: Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
   commentId: M:Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent,System.Threading.CancellationToken)
   parent: Biwen.QuickApi.Events.IEventSubscriber{Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent}
@@ -710,53 +720,6 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
-- uid: Biwen.QuickApi.Scheduling.Events
-  commentId: N:Biwen.QuickApi.Scheduling.Events
-  isExternal: true
-  href: Biwen.html
-  name: Biwen.QuickApi.Scheduling.Events
-  nameWithType: Biwen.QuickApi.Scheduling.Events
-  fullName: Biwen.QuickApi.Scheduling.Events
-  spec.csharp:
-  - uid: Biwen
-    name: Biwen
-    isExternal: true
-    href: Biwen.html
-  - name: .
-  - uid: Biwen.QuickApi
-    name: QuickApi
-    isExternal: true
-    href: Biwen.QuickApi.html
-  - name: .
-  - uid: Biwen.QuickApi.Scheduling
-    name: Scheduling
-    isExternal: true
-    href: Biwen.QuickApi.Scheduling.html
-  - name: .
-  - uid: Biwen.QuickApi.Scheduling.Events
-    name: Events
-    isExternal: true
-    href: Biwen.QuickApi.Scheduling.Events.html
-  spec.vb:
-  - uid: Biwen
-    name: Biwen
-    isExternal: true
-    href: Biwen.html
-  - name: .
-  - uid: Biwen.QuickApi
-    name: QuickApi
-    isExternal: true
-    href: Biwen.QuickApi.html
-  - name: .
-  - uid: Biwen.QuickApi.Scheduling
-    name: Scheduling
-    isExternal: true
-    href: Biwen.QuickApi.Scheduling.html
-  - name: .
-  - uid: Biwen.QuickApi.Scheduling.Events
-    name: Events
-    isExternal: true
-    href: Biwen.QuickApi.Scheduling.Events.html
 - uid: System.Threading
   commentId: N:System.Threading
   isExternal: true

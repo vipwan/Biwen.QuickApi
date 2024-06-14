@@ -28,6 +28,10 @@ namespace Biwen.QuickApi
         /// </summary>
         private static readonly ConcurrentDictionary<Type, InnerValidator> InnerValidators = new();
 
+        /// <summary>
+        /// 验证请求对象
+        /// </summary>
+        /// <returns></returns>
         public ValidationResult Validate()
         {
             var req = (T)MemberwiseClone();
@@ -79,7 +83,7 @@ namespace Biwen.QuickApi
     }
 
     /// <summary>
-    /// BaseRequest FromBody:Json
+    /// 请求来自表单:JSON序列化
     /// </summary>
     /// <typeparam name="T"></typeparam>
     [FromBody]

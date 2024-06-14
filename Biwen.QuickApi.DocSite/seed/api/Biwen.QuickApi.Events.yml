@@ -9,7 +9,6 @@ items:
   - Biwen.QuickApi.Events.EventSubscriber`1
   - Biwen.QuickApi.Events.IEvent
   - Biwen.QuickApi.Events.IEventSubscriber`1
-  - Biwen.QuickApi.Events.ServiceRegistration
   langs:
   - csharp
   - vb
@@ -100,13 +99,6 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: Biwen.QuickApi.Events.ServiceRegistration
-  commentId: T:Biwen.QuickApi.Events.ServiceRegistration
-  isExternal: true
-  href: Biwen.QuickApi.Events.ServiceRegistration.html
-  name: ServiceRegistration
-  nameWithType: ServiceRegistration
-  fullName: Biwen.QuickApi.Events.ServiceRegistration
 - uid: Biwen.QuickApi.Events
   commentId: N:Biwen.QuickApi.Events
   isExternal: true

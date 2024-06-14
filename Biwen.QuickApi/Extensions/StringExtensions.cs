@@ -3,6 +3,10 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Net;
 namespace System;
+
+/// <summary>
+/// 字符串扩展类
+/// </summary>
 public static class StringExtensions
 {
 
