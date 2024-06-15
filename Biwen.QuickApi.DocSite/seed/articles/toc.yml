@@ -1,4 +1,6 @@
 ﻿items:
+- name: 系统配置
+  href: BiwenQuickApiOptions.md
 - href: 1.md
 - href: 2.md
 - name: 发布订阅

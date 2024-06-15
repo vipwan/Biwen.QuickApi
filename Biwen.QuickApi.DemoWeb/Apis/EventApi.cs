@@ -110,4 +110,17 @@
             return Results.Content("send event");
         }
     }
+
+    [QuickApi("throw")]
+    public class ThrowApi : BaseQuickApi
+    {
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
+        {
+            await Task.CompletedTask;
+            throw new Exception("抛出一个异常!");
+            //return Results.InternalServerError();
+        }
+    }
+
+
 }
