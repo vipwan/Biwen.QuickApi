@@ -5,6 +5,11 @@
     public class BiwenQuickApiOptions
     {
         /// <summary>
+        /// 配置文件中定位Key
+        /// </summary>
+        public const string Key = "BiwenQuickApi:QuickApi";
+
+        /// <summary>
         /// 全局路径前缀
         /// </summary>
         public string RoutePrefix { get; set; } = "api";

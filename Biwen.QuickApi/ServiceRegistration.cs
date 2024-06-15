@@ -52,7 +52,9 @@ namespace Biwen.QuickApi
             services.AddAntiforgery();
 
             //options
-            services.AddOptions<BiwenQuickApiOptions>().Configure(o => { options?.Invoke(o); });
+            services.Configure<BiwenQuickApiOptions>(services.BuildServiceProvider().GetRequiredService<IConfiguration>().GetSection(BiwenQuickApiOptions.Key))
+            .Configure<BiwenQuickApiOptions>(o => options?.Invoke(o));
+
 
             /// <summary>
             /// 开启ProblemDetails

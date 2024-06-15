@@ -1,5 +1,6 @@
 ﻿global using FluentValidation;
 global using FluentValidation.Results;
+global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.Options;
 global using Microsoft.Extensions.Logging;
 global using Microsoft.Extensions.Localization;

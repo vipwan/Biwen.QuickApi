@@ -1,0 +1,43 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "BiwenQuickApi": {
+      "type": "object",
+      "description": "BiwenQuickApi",
+      "properties": {
+        "QuickApi": {
+          "type": "object",
+          "description": "QuickApi",
+          "properties": {
+            "RoutePrefix": {
+              "type": "string",
+              "default": "api",
+              "description": "QuickApi前缀,默认:api"
+            },
+            "EnableAntiForgeryTokens": {
+              "type": "boolean",
+              "default": true,
+              "description": "默认:true"
+            },
+            "EnablePubSub": {
+              "type": "boolean",
+              "default": true,
+              "description": "是否启用内置发布订阅,默认:true"
+            },
+            "EnableScheduling": {
+              "type": "boolean",
+              "default": true,
+              "description": "是否启用内置Schedule,默认:true"
+            },
+            "UseQuickApiExceptionResultBuilder": {
+              "type": "boolean",
+              "default": false,
+              "description": "是否500返回详细信息,默认:false"
+            }
+          }
+        }
+      }
+    }
+  }
+}

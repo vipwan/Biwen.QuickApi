@@ -80,13 +80,9 @@ builder.Services.AddIf(builder.Environment.IsDevelopment(), sp =>
 });
 
 
-//
+//可通过配置文件配置
 builder.Services.AddBiwenQuickApis(o =>
 {
-    o.RoutePrefix = "quick";//默认QuickApi的路由前缀
-    o.EnableAntiForgeryTokens = true;//默认启动防伪
-    o.EnablePubSub = true;//默认启动发布订阅
-    o.EnableScheduling = true;//默认启动定时任务
     o.UseQuickApiExceptionResultBuilder = true;
 });
 
