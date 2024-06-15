@@ -1,9 +1,9 @@
-针对简单的对象映射,推荐使用`Biwen.AutoClassGen`生成,提供最佳性能,
-[帮助文档](https://github.com/vipwan/Biwen.AutoClassGen/blob/master/Gen-Dto.md)
+锘块拡瀵圭畝鍗曠殑瀵硅薄鏄犲皠,鎺ㄨ崘浣跨敤`Biwen.AutoClassGen`鐢熸垚,鎻愪緵鏈�浣虫�ц兘,
+[甯姪鏂囨。](https://github.com/vipwan/Biwen.AutoClassGen/blob/master/Gen-Dto.md)
 
-你也可以使用内置`Maspter`,服务中注入`IMapper`:
+浣犱篃鍙互浣跨敤鍐呯疆`Maspter`,鏈嶅姟涓敞鍏IMapper`:
 ```csharp
-    //测试Mapping
+    //娴嬭瘯Mapping
     public class MappingTest
     {
         [Fact]
@@ -29,7 +29,7 @@
 
         #region model
 
-        //定义User类型:
+        //瀹氫箟User绫诲瀷:
         public class User
         {
             public string? Name { get; set; }
@@ -38,7 +38,7 @@
             public string? Address { get; set; }
         }
 
-        //定义UserDto类型:
+        //瀹氫箟UserDto绫诲瀷:
         public class UserDto
         {
             public string? Name { get; set; }
