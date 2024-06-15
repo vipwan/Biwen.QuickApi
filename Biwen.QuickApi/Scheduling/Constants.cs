@@ -3,6 +3,7 @@
     /// <summary>
     /// Constants for Scheduling Cron
     /// </summary>
+    [SuppressType]
     public static class Constants
     {
         /// <summary>

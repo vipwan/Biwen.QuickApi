@@ -2,6 +2,7 @@
 
 namespace Biwen.QuickApi.OpenApi
 {
+    [SuppressType]
     public static class ServiceRegistration
     {
         /// <summary>

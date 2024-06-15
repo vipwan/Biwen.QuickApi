@@ -15,8 +15,8 @@ namespace Biwen.QuickApi.Infrastructure.StartupTask
 
         public override void ConfigureServices(IServiceCollection services)
         {
-            var taskTypes = ASS.InAllRequiredAssemblies.Where(
-                x => x.IsAssignableTo(startupType) && x.IsClass && !x.IsAbstract);
+            var taskTypes = ASS.InAllRequiredAssemblies.ThatInherit<IStartupTask>()
+                .Where(x => x.IsClass && !x.IsAbstract);
 
             foreach (var taskType in taskTypes)
             {

@@ -7,6 +7,7 @@ using Microsoft.Extensions.Options;
 /// <summary>
 /// <see cref="IServiceCollection"/> extension methods.
 /// </summary>
+[SuppressType]
 public static class ServiceCollectionExtensions
 {
 

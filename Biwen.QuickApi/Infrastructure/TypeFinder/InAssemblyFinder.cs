@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 namespace Biwen.QuickApi.Infrastructure.TypeFinder
 {
+#pragma warning disable GEN031 // 使用[AutoGen]自动生成
     internal interface IInAssemblyFinder : IEnumerable<Type>
     {
         /// <summary>
@@ -62,6 +63,7 @@ namespace Biwen.QuickApi.Infrastructure.TypeFinder
         /// <typeparam name="T">The attribute that types must define.</typeparam>
         IInAssemblyFinder WithAttribute<T>() where T : Attribute;
     }
+#pragma warning restore GEN031 // 使用[AutoGen]自动生成
 
     internal class InAssemblyFinder : IInAssemblyFinder
     {
@@ -117,7 +119,7 @@ namespace Biwen.QuickApi.Infrastructure.TypeFinder
 
             foreach (var ass in Assemblies)
             {
-                foreach (var type in ass.GetTypes())
+                foreach (var type in ass.GetTypes().Where(x => x.GetCustomAttribute<SuppressTypeAttribute>() is null))
                 {
                     if (MainRule?.Complies(type) ?? true)
                     {

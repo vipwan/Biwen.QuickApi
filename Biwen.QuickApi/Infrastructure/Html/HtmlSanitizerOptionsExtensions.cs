@@ -3,6 +3,7 @@ using HtmlSanitizerOptions = Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOpt
 
 namespace Microsoft.Extensions.DependencyInjection
 {
+    [SuppressType]
     public static class HtmlSanitizerOptionsExtensions
     {
         /// <summary>

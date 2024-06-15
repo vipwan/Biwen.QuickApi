@@ -2,6 +2,7 @@
 using MapsterMapper;
 namespace Biwen.QuickApi.Mapping
 {
+    [SuppressType]
     public static class ServiceRegistration
     {
         /// <summary>

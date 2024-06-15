@@ -6,6 +6,7 @@ using System.Text.Json;
 
 namespace Biwen.QuickApi.OpenApi.Scalar
 {
+    [SuppressType]
     public static class IEndpointRouteBuilderExtensions
     {
         private static readonly JsonSerializerOptions JsonSerializerOptions = new()

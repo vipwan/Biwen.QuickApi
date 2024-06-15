@@ -1,5 +1,4 @@
-﻿
-using Biwen.QuickApi.Infrastructure.TypeFinder;
+﻿using Biwen.QuickApi.Infrastructure.TypeFinder;
 
 namespace Biwen.QuickApi.Infrastructure
 {
@@ -7,6 +6,7 @@ namespace Biwen.QuickApi.Infrastructure
     /// <summary>
     /// Assembly Helper
     /// </summary>
+    [SuppressType]
     internal static class Assemblies
     {
         /// <summary>
@@ -17,6 +17,8 @@ namespace Biwen.QuickApi.Infrastructure
             "netstandard",
             "Microsoft",
             "Mono",
+            "AngleSharp",//AngleSharp
+            "Mapster",//Mapster
             "Scrutor",//Scrutor
             "Humanizer",
             "SQLitePCLRaw",//Sqlite
@@ -28,6 +30,7 @@ namespace Biwen.QuickApi.Infrastructure
             "Asp.Versioning",
             "NSwag",
             "YamlDotNet",
+            "NCrontab",
             "NJsonSchema",
             "Namotion.Reflection",
             "MiniProfiler",

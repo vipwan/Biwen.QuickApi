@@ -3,6 +3,7 @@
     /// <summary>
     /// IdGenerator
     /// </summary>
+    [SuppressType]
     public static class IdGenerator
     {
         private static readonly char[] _encode32Chars = "0123456789abcdefghjkmnpqrstvwxyz".ToCharArray();

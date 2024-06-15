@@ -8,6 +8,7 @@ using IComponent = Microsoft.AspNetCore.Components.IComponent;
 
 namespace Biwen.QuickApi
 {
+    [SuppressType]
     public static class IEndpointRouteBuilderExtensions
     {
         /// <summary>

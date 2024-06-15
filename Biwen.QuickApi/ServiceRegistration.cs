@@ -115,7 +115,8 @@ namespace Biwen.QuickApi
             {
                 lock (_lock)
                 {
-                    return _modulars ??= ASS.InAllRequiredAssemblies.Where(x => !x.IsAbstract && x.IsClass && x.IsAssignableTo(ModularBaseType));
+                    return _modulars ??= ASS.InAllRequiredAssemblies.ThatInherit<ModularBase>()
+                        .Where(x => !x.IsAbstract && x.IsClass);
                 }
             }
         }

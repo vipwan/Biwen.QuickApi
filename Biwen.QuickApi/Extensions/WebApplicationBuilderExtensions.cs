@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Builder;
 /// <summary>
 /// <see cref="IApplicationBuilder"/> extension methods.
 /// </summary>
+[SuppressType]
 public static class WebApplicationBuilderExtensions
 {
 

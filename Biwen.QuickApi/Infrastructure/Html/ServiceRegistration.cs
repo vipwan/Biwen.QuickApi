@@ -2,6 +2,7 @@ using Biwen.QuickApi.Infrastructure.Html;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
+    [SuppressType]
     internal static partial class ServiceRegistration
     {
         /// <summary>

@@ -1,5 +1,6 @@
 ﻿namespace Biwen.QuickApi
 {
+    [SuppressType]
     internal static class EnumExtensions
     {
         /// <summary>

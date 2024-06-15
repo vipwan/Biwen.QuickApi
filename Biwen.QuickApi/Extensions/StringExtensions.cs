@@ -9,6 +9,7 @@ namespace System;
 /// <summary>
 /// 字符串扩展类
 /// </summary>
+[SuppressType]
 public static class StringExtensions
 {
 

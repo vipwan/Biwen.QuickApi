@@ -3,6 +3,7 @@ using Biwen.QuickApi.Scheduling.Stores.ConfigurationStore;
 
 namespace Biwen.QuickApi.Scheduling
 {
+    [SuppressType]
     public static class ServiceRegistration
     {
         /// <summary>
@@ -56,16 +57,14 @@ namespace Biwen.QuickApi.Scheduling
         }
 
         static readonly object _lock = new();//锁
-        static readonly Type InterfaceScheduleTask = typeof(IScheduleTask);
-
         static IEnumerable<Type> _scheduleTasks = null!;
         static IEnumerable<Type> ScheduleTasks
         {
             get
             {
                 lock (_lock)
-                    return _scheduleTasks ??= ASS.InAllRequiredAssemblies.Where(x =>
-                    !x.IsAbstract && x.IsPublic && x.IsClass && x.IsAssignableTo(InterfaceScheduleTask));
+                    return _scheduleTasks ??= ASS.InAllRequiredAssemblies.ThatInherit<IScheduleTask>()
+                        .Where(x => !x.IsAbstract && x.IsPublic && x.IsClass);
             }
         }
     }
