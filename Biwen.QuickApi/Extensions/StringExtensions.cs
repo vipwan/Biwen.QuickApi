@@ -205,9 +205,9 @@ public static class StringExtensions
     /// MD5加密
     /// </summary>
     /// <param name="text">需要加密的文本</param>
-    /// <param name="upper">加密大写</param>
+    /// <param name="uppercase">生成大小写,默认:小写</param>
     /// <returns></returns>
-    public static string ToMD5(this string text, bool upper = true)
+    public static string ToMD5(this string text, bool uppercase = false)
     {
         var inputBytes = Encoding.ASCII.GetBytes(text);
         var hash = MD5.HashData(inputBytes);
@@ -217,7 +217,27 @@ public static class StringExtensions
         {
             sb.Append(hash[i].ToString("X2"));
         }
-        return upper ? sb.ToString() : sb.ToString().ToLower();
+        return uppercase ? sb.ToString() : sb.ToString().ToLower();
     }
+
+    /// <summary>
+    /// SHA1加密
+    /// </summary>
+    /// <param name="text">需要加密的文本</param>
+    /// <param name="uppercase">生成大小写,默认:小写</param>
+    /// <returns></returns>
+    public static string ToSHA1(this string text, bool uppercase = false)
+    {
+        var inputBytes = Encoding.ASCII.GetBytes(text);
+        var hash = SHA1.HashData(inputBytes);
+
+        var sb = new StringBuilder();
+        for (var i = 0; i < hash.Length; i++)
+        {
+            sb.Append(hash[i].ToString("X2"));
+        }
+        return uppercase ? sb.ToString() : sb.ToString().ToLower();
+    }
+
 
 }

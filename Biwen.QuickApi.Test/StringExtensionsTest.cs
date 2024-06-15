@@ -84,7 +84,17 @@
             var text = "hello";
             var result = "5d41402abc4b2a76b9719d911017c592";
             testOutput.WriteLine($"ToMD5Test: {text} => {result}");
-            Assert.Equal(result, text.ToMD5(false));
+            Assert.Equal(result, text.ToMD5());
+        }
+
+        //ToSHA1 test
+        [Fact]
+        public void ToSHA1Test()
+        {
+            var text = "hello";
+            var result = "aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d";
+            testOutput.WriteLine($"ToSHA1Test: {text} => {result}");
+            Assert.Equal(result, text.ToSHA1());
         }
     }
 
