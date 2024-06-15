@@ -2,6 +2,8 @@
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Net;
+using System.Security.Cryptography;
+using System.Text;
 namespace System;
 
 /// <summary>
@@ -197,6 +199,25 @@ public static class StringExtensions
         {
             return false;
         }
+    }
+
+    /// <summary>
+    /// MD5加密
+    /// </summary>
+    /// <param name="text">需要加密的文本</param>
+    /// <param name="upper">加密大写</param>
+    /// <returns></returns>
+    public static string ToMD5(this string text, bool upper = true)
+    {
+        var inputBytes = Encoding.ASCII.GetBytes(text);
+        var hash = MD5.HashData(inputBytes);
+
+        var sb = new StringBuilder();
+        for (var i = 0; i < hash.Length; i++)
+        {
+            sb.Append(hash[i].ToString("X2"));
+        }
+        return upper ? sb.ToString() : sb.ToString().ToLower();
     }
 
 }

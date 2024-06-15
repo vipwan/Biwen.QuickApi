@@ -76,6 +76,16 @@
             Assert.Equal(flag, text.IsJson());
         }
 
+
+        //ToMD5 test
+        [Fact]
+        public void ToMD5Test()
+        {
+            var text = "hello";
+            var result = "5d41402abc4b2a76b9719d911017c592";
+            testOutput.WriteLine($"ToMD5Test: {text} => {result}");
+            Assert.Equal(result, text.ToMD5(false));
+        }
     }
 
 }
