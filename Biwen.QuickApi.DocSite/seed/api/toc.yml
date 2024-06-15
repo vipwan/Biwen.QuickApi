@@ -112,6 +112,11 @@ items:
     name: QuickApiAntiforgeryMiddleware
   - uid: Biwen.QuickApi.Http.QuickApiMiddleware
     name: QuickApiMiddleware
+- uid: Biwen.QuickApi.Infrastructure
+  name: Biwen.QuickApi.Infrastructure
+  items:
+  - uid: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+    name: SuppressTypeAttribute
 - uid: Biwen.QuickApi.Infrastructure.Html
   name: Biwen.QuickApi.Infrastructure.Html
   items:
@@ -139,6 +144,11 @@ items:
     name: IStartupTask
   - uid: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase
     name: StartupTaskBase
+- uid: Biwen.QuickApi.Mapping
+  name: Biwen.QuickApi.Mapping
+  items:
+  - uid: Biwen.QuickApi.Mapping.ServiceRegistration
+    name: ServiceRegistration
 - uid: Biwen.QuickApi.Metadata
   name: Biwen.QuickApi.Metadata
   items:

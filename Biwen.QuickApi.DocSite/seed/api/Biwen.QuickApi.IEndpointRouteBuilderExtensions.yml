@@ -16,13 +16,19 @@ items:
   fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
   syntax:
-    content: public static class IEndpointRouteBuilderExtensions
-    content.vb: Public Module IEndpointRouteBuilderExtensions
+    content: >-
+      [SuppressType]
+
+      public static class IEndpointRouteBuilderExtensions
+    content.vb: >-
+      <SuppressType>
+
+      Public Module IEndpointRouteBuilderExtensions
   inheritance:
   - System.Object
   inheritedMembers:
@@ -33,6 +39,10 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+  attributes:
+  - type: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+    ctor: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.#ctor
+    arguments: []
 - uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Boolean)
   commentId: M:Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Boolean)
   id: MapMethods``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Boolean)
@@ -46,7 +56,7 @@ items:
   fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods<T>(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, string, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -88,7 +98,7 @@ items:
   fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent<T>(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, string, System.Func<Microsoft.AspNetCore.Http.HttpContext, object>?, Biwen.QuickApi.Verb, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -136,7 +146,7 @@ items:
   fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, string, System.Action<Microsoft.AspNetCore.Routing.IEndpointRouteBuilder>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/IEndpointRouteBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

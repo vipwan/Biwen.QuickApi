@@ -78,6 +78,7 @@
   "Biwen.QuickApi.BiwenQuickApiOptions.EnableAntiForgeryTokens": "Biwen.QuickApi.BiwenQuickApiOptions.yml",
   "Biwen.QuickApi.BiwenQuickApiOptions.EnablePubSub": "Biwen.QuickApi.BiwenQuickApiOptions.yml",
   "Biwen.QuickApi.BiwenQuickApiOptions.EnableScheduling": "Biwen.QuickApi.BiwenQuickApiOptions.yml",
+  "Biwen.QuickApi.BiwenQuickApiOptions.Key": "Biwen.QuickApi.BiwenQuickApiOptions.yml",
   "Biwen.QuickApi.BiwenQuickApiOptions.RoutePrefix": "Biwen.QuickApi.BiwenQuickApiOptions.yml",
   "Biwen.QuickApi.BiwenQuickApiOptions.UseQuickApiExceptionResultBuilder": "Biwen.QuickApi.BiwenQuickApiOptions.yml",
   "Biwen.QuickApi.DefaultReqBinder`1": "Biwen.QuickApi.DefaultReqBinder-1.yml",
@@ -130,6 +131,7 @@
   "Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapComponent``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Object},Biwen.QuickApi.Verb,System.Boolean)": "Biwen.QuickApi.IEndpointRouteBuilderExtensions.yml",
   "Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapGroup(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder})": "Biwen.QuickApi.IEndpointRouteBuilderExtensions.yml",
   "Biwen.QuickApi.IEndpointRouteBuilderExtensions.MapMethods``1(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,System.Boolean)": "Biwen.QuickApi.IEndpointRouteBuilderExtensions.yml",
+  "Biwen.QuickApi.Infrastructure": "Biwen.QuickApi.Infrastructure.yml",
   "Biwen.QuickApi.Infrastructure.Html": "Biwen.QuickApi.Infrastructure.Html.yml",
   "Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions": "Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions.yml",
   "Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions.#ctor": "Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions.yml",
@@ -162,6 +164,8 @@
   "Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase.Delay": "Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase.yml",
   "Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase.ExecuteAsync(System.Threading.CancellationToken)": "Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase.yml",
   "Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase.Order": "Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase.yml",
+  "Biwen.QuickApi.Infrastructure.SuppressTypeAttribute": "Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.yml",
+  "Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.#ctor": "Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.yml",
   "Biwen.QuickApi.IResultExtensions": "Biwen.QuickApi.IResultExtensions.yml",
   "Biwen.QuickApi.IResultExtensions.AsRspOfResult(Microsoft.AspNetCore.Http.IResult)": "Biwen.QuickApi.IResultExtensions.yml",
   "Biwen.QuickApi.IResultResponse": "Biwen.QuickApi.IResultResponse.yml",
@@ -181,6 +185,9 @@
   "Biwen.QuickApi.IResultResponse.Stream(System.IO.Stream,System.String,System.String,System.Boolean)": "Biwen.QuickApi.IResultResponse.yml",
   "Biwen.QuickApi.IResultResponse.Text(System.String,System.String,System.Text.Encoding,System.Nullable{System.Int32})": "Biwen.QuickApi.IResultResponse.yml",
   "Biwen.QuickApi.IResultResponse.Unauthorized": "Biwen.QuickApi.IResultResponse.yml",
+  "Biwen.QuickApi.Mapping": "Biwen.QuickApi.Mapping.yml",
+  "Biwen.QuickApi.Mapping.ServiceRegistration": "Biwen.QuickApi.Mapping.ServiceRegistration.yml",
+  "Biwen.QuickApi.Mapping.ServiceRegistration.AddMapsterMapper(Microsoft.Extensions.DependencyInjection.IServiceCollection)": "Biwen.QuickApi.Mapping.ServiceRegistration.yml",
   "Biwen.QuickApi.Metadata": "Biwen.QuickApi.Metadata.yml",
   "Biwen.QuickApi.Metadata.QuickApiEndpointMetadata": "Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.yml",
   "Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.#ctor": "Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.yml",
@@ -328,5 +335,7 @@
   "System.StringExtensions.RemoveTags(System.String,System.Boolean)": "System.StringExtensions.yml",
   "System.StringExtensions.ReplaceAll(System.String,System.Collections.Generic.IDictionary{System.String,System.String})": "System.StringExtensions.yml",
   "System.StringExtensions.ToCamalCase(System.String)": "System.StringExtensions.yml",
-  "System.StringExtensions.ToPascalCase(System.String,System.Char)": "System.StringExtensions.yml"
+  "System.StringExtensions.ToMD5(System.String,System.Boolean)": "System.StringExtensions.yml",
+  "System.StringExtensions.ToPascalCase(System.String,System.Char)": "System.StringExtensions.yml",
+  "System.StringExtensions.ToSHA1(System.String,System.Boolean)": "System.StringExtensions.yml"
 }

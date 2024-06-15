@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure
+  commentId: N:Biwen.QuickApi.Infrastructure
+  id: Biwen.QuickApi.Infrastructure
+  children:
+  - Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Infrastructure
+  nameWithType: Biwen.QuickApi.Infrastructure
+  fullName: Biwen.QuickApi.Infrastructure
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+  commentId: T:Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+  parent: Biwen.QuickApi.Infrastructure
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.html
+  name: SuppressTypeAttribute
+  nameWithType: SuppressTypeAttribute
+  fullName: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+- uid: Biwen.QuickApi.Infrastructure
+  commentId: N:Biwen.QuickApi.Infrastructure
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure
+  nameWithType: Biwen.QuickApi.Infrastructure
+  fullName: Biwen.QuickApi.Infrastructure
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html

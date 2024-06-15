@@ -11,7 +11,9 @@ items:
   - System.StringExtensions.RemoveTags(System.String,System.Boolean)
   - System.StringExtensions.ReplaceAll(System.String,System.Collections.Generic.IDictionary{System.String,System.String})
   - System.StringExtensions.ToCamalCase(System.String)
+  - System.StringExtensions.ToMD5(System.String,System.Boolean)
   - System.StringExtensions.ToPascalCase(System.String,System.Char)
+  - System.StringExtensions.ToSHA1(System.String,System.Boolean)
   langs:
   - csharp
   - vb
@@ -20,15 +22,21 @@ items:
   fullName: System.StringExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
   summary: 字符串扩展类
   example: []
   syntax:
-    content: public static class StringExtensions
-    content.vb: Public Module StringExtensions
+    content: >-
+      [SuppressType]
+
+      public static class StringExtensions
+    content.vb: >-
+      <SuppressType>
+
+      Public Module StringExtensions
   inheritance:
   - System.Object
   inheritedMembers:
@@ -39,6 +47,10 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+  attributes:
+  - type: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+    ctor: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.#ctor
+    arguments: []
 - uid: System.StringExtensions.IsLetter(System.Char)
   commentId: M:System.StringExtensions.IsLetter(System.Char)
   id: IsLetter(System.Char)
@@ -52,7 +64,7 @@ items:
   fullName: System.StringExtensions.IsLetter(char)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -83,7 +95,7 @@ items:
   fullName: System.StringExtensions.IsSpace(char)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -116,7 +128,7 @@ items:
   fullName: System.StringExtensions.RemoveTags(string, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -152,7 +164,7 @@ items:
   fullName: System.StringExtensions.ToPascalCase(string, char)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -185,7 +197,7 @@ items:
   fullName: System.StringExtensions.ToCamalCase(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -218,7 +230,7 @@ items:
   fullName: System.StringExtensions.ReplaceAll(string, System.Collections.Generic.IDictionary<string, string>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -254,7 +266,7 @@ items:
   fullName: System.StringExtensions.IsJson(string, System.Text.Json.JsonDocumentOptions)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -274,6 +286,78 @@ items:
   nameWithType.vb: StringExtensions.IsJson(String, JsonDocumentOptions)
   fullName.vb: System.StringExtensions.IsJson(String, System.Text.Json.JsonDocumentOptions)
   name.vb: IsJson(String, JsonDocumentOptions)
+- uid: System.StringExtensions.ToMD5(System.String,System.Boolean)
+  commentId: M:System.StringExtensions.ToMD5(System.String,System.Boolean)
+  id: ToMD5(System.String,System.Boolean)
+  isExtensionMethod: true
+  parent: System.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToMD5(string, bool)
+  nameWithType: StringExtensions.ToMD5(string, bool)
+  fullName: System.StringExtensions.ToMD5(string, bool)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/StringExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: System
+  summary: MD5加密
+  example: []
+  syntax:
+    content: public static string ToMD5(this string text, bool uppercase = false)
+    parameters:
+    - id: text
+      type: System.String
+      description: 需要加密的文本
+    - id: uppercase
+      type: System.Boolean
+      description: 生成大小写,默认:小写
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function ToMD5(text As String, uppercase As Boolean = False) As String
+  overload: System.StringExtensions.ToMD5*
+  nameWithType.vb: StringExtensions.ToMD5(String, Boolean)
+  fullName.vb: System.StringExtensions.ToMD5(String, Boolean)
+  name.vb: ToMD5(String, Boolean)
+- uid: System.StringExtensions.ToSHA1(System.String,System.Boolean)
+  commentId: M:System.StringExtensions.ToSHA1(System.String,System.Boolean)
+  id: ToSHA1(System.String,System.Boolean)
+  isExtensionMethod: true
+  parent: System.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToSHA1(string, bool)
+  nameWithType: StringExtensions.ToSHA1(string, bool)
+  fullName: System.StringExtensions.ToSHA1(string, bool)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/Extensions/StringExtensions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: System
+  summary: SHA1加密
+  example: []
+  syntax:
+    content: public static string ToSHA1(this string text, bool uppercase = false)
+    parameters:
+    - id: text
+      type: System.String
+      description: 需要加密的文本
+    - id: uppercase
+      type: System.Boolean
+      description: 生成大小写,默认:小写
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function ToSHA1(text As String, uppercase As Boolean = False) As String
+  overload: System.StringExtensions.ToSHA1*
+  nameWithType.vb: StringExtensions.ToSHA1(String, Boolean)
+  fullName.vb: System.StringExtensions.ToSHA1(String, Boolean)
+  name.vb: ToSHA1(String, Boolean)
 references:
 - uid: System
   commentId: N:System
@@ -757,3 +841,17 @@ references:
     name: Json
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json
+- uid: System.StringExtensions.ToMD5*
+  commentId: Overload:System.StringExtensions.ToMD5
+  isExternal: true
+  href: System.StringExtensions.html#System_StringExtensions_ToMD5_System_String_System_Boolean_
+  name: ToMD5
+  nameWithType: StringExtensions.ToMD5
+  fullName: System.StringExtensions.ToMD5
+- uid: System.StringExtensions.ToSHA1*
+  commentId: Overload:System.StringExtensions.ToSHA1
+  isExternal: true
+  href: System.StringExtensions.html#System_StringExtensions_ToSHA1_System_String_System_Boolean_
+  name: ToSHA1
+  nameWithType: StringExtensions.ToSHA1
+  fullName: System.StringExtensions.ToSHA1

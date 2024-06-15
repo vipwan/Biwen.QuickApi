@@ -14,13 +14,19 @@ items:
   fullName: Biwen.QuickApi.OpenApi.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi
   syntax:
-    content: public static class ServiceRegistration
-    content.vb: Public Module ServiceRegistration
+    content: >-
+      [SuppressType]
+
+      public static class ServiceRegistration
+    content.vb: >-
+      <SuppressType>
+
+      Public Module ServiceRegistration
   inheritance:
   - System.Object
   inheritedMembers:
@@ -31,6 +37,10 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+  attributes:
+  - type: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+    ctor: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.#ctor
+    arguments: []
 - uid: Biwen.QuickApi.OpenApi.ServiceRegistration.AddOpenApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Boolean,System.String[])
   commentId: M:Biwen.QuickApi.OpenApi.ServiceRegistration.AddOpenApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Boolean,System.String[])
   id: AddOpenApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Boolean,System.String[])
@@ -44,7 +54,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.ServiceRegistration.AddOpenApi(Microsoft.Extensions.DependencyInjection.IServiceCollection, string, bool, string[]?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi

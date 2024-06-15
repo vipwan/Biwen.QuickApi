@@ -13,6 +13,7 @@ using System.Text.Unicode;
 
 namespace Biwen.QuickApi
 {
+    [SuppressType]
     public static class ServiceRegistration
     {
         /// <summary>

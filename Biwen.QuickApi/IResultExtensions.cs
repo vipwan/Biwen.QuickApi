@@ -2,6 +2,7 @@
 
 namespace Biwen.QuickApi
 {
+    [SuppressType]
     public static class IResultExtensions
     {
         /// <summary>

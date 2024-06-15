@@ -1,8 +1,40 @@
 ﻿items:
 - href: 1.md
-- name: Engineering Docs
+- href: 2.md
+- name: 发布订阅
+  href: 3.md
+- name: 作业调度
+  href: 4.md
+- name: 对象映射
+  href: DTO.md
+
+- name: Api模块
   expanded: true
   items:
+  - name: IQuickApi
+    href: QuickApi.md
+  - name: IQuickEndpoint
+    href: QuickEndpoint.md
+  - name: 请求绑定
+    href: QuickApi.md
+  - name: 请求验证
+    href: QuickApi.md
+  - name: OpenApi集成
+  - name: 更多帮助
+    href: https://github.com/vipwan/Biwen.QuickApi/issues
+  
+- name: 其他模块
+  expanded: true
+  items:
+  - name: 本地锁
+    href: 5.md
+  - name: 启动任务
+    href: 6.md
+  - name: XSS过滤
+    href: 7.md
+  - name: IdGenerator
+    href: 8.md
+
   - name: Section 1
   - href: engineering_guidelines.md
   - href: csharp_coding_standards.md

@@ -1,5 +1,6 @@
 ﻿namespace Biwen.QuickApi.Events
 {
+    [SuppressType]
     public static class EventExtensions
     {
         /// <summary>

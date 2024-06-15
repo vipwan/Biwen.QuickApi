@@ -9,6 +9,7 @@ items:
   - Biwen.QuickApi.BiwenQuickApiOptions.EnableAntiForgeryTokens
   - Biwen.QuickApi.BiwenQuickApiOptions.EnablePubSub
   - Biwen.QuickApi.BiwenQuickApiOptions.EnableScheduling
+  - Biwen.QuickApi.BiwenQuickApiOptions.Key
   - Biwen.QuickApi.BiwenQuickApiOptions.RoutePrefix
   - Biwen.QuickApi.BiwenQuickApiOptions.UseQuickApiExceptionResultBuilder
   langs:
@@ -19,7 +20,7 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -36,6 +37,29 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+- uid: Biwen.QuickApi.BiwenQuickApiOptions.Key
+  commentId: F:Biwen.QuickApi.BiwenQuickApiOptions.Key
+  id: Key
+  parent: Biwen.QuickApi.BiwenQuickApiOptions
+  langs:
+  - csharp
+  - vb
+  name: Key
+  nameWithType: BiwenQuickApiOptions.Key
+  fullName: Biwen.QuickApi.BiwenQuickApiOptions.Key
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/BiwenQuickApiOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  summary: 配置文件中定位Key
+  example: []
+  syntax:
+    content: public const string Key = "BiwenQuickApi:QuickApi"
+    return:
+      type: System.String
+    content.vb: Public Const Key As String = "BiwenQuickApi:QuickApi"
 - uid: Biwen.QuickApi.BiwenQuickApiOptions.#ctor
   commentId: M:Biwen.QuickApi.BiwenQuickApiOptions.#ctor
   id: '#ctor'
@@ -48,7 +72,7 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.BiwenQuickApiOptions()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -71,7 +95,7 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.RoutePrefix
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -96,7 +120,7 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.EnableAntiForgeryTokens
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -121,7 +145,7 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.EnablePubSub
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -146,7 +170,7 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.EnableScheduling
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -171,7 +195,7 @@ items:
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.UseQuickApiExceptionResultBuilder
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/14e68063023ca260aa80e9bb0f0f1b144302bc6c/Biwen.QuickApi/BiwenQuickApiOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/BiwenQuickApiOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -449,6 +473,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: Biwen.QuickApi.BiwenQuickApiOptions.#ctor*
   commentId: Overload:Biwen.QuickApi.BiwenQuickApiOptions.#ctor
   isExternal: true
@@ -466,17 +501,6 @@ references:
   name: RoutePrefix
   nameWithType: BiwenQuickApiOptions.RoutePrefix
   fullName: Biwen.QuickApi.BiwenQuickApiOptions.RoutePrefix
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: Biwen.QuickApi.BiwenQuickApiOptions.EnableAntiForgeryTokens*
   commentId: Overload:Biwen.QuickApi.BiwenQuickApiOptions.EnableAntiForgeryTokens
   isExternal: true

@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Mapping
+  commentId: N:Biwen.QuickApi.Mapping
+  id: Biwen.QuickApi.Mapping
+  children:
+  - Biwen.QuickApi.Mapping.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Mapping
+  nameWithType: Biwen.QuickApi.Mapping
+  fullName: Biwen.QuickApi.Mapping
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Mapping.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Mapping.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.Mapping.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Mapping.ServiceRegistration
