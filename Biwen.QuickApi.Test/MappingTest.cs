@@ -1,10 +1,10 @@
-using Biwen.QuickApi.Mapping;
+锘縰sing Biwen.QuickApi.Mapping;
 using MapsterMapper;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Biwen.QuickApi.Test
 {
-    //测试Mapping
+    //娴嬭瘯Mapping
     public class MappingTest
     {
         [Fact]
@@ -30,7 +30,7 @@ namespace Biwen.QuickApi.Test
 
         #region model
 
-        //定义User类型:
+        //瀹氫箟User绫诲瀷:
         public class User
         {
             public string? Name { get; set; }
@@ -39,7 +39,7 @@ namespace Biwen.QuickApi.Test
             public string? Address { get; set; }
         }
 
-        //定义UserDto类型:
+        //瀹氫箟UserDto绫诲瀷:
         public class UserDto
         {
             public string? Name { get; set; }
