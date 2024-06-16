@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/Infrastructure/SuppressTypeAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/Infrastructure/SuppressTypeAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure
@@ -106,7 +106,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.SuppressTypeAttribute()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/Infrastructure/SuppressTypeAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/Infrastructure/SuppressTypeAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure

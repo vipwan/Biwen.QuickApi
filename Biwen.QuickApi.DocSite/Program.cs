@@ -4,15 +4,6 @@ using Microsoft.Extensions.FileProviders;
 var builder = WebApplication.CreateSlimBuilder(args);
 
 // Add services to the container.
-builder.Services.AddHttpClient();
-builder.Services.AddAuthentication(o =>
-{
-    o.DefaultScheme = "Cookies";
-    o.DefaultChallengeScheme = "Cookies";
-}).AddCookie();
-builder.Services.AddAuthorization();
-
-// Add services to the container.
 builder.Services.AddBiwenQuickApis(o =>
 {
     o.UseQuickApiExceptionResultBuilder = true;

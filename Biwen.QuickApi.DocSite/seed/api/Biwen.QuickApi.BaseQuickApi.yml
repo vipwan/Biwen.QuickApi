@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -56,7 +56,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi.BaseQuickApi()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -79,7 +79,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -109,11 +109,11 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi.ExecuteAsync(Biwen.QuickApi.EmptyRequest)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
-  summary: 执行请求,如需要HttpContext对象，请使用<xref href="Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext" data-throw-if-not-resolved="false"></xref>获取
+  summary: 执行请求,如需要HttpContext对象，请使用<xref href="Microsoft.AspNetCore.Http.IHttpContextAccessor" data-throw-if-not-resolved="false"></xref>获取HttpContext
   example: []
   syntax:
     content: public override abstract ValueTask<IResult> ExecuteAsync(EmptyRequest request)
@@ -977,13 +977,13 @@ references:
     name: Builder
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
-- uid: Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
-  commentId: P:Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
+- uid: Microsoft.AspNetCore.Http.IHttpContextAccessor
+  commentId: T:Microsoft.AspNetCore.Http.IHttpContextAccessor
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor.httpcontext
-  name: HttpContext
-  nameWithType: IHttpContextAccessor.HttpContext
-  fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor
+  name: IHttpContextAccessor
+  nameWithType: IHttpContextAccessor
+  fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor
 - uid: Biwen.QuickApi.BaseQuickApi.ExecuteAsync*
   commentId: Overload:Biwen.QuickApi.BaseQuickApi.ExecuteAsync
   isExternal: true

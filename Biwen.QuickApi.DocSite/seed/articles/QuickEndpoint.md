@@ -3,8 +3,10 @@
 
 提供直接对MinimalApi的Endpoint的封装，方便使用。
 
-参考测试
+参考用例
 ---------------------
+该方式直接扩展了MinimalApi的Endpoint,便于无负担的拆分业务
+
 
 ```csharp
 namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
@@ -12,7 +14,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
     /// <summary>
     /// 测试IQuickEndpoint
     /// </summary>
-    //[Authorize]
+    [Authorize]
     [ProducesResponseType<ProblemDetails>(400)]
     [ProducesResponseType<string>(200)]
     [EndpointGroupName("test")]
@@ -59,4 +61,10 @@ app.MapGroup("endpoints", x =>
 
 ```
 
+Api文档
+---------------------
+
+相关API文档:
+
+[IEndpointRouteBuilderExtensions](../api/Biwen.QuickApi.IEndpointRouteBuilderExtensions.yml) &nbsp;
 

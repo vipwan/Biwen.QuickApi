@@ -39,7 +39,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             await Task.CompletedTask;
             return Results.Content($"{request.Hello} {request.World}");
         }
-
     }
 
     [QuickApi("route2-{hello}", Group = "route", Verbs = Verb.POST)]

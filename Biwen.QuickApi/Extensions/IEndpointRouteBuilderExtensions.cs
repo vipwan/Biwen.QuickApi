@@ -1,5 +1,4 @@
-﻿using Biwen.QuickApi.Abstractions;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Routing;
@@ -17,7 +16,7 @@ namespace Biwen.QuickApi
         /// <typeparam name="T"></typeparam>
         /// <param name="app"></param>
         /// <param name="pattern">路由地址</param>
-        /// <param name="excludeFromDescription">是否从文档中排除</param>
+        /// <param name="excludeFromDescription">是否从OpenApi文档中排除,默认:false不排除</param>
         /// <returns></returns>
         public static RouteHandlerBuilder MapMethods<T>(
             this IEndpointRouteBuilder app,
@@ -82,7 +81,7 @@ namespace Biwen.QuickApi
         /// <param name="pattern">路由地址</param>
         /// <param name="paramsBuilder">new{}匿名类型</param>
         /// <param name="verb">默认:GET</param>
-        /// <param name="excludeFromDescription">排除Openapi</param>
+        /// <param name="excludeFromDescription">是否从OpenApi文档中排除,默认:false不排除</param>
         /// <returns></returns>
         public static RouteHandlerBuilder MapComponent<T>(this IEndpointRouteBuilder app, [StringSyntax("Route")] string pattern,
          Func<HttpContext, object>? paramsBuilder = null, Verb verb = Verb.GET, bool excludeFromDescription = true) where T : class, IComponent
@@ -137,7 +136,7 @@ namespace Biwen.QuickApi
         /// 扩展MapGroup
         /// </summary>
         /// <param name="endpoints"></param>
-        /// <param name="prefix"></param>
+        /// <param name="prefix">分组</param>
         /// <param name="action"></param>
         public static RouteGroupBuilder MapGroup(
             this IEndpointRouteBuilder endpoints,

@@ -27,26 +27,12 @@ builder.Host.UseSerilog((context, builder) =>
 
 #endregion
 
-
-
-//FluentUIComponents
 builder.Services.AddFluentUIComponents();
-builder.Services.AddHttpClient();//default httpclient
 
 //all
 builder.Services.AddOpenApi("v1", onlyQuickApi: false);
 //just quickapi & group:[test,admin]
 builder.Services.AddOpenApi("v2", onlyQuickApi: true, ["test", "admin"]);
-
-
-builder.Services.AddAuthentication(o =>
-{
-    o.DefaultScheme = "Cookies";
-    o.DefaultChallengeScheme = "Cookies";
-}).AddCookie();
-
-builder.Services.AddAuthorization();
-
 
 builder.Services.Configure<AuthorizationOptions>(options =>
 {
@@ -115,8 +101,6 @@ app.UseIfElse(app.Environment.IsDevelopment(), builder =>
     builder.UseWelcomePage("/");
 });
 
-app.UseAuthentication();
-app.UseAuthorization();
 
 // 默认方式
 //app.MapBiwenQuickApis();

@@ -22,7 +22,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -66,7 +66,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.PublishAsync<T>(T, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -104,7 +104,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.UseReqBinder<T>()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -132,11 +132,11 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.ExecuteAsync(Req)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
-  summary: 执行请求,如需要HttpContext对象，请使用<xref href="Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext" data-throw-if-not-resolved="false"></xref>获取
+  summary: 执行请求,如需要HttpContext对象，请使用<xref href="Microsoft.AspNetCore.Http.IHttpContextAccessor" data-throw-if-not-resolved="false"></xref>获取HttpContext
   example: []
   syntax:
     content: public abstract ValueTask<Rsp> ExecuteAsync(Req request)
@@ -163,7 +163,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -194,11 +194,11 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
-  summary: 请求QuickApi前的操作
+  summary: 请求QuickApi前的操作,推荐使用:<xref href="Microsoft.AspNetCore.Http.IEndpointFilter" data-throw-if-not-resolved="false"></xref>
   example: []
   syntax:
     content: public virtual Task BeforeAsync(HttpContext context)
@@ -225,11 +225,11 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
-  summary: 请求QuickApi后的操作
+  summary: 请求QuickApi后的操作,推荐使用:<xref href="Microsoft.AspNetCore.Http.IEndpointFilter" data-throw-if-not-resolved="false"></xref>
   example: []
   syntax:
     content: public virtual Task AfterAsync(HttpContext context)
@@ -256,7 +256,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.BaseQuickApi()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -279,7 +279,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.IsAntiforgeryEnabled
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -305,7 +305,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.ReqBinder
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -691,13 +691,13 @@ references:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.UseReqBinder
   nameWithType.vb: BaseQuickApi(Of Req, Rsp).UseReqBinder
   fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).UseReqBinder
-- uid: Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
-  commentId: P:Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
+- uid: Microsoft.AspNetCore.Http.IHttpContextAccessor
+  commentId: T:Microsoft.AspNetCore.Http.IHttpContextAccessor
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor.httpcontext
-  name: HttpContext
-  nameWithType: IHttpContextAccessor.HttpContext
-  fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor
+  name: IHttpContextAccessor
+  nameWithType: IHttpContextAccessor
+  fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor
 - uid: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync*
   commentId: Overload:Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync
   isExternal: true
@@ -828,6 +828,13 @@ references:
     name: Builder
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+- uid: Microsoft.AspNetCore.Http.IEndpointFilter
+  commentId: T:Microsoft.AspNetCore.Http.IEndpointFilter
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.iendpointfilter
+  name: IEndpointFilter
+  nameWithType: IEndpointFilter
+  fullName: Microsoft.AspNetCore.Http.IEndpointFilter
 - uid: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync*
   commentId: Overload:Biwen.QuickApi.BaseQuickApi`2.BeforeAsync
   isExternal: true

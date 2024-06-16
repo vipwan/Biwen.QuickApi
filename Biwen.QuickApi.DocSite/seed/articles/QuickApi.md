@@ -3,7 +3,12 @@
 
 当前文档因为时间关系,不是很完善,后续有时间和精力会进一步补充~~
 
-## 使用方式
+
+定义Request
+---------------------
+
+如下定义一些请求对象,涉及到绑定和验证规则,可以参考:[数据绑定](ReqBinder.md) &nbsp; [数据验证](Validation.md)
+
 
 ```csharp
 
@@ -85,15 +90,19 @@ public class HelloApiResponse
 
 ```
 
-### Step3 Define QuickApi
+定义QuickApi
+---------------------
+
+Api可以只是服务,你只需要标注特性[JustAsService](../api/Biwen.QuickApi.Attributes.JustAsServiceAttribute.yml)
+,另外Api都必须标注特性[QuickApi()](../api/Biwen.QuickApi.Attributes.QuickApiAttribute.yml)
+如果涉及到OpenApi相关的参数,你可以标注[OpenApiMetadata](../api/Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.yml)
+
 
 ```csharp
-
 /// <summary>
 /// get ~/admin/index
 /// </summary>
 [QuickApi("index", Group = "admin", Verbs = Verb.GET | Verb.POST, Policy = "admin")]
-[QuickApiSummary("this is summary","this is description")]
 public class NeedAuthApi : BaseQuickApi
 {
     public override IResult Execute(EmptyRequest request)
@@ -178,7 +187,6 @@ public class CustomApi : BaseQuickApi<CustomApiRequest>
 /// 请使用postman & apifox 测试
 /// </summary>
 [QuickApi("fromfile", Verbs = Verb.POST)]
-[QuickApiSummary("上传文件测试", "上传文件测试")]
 public class FromFileApi : BaseQuickApi<FileUploadRequest, Results<Ok<string>,BadRequest<string>>>
 {
     public override async ValueTask<Results<Ok<string>,BadRequest<string>> ExecuteAsync(FileUploadRequest request)
@@ -209,34 +217,72 @@ public class JustAsService : BaseQuickApi<EmptyRequest, string>
 }
 ```
 
-### 提供QuickApi的Group扩展支持
+提供Group扩展支持
+---------------------
+如果你需要对特定分组`Group`做统一的处理,比如加上`Tag`标签等,可以实现`IQuickApiGroupRouteBuilder`接口,如下:
 
 ```csharp
 
-   // 当前模拟给所有 Group为空的QuickApi加上 Tag "Def" 
-    public class MyGroupRouteBuilder : IQuickApiGroupRouteBuilder
+// 当前模拟给所有 Group为空的QuickApi加上 Tag "Def" 
+public class MyGroupRouteBuilder : IQuickApiGroupRouteBuilder
+{
+    // 表述Group为空的QuickApi
+    public string Group => string.Empty;
+    // 执行顺序
+    public int Order => 1;
+    // 实现Builder方法
+    public RouteGroupBuilder Builder(RouteGroupBuilder routeBuilder)
     {
-        // 表述Group为空的QuickApi
-        public string Group => string.Empty;
-        // 执行顺序
-        public int Order => 1;
-        // 实现Builder方法
-        public RouteGroupBuilder Builder(RouteGroupBuilder routeBuilder)
-        {
-            // 给所有 Group为空的QuickApi加上 Tag "Def"
-            routeBuilder.WithTags("Def");
-            return routeBuilder;
-        }
+        // 给所有 Group为空的QuickApi加上 Tag "Def"
+        routeBuilder.WithTags("Def");
+        return routeBuilder;
     }
+}
 
 // 最后注册
 builder.Services.AddBiwenQuickApiGroupRouteBuilder<MyGroupRouteBuilder>();
 
 ```
+> [!NOTE]
+> `RouteGroupBuilder`相当强大,你可以在这里做任何你想做的事情,比如加上`Tag`,`Summary` 以及缓存,验证等等~~
 
-### Step4 Enjoy
+
+
+注入服务
+---------------------
+
+在QuickApi中注册服务,请使用构造函数注入,如下注入服务:`IHttpContextAccessor`:
 
 ```csharp
+[QuickApi("Loginout", Group = "admin")]
+[OpenApiMetadata("loginout", "退出登录")]
+public class LoginOut : BaseQuickApiWithoutRequest<string>
+{
+    private readonly IHttpContextAccessor _httpContextAccessor;
+    public LoginOut(IHttpContextAccessor httpContextAccessor)
+    {
+        _httpContextAccessor = httpContextAccessor;
+    }
+    public override ValueTask<string> ExecuteAsync(EmptyRequest request)
+    {
+        _httpContextAccessor.HttpContext?.SignOutAsync();
+        return new ValueTask<string>("已经退出登录");
+    }
+}
+```
+
+
+预览结果
+---------------------
+
+运行程序访问如下的地址将呈现结果
+
+
+```bash
+dotnet run
+```
+
+```txt
 
 //直接访问
 // GET ~/hello/world/biwen
@@ -246,9 +292,9 @@ builder.Services.AddBiwenQuickApiGroupRouteBuilder<MyGroupRouteBuilder>();
 
 ```
 
-```csharp
+如果需要在服务中使用QuickApi,可以直接注入,如下代码:
 
-//你也可以把QuickApi当Service使用
+```csharp
 app.MapGet("/fromapi", async (Apis.Hello4Api api) =>
 {
     //通过你的方式获取请求对象
@@ -266,9 +312,14 @@ app.MapGet("/fromapi", async (Apis.Hello4Api api) =>
 
 ```
 
+
 - 更多参考代码 [Issues 8](https://github.com/vipwan/Biwen.QuickApi/issues/8)
 
-### Benchmark性能测试
+性能测试
+---------------------
+Benchmark测试根据服务器性能结果可能会略有不同,但是大体上QuickApi和MinimalApi差不多.
+性能最差的是基于ControllerBase的WebApi
+
 
 ```txt
 BenchmarkDotNet v0.13.12, Windows 10 (10.0.19045.3570/22H2/2022Update)
@@ -288,6 +339,10 @@ LaunchCount=1  WarmupCount=1
 | MinimalApi  | 221.2 μs |  13.02 μs |   6.81 μs | 220.9 μs |  0.68 |    0.34 | 2.0000 |  24.38 KB |        0.73 |
 | QuickApi    | 235.9 μs |  22.26 μs |  11.65 μs | 235.4 μs |  0.72 |    0.34 | 2.0000 |  27.59 KB |        0.82 |
 
+
+更多参考
+---------------------
+
 如果你仅仅需要使用中间件控制QuickApi的行为,可以参考下面的代码:
 
 ```csharp
@@ -301,3 +356,14 @@ if (md == null || md.QuickApiType == null)
 //todo:
 
 ```
+
+Api文档
+---------------------
+相关API文档:
+
+[IQuickApiGroupRouteBuilder](../api/Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder.yml) &nbsp;
+[QuickApiMetadata](../api/Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.yml) &nbsp;
+[QuickApiAttribute](../api/Biwen.QuickApi.Attributes.QuickApiAttribute.yml) &nbsp;
+[JustAsServiceAttribute](../api/Biwen.QuickApi.Attributes.JustAsServiceAttribute.yml) &nbsp;
+[BaseQuickApi](../api/Biwen.QuickApi.BaseQuickApi-2.yml) &nbsp;
+

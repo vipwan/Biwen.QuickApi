@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -61,11 +61,11 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req>.ExecuteAsync(Req)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
-  summary: 执行请求,如需要HttpContext对象，请使用<xref href="Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext" data-throw-if-not-resolved="false"></xref>获取
+  summary: 执行请求,如需要HttpContext对象，请使用<xref href="Microsoft.AspNetCore.Http.IHttpContextAccessor" data-throw-if-not-resolved="false"></xref>获取HttpContext
   example: []
   syntax:
     content: public override abstract ValueTask<IResult> ExecuteAsync(Req request)
@@ -93,7 +93,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req>.BaseQuickApi()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -880,13 +880,13 @@ references:
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.ReqBinder
   nameWithType.vb: BaseQuickApi(Of Req, Rsp).ReqBinder
   fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).ReqBinder
-- uid: Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
-  commentId: P:Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
+- uid: Microsoft.AspNetCore.Http.IHttpContextAccessor
+  commentId: T:Microsoft.AspNetCore.Http.IHttpContextAccessor
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor.httpcontext
-  name: HttpContext
-  nameWithType: IHttpContextAccessor.HttpContext
-  fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor.HttpContext
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor
+  name: IHttpContextAccessor
+  nameWithType: IHttpContextAccessor
+  fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor
 - uid: Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync*
   commentId: Overload:Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync
   isExternal: true

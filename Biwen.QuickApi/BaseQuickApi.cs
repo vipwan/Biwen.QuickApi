@@ -59,7 +59,7 @@ namespace Biwen.QuickApi
         }
 
         /// <summary>
-        /// 执行请求,如需要HttpContext对象，请使用<see cref="IHttpContextAccessor.HttpContext"/>获取
+        /// 执行请求,如需要HttpContext对象，请使用<see cref="IHttpContextAccessor"/>获取HttpContext
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -150,7 +150,7 @@ namespace Biwen.QuickApi
         }
 
         /// <summary>
-        /// 请求QuickApi前的操作
+        /// 请求QuickApi前的操作,推荐使用:<see cref="IEndpointFilter"/>
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -159,7 +159,7 @@ namespace Biwen.QuickApi
             return Task.CompletedTask;
         }
         /// <summary>
-        /// 请求QuickApi后的操作
+        /// 请求QuickApi后的操作,推荐使用:<see cref="IEndpointFilter"/>
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>

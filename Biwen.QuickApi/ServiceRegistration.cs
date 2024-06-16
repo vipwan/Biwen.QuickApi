@@ -38,8 +38,21 @@ namespace Biwen.QuickApi
                 options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.All);
             });
 
+            //add authorization
+            services.AddAuthorization();
+
+            //add authentication
+            services.AddAuthentication(o =>
+            {
+                o.DefaultScheme = "Cookies";
+                o.DefaultChallengeScheme = "Cookies";
+            }).AddCookie();
+
             //add RazorComponents
             services.AddRazorComponents().AddInteractiveServerComponents();
+
+            //add HttpClient
+            services.AddHttpClient();//default httpclient
 
             //JSON Options
             services.ConfigureHttpJsonOptions(x => { });
@@ -55,7 +68,6 @@ namespace Biwen.QuickApi
             //options
             services.Configure<BiwenQuickApiOptions>(services.BuildServiceProvider().GetRequiredService<IConfiguration>().GetSection(BiwenQuickApiOptions.Key))
             .Configure<BiwenQuickApiOptions>(o => options?.Invoke(o));
-
 
             /// <summary>
             /// 开启ProblemDetails
@@ -375,6 +387,9 @@ namespace Biwen.QuickApi
         public static IApplicationBuilder UseBiwenQuickApis(this IApplicationBuilder app)
         {
             app.UseRouting();
+
+            // 认证鉴权中间件必须在UseRouting和UseEndpoints之间
+            app.UseAuthentication();
             app.UseAuthorization();
 
             // Try to retrieve the current 'IEndpointRouteBuilder'.

@@ -18,9 +18,9 @@
   - name: IQuickEndpoint
     href: QuickEndpoint.md
   - name: 请求绑定
-    href: QuickApi.md
+    href: ReqBinder.md
   - name: 请求验证
-    href: QuickApi.md
+    href: Validation.md
   - name: OpenApi集成
   - name: 更多帮助
     href: https://github.com/vipwan/Biwen.QuickApi/issues
