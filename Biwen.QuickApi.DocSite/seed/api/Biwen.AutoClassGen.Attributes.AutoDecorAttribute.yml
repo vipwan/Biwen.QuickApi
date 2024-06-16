@@ -1,40 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
-  commentId: T:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
-  id: PreModularAttribute`1
-  parent: Biwen.QuickApi.Abstractions.Modular
+- uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoDecorAttribute
+  id: AutoDecorAttribute
+  parent: Biwen.AutoClassGen.Attributes
   children:
-  - Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
+  - Biwen.AutoClassGen.Attributes.AutoDecorAttribute.#ctor(System.Type)
   langs:
   - csharp
   - vb
-  name: PreModularAttribute<T>
-  nameWithType: PreModularAttribute<T>
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>
+  name: AutoDecorAttribute
+  nameWithType: AutoDecorAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoDecorAttribute
   type: Class
-  source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
-  - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Abstractions.Modular
-  summary: 前置模块
-  example: []
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
   syntax:
     content: >-
-      [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+      [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface, AllowMultiple = true, Inherited = false)]
 
-      public class PreModularAttribute<T> : Attribute where T : ModularBase
-    typeParameters:
-    - id: T
-      description: ''
+      public class AutoDecorAttribute : Attribute
     content.vb: >-
-      <AttributeUsage(AttributeTargets.Class, AllowMultiple:=False)>
+      <AttributeUsage(AttributeTargets.ClassOrAttributeTargets.Interface, AllowMultiple:=True, Inherited:=False)>
 
-      Public Class PreModularAttribute(Of T As ModularBase) Inherits Attribute
+      Public Class AutoDecorAttribute Inherits Attribute
   inheritance:
   - System.Object
   - System.Attribute
+  derivedClasses:
+  - Biwen.AutoClassGen.Attributes.AutoDecorAttribute`1
   inheritedMembers:
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type,System.Boolean)
@@ -83,85 +78,76 @@ items:
     ctor: System.AttributeUsageAttribute.#ctor(System.AttributeTargets)
     arguments:
     - type: System.AttributeTargets
-      value: 4
+      value: 1028
     namedArguments:
     - name: AllowMultiple
       type: System.Boolean
+      value: true
+    - name: Inherited
+      type: System.Boolean
       value: false
-  nameWithType.vb: PreModularAttribute(Of T)
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T)
-  name.vb: PreModularAttribute(Of T)
-- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
-  commentId: M:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
-  id: '#ctor'
-  parent: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
+- uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.#ctor(System.Type)
+  commentId: M:Biwen.AutoClassGen.Attributes.AutoDecorAttribute.#ctor(System.Type)
+  id: '#ctor(System.Type)'
+  parent: Biwen.AutoClassGen.Attributes.AutoDecorAttribute
   langs:
   - csharp
   - vb
-  name: PreModularAttribute()
-  nameWithType: PreModularAttribute<T>.PreModularAttribute()
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>.PreModularAttribute()
+  name: AutoDecorAttribute(Type)
+  nameWithType: AutoDecorAttribute.AutoDecorAttribute(Type)
+  fullName: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.AutoDecorAttribute(System.Type)
   type: Constructor
-  source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
-  - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Abstractions.Modular
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
   syntax:
-    content: public PreModularAttribute()
-    content.vb: Public Sub New()
-  overload: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor*
-  nameWithType.vb: PreModularAttribute(Of T).New()
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T).New()
-  name.vb: New()
+    content: public AutoDecorAttribute(Type implement)
+    parameters:
+    - id: implement
+      type: System.Type
+    content.vb: Public Sub New(implement As Type)
+  overload: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.#ctor*
+  nameWithType.vb: AutoDecorAttribute.New(Type)
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.New(System.Type)
+  name.vb: New(Type)
 references:
-- uid: Biwen.QuickApi.Abstractions.Modular
-  commentId: N:Biwen.QuickApi.Abstractions.Modular
+- uid: Biwen.AutoClassGen.Attributes
+  commentId: N:Biwen.AutoClassGen.Attributes
   isExternal: true
   href: Biwen.html
-  name: Biwen.QuickApi.Abstractions.Modular
-  nameWithType: Biwen.QuickApi.Abstractions.Modular
-  fullName: Biwen.QuickApi.Abstractions.Modular
+  name: Biwen.AutoClassGen.Attributes
+  nameWithType: Biwen.AutoClassGen.Attributes
+  fullName: Biwen.AutoClassGen.Attributes
   spec.csharp:
   - uid: Biwen
     name: Biwen
     isExternal: true
     href: Biwen.html
   - name: .
-  - uid: Biwen.QuickApi
-    name: QuickApi
+  - uid: Biwen.AutoClassGen
+    name: AutoClassGen
     isExternal: true
-    href: Biwen.QuickApi.html
+    href: Biwen.AutoClassGen.html
   - name: .
-  - uid: Biwen.QuickApi.Abstractions
-    name: Abstractions
+  - uid: Biwen.AutoClassGen.Attributes
+    name: Attributes
     isExternal: true
-    href: Biwen.QuickApi.Abstractions.html
-  - name: .
-  - uid: Biwen.QuickApi.Abstractions.Modular
-    name: Modular
-    isExternal: true
-    href: Biwen.QuickApi.Abstractions.Modular.html
+    href: Biwen.AutoClassGen.Attributes.html
   spec.vb:
   - uid: Biwen
     name: Biwen
     isExternal: true
     href: Biwen.html
   - name: .
-  - uid: Biwen.QuickApi
-    name: QuickApi
+  - uid: Biwen.AutoClassGen
+    name: AutoClassGen
     isExternal: true
-    href: Biwen.QuickApi.html
+    href: Biwen.AutoClassGen.html
   - name: .
-  - uid: Biwen.QuickApi.Abstractions
-    name: Abstractions
+  - uid: Biwen.AutoClassGen.Attributes
+    name: Attributes
     isExternal: true
-    href: Biwen.QuickApi.Abstractions.html
-  - name: .
-  - uid: Biwen.QuickApi.Abstractions.Modular
-    name: Modular
-    isExternal: true
-    href: Biwen.QuickApi.Abstractions.Modular.html
+    href: Biwen.AutoClassGen.Attributes.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -1956,13 +1942,21 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor*
-  commentId: Overload:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
+- uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.#ctor*
+  commentId: Overload:Biwen.AutoClassGen.Attributes.AutoDecorAttribute.#ctor
   isExternal: true
-  href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html#Biwen_QuickApi_Abstractions_Modular_PreModularAttribute_1__ctor
-  name: PreModularAttribute
-  nameWithType: PreModularAttribute<T>.PreModularAttribute
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>.PreModularAttribute
-  nameWithType.vb: PreModularAttribute(Of T).New
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T).New
+  href: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.html#Biwen_AutoClassGen_Attributes_AutoDecorAttribute__ctor_System_Type_
+  name: AutoDecorAttribute
+  nameWithType: AutoDecorAttribute.AutoDecorAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.AutoDecorAttribute
+  nameWithType.vb: AutoDecorAttribute.New
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.New
   name.vb: New
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type

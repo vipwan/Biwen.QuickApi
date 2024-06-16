@@ -1,37 +1,32 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
-  commentId: T:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
-  id: PreModularAttribute`1
-  parent: Biwen.QuickApi.Abstractions.Modular
+- uid: Biwen.AutoClassGen.Attributes.AutoGenAttribute
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoGenAttribute
+  id: AutoGenAttribute
+  parent: Biwen.AutoClassGen.Attributes
   children:
-  - Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
+  - Biwen.AutoClassGen.Attributes.AutoGenAttribute.#ctor(System.String,System.String)
+  - Biwen.AutoClassGen.Attributes.AutoGenAttribute.ClassName
+  - Biwen.AutoClassGen.Attributes.AutoGenAttribute.InterfaceName
   langs:
   - csharp
   - vb
-  name: PreModularAttribute<T>
-  nameWithType: PreModularAttribute<T>
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>
+  name: AutoGenAttribute
+  nameWithType: AutoGenAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoGenAttribute
   type: Class
-  source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
-  - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Abstractions.Modular
-  summary: 前置模块
-  example: []
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
   syntax:
     content: >-
-      [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+      [AttributeUsage(AttributeTargets.Interface, AllowMultiple = true, Inherited = false)]
 
-      public class PreModularAttribute<T> : Attribute where T : ModularBase
-    typeParameters:
-    - id: T
-      description: ''
+      public sealed class AutoGenAttribute : Attribute
     content.vb: >-
-      <AttributeUsage(AttributeTargets.Class, AllowMultiple:=False)>
+      <AttributeUsage(AttributeTargets.Interface, AllowMultiple:=True, Inherited:=False)>
 
-      Public Class PreModularAttribute(Of T As ModularBase) Inherits Attribute
+      Public NotInheritable Class AutoGenAttribute Inherits Attribute
   inheritance:
   - System.Object
   - System.Attribute
@@ -74,7 +69,6 @@ items:
   - System.Attribute.IsDefaultAttribute
   - System.Attribute.TypeId
   - System.Object.GetType
-  - System.Object.MemberwiseClone
   - System.Object.ToString
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
@@ -83,85 +77,120 @@ items:
     ctor: System.AttributeUsageAttribute.#ctor(System.AttributeTargets)
     arguments:
     - type: System.AttributeTargets
-      value: 4
+      value: 1024
     namedArguments:
     - name: AllowMultiple
       type: System.Boolean
+      value: true
+    - name: Inherited
+      type: System.Boolean
       value: false
-  nameWithType.vb: PreModularAttribute(Of T)
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T)
-  name.vb: PreModularAttribute(Of T)
-- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
-  commentId: M:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
-  id: '#ctor'
-  parent: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
+- uid: Biwen.AutoClassGen.Attributes.AutoGenAttribute.#ctor(System.String,System.String)
+  commentId: M:Biwen.AutoClassGen.Attributes.AutoGenAttribute.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Biwen.AutoClassGen.Attributes.AutoGenAttribute
   langs:
   - csharp
   - vb
-  name: PreModularAttribute()
-  nameWithType: PreModularAttribute<T>.PreModularAttribute()
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>.PreModularAttribute()
+  name: AutoGenAttribute(string, string)
+  nameWithType: AutoGenAttribute.AutoGenAttribute(string, string)
+  fullName: Biwen.AutoClassGen.Attributes.AutoGenAttribute.AutoGenAttribute(string, string)
   type: Constructor
-  source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
-  - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Abstractions.Modular
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
   syntax:
-    content: public PreModularAttribute()
-    content.vb: Public Sub New()
-  overload: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor*
-  nameWithType.vb: PreModularAttribute(Of T).New()
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T).New()
-  name.vb: New()
+    content: public AutoGenAttribute(string className, string interfaceName)
+    parameters:
+    - id: className
+      type: System.String
+    - id: interfaceName
+      type: System.String
+    content.vb: Public Sub New(className As String, interfaceName As String)
+  overload: Biwen.AutoClassGen.Attributes.AutoGenAttribute.#ctor*
+  nameWithType.vb: AutoGenAttribute.New(String, String)
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoGenAttribute.New(String, String)
+  name.vb: New(String, String)
+- uid: Biwen.AutoClassGen.Attributes.AutoGenAttribute.ClassName
+  commentId: P:Biwen.AutoClassGen.Attributes.AutoGenAttribute.ClassName
+  id: ClassName
+  parent: Biwen.AutoClassGen.Attributes.AutoGenAttribute
+  langs:
+  - csharp
+  - vb
+  name: ClassName
+  nameWithType: AutoGenAttribute.ClassName
+  fullName: Biwen.AutoClassGen.Attributes.AutoGenAttribute.ClassName
+  type: Property
+  assemblies:
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
+  syntax:
+    content: public string ClassName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ClassName As String
+  overload: Biwen.AutoClassGen.Attributes.AutoGenAttribute.ClassName*
+- uid: Biwen.AutoClassGen.Attributes.AutoGenAttribute.InterfaceName
+  commentId: P:Biwen.AutoClassGen.Attributes.AutoGenAttribute.InterfaceName
+  id: InterfaceName
+  parent: Biwen.AutoClassGen.Attributes.AutoGenAttribute
+  langs:
+  - csharp
+  - vb
+  name: InterfaceName
+  nameWithType: AutoGenAttribute.InterfaceName
+  fullName: Biwen.AutoClassGen.Attributes.AutoGenAttribute.InterfaceName
+  type: Property
+  assemblies:
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
+  syntax:
+    content: public string InterfaceName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property InterfaceName As String
+  overload: Biwen.AutoClassGen.Attributes.AutoGenAttribute.InterfaceName*
 references:
-- uid: Biwen.QuickApi.Abstractions.Modular
-  commentId: N:Biwen.QuickApi.Abstractions.Modular
+- uid: Biwen.AutoClassGen.Attributes
+  commentId: N:Biwen.AutoClassGen.Attributes
   isExternal: true
   href: Biwen.html
-  name: Biwen.QuickApi.Abstractions.Modular
-  nameWithType: Biwen.QuickApi.Abstractions.Modular
-  fullName: Biwen.QuickApi.Abstractions.Modular
+  name: Biwen.AutoClassGen.Attributes
+  nameWithType: Biwen.AutoClassGen.Attributes
+  fullName: Biwen.AutoClassGen.Attributes
   spec.csharp:
   - uid: Biwen
     name: Biwen
     isExternal: true
     href: Biwen.html
   - name: .
-  - uid: Biwen.QuickApi
-    name: QuickApi
+  - uid: Biwen.AutoClassGen
+    name: AutoClassGen
     isExternal: true
-    href: Biwen.QuickApi.html
+    href: Biwen.AutoClassGen.html
   - name: .
-  - uid: Biwen.QuickApi.Abstractions
-    name: Abstractions
+  - uid: Biwen.AutoClassGen.Attributes
+    name: Attributes
     isExternal: true
-    href: Biwen.QuickApi.Abstractions.html
-  - name: .
-  - uid: Biwen.QuickApi.Abstractions.Modular
-    name: Modular
-    isExternal: true
-    href: Biwen.QuickApi.Abstractions.Modular.html
+    href: Biwen.AutoClassGen.Attributes.html
   spec.vb:
   - uid: Biwen
     name: Biwen
     isExternal: true
     href: Biwen.html
   - name: .
-  - uid: Biwen.QuickApi
-    name: QuickApi
+  - uid: Biwen.AutoClassGen
+    name: AutoClassGen
     isExternal: true
-    href: Biwen.QuickApi.html
+    href: Biwen.AutoClassGen.html
   - name: .
-  - uid: Biwen.QuickApi.Abstractions
-    name: Abstractions
+  - uid: Biwen.AutoClassGen.Attributes
+    name: Attributes
     isExternal: true
-    href: Biwen.QuickApi.Abstractions.html
-  - name: .
-  - uid: Biwen.QuickApi.Abstractions.Modular
-    name: Modular
-    isExternal: true
-    href: Biwen.QuickApi.Abstractions.Modular.html
+    href: Biwen.AutoClassGen.Attributes.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -1811,30 +1840,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gettype
   - name: (
   - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -1956,13 +1961,38 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor*
-  commentId: Overload:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
+- uid: Biwen.AutoClassGen.Attributes.AutoGenAttribute.#ctor*
+  commentId: Overload:Biwen.AutoClassGen.Attributes.AutoGenAttribute.#ctor
   isExternal: true
-  href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html#Biwen_QuickApi_Abstractions_Modular_PreModularAttribute_1__ctor
-  name: PreModularAttribute
-  nameWithType: PreModularAttribute<T>.PreModularAttribute
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>.PreModularAttribute
-  nameWithType.vb: PreModularAttribute(Of T).New
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T).New
+  href: Biwen.AutoClassGen.Attributes.AutoGenAttribute.html#Biwen_AutoClassGen_Attributes_AutoGenAttribute__ctor_System_String_System_String_
+  name: AutoGenAttribute
+  nameWithType: AutoGenAttribute.AutoGenAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoGenAttribute.AutoGenAttribute
+  nameWithType.vb: AutoGenAttribute.New
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoGenAttribute.New
   name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Biwen.AutoClassGen.Attributes.AutoGenAttribute.ClassName*
+  commentId: Overload:Biwen.AutoClassGen.Attributes.AutoGenAttribute.ClassName
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoGenAttribute.html#Biwen_AutoClassGen_Attributes_AutoGenAttribute_ClassName
+  name: ClassName
+  nameWithType: AutoGenAttribute.ClassName
+  fullName: Biwen.AutoClassGen.Attributes.AutoGenAttribute.ClassName
+- uid: Biwen.AutoClassGen.Attributes.AutoGenAttribute.InterfaceName*
+  commentId: Overload:Biwen.AutoClassGen.Attributes.AutoGenAttribute.InterfaceName
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoGenAttribute.html#Biwen_AutoClassGen_Attributes_AutoGenAttribute_InterfaceName
+  name: InterfaceName
+  nameWithType: AutoGenAttribute.InterfaceName
+  fullName: Biwen.AutoClassGen.Attributes.AutoGenAttribute.InterfaceName

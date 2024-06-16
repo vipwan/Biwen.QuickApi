@@ -1,5 +1,24 @@
 ### YamlMime:TableOfContent
 items:
+- uid: Biwen.AutoClassGen.Attributes
+  name: Biwen.AutoClassGen.Attributes
+  items:
+  - uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute
+    name: AutoDecorAttribute
+  - uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute`1
+    name: AutoDecorAttribute<T>
+  - uid: Biwen.AutoClassGen.Attributes.AutoDtoAttribute
+    name: AutoDtoAttribute
+  - uid: Biwen.AutoClassGen.Attributes.AutoDtoAttribute`1
+    name: AutoDtoAttribute<T>
+  - uid: Biwen.AutoClassGen.Attributes.AutoGenAttribute
+    name: AutoGenAttribute
+  - uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute
+    name: AutoInjectAttribute
+  - uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
+    name: AutoInjectAttribute<T>
+  - uid: Biwen.AutoClassGen.Attributes.ServiceLifetime
+    name: ServiceLifetime
 - uid: Biwen.QuickApi
   name: Biwen.QuickApi
   items:
@@ -220,6 +239,8 @@ items:
 - uid: Microsoft.Extensions.DependencyInjection
   name: Microsoft.Extensions.DependencyInjection
   items:
+  - uid: Microsoft.Extensions.DependencyInjection.AutoActivationExtensions
+    name: AutoActivationExtensions
   - uid: Microsoft.Extensions.DependencyInjection.HtmlSanitizerOptionsExtensions
     name: HtmlSanitizerOptionsExtensions
 - uid: System

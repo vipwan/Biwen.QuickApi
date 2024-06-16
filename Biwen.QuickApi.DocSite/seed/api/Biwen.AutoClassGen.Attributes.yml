@@ -1,0 +1,184 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.AutoClassGen.Attributes
+  commentId: N:Biwen.AutoClassGen.Attributes
+  id: Biwen.AutoClassGen.Attributes
+  children:
+  - Biwen.AutoClassGen.Attributes.AutoDecorAttribute
+  - Biwen.AutoClassGen.Attributes.AutoDecorAttribute`1
+  - Biwen.AutoClassGen.Attributes.AutoDtoAttribute
+  - Biwen.AutoClassGen.Attributes.AutoDtoAttribute`1
+  - Biwen.AutoClassGen.Attributes.AutoGenAttribute
+  - Biwen.AutoClassGen.Attributes.AutoInjectAttribute
+  - Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
+  - Biwen.AutoClassGen.Attributes.ServiceLifetime
+  langs:
+  - csharp
+  - vb
+  name: Biwen.AutoClassGen.Attributes
+  nameWithType: Biwen.AutoClassGen.Attributes
+  fullName: Biwen.AutoClassGen.Attributes
+  type: Namespace
+  assemblies:
+  - Biwen.AutoClassGen.Attributes
+references:
+- uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoDecorAttribute
+  parent: Biwen.AutoClassGen.Attributes
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.html
+  name: AutoDecorAttribute
+  nameWithType: AutoDecorAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoDecorAttribute
+- uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute`1
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoDecorAttribute`1
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoDecorAttribute-1.html
+  name: AutoDecorAttribute<T>
+  nameWithType: AutoDecorAttribute<T>
+  fullName: Biwen.AutoClassGen.Attributes.AutoDecorAttribute<T>
+  nameWithType.vb: AutoDecorAttribute(Of T)
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoDecorAttribute(Of T)
+  name.vb: AutoDecorAttribute(Of T)
+  spec.csharp:
+  - uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute`1
+    name: AutoDecorAttribute
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.AutoDecorAttribute-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute`1
+    name: AutoDecorAttribute
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.AutoDecorAttribute-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.AutoClassGen.Attributes.AutoDtoAttribute
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoDtoAttribute
+  parent: Biwen.AutoClassGen.Attributes
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoDtoAttribute.html
+  name: AutoDtoAttribute
+  nameWithType: AutoDtoAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoDtoAttribute
+- uid: Biwen.AutoClassGen.Attributes.AutoDtoAttribute`1
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoDtoAttribute`1
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoDtoAttribute-1.html
+  name: AutoDtoAttribute<T>
+  nameWithType: AutoDtoAttribute<T>
+  fullName: Biwen.AutoClassGen.Attributes.AutoDtoAttribute<T>
+  nameWithType.vb: AutoDtoAttribute(Of T)
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoDtoAttribute(Of T)
+  name.vb: AutoDtoAttribute(Of T)
+  spec.csharp:
+  - uid: Biwen.AutoClassGen.Attributes.AutoDtoAttribute`1
+    name: AutoDtoAttribute
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.AutoDtoAttribute-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.AutoClassGen.Attributes.AutoDtoAttribute`1
+    name: AutoDtoAttribute
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.AutoDtoAttribute-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.AutoClassGen.Attributes.AutoGenAttribute
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoGenAttribute
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoGenAttribute.html
+  name: AutoGenAttribute
+  nameWithType: AutoGenAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoGenAttribute
+- uid: Biwen.AutoClassGen.Attributes.ServiceLifetime
+  commentId: T:Biwen.AutoClassGen.Attributes.ServiceLifetime
+  parent: Biwen.AutoClassGen.Attributes
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.ServiceLifetime.html
+  name: ServiceLifetime
+  nameWithType: ServiceLifetime
+  fullName: Biwen.AutoClassGen.Attributes.ServiceLifetime
+- uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoInjectAttribute
+  parent: Biwen.AutoClassGen.Attributes
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoInjectAttribute.html
+  name: AutoInjectAttribute
+  nameWithType: AutoInjectAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoInjectAttribute
+- uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoInjectAttribute-1.html
+  name: AutoInjectAttribute<T>
+  nameWithType: AutoInjectAttribute<T>
+  fullName: Biwen.AutoClassGen.Attributes.AutoInjectAttribute<T>
+  nameWithType.vb: AutoInjectAttribute(Of T)
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoInjectAttribute(Of T)
+  name.vb: AutoInjectAttribute(Of T)
+  spec.csharp:
+  - uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
+    name: AutoInjectAttribute
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.AutoInjectAttribute-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
+    name: AutoInjectAttribute
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.AutoInjectAttribute-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.AutoClassGen.Attributes
+  commentId: N:Biwen.AutoClassGen.Attributes
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.AutoClassGen.Attributes
+  nameWithType: Biwen.AutoClassGen.Attributes
+  fullName: Biwen.AutoClassGen.Attributes
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.AutoClassGen
+    name: AutoClassGen
+    isExternal: true
+    href: Biwen.AutoClassGen.html
+  - name: .
+  - uid: Biwen.AutoClassGen.Attributes
+    name: Attributes
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.AutoClassGen
+    name: AutoClassGen
+    isExternal: true
+    href: Biwen.AutoClassGen.html
+  - name: .
+  - uid: Biwen.AutoClassGen.Attributes
+    name: Attributes
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.html

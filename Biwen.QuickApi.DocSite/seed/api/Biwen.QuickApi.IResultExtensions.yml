@@ -14,13 +14,19 @@ items:
   fullName: Biwen.QuickApi.IResultExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/IResultExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/IResultExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
   syntax:
-    content: public static class IResultExtensions
-    content.vb: Public Module IResultExtensions
+    content: >-
+      [SuppressType]
+
+      public static class IResultExtensions
+    content.vb: >-
+      <SuppressType>
+
+      Public Module IResultExtensions
   inheritance:
   - System.Object
   inheritedMembers:
@@ -31,6 +37,10 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+  attributes:
+  - type: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+    ctor: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.#ctor
+    arguments: []
 - uid: Biwen.QuickApi.IResultExtensions.AsRspOfResult(Microsoft.AspNetCore.Http.IResult)
   commentId: M:Biwen.QuickApi.IResultExtensions.AsRspOfResult(Microsoft.AspNetCore.Http.IResult)
   id: AsRspOfResult(Microsoft.AspNetCore.Http.IResult)
@@ -44,7 +54,7 @@ items:
   fullName: Biwen.QuickApi.IResultExtensions.AsRspOfResult(Microsoft.AspNetCore.Http.IResult)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/IResultExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/IResultExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

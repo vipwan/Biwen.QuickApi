@@ -1,41 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
-  commentId: T:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
-  id: PreModularAttribute`1
-  parent: Biwen.QuickApi.Abstractions.Modular
+- uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
+  id: AutoInjectAttribute`1
+  parent: Biwen.AutoClassGen.Attributes
   children:
-  - Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
+  - Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1.#ctor(Biwen.AutoClassGen.Attributes.ServiceLifetime)
   langs:
   - csharp
   - vb
-  name: PreModularAttribute<T>
-  nameWithType: PreModularAttribute<T>
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>
+  name: AutoInjectAttribute<T>
+  nameWithType: AutoInjectAttribute<T>
+  fullName: Biwen.AutoClassGen.Attributes.AutoInjectAttribute<T>
   type: Class
-  source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
-  - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Abstractions.Modular
-  summary: 前置模块
-  example: []
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
   syntax:
     content: >-
-      [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+      [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
 
-      public class PreModularAttribute<T> : Attribute where T : ModularBase
+      public class AutoInjectAttribute<T> : AutoInjectAttribute
     typeParameters:
     - id: T
-      description: ''
     content.vb: >-
-      <AttributeUsage(AttributeTargets.Class, AllowMultiple:=False)>
+      <AttributeUsage(AttributeTargets.Class, AllowMultiple:=True, Inherited:=False)>
 
-      Public Class PreModularAttribute(Of T As ModularBase) Inherits Attribute
+      Public Class AutoInjectAttribute(Of T) Inherits AutoInjectAttribute
   inheritance:
   - System.Object
   - System.Attribute
+  - Biwen.AutoClassGen.Attributes.AutoInjectAttribute
   inheritedMembers:
+  - Biwen.AutoClassGen.Attributes.AutoInjectAttribute.ServiceLifetime
+  - Biwen.AutoClassGen.Attributes.AutoInjectAttribute.BaseType
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type,System.Boolean)
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo)
@@ -87,81 +85,75 @@ items:
     namedArguments:
     - name: AllowMultiple
       type: System.Boolean
+      value: true
+    - name: Inherited
+      type: System.Boolean
       value: false
-  nameWithType.vb: PreModularAttribute(Of T)
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T)
-  name.vb: PreModularAttribute(Of T)
-- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
-  commentId: M:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
-  id: '#ctor'
-  parent: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
+  nameWithType.vb: AutoInjectAttribute(Of T)
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoInjectAttribute(Of T)
+  name.vb: AutoInjectAttribute(Of T)
+- uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1.#ctor(Biwen.AutoClassGen.Attributes.ServiceLifetime)
+  commentId: M:Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1.#ctor(Biwen.AutoClassGen.Attributes.ServiceLifetime)
+  id: '#ctor(Biwen.AutoClassGen.Attributes.ServiceLifetime)'
+  parent: Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
   langs:
   - csharp
   - vb
-  name: PreModularAttribute()
-  nameWithType: PreModularAttribute<T>.PreModularAttribute()
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>.PreModularAttribute()
+  name: AutoInjectAttribute(ServiceLifetime)
+  nameWithType: AutoInjectAttribute<T>.AutoInjectAttribute(ServiceLifetime)
+  fullName: Biwen.AutoClassGen.Attributes.AutoInjectAttribute<T>.AutoInjectAttribute(Biwen.AutoClassGen.Attributes.ServiceLifetime)
   type: Constructor
-  source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
-  - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Abstractions.Modular
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
   syntax:
-    content: public PreModularAttribute()
-    content.vb: Public Sub New()
-  overload: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor*
-  nameWithType.vb: PreModularAttribute(Of T).New()
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T).New()
-  name.vb: New()
+    content: public AutoInjectAttribute(ServiceLifetime serviceLifetime = ServiceLifetime.Scoped)
+    parameters:
+    - id: serviceLifetime
+      type: Biwen.AutoClassGen.Attributes.ServiceLifetime
+    content.vb: Public Sub New(serviceLifetime As ServiceLifetime = ServiceLifetime.Scoped)
+  overload: Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1.#ctor*
+  nameWithType.vb: AutoInjectAttribute(Of T).New(ServiceLifetime)
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoInjectAttribute(Of T).New(Biwen.AutoClassGen.Attributes.ServiceLifetime)
+  name.vb: New(ServiceLifetime)
 references:
-- uid: Biwen.QuickApi.Abstractions.Modular
-  commentId: N:Biwen.QuickApi.Abstractions.Modular
+- uid: Biwen.AutoClassGen.Attributes
+  commentId: N:Biwen.AutoClassGen.Attributes
   isExternal: true
   href: Biwen.html
-  name: Biwen.QuickApi.Abstractions.Modular
-  nameWithType: Biwen.QuickApi.Abstractions.Modular
-  fullName: Biwen.QuickApi.Abstractions.Modular
+  name: Biwen.AutoClassGen.Attributes
+  nameWithType: Biwen.AutoClassGen.Attributes
+  fullName: Biwen.AutoClassGen.Attributes
   spec.csharp:
   - uid: Biwen
     name: Biwen
     isExternal: true
     href: Biwen.html
   - name: .
-  - uid: Biwen.QuickApi
-    name: QuickApi
+  - uid: Biwen.AutoClassGen
+    name: AutoClassGen
     isExternal: true
-    href: Biwen.QuickApi.html
+    href: Biwen.AutoClassGen.html
   - name: .
-  - uid: Biwen.QuickApi.Abstractions
-    name: Abstractions
+  - uid: Biwen.AutoClassGen.Attributes
+    name: Attributes
     isExternal: true
-    href: Biwen.QuickApi.Abstractions.html
-  - name: .
-  - uid: Biwen.QuickApi.Abstractions.Modular
-    name: Modular
-    isExternal: true
-    href: Biwen.QuickApi.Abstractions.Modular.html
+    href: Biwen.AutoClassGen.Attributes.html
   spec.vb:
   - uid: Biwen
     name: Biwen
     isExternal: true
     href: Biwen.html
   - name: .
-  - uid: Biwen.QuickApi
-    name: QuickApi
+  - uid: Biwen.AutoClassGen
+    name: AutoClassGen
     isExternal: true
-    href: Biwen.QuickApi.html
+    href: Biwen.AutoClassGen.html
   - name: .
-  - uid: Biwen.QuickApi.Abstractions
-    name: Abstractions
+  - uid: Biwen.AutoClassGen.Attributes
+    name: Attributes
     isExternal: true
-    href: Biwen.QuickApi.Abstractions.html
-  - name: .
-  - uid: Biwen.QuickApi.Abstractions.Modular
-    name: Modular
-    isExternal: true
-    href: Biwen.QuickApi.Abstractions.Modular.html
+    href: Biwen.AutoClassGen.Attributes.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -181,6 +173,30 @@ references:
   name: Attribute
   nameWithType: Attribute
   fullName: System.Attribute
+- uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoInjectAttribute
+  parent: Biwen.AutoClassGen.Attributes
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoInjectAttribute.html
+  name: AutoInjectAttribute
+  nameWithType: AutoInjectAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoInjectAttribute
+- uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute.ServiceLifetime
+  commentId: P:Biwen.AutoClassGen.Attributes.AutoInjectAttribute.ServiceLifetime
+  parent: Biwen.AutoClassGen.Attributes.AutoInjectAttribute
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoInjectAttribute.html#Biwen_AutoClassGen_Attributes_AutoInjectAttribute_ServiceLifetime
+  name: ServiceLifetime
+  nameWithType: AutoInjectAttribute.ServiceLifetime
+  fullName: Biwen.AutoClassGen.Attributes.AutoInjectAttribute.ServiceLifetime
+- uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute.BaseType
+  commentId: P:Biwen.AutoClassGen.Attributes.AutoInjectAttribute.BaseType
+  parent: Biwen.AutoClassGen.Attributes.AutoInjectAttribute
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoInjectAttribute.html#Biwen_AutoClassGen_Attributes_AutoInjectAttribute_BaseType
+  name: BaseType
+  nameWithType: AutoInjectAttribute.BaseType
+  fullName: Biwen.AutoClassGen.Attributes.AutoInjectAttribute.BaseType
 - uid: System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
   commentId: M:System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
   parent: System.Attribute
@@ -1956,13 +1972,21 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor*
-  commentId: Overload:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
+- uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1.#ctor*
+  commentId: Overload:Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1.#ctor
   isExternal: true
-  href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html#Biwen_QuickApi_Abstractions_Modular_PreModularAttribute_1__ctor
-  name: PreModularAttribute
-  nameWithType: PreModularAttribute<T>.PreModularAttribute
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>.PreModularAttribute
-  nameWithType.vb: PreModularAttribute(Of T).New
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T).New
+  href: Biwen.AutoClassGen.Attributes.AutoInjectAttribute-1.html#Biwen_AutoClassGen_Attributes_AutoInjectAttribute_1__ctor_Biwen_AutoClassGen_Attributes_ServiceLifetime_
+  name: AutoInjectAttribute
+  nameWithType: AutoInjectAttribute<T>.AutoInjectAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoInjectAttribute<T>.AutoInjectAttribute
+  nameWithType.vb: AutoInjectAttribute(Of T).New
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoInjectAttribute(Of T).New
   name.vb: New
+- uid: Biwen.AutoClassGen.Attributes.ServiceLifetime
+  commentId: T:Biwen.AutoClassGen.Attributes.ServiceLifetime
+  parent: Biwen.AutoClassGen.Attributes
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.ServiceLifetime.html
+  name: ServiceLifetime
+  nameWithType: ServiceLifetime
+  fullName: Biwen.AutoClassGen.Attributes.ServiceLifetime

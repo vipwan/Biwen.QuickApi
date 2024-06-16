@@ -17,13 +17,19 @@ items:
   fullName: Biwen.QuickApi.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
   syntax:
-    content: public static class ServiceRegistration
-    content.vb: Public Module ServiceRegistration
+    content: >-
+      [SuppressType]
+
+      public static class ServiceRegistration
+    content.vb: >-
+      <SuppressType>
+
+      Public Module ServiceRegistration
   inheritance:
   - System.Object
   inheritedMembers:
@@ -34,6 +40,10 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+  attributes:
+  - type: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+    ctor: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.#ctor
+    arguments: []
 - uid: Biwen.QuickApi.ServiceRegistration.AddBiwenQuickApis(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Biwen.QuickApi.BiwenQuickApiOptions})
   commentId: M:Biwen.QuickApi.ServiceRegistration.AddBiwenQuickApis(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Biwen.QuickApi.BiwenQuickApiOptions})
   id: AddBiwenQuickApis(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Biwen.QuickApi.BiwenQuickApiOptions})
@@ -47,7 +57,7 @@ items:
   fullName: Biwen.QuickApi.ServiceRegistration.AddBiwenQuickApis(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Biwen.QuickApi.BiwenQuickApiOptions>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -86,7 +96,7 @@ items:
   fullName: Biwen.QuickApi.ServiceRegistration.AddQuickApiGroupRouteBuilder<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -122,7 +132,7 @@ items:
   fullName: Biwen.QuickApi.ServiceRegistration.MapBiwenQuickApis(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -159,7 +169,7 @@ items:
   fullName: Biwen.QuickApi.ServiceRegistration.UseBiwenQuickApis(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b67d501ebc989503d3512bc3569904685544a010/Biwen.QuickApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/dbe226da77d8cc0a176a031a228e6b5ddfd1eca2/Biwen.QuickApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

@@ -4,6 +4,7 @@ items:
   commentId: N:Microsoft.Extensions.DependencyInjection
   id: Microsoft.Extensions.DependencyInjection
   children:
+  - Microsoft.Extensions.DependencyInjection.AutoActivationExtensions
   - Microsoft.Extensions.DependencyInjection.HtmlSanitizerOptionsExtensions
   langs:
   - csharp
@@ -22,3 +23,10 @@ references:
   name: HtmlSanitizerOptionsExtensions
   nameWithType: HtmlSanitizerOptionsExtensions
   fullName: Microsoft.Extensions.DependencyInjection.HtmlSanitizerOptionsExtensions
+- uid: Microsoft.Extensions.DependencyInjection.AutoActivationExtensions
+  commentId: T:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions
+  isExternal: true
+  href: Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.html
+  name: AutoActivationExtensions
+  nameWithType: AutoActivationExtensions
+  fullName: Microsoft.Extensions.DependencyInjection.AutoActivationExtensions

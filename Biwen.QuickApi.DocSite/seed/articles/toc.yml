@@ -37,9 +37,5 @@
   - name: IdGenerator
     href: 8.md
 
-  - name: Section 1
-  - href: engineering_guidelines.md
-  - href: csharp_coding_standards.md
-- href: markdown.md
 - name: Microsoft Docs
   href: https://docs.microsoft.com/en-us/

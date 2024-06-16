@@ -1,0 +1,123 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.AutoClassGen.Attributes.ServiceLifetime
+  commentId: T:Biwen.AutoClassGen.Attributes.ServiceLifetime
+  id: ServiceLifetime
+  parent: Biwen.AutoClassGen.Attributes
+  children:
+  - Biwen.AutoClassGen.Attributes.ServiceLifetime.Scoped
+  - Biwen.AutoClassGen.Attributes.ServiceLifetime.Singleton
+  - Biwen.AutoClassGen.Attributes.ServiceLifetime.Transient
+  langs:
+  - csharp
+  - vb
+  name: ServiceLifetime
+  nameWithType: ServiceLifetime
+  fullName: Biwen.AutoClassGen.Attributes.ServiceLifetime
+  type: Enum
+  assemblies:
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
+  syntax:
+    content: public enum ServiceLifetime
+    content.vb: Public Enum ServiceLifetime
+- uid: Biwen.AutoClassGen.Attributes.ServiceLifetime.Singleton
+  commentId: F:Biwen.AutoClassGen.Attributes.ServiceLifetime.Singleton
+  id: Singleton
+  parent: Biwen.AutoClassGen.Attributes.ServiceLifetime
+  langs:
+  - csharp
+  - vb
+  name: Singleton
+  nameWithType: ServiceLifetime.Singleton
+  fullName: Biwen.AutoClassGen.Attributes.ServiceLifetime.Singleton
+  type: Field
+  assemblies:
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
+  syntax:
+    content: Singleton = 1
+    return:
+      type: Biwen.AutoClassGen.Attributes.ServiceLifetime
+- uid: Biwen.AutoClassGen.Attributes.ServiceLifetime.Transient
+  commentId: F:Biwen.AutoClassGen.Attributes.ServiceLifetime.Transient
+  id: Transient
+  parent: Biwen.AutoClassGen.Attributes.ServiceLifetime
+  langs:
+  - csharp
+  - vb
+  name: Transient
+  nameWithType: ServiceLifetime.Transient
+  fullName: Biwen.AutoClassGen.Attributes.ServiceLifetime.Transient
+  type: Field
+  assemblies:
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
+  syntax:
+    content: Transient = 2
+    return:
+      type: Biwen.AutoClassGen.Attributes.ServiceLifetime
+- uid: Biwen.AutoClassGen.Attributes.ServiceLifetime.Scoped
+  commentId: F:Biwen.AutoClassGen.Attributes.ServiceLifetime.Scoped
+  id: Scoped
+  parent: Biwen.AutoClassGen.Attributes.ServiceLifetime
+  langs:
+  - csharp
+  - vb
+  name: Scoped
+  nameWithType: ServiceLifetime.Scoped
+  fullName: Biwen.AutoClassGen.Attributes.ServiceLifetime.Scoped
+  type: Field
+  assemblies:
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
+  syntax:
+    content: Scoped = 4
+    return:
+      type: Biwen.AutoClassGen.Attributes.ServiceLifetime
+references:
+- uid: Biwen.AutoClassGen.Attributes
+  commentId: N:Biwen.AutoClassGen.Attributes
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.AutoClassGen.Attributes
+  nameWithType: Biwen.AutoClassGen.Attributes
+  fullName: Biwen.AutoClassGen.Attributes
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.AutoClassGen
+    name: AutoClassGen
+    isExternal: true
+    href: Biwen.AutoClassGen.html
+  - name: .
+  - uid: Biwen.AutoClassGen.Attributes
+    name: Attributes
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.AutoClassGen
+    name: AutoClassGen
+    isExternal: true
+    href: Biwen.AutoClassGen.html
+  - name: .
+  - uid: Biwen.AutoClassGen.Attributes
+    name: Attributes
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.html
+- uid: Biwen.AutoClassGen.Attributes.ServiceLifetime
+  commentId: T:Biwen.AutoClassGen.Attributes.ServiceLifetime
+  parent: Biwen.AutoClassGen.Attributes
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.ServiceLifetime.html
+  name: ServiceLifetime
+  nameWithType: ServiceLifetime
+  fullName: Biwen.AutoClassGen.Attributes.ServiceLifetime

@@ -42,6 +42,13 @@ app.UseStaticFiles(new StaticFileOptions
     ServeUnknownFileTypes = true
 });
 
+// redirect to index.html
+app.MapGet("/", () => Results.Redirect("index.html")).ExcludeFromDescription();
+
+
+// Options
+(bool GenApiYml, bool GenDoc) genOptions = (false, true);
+
 var options = new DotnetApiOptions
 {
     IncludeApi = symbol =>
@@ -55,12 +62,14 @@ var options = new DotnetApiOptions
     },
 };
 
-//当变更的时候生成yaml文件:
-//await DotnetApiCatalog.GenerateManagedReferenceYamlFiles("seed/docfx.json", options);
-
-//静态生成:
-await Docfx.Docset.Build("seed/docfx.json");
-
-app.MapGet("/", () => { return Results.Redirect("/index.html"); }).ExcludeFromDescription();
-
+if (genOptions.GenApiYml)
+{
+    //生成api.yml文件
+    await DotnetApiCatalog.GenerateManagedReferenceYamlFiles("seed/docfx.json", options);
+}
+if (genOptions.GenDoc)
+{
+    //静态生成:
+    await Docfx.Docset.Build("seed/docfx.json");
+}
 app.Run();

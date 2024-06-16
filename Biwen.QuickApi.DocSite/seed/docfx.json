@@ -1,9 +1,15 @@
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json#",
+
   "metadata": [
     {
       "src": [
         {
-          "files": [ "**/bin/Debug/net9.0/Biwen.QuickApi.dll" ],
+          "files": [
+            "**/bin/Debug/net9.0/Biwen.QuickApi.dll",
+            "**/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.AutoActivation.dll",
+            "**/bin/Debug/net9.0/Biwen.AutoClassGen.Attributes.dll"
+          ],
           "src": "../"
         }
       ],
