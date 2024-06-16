@@ -31,6 +31,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Biwen.QuickApi.Logging.Serilog\Biwen.QuickApi.Logging.Serilog.csproj" />
 		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
 	</ItemGroup>
 

@@ -13,7 +13,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.ILocker
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/Infrastructure/Locking/ILocker.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Infrastructure/Locking/ILocker.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking

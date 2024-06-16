@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -53,7 +53,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>.RuleFor<TProperty>(System.Linq.Expressions.Expression<System.Func<T, TProperty>>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -88,7 +88,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>.Validate()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -115,7 +115,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>.BaseRequest()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

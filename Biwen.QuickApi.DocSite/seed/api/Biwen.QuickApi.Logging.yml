@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Logging
+  commentId: N:Biwen.QuickApi.Logging
+  id: Biwen.QuickApi.Logging
+  children:
+  - Biwen.QuickApi.Logging.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Logging
+  nameWithType: Biwen.QuickApi.Logging
+  fullName: Biwen.QuickApi.Logging
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Logging.Serilog
+references:
+- uid: Biwen.QuickApi.Logging.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Logging.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.Logging.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Logging.ServiceRegistration

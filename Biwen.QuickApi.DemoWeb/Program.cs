@@ -1,13 +1,13 @@
 ﻿using Biwen.QuickApi.DemoWeb.GroupRouteBuilders;
 using Biwen.QuickApi.OpenApi;
 using Biwen.QuickApi.OpenApi.Scalar;
+using Biwen.QuickApi.Logging;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.FluentUI.AspNetCore.Components;
-using Serilog;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,14 +16,8 @@ var builder = WebApplication.CreateBuilder(args);
 #region Logger
 
 builder.Logging.ClearProviders();
-
-builder.Host.UseSerilog((context, builder) =>
-{
-    builder.ReadFrom
-      .Configuration(context.Configuration)
-      .Enrich
-      .FromLogContext();
-});
+//使用配置文件Serilog注册
+builder.Host.UseSerilogFromConfiguration();
 
 #endregion
 

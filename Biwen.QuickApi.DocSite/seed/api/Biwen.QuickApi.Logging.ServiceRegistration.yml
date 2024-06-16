@@ -1,28 +1,32 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata
-  commentId: T:Biwen.QuickApi.Metadata.QuickApiEndpointMetadata
-  id: QuickApiEndpointMetadata
-  parent: Biwen.QuickApi.Metadata
+- uid: Biwen.QuickApi.Logging.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Logging.ServiceRegistration
+  id: ServiceRegistration
+  parent: Biwen.QuickApi.Logging
   children:
-  - Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.#ctor
+  - Biwen.QuickApi.Logging.ServiceRegistration.UseSerilogFromConfiguration(Microsoft.Extensions.Hosting.IHostBuilder)
   langs:
   - csharp
   - vb
-  name: QuickApiEndpointMetadata
-  nameWithType: QuickApiEndpointMetadata
-  fullName: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Logging.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi.Logging.Serilog/ServiceRegistration.cs
   assemblies:
-  - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Metadata
-  summary: Metadata for QuickApiEndpoint
-  example: []
+  - Biwen.QuickApi.Logging.Serilog
+  namespace: Biwen.QuickApi.Logging
   syntax:
-    content: public class QuickApiEndpointMetadata
-    content.vb: Public Class QuickApiEndpointMetadata
+    content: >-
+      [SuppressType]
+
+      public static class ServiceRegistration
+    content.vb: >-
+      <SuppressType>
+
+      Public Module ServiceRegistration
   inheritance:
   - System.Object
   inheritedMembers:
@@ -33,37 +37,48 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.#ctor
-  commentId: M:Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.#ctor
-  id: '#ctor'
-  parent: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata
+  attributes:
+  - type: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+    ctor: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.#ctor
+    arguments: []
+- uid: Biwen.QuickApi.Logging.ServiceRegistration.UseSerilogFromConfiguration(Microsoft.Extensions.Hosting.IHostBuilder)
+  commentId: M:Biwen.QuickApi.Logging.ServiceRegistration.UseSerilogFromConfiguration(Microsoft.Extensions.Hosting.IHostBuilder)
+  id: UseSerilogFromConfiguration(Microsoft.Extensions.Hosting.IHostBuilder)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.Logging.ServiceRegistration
   langs:
   - csharp
   - vb
-  name: QuickApiEndpointMetadata()
-  nameWithType: QuickApiEndpointMetadata.QuickApiEndpointMetadata()
-  fullName: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.QuickApiEndpointMetadata()
-  type: Constructor
+  name: UseSerilogFromConfiguration(IHostBuilder)
+  nameWithType: ServiceRegistration.UseSerilogFromConfiguration(IHostBuilder)
+  fullName: Biwen.QuickApi.Logging.ServiceRegistration.UseSerilogFromConfiguration(Microsoft.Extensions.Hosting.IHostBuilder)
+  type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi.Logging.Serilog/ServiceRegistration.cs
   assemblies:
-  - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Metadata
+  - Biwen.QuickApi.Logging.Serilog
+  namespace: Biwen.QuickApi.Logging
+  summary: 默认使用配置文件中的Serilog配置
+  example: []
   syntax:
-    content: public QuickApiEndpointMetadata()
-    content.vb: Public Sub New()
-  overload: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.#ctor*
-  nameWithType.vb: QuickApiEndpointMetadata.New()
-  fullName.vb: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.New()
-  name.vb: New()
+    content: public static IHostBuilder UseSerilogFromConfiguration(this IHostBuilder builder)
+    parameters:
+    - id: builder
+      type: Microsoft.Extensions.Hosting.IHostBuilder
+      description: ''
+    return:
+      type: Microsoft.Extensions.Hosting.IHostBuilder
+      description: ''
+    content.vb: Public Shared Function UseSerilogFromConfiguration(builder As IHostBuilder) As IHostBuilder
+  overload: Biwen.QuickApi.Logging.ServiceRegistration.UseSerilogFromConfiguration*
 references:
-- uid: Biwen.QuickApi.Metadata
-  commentId: N:Biwen.QuickApi.Metadata
+- uid: Biwen.QuickApi.Logging
+  commentId: N:Biwen.QuickApi.Logging
   isExternal: true
   href: Biwen.html
-  name: Biwen.QuickApi.Metadata
-  nameWithType: Biwen.QuickApi.Metadata
-  fullName: Biwen.QuickApi.Metadata
+  name: Biwen.QuickApi.Logging
+  nameWithType: Biwen.QuickApi.Logging
+  fullName: Biwen.QuickApi.Logging
   spec.csharp:
   - uid: Biwen
     name: Biwen
@@ -75,10 +90,10 @@ references:
     isExternal: true
     href: Biwen.QuickApi.html
   - name: .
-  - uid: Biwen.QuickApi.Metadata
-    name: Metadata
+  - uid: Biwen.QuickApi.Logging
+    name: Logging
     isExternal: true
-    href: Biwen.QuickApi.Metadata.html
+    href: Biwen.QuickApi.Logging.html
   spec.vb:
   - uid: Biwen
     name: Biwen
@@ -90,10 +105,10 @@ references:
     isExternal: true
     href: Biwen.QuickApi.html
   - name: .
-  - uid: Biwen.QuickApi.Metadata
-    name: Metadata
+  - uid: Biwen.QuickApi.Logging
+    name: Logging
     isExternal: true
-    href: Biwen.QuickApi.Metadata.html
+    href: Biwen.QuickApi.Logging.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -331,13 +346,55 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.#ctor*
-  commentId: Overload:Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.#ctor
+- uid: Biwen.QuickApi.Logging.ServiceRegistration.UseSerilogFromConfiguration*
+  commentId: Overload:Biwen.QuickApi.Logging.ServiceRegistration.UseSerilogFromConfiguration
   isExternal: true
-  href: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.html#Biwen_QuickApi_Metadata_QuickApiEndpointMetadata__ctor
-  name: QuickApiEndpointMetadata
-  nameWithType: QuickApiEndpointMetadata.QuickApiEndpointMetadata
-  fullName: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.QuickApiEndpointMetadata
-  nameWithType.vb: QuickApiEndpointMetadata.New
-  fullName.vb: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata.New
-  name.vb: New
+  href: Biwen.QuickApi.Logging.ServiceRegistration.html#Biwen_QuickApi_Logging_ServiceRegistration_UseSerilogFromConfiguration_Microsoft_Extensions_Hosting_IHostBuilder_
+  name: UseSerilogFromConfiguration
+  nameWithType: ServiceRegistration.UseSerilogFromConfiguration
+  fullName: Biwen.QuickApi.Logging.ServiceRegistration.UseSerilogFromConfiguration
+- uid: Microsoft.Extensions.Hosting.IHostBuilder
+  commentId: T:Microsoft.Extensions.Hosting.IHostBuilder
+  parent: Microsoft.Extensions.Hosting
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostbuilder
+  name: IHostBuilder
+  nameWithType: IHostBuilder
+  fullName: Microsoft.Extensions.Hosting.IHostBuilder
+- uid: Microsoft.Extensions.Hosting
+  commentId: N:Microsoft.Extensions.Hosting
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Hosting
+  nameWithType: Microsoft.Extensions.Hosting
+  fullName: Microsoft.Extensions.Hosting
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Hosting
+    name: Hosting
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Hosting
+    name: Hosting
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting

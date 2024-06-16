@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<Nullable>enable</Nullable>
@@ -9,7 +9,7 @@
 		<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>
 		<Authors>万雅虎</Authors>
 		<RepositoryUrl>https://github.com/vipwan/Biwen.QuickApi</RepositoryUrl>
-		<Title>Biwen.QuickApi</Title>
+		<Title>Biwen.QuickApi.Logging.Serilog</Title>
 		<Description>Biwen.QuickApi ,NET9+ MinimalApi CQRS</Description>
 		<Copyright>MIT</Copyright>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
@@ -22,30 +22,28 @@
 	<Import Project="..\Version.props" />
 
 	<ItemGroup>
-		<FrameworkReference Include="Microsoft.AspNetCore.App" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Include="..\.editorconfig" Link=".editorconfig" />
-		<None Include="..\..\Biwen.QuickApi\README.md" Link="README.md">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
 		<None Include="..\..\Biwen.QuickApi\LICENSE.txt" Link="LICENSE.txt">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+
+		<None Include="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Biwen.AutoClassGen" Version="1.3.2.3" />
-		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.3.2.3" />
-		<PackageReference Include="HtmlSanitizer" Version="8.0.865" />
-		<PackageReference Include="Mapster.DependencyInjection" Version="1.0.2-pre01" />
-		<PackageReference Include="Microsoft.AspNetCore.AsyncState" Version="8.6.0" />
-		<PackageReference Include="NCrontab" Version="3.3.3" />
-		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-preview.5.24306.11" />
+		<PackageReference Include="Serilog" Version="4.0.0" />
+		<PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+		<PackageReference Include="Serilog.Settings.Configuration" Version="8.0.1" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
 	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
+	</ItemGroup>
+
 
 </Project>

@@ -19,7 +19,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -105,7 +105,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.OpenApiMetadataAttribute(string?, string?)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -135,7 +135,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.Summary
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -160,7 +160,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.Description
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -185,7 +185,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.OperationId
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -210,7 +210,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.IsDeprecated
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -235,7 +235,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.Tags
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/34467e9cf6b909d0d23d5ebaa51c4a3dc1cade30/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes

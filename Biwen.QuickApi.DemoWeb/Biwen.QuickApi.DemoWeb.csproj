@@ -12,13 +12,10 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.6" />
 		<PackageReference Include="Microsoft.Extensions.Caching.Hybrid" Version="9.0.0-preview.5.24306.11" />
 		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.7.2" />
-		<PackageReference Include="Serilog" Version="4.0.0" />
-		<PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
-		<PackageReference Include="Serilog.Settings.Configuration" Version="8.0.1" />
-		<PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Biwen.QuickApi.Logging.Serilog\Biwen.QuickApi.Logging.Serilog.csproj" />
 		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
 	</ItemGroup>
 

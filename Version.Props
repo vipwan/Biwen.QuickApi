@@ -1,0 +1,10 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<PackageVersion>2.0.0-preview4</PackageVersion>
+		<PackageReleaseNotes></PackageReleaseNotes>
+		<AssemblyVersion>2.0.0</AssemblyVersion>
+		<FileVersion>2.0.0</FileVersion>
+	</PropertyGroup>
+
+</Project>

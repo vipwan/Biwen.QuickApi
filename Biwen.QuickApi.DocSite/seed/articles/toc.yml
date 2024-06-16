@@ -10,6 +10,12 @@
 - name: 对象映射
   href: DTO.md
 
+- name: 扩展组件
+  expanded: true
+  items:
+  - name: Serilog扩展
+    href: Logging.md
+
 - name: Api模块
   expanded: true
   items:

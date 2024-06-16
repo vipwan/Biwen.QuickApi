@@ -163,6 +163,11 @@ items:
     name: IStartupTask
   - uid: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase
     name: StartupTaskBase
+- uid: Biwen.QuickApi.Logging
+  name: Biwen.QuickApi.Logging
+  items:
+  - uid: Biwen.QuickApi.Logging.ServiceRegistration
+    name: ServiceRegistration
 - uid: Biwen.QuickApi.Mapping
   name: Biwen.QuickApi.Mapping
   items:
