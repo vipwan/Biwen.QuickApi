@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi/Scheduling/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -55,7 +55,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.ServiceRegistration.AddScheduler<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi/Scheduling/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -91,7 +91,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.ServiceRegistration.AddScheduleMetadataStore<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi/Scheduling/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling

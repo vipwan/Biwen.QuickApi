@@ -1,0 +1,862 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
+  commentId: T:Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
+  id: WrapMiniProfilerOptions
+  parent: Biwen.QuickApi.MiniProfiler
+  children:
+  - Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.#ctor
+  - Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Enabled
+  - Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Key
+  langs:
+  - csharp
+  - vb
+  name: WrapMiniProfilerOptions
+  nameWithType: WrapMiniProfilerOptions
+  fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+  assemblies:
+  - Biwen.QuickApi.MiniProfiler
+  namespace: Biwen.QuickApi.MiniProfiler
+  summary: MiniProfiler配置选项
+  example: []
+  syntax:
+    content: 'public class WrapMiniProfilerOptions : MiniProfilerOptions'
+    content.vb: Public Class WrapMiniProfilerOptions Inherits MiniProfilerOptions
+  inheritance:
+  - System.Object
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  - StackExchange.Profiling.MiniProfilerOptions
+  inheritedMembers:
+  - StackExchange.Profiling.MiniProfilerOptions.RouteBasePath
+  - StackExchange.Profiling.MiniProfilerOptions.ShouldProfile
+  - StackExchange.Profiling.MiniProfilerOptions.ResultsAuthorize
+  - StackExchange.Profiling.MiniProfilerOptions.ResultsAuthorizeAsync
+  - StackExchange.Profiling.MiniProfilerOptions.ResultsListAuthorize
+  - StackExchange.Profiling.MiniProfilerOptions.ResultsListAuthorizeAsync
+  - StackExchange.Profiling.MiniProfilerOptions.UserIdProvider
+  - StackExchange.Profiling.MiniProfilerOptions.EnableServerTimingHeader
+  - StackExchange.Profiling.MiniProfilerOptions.EnableMvcFilterProfiling
+  - StackExchange.Profiling.MiniProfilerOptions.MvcFilterMinimumSaveMs
+  - StackExchange.Profiling.MiniProfilerOptions.EnableMvcViewProfiling
+  - StackExchange.Profiling.MiniProfilerOptions.MvcViewMinimumSaveMs
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StartProfiler(System.String)
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnConfigure
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.Version
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.VersionHash
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.EnableDebugMode
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedAssemblies
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedTypes
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedMethods
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.IgnoredPaths
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.MaxUnviewedProfiles
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StackMaxLength
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TrackConnectionOpenClose
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TrivialDurationThresholdMilliseconds
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupShowTimeWithChildren
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupShowTrivial
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupMaxTracesToShow
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupRenderPosition
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupDecimalPlaces
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ColorScheme
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupToggleKeyboardShortcut
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupStartHidden
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ShowControls
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.IgnoredDuplicateExecuteTypes
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludeStackTraceSnippetFromCustomTimings
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.Storage
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.SqlFormatter
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ProfilerProvider
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StopwatchProvider
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TimingInstrumentationProvider
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnInternalError
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Key
+  commentId: F:Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Key
+  id: Key
+  parent: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
+  langs:
+  - csharp
+  - vb
+  name: Key
+  nameWithType: WrapMiniProfilerOptions.Key
+  fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Key
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+  assemblies:
+  - Biwen.QuickApi.MiniProfiler
+  namespace: Biwen.QuickApi.MiniProfiler
+  summary: 配置文件中的定位Key
+  example: []
+  syntax:
+    content: public const string Key = "BiwenQuickApi:MiniProfiler"
+    return:
+      type: System.String
+    content.vb: Public Const Key As String = "BiwenQuickApi:MiniProfiler"
+- uid: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.#ctor
+  commentId: M:Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.#ctor
+  id: '#ctor'
+  parent: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
+  langs:
+  - csharp
+  - vb
+  name: WrapMiniProfilerOptions()
+  nameWithType: WrapMiniProfilerOptions.WrapMiniProfilerOptions()
+  fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.WrapMiniProfilerOptions()
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+  assemblies:
+  - Biwen.QuickApi.MiniProfiler
+  namespace: Biwen.QuickApi.MiniProfiler
+  syntax:
+    content: public WrapMiniProfilerOptions()
+    content.vb: Public Sub New()
+  overload: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.#ctor*
+  nameWithType.vb: WrapMiniProfilerOptions.New()
+  fullName.vb: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.New()
+  name.vb: New()
+- uid: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Enabled
+  commentId: P:Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Enabled
+  id: Enabled
+  parent: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
+  langs:
+  - csharp
+  - vb
+  name: Enabled
+  nameWithType: WrapMiniProfilerOptions.Enabled
+  fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Enabled
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+  assemblies:
+  - Biwen.QuickApi.MiniProfiler
+  namespace: Biwen.QuickApi.MiniProfiler
+  summary: 是否启用MiniProfiler
+  example: []
+  syntax:
+    content: public bool Enabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Enabled As Boolean
+  overload: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Enabled*
+references:
+- uid: Biwen.QuickApi.MiniProfiler
+  commentId: N:Biwen.QuickApi.MiniProfiler
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.MiniProfiler
+  nameWithType: Biwen.QuickApi.MiniProfiler
+  fullName: Biwen.QuickApi.MiniProfiler
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.MiniProfiler
+    name: MiniProfiler
+    isExternal: true
+    href: Biwen.QuickApi.MiniProfiler.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.MiniProfiler
+    name: MiniProfiler
+    isExternal: true
+    href: Biwen.QuickApi.MiniProfiler.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  commentId: T:StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  parent: StackExchange.Profiling.Internal
+  isExternal: true
+  name: MiniProfilerBaseOptions
+  nameWithType: MiniProfilerBaseOptions
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+- uid: StackExchange.Profiling.MiniProfilerOptions
+  commentId: T:StackExchange.Profiling.MiniProfilerOptions
+  parent: StackExchange.Profiling
+  isExternal: true
+  name: MiniProfilerOptions
+  nameWithType: MiniProfilerOptions
+  fullName: StackExchange.Profiling.MiniProfilerOptions
+- uid: StackExchange.Profiling.MiniProfilerOptions.RouteBasePath
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.RouteBasePath
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: RouteBasePath
+  nameWithType: MiniProfilerOptions.RouteBasePath
+  fullName: StackExchange.Profiling.MiniProfilerOptions.RouteBasePath
+- uid: StackExchange.Profiling.MiniProfilerOptions.ShouldProfile
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.ShouldProfile
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: ShouldProfile
+  nameWithType: MiniProfilerOptions.ShouldProfile
+  fullName: StackExchange.Profiling.MiniProfilerOptions.ShouldProfile
+- uid: StackExchange.Profiling.MiniProfilerOptions.ResultsAuthorize
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.ResultsAuthorize
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: ResultsAuthorize
+  nameWithType: MiniProfilerOptions.ResultsAuthorize
+  fullName: StackExchange.Profiling.MiniProfilerOptions.ResultsAuthorize
+- uid: StackExchange.Profiling.MiniProfilerOptions.ResultsAuthorizeAsync
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.ResultsAuthorizeAsync
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: ResultsAuthorizeAsync
+  nameWithType: MiniProfilerOptions.ResultsAuthorizeAsync
+  fullName: StackExchange.Profiling.MiniProfilerOptions.ResultsAuthorizeAsync
+- uid: StackExchange.Profiling.MiniProfilerOptions.ResultsListAuthorize
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.ResultsListAuthorize
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: ResultsListAuthorize
+  nameWithType: MiniProfilerOptions.ResultsListAuthorize
+  fullName: StackExchange.Profiling.MiniProfilerOptions.ResultsListAuthorize
+- uid: StackExchange.Profiling.MiniProfilerOptions.ResultsListAuthorizeAsync
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.ResultsListAuthorizeAsync
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: ResultsListAuthorizeAsync
+  nameWithType: MiniProfilerOptions.ResultsListAuthorizeAsync
+  fullName: StackExchange.Profiling.MiniProfilerOptions.ResultsListAuthorizeAsync
+- uid: StackExchange.Profiling.MiniProfilerOptions.UserIdProvider
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.UserIdProvider
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: UserIdProvider
+  nameWithType: MiniProfilerOptions.UserIdProvider
+  fullName: StackExchange.Profiling.MiniProfilerOptions.UserIdProvider
+- uid: StackExchange.Profiling.MiniProfilerOptions.EnableServerTimingHeader
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.EnableServerTimingHeader
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: EnableServerTimingHeader
+  nameWithType: MiniProfilerOptions.EnableServerTimingHeader
+  fullName: StackExchange.Profiling.MiniProfilerOptions.EnableServerTimingHeader
+- uid: StackExchange.Profiling.MiniProfilerOptions.EnableMvcFilterProfiling
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.EnableMvcFilterProfiling
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: EnableMvcFilterProfiling
+  nameWithType: MiniProfilerOptions.EnableMvcFilterProfiling
+  fullName: StackExchange.Profiling.MiniProfilerOptions.EnableMvcFilterProfiling
+- uid: StackExchange.Profiling.MiniProfilerOptions.MvcFilterMinimumSaveMs
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.MvcFilterMinimumSaveMs
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: MvcFilterMinimumSaveMs
+  nameWithType: MiniProfilerOptions.MvcFilterMinimumSaveMs
+  fullName: StackExchange.Profiling.MiniProfilerOptions.MvcFilterMinimumSaveMs
+- uid: StackExchange.Profiling.MiniProfilerOptions.EnableMvcViewProfiling
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.EnableMvcViewProfiling
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: EnableMvcViewProfiling
+  nameWithType: MiniProfilerOptions.EnableMvcViewProfiling
+  fullName: StackExchange.Profiling.MiniProfilerOptions.EnableMvcViewProfiling
+- uid: StackExchange.Profiling.MiniProfilerOptions.MvcViewMinimumSaveMs
+  commentId: P:StackExchange.Profiling.MiniProfilerOptions.MvcViewMinimumSaveMs
+  parent: StackExchange.Profiling.MiniProfilerOptions
+  isExternal: true
+  name: MvcViewMinimumSaveMs
+  nameWithType: MiniProfilerOptions.MvcViewMinimumSaveMs
+  fullName: StackExchange.Profiling.MiniProfilerOptions.MvcViewMinimumSaveMs
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StartProfiler(System.String)
+  commentId: M:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StartProfiler(System.String)
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: StartProfiler(string)
+  nameWithType: MiniProfilerBaseOptions.StartProfiler(string)
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StartProfiler(string)
+  nameWithType.vb: MiniProfilerBaseOptions.StartProfiler(String)
+  fullName.vb: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StartProfiler(String)
+  name.vb: StartProfiler(String)
+  spec.csharp:
+  - uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StartProfiler(System.String)
+    name: StartProfiler
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StartProfiler(System.String)
+    name: StartProfiler
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnConfigure
+  commentId: M:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnConfigure
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: OnConfigure()
+  nameWithType: MiniProfilerBaseOptions.OnConfigure()
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnConfigure()
+  spec.csharp:
+  - uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnConfigure
+    name: OnConfigure
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnConfigure
+    name: OnConfigure
+    isExternal: true
+  - name: (
+  - name: )
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.Version
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.Version
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: Version
+  nameWithType: MiniProfilerBaseOptions.Version
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.Version
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.VersionHash
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.VersionHash
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: VersionHash
+  nameWithType: MiniProfilerBaseOptions.VersionHash
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.VersionHash
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.EnableDebugMode
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.EnableDebugMode
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: EnableDebugMode
+  nameWithType: MiniProfilerBaseOptions.EnableDebugMode
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.EnableDebugMode
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedAssemblies
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedAssemblies
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: ExcludedAssemblies
+  nameWithType: MiniProfilerBaseOptions.ExcludedAssemblies
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedAssemblies
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedTypes
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedTypes
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: ExcludedTypes
+  nameWithType: MiniProfilerBaseOptions.ExcludedTypes
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedTypes
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedMethods
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedMethods
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: ExcludedMethods
+  nameWithType: MiniProfilerBaseOptions.ExcludedMethods
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludedMethods
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.IgnoredPaths
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.IgnoredPaths
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: IgnoredPaths
+  nameWithType: MiniProfilerBaseOptions.IgnoredPaths
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.IgnoredPaths
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.MaxUnviewedProfiles
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.MaxUnviewedProfiles
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: MaxUnviewedProfiles
+  nameWithType: MiniProfilerBaseOptions.MaxUnviewedProfiles
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.MaxUnviewedProfiles
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StackMaxLength
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StackMaxLength
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: StackMaxLength
+  nameWithType: MiniProfilerBaseOptions.StackMaxLength
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StackMaxLength
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TrackConnectionOpenClose
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TrackConnectionOpenClose
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: TrackConnectionOpenClose
+  nameWithType: MiniProfilerBaseOptions.TrackConnectionOpenClose
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TrackConnectionOpenClose
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TrivialDurationThresholdMilliseconds
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TrivialDurationThresholdMilliseconds
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: TrivialDurationThresholdMilliseconds
+  nameWithType: MiniProfilerBaseOptions.TrivialDurationThresholdMilliseconds
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TrivialDurationThresholdMilliseconds
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupShowTimeWithChildren
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupShowTimeWithChildren
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: PopupShowTimeWithChildren
+  nameWithType: MiniProfilerBaseOptions.PopupShowTimeWithChildren
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupShowTimeWithChildren
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupShowTrivial
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupShowTrivial
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: PopupShowTrivial
+  nameWithType: MiniProfilerBaseOptions.PopupShowTrivial
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupShowTrivial
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupMaxTracesToShow
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupMaxTracesToShow
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: PopupMaxTracesToShow
+  nameWithType: MiniProfilerBaseOptions.PopupMaxTracesToShow
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupMaxTracesToShow
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupRenderPosition
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupRenderPosition
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: PopupRenderPosition
+  nameWithType: MiniProfilerBaseOptions.PopupRenderPosition
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupRenderPosition
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupDecimalPlaces
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupDecimalPlaces
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: PopupDecimalPlaces
+  nameWithType: MiniProfilerBaseOptions.PopupDecimalPlaces
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupDecimalPlaces
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ColorScheme
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ColorScheme
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: ColorScheme
+  nameWithType: MiniProfilerBaseOptions.ColorScheme
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ColorScheme
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupToggleKeyboardShortcut
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupToggleKeyboardShortcut
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: PopupToggleKeyboardShortcut
+  nameWithType: MiniProfilerBaseOptions.PopupToggleKeyboardShortcut
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupToggleKeyboardShortcut
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupStartHidden
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupStartHidden
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: PopupStartHidden
+  nameWithType: MiniProfilerBaseOptions.PopupStartHidden
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupStartHidden
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ShowControls
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ShowControls
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: ShowControls
+  nameWithType: MiniProfilerBaseOptions.ShowControls
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ShowControls
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.IgnoredDuplicateExecuteTypes
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.IgnoredDuplicateExecuteTypes
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: IgnoredDuplicateExecuteTypes
+  nameWithType: MiniProfilerBaseOptions.IgnoredDuplicateExecuteTypes
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.IgnoredDuplicateExecuteTypes
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludeStackTraceSnippetFromCustomTimings
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludeStackTraceSnippetFromCustomTimings
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: ExcludeStackTraceSnippetFromCustomTimings
+  nameWithType: MiniProfilerBaseOptions.ExcludeStackTraceSnippetFromCustomTimings
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ExcludeStackTraceSnippetFromCustomTimings
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.Storage
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.Storage
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: Storage
+  nameWithType: MiniProfilerBaseOptions.Storage
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.Storage
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.SqlFormatter
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.SqlFormatter
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: SqlFormatter
+  nameWithType: MiniProfilerBaseOptions.SqlFormatter
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.SqlFormatter
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ProfilerProvider
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ProfilerProvider
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: ProfilerProvider
+  nameWithType: MiniProfilerBaseOptions.ProfilerProvider
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ProfilerProvider
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StopwatchProvider
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StopwatchProvider
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: StopwatchProvider
+  nameWithType: MiniProfilerBaseOptions.StopwatchProvider
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StopwatchProvider
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TimingInstrumentationProvider
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TimingInstrumentationProvider
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: TimingInstrumentationProvider
+  nameWithType: MiniProfilerBaseOptions.TimingInstrumentationProvider
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TimingInstrumentationProvider
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnInternalError
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnInternalError
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: OnInternalError
+  nameWithType: MiniProfilerBaseOptions.OnInternalError
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnInternalError
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: StackExchange.Profiling.Internal
+  commentId: N:StackExchange.Profiling.Internal
+  isExternal: true
+  name: StackExchange.Profiling.Internal
+  nameWithType: StackExchange.Profiling.Internal
+  fullName: StackExchange.Profiling.Internal
+  spec.csharp:
+  - uid: StackExchange
+    name: StackExchange
+    isExternal: true
+  - name: .
+  - uid: StackExchange.Profiling
+    name: Profiling
+    isExternal: true
+  - name: .
+  - uid: StackExchange.Profiling.Internal
+    name: Internal
+    isExternal: true
+  spec.vb:
+  - uid: StackExchange
+    name: StackExchange
+    isExternal: true
+  - name: .
+  - uid: StackExchange.Profiling
+    name: Profiling
+    isExternal: true
+  - name: .
+  - uid: StackExchange.Profiling.Internal
+    name: Internal
+    isExternal: true
+- uid: StackExchange.Profiling
+  commentId: N:StackExchange.Profiling
+  isExternal: true
+  name: StackExchange.Profiling
+  nameWithType: StackExchange.Profiling
+  fullName: StackExchange.Profiling
+  spec.csharp:
+  - uid: StackExchange
+    name: StackExchange
+    isExternal: true
+  - name: .
+  - uid: StackExchange.Profiling
+    name: Profiling
+    isExternal: true
+  spec.vb:
+  - uid: StackExchange
+    name: StackExchange
+    isExternal: true
+  - name: .
+  - uid: StackExchange.Profiling
+    name: Profiling
+    isExternal: true
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.#ctor*
+  commentId: Overload:Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.html#Biwen_QuickApi_MiniProfiler_WrapMiniProfilerOptions__ctor
+  name: WrapMiniProfilerOptions
+  nameWithType: WrapMiniProfilerOptions.WrapMiniProfilerOptions
+  fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.WrapMiniProfilerOptions
+  nameWithType.vb: WrapMiniProfilerOptions.New
+  fullName.vb: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.New
+  name.vb: New
+- uid: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Enabled*
+  commentId: Overload:Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Enabled
+  isExternal: true
+  href: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.html#Biwen_QuickApi_MiniProfiler_WrapMiniProfilerOptions_Enabled
+  name: Enabled
+  nameWithType: WrapMiniProfilerOptions.Enabled
+  fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Enabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

@@ -180,6 +180,11 @@ items:
     name: QuickApiExampleMetadata
   - uid: Biwen.QuickApi.Metadata.QuickApiMetadata
     name: QuickApiMetadata
+- uid: Biwen.QuickApi.MiniProfiler
+  name: Biwen.QuickApi.MiniProfiler
+  items:
+  - uid: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
+    name: WrapMiniProfilerOptions
 - uid: Biwen.QuickApi.OpenApi
   name: Biwen.QuickApi.OpenApi
   items:

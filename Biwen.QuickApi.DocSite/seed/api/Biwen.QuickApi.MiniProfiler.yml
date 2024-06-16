@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.MiniProfiler
+  commentId: N:Biwen.QuickApi.MiniProfiler
+  id: Biwen.QuickApi.MiniProfiler
+  children:
+  - Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.MiniProfiler
+  nameWithType: Biwen.QuickApi.MiniProfiler
+  fullName: Biwen.QuickApi.MiniProfiler
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.MiniProfiler
+references:
+- uid: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
+  commentId: T:Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
+  isExternal: true
+  href: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.html
+  name: WrapMiniProfilerOptions
+  nameWithType: WrapMiniProfilerOptions
+  fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions

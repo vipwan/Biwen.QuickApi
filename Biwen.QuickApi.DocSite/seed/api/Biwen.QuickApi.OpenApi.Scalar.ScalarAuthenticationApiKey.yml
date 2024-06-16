@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationApiKey
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -44,7 +44,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationApiKey.ScalarAuthenticationApiKey()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -67,7 +67,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationApiKey.Token
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar

@@ -9,7 +9,8 @@
             "**/bin/Debug/net9.0/Biwen.QuickApi.dll",
             "**/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.AutoActivation.dll",
             "**/bin/Debug/net9.0/Biwen.AutoClassGen.Attributes.dll",
-            "**/bin/Debug/net9.0/Biwen.QuickApi.Logging.Serilog.dll"
+            "**/bin/Debug/net9.0/Biwen.QuickApi.Logging.Serilog.dll",
+            "**/bin/Debug/net9.0/Biwen.QuickApi.MiniProfiler.dll"
           ],
           "src": "../"
         }
