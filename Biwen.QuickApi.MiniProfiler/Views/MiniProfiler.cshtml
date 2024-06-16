@@ -1,0 +1,5 @@
+﻿@using StackExchange.Profiling
+@using Microsoft.Extensions.Options
+@inject IOptions<MiniProfilerOptions> Options
+
+@MiniProfiler.Current?.RenderIncludes(ViewContext.HttpContext, Options.Value.PopupRenderPosition)

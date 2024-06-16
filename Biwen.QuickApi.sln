@@ -38,6 +38,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biwen.QuickApi.Logging.Serilog", "Biwen.QuickApi.Logging.Serilog\Biwen.QuickApi.Logging.Serilog.csproj", "{2E963BC0-9CEC-4B26-8DBE-43B35B5D4EF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biwen.QuickApi.MiniProfiler", "Biwen.QuickApi.MiniProfiler\Biwen.QuickApi.MiniProfiler.csproj", "{57B4226B-C7D0-4C86-BB2E-8E979BDA1B15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +78,10 @@ Global
 		{2E963BC0-9CEC-4B26-8DBE-43B35B5D4EF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E963BC0-9CEC-4B26-8DBE-43B35B5D4EF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E963BC0-9CEC-4B26-8DBE-43B35B5D4EF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B4226B-C7D0-4C86-BB2E-8E979BDA1B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B4226B-C7D0-4C86-BB2E-8E979BDA1B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B4226B-C7D0-4C86-BB2E-8E979BDA1B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B4226B-C7D0-4C86-BB2E-8E979BDA1B15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{A719FF32-F507-439A-87A4-DDE59354B01C} = {B8089D1A-39E2-4A11-834C-0BC3DEEE9D93}
 		{E05260DF-AE1C-4451-83DB-51324113C8AA} = {4630727F-71ED-4B48-A705-22315C64CC4F}
 		{2E963BC0-9CEC-4B26-8DBE-43B35B5D4EF4} = {72E63A55-F682-4AC4-8ED5-535DE652DAC4}
+		{57B4226B-C7D0-4C86-BB2E-8E979BDA1B15} = {72E63A55-F682-4AC4-8ED5-535DE652DAC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3859D772-48C9-4531-BC8B-583D2B4DF111}

@@ -96,6 +96,8 @@ app.UseIfElse(app.Environment.IsDevelopment(), builder =>
 });
 
 
+//var modular = typeof(Biwen.QuickApi.MiniProfiler.MiniProfilerModular);
+
 // 默认方式
 //app.MapBiwenQuickApis();
 app.UseBiwenQuickApis();

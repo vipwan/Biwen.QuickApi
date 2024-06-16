@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+		<TargetFrameworks>net9.0</TargetFrameworks>
+		<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>
+		<Authors>万雅虎</Authors>
+		<RepositoryUrl>https://github.com/vipwan/Biwen.QuickApi</RepositoryUrl>
+		<Title>Biwen.QuickApi.MiniProfiler</Title>
+		<Description>Biwen.QuickApi ,NET9+ MinimalApi CQRS</Description>
+		<Copyright>MIT</Copyright>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>webapi;minimal;api;endpoint;REPR;netcore</PackageTags>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<NoWarn>CA2254;CS1570;CS1587;CS1591;CS1712;CS1734</NoWarn>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<Import Project="..\Version.props" />
+
+	<ItemGroup>
+		<None Include="..\..\Biwen.QuickApi\LICENSE.txt" Link="LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="README.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.6" />
+	  <PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.3.8" />
+	  <PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.3.8" />
+	  <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
+	</ItemGroup>
+
+</Project>

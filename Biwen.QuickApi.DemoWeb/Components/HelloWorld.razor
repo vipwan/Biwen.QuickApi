@@ -1,13 +1,30 @@
-﻿@layout Shared._Layout
+﻿@using Microsoft.Extensions.Options
+@using StackExchange.Profiling
+@using Biwen.QuickApi.MiniProfiler;
+
+@layout Shared._Layout
 @inject IHttpContextAccessor HttpContextAccessor
 @inject IToastService ToastService
 @inject ILogger<HelloWorld> Logger
+@inject IOptions<MiniProfilerOptions> Options
+@inject IOptions<WrapMiniProfilerOptions> WrapOptions
 
 <FluentStack>
     <FluentCard Appearance="Appearance.Accent">
         <p>@(Key) from minimal api  !</p>
     </FluentCard>
 </FluentStack>
+
+@if (WrapOptions.Value.Enabled)
+{
+    <div class="footer">
+        @{
+            var html = MiniProfiler.Current?.RenderIncludes(HttpContextAccessor.HttpContext!, Options.Value.PopupRenderPosition);
+        }
+        @((MarkupString)html?.Value!)
+    </div>
+}
+
 
 @code {
 
@@ -16,6 +33,7 @@
 
     protected override void OnInitialized()
     {
+
         //打印请求的路由数据,这里是从路由数据中获取的key和参数传递是两种方式!
         Logger.LogInformation($"from route data key:{HttpContextAccessor.HttpContext!.Request.RouteValues["key"]}");
     }
