@@ -18,7 +18,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.Modular.ModularBase
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular
@@ -49,7 +49,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.Modular.ModularBase.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular
@@ -78,7 +78,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.Modular.ModularBase.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, System.IServiceProvider)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular
@@ -109,7 +109,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.Modular.ModularBase.ModularBase()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular
@@ -132,7 +132,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.Modular.ModularBase.Order
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular
@@ -157,7 +157,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.Modular.ModularBase.IsEnable
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Abstractions/Modular/ModularBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular

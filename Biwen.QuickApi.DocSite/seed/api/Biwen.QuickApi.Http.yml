@@ -9,7 +9,6 @@ items:
   - Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder
   - Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
   - Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware
-  - Biwen.QuickApi.Http.QuickApiMiddleware
   langs:
   - csharp
   - vb
@@ -56,13 +55,6 @@ references:
   name: QuickApiAntiforgeryMiddleware
   nameWithType: QuickApiAntiforgeryMiddleware
   fullName: Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware
-- uid: Biwen.QuickApi.Http.QuickApiMiddleware
-  commentId: T:Biwen.QuickApi.Http.QuickApiMiddleware
-  isExternal: true
-  href: Biwen.QuickApi.Http.QuickApiMiddleware.html
-  name: QuickApiMiddleware
-  nameWithType: QuickApiMiddleware
-  fullName: Biwen.QuickApi.Http.QuickApiMiddleware
 - uid: Biwen.QuickApi.Http
   commentId: N:Biwen.QuickApi.Http
   isExternal: true

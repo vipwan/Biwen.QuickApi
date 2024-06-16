@@ -6,13 +6,12 @@ namespace Biwen.QuickApi.Http
     [CoreModular, PreModular<HtmlSanitizerModular>]
     internal class HttpModular(IServiceProvider serviceProvider) : ModularBase
     {
-
         public override int Order => base.Order;
 
         public override void ConfigureServices(IServiceCollection services)
         {
-            //重写AuthorizationMiddlewareResultHandler
-            services.AddSingleton<IAuthorizationMiddlewareResultHandler, QuickApiAuthorizationMiddlewareResultHandler>();
+            //401,403不做跳转,重写AuthorizationMiddlewareResultHandler
+            services.AddActivatedSingleton<IAuthorizationMiddlewareResultHandler, QuickApiAuthorizationMiddlewareResultHandler>();
             var useQuickApiExceptionResultBuilder = serviceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.UseQuickApiExceptionResultBuilder;
             //默认的异常返回构造器
             services.AddIf(useQuickApiExceptionResultBuilder, sp =>

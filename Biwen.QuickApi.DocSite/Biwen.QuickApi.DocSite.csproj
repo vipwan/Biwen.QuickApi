@@ -8,19 +8,13 @@
 
 	<ItemGroup>
 		<Compile Remove="seed\**" />
-		<Compile Remove="src\**" />
 		<Compile Remove="_Statics\**" />
-		<EmbeddedResource Remove="seed\**" />
 		<EmbeddedResource Remove="src\**" />
 		<EmbeddedResource Remove="_Statics\**" />
-		<None Remove="seed\**" />
-		<None Remove="src\**" />
 		<None Remove="_Statics\**" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="seed\articles\files\Schedules.cs.txt" />
-		<Content Include="seed\articles\files\Events.cs.txt" />
 		<Content Include="_statics\placeholder.txt" />
 		<Content Include="seed\articles\files\HelloWorldApi.cs.txt" />
 	</ItemGroup>

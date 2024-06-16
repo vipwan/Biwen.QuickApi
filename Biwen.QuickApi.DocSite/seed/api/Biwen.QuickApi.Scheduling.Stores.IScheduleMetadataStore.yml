@@ -14,11 +14,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
-  summary: 存储Schedule的接口,可以自行扩展配置文件或者数据库存储
+  summary: 存储调度任务Metadata的接口,可以自行扩展配置文件或者数据库存储
   example: []
   syntax:
     content: public interface IScheduleMetadataStore
@@ -35,11 +35,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
-  summary: 获取所有ScheduleTaskMetadata
+  summary: 获取所有配置任务的Metadata
   example: []
   syntax:
     content: Task<ScheduleTaskMetadata[]> GetAllAsync()

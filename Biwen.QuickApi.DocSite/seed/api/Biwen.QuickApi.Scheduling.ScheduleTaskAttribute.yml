@@ -18,7 +18,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -102,7 +102,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute.ScheduleTaskAttribute(string)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -128,11 +128,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute.Cron
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: 'Cron表达式,5位码: * * * * *,不支持秒 <a href="https://en.wikipedia.org/wiki/Cron">https://en.wikipedia.org/wiki/Cron</a>'
+  summary: Cron表达式,5位码,不支持秒,常用:<xref href="Biwen.QuickApi.Scheduling.Constants" data-throw-if-not-resolved="false"></xref>,<a href="https://en.wikipedia.org/wiki/Cron">https://en.wikipedia.org/wiki/Cron</a>
   example: []
   syntax:
     content: public string Cron { get; set; }
@@ -153,11 +153,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute.Description
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: 描述信息
+  summary: 任务描述信息
   example: []
   syntax:
     content: public string? Description { get; set; }
@@ -178,11 +178,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute.IsAsync
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: 是否异步执行.默认false会阻塞接下来的同类任务
+  summary: 是否异步执行.默认:false 会阻塞接下来的同类任务
   example: []
   syntax:
     content: public bool IsAsync { get; set; }
@@ -203,11 +203,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute.IsStartOnInit
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/ScheduleTaskAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: 是否初始化即启动,默认false
+  summary: 是否初始化即启动,默认:false
   example: []
   syntax:
     content: public bool IsStartOnInit { get; set; }
@@ -2069,6 +2069,13 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: Biwen.QuickApi.Scheduling.Constants
+  commentId: T:Biwen.QuickApi.Scheduling.Constants
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Constants.html
+  name: Constants
+  nameWithType: Constants
+  fullName: Biwen.QuickApi.Scheduling.Constants
 - uid: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute.Cron*
   commentId: Overload:Biwen.QuickApi.Scheduling.ScheduleTaskAttribute.Cron
   isExternal: true

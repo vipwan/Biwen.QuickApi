@@ -22,7 +22,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -63,11 +63,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryMinute
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: Cron for every minute
+  summary: Cron表达式,每分钟
   example: []
   syntax:
     content: public const string CronEveryMinute = "* * * * *"
@@ -86,11 +86,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEvery15Minutes
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: Cron for every 15 minutes
+  summary: Cron表达式,每15分钟
   example: []
   syntax:
     content: public const string CronEvery15Minutes = "0/15 * * * *"
@@ -109,11 +109,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryHour
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: Cron for every hour
+  summary: Cron表达式,每小时
   example: []
   syntax:
     content: public const string CronEveryHour = "0 * * * *"
@@ -132,11 +132,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryDay
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: Cron for every day
+  summary: Cron表达式,每天
   example: []
   syntax:
     content: public const string CronEveryDay = "0 0 * * *"
@@ -155,11 +155,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryWeek
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: Cron for every week
+  summary: Cron表达式,每周
   example: []
   syntax:
     content: public const string CronEveryWeek = "0 0 * * 0"
@@ -178,11 +178,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryMonth
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: Cron for every month
+  summary: Cron表达式,每月(不推荐使用)
   example: []
   syntax:
     content: public const string CronEveryMonth = "0 0 1 * *"
@@ -201,11 +201,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryYear
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: Cron for every year
+  summary: Cron表达式,每年(不推荐使用)
   example: []
   syntax:
     content: public const string CronEveryYear = "0 0 1 1 *"
@@ -225,11 +225,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryNMinutes(int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: Cron for every N minutes
+  summary: Cron表达式,每N分钟
   example: []
   syntax:
     content: public static string CronEveryNMinutes(this int n)
@@ -262,18 +262,18 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryNHours(int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: Cron for every N hours
+  summary: Cron表达式,每N小时
   example: []
   syntax:
     content: public static string CronEveryNHours(this int n)
     parameters:
     - id: n
       type: System.Int32
-      description: ''
+      description: 1~23
     return:
       type: System.String
       description: ''

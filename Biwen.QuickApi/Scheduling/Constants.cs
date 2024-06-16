@@ -7,17 +7,17 @@
     public static class Constants
     {
         /// <summary>
-        /// Cron for every minute
+        /// Cron表达式,每分钟
         /// </summary>
         public const string CronEveryMinute = "* * * * *";
 
         /// <summary>
-        /// Cron for every 15 minutes
+        /// Cron表达式,每15分钟
         /// </summary>
         public const string CronEvery15Minutes = "0/15 * * * *";
 
         /// <summary>
-        /// Cron for every N minutes
+        /// Cron表达式,每N分钟
         /// </summary>
         /// <param name="n">1~59</param>
         /// <returns></returns>
@@ -29,9 +29,9 @@
         };
 
         /// <summary>
-        /// Cron for every N hours
+        /// Cron表达式,每N小时
         /// </summary>
-        /// <param name="n"></param>
+        /// <param name="n">1~23</param>
         /// <returns></returns>
         public static string CronEveryNHours(this int n) => n switch
         {
@@ -40,27 +40,27 @@
         };
 
         /// <summary>
-        /// Cron for every hour
+        /// Cron表达式,每小时
         /// </summary>
         public const string CronEveryHour = "0 * * * *";
 
         /// <summary>
-        /// Cron for every day
+        /// Cron表达式,每天
         /// </summary>
         public const string CronEveryDay = "0 0 * * *";
 
         /// <summary>
-        /// Cron for every week
+        /// Cron表达式,每周
         /// </summary>
         public const string CronEveryWeek = "0 0 * * 0";
 
         /// <summary>
-        /// Cron for every month
+        /// Cron表达式,每月(不推荐使用)
         /// </summary>
         public const string CronEveryMonth = "0 0 1 * *";
 
         /// <summary>
-        /// Cron for every year
+        /// Cron表达式,每年(不推荐使用)
         /// </summary>
         public const string CronEveryYear = "0 0 1 1 *";
     }

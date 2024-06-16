@@ -5,7 +5,7 @@ namespace Biwen.QuickApi.Http
     /// <summary>
     /// QuickApiMiddleware
     /// </summary>
-    public sealed class QuickApiMiddleware
+    internal sealed class QuickApiMiddleware
     {
         private static readonly string? AssemblyName = typeof(ServiceRegistration).Assembly.GetName().Name;
         private static readonly string version = $"{typeof(ServiceRegistration).Assembly.GetName().Version}";

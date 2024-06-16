@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+
 namespace Biwen.QuickApi.Http
 {
-
     /// <summary>
-    /// QuickApiMiddleware
+    /// AntiforgeryMiddleware,NET8+已内部实现
     /// </summary>
+    [Obsolete("NET8+已内部实现", error: false)]
     public sealed class QuickApiAntiforgeryMiddleware
     {
         private readonly RequestDelegate _next;

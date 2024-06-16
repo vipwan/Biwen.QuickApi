@@ -129,8 +129,6 @@ items:
     name: IQuickApiGroupRouteBuilder
   - uid: Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware
     name: QuickApiAntiforgeryMiddleware
-  - uid: Biwen.QuickApi.Http.QuickApiMiddleware
-    name: QuickApiMiddleware
 - uid: Biwen.QuickApi.Infrastructure
   name: Biwen.QuickApi.Infrastructure
   items:

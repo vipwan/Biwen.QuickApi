@@ -9,6 +9,8 @@
   href: 4.md
 - name: 对象映射
   href: DTO.md
+- name: 缓存服务
+  href: Caching.md
 
 - name: 扩展组件
   expanded: true

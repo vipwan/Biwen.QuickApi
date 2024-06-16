@@ -12,22 +12,22 @@ namespace Biwen.QuickApi.Scheduling
     {
 
         /// <summary>
-        /// Cron表达式,5位码: * * * * *,不支持秒 <see href="https://en.wikipedia.org/wiki/Cron"/>
+        /// Cron表达式,5位码,不支持秒,常用:<see cref="Constants"/>,<seealso href="https://en.wikipedia.org/wiki/Cron"/>
         /// </summary>
         public string Cron { get; set; } = cron;
 
         /// <summary>
-        /// 描述信息
+        /// 任务描述信息
         /// </summary>
         public string? Description { get; set; }
 
         /// <summary>
-        /// 是否异步执行.默认false会阻塞接下来的同类任务
+        /// 是否异步执行.默认:false 会阻塞接下来的同类任务
         /// </summary>
         public bool IsAsync { get; set; } = false;
 
         /// <summary>
-        /// 是否初始化即启动,默认false
+        /// 是否初始化即启动,默认:false
         /// </summary>
         public bool IsStartOnInit { get; set; } = false;
 

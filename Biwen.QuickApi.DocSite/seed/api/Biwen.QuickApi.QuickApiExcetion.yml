@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.QuickApiExcetion
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/QuickApiExcetion.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/QuickApiExcetion.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -59,7 +59,7 @@ items:
   fullName: Biwen.QuickApi.QuickApiExcetion.QuickApiExcetion(string)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/b4cbd949c80dc4c947426ed7d317fede4bf829fd/Biwen.QuickApi/QuickApiExcetion.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c36fa9ab1fe57ceca30579935089d032ea2256b2/Biwen.QuickApi/QuickApiExcetion.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
 
 namespace Biwen.QuickApi.Scheduling.Stores.ConfigurationStore
 {
@@ -9,7 +8,10 @@ namespace Biwen.QuickApi.Scheduling.Stores.ConfigurationStore
     /// <param name="configuration"></param>
     internal class ConfigurationScheduleMetadataStore(IConfiguration configuration) : IScheduleMetadataStore
     {
-        const string Key = "BiwenQuickApi:Schedules";
+        /// <summary>
+        /// 配置文件中定位Key
+        /// </summary>
+        public const string Key = "BiwenQuickApi:Schedules";
         private static readonly ConcurrentDictionary<string, ScheduleTaskMetadata> ScheduleTaskTypes = new();
 
         public Task<ScheduleTaskMetadata[]> GetAllAsync()

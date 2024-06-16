@@ -1,5 +1,6 @@
 ﻿using Mapster;
 using MapsterMapper;
+
 namespace Biwen.QuickApi.Mapping
 {
     [SuppressType]
@@ -12,15 +13,14 @@ namespace Biwen.QuickApi.Mapping
         public static void AddMapsterMapper(this IServiceCollection services)
         {
             var config = TypeAdapterConfig.GlobalSettings;
+
             config.Scan(ASS.AllRequiredAssemblies);
-            // 配置默认全局映射（支持覆盖）
-            config.Default
-            .NameMatchingStrategy(NameMatchingStrategy.Flexible)
+            // 默认（支持覆盖）
+            config.Default.NameMatchingStrategy(NameMatchingStrategy.Flexible)
                   .PreserveReference(true);
 
-            // 配置默认全局映射（忽略大小写敏感）
-            config.Default
-                  .NameMatchingStrategy(NameMatchingStrategy.IgnoreCase)
+            // 默认（忽略大小写敏感）
+            config.Default.NameMatchingStrategy(NameMatchingStrategy.IgnoreCase)
                   .PreserveReference(true);
 
             services.AddActivatedSingleton(_ => config);
