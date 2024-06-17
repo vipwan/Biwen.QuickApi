@@ -3,15 +3,12 @@
 
 当前文档因为时间关系,不是很完善,后续有时间和精力会进一步补充~~
 
-
 定义Request
 ---------------------
 
 如下定义一些请求对象,涉及到绑定和验证规则,可以参考:[数据绑定](ReqBinder.md) &nbsp; [数据验证](Validation.md)
 
-
 ```csharp
-
 public class HelloApiRequest : BaseRequest<HelloApiRequest>
 {
     [Description("Name Desc")]
@@ -222,7 +219,6 @@ public class JustAsService : BaseQuickApi<EmptyRequest, string>
 如果你需要对特定分组`Group`做统一的处理,比如加上`Tag`标签等,可以实现`IQuickApiGroupRouteBuilder`接口,如下:
 
 ```csharp
-
 // 当前模拟给所有 Group为空的QuickApi加上 Tag "Def" 
 public class MyGroupRouteBuilder : IQuickApiGroupRouteBuilder
 {
@@ -271,7 +267,6 @@ public class LoginOut : BaseQuickApiWithoutRequest<string>
 }
 ```
 
-
 预览结果
 ---------------------
 
@@ -283,7 +278,6 @@ dotnet run
 ```
 
 ```txt
-
 //直接访问
 // GET ~/hello/world/biwen
 // GET ~/hello/world/biwen?name=biwen
@@ -312,8 +306,68 @@ app.MapGet("/fromapi", async (Apis.Hello4Api api) =>
 
 ```
 
+取消执行
+---------------------
+当QuickApi执行时间很长的情况下 提供可以撤销的操作,避免长时间等待
 
-- 更多参考代码 [Issues 8](https://github.com/vipwan/Biwen.QuickApi/issues/8)
+```csharp
+[QuickApi("cancel")]
+public class CancelApi : BaseQuickApi
+{
+    public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken = default)
+    {
+        var taskJob = Task.Run(async () =>
+         {
+             //模拟操作需要5秒的长时间业务操作
+             await Task.Delay(5000);
+
+             //因为taskCancel线程会在提前调用CancelAsync取消,所以这里根本不会执行!
+             return Results.Content("Done!");
+
+         }, CancellationToken.None);
+
+        var taskCancel = Task.Run(async () =>
+        {
+            //模拟1秒后取消
+            await Task.Delay(1000);
+            //取消任务
+            await CancelAsync();
+
+        }, CancellationToken.None);
+
+        Task.WaitAny([taskJob, taskCancel], cancellationToken: cancellationToken);
+
+        //因为taskCancel会在1秒后调用Cancel取消,所以会抛出TaskCanceledException,
+        //因此下面的代码不会执行
+
+        await Task.CompletedTask;
+        return Results.Content("cancel api");
+    }
+}
+```
+
+当前用例请求会返回如下`500`结果:
+
+```json
+{
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.6.1",
+  "title": "An error occurred while processing your request.",
+  "status": 500,
+  "detail": "The operation was canceled.",
+  "Status": 500,
+  "CurrentUser": null,
+  "Exception": {
+    "message": "The operation was canceled.",
+    "stackTrace": "   at System.Threading.CancellationToken.ThrowOperationCanceledException() ..."
+  },
+  "RequestPath": "/quick/cancel",
+  "Method": "GET",
+  "QueryString": "",
+  "traceId": "00-2ae27a9fd064f19351be88fead3f13a6-c52f626fe9ac486f-00"
+}
+```
+
+更多参考 [Issues](https://github.com/vipwan/Biwen.QuickApi/issues)
 
 性能测试
 ---------------------

@@ -6,7 +6,7 @@ items:
   parent: Biwen.QuickApi
   children:
   - Biwen.QuickApi.BaseQuickApi`1.#ctor
-  - Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync(`0)
+  - Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync(`0,System.Threading.CancellationToken)
   langs:
   - csharp
   - vb
@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/f0de1c6b13fdd63e283f45fb29f55875ae2c43ce/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -33,10 +33,11 @@ items:
   inheritedMembers:
   - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.PublishAsync``1({T},System.Threading.CancellationToken)
   - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.UseReqBinder``1
-  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ExecuteAsync({Req})
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ExecuteAsync({Req},System.Threading.CancellationToken)
   - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
-  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
+  - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.CancelAsync
   - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.IsAntiforgeryEnabled
   - Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ReqBinder
   - System.Object.GetType
@@ -49,38 +50,41 @@ items:
   nameWithType.vb: BaseQuickApi(Of Req)
   fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req)
   name.vb: BaseQuickApi(Of Req)
-- uid: Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync(`0)
-  commentId: M:Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync(`0)
-  id: ExecuteAsync(`0)
+- uid: Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  id: ExecuteAsync(`0,System.Threading.CancellationToken)
   parent: Biwen.QuickApi.BaseQuickApi`1
   langs:
   - csharp
   - vb
-  name: ExecuteAsync(Req)
-  nameWithType: BaseQuickApi<Req>.ExecuteAsync(Req)
-  fullName: Biwen.QuickApi.BaseQuickApi<Req>.ExecuteAsync(Req)
+  name: ExecuteAsync(Req, CancellationToken)
+  nameWithType: BaseQuickApi<Req>.ExecuteAsync(Req, CancellationToken)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req>.ExecuteAsync(Req, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/f0de1c6b13fdd63e283f45fb29f55875ae2c43ce/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
   summary: 执行请求,如需要HttpContext对象，请使用<xref href="Microsoft.AspNetCore.Http.IHttpContextAccessor" data-throw-if-not-resolved="false"></xref>获取HttpContext
   example: []
   syntax:
-    content: public override abstract ValueTask<IResult> ExecuteAsync(Req request)
+    content: public override abstract ValueTask<IResult> ExecuteAsync(Req request, CancellationToken cancellationToken = default)
     parameters:
     - id: request
       type: '{Req}'
       description: ''
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: ''
     return:
       type: System.Threading.Tasks.ValueTask{Microsoft.AspNetCore.Http.IResult}
       description: ''
-    content.vb: Public MustOverride Overrides Function ExecuteAsync(request As Req) As ValueTask(Of IResult)
-  overridden: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ExecuteAsync({Req})
+    content.vb: Public MustOverride Overrides Function ExecuteAsync(request As Req, cancellationToken As CancellationToken = Nothing) As ValueTask(Of IResult)
+  overridden: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ExecuteAsync({Req},System.Threading.CancellationToken)
   overload: Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync*
-  nameWithType.vb: BaseQuickApi(Of Req).ExecuteAsync(Req)
-  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req).ExecuteAsync(Req)
+  nameWithType.vb: BaseQuickApi(Of Req).ExecuteAsync(Req, CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req).ExecuteAsync(Req, System.Threading.CancellationToken)
 - uid: Biwen.QuickApi.BaseQuickApi`1.#ctor
   commentId: M:Biwen.QuickApi.BaseQuickApi`1.#ctor
   id: '#ctor'
@@ -93,7 +97,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req>.BaseQuickApi()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/f0de1c6b13fdd63e283f45fb29f55875ae2c43ce/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -264,31 +268,43 @@ references:
   - name: )
   - name: (
   - name: )
-- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ExecuteAsync({Req})
-  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.ExecuteAsync(`0)
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.ExecuteAsync({Req},System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.ExecuteAsync(`0,System.Threading.CancellationToken)
   parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
-  definition: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0)
-  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
-  name: ExecuteAsync(Req)
-  nameWithType: BaseQuickApi<Req, IResult>.ExecuteAsync(Req)
-  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.ExecuteAsync(Req)
-  nameWithType.vb: BaseQuickApi(Of Req, IResult).ExecuteAsync(Req)
-  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).ExecuteAsync(Req)
+  definition: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0,System.Threading.CancellationToken)
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_System_Threading_CancellationToken_
+  name: ExecuteAsync(Req, CancellationToken)
+  nameWithType: BaseQuickApi<Req, IResult>.ExecuteAsync(Req, CancellationToken)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.ExecuteAsync(Req, System.Threading.CancellationToken)
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).ExecuteAsync(Req, CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).ExecuteAsync(Req, System.Threading.CancellationToken)
   spec.csharp:
-  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.ExecuteAsync(`0)
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.ExecuteAsync(`0,System.Threading.CancellationToken)
     name: ExecuteAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_System_Threading_CancellationToken_
   - name: (
   - name: Req
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.ExecuteAsync(`0)
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.ExecuteAsync(`0,System.Threading.CancellationToken)
     name: ExecuteAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_System_Threading_CancellationToken_
   - name: (
   - name: Req
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
 - uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
   commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
@@ -322,69 +338,117 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.routehandlerbuilder
   - name: )
-- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
   parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
-  definition: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
-  name: BeforeAsync(HttpContext)
-  nameWithType: BaseQuickApi<Req, IResult>.BeforeAsync(HttpContext)
-  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  nameWithType.vb: BaseQuickApi(Of Req, IResult).BeforeAsync(HttpContext)
-  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  definition: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
+  name: BeforeAsync(HttpContext, CancellationToken)
+  nameWithType: BaseQuickApi<Req, IResult>.BeforeAsync(HttpContext, CancellationToken)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext, System.Threading.CancellationToken)
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).BeforeAsync(HttpContext, CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).BeforeAsync(Microsoft.AspNetCore.Http.HttpContext, System.Threading.CancellationToken)
   spec.csharp:
-  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
     name: BeforeAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
   - name: (
   - uid: Microsoft.AspNetCore.Http.HttpContext
     name: HttpContext
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
     name: BeforeAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
   - name: (
   - uid: Microsoft.AspNetCore.Http.HttpContext
     name: HttpContext
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
-- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
-  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
   parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
-  definition: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
-  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
-  name: AfterAsync(HttpContext)
-  nameWithType: BaseQuickApi<Req, IResult>.AfterAsync(HttpContext)
-  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
-  nameWithType.vb: BaseQuickApi(Of Req, IResult).AfterAsync(HttpContext)
-  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  definition: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
+  name: AfterAsync(HttpContext, CancellationToken)
+  nameWithType: BaseQuickApi<Req, IResult>.AfterAsync(HttpContext, CancellationToken)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.AfterAsync(Microsoft.AspNetCore.Http.HttpContext, System.Threading.CancellationToken)
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).AfterAsync(HttpContext, CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).AfterAsync(Microsoft.AspNetCore.Http.HttpContext, System.Threading.CancellationToken)
   spec.csharp:
-  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
     name: AfterAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
   - name: (
   - uid: Microsoft.AspNetCore.Http.HttpContext
     name: HttpContext
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.AfterAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
     name: AfterAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
   - name: (
   - uid: Microsoft.AspNetCore.Http.HttpContext
     name: HttpContext
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.CancelAsync
+  commentId: M:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.CancelAsync
+  parent: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}
+  definition: Biwen.QuickApi.BaseQuickApi`2.CancelAsync
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_CancelAsync
+  name: CancelAsync()
+  nameWithType: BaseQuickApi<Req, IResult>.CancelAsync()
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Microsoft.AspNetCore.Http.IResult>.CancelAsync()
+  nameWithType.vb: BaseQuickApi(Of Req, IResult).CancelAsync()
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Microsoft.AspNetCore.Http.IResult).CancelAsync()
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.CancelAsync
+    name: CancelAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_CancelAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.CancelAsync
+    name: CancelAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_CancelAsync
+  - name: (
   - name: )
 - uid: Biwen.QuickApi.BaseQuickApi{{Req},Microsoft.AspNetCore.Http.IResult}.IsAntiforgeryEnabled
   commentId: P:Biwen.QuickApi.BaseQuickApi{`0,Microsoft.AspNetCore.Http.IResult}.IsAntiforgeryEnabled
@@ -744,30 +808,42 @@ references:
   - name: )
   - name: (
   - name: )
-- uid: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0)
-  commentId: M:Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0)
+- uid: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0,System.Threading.CancellationToken)
   isExternal: true
-  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
-  name: ExecuteAsync(Req)
-  nameWithType: BaseQuickApi<Req, Rsp>.ExecuteAsync(Req)
-  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.ExecuteAsync(Req)
-  nameWithType.vb: BaseQuickApi(Of Req, Rsp).ExecuteAsync(Req)
-  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).ExecuteAsync(Req)
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_System_Threading_CancellationToken_
+  name: ExecuteAsync(Req, CancellationToken)
+  nameWithType: BaseQuickApi<Req, Rsp>.ExecuteAsync(Req, CancellationToken)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.ExecuteAsync(Req, System.Threading.CancellationToken)
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).ExecuteAsync(Req, CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).ExecuteAsync(Req, System.Threading.CancellationToken)
   spec.csharp:
-  - uid: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0)
+  - uid: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0,System.Threading.CancellationToken)
     name: ExecuteAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_System_Threading_CancellationToken_
   - name: (
   - name: Req
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0)
+  - uid: Biwen.QuickApi.BaseQuickApi`2.ExecuteAsync(`0,System.Threading.CancellationToken)
     name: ExecuteAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_ExecuteAsync__0_System_Threading_CancellationToken_
   - name: (
   - name: Req
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
 - uid: Biwen.QuickApi.BaseQuickApi`2.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
   commentId: M:Biwen.QuickApi.BaseQuickApi`2.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
@@ -800,67 +876,114 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.routehandlerbuilder
   - name: )
-- uid: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  commentId: M:Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+- uid: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
   isExternal: true
-  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
-  name: BeforeAsync(HttpContext)
-  nameWithType: BaseQuickApi<Req, Rsp>.BeforeAsync(HttpContext)
-  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  nameWithType.vb: BaseQuickApi(Of Req, Rsp).BeforeAsync(HttpContext)
-  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
+  name: BeforeAsync(HttpContext, CancellationToken)
+  nameWithType: BaseQuickApi<Req, Rsp>.BeforeAsync(HttpContext, CancellationToken)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext, System.Threading.CancellationToken)
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).BeforeAsync(HttpContext, CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).BeforeAsync(Microsoft.AspNetCore.Http.HttpContext, System.Threading.CancellationToken)
   spec.csharp:
-  - uid: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  - uid: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
     name: BeforeAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
   - name: (
   - uid: Microsoft.AspNetCore.Http.HttpContext
     name: HttpContext
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  - uid: Biwen.QuickApi.BaseQuickApi`2.BeforeAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
     name: BeforeAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_BeforeAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
   - name: (
   - uid: Microsoft.AspNetCore.Http.HttpContext
     name: HttpContext
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
-- uid: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
-  commentId: M:Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+- uid: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
   isExternal: true
-  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
-  name: AfterAsync(HttpContext)
-  nameWithType: BaseQuickApi<Req, Rsp>.AfterAsync(HttpContext)
-  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
-  nameWithType.vb: BaseQuickApi(Of Req, Rsp).AfterAsync(HttpContext)
-  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
+  name: AfterAsync(HttpContext, CancellationToken)
+  nameWithType: BaseQuickApi<Req, Rsp>.AfterAsync(HttpContext, CancellationToken)
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.AfterAsync(Microsoft.AspNetCore.Http.HttpContext, System.Threading.CancellationToken)
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).AfterAsync(HttpContext, CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).AfterAsync(Microsoft.AspNetCore.Http.HttpContext, System.Threading.CancellationToken)
   spec.csharp:
-  - uid: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  - uid: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
     name: AfterAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
   - name: (
   - uid: Microsoft.AspNetCore.Http.HttpContext
     name: HttpContext
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext)
+  - uid: Biwen.QuickApi.BaseQuickApi`2.AfterAsync(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
     name: AfterAsync
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_AfterAsync_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
   - name: (
   - uid: Microsoft.AspNetCore.Http.HttpContext
     name: HttpContext
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.BaseQuickApi`2.CancelAsync
+  commentId: M:Biwen.QuickApi.BaseQuickApi`2.CancelAsync
+  isExternal: true
+  href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_CancelAsync
+  name: CancelAsync()
+  nameWithType: BaseQuickApi<Req, Rsp>.CancelAsync()
+  fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>.CancelAsync()
+  nameWithType.vb: BaseQuickApi(Of Req, Rsp).CancelAsync()
+  fullName.vb: Biwen.QuickApi.BaseQuickApi(Of Req, Rsp).CancelAsync()
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.CancelAsync
+    name: CancelAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_CancelAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseQuickApi`2.CancelAsync
+    name: CancelAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseQuickApi-2.html#Biwen_QuickApi_BaseQuickApi_2_CancelAsync
+  - name: (
   - name: )
 - uid: Biwen.QuickApi.BaseQuickApi`2.IsAntiforgeryEnabled
   commentId: P:Biwen.QuickApi.BaseQuickApi`2.IsAntiforgeryEnabled
@@ -890,7 +1013,7 @@ references:
 - uid: Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync*
   commentId: Overload:Biwen.QuickApi.BaseQuickApi`1.ExecuteAsync
   isExternal: true
-  href: Biwen.QuickApi.BaseQuickApi-1.html#Biwen_QuickApi_BaseQuickApi_1_ExecuteAsync__0_
+  href: Biwen.QuickApi.BaseQuickApi-1.html#Biwen_QuickApi_BaseQuickApi_1_ExecuteAsync__0_System_Threading_CancellationToken_
   name: ExecuteAsync
   nameWithType: BaseQuickApi<Req>.ExecuteAsync
   fullName: Biwen.QuickApi.BaseQuickApi<Req>.ExecuteAsync
@@ -902,6 +1025,14 @@ references:
   name: Req
   nameWithType: Req
   fullName: Req
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
 - uid: System.Threading.Tasks.ValueTask{Microsoft.AspNetCore.Http.IResult}
   commentId: T:System.Threading.Tasks.ValueTask{Microsoft.AspNetCore.Http.IResult}
   parent: System.Threading.Tasks
@@ -941,6 +1072,33 @@ references:
   name: Req
   nameWithType: Req
   fullName: Req
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
 - uid: System.Threading.Tasks.ValueTask`1
   commentId: T:System.Threading.Tasks.ValueTask`1
   isExternal: true

@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Logging.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/f0de1c6b13fdd63e283f45fb29f55875ae2c43ce/Biwen.QuickApi.Logging.Serilog/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi.Logging.Serilog/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi.Logging.Serilog
   namespace: Biwen.QuickApi.Logging
@@ -54,7 +54,7 @@ items:
   fullName: Biwen.QuickApi.Logging.ServiceRegistration.UseSerilogFromConfiguration(Microsoft.Extensions.Hosting.IHostBuilder)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/f0de1c6b13fdd63e283f45fb29f55875ae2c43ce/Biwen.QuickApi.Logging.Serilog/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi.Logging.Serilog/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi.Logging.Serilog
   namespace: Biwen.QuickApi.Logging
