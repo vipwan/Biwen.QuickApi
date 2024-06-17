@@ -110,7 +110,7 @@ namespace Biwen.QuickApi
                 }
             }
             //注册Publisher
-            services.AddScoped<Publisher>();
+            services.AddSingleton<Publisher>();
             return services;
         }
 
