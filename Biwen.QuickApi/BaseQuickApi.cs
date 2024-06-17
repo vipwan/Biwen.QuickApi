@@ -62,8 +62,9 @@ namespace Biwen.QuickApi
         /// 执行请求,如需要HttpContext对象，请使用<see cref="IHttpContextAccessor"/>获取HttpContext
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public abstract ValueTask<Rsp> ExecuteAsync(Req request);
+        public abstract ValueTask<Rsp> ExecuteAsync(Req request, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 处理IResult的特性
@@ -153,8 +154,9 @@ namespace Biwen.QuickApi
         /// 请求QuickApi前的操作,推荐使用:<see cref="IEndpointFilter"/>
         /// </summary>
         /// <param name="context"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public virtual Task BeforeAsync(HttpContext context)
+        public virtual Task BeforeAsync(HttpContext context, CancellationToken cancellationToken = default)
         {
             return Task.CompletedTask;
         }
@@ -162,10 +164,28 @@ namespace Biwen.QuickApi
         /// 请求QuickApi后的操作,推荐使用:<see cref="IEndpointFilter"/>
         /// </summary>
         /// <param name="context"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public virtual Task AfterAsync(HttpContext context)
+        public virtual Task AfterAsync(HttpContext context, CancellationToken cancellationToken = default)
         {
             return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// 撤销请求,针对长时间的ExecuteAsync(),如果需要中断,可以调用此方法
+        /// </summary>
+        /// <returns></returns>
+        public async Task CancelAsync()
+        {
+            var asyncContext = ActivatorUtilities.GetServiceOrCreateInstance<AsyncContextService<CancellationTokenSource>>(
+                ServiceRegistration.ServiceProvider);
+            if (asyncContext is not null)
+            {
+                if (asyncContext.TryGet(out var cts) && cts is not null)
+                {
+                    await cts.CancelAsync();
+                }
+            }
         }
     }
 
@@ -175,7 +195,7 @@ namespace Biwen.QuickApi
     /// <typeparam name="Req"></typeparam>
     public abstract class BaseQuickApi<Req> : BaseQuickApi<Req, IResult> where Req : BaseRequest<Req>, new()
     {
-        public abstract override ValueTask<IResult> ExecuteAsync(Req request);
+        public abstract override ValueTask<IResult> ExecuteAsync(Req request, CancellationToken cancellationToken = default);
     }
 
     /// <summary>
@@ -194,7 +214,7 @@ namespace Biwen.QuickApi
             return base.HandlerBuilder(builder);
         }
 
-        public abstract override ValueTask<IResult> ExecuteAsync(EmptyRequest request);
+        public abstract override ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken = default);
 
     }
 

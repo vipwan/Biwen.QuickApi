@@ -10,7 +10,7 @@ namespace BenchmarkTestWeb.QuickApis
     //[Tags("API")]
     public class MyApi : BaseQuickApi<MyRequest, IResult>
     {
-        public override async ValueTask<IResult> ExecuteAsync(MyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(MyRequest request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
             return Results.Ok(request);

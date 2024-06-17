@@ -99,14 +99,14 @@
     public class EventApi : BaseQuickApi<MyEvent>
     {
 
-        public override async ValueTask<IResult> ExecuteAsync(MyEvent request)
+        public override async ValueTask<IResult> ExecuteAsync(MyEvent request, CancellationToken cancellationToken)
         {
             //publish
-            await PublishAsync(request);
+            await PublishAsync(request, default);
             //publish event2
-            await PublishAsync(new MyEvent2 { Message = "hello event2" });
+            await PublishAsync(new MyEvent2 { Message = "hello event2" }, cancellationToken);
             //可以使用IEvent扩展方法
-            await new MyEvent { Message = "1234567890" }.PublishAsync();
+            await new MyEvent { Message = "1234567890" }.PublishAsync(cancellationToken);
             return Results.Content("send event");
         }
     }
@@ -114,7 +114,7 @@
     [QuickApi("throw")]
     public class ThrowApi : BaseQuickApi
     {
-        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
             throw new Exception("抛出一个异常!");
@@ -123,4 +123,37 @@
     }
 
 
+    [QuickApi("cancel")]
+    public class CancelApi : BaseQuickApi
+    {
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken = default)
+        {
+            var taskJob = Task.Run(async () =>
+             {
+                 //模拟操作需要5秒的长时间业务操作
+                 await Task.Delay(5000);
+
+                 //因为taskCancel线程会在提前调用CancelAsync取消,所以这里根本不会执行!
+                 return Results.Content("Done!");
+
+             }, CancellationToken.None);
+
+            var taskCancel = Task.Run(async () =>
+            {
+                //模拟1秒后取消
+                await Task.Delay(1000);
+                //取消任务
+                await CancelAsync();
+
+            }, CancellationToken.None);
+
+            Task.WaitAny([taskJob, taskCancel], cancellationToken: cancellationToken);
+
+            //因为taskCancel会在1秒后调用Cancel取消,所以会抛出TaskCanceledException,
+            //因此下面的代码不会执行
+
+            await Task.CompletedTask;
+            return Results.Content("cancel api");
+        }
+    }
 }

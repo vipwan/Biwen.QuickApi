@@ -5,7 +5,7 @@
     [EndpointGroupName("group1")]
     public class EndpointGroupApi : BaseQuickApi
     {
-        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
             return Results.Ok();

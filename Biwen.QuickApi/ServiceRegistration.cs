@@ -446,6 +446,10 @@ namespace Biwen.QuickApi
             var api = sp.GetRequiredService(apiType);
             var bindService = sp.GetRequiredService<RequestBindService>();
 
+            var tokenSource = new CancellationTokenSource();
+            //设置CancelToken
+            sp.GetRequiredService<AsyncContextService<CancellationTokenSource>>().Set(tokenSource);
+
             //执行请求
             try
             {
@@ -455,7 +459,7 @@ namespace Biwen.QuickApi
                 {
                     return TypedResults.ValidationProblem(vresult.ToDictionary());
                 }
-                var result = await ((dynamic)api)!.ExecuteAsync(req!);
+                var result = await ((dynamic)api)!.ExecuteAsync(req!, tokenSource.Token);
                 var rawResult = InnerResult(result);
                 return rawResult;
             }

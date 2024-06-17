@@ -34,7 +34,7 @@ namespace BenchmarkTestAot.Apis
     [QuickApi("todos", Group = "my")]
     public class TodosApi : BaseQuickApi<EmptyRequest, IResult>
     {
-        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
             return Results.Ok(MySotre.SampleTodos());
@@ -44,7 +44,7 @@ namespace BenchmarkTestAot.Apis
     [QuickApi("todos/{id}", Group = "my")]
     public class TodoApi : BaseQuickApi<Req, IResult>
     {
-        public override async ValueTask<IResult> ExecuteAsync(Req request)
+        public override async ValueTask<IResult> ExecuteAsync(Req request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
             return Results.Ok(MySotre.SampleTodos().FirstOrDefault(x => x.Id == request.Id));

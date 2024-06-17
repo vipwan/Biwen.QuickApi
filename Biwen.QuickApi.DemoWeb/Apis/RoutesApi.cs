@@ -34,7 +34,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [OpenApiMetadata("RoutesApi", "RoutesApi", Tags = ["QuickApis"])]
     public class RoutesApi : BaseQuickApi<RouteData>
     {
-        public override async ValueTask<IResult> ExecuteAsync(RouteData request)
+        public override async ValueTask<IResult> ExecuteAsync(RouteData request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
             return Results.Content($"{request.Hello} {request.World}");
@@ -45,7 +45,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [OpenApiMetadata("Route2Api", "Route2Api", Tags = ["QuickApis"])]
     public class Route2Api(HelloService helloService) : BaseQuickApi<Route2Data, Route2Data>
     {
-        public override async ValueTask<Route2Data> ExecuteAsync(Route2Data request)
+        public override async ValueTask<Route2Data> ExecuteAsync(Route2Data request, CancellationToken cancellationToken)
         {
             var hello = helloService.Hello("78");
             await Task.CompletedTask;

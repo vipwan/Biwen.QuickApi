@@ -8,7 +8,7 @@ namespace Biwen.QuickApi.DocSite.Apis
     [ProducesResponseType<string>(200)]
     public class HelloWorldApi : BaseQuickApi
     {
-        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
             return Results.Content("Hello World");

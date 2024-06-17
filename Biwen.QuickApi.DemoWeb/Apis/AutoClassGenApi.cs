@@ -79,7 +79,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [EndpointGroupName("group1")]
     public class AutoGenApi : BaseQuickApi<AutoGenRequest, AutoGenRequest>
     {
-        public override async ValueTask<AutoGenRequest> ExecuteAsync(AutoGenRequest request)
+        public override async ValueTask<AutoGenRequest> ExecuteAsync(AutoGenRequest request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
 

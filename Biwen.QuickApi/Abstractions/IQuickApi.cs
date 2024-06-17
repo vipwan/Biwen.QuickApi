@@ -9,9 +9,9 @@ namespace Biwen.QuickApi.Abstractions
     /// 标记接口
     /// </summary>
 #pragma warning disable GEN031 // 使用[AutoGen]自动生成
-    internal interface IQuickApi<Req, Rsp> : IHandlerBuilder, IQuickApiMiddlewareHandler, IAntiforgeryApi, IPublisher
+    internal interface IQuickApi<Req, Rsp> : IHandlerBuilder, IQuickApiMiddlewareHandler, IAntiforgeryApi, IPublisher, ICancel
     {
-        ValueTask<Rsp> ExecuteAsync(Req request);
+        ValueTask<Rsp> ExecuteAsync(Req request, CancellationToken cancellationToken = default);
     }
 #pragma warning restore GEN031 // 使用[AutoGen]自动生成
 
@@ -38,14 +38,16 @@ namespace Biwen.QuickApi.Abstractions
         /// 请求QuickApi前的操作
         /// </summary>
         /// <param name="context"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task BeforeAsync(HttpContext context);
+        Task BeforeAsync(HttpContext context, CancellationToken cancellationToken = default);
         /// <summary>
         /// 请求QuickApi后的操作
         /// </summary>
         /// <param name="context"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task AfterAsync(HttpContext context);
+        Task AfterAsync(HttpContext context, CancellationToken cancellationToken = default);
     }
 
     /// <summary>
@@ -72,4 +74,12 @@ namespace Biwen.QuickApi.Abstractions
         Task PublishAsync<T>(T @event, CancellationToken cancellationToken) where T : class, IEvent;
     }
 
+    internal interface ICancel
+    {
+        /// <summary>
+        /// 中断请求
+        /// </summary>
+        /// <returns></returns>
+        Task CancelAsync();
+    }
 }

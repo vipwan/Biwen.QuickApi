@@ -27,7 +27,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _signInManager = signInManager;
         }
 
-        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
         {
             //模拟当前账号登录
             var result = await _userManager.CreateAsync(new IdentityUser
@@ -85,7 +85,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public override ValueTask<string> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<string> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
         {
             _httpContextAccessor.HttpContext?.SignOutAsync();
             return new ValueTask<string>("已经退出登录");
@@ -95,7 +95,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     //测试权限组
     public abstract class BaseAdminApi<Req, Rsp> : BaseQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new() where Rsp : class
     {
-        public override ValueTask<Rsp> ExecuteAsync(Req request)
+        public override ValueTask<Rsp> ExecuteAsync(Req request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
@@ -115,7 +115,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [OpenApiMetadata("NeedAuthApi", "需要登录,NeedAuthApi")]
     public class NeedAuthApi : BaseQuickApi
     {
-        public override ValueTask<IResult> ExecuteAsync(EmptyRequest request)
+        public override ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
         {
             return ValueTask.FromResult(Results.Ok("恭喜你有权限访问当前接口!"));
         }
@@ -138,7 +138,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [OpenApiMetadata("Edit,需要登录", description: "需要登录,EditDocumentApi")]
     public class EditDocumentApi : BaseAdminApi<EmptyRequest, IResult>
     {
-        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
             return Results.Ok($"你有权限编辑!{DateTime.Now.ToLongTimeString()}");
@@ -152,7 +152,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [OpenApiMetadata("[Authorize]特性", "使用特性标记需要登录")]
     public class AuthorizationTestApi : BaseQuickApi
     {
-        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
             return Results.Content("登录成功的请求!");
@@ -171,7 +171,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [OpenApiMetadata("[AllowAnonymous]匿名", "使用特性标记可以匿名")]
     public class AllowAnonymousTestApi : BaseQuickApi
     {
-        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request)
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
             return Results.Content("无效登录的请求!");
