@@ -15,8 +15,10 @@
 - name: 扩展组件
   expanded: true
   items:
-  - name: Serilog扩展
+  - name: Serilog日志扩展
     href: Logging.md
+  - name: MiniProfiler扩展
+    href: MiniProfiler.md
 
 - name: Api模块
   expanded: true
