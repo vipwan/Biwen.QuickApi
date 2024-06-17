@@ -4,6 +4,7 @@ items:
   commentId: N:Biwen.QuickApi.Infrastructure
   id: Biwen.QuickApi.Infrastructure
   children:
+  - Biwen.QuickApi.Infrastructure.AsyncContextService`1
   - Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
   langs:
   - csharp
@@ -15,6 +16,34 @@ items:
   assemblies:
   - Biwen.QuickApi
 references:
+- uid: Biwen.QuickApi.Infrastructure.AsyncContextService`1
+  commentId: T:Biwen.QuickApi.Infrastructure.AsyncContextService`1
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.AsyncContextService-1.html
+  name: AsyncContextService<T>
+  nameWithType: AsyncContextService<T>
+  fullName: Biwen.QuickApi.Infrastructure.AsyncContextService<T>
+  nameWithType.vb: AsyncContextService(Of T)
+  fullName.vb: Biwen.QuickApi.Infrastructure.AsyncContextService(Of T)
+  name.vb: AsyncContextService(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Infrastructure.AsyncContextService`1
+    name: AsyncContextService
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.AsyncContextService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Infrastructure.AsyncContextService`1
+    name: AsyncContextService
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.AsyncContextService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
   commentId: T:Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
   parent: Biwen.QuickApi.Infrastructure

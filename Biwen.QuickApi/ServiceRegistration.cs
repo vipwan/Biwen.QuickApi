@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.WebEncoders;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
@@ -59,8 +60,9 @@ namespace Biwen.QuickApi
 
             //注册验证器
             services.AddFluentValidationAutoValidation();
-            //注册AsyncStateHttpContext
-            services.AddAsyncStateHttpContext();
+
+            //注册AsyncStateHttpContext & AsyncContextService
+            services.AddAsyncStateHttpContext().TryAddSingleton(typeof(AsyncContextService<>));
 
             //注册Antiforgery服务
             services.AddAntiforgery();

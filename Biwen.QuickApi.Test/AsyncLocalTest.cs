@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.AsyncState;
+﻿using Biwen.QuickApi.Infrastructure;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.AsyncState;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Biwen.QuickApi.Test
@@ -88,6 +90,34 @@ namespace Biwen.QuickApi.Test
 
         }
 
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void TestAsyncContextService(bool inHttpContext)
+        {
+            var services = new ServiceCollection();
+            services.AddAsyncStateHttpContext();
+            services.AddSingleton(typeof(AsyncContextService<>));
+            var provider = services.BuildServiceProvider();
+
+            var _httpContextAccessor = provider.GetRequiredService<IHttpContextAccessor>();
+            if (inHttpContext)
+            {
+                _httpContextAccessor.HttpContext = new DefaultHttpContext();
+            }
+
+            var asyncContextService = provider.GetRequiredService<AsyncContextService<User>>();
+            var user = new User { ThreadId = Environment.CurrentManagedThreadId, Name = "Hello" };
+
+            asyncContextService.Set(user);
+
+            var raw = asyncContextService.Get();
+            testOutputHelper.WriteLine($"设置前:" + raw?.ToString());
+            testOutputHelper.WriteLine(Environment.NewLine);
+
+            Assert.NotNull(raw);
+        }
+
 
         class User
         {
@@ -103,6 +133,7 @@ namespace Biwen.QuickApi.Test
             }
 
         }
+
 
     }
 }

@@ -23,16 +23,18 @@ namespace Biwen.QuickApi.Http
             }
 
             //QuickApiAuthorizationMiddlewareResultHandler 直接返回StatusCode
-            if (context.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>() != null)
+            //IQuickEndPoint
+            if (context.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>() is { } ||
+                context.GetEndpoint()?.Metadata.GetMetadata<QuickApiEndpointMetadata>() is { })
             {
-                if (authorizeResult.Challenged)
+                if (authorizeResult.Challenged || authorizeResult.Forbidden)
                 {
-                    context.Response.StatusCode = 401;
-                    return Task.CompletedTask;
-                }
-                else if (authorizeResult.Forbidden)
-                {
-                    context.Response.StatusCode = 403;
+                    context.Response.StatusCode = authorizeResult switch
+                    {
+                        { Challenged: true } => 401,
+                        { Forbidden: true } => 403,
+                        _ => context.Response.StatusCode
+                    };
                     return Task.CompletedTask;
                 }
             }

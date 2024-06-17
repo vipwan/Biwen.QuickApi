@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.IScheduleTask
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi/Scheduling/IScheduleTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/f0de1c6b13fdd63e283f45fb29f55875ae2c43ce/Biwen.QuickApi/Scheduling/IScheduleTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -35,7 +35,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.IScheduleTask.ExecuteAsync()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/13321edc3d9a3cc8f2ba185eddd7c30cf4210fe7/Biwen.QuickApi/Scheduling/IScheduleTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/f0de1c6b13fdd63e283f45fb29f55875ae2c43ce/Biwen.QuickApi/Scheduling/IScheduleTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling

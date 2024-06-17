@@ -132,6 +132,8 @@ items:
 - uid: Biwen.QuickApi.Infrastructure
   name: Biwen.QuickApi.Infrastructure
   items:
+  - uid: Biwen.QuickApi.Infrastructure.AsyncContextService`1
+    name: AsyncContextService<T>
   - uid: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
     name: SuppressTypeAttribute
 - uid: Biwen.QuickApi.Infrastructure.Html
