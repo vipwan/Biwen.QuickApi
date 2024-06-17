@@ -3,6 +3,11 @@
     [SuppressType]
     internal static class ServiceRegistration
     {
+        /// <summary>
+        /// 注册事件相关服务
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         internal static IServiceCollection AddEvent(this IServiceCollection services)
         {
             //注册EventHanders
