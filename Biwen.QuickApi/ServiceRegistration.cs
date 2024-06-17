@@ -93,7 +93,7 @@ namespace Biwen.QuickApi
             var serviceProvider = services.BuildServiceProvider();
             foreach (var modularType in Modulars)
             {
-                if (ActivatorUtilities.CreateInstance(serviceProvider, modularType) is ModularBase { } modular && modular.IsEnable())
+                if (ActivatorUtilities.GetServiceOrCreateInstance(serviceProvider, modularType) is ModularBase { } modular && modular.IsEnable())
                 {
                     modular.ConfigureServices(services);
                     //DI

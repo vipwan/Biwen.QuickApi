@@ -60,14 +60,14 @@ namespace Biwen.QuickApi.Scheduling
 
         private Task RunAsync(CancellationToken stoppingToken)
         {
+            //调度器
+            var scheduler = ActivatorUtilities.GetServiceOrCreateInstance<IScheduler>(_serviceProvider);
+
             async Task DoTaskAsync(IScheduleTask task, ScheduleTaskAttribute metadata)
             {
-                using var scope = _serviceProvider.CreateScope();
                 //内部执行
                 async Task InnerExcute()
                 {
-                    //调度器
-                    var scheduler = scope.ServiceProvider.GetRequiredService<IScheduler>();
                     if (scheduler.CanRun(metadata, DateTime.Now))
                     {
                         var eventTime = DateTime.Now;
@@ -140,8 +140,8 @@ namespace Biwen.QuickApi.Scheduling
                         IsAsync = metadata.IsAsync,
                         IsStartOnInit = metadata.IsStartOnInit,
                     };
-                    using var scope = _serviceProvider.CreateScope();
-                    var task = scope.ServiceProvider.GetRequiredService(metadata.ScheduleTaskType) as IScheduleTask;
+
+                    var task = ActivatorUtilities.GetServiceOrCreateInstance(_serviceProvider, metadata.ScheduleTaskType) as IScheduleTask;
                     if (task is null)
                     {
                         continue;

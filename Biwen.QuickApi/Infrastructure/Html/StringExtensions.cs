@@ -14,8 +14,7 @@ namespace Biwen.QuickApi
         public static string SanitizeHtml(this string html)
         {
             if (ServiceRegistration.ServiceProvider is null) throw new QuickApiExcetion("mush UseBiwenQuickApis() first!");
-            using var scope = ServiceRegistration.ServiceProvider.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IHtmlSanitizerService>();
+            var svc = ActivatorUtilities.GetServiceOrCreateInstance<IHtmlSanitizerService>(ServiceRegistration.ServiceProvider);
             return svc.Sanitize(html);
         }
     }

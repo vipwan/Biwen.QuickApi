@@ -13,7 +13,7 @@ namespace Biwen.QuickApi.Http
 
         public async ValueTask<dynamic?> BindAsync(Type apiType)
         {
-            if (httpContextAccessor is null || httpContextAccessor.HttpContext is null)
+            if (httpContextAccessor?.HttpContext is null)
             {
                 return null;
             }
@@ -21,7 +21,7 @@ namespace Biwen.QuickApi.Http
             var methodInfo = _reqBinderCache.GetOrAdd(apiType, (apiType) =>
             {
                 var methodName = nameof(IReqBinder<EmptyRequest>.BindAsync);
-                var api = httpContextAccessor.HttpContext!.RequestServices.GetRequiredService(apiType);
+                var api = httpContextAccessor.HttpContext.RequestServices.GetRequiredService(apiType);
                 return (((dynamic)api).ReqBinder).GetMethod(methodName, BindingFlags.Static | BindingFlags.Public);
             });
 

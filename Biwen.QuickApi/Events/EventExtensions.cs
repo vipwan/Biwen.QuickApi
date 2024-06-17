@@ -13,8 +13,7 @@
         public static async Task PublishAsync<T>(this T @event, CancellationToken cancellationToken = default) where T : class, IEvent
         {
             if (QuickApi.ServiceRegistration.ServiceProvider is null) throw new QuickApiExcetion("mush UseBiwenQuickApis() first!");
-            using var scope = QuickApi.ServiceRegistration.ServiceProvider.CreateScope();
-            var publisher = scope.ServiceProvider.GetRequiredService<Publisher>();
+            var publisher = ActivatorUtilities.GetServiceOrCreateInstance<Publisher>(QuickApi.ServiceRegistration.ServiceProvider);
             await publisher.PublishAsync(@event, cancellationToken);
         }
     }

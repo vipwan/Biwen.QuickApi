@@ -6,8 +6,7 @@ namespace Biwen.QuickApi.Scheduling
     [CoreModular, PreModular<LockingModular, EventsModular>]
     internal class SchedulingModular(IServiceProvider serviceProvider) : ModularBase
     {
-        public override Func<bool> IsEnable => () =>
-        serviceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.EnableScheduling;
+        public override Func<bool> IsEnable => () => serviceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.EnableScheduling;
 
         public override void ConfigureServices(IServiceCollection services)
         {
