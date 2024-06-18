@@ -1,6 +1,7 @@
 ﻿using Biwen.QuickApi.Infrastructure;
 using Microsoft.Extensions.Hosting;
 using Serilog;
+
 namespace Biwen.QuickApi.Logging
 {
     [SuppressType]
