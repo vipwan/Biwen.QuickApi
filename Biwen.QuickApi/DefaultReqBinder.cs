@@ -5,6 +5,8 @@ using Microsoft.Extensions.Primitives;
 using System.Collections;
 using System.Text;
 using System.Text.Json;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.Linq;
 
 namespace Biwen.QuickApi
 {
@@ -71,8 +73,7 @@ namespace Biwen.QuickApi
 
                 #endregion
 
-                var fromQuery = prop.GetCustomAttribute<FromQueryAttribute>();
-                if (fromQuery != null)
+                if (prop.GetCustomAttribute<FromQueryAttribute>() is { } fromQuery)
                 {
                     var name = fromQuery.Name ?? prop.Name;
                     var qs = context.Request.Query;
@@ -86,8 +87,7 @@ namespace Biwen.QuickApi
                     prop.SetValue(@default, value);
                     continue;
                 }
-                var fromHeader = prop.GetCustomAttribute<FromHeaderAttribute>();
-                if ((fromHeader != null))
+                if (prop.GetCustomAttribute<FromHeaderAttribute>() is { } fromHeader)
                 {
                     var name = fromHeader.Name ?? prop.Name;
                     var qs = context.Request.Headers;
@@ -99,8 +99,7 @@ namespace Biwen.QuickApi
                         continue;
                     }
                 }
-                var fromRoute = prop.GetCustomAttribute<FromRouteAttribute>();
-                if (fromRoute != null)
+                if (prop.GetCustomAttribute<FromRouteAttribute>() is { } fromRoute)
                 {
                     var name = fromRoute.Name ?? prop.Name;
                     var qs = context.Request.RouteValues;
@@ -111,8 +110,8 @@ namespace Biwen.QuickApi
                         continue;
                     }
                 }
-                var fromService = prop.GetCustomAttribute<FromServicesAttribute>();
-                if (fromService != null)
+
+                if (prop.GetCustomAttribute<FromServicesAttribute>() is { } fromService)
                 {
                     var service = context.RequestServices.GetService(prop.PropertyType);
                     if (service != null)
@@ -121,8 +120,7 @@ namespace Biwen.QuickApi
                         continue;
                     }
                 }
-                var fromForm = prop.GetCustomAttribute<FromFormAttribute>();
-                if (fromForm != null)
+                if (prop.GetCustomAttribute<FromFormAttribute>() is { } fromForm)
                 {
                     var name = fromForm.Name ?? prop.Name;
                     var qs = context.Request.Form;
@@ -134,8 +132,7 @@ namespace Biwen.QuickApi
                     }
                 }
 
-                var fromBody = prop.GetCustomAttribute<FromBodyAttribute>();
-                if (fromBody != null)
+                if (prop.GetCustomAttribute<FromBodyAttribute>() is { } fromBody)
                 {
                     var value = await context.Request.ReadFromJsonAsync(prop.PropertyType);
                     prop.SetValue(@default, value);
@@ -153,15 +150,8 @@ namespace Biwen.QuickApi
                     continue;
                 }
 #endif
-                if (fromQuery != null ||
-                    fromHeader != null ||
-                    fromRoute != null ||
-                    fromService != null ||
-#if NET8_0_OR_GREATER
-                    fromKeyedService != null ||
-#endif
-                    fromForm != null ||
-                    fromBody != null)
+
+                if (prop.CustomAttributes.OfType<IBindingSourceMetadata>().Any())
                 {
                     //如果标记的bind特性,不管是否找到,都不再继续查找(最高权重)
                     continue;
