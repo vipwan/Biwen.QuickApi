@@ -131,9 +131,7 @@ namespace Biwen.QuickApi.DemoWeb
                 //~/endpoints/hello/hello?key=world
                 x.MapMethods<HelloEndpoint>("hello/{hello}");
                 x.MapMethods<PostDataEndpoint>("hello/postdata");
-                //~/endpoints/hello/blazor-render
-                x.MapMethods<BlazorRenderEndpoint>("hello/blazor-render");
-
+                //~/endpoints/hello/blazor-render-svc
                 x.MapMethods<BlazorRenderSvcEndpoint>("hello/blazor-render-svc");
 
             });

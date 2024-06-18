@@ -48,42 +48,6 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
     //[Authorize]
     [EndpointGroupName("test")]
     [ProducesResponseType<string>(200)]
-    [OpenApiMetadata("Blazor渲染测试", "Blazor渲染测试", Tags = ["Endpoints"])]
-    public class BlazorRenderEndpoint : IQuickEndpoint
-    {
-        public static Delegate Handler => async (IServiceProvider serviceProvider) =>
-        {
-            await using var htmlRenderer = new HtmlRenderer(
-                serviceProvider,
-            serviceProvider.GetRequiredService<ILoggerFactory>());
-
-            var html = await htmlRenderer.Dispatcher.InvokeAsync(async () =>
-            {
-                var dictionary = new Dictionary<string, object?>
-                {
-                    { "Message", "Hello from the Render Message component!" }
-                };
-
-                var parameters = ParameterView.FromDictionary(dictionary);
-                var output = await htmlRenderer.RenderComponentAsync<RenderMessage>(parameters);
-
-                return output.ToHtmlString();
-            });
-
-            return Results.Content(html, "text/html");
-
-
-        };
-
-        public static Verb Verbs => Verb.GET;
-    }
-
-    /// <summary>
-    /// 测试IQuickEndpoint
-    /// </summary>
-    //[Authorize]
-    [EndpointGroupName("test")]
-    [ProducesResponseType<string>(200)]
     [OpenApiMetadata("BlazorSvc渲染测试", "Blazor渲染测试", Tags = ["Endpoints"])]
     public class BlazorRenderSvcEndpoint : IQuickEndpoint
     {

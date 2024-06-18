@@ -8,8 +8,7 @@ namespace Biwen.QuickApi.Http
     /// 根据Blazor组件渲染Html的服务
     /// </summary>
     /// <param name="serviceProvider"></param>
-    /// <param name="loggerFactory"></param>
-    public sealed class BlazorRendererService(IServiceProvider serviceProvider, ILoggerFactory loggerFactory)
+    public sealed class BlazorRendererService(IServiceProvider serviceProvider)
     {
 
         /// <summary>
@@ -18,9 +17,9 @@ namespace Biwen.QuickApi.Http
         /// <typeparam name="T">Blazor组件</typeparam>
         /// <param name="parms">传递的参数字典</param>
         /// <returns></returns>
-        public async Task<string> Render<T>(IDictionary<string, object?>? parms) where T : IComponent
+        public async Task<string> Render<T>(IDictionary<string, object?>? parms) where T : class, IComponent
         {
-            using var htmlRenderer = new HtmlRenderer(serviceProvider, loggerFactory);
+            using var htmlRenderer = ActivatorUtilities.GetServiceOrCreateInstance<HtmlRenderer>(serviceProvider);
 
             var html = await htmlRenderer.Dispatcher.InvokeAsync(async () =>
             {

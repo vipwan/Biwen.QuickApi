@@ -61,6 +61,15 @@ app.MapGroup("endpoints", x =>
 
 ```
 
+终结点资源管理器
+---------------------
+
+`VisualStudio2022`+ 提供终结点管理器,你可以很方便的查看定义的`QuickApi`和`QuickEndpoint`<br/>
+![endpoint-explorer](/articles/images/endpoint-explorer.jpg)
+
+
+
+
 Api文档
 ---------------------
 
