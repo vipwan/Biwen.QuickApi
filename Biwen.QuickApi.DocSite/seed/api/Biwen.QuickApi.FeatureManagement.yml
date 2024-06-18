@@ -1,0 +1,32 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.FeatureManagement
+  commentId: N:Biwen.QuickApi.FeatureManagement
+  id: Biwen.QuickApi.FeatureManagement
+  children:
+  - Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions
+  - Biwen.QuickApi.FeatureManagement.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.FeatureManagement
+  nameWithType: Biwen.QuickApi.FeatureManagement
+  fullName: Biwen.QuickApi.FeatureManagement
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.FeatureManagement
+references:
+- uid: Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions
+  commentId: T:Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions
+  isExternal: true
+  href: Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions.html
+  name: QuickApiFeatureManagementOptions
+  nameWithType: QuickApiFeatureManagementOptions
+  fullName: Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions
+- uid: Biwen.QuickApi.FeatureManagement.ServiceRegistration
+  commentId: T:Biwen.QuickApi.FeatureManagement.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.FeatureManagement.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.FeatureManagement.ServiceRegistration

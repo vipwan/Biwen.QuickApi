@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.FeatureManagement.Mvc;
 using Microsoft.FeatureManagement;
-using System.Net;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace Biwen.QuickApi.FeatureManagement
 {
@@ -25,6 +26,7 @@ namespace Biwen.QuickApi.FeatureManagement
             {
                 if (endpoint.Metadata.GetMetadata<FeatureGateAttribute>() is { } metadata)
                 {
+                    var options = context.RequestServices.GetRequiredService<IOptions<QuickApiFeatureManagementOptions>>().Value;
                     var features = metadata.Features;
 
                     //只要有一个特性开启就可以:
@@ -38,6 +40,12 @@ namespace Biwen.QuickApi.FeatureManagement
                                 return;
                             }
                         }
+                        context.Response.StatusCode = options.StatusCode;
+                        if (options.OnErrorAsync is not null)
+                        {
+                            options.OnErrorAsync?.Invoke(context);
+                        }
+                        return;
                     }
                     //所有特性都必须开启:
                     else
@@ -46,7 +54,11 @@ namespace Biwen.QuickApi.FeatureManagement
                         {
                             if (!await _featureManager.IsEnabledAsync(feature))
                             {
-                                context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+                                context.Response.StatusCode = options.StatusCode;
+                                if (options.OnErrorAsync is not null)
+                                {
+                                    options.OnErrorAsync?.Invoke(context);
+                                }
                                 return;
                             }
                         }

@@ -116,6 +116,13 @@ items:
     name: IEvent
   - uid: Biwen.QuickApi.Events.IEventSubscriber`1
     name: IEventSubscriber<T>
+- uid: Biwen.QuickApi.FeatureManagement
+  name: Biwen.QuickApi.FeatureManagement
+  items:
+  - uid: Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions
+    name: QuickApiFeatureManagementOptions
+  - uid: Biwen.QuickApi.FeatureManagement.ServiceRegistration
+    name: ServiceRegistration
 - uid: Biwen.QuickApi.Http
   name: Biwen.QuickApi.Http
   items:

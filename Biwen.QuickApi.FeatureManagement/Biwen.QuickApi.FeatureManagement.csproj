@@ -1,17 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<NoWarn>CA2254;CS1570;CS1587;CS1591;CS1712;CS1734</NoWarn>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="4.0.0-preview3" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="4.0.0-preview3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
+	</ItemGroup>
 
 </Project>

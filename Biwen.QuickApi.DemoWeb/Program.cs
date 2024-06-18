@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.FluentUI.AspNetCore.Components;
 using System.Reflection;
+using Biwen.QuickApi.FeatureManagement;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,19 @@ builder.Logging.ClearProviders();
 builder.Host.UseSerilogFromConfiguration();
 
 #endregion
+
+builder.Services.ConfigureQuickApiFeatureManagementOptions(o =>
+{
+    //自定义特性管理模块的返回状态码
+    o.StatusCode = StatusCodes.Status405MethodNotAllowed;
+    //自定义特性管理模块的错误处理
+    o.OnErrorAsync = async (ctx) =>
+    {
+        ctx.Response.StatusCode = StatusCodes.Status405MethodNotAllowed;
+        ctx.Response.ContentType = "text/plain";
+        await ctx.Response.WriteAsync("Method Not Allowed");
+    };
+});
 
 builder.Services.AddFluentUIComponents();
 
