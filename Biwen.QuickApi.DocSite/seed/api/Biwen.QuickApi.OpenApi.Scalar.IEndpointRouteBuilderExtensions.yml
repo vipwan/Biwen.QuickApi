@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.IEndpointRouteBuilderExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/OpenApi/Scalar/IEndpointRouteBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/OpenApi/Scalar/IEndpointRouteBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -55,7 +55,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.IEndpointRouteBuilderExtensions.MapScalarUi(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/OpenApi/Scalar/IEndpointRouteBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/OpenApi/Scalar/IEndpointRouteBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -85,7 +85,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.IEndpointRouteBuilderExtensions.MapScalarUi(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, System.Action<Biwen.QuickApi.OpenApi.Scalar.ScalarOptions>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/OpenApi/Scalar/IEndpointRouteBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/OpenApi/Scalar/IEndpointRouteBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar

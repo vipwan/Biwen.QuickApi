@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
 
@@ -46,6 +46,11 @@
 	<ItemGroup>
 		<ProjectReference Include="..\Biwen.QuickApi.DemoWeb\Biwen.QuickApi.DemoWeb.csproj" />
 		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Folder Include="Components\" />
 	</ItemGroup>
 
 </Project>

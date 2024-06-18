@@ -24,6 +24,9 @@ namespace Biwen.QuickApi.Http
 
             //注册绑定服务
             services.AddScoped<RequestBindService>();
+
+            //注册BlazorRendererService
+            services.AddScoped<BlazorRendererService>();
         }
 
         static readonly Type InterfaceQuickApi = typeof(IQuickApi<,>);

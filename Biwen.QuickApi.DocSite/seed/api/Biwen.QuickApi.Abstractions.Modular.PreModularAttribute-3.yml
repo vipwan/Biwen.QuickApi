@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T, T2, T3>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular
@@ -105,7 +105,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T, T2, T3>.PreModularAttribute()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular

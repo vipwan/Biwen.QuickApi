@@ -6,6 +6,7 @@ items:
   parent: Biwen.QuickApi
   children:
   - Biwen.QuickApi.FromBodyAttribute.#ctor
+  - Biwen.QuickApi.FromBodyAttribute.BindingSource
   langs:
   - csharp
   - vb
@@ -14,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.FromBodyAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -24,14 +25,16 @@ items:
     content: >-
       [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
 
-      public class FromBodyAttribute : Attribute
+      public class FromBodyAttribute : Attribute, IBindingSourceMetadata
     content.vb: >-
       <AttributeUsage(AttributeTargets.Class, AllowMultiple:=False, Inherited:=True)>
 
-      Public Class FromBodyAttribute Inherits Attribute
+      Public Class FromBodyAttribute Inherits Attribute Implements IBindingSourceMetadata
   inheritance:
   - System.Object
   - System.Attribute
+  implements:
+  - Microsoft.AspNetCore.Mvc.ModelBinding.IBindingSourceMetadata
   inheritedMembers:
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type,System.Boolean)
@@ -100,7 +103,7 @@ items:
   fullName: Biwen.QuickApi.FromBodyAttribute.FromBodyAttribute()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -111,6 +114,32 @@ items:
   nameWithType.vb: FromBodyAttribute.New()
   fullName.vb: Biwen.QuickApi.FromBodyAttribute.New()
   name.vb: New()
+- uid: Biwen.QuickApi.FromBodyAttribute.BindingSource
+  commentId: P:Biwen.QuickApi.FromBodyAttribute.BindingSource
+  id: BindingSource
+  parent: Biwen.QuickApi.FromBodyAttribute
+  langs:
+  - csharp
+  - vb
+  name: BindingSource
+  nameWithType: FromBodyAttribute.BindingSource
+  fullName: Biwen.QuickApi.FromBodyAttribute.BindingSource
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  example: []
+  syntax:
+    content: public BindingSource? BindingSource { get; }
+    parameters: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.ModelBinding.BindingSource
+    content.vb: Public ReadOnly Property BindingSource As BindingSource
+  overload: Biwen.QuickApi.FromBodyAttribute.BindingSource*
+  implements:
+  - Microsoft.AspNetCore.Mvc.ModelBinding.IBindingSourceMetadata.BindingSource
 references:
 - uid: Biwen.QuickApi
   commentId: N:Biwen.QuickApi
@@ -158,6 +187,14 @@ references:
   name: Attribute
   nameWithType: Attribute
   fullName: System.Attribute
+- uid: Microsoft.AspNetCore.Mvc.ModelBinding.IBindingSourceMetadata
+  commentId: T:Microsoft.AspNetCore.Mvc.ModelBinding.IBindingSourceMetadata
+  parent: Microsoft.AspNetCore.Mvc.ModelBinding
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.ibindingsourcemetadata
+  name: IBindingSourceMetadata
+  nameWithType: IBindingSourceMetadata
+  fullName: Microsoft.AspNetCore.Mvc.ModelBinding.IBindingSourceMetadata
 - uid: System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
   commentId: M:System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
   parent: System.Attribute
@@ -1933,6 +1970,53 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Microsoft.AspNetCore.Mvc.ModelBinding
+  commentId: N:Microsoft.AspNetCore.Mvc.ModelBinding
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Mvc.ModelBinding
+  nameWithType: Microsoft.AspNetCore.Mvc.ModelBinding
+  fullName: Microsoft.AspNetCore.Mvc.ModelBinding
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc.ModelBinding
+    name: ModelBinding
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.modelbinding
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc.ModelBinding
+    name: ModelBinding
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.modelbinding
 - uid: Biwen.QuickApi.FromBodyAttribute.#ctor*
   commentId: Overload:Biwen.QuickApi.FromBodyAttribute.#ctor
   isExternal: true
@@ -1943,3 +2027,26 @@ references:
   nameWithType.vb: FromBodyAttribute.New
   fullName.vb: Biwen.QuickApi.FromBodyAttribute.New
   name.vb: New
+- uid: Biwen.QuickApi.FromBodyAttribute.BindingSource*
+  commentId: Overload:Biwen.QuickApi.FromBodyAttribute.BindingSource
+  isExternal: true
+  href: Biwen.QuickApi.FromBodyAttribute.html#Biwen_QuickApi_FromBodyAttribute_BindingSource
+  name: BindingSource
+  nameWithType: FromBodyAttribute.BindingSource
+  fullName: Biwen.QuickApi.FromBodyAttribute.BindingSource
+- uid: Microsoft.AspNetCore.Mvc.ModelBinding.IBindingSourceMetadata.BindingSource
+  commentId: P:Microsoft.AspNetCore.Mvc.ModelBinding.IBindingSourceMetadata.BindingSource
+  parent: Microsoft.AspNetCore.Mvc.ModelBinding.IBindingSourceMetadata
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.ibindingsourcemetadata.bindingsource
+  name: BindingSource
+  nameWithType: IBindingSourceMetadata.BindingSource
+  fullName: Microsoft.AspNetCore.Mvc.ModelBinding.IBindingSourceMetadata.BindingSource
+- uid: Microsoft.AspNetCore.Mvc.ModelBinding.BindingSource
+  commentId: T:Microsoft.AspNetCore.Mvc.ModelBinding.BindingSource
+  parent: Microsoft.AspNetCore.Mvc.ModelBinding
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.bindingsource
+  name: BindingSource
+  nameWithType: BindingSource
+  fullName: Microsoft.AspNetCore.Mvc.ModelBinding.BindingSource

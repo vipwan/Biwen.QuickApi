@@ -5,6 +5,7 @@ items:
   id: Biwen.QuickApi.Http
   children:
   - Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
+  - Biwen.QuickApi.Http.BlazorRendererService
   - Biwen.QuickApi.Http.IQuickApiExceptionHandler
   - Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder
   - Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
@@ -19,6 +20,13 @@ items:
   assemblies:
   - Biwen.QuickApi
 references:
+- uid: Biwen.QuickApi.Http.BlazorRendererService
+  commentId: T:Biwen.QuickApi.Http.BlazorRendererService
+  isExternal: true
+  href: Biwen.QuickApi.Http.BlazorRendererService.html
+  name: BlazorRendererService
+  nameWithType: BlazorRendererService
+  fullName: Biwen.QuickApi.Http.BlazorRendererService
 - uid: Biwen.QuickApi.Http.IQuickApiExceptionHandler
   commentId: T:Biwen.QuickApi.Http.IQuickApiExceptionHandler
   isExternal: true

@@ -131,6 +131,11 @@ namespace Biwen.QuickApi.DemoWeb
                 //~/endpoints/hello/hello?key=world
                 x.MapMethods<HelloEndpoint>("hello/{hello}");
                 x.MapMethods<PostDataEndpoint>("hello/postdata");
+                //~/endpoints/hello/blazor-render
+                x.MapMethods<BlazorRenderEndpoint>("hello/blazor-render");
+
+                x.MapMethods<BlazorRenderSvcEndpoint>("hello/blazor-render-svc");
+
             });
 
             // Identity API {"email" : "vipwan@co.ltd","password" : "*******"}

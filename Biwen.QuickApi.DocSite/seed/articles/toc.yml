@@ -38,6 +38,8 @@
 - name: 其他模块
   expanded: true
   items:
+  - name: 模板引擎
+    href: BlazorRendererService.md
   - name: 本地锁
     href: 5.md
   - name: 异步流服务

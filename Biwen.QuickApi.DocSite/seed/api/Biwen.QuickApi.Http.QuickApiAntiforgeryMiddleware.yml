@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/Http/QuickApiAntiforgeryMiddleware.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Http/QuickApiAntiforgeryMiddleware.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
@@ -59,7 +59,7 @@ items:
   fullName: Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware.QuickApiAntiforgeryMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Antiforgery.IAntiforgery)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/Http/QuickApiAntiforgeryMiddleware.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Http/QuickApiAntiforgeryMiddleware.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
@@ -87,7 +87,7 @@ items:
   fullName: Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/660579d63acecaddc540f688aac55708f5cd4ee6/Biwen.QuickApi/Http/QuickApiAntiforgeryMiddleware.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Http/QuickApiAntiforgeryMiddleware.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http

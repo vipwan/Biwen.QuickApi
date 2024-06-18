@@ -121,6 +121,8 @@ items:
   items:
   - uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
     name: BaseQuickApiGroupRouteBuilder
+  - uid: Biwen.QuickApi.Http.BlazorRendererService
+    name: BlazorRendererService
   - uid: Biwen.QuickApi.Http.IQuickApiExceptionHandler
     name: IQuickApiExceptionHandler
   - uid: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder
