@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
@@ -52,7 +52,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.TaskSuccessedEvent(Biwen.QuickApi.Scheduling.IScheduleTask, System.DateTime, System.DateTime)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
@@ -87,7 +87,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent.EndTime
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events

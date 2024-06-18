@@ -23,7 +23,7 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -65,7 +65,7 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.AddIf(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool, System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -107,7 +107,7 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.AddIfElse(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool, System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>, System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -156,7 +156,7 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -195,7 +195,7 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -237,7 +237,7 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -279,7 +279,7 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -324,7 +324,7 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -369,7 +369,7 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -417,7 +417,7 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>, string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -465,7 +465,7 @@ items:
   fullName: Biwen.QuickApi.ServiceCollectionExtensions.ConfigureAndValidateSingleton<TOptions>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration, System.Func<TOptions, bool>, string, System.Action<Microsoft.Extensions.Configuration.BinderOptions>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/ServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

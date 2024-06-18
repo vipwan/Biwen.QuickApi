@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.StringExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Infrastructure/Html/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Infrastructure/Html/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -54,7 +54,7 @@ items:
   fullName: Biwen.QuickApi.StringExtensions.SanitizeHtml(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Infrastructure/Html/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Infrastructure/Html/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

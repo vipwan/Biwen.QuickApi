@@ -13,7 +13,7 @@ items:
   fullName: Biwen.QuickApi.Events.IEvent
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Events/IEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Events/IEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events

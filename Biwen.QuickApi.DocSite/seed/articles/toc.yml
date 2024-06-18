@@ -19,6 +19,8 @@
     href: Logging.md
   - name: MiniProfiler扩展
     href: MiniProfiler.md
+  - name: FeatureManagement扩展
+    href: FeatureManagement.md
 
 - name: Api模块
   expanded: true

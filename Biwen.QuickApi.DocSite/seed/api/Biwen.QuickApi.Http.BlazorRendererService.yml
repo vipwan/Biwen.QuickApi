@@ -5,7 +5,7 @@ items:
   id: BlazorRendererService
   parent: Biwen.QuickApi.Http
   children:
-  - Biwen.QuickApi.Http.BlazorRendererService.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILoggerFactory)
+  - Biwen.QuickApi.Http.BlazorRendererService.#ctor(System.IServiceProvider)
   - Biwen.QuickApi.Http.BlazorRendererService.Render``1(System.Collections.Generic.IDictionary{System.String,System.Object})
   langs:
   - csharp
@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Http.BlazorRendererService
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Http/BlazorRendererService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Http/BlazorRendererService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
@@ -33,38 +33,35 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Biwen.QuickApi.Http.BlazorRendererService.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILoggerFactory)
-  commentId: M:Biwen.QuickApi.Http.BlazorRendererService.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILoggerFactory)
-  id: '#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILoggerFactory)'
+- uid: Biwen.QuickApi.Http.BlazorRendererService.#ctor(System.IServiceProvider)
+  commentId: M:Biwen.QuickApi.Http.BlazorRendererService.#ctor(System.IServiceProvider)
+  id: '#ctor(System.IServiceProvider)'
   parent: Biwen.QuickApi.Http.BlazorRendererService
   langs:
   - csharp
   - vb
-  name: BlazorRendererService(IServiceProvider, ILoggerFactory)
-  nameWithType: BlazorRendererService.BlazorRendererService(IServiceProvider, ILoggerFactory)
-  fullName: Biwen.QuickApi.Http.BlazorRendererService.BlazorRendererService(System.IServiceProvider, Microsoft.Extensions.Logging.ILoggerFactory)
+  name: BlazorRendererService(IServiceProvider)
+  nameWithType: BlazorRendererService.BlazorRendererService(IServiceProvider)
+  fullName: Biwen.QuickApi.Http.BlazorRendererService.BlazorRendererService(System.IServiceProvider)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Http/BlazorRendererService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Http/BlazorRendererService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
   summary: 根据Blazor组件渲染Html的服务
   example: []
   syntax:
-    content: public BlazorRendererService(IServiceProvider serviceProvider, ILoggerFactory loggerFactory)
+    content: public BlazorRendererService(IServiceProvider serviceProvider)
     parameters:
     - id: serviceProvider
       type: System.IServiceProvider
       description: ''
-    - id: loggerFactory
-      type: Microsoft.Extensions.Logging.ILoggerFactory
-      description: ''
-    content.vb: Public Sub New(serviceProvider As IServiceProvider, loggerFactory As ILoggerFactory)
+    content.vb: Public Sub New(serviceProvider As IServiceProvider)
   overload: Biwen.QuickApi.Http.BlazorRendererService.#ctor*
-  nameWithType.vb: BlazorRendererService.New(IServiceProvider, ILoggerFactory)
-  fullName.vb: Biwen.QuickApi.Http.BlazorRendererService.New(System.IServiceProvider, Microsoft.Extensions.Logging.ILoggerFactory)
-  name.vb: New(IServiceProvider, ILoggerFactory)
+  nameWithType.vb: BlazorRendererService.New(IServiceProvider)
+  fullName.vb: Biwen.QuickApi.Http.BlazorRendererService.New(System.IServiceProvider)
+  name.vb: New(IServiceProvider)
 - uid: Biwen.QuickApi.Http.BlazorRendererService.Render``1(System.Collections.Generic.IDictionary{System.String,System.Object})
   commentId: M:Biwen.QuickApi.Http.BlazorRendererService.Render``1(System.Collections.Generic.IDictionary{System.String,System.Object})
   id: Render``1(System.Collections.Generic.IDictionary{System.String,System.Object})
@@ -77,14 +74,14 @@ items:
   fullName: Biwen.QuickApi.Http.BlazorRendererService.Render<T>(System.Collections.Generic.IDictionary<string, object?>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/Http/BlazorRendererService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Http/BlazorRendererService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
   summary: 根据Blazor组件渲染Html
   example: []
   syntax:
-    content: 'public Task<string> Render<T>(IDictionary<string, object?>? parms) where T : IComponent'
+    content: 'public Task<string> Render<T>(IDictionary<string, object?>? parms) where T : class, IComponent'
     parameters:
     - id: parms
       type: System.Collections.Generic.IDictionary{System.String,System.Object}
@@ -95,7 +92,7 @@ items:
     return:
       type: System.Threading.Tasks.Task{System.String}
       description: ''
-    content.vb: Public Function Render(Of T As IComponent)(parms As IDictionary(Of String, Object)) As Task(Of String)
+    content.vb: Public Function Render(Of T As {Class, IComponent})(parms As IDictionary(Of String, Object)) As Task(Of String)
   overload: Biwen.QuickApi.Http.BlazorRendererService.Render*
   nameWithType.vb: BlazorRendererService.Render(Of T)(IDictionary(Of String, Object))
   fullName.vb: Biwen.QuickApi.Http.BlazorRendererService.Render(Of T)(System.Collections.Generic.IDictionary(Of String, Object))
@@ -354,7 +351,7 @@ references:
 - uid: Biwen.QuickApi.Http.BlazorRendererService.#ctor*
   commentId: Overload:Biwen.QuickApi.Http.BlazorRendererService.#ctor
   isExternal: true
-  href: Biwen.QuickApi.Http.BlazorRendererService.html#Biwen_QuickApi_Http_BlazorRendererService__ctor_System_IServiceProvider_Microsoft_Extensions_Logging_ILoggerFactory_
+  href: Biwen.QuickApi.Http.BlazorRendererService.html#Biwen_QuickApi_Http_BlazorRendererService__ctor_System_IServiceProvider_
   name: BlazorRendererService
   nameWithType: BlazorRendererService.BlazorRendererService
   fullName: Biwen.QuickApi.Http.BlazorRendererService.BlazorRendererService
@@ -369,51 +366,6 @@ references:
   name: IServiceProvider
   nameWithType: IServiceProvider
   fullName: System.IServiceProvider
-- uid: Microsoft.Extensions.Logging.ILoggerFactory
-  commentId: T:Microsoft.Extensions.Logging.ILoggerFactory
-  parent: Microsoft.Extensions.Logging
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory
-  name: ILoggerFactory
-  nameWithType: ILoggerFactory
-  fullName: Microsoft.Extensions.Logging.ILoggerFactory
-- uid: Microsoft.Extensions.Logging
-  commentId: N:Microsoft.Extensions.Logging
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft
-  name: Microsoft.Extensions.Logging
-  nameWithType: Microsoft.Extensions.Logging
-  fullName: Microsoft.Extensions.Logging
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft
-  - name: .
-  - uid: Microsoft.Extensions
-    name: Extensions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
-  - name: .
-  - uid: Microsoft.Extensions.Logging
-    name: Logging
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft
-  - name: .
-  - uid: Microsoft.Extensions
-    name: Extensions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
-  - name: .
-  - uid: Microsoft.Extensions.Logging
-    name: Logging
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
 - uid: Biwen.QuickApi.Http.BlazorRendererService.Render*
   commentId: Overload:Biwen.QuickApi.Http.BlazorRendererService.Render
   isExternal: true

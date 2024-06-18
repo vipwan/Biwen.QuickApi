@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi
@@ -54,7 +54,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.ServiceRegistration.AddOpenApi(Microsoft.Extensions.DependencyInjection.IServiceCollection, string, bool, string[]?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/5e369426243003e5cb75cb0a6cb2cf52cfe2062d/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/OpenApi/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi

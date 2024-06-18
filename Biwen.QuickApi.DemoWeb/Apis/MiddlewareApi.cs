@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.DemoWeb.Apis
+﻿using Microsoft.FeatureManagement.Mvc;
+
+namespace Biwen.QuickApi.DemoWeb.Apis
 {
 
     [QuickApi("middleware")]
@@ -31,4 +33,29 @@
             return base.HandlerBuilder(builder);
         }
     }
+
+
+    [QuickApi("feature-test-1")]
+    [FeatureGate("myfeature")]
+    public class Feature1Api : BaseQuickApi
+    {
+
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
+        {
+            await Task.CompletedTask;
+            return Results.Content("hello feature1");
+        }
+    }
+
+    [QuickApi("feature-test-2")]
+    [FeatureGate("myfeature2")]
+    public class Feature2Api : BaseQuickApi
+    {
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
+        {
+            await Task.CompletedTask;
+            return Results.Content("hello feature2");
+        }
+    }
+
 }

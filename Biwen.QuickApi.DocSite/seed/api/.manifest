@@ -139,7 +139,7 @@
   "Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Group": "Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.yml",
   "Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.Order": "Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder.yml",
   "Biwen.QuickApi.Http.BlazorRendererService": "Biwen.QuickApi.Http.BlazorRendererService.yml",
-  "Biwen.QuickApi.Http.BlazorRendererService.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILoggerFactory)": "Biwen.QuickApi.Http.BlazorRendererService.yml",
+  "Biwen.QuickApi.Http.BlazorRendererService.#ctor(System.IServiceProvider)": "Biwen.QuickApi.Http.BlazorRendererService.yml",
   "Biwen.QuickApi.Http.BlazorRendererService.Render``1(System.Collections.Generic.IDictionary{System.String,System.Object})": "Biwen.QuickApi.Http.BlazorRendererService.yml",
   "Biwen.QuickApi.Http.IQuickApiExceptionHandler": "Biwen.QuickApi.Http.IQuickApiExceptionHandler.yml",
   "Biwen.QuickApi.Http.IQuickApiExceptionHandler.HandleAsync(System.Exception)": "Biwen.QuickApi.Http.IQuickApiExceptionHandler.yml",
