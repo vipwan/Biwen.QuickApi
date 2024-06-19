@@ -1,10 +1,12 @@
 ﻿using Biwen.QuickApi.DemoWeb.Apis.Endpoints;
 using Biwen.QuickApi.DemoWeb.Components;
 using Biwen.QuickApi.DemoWeb.Schedules;
+using Biwen.QuickApi.FeatureManagement;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Hybrid;
 using Microsoft.FeatureManagement.Mvc;
+using Constants = Biwen.QuickApi.FeatureManagement.Constants;
 
 namespace Biwen.QuickApi.DemoWeb
 {
@@ -13,10 +15,24 @@ namespace Biwen.QuickApi.DemoWeb
     /// </summary>
     public class PreModular1 : ModularBase
     {
+
         public override void ConfigureServices(IServiceCollection services)
         {
             // Add ScheduleTaskStore
             services.AddScheduleMetadataStore<DemoStore>();
+
+
+            services.ConfigureQuickApiFeatureManagementOptions(o =>
+            {
+                //自定义特性管理模块的返回状态码
+                o.StatusCode = StatusCodes.Status405MethodNotAllowed;
+                //自定义特性管理模块的错误处理
+                //o.OnErrorAsync = ctx =>
+                //{
+                //    ctx.Response.WriteAsync(o.StatusCode.ToString());
+                //};
+            });
+
         }
         public override void Configure(IApplicationBuilder app, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)
         {
@@ -31,6 +47,9 @@ namespace Biwen.QuickApi.DemoWeb
     [PreModular<PreModular1>]
     public class DemoModular(IHostEnvironment environment) : ModularBase
     {
+        public override int Order => Constants.Order + 1;
+
+
         /// <summary>
         /// 测试模块仅用于开发测试
         /// </summary>

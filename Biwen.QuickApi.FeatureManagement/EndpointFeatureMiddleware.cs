@@ -58,9 +58,14 @@ namespace Biwen.QuickApi.FeatureManagement
                             }
                         }
                         context.Response.StatusCode = options.StatusCode;
-                        if (options.OnErrorAsync is not null)
+                        if (options.OnErrorAsync is { } errorHandler)
                         {
-                            options.OnErrorAsync?.Invoke(context);
+                            errorHandler.Invoke(context);
+                        }
+                        else
+                        {
+                            //返回规范的Result.Problem:
+                            await Results.Problem(statusCode: options.StatusCode).ExecuteAsync(context);
                         }
                         return;
                     }
@@ -72,9 +77,14 @@ namespace Biwen.QuickApi.FeatureManagement
                             if (!await _featureManager.IsEnabledAsync(feature))
                             {
                                 context.Response.StatusCode = options.StatusCode;
-                                if (options.OnErrorAsync is not null)
+                                if (options.OnErrorAsync is { } errorHandler)
                                 {
-                                    options.OnErrorAsync?.Invoke(context);
+                                    errorHandler.Invoke(context);
+                                }
+                                else
+                                {
+                                    //返回规范的Result.Problem:
+                                    await Results.Problem(statusCode: options.StatusCode).ExecuteAsync(context);
                                 }
                                 return;
                             }
