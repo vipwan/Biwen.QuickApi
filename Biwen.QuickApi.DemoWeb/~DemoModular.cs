@@ -4,6 +4,7 @@ using Biwen.QuickApi.DemoWeb.Schedules;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Hybrid;
+using Microsoft.FeatureManagement.Mvc;
 
 namespace Biwen.QuickApi.DemoWeb
 {
@@ -124,7 +125,6 @@ namespace Biwen.QuickApi.DemoWeb
                     });
             });
 
-
             //提供IQuickEndpoint支持:
             routes.MapGroup("endpoints", x =>
             {
@@ -134,7 +134,17 @@ namespace Biwen.QuickApi.DemoWeb
                 //~/endpoints/hello/blazor-render-svc
                 x.MapMethods<BlazorRenderSvcEndpoint>("hello/blazor-render-svc");
 
+                //Feature测试
+                x.MapMethods<FeatureTestEndpoint>("hello/feature-test");
+
+
             });
+
+            //测试特性管理
+            routes.MapGet(
+                "/new-feature",
+                () => Results.Content("new feature!"))
+                .WithMetadata(new FeatureGateAttribute("myfeature"));
 
             // Identity API {"email" : "vipwan@co.ltd","password" : "*******"}
             // ~/account/register    

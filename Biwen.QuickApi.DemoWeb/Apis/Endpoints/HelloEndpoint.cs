@@ -1,6 +1,7 @@
 ﻿using Biwen.QuickApi.DemoWeb.Components;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.FeatureManagement.Mvc;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -64,6 +65,25 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
 
         public static Verb Verbs => Verb.GET;
     }
+
+
+
+    [EndpointGroupName("test")]
+    [ProducesResponseType<string>(200)]
+    [OpenApiMetadata("Feature测试", "Feature测试", Tags = ["Endpoints"])]
+    [FeatureGate("myfeature")]
+    public class FeatureTestEndpoint : IQuickEndpoint
+    {
+        public static Delegate Handler => () =>
+        {
+            return Results.Content("new feature!");
+        };
+
+        public static Verb Verbs => Verb.GET;
+    }
+
+
+
 
 
 }

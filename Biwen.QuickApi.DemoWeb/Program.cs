@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.FluentUI.AspNetCore.Components;
 using System.Reflection;
-using Biwen.QuickApi.FeatureManagement;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -126,6 +125,7 @@ app.MapControllerRoute("default_route", "{area}/{controller}/{action}/{id?}",
     defaults: new { area = "MyArea", controller = "Home", action = "Index" },
     constraints: new { area = "MyArea" });
 app.MapControllerRoute("default_route", "{controller}/{action}/{id?}");
+
 
 app.Run();
 
