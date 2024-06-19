@@ -3,6 +3,9 @@
 /// <summary>
 /// 测试服务
 /// </summary>
+
+[AutoInject]
+[AutoInjectKeyed<HelloService>("hello")]
 public class HelloService
 {
     public string Hello(string name)
