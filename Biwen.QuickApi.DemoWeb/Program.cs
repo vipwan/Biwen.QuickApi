@@ -37,6 +37,13 @@ builder.Services.ConfigureQuickApiFeatureManagementOptions(o =>
 
 builder.Services.AddFluentUIComponents();
 
+//add razor pages
+builder.Services.AddRazorPages();
+
+//add mvc
+builder.Services.AddControllersWithViews();
+
+
 //all
 builder.Services.AddOpenApi("v1", onlyQuickApi: false);
 //just quickapi & group:[test,admin]
@@ -109,12 +116,16 @@ app.UseIfElse(app.Environment.IsDevelopment(), builder =>
     builder.UseWelcomePage("/");
 });
 
-
-//var modular = typeof(Biwen.QuickApi.MiniProfiler.MiniProfilerModular);
-
-// 默认方式
-//app.MapBiwenQuickApis();
 app.UseBiwenQuickApis();
+
+//map razor pages
+app.MapRazorPages();
+
+//mvc
+app.MapControllerRoute("default_route", "{area}/{controller}/{action}/{id?}",
+    defaults: new { area = "MyArea", controller = "Home", action = "Index" },
+    constraints: new { area = "MyArea" });
+app.MapControllerRoute("default_route", "{controller}/{action}/{id?}");
 
 app.Run();
 

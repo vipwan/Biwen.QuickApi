@@ -21,8 +21,4 @@
 		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<Folder Include="Pages\" />
-	</ItemGroup>
-
 </Project>

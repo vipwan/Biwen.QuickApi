@@ -3,6 +3,8 @@ using Microsoft.FeatureManagement.Mvc;
 using Microsoft.FeatureManagement;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
+using Microsoft.AspNetCore.Mvc.Controllers;
 
 namespace Biwen.QuickApi.FeatureManagement
 {
@@ -12,20 +14,35 @@ namespace Biwen.QuickApi.FeatureManagement
     internal class EndpointFeatureMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly IFeatureManager _featureManager;
 
-        public EndpointFeatureMiddleware(RequestDelegate next, IFeatureManager featureManager)
+        public EndpointFeatureMiddleware(RequestDelegate next)
         {
             _next = next;
-            _featureManager = featureManager;
         }
 
         public async Task InvokeAsync(HttpContext context)
         {
             if (context.GetEndpoint() is { } endpoint)
             {
+                //这里不处理PageRouteMetadata,因为PageRouteMetadata是用于RazorPage的,不是用于MinimalApi的
+                if (endpoint.Metadata.OfType<PageRouteMetadata>().Any())
+                {
+                    await _next(context);
+                    return;
+                }
+
+                //不处理Mvc Controller
+                if (endpoint.Metadata.OfType<ControllerActionDescriptor>().Any())
+                {
+                    await _next(context);
+                    return;
+                }
+
                 if (endpoint.Metadata.GetMetadata<FeatureGateAttribute>() is { } metadata)
                 {
+                    //IFeatureManagerSnapshot 比 IFeatureManager 多了一层缓存封装,性能更好
+                    //IFeatureManagerSnapshot 适用于作用域请求,IFeatureManager 适用于单例请求. 因此IFeatureManagerSnapshot不要在构造器中注入
+                    var _featureManager = context.RequestServices.GetRequiredService<IFeatureManagerSnapshot>();
                     var options = context.RequestServices.GetRequiredService<IOptions<QuickApiFeatureManagementOptions>>().Value;
                     var features = metadata.Features;
 
@@ -67,5 +84,6 @@ namespace Biwen.QuickApi.FeatureManagement
             }
             await _next(context);
         }
+
     }
 }
