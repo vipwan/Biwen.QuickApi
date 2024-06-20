@@ -36,6 +36,62 @@
               "description": "是否500返回详细信息,默认:false"
             }
           }
+        },
+
+        "MiniProfiler": {
+          "type": "object",
+          "description": "MiniProfiler配置项",
+          "properties": {
+            "Enabled": {
+              "type": "boolean",
+              "default": false,
+              "description": "是否启用MiniProfiler,默认:false"
+            },
+            "PopupShowTrivial": {
+              "type": "boolean",
+              "default": false,
+              "description": "是否显示Trivial,默认:false"
+            },
+            "PopupRenderPosition": {
+              "type": "string",
+              "default": "TopLeft",
+              "enum": [ "TopLeft", "BottomLeft", "TopRigth", "BottomRight" ],
+              "description": "弹出位置,默认:TopLeft"
+            }
+          }
+        },
+
+        "Schedules": {
+          "type": "array",
+          "description": "定时任务集合",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ScheduleTaskType": {
+                "type": "string",
+                "description": "定时任务类型"
+              },
+              "Cron": {
+                "type": "string",
+                "description": "Cron表达式"
+              },
+              "Description": {
+                "type": "string",
+                "description": "描述信息"
+              },
+              "IsAsync": {
+                "type": "boolean",
+                "default": false,
+                "description": "是否异步,默认:false,表示同步阻塞执行"
+              },
+              "IsStartOnInit": {
+                "type": "boolean",
+                "default": false,
+                "description": "是否初始化就启动,默认:false"
+              }
+            }
+          },
+          "required": [ "Cron", "ScheduleTaskType" ]
         }
       }
     }
