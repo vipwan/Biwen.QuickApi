@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.DemoWeb;
+﻿using static Biwen.QuickApi.DemoWeb.HelloService;
+
+namespace Biwen.QuickApi.DemoWeb;
 
 /// <summary>
 /// 测试服务
@@ -6,12 +8,26 @@
 
 [AutoInject]
 [AutoInjectKeyed<HelloService>("hello")]
-public class HelloService
+public partial class HelloService(ILogger<HelloService> logger)
 {
-    public string Hello(string name)
+    public record HelloBody(string name, int age);
+
+
+
+    public string Hello(HelloBody helloBody)
     {
-        var str = $"Hello {name}";
+        var str = $"Hello {helloBody.name}";
         Console.WriteLine(str);
+
+        Log.LogInfo(logger, helloBody);
+        //logger.LogInformation($"Hello {helloBody.name}");
         return str;
     }
+
+    static partial class Log
+    {
+        [LoggerMessage(EventId = 0, Level = LogLevel.Information, Message = "Hello {helloBody}")]
+        public static partial void LogInfo(ILogger logger, [LogProperties] HelloBody helloBody);
+    }
+
 }

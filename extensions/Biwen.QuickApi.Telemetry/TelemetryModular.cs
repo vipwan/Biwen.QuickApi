@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Diagnostics.Latency;
 
 namespace Biwen.QuickApi.Telemetry
 {
@@ -10,26 +9,6 @@ namespace Biwen.QuickApi.Telemetry
     {
         public override void ConfigureServices(IServiceCollection services)
         {
-            services.AddServiceLogEnricher(options =>
-            {
-                options.ApplicationName = true;//default is true
-                options.EnvironmentName = true;//default is true
-
-                options.BuildVersion = true;
-                options.DeploymentRing = true;
-            });
-
-            // 进程日志的Enrich
-            services.AddProcessLogEnricher(options =>
-            {
-                options.ProcessId = true;
-                options.ThreadId = true;
-            });
-
-            services.AddRequestHeadersLogEnricher();
-
-            // QuickApi的Enrich
-            services.AddStaticLogEnricher<QuickApiLogEnricher>();
 
             // 延迟监控
             services.AddLatencyContext();
@@ -40,15 +19,10 @@ namespace Biwen.QuickApi.Telemetry
             services.RegisterCheckpointNames(nameof(Biwen.QuickApi));
 
             // Add Console Latency exporter.
-            services.AddConsoleLatencyDataExporter(options =>
-            {
-                options.OutputCheckpoints = true;
-                options.OutputMeasures = true;
-                options.OutputTags = true;
-            });
+            services.AddConsoleLatencyDataExporter();
 
-            // Optionally add custom exporters.
-            services.AddSingleton<ILatencyDataExporter, QuickApiDataExporter>();
+            // 自定义的LatencyDataExporter
+            // services.AddSingleton<ILatencyDataExporter, QuickApiDataExporter>();
 
             // Add Request latency telemetry.
             services.AddRequestLatencyTelemetry();

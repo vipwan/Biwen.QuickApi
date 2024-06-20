@@ -47,7 +47,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public override async ValueTask<Route2Data> ExecuteAsync(Route2Data request, CancellationToken cancellationToken)
         {
-            var hello = helloService.Hello("78");
+            var hello = helloService.Hello(new HelloService.HelloBody(request.Hello ?? "viwan", 18));
             await Task.CompletedTask;
             return request;
         }
