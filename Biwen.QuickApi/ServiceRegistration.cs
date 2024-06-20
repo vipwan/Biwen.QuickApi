@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Metadata;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.WebEncoders;
@@ -43,11 +44,7 @@ namespace Biwen.QuickApi
             services.AddAuthorization();
 
             //add authentication
-            services.AddAuthentication(o =>
-            {
-                o.DefaultScheme = "Cookies";
-                o.DefaultChallengeScheme = "Cookies";
-            }).AddCookie();
+            services.AddAuthentication().AddCookie().AddBearerToken();
 
             //add RazorComponents
             services.AddRazorComponents().AddInteractiveServerComponents();
@@ -97,7 +94,7 @@ namespace Biwen.QuickApi
                 {
                     modular.ConfigureServices(services);
                     //DI
-                    services.AddTransient(typeof(IStartup), modularType);
+                    services.AddSingleton(typeof(IStartup), modularType);
                 }
             }
             return services;
@@ -425,6 +422,7 @@ namespace Biwen.QuickApi
             // Knowing that routes are already configured.
             app.UseEndpoints(routes => { });
             app.UseStaticFiles();
+
 
             return app;
         }
