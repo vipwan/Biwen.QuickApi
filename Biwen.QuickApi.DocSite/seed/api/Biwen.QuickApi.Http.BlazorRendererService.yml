@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Http.BlazorRendererService
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Http/BlazorRendererService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Http/BlazorRendererService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
@@ -45,7 +45,7 @@ items:
   fullName: Biwen.QuickApi.Http.BlazorRendererService.BlazorRendererService(System.IServiceProvider)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Http/BlazorRendererService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Http/BlazorRendererService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
@@ -74,7 +74,7 @@ items:
   fullName: Biwen.QuickApi.Http.BlazorRendererService.Render<T>(System.Collections.Generic.IDictionary<string, object?>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Http/BlazorRendererService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Http/BlazorRendererService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http

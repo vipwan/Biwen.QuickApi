@@ -17,11 +17,15 @@ items:
     name: AutoInjectAttribute
   - uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
     name: AutoInjectAttribute<T>
+  - uid: Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute`1
+    name: AutoInjectKeyedAttribute<T>
   - uid: Biwen.AutoClassGen.Attributes.ServiceLifetime
     name: ServiceLifetime
 - uid: Biwen.QuickApi
   name: Biwen.QuickApi
   items:
+  - uid: Biwen.QuickApi.AutoInjectExtension
+    name: AutoInjectExtension
   - uid: Biwen.QuickApi.BaseQuickApi
     name: BaseQuickApi
   - uid: Biwen.QuickApi.BaseQuickApi`1
@@ -119,6 +123,10 @@ items:
 - uid: Biwen.QuickApi.FeatureManagement
   name: Biwen.QuickApi.FeatureManagement
   items:
+  - uid: Biwen.QuickApi.FeatureManagement.AutoInjectExtension
+    name: AutoInjectExtension
+  - uid: Biwen.QuickApi.FeatureManagement.Constants
+    name: Constants
   - uid: Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions
     name: QuickApiFeatureManagementOptions
   - uid: Biwen.QuickApi.FeatureManagement.ServiceRegistration
@@ -177,6 +185,11 @@ items:
   items:
   - uid: Biwen.QuickApi.Logging.ServiceRegistration
     name: ServiceRegistration
+- uid: Biwen.QuickApi.Logging.Serilog
+  name: Biwen.QuickApi.Logging.Serilog
+  items:
+  - uid: Biwen.QuickApi.Logging.Serilog.AutoInjectExtension
+    name: AutoInjectExtension
 - uid: Biwen.QuickApi.Mapping
   name: Biwen.QuickApi.Mapping
   items:
@@ -194,6 +207,8 @@ items:
 - uid: Biwen.QuickApi.MiniProfiler
   name: Biwen.QuickApi.MiniProfiler
   items:
+  - uid: Biwen.QuickApi.MiniProfiler.AutoInjectExtension
+    name: AutoInjectExtension
   - uid: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
     name: WrapMiniProfilerOptions
 - uid: Biwen.QuickApi.OpenApi
@@ -255,6 +270,13 @@ items:
     name: IScheduleMetadataStore
   - uid: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
     name: ScheduleTaskMetadata
+- uid: Biwen.QuickApi.Telemetry
+  name: Biwen.QuickApi.Telemetry
+  items:
+  - uid: Biwen.QuickApi.Telemetry.AutoInjectExtension
+    name: AutoInjectExtension
+  - uid: Biwen.QuickApi.Telemetry.Constant
+    name: Constant
 - uid: Microsoft.Extensions.DependencyInjection
   name: Microsoft.Extensions.DependencyInjection
   items:

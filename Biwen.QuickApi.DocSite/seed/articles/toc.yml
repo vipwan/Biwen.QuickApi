@@ -21,6 +21,8 @@
     href: MiniProfiler.md
   - name: FeatureManagement扩展
     href: FeatureManagement.md
+  - name: Telemetry扩展
+    href: Telemetry.md
 
 - name: Api模块
   expanded: true

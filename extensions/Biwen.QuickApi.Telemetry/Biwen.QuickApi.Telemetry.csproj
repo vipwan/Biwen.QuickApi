@@ -4,6 +4,8 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<NoWarn>CA2254;CS1570;CS1587;CS1591;CS1712;CS1734</NoWarn>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -11,6 +13,7 @@
 		<PackageReference Include="Microsoft.Extensions.Diagnostics.ResourceMonitoring" Version="8.6.0" />
 		<PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.9.0" />
 		<PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.9.0" />
+		<PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.9.0-beta.1" />
 		<PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.9.0" />
 		<PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.9.0" />
 		<PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.9.0" />

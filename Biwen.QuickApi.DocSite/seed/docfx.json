@@ -11,7 +11,8 @@
             "**/bin/Debug/net9.0/Biwen.AutoClassGen.Attributes.dll",
             "**/bin/Debug/net9.0/Biwen.QuickApi.Logging.Serilog.dll",
             "**/bin/Debug/net9.0/Biwen.QuickApi.MiniProfiler.dll",
-            "**/bin/Debug/net9.0/Biwen.QuickApi.FeatureManagement.dll"
+            "**/bin/Debug/net9.0/Biwen.QuickApi.FeatureManagement.dll",
+            "**/bin/Debug/net9.0/Biwen.QuickApi.Telemetry.dll"
           ],
           "src": "../"
         }

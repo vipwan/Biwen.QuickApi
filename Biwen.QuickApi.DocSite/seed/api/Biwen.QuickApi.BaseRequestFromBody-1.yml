@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequestFromBody<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -64,7 +64,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequestFromBody<T>.BaseRequestFromBody()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

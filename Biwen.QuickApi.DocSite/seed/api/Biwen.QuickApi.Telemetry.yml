@@ -1,0 +1,32 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Telemetry
+  commentId: N:Biwen.QuickApi.Telemetry
+  id: Biwen.QuickApi.Telemetry
+  children:
+  - Biwen.QuickApi.Telemetry.AutoInjectExtension
+  - Biwen.QuickApi.Telemetry.Constant
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Telemetry
+  nameWithType: Biwen.QuickApi.Telemetry
+  fullName: Biwen.QuickApi.Telemetry
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Telemetry
+references:
+- uid: Biwen.QuickApi.Telemetry.Constant
+  commentId: T:Biwen.QuickApi.Telemetry.Constant
+  isExternal: true
+  href: Biwen.QuickApi.Telemetry.Constant.html
+  name: Constant
+  nameWithType: Constant
+  fullName: Biwen.QuickApi.Telemetry.Constant
+- uid: Biwen.QuickApi.Telemetry.AutoInjectExtension
+  commentId: T:Biwen.QuickApi.Telemetry.AutoInjectExtension
+  isExternal: true
+  href: Biwen.QuickApi.Telemetry.AutoInjectExtension.html
+  name: AutoInjectExtension
+  nameWithType: AutoInjectExtension
+  fullName: Biwen.QuickApi.Telemetry.AutoInjectExtension

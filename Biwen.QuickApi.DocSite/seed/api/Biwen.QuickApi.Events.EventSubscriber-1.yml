@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriber<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Events/IEventSubscriber.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Events/IEventSubscriber.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
@@ -52,7 +52,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriber<T>.HandleAsync(T, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Events/IEventSubscriber.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Events/IEventSubscriber.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
@@ -88,7 +88,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriber<T>.EventSubscriber()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Events/IEventSubscriber.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Events/IEventSubscriber.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events

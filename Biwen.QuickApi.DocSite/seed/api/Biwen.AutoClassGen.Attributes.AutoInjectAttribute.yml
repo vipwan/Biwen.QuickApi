@@ -32,6 +32,7 @@ items:
   - System.Attribute
   derivedClasses:
   - Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
+  - Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute`1
   inheritedMembers:
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type,System.Boolean)

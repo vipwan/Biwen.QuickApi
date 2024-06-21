@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
   assemblies:
   - Biwen.QuickApi.MiniProfiler
   namespace: Biwen.QuickApi.MiniProfiler
@@ -91,7 +91,7 @@ items:
   fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Key
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
   assemblies:
   - Biwen.QuickApi.MiniProfiler
   namespace: Biwen.QuickApi.MiniProfiler
@@ -114,7 +114,7 @@ items:
   fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.WrapMiniProfilerOptions()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
   assemblies:
   - Biwen.QuickApi.MiniProfiler
   namespace: Biwen.QuickApi.MiniProfiler
@@ -137,7 +137,7 @@ items:
   fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Enabled
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
   assemblies:
   - Biwen.QuickApi.MiniProfiler
   namespace: Biwen.QuickApi.MiniProfiler

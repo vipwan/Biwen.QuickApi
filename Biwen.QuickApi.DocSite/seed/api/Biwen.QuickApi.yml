@@ -4,6 +4,7 @@ items:
   commentId: N:Biwen.QuickApi
   id: Biwen.QuickApi
   children:
+  - Biwen.QuickApi.AutoInjectExtension
   - Biwen.QuickApi.BaseQuickApi
   - Biwen.QuickApi.BaseQuickApiJustAsService`2
   - Biwen.QuickApi.BaseQuickApiWithoutRequest`1
@@ -353,6 +354,13 @@ references:
   name: Verb
   nameWithType: Verb
   fullName: Biwen.QuickApi.Verb
+- uid: Biwen.QuickApi.AutoInjectExtension
+  commentId: T:Biwen.QuickApi.AutoInjectExtension
+  isExternal: true
+  href: Biwen.QuickApi.AutoInjectExtension.html
+  name: AutoInjectExtension
+  nameWithType: AutoInjectExtension
+  fullName: Biwen.QuickApi.AutoInjectExtension
 - uid: Biwen.QuickApi
   commentId: N:Biwen.QuickApi
   isExternal: true

@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.WebApplicationBuilderExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -57,7 +57,7 @@ items:
   fullName: Biwen.QuickApi.WebApplicationBuilderExtensions.UseIf(Microsoft.AspNetCore.Builder.WebApplication, bool, System.Action<Microsoft.AspNetCore.Builder.WebApplication>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -99,7 +99,7 @@ items:
   fullName: Biwen.QuickApi.WebApplicationBuilderExtensions.UseIfElse(Microsoft.AspNetCore.Builder.WebApplication, bool, System.Action<Microsoft.AspNetCore.Builder.WebApplication>, System.Action<Microsoft.AspNetCore.Builder.WebApplication>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Extensions/WebApplicationBuilderExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

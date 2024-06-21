@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.ResourceMonitoring;
+using OpenTelemetry;
+using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
@@ -16,7 +18,7 @@ namespace Biwen.QuickApi.Telemetry
         {
 
             // OpenTelemetry
-            services.AddOpenTelemetry()
+            var openTelemetryBuilder = services.AddOpenTelemetry()
                 .ConfigureResource(resource =>
                 {
                     var env = services.BuildServiceProvider().GetRequiredService<IWebHostEnvironment>();
@@ -27,35 +29,34 @@ namespace Biwen.QuickApi.Telemetry
                     // Add ASP.NET Core Instrumentation
                     builder.AddAspNetCoreInstrumentation();
                     builder.AddHttpClientInstrumentation();
+
                     // Add Processor
-                    builder.AddMeter(Constant.ActivitySourceName);
+                    builder.AddMeter(Constant.OpenTelemetryActivitySourceName);
 
                     // Metrics provides by ASP.NET Core in .NET 8
                     builder.AddMeter("Microsoft.AspNetCore.Hosting");
                     builder.AddMeter("Microsoft.AspNetCore.Server.Kestrel");
 
-                    //builder.AddOtlpExporter(o =>
-                    //{
-                    //    o.Endpoint = new Uri("http://localhost:4317");
-                    //    o.Protocol = OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf;
-                    //    o.ExportProcessorType = OpenTelemetry.ExportProcessorType.Batch;
-                    //});
+                    //builder.AddConsoleExporter();//导出到控制台
+                    builder.AddPrometheusExporter();
 
-                    builder.AddConsoleExporter();
                 })
+                .WithLogging()
+
                 .WithTracing(tracing =>
                 {
                     tracing.AddAspNetCoreInstrumentation();
                     tracing.AddHttpClientInstrumentation();
-                    tracing.AddSource(Constant.ActivitySourceName);
 
-                    //tracing.AddOtlpExporter(o =>
-                    //{
-                    //    o.Endpoint = new Uri("http://localhost:4317");
-                    //});
+                    tracing.AddSource(Constant.OpenTelemetryActivitySourceName);
 
-                    tracing.AddConsoleExporter();
+                    //tracing.AddConsoleExporter()//导出到控制台
                 });
+
+
+            // UseOtlpExporter
+            openTelemetryBuilder.UseOtlpExporter();
+
 
 
             //性能监控
@@ -98,6 +99,9 @@ namespace Biwen.QuickApi.Telemetry
 
         public override void Configure(IApplicationBuilder app, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)
         {
+
+            routes.MapPrometheusScrapingEndpoint();
+
             //// Add Request Latency Middleware which will automatically call ExportAsync on all registered latency exporters.
             //app.UseRequestLatencyTelemetry();
             //// Add Request Checkpoint Middleware which will automatically call ExportAsync on all registered checkpoint exporters.

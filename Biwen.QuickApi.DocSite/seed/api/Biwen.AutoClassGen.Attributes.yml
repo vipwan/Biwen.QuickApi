@@ -11,6 +11,7 @@ items:
   - Biwen.AutoClassGen.Attributes.AutoGenAttribute
   - Biwen.AutoClassGen.Attributes.AutoInjectAttribute
   - Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
+  - Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute`1
   - Biwen.AutoClassGen.Attributes.ServiceLifetime
   langs:
   - csharp
@@ -140,6 +141,34 @@ references:
     name: AutoInjectAttribute
     isExternal: true
     href: Biwen.AutoClassGen.Attributes.AutoInjectAttribute-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute`1
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute`1
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute-1.html
+  name: AutoInjectKeyedAttribute<T>
+  nameWithType: AutoInjectKeyedAttribute<T>
+  fullName: Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute<T>
+  nameWithType.vb: AutoInjectKeyedAttribute(Of T)
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute(Of T)
+  name.vb: AutoInjectKeyedAttribute(Of T)
+  spec.csharp:
+  - uid: Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute`1
+    name: AutoInjectKeyedAttribute
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute`1
+    name: AutoInjectKeyedAttribute
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute-1.html
   - name: (
   - name: Of
   - name: " "

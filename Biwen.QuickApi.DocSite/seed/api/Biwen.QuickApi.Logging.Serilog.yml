@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Logging.Serilog
+  commentId: N:Biwen.QuickApi.Logging.Serilog
+  id: Biwen.QuickApi.Logging.Serilog
+  children:
+  - Biwen.QuickApi.Logging.Serilog.AutoInjectExtension
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Logging.Serilog
+  nameWithType: Biwen.QuickApi.Logging.Serilog
+  fullName: Biwen.QuickApi.Logging.Serilog
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Logging.Serilog
+references:
+- uid: Biwen.QuickApi.Logging.Serilog.AutoInjectExtension
+  commentId: T:Biwen.QuickApi.Logging.Serilog.AutoInjectExtension
+  isExternal: true
+  href: Biwen.QuickApi.Logging.Serilog.AutoInjectExtension.html
+  name: AutoInjectExtension
+  nameWithType: AutoInjectExtension
+  fullName: Biwen.QuickApi.Logging.Serilog.AutoInjectExtension

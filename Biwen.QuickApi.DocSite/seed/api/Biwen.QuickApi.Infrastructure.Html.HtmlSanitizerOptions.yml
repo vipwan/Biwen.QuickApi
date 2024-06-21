@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Infrastructure/Html/HtmlSanitizerOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/Html/HtmlSanitizerOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Html
@@ -44,7 +44,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions.HtmlSanitizerOptions()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Infrastructure/Html/HtmlSanitizerOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/Html/HtmlSanitizerOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Html
@@ -67,7 +67,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions.Configure
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Infrastructure/Html/HtmlSanitizerOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/Html/HtmlSanitizerOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Html

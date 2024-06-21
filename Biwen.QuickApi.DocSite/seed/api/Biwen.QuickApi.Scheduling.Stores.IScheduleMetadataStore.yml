@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
@@ -35,7 +35,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore.GetAllAsync()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67dfdf17ad080fc5fd327ffa2072b119908d182f/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Stores/IScheduleMetadataStore.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
