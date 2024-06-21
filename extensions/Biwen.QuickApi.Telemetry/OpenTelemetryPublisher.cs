@@ -5,7 +5,7 @@ using System.Diagnostics.Metrics;
 namespace Biwen.QuickApi.Telemetry
 {
     /// <summary>
-    /// 提供性能数据输出到控制台
+    /// 提供性能数据输出到OpenTelemetry
     /// </summary>
     internal class OpenTelemetryPublisher : IResourceUtilizationPublisher
     {

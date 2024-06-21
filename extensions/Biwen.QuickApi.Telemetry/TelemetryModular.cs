@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.ResourceMonitoring;
 using OpenTelemetry;
@@ -12,8 +13,17 @@ using OpenTelemetry.Trace;
 
 namespace Biwen.QuickApi.Telemetry
 {
-    internal class TelemetryModular : ModularBase
+    internal class TelemetryModular(IConfiguration configuration) : ModularBase
     {
+        /// <summary>
+        /// 根据配置项判断是否启用
+        /// </summary>
+        public override Func<bool> IsEnable => () =>
+        {
+            var flag = configuration.GetValue<bool?>($"{TelemetryOptions.Key}:{nameof(TelemetryOptions.Enable)}");
+            return flag is true;
+        };
+
         public override void ConfigureServices(IServiceCollection services)
         {
 
@@ -64,7 +74,8 @@ namespace Biwen.QuickApi.Telemetry
             {
                 o.ConfigureMonitor(monitor =>
                 {
-                    monitor.SamplingInterval = TimeSpan.FromSeconds(15d);
+                    var SamplingInterval = configuration.GetValue<double?>($"{TelemetryOptions.Key}:{nameof(TelemetryOptions.SamplingInterval)}");
+                    monitor.SamplingInterval = TimeSpan.FromSeconds(SamplingInterval ?? 15d);
                 });
 
                 //添加SpectreConsolePublisher
