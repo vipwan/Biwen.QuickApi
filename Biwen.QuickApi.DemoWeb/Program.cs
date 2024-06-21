@@ -18,9 +18,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Logging.ClearProviders();
 
 
-builder.Logging.EnableRedaction();
-builder.Logging.EnableEnrichment();
-
 //使用配置文件Serilog注册
 builder.Host.UseSerilogFromConfiguration();
 
