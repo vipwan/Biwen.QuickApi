@@ -10,6 +10,7 @@
         /// <returns></returns>
         internal static IServiceCollection AddEvent(this IServiceCollection services)
         {
+            //事件订阅者,不需要Public.
             //注册EventHanders
             foreach (var subscriberType in EventSubscribers)
             {
@@ -42,7 +43,7 @@
             {
                 lock (_lock)
                     return _eventSubscribers ??= ASS.InAllRequiredAssemblies.Where(x =>
-                    !x.IsAbstract && x.IsPublic && x.IsClass && IsToGenericInterface(x, InterfaceEventSubscriber));
+                    !x.IsAbstract && x.IsClass && IsToGenericInterface(x, InterfaceEventSubscriber));
             }
         }
     }

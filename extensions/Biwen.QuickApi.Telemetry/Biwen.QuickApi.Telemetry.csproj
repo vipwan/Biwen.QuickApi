@@ -8,9 +8,11 @@
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	</PropertyGroup>
 
+	<Import Project="..\..\Version.props" />
+
 	<ItemGroup>
 		<!--<PackageReference Include="Microsoft.AspNetCore.Diagnostics.Middleware" Version="8.6.0" />-->
-		<PackageReference Include="Microsoft.Extensions.Diagnostics.ResourceMonitoring" Version="8.6.0" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.ResourceMonitoring" Version="$(MicrosoftExtensionsVer)" />
 		<PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.9.0" />
 		<PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.9.0" />
 		<PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.9.0-beta.1" />

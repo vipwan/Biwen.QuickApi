@@ -64,7 +64,7 @@ namespace Biwen.QuickApi.Scheduling
             {
                 lock (_lock)
                     return _scheduleTasks ??= ASS.InAllRequiredAssemblies.ThatInherit<IScheduleTask>()
-                        .Where(x => !x.IsAbstract && x.IsPublic && x.IsClass);
+                        .Where(x => !x.IsAbstract && x.IsClass);
             }
         }
     }

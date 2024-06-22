@@ -7,4 +7,11 @@
 		<FileVersion>2.0.0</FileVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Label="Package versions used in this repository">
+		<FluentValidationAspNetCoreVer>11.3.0</FluentValidationAspNetCoreVer>
+		<BiwenAutoClassGenVer>1.3.3</BiwenAutoClassGenVer>
+		<MicrosoftExtensionsVer>8.6.0</MicrosoftExtensionsVer>
+	</PropertyGroup>
+
+
 </Project>

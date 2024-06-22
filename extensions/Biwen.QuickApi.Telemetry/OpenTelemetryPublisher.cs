@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Diagnostics.ResourceMonitoring;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
+using System.Threading.Channels;
 
 namespace Biwen.QuickApi.Telemetry
 {
@@ -9,32 +10,19 @@ namespace Biwen.QuickApi.Telemetry
     /// </summary>
     internal class OpenTelemetryPublisher : IResourceUtilizationPublisher
     {
+        /// <summary>
+        /// ActivitySource
+        /// </summary>
+        static readonly ActivitySource MyActivitySource = new ActivitySource(Constant.OpenTelemetryActivitySourceName);
+        //将数据输出到OpenTelemetry:
+        static readonly Meter meter = new Meter(Constant.OpenTelemetryActivitySourceName, Constant.OpenTelemetryVersion);
+
+        public static readonly Channel<ResourceUtilization> ResourceUtilizationChannel = Channel.CreateUnbounded<ResourceUtilization>();
+
+
         public ValueTask PublishAsync(ResourceUtilization utilization, CancellationToken cancellationToken)
         {
-
-            //将数据输出到OpenTelemetry:
-            var meter = new Meter(Constant.OpenTelemetryActivitySourceName, Constant.OpenTelemetryVersion);
-
-            // Create a counter
-            var counter = meter.CreateCounter<long>("InvokedCount", "counter", description: "性能监控推送次数");
-
-            meter.CreateObservableGauge(Constant.CpuUsedPercentage, () => utilization.CpuUsedPercentage,
-                "gauge", "CPU使用百分比%");
-            meter.CreateObservableGauge(Constant.MemoryUsedInBytes, () => (double)utilization.MemoryUsedInBytes,
-                "gauge", "内存使用量bytes");
-            meter.CreateObservableGauge(Constant.MemoryUsedPercentage, () => utilization.MemoryUsedPercentage,
-                "gauge", "内存使用百分比%");
-            meter.CreateObservableGauge(Constant.MaximumMemoryInBytes, () => (double)utilization.SystemResources.MaximumMemoryInBytes,
-                "gauge", "服务器最大内存bytes");
-
-            using var activitySource1 = new ActivitySource(Constant.OpenTelemetryActivitySourceName);
-
-            using (var activity = activitySource1.StartActivity("Activity1"))
-            {
-                counter.Add(1);
-                activity?.Start();
-            }
-
+            ResourceUtilizationChannel.Writer.TryWrite(utilization);
             return default;
         }
     }

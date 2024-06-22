@@ -1,4 +1,5 @@
 ﻿using Biwen.QuickApi.Abstractions.Modular;
+using Biwen.QuickApi.Telemetry.Implementation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Routing;
@@ -32,7 +33,7 @@ namespace Biwen.QuickApi.Telemetry
                 .ConfigureResource(resource =>
                 {
                     var env = services.BuildServiceProvider().GetRequiredService<IWebHostEnvironment>();
-                    resource.AddService(env.ApplicationName);
+                    resource.AddService(env.ApplicationName, serviceVersion: Constant.OpenTelemetryVersion);
                 })
                 .WithMetrics(builder =>
                 {
@@ -47,6 +48,8 @@ namespace Biwen.QuickApi.Telemetry
                     builder.AddMeter("Microsoft.AspNetCore.Hosting");
                     builder.AddMeter("Microsoft.AspNetCore.Server.Kestrel");
 
+                    builder.AddMeter(SchedulingInstrumentation.SourceName);
+
                     //builder.AddConsoleExporter();//导出到控制台
                     builder.AddPrometheusExporter();
 
@@ -59,6 +62,7 @@ namespace Biwen.QuickApi.Telemetry
                     tracing.AddHttpClientInstrumentation();
 
                     tracing.AddSource(Constant.OpenTelemetryActivitySourceName);
+                    tracing.AddSource(SchedulingInstrumentation.SourceName);
 
                     //tracing.AddConsoleExporter()//导出到控制台
                 });
@@ -66,8 +70,6 @@ namespace Biwen.QuickApi.Telemetry
 
             // UseOtlpExporter
             openTelemetryBuilder.UseOtlpExporter();
-
-
 
             //性能监控
             services.AddResourceMonitoring(o =>
@@ -86,6 +88,8 @@ namespace Biwen.QuickApi.Telemetry
 
             });
 
+            //消费性能监控数据到OpenTelemetry
+            services.AddActivatedSingleton<CoreInstrumentation>();
 
             //// 延迟监控
             //services.AddLatencyContext();
