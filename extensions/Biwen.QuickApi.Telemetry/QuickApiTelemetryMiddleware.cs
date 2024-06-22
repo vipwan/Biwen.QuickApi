@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.Latency;
-using System.Diagnostics;
 
 namespace Biwen.QuickApi.Telemetry
 {
+    /// <summary>
+    /// QuickApi性能监控中间件
+    /// </summary>
+    [Obsolete("OpenTelemetry.Instrumentation.AspNetCore库已经集成,无需二次开发", false)]
     internal class QuickApiTelemetryMiddleware
     {
         private readonly RequestDelegate _next;
