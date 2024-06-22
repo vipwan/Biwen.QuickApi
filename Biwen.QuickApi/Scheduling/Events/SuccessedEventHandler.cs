@@ -11,7 +11,9 @@ namespace Biwen.QuickApi.Scheduling.Events
     {
         public virtual Task HandleAsync(TaskSuccessedEvent @event, CancellationToken ct)
         {
+#if DEBUG
             logger.LogDebug($"[{@event.EventTime}] ScheduleTask:{@event.ScheduleTask.GetType().FullName} Successed!");
+#endif
             return Task.CompletedTask;
         }
     }
