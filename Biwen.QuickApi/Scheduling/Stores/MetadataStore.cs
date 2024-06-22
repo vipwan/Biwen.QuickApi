@@ -8,7 +8,7 @@
         /// <summary>
         /// 特性中的metadatas缓存起来
         /// </summary>
-        private static List<ScheduleTaskMetadata> _cachedMetatas = [];
+        private static ScheduleTaskMetadata[] _cachedMetatas = [];
 
         public MetadataStore(IServiceProvider serviceProvider)
         {
@@ -28,13 +28,13 @@
                     var metadatas = taskType.GetCustomAttributes<ScheduleTaskAttribute>();
                     if (metadatas.Any())
                     {
-                        _cachedMetatas.AddRange(metadatas.Select(metadata =>
-                        new ScheduleTaskMetadata(taskType, metadata.Cron)
-                        {
-                            Description = metadata.Description,
-                            IsAsync = metadata.IsAsync,
-                            IsStartOnInit = metadata.IsStartOnInit,
-                        }));
+                        _cachedMetatas = [.._cachedMetatas, .. metadatas.Select(metadata =>
+                            new ScheduleTaskMetadata(taskType, metadata.Cron)
+                            {
+                                Description = metadata.Description,
+                                IsAsync = metadata.IsAsync,
+                                IsStartOnInit = metadata.IsStartOnInit,
+                        })];
                     }
                 }
             }
@@ -42,7 +42,7 @@
 
         public Task<ScheduleTaskMetadata[]> GetAllAsync()
         {
-            return Task.FromResult(_cachedMetatas.ToArray());
+            return Task.FromResult(_cachedMetatas);
         }
     }
 }
