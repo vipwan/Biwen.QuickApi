@@ -1,5 +1,6 @@
 ﻿using Biwen.QuickApi.Scheduling.Stores;
 using Biwen.QuickApi.Scheduling.Stores.ConfigurationStore;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Biwen.QuickApi.Scheduling
 {
@@ -16,7 +17,8 @@ namespace Biwen.QuickApi.Scheduling
             foreach (var task in ScheduleTasks)
             {
                 services.AddTransient(task);
-                services.AddTransient(typeof(IScheduleTask), task);
+                services.TryAddEnumerable(ServiceDescriptor.Transient(typeof(IScheduleTask), task));
+
             }
 
             //调度器

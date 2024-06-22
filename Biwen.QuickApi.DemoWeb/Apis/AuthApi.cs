@@ -174,7 +174,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
         public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
         {
             await Task.CompletedTask;
-            return Results.Content("无效登录的请求!");
+            return Results.Content("可以匿名的访问!");
         }
         public override RouteHandlerBuilder HandlerBuilder(RouteHandlerBuilder builder)
         {

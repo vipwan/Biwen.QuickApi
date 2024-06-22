@@ -13,6 +13,8 @@ using Microsoft.Extensions.WebEncoders;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
 
+using ServiceLifetime = Microsoft.Extensions.DependencyInjection.ServiceLifetime;
+
 namespace Biwen.QuickApi
 {
     [SuppressType]
@@ -94,7 +96,7 @@ namespace Biwen.QuickApi
                 {
                     modular.ConfigureServices(services);
                     //DI
-                    services.AddSingleton(typeof(IStartup), modularType);
+                    services.TryAddEnumerable(ServiceDescriptor.Singleton(typeof(IStartup), modularType));
                 }
             }
             return services;
@@ -108,7 +110,8 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public static IServiceCollection AddQuickApiGroupRouteBuilder<T>(this IServiceCollection services) where T : class, IQuickApiGroupRouteBuilder
         {
-            services.AddSingleton<IQuickApiGroupRouteBuilder, T>();
+            //services.AddSingleton<IQuickApiGroupRouteBuilder, T>();
+            services.TryAddEnumerable(ServiceDescriptor.Singleton<IQuickApiGroupRouteBuilder, T>());
             return services;
         }
 
