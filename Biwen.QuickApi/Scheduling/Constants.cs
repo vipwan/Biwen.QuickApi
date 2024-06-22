@@ -63,5 +63,17 @@
         /// Cron表达式,每年(不推荐使用)
         /// </summary>
         public const string CronEveryYear = "0 0 1 1 *";
+
+        /// <summary>
+        /// 对秒级别的支持.自定义格式,且只支持10~59秒
+        /// </summary>
+        public const string SecondFormat = "{0}:SECONDS";
+
+        public static string CronForSeconds(this int seconds) => seconds switch
+        {
+            (>= 10 and < 60) => string.Format(SecondFormat, seconds),
+            _ => throw new ArgumentException("seconds must be between 10 and 59", nameof(seconds))
+        };
+
     }
 }

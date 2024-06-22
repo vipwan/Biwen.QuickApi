@@ -11,19 +11,10 @@ namespace Biwen.QuickApi.Scheduling
     /// </summary>
     internal class ScheduleBackgroundService : BackgroundService
     {
-
-        private static readonly TimeSpan _pollingTime
-#if DEBUG
-          //轮询20s 测试环境下，方便测试。
-          = TimeSpan.FromSeconds(20);
-#endif
-#if !DEBUG
-         //轮询60s 正式环境下，考虑性能轮询时间延长到60s
-         = TimeSpan.FromSeconds(60);
-#endif
-
-        //延时10s.
-        private static readonly TimeSpan _minIdleTime = TimeSpan.FromSeconds(10);
+        // Init the delay first to be also waited on exception.
+        private static readonly TimeSpan _pollingTime = TimeSpan.FromSeconds(5);
+        //10秒轮询,意味着最小的秒级支持10秒+
+        private static readonly TimeSpan _minIdleTime = TimeSpan.FromSeconds(5);
 
         private readonly ILogger<ScheduleBackgroundService> _logger;
         private readonly IServiceProvider _serviceProvider;
