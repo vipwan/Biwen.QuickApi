@@ -5,6 +5,7 @@ using Biwen.QuickApi.FeatureManagement;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Hybrid;
+using Microsoft.Extensions.Options;
 using Microsoft.FeatureManagement.Mvc;
 using Constants = Biwen.QuickApi.FeatureManagement.Constants;
 
@@ -33,6 +34,13 @@ namespace Biwen.QuickApi.DemoWeb
                 //};
             });
 
+            //在前置模块配置DemoOptions,DemoModular就中可以直接注入
+            services.AddOptions<DemoOptions>().Configure(c =>
+            {
+                c.Name += "!!!!";
+                c.Enable = true;
+            });
+
         }
         public override void Configure(IApplicationBuilder app, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)
         {
@@ -45,15 +53,21 @@ namespace Biwen.QuickApi.DemoWeb
     /// </summary>
     /// <param name="environment"></param>
     [PreModular<PreModular1>]
-    public class DemoModular(IHostEnvironment environment) : ModularBase
+    public class DemoModular(IHostEnvironment environment, IOptions<DemoOptions> options) : ModularBase
     {
         public override int Order => Constants.Order + 1;
 
+        /// <summary>
+        /// 请注意,如果需要在模块中使用配置,请使用构造函数注入,且需要在前置模块中配置!
+        /// 当然你也可以直接注入IConfiguration获取.
+        /// </summary>
+        public DemoOptions Options { get; } = options.Value;
 
         /// <summary>
         /// 测试模块仅用于开发测试
         /// </summary>
-        public override Func<bool> IsEnable => () => environment.IsDevelopment();
+        public override Func<bool> IsEnable => () => options.Value.Enable; //environment.IsDevelopment();
+
 
         public override void ConfigureServices(IServiceCollection services)
         {
@@ -73,7 +87,6 @@ namespace Biwen.QuickApi.DemoWeb
             //services.AddScoped<HelloService>();
 
             services.AddAutoInject();
-
 
 
             // keyed services
@@ -182,7 +195,20 @@ namespace Biwen.QuickApi.DemoWeb
             {
                 routes.MapGroup("account").MapIdentityApi<IdentityUser>();
             }
+
+
+            routes.MapGet("/hello-demo", (IOptions<DemoOptions> options) => options.Value.Name);
         }
 
     }
+
+
+
+    public class DemoOptions
+    {
+        public string Name { get; set; } = "Demo";
+
+        public bool Enable { get; set; } = true;
+    }
+
 }

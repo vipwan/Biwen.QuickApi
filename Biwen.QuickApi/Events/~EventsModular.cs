@@ -1,9 +1,9 @@
 ﻿namespace Biwen.QuickApi.Events
 {
     [CoreModular]
-    internal class EventsModular(IServiceProvider serviceProvider) : ModularBase
+    internal class EventsModular(IOptions<BiwenQuickApiOptions> options) : ModularBase
     {
-        public override Func<bool> IsEnable => () => serviceProvider.GetRequiredService<IOptions<BiwenQuickApiOptions>>().Value.EnablePubSub;
+        public override Func<bool> IsEnable => () => options.Value.EnablePubSub;
 
         public override void ConfigureServices(IServiceCollection services)
         {

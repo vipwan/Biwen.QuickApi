@@ -141,6 +141,11 @@ namespace Biwen.QuickApi
         {
             lock (_lock)
             {
+                if (!modular.IsEnable())
+                {
+                    return;
+                }
+
                 var modularType = modular.GetType();
 
                 if (configedTypes.Contains(modularType))
