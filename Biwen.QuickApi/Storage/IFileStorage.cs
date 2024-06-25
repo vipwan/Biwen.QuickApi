@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 namespace Biwen.QuickApi.Storage
 {
+#pragma warning disable GEN031 // 使用[AutoGen]自动生成
     public interface IFileStorage : IHaveSerializer, IDisposable
     {
         [Obsolete($"Use {nameof(GetFileStreamAsync)} with {nameof(StreamMode)} instead to define read or write behaviour of stream")]
@@ -26,6 +27,7 @@ namespace Biwen.QuickApi.Storage
         Task<int> DeleteFilesAsync(string? searchPattern = null, CancellationToken cancellation = default);
         Task<PagedFileListResult> GetPagedFileListAsync(int pageSize = 100, string? searchPattern = null, CancellationToken cancellationToken = default);
     }
+#pragma warning restore GEN031 // 使用[AutoGen]自动生成
 
 
     public interface IHasNextPageFunc
