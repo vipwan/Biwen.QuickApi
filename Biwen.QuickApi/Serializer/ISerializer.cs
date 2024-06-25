@@ -2,19 +2,38 @@
 
 namespace Biwen.QuickApi.Serializer;
 
+/// <summary>
+/// 序列化器
+/// </summary>
 public interface ISerializer
 {
+    /// <summary>
+    /// 反序列化
+    /// </summary>
+    /// <param name="data"></param>
+    /// <param name="objectType"></param>
+    /// <returns></returns>
     object Deserialize(Stream data, Type objectType);
+    /// <summary>
+    /// 序列化
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="output"></param>
     void Serialize(object value, Stream output);
 }
 
+#pragma warning disable GEN031 // 使用[AutoGen]自动生成
 public interface ITextSerializer : ISerializer { }
+#pragma warning restore GEN031 // 使用[AutoGen]自动生成
 
 /// <summary>
 /// Default serializer STJ
 /// </summary>
 public static class DefaultSerializer
 {
+    /// <summary>
+    /// 默认序列化器
+    /// </summary>
     public static ISerializer Instance { get; set; } = new SystemTextJsonSerializer();
 }
 

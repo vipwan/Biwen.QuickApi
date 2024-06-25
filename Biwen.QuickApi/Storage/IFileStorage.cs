@@ -5,8 +5,14 @@ using System.Diagnostics;
 namespace Biwen.QuickApi.Storage
 {
 #pragma warning disable GEN031 // 使用[AutoGen]自动生成
-    public interface IFileStorage : IHaveSerializer, IDisposable
+    public interface IFileStorage : IDisposable
     {
+        /// <summary>
+        /// 序列化器
+        /// </summary>
+        ISerializer Serializer { get; }
+
+
         [Obsolete($"Use {nameof(GetFileStreamAsync)} with {nameof(StreamMode)} instead to define read or write behaviour of stream")]
         Task<Stream> GetFileStreamAsync(string path, CancellationToken cancellationToken = default);
 
