@@ -11,7 +11,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.6" />
 		<PackageReference Include="Microsoft.Extensions.Caching.Hybrid" Version="9.0.0-preview.5.24306.11" />
-		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.8.0" />
+		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.8.1" />
 	</ItemGroup>
 
 	<ItemGroup>
