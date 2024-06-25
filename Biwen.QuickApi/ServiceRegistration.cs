@@ -1,6 +1,6 @@
 ﻿using Biwen.QuickApi.Http;
 using Biwen.QuickApi.OpenApi;
-
+using Biwen.QuickApi.Serializer;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Builder;
@@ -79,6 +79,9 @@ namespace Biwen.QuickApi
             /// </summary>
             //AddProblemDetails
             services.AddProblemDetails();
+
+            //添加序列化器
+            services.AddSystemTextJsonSerializer();
 
             //注册模块
             services.AddModular();

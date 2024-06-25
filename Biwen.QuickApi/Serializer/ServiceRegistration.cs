@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.Serializer
+﻿using Microsoft.Extensions.DependencyInjection.Extensions;
+
+namespace Biwen.QuickApi.Serializer
 {
     [SuppressType]
     public static class ServiceRegistration
@@ -12,7 +14,7 @@
         /// <returns></returns>
         public static IServiceCollection AddSerializer<T>(this IServiceCollection services) where T : class, ISerializer
         {
-            services.AddSingleton<ISerializer, T>();
+            services.TryAddSingleton<ISerializer, T>();
             return services;
         }
 
