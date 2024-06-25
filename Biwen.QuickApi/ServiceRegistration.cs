@@ -486,6 +486,10 @@ namespace Biwen.QuickApi
                 //默认使用ProblemDetails
                 throw;
             }
+            finally
+            {
+                tokenSource.Dispose();
+            }
 
             /// <summary>
             /// 内部返回的Result

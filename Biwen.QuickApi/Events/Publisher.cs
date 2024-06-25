@@ -14,8 +14,7 @@ namespace Biwen.QuickApi.Events
             using var scope = serviceProvider.CreateAsyncScope();
             var subscribers = scope.ServiceProvider.GetServices<IEventSubscriber<T>>();
             //无订阅者直接返回
-            if (subscribers is null) return;
-            if (subscribers.Any() == false) return;
+            if (subscribers is null || !subscribers.Any()) return;
 
             if (SubscriberMetadatas.GetOrAdd(typeof(T), type =>
               {

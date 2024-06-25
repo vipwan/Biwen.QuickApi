@@ -27,19 +27,22 @@ namespace Biwen.QuickApi.Infrastructure
         private readonly IHttpContextAccessor? httpContextAccessor;
         private readonly IAsyncContext<T> _asyncContext;
 
-        public T? Get()
-        {
-            return _asyncContext.Get();
-        }
+        /// <summary>
+        /// Get
+        /// </summary>
+        /// <returns></returns>
+        public T? Get() => _asyncContext.Get();
+        /// <summary>
+        /// TryGet
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public bool TryGet(out T? value) => _asyncContext.TryGet(out value);
+        /// <summary>
+        /// Set
+        /// </summary>
+        /// <param name="value"></param>
+        public void Set(T? value) => _asyncContext.Set(value);
 
-        public bool TryGet(out T? value)
-        {
-            return _asyncContext.TryGet(out value);
-        }
-
-        public void Set(T? value)
-        {
-            _asyncContext.Set(value);
-        }
     }
 }
