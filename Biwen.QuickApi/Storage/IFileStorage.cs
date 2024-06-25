@@ -94,7 +94,7 @@ namespace Biwen.QuickApi.Storage
             {
                 Files = result.Files;
                 HasMore = result.HasMore;
-                ((IHasNextPageFunc)this).NextPageFunc = result.NextPageFunc;
+                ((IHasNextPageFunc)this).NextPageFunc = result.NextPageFunc!;
             }
             else
             {

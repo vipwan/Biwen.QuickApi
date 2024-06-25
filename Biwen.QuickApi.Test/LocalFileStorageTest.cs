@@ -13,14 +13,11 @@ namespace Biwen.QuickApi.Test
         {
             _output = testOutput;
 
-            var path = "E:\\Test";
+            var path = "E:\\Test";//请注意这里的物理路径根据实际情况修改
             var service = new ServiceCollection();
             service.AddLogging();
-            service.AddSingleton<ISerializer, SystemTextJsonSerializer>();
-            service.AddKeyedSingleton<IFileStorage>("local", (sp, _) =>
-            {
-                return new LocalFileStorage(path, sp);
-            });
+            service.AddSystemTextJsonSerializer();
+            service.AddKeyedLocalFileStorage("local", path);
             //local
             _storage = service.BuildServiceProvider().GetRequiredKeyedService<IFileStorage>("local");
         }
@@ -95,6 +92,48 @@ namespace Biwen.QuickApi.Test
             //最后删除文件
             await _storage.DeleteFilesAsync($"test-{random}-rename.json");
 
+        }
+
+        [Fact]
+        public async Task GetPagedFileListTest()
+        {
+            var random = Random.Shared.Next(1000, 9999);
+            var random2 = Random.Shared.Next(10000, 10000);
+            //创建文件
+            await _storage.SaveFileAsync($"test-{random}.json", "hello world");
+            await _storage.SaveFileAsync($"test-{random2}.json", "hello world");
+
+            var list = await _storage.GetPagedFileListAsync(1);
+            Assert.NotNull(list);
+            Assert.True(list.Files.Count > 0);
+            //打印第一页文件信息
+            foreach (var file in list.Files)
+            {
+                _output.WriteLine($"FileName:{file.Path}");
+                _output.WriteLine($"Length:{file.Size}");
+                _output.WriteLine($"Created:{file.Created}");
+                _output.WriteLine($"Modified:{file.Modified}");
+            }
+
+            _output.WriteLine(Environment.NewLine);
+
+            //还有更多
+            Assert.True(list.HasMore);
+
+            var loadNextPage = await list.NextPageAsync();
+            Assert.True(loadNextPage);
+            //打印第二页文件信息
+            foreach (var file in list.Files)
+            {
+                _output.WriteLine($"FileName:{file.Path}");
+                _output.WriteLine($"Length:{file.Size}");
+                _output.WriteLine($"Created:{file.Created}");
+                _output.WriteLine($"Modified:{file.Modified}");
+            }
+
+            //最后删除文件
+            await _storage.DeleteFilesAsync($"test-{random}.json");
+            await _storage.DeleteFilesAsync($"test-{random2}.json");
         }
 
     }
