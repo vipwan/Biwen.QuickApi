@@ -40,7 +40,7 @@ namespace Biwen.QuickApi.Storage
         public bool Success { get; set; }
         public bool HasMore { get; set; }
         public IReadOnlyCollection<FileSpec> Files { get; set; } = null!;
-        public Func<PagedFileListResult, Task<NextPageResult>> NextPageFunc { get; set; } = null!;
+        public Func<PagedFileListResult, Task<NextPageResult>>? NextPageFunc { get; set; }
     }
 
     public class PagedFileListResult : IHasNextPageFunc
@@ -101,6 +101,9 @@ namespace Biwen.QuickApi.Storage
         }
     }
 
+    /// <summary>
+    /// 文件信息
+    /// </summary>
     [DebuggerDisplay("Path = {Path}, Created = {Created}, Modified = {Modified}, Size = {Size} bytes")]
     public class FileSpec
     {

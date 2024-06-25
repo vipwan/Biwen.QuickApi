@@ -3,14 +3,23 @@ using System.Text;
 
 namespace Biwen.QuickApi.Storage
 {
-
+    /// <summary>
+    /// 文件存储扩展方法
+    /// </summary>
     public static class FileStorageExtensions
     {
-
+        /// <summary>
+        /// 存储文件,使用内部序列化器
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="storage"></param>
+        /// <param name="path"></param>
+        /// <param name="data"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public static Task<bool> SaveObjectAsync<T>(this IFileStorage storage, string path, T data, CancellationToken cancellationToken = default)
         {
-            if (string.IsNullOrEmpty(path))
-                throw new ArgumentNullException(nameof(path));
+            ArgumentNullException.ThrowIfNullOrEmpty(path);
 
             var bytes = storage.Serializer.SerializeToBytes(data);
             return storage.SaveFileAsync(path, new MemoryStream(bytes), cancellationToken);
@@ -18,8 +27,7 @@ namespace Biwen.QuickApi.Storage
 
         public static async Task<T?> GetObjectAsync<T>(this IFileStorage storage, string path, CancellationToken cancellationToken = default)
         {
-            if (string.IsNullOrEmpty(path))
-                throw new ArgumentNullException(nameof(path));
+            ArgumentNullException.ThrowIfNullOrEmpty(path);
 
 #pragma warning disable CS0618 // Type or member is obsolete
             using var stream = await storage.GetFileStreamAsync(path, cancellationToken);
@@ -30,6 +38,12 @@ namespace Biwen.QuickApi.Storage
             return default;
         }
 
+        /// <summary>
+        /// 删除文件
+        /// </summary>
+        /// <param name="storage"></param>
+        /// <param name="files"></param>
+        /// <returns></returns>
         public static async Task DeleteFilesAsync(this IFileStorage storage, IEnumerable<FileSpec> files)
         {
             ArgumentNullException.ThrowIfNull(files);
@@ -38,10 +52,15 @@ namespace Biwen.QuickApi.Storage
                 await storage.DeleteFileAsync(file.Path);
         }
 
+        /// <summary>
+        /// 获取文本文件内容
+        /// </summary>
+        /// <param name="storage"></param>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public static async Task<string?> GetFileContentsAsync(this IFileStorage storage, string path)
         {
-            if (string.IsNullOrEmpty(path))
-                throw new ArgumentNullException(nameof(path));
+            ArgumentNullException.ThrowIfNullOrEmpty(path);
 
 #pragma warning disable CS0618 // Type or member is obsolete
             using var stream = await storage.GetFileStreamAsync(path);
@@ -54,8 +73,7 @@ namespace Biwen.QuickApi.Storage
 
         public static async Task<byte[]> GetFileContentsRawAsync(this IFileStorage storage, string path)
         {
-            if (string.IsNullOrEmpty(path))
-                throw new ArgumentNullException(nameof(path));
+            ArgumentNullException.ThrowIfNullOrEmpty(path);
 
 #pragma warning disable CS0618 // Type or member is obsolete
             using var stream = await storage.GetFileStreamAsync(path);
@@ -74,10 +92,16 @@ namespace Biwen.QuickApi.Storage
             return ms.ToArray();
         }
 
+        /// <summary>
+        /// 保存文件
+        /// </summary>
+        /// <param name="storage"></param>
+        /// <param name="path"></param>
+        /// <param name="contents"></param>
+        /// <returns></returns>
         public static Task<bool> SaveFileAsync(this IFileStorage storage, string path, string contents)
         {
-            if (string.IsNullOrEmpty(path))
-                throw new ArgumentNullException(nameof(path));
+            ArgumentNullException.ThrowIfNullOrEmpty(path);
 
             return storage.SaveFileAsync(path, new MemoryStream(Encoding.UTF8.GetBytes(contents ?? String.Empty)));
         }
