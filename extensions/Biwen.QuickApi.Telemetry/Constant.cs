@@ -6,6 +6,11 @@ namespace Biwen.QuickApi.Telemetry
     public static class Constant
     {
         /// <summary>
+        /// 前缀
+        /// </summary>
+        internal const string Prefix = "biwen_quickapi_";
+
+        /// <summary>
         /// The assembly.
         /// </summary>
         internal static readonly Assembly Assembly = typeof(TelemetryModular).Assembly;

@@ -31,7 +31,7 @@ namespace Biwen.QuickApi.Telemetry.Implementation
                 activity.AddTag("TaskId", @event.ScheduleTask.GetType().FullName);
                 activity.AddTag("EventTime", @event.EventTime);
 
-                meter.CreateCounter<long>("TaskSuccessedCount", "counter", description: "任务成功次数").Add(1);
+                meter.CreateCounter<long>($"{Constant.Prefix}TaskSuccessedCount", "counter", description: "任务成功次数").Add(1);
             }
             return Task.CompletedTask;
 
@@ -45,7 +45,7 @@ namespace Biwen.QuickApi.Telemetry.Implementation
                 activity.AddTag("EventTime", @event.EventTime);
                 activity.AddTag("Exception", @event.Exception);
 
-                meter.CreateCounter<long>("TaskFailedCount", "counter", description: "任务失败次数").Add(1);
+                meter.CreateCounter<long>($"{Constant.Prefix}TaskFailedCount", "counter", description: "任务失败次数").Add(1);
             }
             return Task.CompletedTask;
         }
@@ -57,7 +57,7 @@ namespace Biwen.QuickApi.Telemetry.Implementation
                 activity.AddTag("TaskId", @event.ScheduleTask.GetType().FullName);
                 activity.AddTag("EventTime", @event.EventTime);
 
-                meter.CreateCounter<long>("TaskStartedCount", "counter", description: "任务启动次数").Add(1);
+                meter.CreateCounter<long>($"{Constant.Prefix}TaskStartedCount", "counter", description: "任务启动次数").Add(1);
             }
             return Task.CompletedTask;
         }
