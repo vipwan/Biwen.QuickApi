@@ -13,7 +13,7 @@ namespace Biwen.QuickApi.Storage
         /// <param name="StoragePath">存储文件夹路径</param>
         /// <param name="serviceProvider">sp</param>
         /// <exception cref="QuickApiExcetion"></exception>
-        public LocalFileStorage(string StoragePath, IServiceProvider serviceProvider)
+        public LocalFileStorage(IServiceProvider serviceProvider, string StoragePath)
         {
             ArgumentNullException.ThrowIfNullOrEmpty(StoragePath);
 

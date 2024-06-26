@@ -17,9 +17,10 @@ namespace Biwen.QuickApi.Storage
             ArgumentNullException.ThrowIfNullOrEmpty(key);
 
             services.TryAddSingleton<ISerializer, SystemTextJsonSerializer>();
-            services.AddKeyedSingleton<IFileStorage>(key, (sp, _) =>
+
+            services.TryAddKeyedSingleton<IFileStorage>(key, (sp, _) =>
             {
-                return new LocalFileStorage(path, sp);
+                return new LocalFileStorage(sp, path);
             });
 
             //add factory

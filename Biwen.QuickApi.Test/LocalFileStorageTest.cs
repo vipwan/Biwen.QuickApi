@@ -136,5 +136,30 @@ namespace Biwen.QuickApi.Test
             await _storage.DeleteFilesAsync($"test-{random2}.json");
         }
 
+
+        [Fact]
+        public Task DiTest()
+        {
+            var services = new ServiceCollection();
+            services.AddLogging();
+
+            services.AddKeyedLocalFileStorage("local", "E:\\Test");
+            services.AddKeyedLocalFileStorage("local2", "E:\\Test");
+            services.AddKeyedLocalFileStorage("local2", "E:\\Test");//不会注入
+
+            var provider = services.BuildServiceProvider();
+            var storage = provider.GetRequiredKeyedService<IFileStorage>("local");
+            var storage2 = provider.GetRequiredKeyedService<IFileStorage>("local2");
+            Assert.NotNull(storage);
+            Assert.NotNull(storage2);
+
+            //重名只能注入一个
+            var all = services.Where(x => x.IsKeyedService && x.ServiceType == typeof(IFileStorage));
+            Assert.Equal(2, all.Count());
+
+            return Task.CompletedTask;
+
+        }
+
     }
 }

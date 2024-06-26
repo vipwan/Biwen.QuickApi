@@ -23,7 +23,7 @@ namespace Biwen.QuickApi.Storage.AliyunOss
             //    x.ConnectionString = connectionString;
             //});
 
-            services.AddKeyedSingleton<IFileStorage>(key, (sp, _) =>
+            services.TryAddKeyedSingleton<IFileStorage>(key, (sp, _) =>
             {
                 return new AliyunOssStorage(sp, connectionString);
             });
