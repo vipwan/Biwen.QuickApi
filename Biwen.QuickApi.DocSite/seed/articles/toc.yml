@@ -11,6 +11,10 @@
   href: DTO.md
 - name: 缓存服务
   href: Caching.md
+- name: 文件存储
+  href: FileStorage.md
+- name: UnitOfWork
+
 
 - name: 扩展组件
   expanded: true

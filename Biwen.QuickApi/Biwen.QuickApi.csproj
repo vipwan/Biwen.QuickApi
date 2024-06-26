@@ -43,6 +43,8 @@
 		<PackageReference Include="HtmlSanitizer" Version="8.0.865" />
 		<PackageReference Include="Mapster.DependencyInjection" Version="1.0.2-pre01" />
 		<PackageReference Include="Microsoft.AspNetCore.AsyncState" Version="$(MicrosoftExtensionsVer)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.6" />
 		<PackageReference Include="NCrontab" Version="3.3.3" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="$(FluentValidationAspNetCoreVer)" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-preview.5.24306.11" />

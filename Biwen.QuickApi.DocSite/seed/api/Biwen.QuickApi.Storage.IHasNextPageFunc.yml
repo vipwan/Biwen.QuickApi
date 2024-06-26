@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Storage.IHasNextPageFunc
+  commentId: T:Biwen.QuickApi.Storage.IHasNextPageFunc
+  id: IHasNextPageFunc
+  parent: Biwen.QuickApi.Storage
+  children:
+  - Biwen.QuickApi.Storage.IHasNextPageFunc.NextPageFunc
+  langs:
+  - csharp
+  - vb
+  name: IHasNextPageFunc
+  nameWithType: IHasNextPageFunc
+  fullName: Biwen.QuickApi.Storage.IHasNextPageFunc
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/IFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: public interface IHasNextPageFunc
+    content.vb: Public Interface IHasNextPageFunc
+- uid: Biwen.QuickApi.Storage.IHasNextPageFunc.NextPageFunc
+  commentId: P:Biwen.QuickApi.Storage.IHasNextPageFunc.NextPageFunc
+  id: NextPageFunc
+  parent: Biwen.QuickApi.Storage.IHasNextPageFunc
+  langs:
+  - csharp
+  - vb
+  name: NextPageFunc
+  nameWithType: IHasNextPageFunc.NextPageFunc
+  fullName: Biwen.QuickApi.Storage.IHasNextPageFunc.NextPageFunc
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/IFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: Func<PagedFileListResult, Task<NextPageResult>> NextPageFunc { get; set; }
+    parameters: []
+    return:
+      type: System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}}
+    content.vb: Property NextPageFunc As Func(Of PagedFileListResult, Task(Of NextPageResult))
+  overload: Biwen.QuickApi.Storage.IHasNextPageFunc.NextPageFunc*
+references:
+- uid: Biwen.QuickApi.Storage
+  commentId: N:Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Storage
+  nameWithType: Biwen.QuickApi.Storage
+  fullName: Biwen.QuickApi.Storage
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Storage
+    name: Storage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Storage
+    name: Storage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.html
+- uid: Biwen.QuickApi.Storage.IHasNextPageFunc.NextPageFunc*
+  commentId: Overload:Biwen.QuickApi.Storage.IHasNextPageFunc.NextPageFunc
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IHasNextPageFunc.html#Biwen_QuickApi_Storage_IHasNextPageFunc_NextPageFunc
+  name: NextPageFunc
+  nameWithType: IHasNextPageFunc.NextPageFunc
+  fullName: Biwen.QuickApi.Storage.IHasNextPageFunc.NextPageFunc
+- uid: System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}}
+  commentId: T:System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<PagedFileListResult, Task<NextPageResult>>
+  nameWithType: Func<PagedFileListResult, Task<NextPageResult>>
+  fullName: System.Func<Biwen.QuickApi.Storage.PagedFileListResult, System.Threading.Tasks.Task<Biwen.QuickApi.Storage.NextPageResult>>
+  nameWithType.vb: Func(Of PagedFileListResult, Task(Of NextPageResult))
+  fullName.vb: System.Func(Of Biwen.QuickApi.Storage.PagedFileListResult, System.Threading.Tasks.Task(Of Biwen.QuickApi.Storage.NextPageResult))
+  name.vb: Func(Of PagedFileListResult, Task(Of NextPageResult))
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Biwen.QuickApi.Storage.PagedFileListResult
+    name: PagedFileListResult
+    isExternal: true
+    href: Biwen.QuickApi.Storage.PagedFileListResult.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Biwen.QuickApi.Storage.NextPageResult
+    name: NextPageResult
+    isExternal: true
+    href: Biwen.QuickApi.Storage.NextPageResult.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Storage.PagedFileListResult
+    name: PagedFileListResult
+    isExternal: true
+    href: Biwen.QuickApi.Storage.PagedFileListResult.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Storage.NextPageResult
+    name: NextPageResult
+    isExternal: true
+    href: Biwen.QuickApi.Storage.NextPageResult.html
+  - name: )
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
@@ -52,7 +52,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent.TaskFailedEvent(Biwen.QuickApi.Scheduling.IScheduleTask, System.DateTime, System.Exception)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
@@ -87,7 +87,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent.Exception
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events

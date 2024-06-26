@@ -6,11 +6,10 @@ items:
   parent: Biwen.QuickApi.Telemetry
   children:
   - Biwen.QuickApi.Telemetry.Constant.CpuUsedPercentage
+  - Biwen.QuickApi.Telemetry.Constant.GetPackageVersion(System.Reflection.Assembly)
   - Biwen.QuickApi.Telemetry.Constant.MaximumMemoryInBytes
   - Biwen.QuickApi.Telemetry.Constant.MemoryUsedInBytes
   - Biwen.QuickApi.Telemetry.Constant.MemoryUsedPercentage
-  - Biwen.QuickApi.Telemetry.Constant.OpenTelemetryActivitySourceName
-  - Biwen.QuickApi.Telemetry.Constant.OpenTelemetryVersion
   langs:
   - csharp
   - vb
@@ -19,7 +18,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.Constant
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/extensions/Biwen.QuickApi.Telemetry/Constant.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -36,50 +35,6 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: Biwen.QuickApi.Telemetry.Constant.OpenTelemetryActivitySourceName
-  commentId: F:Biwen.QuickApi.Telemetry.Constant.OpenTelemetryActivitySourceName
-  id: OpenTelemetryActivitySourceName
-  parent: Biwen.QuickApi.Telemetry.Constant
-  langs:
-  - csharp
-  - vb
-  name: OpenTelemetryActivitySourceName
-  nameWithType: Constant.OpenTelemetryActivitySourceName
-  fullName: Biwen.QuickApi.Telemetry.Constant.OpenTelemetryActivitySourceName
-  type: Field
-  source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/extensions/Biwen.QuickApi.Telemetry/Constant.cs
-  assemblies:
-  - Biwen.QuickApi.Telemetry
-  namespace: Biwen.QuickApi.Telemetry
-  summary: ActivitySourceName
-  example: []
-  syntax:
-    content: public const string OpenTelemetryActivitySourceName = "Biwen.QuickApi"
-    return:
-      type: System.String
-    content.vb: Public Const OpenTelemetryActivitySourceName As String = "Biwen.QuickApi"
-- uid: Biwen.QuickApi.Telemetry.Constant.OpenTelemetryVersion
-  commentId: F:Biwen.QuickApi.Telemetry.Constant.OpenTelemetryVersion
-  id: OpenTelemetryVersion
-  parent: Biwen.QuickApi.Telemetry.Constant
-  langs:
-  - csharp
-  - vb
-  name: OpenTelemetryVersion
-  nameWithType: Constant.OpenTelemetryVersion
-  fullName: Biwen.QuickApi.Telemetry.Constant.OpenTelemetryVersion
-  type: Field
-  source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/extensions/Biwen.QuickApi.Telemetry/Constant.cs
-  assemblies:
-  - Biwen.QuickApi.Telemetry
-  namespace: Biwen.QuickApi.Telemetry
-  syntax:
-    content: public const string OpenTelemetryVersion = "1.0.0"
-    return:
-      type: System.String
-    content.vb: Public Const OpenTelemetryVersion As String = "1.0.0"
 - uid: Biwen.QuickApi.Telemetry.Constant.CpuUsedPercentage
   commentId: F:Biwen.QuickApi.Telemetry.Constant.CpuUsedPercentage
   id: CpuUsedPercentage
@@ -92,7 +47,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.Constant.CpuUsedPercentage
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/extensions/Biwen.QuickApi.Telemetry/Constant.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -115,7 +70,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.Constant.MemoryUsedPercentage
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/extensions/Biwen.QuickApi.Telemetry/Constant.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -138,7 +93,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.Constant.MemoryUsedInBytes
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/extensions/Biwen.QuickApi.Telemetry/Constant.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -161,7 +116,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.Constant.MaximumMemoryInBytes
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/extensions/Biwen.QuickApi.Telemetry/Constant.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -172,6 +127,36 @@ items:
     return:
       type: System.String
     content.vb: Public Const MaximumMemoryInBytes As String = "MaximumMemoryInBytes"
+- uid: Biwen.QuickApi.Telemetry.Constant.GetPackageVersion(System.Reflection.Assembly)
+  commentId: M:Biwen.QuickApi.Telemetry.Constant.GetPackageVersion(System.Reflection.Assembly)
+  id: GetPackageVersion(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.Telemetry.Constant
+  langs:
+  - csharp
+  - vb
+  name: GetPackageVersion(Assembly)
+  nameWithType: Constant.GetPackageVersion(Assembly)
+  fullName: Biwen.QuickApi.Telemetry.Constant.GetPackageVersion(System.Reflection.Assembly)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+  assemblies:
+  - Biwen.QuickApi.Telemetry
+  namespace: Biwen.QuickApi.Telemetry
+  summary: 获取包版本
+  example: []
+  syntax:
+    content: public static string GetPackageVersion(this Assembly assembly)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GetPackageVersion(assembly As Assembly) As String
+  overload: Biwen.QuickApi.Telemetry.Constant.GetPackageVersion*
 references:
 - uid: Biwen.QuickApi.Telemetry
   commentId: N:Biwen.QuickApi.Telemetry
@@ -458,3 +443,45 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: Biwen.QuickApi.Telemetry.Constant.GetPackageVersion*
+  commentId: Overload:Biwen.QuickApi.Telemetry.Constant.GetPackageVersion
+  isExternal: true
+  href: Biwen.QuickApi.Telemetry.Constant.html#Biwen_QuickApi_Telemetry_Constant_GetPackageVersion_System_Reflection_Assembly_
+  name: GetPackageVersion
+  nameWithType: Constant.GetPackageVersion
+  fullName: Biwen.QuickApi.Telemetry.Constant.GetPackageVersion
+- uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.assembly
+  name: Assembly
+  nameWithType: Assembly
+  fullName: System.Reflection.Assembly
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection

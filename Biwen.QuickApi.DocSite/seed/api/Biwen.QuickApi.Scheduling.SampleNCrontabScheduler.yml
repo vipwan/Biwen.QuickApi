@@ -15,11 +15,11 @@ items:
   fullName: Biwen.QuickApi.Scheduling.SampleNCrontabScheduler
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
-  summary: 使用NCrontab实现的调度器,不支持秒级,这是默认调度器
+  summary: 使用NCrontab实现的调度器,支持秒级(10s+),这是默认调度器
   example: []
   syntax:
     content: 'public sealed class SampleNCrontabScheduler : IScheduler'
@@ -47,7 +47,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.SampleNCrontabScheduler.CanRun(Biwen.QuickApi.Scheduling.ScheduleTaskAttribute, System.DateTime)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -84,7 +84,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.SampleNCrontabScheduler.SampleNCrontabScheduler()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling

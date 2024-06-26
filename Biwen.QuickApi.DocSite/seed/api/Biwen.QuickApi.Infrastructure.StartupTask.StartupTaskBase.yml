@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.StartupTask
@@ -50,7 +50,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase.ExecuteAsync(System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.StartupTask
@@ -81,7 +81,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase.StartupTaskBase()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.StartupTask
@@ -104,7 +104,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase.Order
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.StartupTask
@@ -131,7 +131,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase.Delay
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Infrastructure/StartupTask/IStartupTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.StartupTask

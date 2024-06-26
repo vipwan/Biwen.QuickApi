@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Storage.StreamMode
+  commentId: T:Biwen.QuickApi.Storage.StreamMode
+  id: StreamMode
+  parent: Biwen.QuickApi.Storage
+  children:
+  - Biwen.QuickApi.Storage.StreamMode.Read
+  - Biwen.QuickApi.Storage.StreamMode.Write
+  langs:
+  - csharp
+  - vb
+  name: StreamMode
+  nameWithType: StreamMode
+  fullName: Biwen.QuickApi.Storage.StreamMode
+  type: Enum
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/StreamMode.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: Tells what the stream will be used for
+  example: []
+  syntax:
+    content: public enum StreamMode
+    content.vb: Public Enum StreamMode
+- uid: Biwen.QuickApi.Storage.StreamMode.Read
+  commentId: F:Biwen.QuickApi.Storage.StreamMode.Read
+  id: Read
+  parent: Biwen.QuickApi.Storage.StreamMode
+  langs:
+  - csharp
+  - vb
+  name: Read
+  nameWithType: StreamMode.Read
+  fullName: Biwen.QuickApi.Storage.StreamMode.Read
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/StreamMode.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: Read = 0
+    return:
+      type: Biwen.QuickApi.Storage.StreamMode
+- uid: Biwen.QuickApi.Storage.StreamMode.Write
+  commentId: F:Biwen.QuickApi.Storage.StreamMode.Write
+  id: Write
+  parent: Biwen.QuickApi.Storage.StreamMode
+  langs:
+  - csharp
+  - vb
+  name: Write
+  nameWithType: StreamMode.Write
+  fullName: Biwen.QuickApi.Storage.StreamMode.Write
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/StreamMode.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: Write = 1
+    return:
+      type: Biwen.QuickApi.Storage.StreamMode
+references:
+- uid: Biwen.QuickApi.Storage
+  commentId: N:Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Storage
+  nameWithType: Biwen.QuickApi.Storage
+  fullName: Biwen.QuickApi.Storage
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Storage
+    name: Storage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Storage
+    name: Storage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.html
+- uid: Biwen.QuickApi.Storage.StreamMode
+  commentId: T:Biwen.QuickApi.Storage.StreamMode
+  parent: Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.StreamMode.html
+  name: StreamMode
+  nameWithType: StreamMode
+  fullName: Biwen.QuickApi.Storage.StreamMode

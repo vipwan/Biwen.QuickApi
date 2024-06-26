@@ -1,0 +1,1380 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+  commentId: T:Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+  id: SystemTextJsonSerializer
+  parent: Biwen.QuickApi.Serializer
+  children:
+  - Biwen.QuickApi.Serializer.SystemTextJsonSerializer.#ctor(System.Text.Json.JsonSerializerOptions,System.Text.Json.JsonSerializerOptions)
+  - Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Deserialize(System.IO.Stream,System.Type)
+  - Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Serialize(System.Object,System.IO.Stream)
+  langs:
+  - csharp
+  - vb
+  name: SystemTextJsonSerializer
+  nameWithType: SystemTextJsonSerializer
+  fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Serializer
+  syntax:
+    content: 'public class SystemTextJsonSerializer : ITextSerializer, ISerializer'
+    content.vb: Public Class SystemTextJsonSerializer Implements ITextSerializer, ISerializer
+  inheritance:
+  - System.Object
+  implements:
+  - Biwen.QuickApi.Serializer.ITextSerializer
+  - Biwen.QuickApi.Serializer.ISerializer
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  extensionMethods:
+  - Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(System.Byte[],System.Type)
+  - Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(System.String,System.Type)
+  - Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(System.Byte[])
+  - Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(System.IO.Stream)
+  - Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(System.String)
+  - Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes``1({T})
+  - Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString``1({T})
+- uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.#ctor(System.Text.Json.JsonSerializerOptions,System.Text.Json.JsonSerializerOptions)
+  commentId: M:Biwen.QuickApi.Serializer.SystemTextJsonSerializer.#ctor(System.Text.Json.JsonSerializerOptions,System.Text.Json.JsonSerializerOptions)
+  id: '#ctor(System.Text.Json.JsonSerializerOptions,System.Text.Json.JsonSerializerOptions)'
+  parent: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+  langs:
+  - csharp
+  - vb
+  name: SystemTextJsonSerializer(JsonSerializerOptions?, JsonSerializerOptions?)
+  nameWithType: SystemTextJsonSerializer.SystemTextJsonSerializer(JsonSerializerOptions?, JsonSerializerOptions?)
+  fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.SystemTextJsonSerializer(System.Text.Json.JsonSerializerOptions?, System.Text.Json.JsonSerializerOptions?)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Serializer
+  syntax:
+    content: public SystemTextJsonSerializer(JsonSerializerOptions? serializeOptions = null, JsonSerializerOptions? deserializeOptions = null)
+    parameters:
+    - id: serializeOptions
+      type: System.Text.Json.JsonSerializerOptions
+    - id: deserializeOptions
+      type: System.Text.Json.JsonSerializerOptions
+    content.vb: Public Sub New(serializeOptions As JsonSerializerOptions = Nothing, deserializeOptions As JsonSerializerOptions = Nothing)
+  overload: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.#ctor*
+  nameWithType.vb: SystemTextJsonSerializer.New(JsonSerializerOptions, JsonSerializerOptions)
+  fullName.vb: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.New(System.Text.Json.JsonSerializerOptions, System.Text.Json.JsonSerializerOptions)
+  name.vb: New(JsonSerializerOptions, JsonSerializerOptions)
+- uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Serialize(System.Object,System.IO.Stream)
+  commentId: M:Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Serialize(System.Object,System.IO.Stream)
+  id: Serialize(System.Object,System.IO.Stream)
+  parent: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+  langs:
+  - csharp
+  - vb
+  name: Serialize(object, Stream)
+  nameWithType: SystemTextJsonSerializer.Serialize(object, Stream)
+  fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Serialize(object, System.IO.Stream)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Serializer
+  summary: 序列化
+  example: []
+  syntax:
+    content: public void Serialize(object data, Stream outputStream)
+    parameters:
+    - id: data
+      type: System.Object
+    - id: outputStream
+      type: System.IO.Stream
+    content.vb: Public Sub Serialize(data As Object, outputStream As Stream)
+  overload: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Serialize*
+  implements:
+  - Biwen.QuickApi.Serializer.ISerializer.Serialize(System.Object,System.IO.Stream)
+  nameWithType.vb: SystemTextJsonSerializer.Serialize(Object, Stream)
+  fullName.vb: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Serialize(Object, System.IO.Stream)
+  name.vb: Serialize(Object, Stream)
+- uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Deserialize(System.IO.Stream,System.Type)
+  commentId: M:Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Deserialize(System.IO.Stream,System.Type)
+  id: Deserialize(System.IO.Stream,System.Type)
+  parent: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(Stream, Type)
+  nameWithType: SystemTextJsonSerializer.Deserialize(Stream, Type)
+  fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Deserialize(System.IO.Stream, System.Type)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Serializer
+  summary: 反序列化
+  example: []
+  syntax:
+    content: public object Deserialize(Stream inputStream, Type objectType)
+    parameters:
+    - id: inputStream
+      type: System.IO.Stream
+    - id: objectType
+      type: System.Type
+      description: ''
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Public Function Deserialize(inputStream As Stream, objectType As Type) As Object
+  overload: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Deserialize*
+  implements:
+  - Biwen.QuickApi.Serializer.ISerializer.Deserialize(System.IO.Stream,System.Type)
+references:
+- uid: Biwen.QuickApi.Serializer
+  commentId: N:Biwen.QuickApi.Serializer
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Serializer
+  nameWithType: Biwen.QuickApi.Serializer
+  fullName: Biwen.QuickApi.Serializer
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Serializer
+    name: Serializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Serializer
+    name: Serializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Serializer.ITextSerializer
+  commentId: T:Biwen.QuickApi.Serializer.ITextSerializer
+  parent: Biwen.QuickApi.Serializer
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.ITextSerializer.html
+  name: ITextSerializer
+  nameWithType: ITextSerializer
+  fullName: Biwen.QuickApi.Serializer.ITextSerializer
+- uid: Biwen.QuickApi.Serializer.ISerializer
+  commentId: T:Biwen.QuickApi.Serializer.ISerializer
+  parent: Biwen.QuickApi.Serializer
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.ISerializer.html
+  name: ISerializer
+  nameWithType: ISerializer
+  fullName: Biwen.QuickApi.Serializer.ISerializer
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(System.Byte[],System.Type)
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.Byte[],System.Type)
+  parent: Biwen.QuickApi.Serializer.SerializerExtensions
+  definition: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.Byte[],System.Type)
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_Byte___System_Type_
+  name: Deserialize(ISerializer, byte[], Type)
+  nameWithType: SerializerExtensions.Deserialize(ISerializer, byte[], Type)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer, byte[], System.Type)
+  nameWithType.vb: SerializerExtensions.Deserialize(ISerializer, Byte(), Type)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer, Byte(), System.Type)
+  name.vb: Deserialize(ISerializer, Byte(), Type)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.Byte[],System.Type)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_Byte___System_Type_
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.Byte[],System.Type)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_Byte___System_Type_
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(System.String,System.Type)
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.String,System.Type)
+  parent: Biwen.QuickApi.Serializer.SerializerExtensions
+  definition: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.String,System.Type)
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_String_System_Type_
+  name: Deserialize(ISerializer, string, Type)
+  nameWithType: SerializerExtensions.Deserialize(ISerializer, string, Type)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer, string, System.Type)
+  nameWithType.vb: SerializerExtensions.Deserialize(ISerializer, String, Type)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer, String, System.Type)
+  name.vb: Deserialize(ISerializer, String, Type)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.String,System.Type)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_String_System_Type_
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.String,System.Type)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_String_System_Type_
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(System.Byte[])
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.Byte[])
+  parent: Biwen.QuickApi.Serializer.SerializerExtensions
+  definition: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.Byte[])
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_Byte___
+  name: Deserialize<T>(ISerializer, byte[])
+  nameWithType: SerializerExtensions.Deserialize<T>(ISerializer, byte[])
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize<T>(Biwen.QuickApi.Serializer.ISerializer, byte[])
+  nameWithType.vb: SerializerExtensions.Deserialize(Of T)(ISerializer, Byte())
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Of T)(Biwen.QuickApi.Serializer.ISerializer, Byte())
+  name.vb: Deserialize(Of T)(ISerializer, Byte())
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.Byte[])
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_Byte___
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.Byte[])
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_Byte___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(System.IO.Stream)
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.IO.Stream)
+  parent: Biwen.QuickApi.Serializer.SerializerExtensions
+  definition: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.IO.Stream)
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_IO_Stream_
+  name: Deserialize<T>(ISerializer, Stream)
+  nameWithType: SerializerExtensions.Deserialize<T>(ISerializer, Stream)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize<T>(Biwen.QuickApi.Serializer.ISerializer, System.IO.Stream)
+  nameWithType.vb: SerializerExtensions.Deserialize(Of T)(ISerializer, Stream)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Of T)(Biwen.QuickApi.Serializer.ISerializer, System.IO.Stream)
+  name.vb: Deserialize(Of T)(ISerializer, Stream)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.IO.Stream)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_IO_Stream_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.IO.Stream)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_IO_Stream_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(System.String)
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.String)
+  parent: Biwen.QuickApi.Serializer.SerializerExtensions
+  definition: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.String)
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_String_
+  name: Deserialize<T>(ISerializer, string)
+  nameWithType: SerializerExtensions.Deserialize<T>(ISerializer, string)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize<T>(Biwen.QuickApi.Serializer.ISerializer, string)
+  nameWithType.vb: SerializerExtensions.Deserialize(Of T)(ISerializer, String)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Of T)(Biwen.QuickApi.Serializer.ISerializer, String)
+  name.vb: Deserialize(Of T)(ISerializer, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.String)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.String)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes``1({T})
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+  parent: Biwen.QuickApi.Serializer.SerializerExtensions
+  definition: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToBytes__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  name: SerializeToBytes<T>(ISerializer, T)
+  nameWithType: SerializerExtensions.SerializeToBytes<T>(ISerializer, T)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes<T>(Biwen.QuickApi.Serializer.ISerializer, T)
+  nameWithType.vb: SerializerExtensions.SerializeToBytes(Of T)(ISerializer, T)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes(Of T)(Biwen.QuickApi.Serializer.ISerializer, T)
+  name.vb: SerializeToBytes(Of T)(ISerializer, T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+    name: SerializeToBytes
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToBytes__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+    name: SerializeToBytes
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToBytes__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString``1({T})
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+  parent: Biwen.QuickApi.Serializer.SerializerExtensions
+  definition: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToString__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  name: SerializeToString<T>(ISerializer, T)
+  nameWithType: SerializerExtensions.SerializeToString<T>(ISerializer, T)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString<T>(Biwen.QuickApi.Serializer.ISerializer, T)
+  nameWithType.vb: SerializerExtensions.SerializeToString(Of T)(ISerializer, T)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString(Of T)(Biwen.QuickApi.Serializer.ISerializer, T)
+  name.vb: SerializeToString(Of T)(ISerializer, T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+    name: SerializeToString
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToString__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+    name: SerializeToString
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToString__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.Byte[],System.Type)
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.Byte[],System.Type)
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_Byte___System_Type_
+  name: Deserialize(ISerializer, byte[], Type)
+  nameWithType: SerializerExtensions.Deserialize(ISerializer, byte[], Type)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer, byte[], System.Type)
+  nameWithType.vb: SerializerExtensions.Deserialize(ISerializer, Byte(), Type)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer, Byte(), System.Type)
+  name.vb: Deserialize(ISerializer, Byte(), Type)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.Byte[],System.Type)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_Byte___System_Type_
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.Byte[],System.Type)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_Byte___System_Type_
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Biwen.QuickApi.Serializer.SerializerExtensions
+  commentId: T:Biwen.QuickApi.Serializer.SerializerExtensions
+  parent: Biwen.QuickApi.Serializer
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html
+  name: SerializerExtensions
+  nameWithType: SerializerExtensions
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions
+- uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.String,System.Type)
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.String,System.Type)
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_String_System_Type_
+  name: Deserialize(ISerializer, string, Type)
+  nameWithType: SerializerExtensions.Deserialize(ISerializer, string, Type)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer, string, System.Type)
+  nameWithType.vb: SerializerExtensions.Deserialize(ISerializer, String, Type)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer, String, System.Type)
+  name.vb: Deserialize(ISerializer, String, Type)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.String,System.Type)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_String_System_Type_
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer,System.String,System.Type)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize_Biwen_QuickApi_Serializer_ISerializer_System_String_System_Type_
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.Byte[])
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.Byte[])
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_Byte___
+  name: Deserialize<T>(ISerializer, byte[])
+  nameWithType: SerializerExtensions.Deserialize<T>(ISerializer, byte[])
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize<T>(Biwen.QuickApi.Serializer.ISerializer, byte[])
+  nameWithType.vb: SerializerExtensions.Deserialize(Of T)(ISerializer, Byte())
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Of T)(Biwen.QuickApi.Serializer.ISerializer, Byte())
+  name.vb: Deserialize(Of T)(ISerializer, Byte())
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.Byte[])
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_Byte___
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.Byte[])
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_Byte___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.IO.Stream)
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.IO.Stream)
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_IO_Stream_
+  name: Deserialize<T>(ISerializer, Stream)
+  nameWithType: SerializerExtensions.Deserialize<T>(ISerializer, Stream)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize<T>(Biwen.QuickApi.Serializer.ISerializer, System.IO.Stream)
+  nameWithType.vb: SerializerExtensions.Deserialize(Of T)(ISerializer, Stream)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Of T)(Biwen.QuickApi.Serializer.ISerializer, System.IO.Stream)
+  name.vb: Deserialize(Of T)(ISerializer, Stream)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.IO.Stream)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_IO_Stream_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.IO.Stream)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_IO_Stream_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.String)
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.String)
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_String_
+  name: Deserialize<T>(ISerializer, string)
+  nameWithType: SerializerExtensions.Deserialize<T>(ISerializer, string)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize<T>(Biwen.QuickApi.Serializer.ISerializer, string)
+  nameWithType.vb: SerializerExtensions.Deserialize(Of T)(ISerializer, String)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Of T)(Biwen.QuickApi.Serializer.ISerializer, String)
+  name.vb: Deserialize(Of T)(ISerializer, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.String)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(Biwen.QuickApi.Serializer.ISerializer,System.String)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_Deserialize__1_Biwen_QuickApi_Serializer_ISerializer_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToBytes__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  name: SerializeToBytes<T>(ISerializer, T)
+  nameWithType: SerializerExtensions.SerializeToBytes<T>(ISerializer, T)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes<T>(Biwen.QuickApi.Serializer.ISerializer, T)
+  nameWithType.vb: SerializerExtensions.SerializeToBytes(Of T)(ISerializer, T)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes(Of T)(Biwen.QuickApi.Serializer.ISerializer, T)
+  name.vb: SerializeToBytes(Of T)(ISerializer, T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+    name: SerializeToBytes
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToBytes__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+    name: SerializeToBytes
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToBytes__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+  commentId: M:Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToString__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  name: SerializeToString<T>(ISerializer, T)
+  nameWithType: SerializerExtensions.SerializeToString<T>(ISerializer, T)
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString<T>(Biwen.QuickApi.Serializer.ISerializer, T)
+  nameWithType.vb: SerializerExtensions.SerializeToString(Of T)(ISerializer, T)
+  fullName.vb: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString(Of T)(Biwen.QuickApi.Serializer.ISerializer, T)
+  name.vb: SerializeToString(Of T)(ISerializer, T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+    name: SerializeToString
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToString__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString``1(Biwen.QuickApi.Serializer.ISerializer,``0)
+    name: SerializeToString
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SerializerExtensions.html#Biwen_QuickApi_Serializer_SerializerExtensions_SerializeToString__1_Biwen_QuickApi_Serializer_ISerializer___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.#ctor*
+  commentId: Overload:Biwen.QuickApi.Serializer.SystemTextJsonSerializer.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html#Biwen_QuickApi_Serializer_SystemTextJsonSerializer__ctor_System_Text_Json_JsonSerializerOptions_System_Text_Json_JsonSerializerOptions_
+  name: SystemTextJsonSerializer
+  nameWithType: SystemTextJsonSerializer.SystemTextJsonSerializer
+  fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.SystemTextJsonSerializer
+  nameWithType.vb: SystemTextJsonSerializer.New
+  fullName.vb: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.New
+  name.vb: New
+- uid: System.Text.Json.JsonSerializerOptions
+  commentId: T:System.Text.Json.JsonSerializerOptions
+  parent: System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  name: JsonSerializerOptions
+  nameWithType: JsonSerializerOptions
+  fullName: System.Text.Json.JsonSerializerOptions
+- uid: System.Text.Json
+  commentId: N:System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json
+  nameWithType: System.Text.Json
+  fullName: System.Text.Json
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+- uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Serialize*
+  commentId: Overload:Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Serialize
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html#Biwen_QuickApi_Serializer_SystemTextJsonSerializer_Serialize_System_Object_System_IO_Stream_
+  name: Serialize
+  nameWithType: SystemTextJsonSerializer.Serialize
+  fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Serialize
+- uid: Biwen.QuickApi.Serializer.ISerializer.Serialize(System.Object,System.IO.Stream)
+  commentId: M:Biwen.QuickApi.Serializer.ISerializer.Serialize(System.Object,System.IO.Stream)
+  parent: Biwen.QuickApi.Serializer.ISerializer
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.ISerializer.html#Biwen_QuickApi_Serializer_ISerializer_Serialize_System_Object_System_IO_Stream_
+  name: Serialize(object, Stream)
+  nameWithType: ISerializer.Serialize(object, Stream)
+  fullName: Biwen.QuickApi.Serializer.ISerializer.Serialize(object, System.IO.Stream)
+  nameWithType.vb: ISerializer.Serialize(Object, Stream)
+  fullName.vb: Biwen.QuickApi.Serializer.ISerializer.Serialize(Object, System.IO.Stream)
+  name.vb: Serialize(Object, Stream)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.ISerializer.Serialize(System.Object,System.IO.Stream)
+    name: Serialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html#Biwen_QuickApi_Serializer_ISerializer_Serialize_System_Object_System_IO_Stream_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.ISerializer.Serialize(System.Object,System.IO.Stream)
+    name: Serialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html#Biwen_QuickApi_Serializer_ISerializer_Serialize_System_Object_System_IO_Stream_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Deserialize*
+  commentId: Overload:Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Deserialize
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html#Biwen_QuickApi_Serializer_SystemTextJsonSerializer_Deserialize_System_IO_Stream_System_Type_
+  name: Deserialize
+  nameWithType: SystemTextJsonSerializer.Deserialize
+  fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Deserialize
+- uid: Biwen.QuickApi.Serializer.ISerializer.Deserialize(System.IO.Stream,System.Type)
+  commentId: M:Biwen.QuickApi.Serializer.ISerializer.Deserialize(System.IO.Stream,System.Type)
+  parent: Biwen.QuickApi.Serializer.ISerializer
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.ISerializer.html#Biwen_QuickApi_Serializer_ISerializer_Deserialize_System_IO_Stream_System_Type_
+  name: Deserialize(Stream, Type)
+  nameWithType: ISerializer.Deserialize(Stream, Type)
+  fullName: Biwen.QuickApi.Serializer.ISerializer.Deserialize(System.IO.Stream, System.Type)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Serializer.ISerializer.Deserialize(System.IO.Stream,System.Type)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html#Biwen_QuickApi_Serializer_ISerializer_Deserialize_System_IO_Stream_System_Type_
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Serializer.ISerializer.Deserialize(System.IO.Stream,System.Type)
+    name: Deserialize
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.ISerializer.html#Biwen_QuickApi_Serializer_ISerializer_Deserialize_System_IO_Stream_System_Type_
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type

@@ -270,6 +270,46 @@ items:
     name: IScheduleMetadataStore
   - uid: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
     name: ScheduleTaskMetadata
+- uid: Biwen.QuickApi.Serializer
+  name: Biwen.QuickApi.Serializer
+  items:
+  - uid: Biwen.QuickApi.Serializer.DefaultSerializer
+    name: DefaultSerializer
+  - uid: Biwen.QuickApi.Serializer.ISerializer
+    name: ISerializer
+  - uid: Biwen.QuickApi.Serializer.ITextSerializer
+    name: ITextSerializer
+  - uid: Biwen.QuickApi.Serializer.ObjectToInferredTypesConverter
+    name: ObjectToInferredTypesConverter
+  - uid: Biwen.QuickApi.Serializer.SerializerExtensions
+    name: SerializerExtensions
+  - uid: Biwen.QuickApi.Serializer.ServiceRegistration
+    name: ServiceRegistration
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+- uid: Biwen.QuickApi.Storage
+  name: Biwen.QuickApi.Storage
+  items:
+  - uid: Biwen.QuickApi.Storage.FileSpec
+    name: FileSpec
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions
+    name: FileStorageExtensions
+  - uid: Biwen.QuickApi.Storage.FileStorageFactory
+    name: FileStorageFactory
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+  - uid: Biwen.QuickApi.Storage.IHasNextPageFunc
+    name: IHasNextPageFunc
+  - uid: Biwen.QuickApi.Storage.LocalFileStorage
+    name: LocalFileStorage
+  - uid: Biwen.QuickApi.Storage.NextPageResult
+    name: NextPageResult
+  - uid: Biwen.QuickApi.Storage.PagedFileListResult
+    name: PagedFileListResult
+  - uid: Biwen.QuickApi.Storage.ServiceRegistration
+    name: ServiceRegistration
+  - uid: Biwen.QuickApi.Storage.StreamMode
+    name: StreamMode
 - uid: Biwen.QuickApi.Telemetry
   name: Biwen.QuickApi.Telemetry
   items:
@@ -277,6 +317,40 @@ items:
     name: AutoInjectExtension
   - uid: Biwen.QuickApi.Telemetry.Constant
     name: Constant
+  - uid: Biwen.QuickApi.Telemetry.TelemetryOptions
+    name: TelemetryOptions
+- uid: Biwen.QuickApi.UnitOfWork
+  name: Biwen.QuickApi.UnitOfWork
+  items:
+  - uid: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
+    name: EnumerablePagedListExtensions
+  - uid: Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions
+    name: IQueryablePageListExtensions
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository<TEntity>
+  - uid: Biwen.QuickApi.UnitOfWork.IRepositoryFactory
+    name: IRepositoryFactory
+  - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork
+    name: IUnitOfWork
+  - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+    name: IUnitOfWork<TContext>
+  - uid: Biwen.QuickApi.UnitOfWork.Repository`1
+    name: Repository<TEntity>
+  - uid: Biwen.QuickApi.UnitOfWork.SaveChangesResult
+    name: SaveChangesResult
+  - uid: Biwen.QuickApi.UnitOfWork.UnitOfWork`1
+    name: UnitOfWork<TContext>
+  - uid: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions
+    name: UnitOfWorkServiceCollectionExtensions
+- uid: Biwen.QuickApi.UnitOfWork.Pagenation
+  name: Biwen.QuickApi.UnitOfWork.Pagenation
+  items:
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+    name: IPagedList<T>
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList
+    name: PagedList
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList`1
+    name: PagedList<T>
 - uid: Microsoft.Extensions.DependencyInjection
   name: Microsoft.Extensions.DependencyInjection
   items:

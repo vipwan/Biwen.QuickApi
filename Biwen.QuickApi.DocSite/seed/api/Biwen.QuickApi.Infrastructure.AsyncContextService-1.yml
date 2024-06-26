@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.AsyncContextService<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure
@@ -55,7 +55,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.AsyncContextService<T>.AsyncContextService(System.IServiceProvider)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure
@@ -81,15 +81,17 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.AsyncContextService<T>.Get()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure
+  summary: Get
   example: []
   syntax:
     content: public T? Get()
     return:
       type: '{T}'
+      description: ''
     content.vb: Public Function [Get]() As T
   overload: Biwen.QuickApi.Infrastructure.AsyncContextService`1.Get*
   implements:
@@ -108,18 +110,21 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.AsyncContextService<T>.TryGet(out T?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure
+  summary: TryGet
   example: []
   syntax:
     content: public bool TryGet(out T? value)
     parameters:
     - id: value
       type: '{T}'
+      description: ''
     return:
       type: System.Boolean
+      description: ''
     content.vb: Public Function TryGet(value As T) As Boolean
   overload: Biwen.QuickApi.Infrastructure.AsyncContextService`1.TryGet*
   implements:
@@ -139,16 +144,18 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.AsyncContextService<T>.Set(T?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure
+  summary: Set
   example: []
   syntax:
     content: public void Set(T? value)
     parameters:
     - id: value
       type: '{T}'
+      description: ''
     content.vb: Public Sub [Set](value As T)
   overload: Biwen.QuickApi.Infrastructure.AsyncContextService`1.Set*
   implements:

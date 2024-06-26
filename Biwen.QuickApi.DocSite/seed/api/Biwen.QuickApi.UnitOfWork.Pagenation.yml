@@ -1,0 +1,82 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.UnitOfWork.Pagenation
+  commentId: N:Biwen.QuickApi.UnitOfWork.Pagenation
+  id: Biwen.QuickApi.UnitOfWork.Pagenation
+  children:
+  - Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+  - Biwen.QuickApi.UnitOfWork.Pagenation.PagedList
+  - Biwen.QuickApi.UnitOfWork.Pagenation.PagedList`1
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.UnitOfWork.Pagenation
+  nameWithType: Biwen.QuickApi.UnitOfWork.Pagenation
+  fullName: Biwen.QuickApi.UnitOfWork.Pagenation
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+  commentId: T:Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+  isExternal: true
+  href: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList-1.html
+  name: IPagedList<T>
+  nameWithType: IPagedList<T>
+  fullName: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>
+  nameWithType.vb: IPagedList(Of T)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList(Of T)
+  name.vb: IPagedList(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+    name: IPagedList
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+    name: IPagedList
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList
+  commentId: T:Biwen.QuickApi.UnitOfWork.Pagenation.PagedList
+  isExternal: true
+  href: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList.html
+  name: PagedList
+  nameWithType: PagedList
+  fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList
+- uid: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList`1
+  commentId: T:Biwen.QuickApi.UnitOfWork.Pagenation.PagedList`1
+  isExternal: true
+  href: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList-1.html
+  name: PagedList<T>
+  nameWithType: PagedList<T>
+  fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList<T>
+  nameWithType.vb: PagedList(Of T)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList(Of T)
+  name.vb: PagedList(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList`1
+    name: PagedList
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList`1
+    name: PagedList
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Serializer
+  commentId: N:Biwen.QuickApi.Serializer
+  id: Biwen.QuickApi.Serializer
+  children:
+  - Biwen.QuickApi.Serializer.DefaultSerializer
+  - Biwen.QuickApi.Serializer.ISerializer
+  - Biwen.QuickApi.Serializer.ITextSerializer
+  - Biwen.QuickApi.Serializer.ObjectToInferredTypesConverter
+  - Biwen.QuickApi.Serializer.SerializerExtensions
+  - Biwen.QuickApi.Serializer.ServiceRegistration
+  - Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Serializer
+  nameWithType: Biwen.QuickApi.Serializer
+  fullName: Biwen.QuickApi.Serializer
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Serializer.ISerializer
+  commentId: T:Biwen.QuickApi.Serializer.ISerializer
+  parent: Biwen.QuickApi.Serializer
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.ISerializer.html
+  name: ISerializer
+  nameWithType: ISerializer
+  fullName: Biwen.QuickApi.Serializer.ISerializer
+- uid: Biwen.QuickApi.Serializer.ITextSerializer
+  commentId: T:Biwen.QuickApi.Serializer.ITextSerializer
+  parent: Biwen.QuickApi.Serializer
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.ITextSerializer.html
+  name: ITextSerializer
+  nameWithType: ITextSerializer
+  fullName: Biwen.QuickApi.Serializer.ITextSerializer
+- uid: Biwen.QuickApi.Serializer.DefaultSerializer
+  commentId: T:Biwen.QuickApi.Serializer.DefaultSerializer
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.DefaultSerializer.html
+  name: DefaultSerializer
+  nameWithType: DefaultSerializer
+  fullName: Biwen.QuickApi.Serializer.DefaultSerializer
+- uid: Biwen.QuickApi.Serializer.SerializerExtensions
+  commentId: T:Biwen.QuickApi.Serializer.SerializerExtensions
+  parent: Biwen.QuickApi.Serializer
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SerializerExtensions.html
+  name: SerializerExtensions
+  nameWithType: SerializerExtensions
+  fullName: Biwen.QuickApi.Serializer.SerializerExtensions
+- uid: Biwen.QuickApi.Serializer.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Serializer.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Serializer.ServiceRegistration
+- uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+  commentId: T:Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  name: SystemTextJsonSerializer
+  nameWithType: SystemTextJsonSerializer
+  fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+- uid: Biwen.QuickApi.Serializer.ObjectToInferredTypesConverter
+  commentId: T:Biwen.QuickApi.Serializer.ObjectToInferredTypesConverter
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.ObjectToInferredTypesConverter.html
+  name: ObjectToInferredTypesConverter
+  nameWithType: ObjectToInferredTypesConverter
+  fullName: Biwen.QuickApi.Serializer.ObjectToInferredTypesConverter
+- uid: Biwen.QuickApi.Serializer
+  commentId: N:Biwen.QuickApi.Serializer
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Serializer
+  nameWithType: Biwen.QuickApi.Serializer
+  fullName: Biwen.QuickApi.Serializer
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Serializer
+    name: Serializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Serializer
+    name: Serializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.html

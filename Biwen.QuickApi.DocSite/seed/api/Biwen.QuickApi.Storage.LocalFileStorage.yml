@@ -1,0 +1,2708 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Storage.LocalFileStorage
+  commentId: T:Biwen.QuickApi.Storage.LocalFileStorage
+  id: LocalFileStorage
+  parent: Biwen.QuickApi.Storage
+  children:
+  - Biwen.QuickApi.Storage.LocalFileStorage.#ctor(System.IServiceProvider,System.String)
+  - Biwen.QuickApi.Storage.LocalFileStorage.CopyFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  - Biwen.QuickApi.Storage.LocalFileStorage.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+  - Biwen.QuickApi.Storage.LocalFileStorage.DeleteFilesAsync(System.String,System.Threading.CancellationToken)
+  - Biwen.QuickApi.Storage.LocalFileStorage.Dispose
+  - Biwen.QuickApi.Storage.LocalFileStorage.ExistsAsync(System.String)
+  - Biwen.QuickApi.Storage.LocalFileStorage.Folder
+  - Biwen.QuickApi.Storage.LocalFileStorage.GetFileInfoAsync(System.String)
+  - Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync(System.String,Biwen.QuickApi.Storage.StreamMode,System.Threading.CancellationToken)
+  - Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync(System.String,System.Threading.CancellationToken)
+  - Biwen.QuickApi.Storage.LocalFileStorage.GetPagedFileListAsync(System.Int32,System.String,System.Threading.CancellationToken)
+  - Biwen.QuickApi.Storage.LocalFileStorage.RenameFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  - Biwen.QuickApi.Storage.LocalFileStorage.SaveFileAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  - Biwen.QuickApi.Storage.LocalFileStorage.Serializer
+  langs:
+  - csharp
+  - vb
+  name: LocalFileStorage
+  nameWithType: LocalFileStorage
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 本地存储
+  example: []
+  syntax:
+    content: 'public class LocalFileStorage : IFileStorage, IDisposable'
+    content.vb: Public Class LocalFileStorage Implements IFileStorage, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  extensionMethods:
+  - Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(System.Collections.Generic.IEnumerable{Biwen.QuickApi.Storage.FileSpec})
+  - Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(System.String)
+  - Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(System.String)
+  - Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)
+  - Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync``1(System.String,System.Threading.CancellationToken)
+  - Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(System.String,System.String)
+  - Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync``1(System.String,{T},System.Threading.CancellationToken)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.#ctor(System.IServiceProvider,System.String)
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.#ctor(System.IServiceProvider,System.String)
+  id: '#ctor(System.IServiceProvider,System.String)'
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: LocalFileStorage(IServiceProvider, string)
+  nameWithType: LocalFileStorage.LocalFileStorage(IServiceProvider, string)
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.LocalFileStorage(System.IServiceProvider, string)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: ''
+  example: []
+  syntax:
+    content: public LocalFileStorage(IServiceProvider serviceProvider, string StoragePath)
+    parameters:
+    - id: serviceProvider
+      type: System.IServiceProvider
+      description: sp
+    - id: StoragePath
+      type: System.String
+      description: 存储文件夹路径
+    content.vb: Public Sub New(serviceProvider As IServiceProvider, StoragePath As String)
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.#ctor*
+  exceptions:
+  - type: Biwen.QuickApi.QuickApiExcetion
+    commentId: T:Biwen.QuickApi.QuickApiExcetion
+    description: ''
+  nameWithType.vb: LocalFileStorage.New(IServiceProvider, String)
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.New(System.IServiceProvider, String)
+  name.vb: New(IServiceProvider, String)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.CopyFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.CopyFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  id: CopyFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: CopyFileAsync(string, string, CancellationToken)
+  nameWithType: LocalFileStorage.CopyFileAsync(string, string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.CopyFileAsync(string, string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 复制文件
+  example: []
+  syntax:
+    content: public Task<bool> CopyFileAsync(string path, string targetPath, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: ''
+    - id: targetPath
+      type: System.String
+      description: ''
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: ''
+    content.vb: Public Function CopyFileAsync(path As String, targetPath As String, cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.CopyFileAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage.CopyFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  nameWithType.vb: LocalFileStorage.CopyFileAsync(String, String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.CopyFileAsync(String, String, System.Threading.CancellationToken)
+  name.vb: CopyFileAsync(String, String, CancellationToken)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+  id: DeleteFileAsync(System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: DeleteFileAsync(string, CancellationToken)
+  nameWithType: LocalFileStorage.DeleteFileAsync(string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFileAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 删除指定文件
+  example: []
+  syntax:
+    content: public Task<bool> DeleteFileAsync(string path, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: ''
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: ''
+    content.vb: Public Function DeleteFileAsync(path As String, cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFileAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+  nameWithType.vb: LocalFileStorage.DeleteFileAsync(String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFileAsync(String, System.Threading.CancellationToken)
+  name.vb: DeleteFileAsync(String, CancellationToken)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFilesAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.DeleteFilesAsync(System.String,System.Threading.CancellationToken)
+  id: DeleteFilesAsync(System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: DeleteFilesAsync(string?, CancellationToken)
+  nameWithType: LocalFileStorage.DeleteFilesAsync(string?, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFilesAsync(string?, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 根据搜索模式删除文件
+  example: []
+  syntax:
+    content: public Task<int> DeleteFilesAsync(string? searchPattern = null, CancellationToken cancellation = default)
+    parameters:
+    - id: searchPattern
+      type: System.String
+      description: ''
+    - id: cancellation
+      type: System.Threading.CancellationToken
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+      description: ''
+    content.vb: Public Function DeleteFilesAsync(searchPattern As String = Nothing, cancellation As CancellationToken = Nothing) As Task(Of Integer)
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFilesAsync*
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage.DeleteFilesAsync(System.String,System.Threading.CancellationToken)
+  nameWithType.vb: LocalFileStorage.DeleteFilesAsync(String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFilesAsync(String, System.Threading.CancellationToken)
+  name.vb: DeleteFilesAsync(String, CancellationToken)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.Dispose
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.Dispose
+  id: Dispose
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: LocalFileStorage.Dispose()
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.Dispose()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.ExistsAsync(System.String)
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.ExistsAsync(System.String)
+  id: ExistsAsync(System.String)
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: ExistsAsync(string)
+  nameWithType: LocalFileStorage.ExistsAsync(string)
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.ExistsAsync(string)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 判断文件是否存在
+  example: []
+  syntax:
+    content: public Task<bool> ExistsAsync(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: ''
+    content.vb: Public Function ExistsAsync(path As String) As Task(Of Boolean)
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.ExistsAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage.ExistsAsync(System.String)
+  nameWithType.vb: LocalFileStorage.ExistsAsync(String)
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.ExistsAsync(String)
+  name.vb: ExistsAsync(String)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.GetFileInfoAsync(System.String)
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.GetFileInfoAsync(System.String)
+  id: GetFileInfoAsync(System.String)
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: GetFileInfoAsync(string)
+  nameWithType: LocalFileStorage.GetFileInfoAsync(string)
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.GetFileInfoAsync(string)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 获取文件信息
+  example: []
+  syntax:
+    content: public Task<FileSpec?> GetFileInfoAsync(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{Biwen.QuickApi.Storage.FileSpec}
+      description: ''
+    content.vb: Public Function GetFileInfoAsync(path As String) As Task(Of FileSpec)
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.GetFileInfoAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage.GetFileInfoAsync(System.String)
+  nameWithType.vb: LocalFileStorage.GetFileInfoAsync(String)
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.GetFileInfoAsync(String)
+  name.vb: GetFileInfoAsync(String)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync(System.String,System.Threading.CancellationToken)
+  id: GetFileStreamAsync(System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: GetFileStreamAsync(string, CancellationToken)
+  nameWithType: LocalFileStorage.GetFileStreamAsync(string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 获取文件流,默认为读取模式
+  example: []
+  syntax:
+    content: public Task<Stream> GetFileStreamAsync(string path, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: ''
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.IO.Stream}
+      description: ''
+    content.vb: Public Function GetFileStreamAsync(path As String, cancellationToken As CancellationToken = Nothing) As Task(Of Stream)
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync*
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(System.String,System.Threading.CancellationToken)
+  nameWithType.vb: LocalFileStorage.GetFileStreamAsync(String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync(String, System.Threading.CancellationToken)
+  name.vb: GetFileStreamAsync(String, CancellationToken)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync(System.String,Biwen.QuickApi.Storage.StreamMode,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync(System.String,Biwen.QuickApi.Storage.StreamMode,System.Threading.CancellationToken)
+  id: GetFileStreamAsync(System.String,Biwen.QuickApi.Storage.StreamMode,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: GetFileStreamAsync(string, StreamMode, CancellationToken)
+  nameWithType: LocalFileStorage.GetFileStreamAsync(string, StreamMode, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync(string, Biwen.QuickApi.Storage.StreamMode, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 获取文件流
+  example: []
+  syntax:
+    content: public Task<Stream> GetFileStreamAsync(string path, StreamMode streamMode, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: ''
+    - id: streamMode
+      type: Biwen.QuickApi.Storage.StreamMode
+      description: ''
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.IO.Stream}
+      description: ''
+    content.vb: Public Function GetFileStreamAsync(path As String, streamMode As StreamMode, cancellationToken As CancellationToken = Nothing) As Task(Of Stream)
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(System.String,Biwen.QuickApi.Storage.StreamMode,System.Threading.CancellationToken)
+  nameWithType.vb: LocalFileStorage.GetFileStreamAsync(String, StreamMode, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync(String, Biwen.QuickApi.Storage.StreamMode, System.Threading.CancellationToken)
+  name.vb: GetFileStreamAsync(String, StreamMode, CancellationToken)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.GetPagedFileListAsync(System.Int32,System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.GetPagedFileListAsync(System.Int32,System.String,System.Threading.CancellationToken)
+  id: GetPagedFileListAsync(System.Int32,System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: GetPagedFileListAsync(int, string?, CancellationToken)
+  nameWithType: LocalFileStorage.GetPagedFileListAsync(int, string?, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.GetPagedFileListAsync(int, string?, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 获取分页文件列表
+  example: []
+  syntax:
+    content: public Task<PagedFileListResult> GetPagedFileListAsync(int pageSize = 100, string? searchPattern = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: pageSize
+      type: System.Int32
+      description: ''
+    - id: searchPattern
+      type: System.String
+      description: ''
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{Biwen.QuickApi.Storage.PagedFileListResult}
+      description: ''
+    content.vb: Public Function GetPagedFileListAsync(pageSize As Integer = 100, searchPattern As String = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of PagedFileListResult)
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.GetPagedFileListAsync*
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage.GetPagedFileListAsync(System.Int32,System.String,System.Threading.CancellationToken)
+  nameWithType.vb: LocalFileStorage.GetPagedFileListAsync(Integer, String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.GetPagedFileListAsync(Integer, String, System.Threading.CancellationToken)
+  name.vb: GetPagedFileListAsync(Integer, String, CancellationToken)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.RenameFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.RenameFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  id: RenameFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: RenameFileAsync(string, string, CancellationToken)
+  nameWithType: LocalFileStorage.RenameFileAsync(string, string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.RenameFileAsync(string, string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 重命名文件
+  example: []
+  syntax:
+    content: public Task<bool> RenameFileAsync(string path, string newPath, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: ''
+    - id: newPath
+      type: System.String
+      description: ''
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: ''
+    content.vb: Public Function RenameFileAsync(path As String, newPath As String, cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.RenameFileAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage.RenameFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  nameWithType.vb: LocalFileStorage.RenameFileAsync(String, String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.RenameFileAsync(String, String, System.Threading.CancellationToken)
+  name.vb: RenameFileAsync(String, String, CancellationToken)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.SaveFileAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.LocalFileStorage.SaveFileAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  id: SaveFileAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: SaveFileAsync(string, Stream, CancellationToken)
+  nameWithType: LocalFileStorage.SaveFileAsync(string, Stream, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.SaveFileAsync(string, System.IO.Stream, System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 保存文件
+  example: []
+  syntax:
+    content: public Task<bool> SaveFileAsync(string path, Stream stream, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: ''
+    - id: stream
+      type: System.IO.Stream
+      description: ''
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: ''
+    content.vb: Public Function SaveFileAsync(path As String, stream As Stream, cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.SaveFileAsync*
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage.SaveFileAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  nameWithType.vb: LocalFileStorage.SaveFileAsync(String, Stream, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.SaveFileAsync(String, System.IO.Stream, System.Threading.CancellationToken)
+  name.vb: SaveFileAsync(String, Stream, CancellationToken)
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.Folder
+  commentId: P:Biwen.QuickApi.Storage.LocalFileStorage.Folder
+  id: Folder
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: Folder
+  nameWithType: LocalFileStorage.Folder
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.Folder
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 文件夹路径
+  example: []
+  syntax:
+    content: public string Folder { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Folder As String
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.Folder*
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.Serializer
+  commentId: P:Biwen.QuickApi.Storage.LocalFileStorage.Serializer
+  id: Serializer
+  parent: Biwen.QuickApi.Storage.LocalFileStorage
+  langs:
+  - csharp
+  - vb
+  name: Serializer
+  nameWithType: LocalFileStorage.Serializer
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.Serializer
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/LocalFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  summary: 序列化器
+  example: []
+  syntax:
+    content: public ISerializer Serializer { get; }
+    parameters: []
+    return:
+      type: Biwen.QuickApi.Serializer.ISerializer
+    content.vb: Public ReadOnly Property Serializer As ISerializer
+  overload: Biwen.QuickApi.Storage.LocalFileStorage.Serializer*
+  implements:
+  - Biwen.QuickApi.Storage.IFileStorage.Serializer
+references:
+- uid: Biwen.QuickApi.Storage
+  commentId: N:Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Storage
+  nameWithType: Biwen.QuickApi.Storage
+  fullName: Biwen.QuickApi.Storage
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Storage
+    name: Storage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Storage
+    name: Storage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Storage.IFileStorage
+  commentId: T:Biwen.QuickApi.Storage.IFileStorage
+  parent: Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html
+  name: IFileStorage
+  nameWithType: IFileStorage
+  fullName: Biwen.QuickApi.Storage.IFileStorage
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(System.Collections.Generic.IEnumerable{Biwen.QuickApi.Storage.FileSpec})
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage,System.Collections.Generic.IEnumerable{Biwen.QuickApi.Storage.FileSpec})
+  parent: Biwen.QuickApi.Storage.FileStorageExtensions
+  definition: Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage,System.Collections.Generic.IEnumerable{Biwen.QuickApi.Storage.FileSpec})
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_DeleteFilesAsync_Biwen_QuickApi_Storage_IFileStorage_System_Collections_Generic_IEnumerable_Biwen_QuickApi_Storage_FileSpec__
+  name: DeleteFilesAsync(IFileStorage, IEnumerable<FileSpec>)
+  nameWithType: FileStorageExtensions.DeleteFilesAsync(IFileStorage, IEnumerable<FileSpec>)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage, System.Collections.Generic.IEnumerable<Biwen.QuickApi.Storage.FileSpec>)
+  nameWithType.vb: FileStorageExtensions.DeleteFilesAsync(IFileStorage, IEnumerable(Of FileSpec))
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage, System.Collections.Generic.IEnumerable(Of Biwen.QuickApi.Storage.FileSpec))
+  name.vb: DeleteFilesAsync(IFileStorage, IEnumerable(Of FileSpec))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage,System.Collections.Generic.IEnumerable{Biwen.QuickApi.Storage.FileSpec})
+    name: DeleteFilesAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_DeleteFilesAsync_Biwen_QuickApi_Storage_IFileStorage_System_Collections_Generic_IEnumerable_Biwen_QuickApi_Storage_FileSpec__
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Biwen.QuickApi.Storage.FileSpec
+    name: FileSpec
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileSpec.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage,System.Collections.Generic.IEnumerable{Biwen.QuickApi.Storage.FileSpec})
+    name: DeleteFilesAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_DeleteFilesAsync_Biwen_QuickApi_Storage_IFileStorage_System_Collections_Generic_IEnumerable_Biwen_QuickApi_Storage_FileSpec__
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Storage.FileSpec
+    name: FileSpec
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileSpec.html
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(System.String)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+  parent: Biwen.QuickApi.Storage.FileStorageExtensions
+  definition: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  name: GetFileContentsAsync(IFileStorage, string)
+  nameWithType: FileStorageExtensions.GetFileContentsAsync(IFileStorage, string)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage, string)
+  nameWithType.vb: FileStorageExtensions.GetFileContentsAsync(IFileStorage, String)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage, String)
+  name.vb: GetFileContentsAsync(IFileStorage, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+    name: GetFileContentsAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+    name: GetFileContentsAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(System.String)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+  parent: Biwen.QuickApi.Storage.FileStorageExtensions
+  definition: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsRawAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  name: GetFileContentsRawAsync(IFileStorage, string)
+  nameWithType: FileStorageExtensions.GetFileContentsRawAsync(IFileStorage, string)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage, string)
+  nameWithType.vb: FileStorageExtensions.GetFileContentsRawAsync(IFileStorage, String)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage, String)
+  name.vb: GetFileContentsRawAsync(IFileStorage, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+    name: GetFileContentsRawAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsRawAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+    name: GetFileContentsRawAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsRawAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.FileStorageExtensions
+  definition: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileListAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_
+  name: GetFileListAsync(IFileStorage, string, int?, CancellationToken)
+  nameWithType: FileStorageExtensions.GetFileListAsync(IFileStorage, string, int?, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage, string, int?, System.Threading.CancellationToken)
+  nameWithType.vb: FileStorageExtensions.GetFileListAsync(IFileStorage, String, Integer?, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage, String, Integer?, System.Threading.CancellationToken)
+  name.vb: GetFileListAsync(IFileStorage, String, Integer?, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)
+    name: GetFileListAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileListAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)
+    name: GetFileListAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileListAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync``1(System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.FileStorageExtensions
+  definition: Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Threading.CancellationToken)
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Threading_CancellationToken_
+  name: GetObjectAsync<T>(IFileStorage, string, CancellationToken)
+  nameWithType: FileStorageExtensions.GetObjectAsync<T>(IFileStorage, string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync<T>(Biwen.QuickApi.Storage.IFileStorage, string, System.Threading.CancellationToken)
+  nameWithType.vb: FileStorageExtensions.GetObjectAsync(Of T)(IFileStorage, String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync(Of T)(Biwen.QuickApi.Storage.IFileStorage, String, System.Threading.CancellationToken)
+  name.vb: GetObjectAsync(Of T)(IFileStorage, String, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Threading.CancellationToken)
+    name: GetObjectAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Threading_CancellationToken_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Threading.CancellationToken)
+    name: GetObjectAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Threading_CancellationToken_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(System.String,System.String)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.String)
+  parent: Biwen.QuickApi.Storage.FileStorageExtensions
+  definition: Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.String)
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveFileAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_String_
+  name: SaveFileAsync(IFileStorage, string, string)
+  nameWithType: FileStorageExtensions.SaveFileAsync(IFileStorage, string, string)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage, string, string)
+  nameWithType.vb: FileStorageExtensions.SaveFileAsync(IFileStorage, String, String)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage, String, String)
+  name.vb: SaveFileAsync(IFileStorage, String, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.String)
+    name: SaveFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveFileAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.String)
+    name: SaveFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveFileAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Storage.IFileStorage.Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync``1(System.String,{T},System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,``0,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.FileStorageExtensions
+  definition: Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,``0,System.Threading.CancellationToken)
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String___0_System_Threading_CancellationToken_
+  name: SaveObjectAsync<T>(IFileStorage, string, T, CancellationToken)
+  nameWithType: FileStorageExtensions.SaveObjectAsync<T>(IFileStorage, string, T, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync<T>(Biwen.QuickApi.Storage.IFileStorage, string, T, System.Threading.CancellationToken)
+  nameWithType.vb: FileStorageExtensions.SaveObjectAsync(Of T)(IFileStorage, String, T, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync(Of T)(Biwen.QuickApi.Storage.IFileStorage, String, T, System.Threading.CancellationToken)
+  name.vb: SaveObjectAsync(Of T)(IFileStorage, String, T, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,``0,System.Threading.CancellationToken)
+    name: SaveObjectAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String___0_System_Threading_CancellationToken_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,``0,System.Threading.CancellationToken)
+    name: SaveObjectAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String___0_System_Threading_CancellationToken_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage,System.Collections.Generic.IEnumerable{Biwen.QuickApi.Storage.FileSpec})
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage,System.Collections.Generic.IEnumerable{Biwen.QuickApi.Storage.FileSpec})
+  isExternal: true
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_DeleteFilesAsync_Biwen_QuickApi_Storage_IFileStorage_System_Collections_Generic_IEnumerable_Biwen_QuickApi_Storage_FileSpec__
+  name: DeleteFilesAsync(IFileStorage, IEnumerable<FileSpec>)
+  nameWithType: FileStorageExtensions.DeleteFilesAsync(IFileStorage, IEnumerable<FileSpec>)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage, System.Collections.Generic.IEnumerable<Biwen.QuickApi.Storage.FileSpec>)
+  nameWithType.vb: FileStorageExtensions.DeleteFilesAsync(IFileStorage, IEnumerable(Of FileSpec))
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage, System.Collections.Generic.IEnumerable(Of Biwen.QuickApi.Storage.FileSpec))
+  name.vb: DeleteFilesAsync(IFileStorage, IEnumerable(Of FileSpec))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage,System.Collections.Generic.IEnumerable{Biwen.QuickApi.Storage.FileSpec})
+    name: DeleteFilesAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_DeleteFilesAsync_Biwen_QuickApi_Storage_IFileStorage_System_Collections_Generic_IEnumerable_Biwen_QuickApi_Storage_FileSpec__
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Biwen.QuickApi.Storage.FileSpec
+    name: FileSpec
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileSpec.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage,System.Collections.Generic.IEnumerable{Biwen.QuickApi.Storage.FileSpec})
+    name: DeleteFilesAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_DeleteFilesAsync_Biwen_QuickApi_Storage_IFileStorage_System_Collections_Generic_IEnumerable_Biwen_QuickApi_Storage_FileSpec__
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Storage.FileSpec
+    name: FileSpec
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileSpec.html
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Storage.FileStorageExtensions
+  commentId: T:Biwen.QuickApi.Storage.FileStorageExtensions
+  parent: Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html
+  name: FileStorageExtensions
+  nameWithType: FileStorageExtensions
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions
+- uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+  isExternal: true
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  name: GetFileContentsAsync(IFileStorage, string)
+  nameWithType: FileStorageExtensions.GetFileContentsAsync(IFileStorage, string)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage, string)
+  nameWithType.vb: FileStorageExtensions.GetFileContentsAsync(IFileStorage, String)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage, String)
+  name.vb: GetFileContentsAsync(IFileStorage, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+    name: GetFileContentsAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+    name: GetFileContentsAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+  isExternal: true
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsRawAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  name: GetFileContentsRawAsync(IFileStorage, string)
+  nameWithType: FileStorageExtensions.GetFileContentsRawAsync(IFileStorage, string)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage, string)
+  nameWithType.vb: FileStorageExtensions.GetFileContentsRawAsync(IFileStorage, String)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage, String)
+  name.vb: GetFileContentsRawAsync(IFileStorage, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+    name: GetFileContentsRawAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsRawAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage,System.String)
+    name: GetFileContentsRawAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileContentsRawAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)
+  isExternal: true
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileListAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_
+  name: GetFileListAsync(IFileStorage, string, int?, CancellationToken)
+  nameWithType: FileStorageExtensions.GetFileListAsync(IFileStorage, string, int?, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage, string, int?, System.Threading.CancellationToken)
+  nameWithType.vb: FileStorageExtensions.GetFileListAsync(IFileStorage, String, Integer?, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage, String, Integer?, System.Threading.CancellationToken)
+  name.vb: GetFileListAsync(IFileStorage, String, Integer?, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)
+    name: GetFileListAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileListAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)
+    name: GetFileListAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetFileListAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Threading.CancellationToken)
+  isExternal: true
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Threading_CancellationToken_
+  name: GetObjectAsync<T>(IFileStorage, string, CancellationToken)
+  nameWithType: FileStorageExtensions.GetObjectAsync<T>(IFileStorage, string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync<T>(Biwen.QuickApi.Storage.IFileStorage, string, System.Threading.CancellationToken)
+  nameWithType.vb: FileStorageExtensions.GetObjectAsync(Of T)(IFileStorage, String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync(Of T)(Biwen.QuickApi.Storage.IFileStorage, String, System.Threading.CancellationToken)
+  name.vb: GetObjectAsync(Of T)(IFileStorage, String, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Threading.CancellationToken)
+    name: GetObjectAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Threading_CancellationToken_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,System.Threading.CancellationToken)
+    name: GetObjectAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_GetObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String_System_Threading_CancellationToken_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.String)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.String)
+  isExternal: true
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveFileAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_String_
+  name: SaveFileAsync(IFileStorage, string, string)
+  nameWithType: FileStorageExtensions.SaveFileAsync(IFileStorage, string, string)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage, string, string)
+  nameWithType.vb: FileStorageExtensions.SaveFileAsync(IFileStorage, String, String)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage, String, String)
+  name.vb: SaveFileAsync(IFileStorage, String, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.String)
+    name: SaveFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveFileAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage,System.String,System.String)
+    name: SaveFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveFileAsync_Biwen_QuickApi_Storage_IFileStorage_System_String_System_String_
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,``0,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,``0,System.Threading.CancellationToken)
+  isExternal: true
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String___0_System_Threading_CancellationToken_
+  name: SaveObjectAsync<T>(IFileStorage, string, T, CancellationToken)
+  nameWithType: FileStorageExtensions.SaveObjectAsync<T>(IFileStorage, string, T, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync<T>(Biwen.QuickApi.Storage.IFileStorage, string, T, System.Threading.CancellationToken)
+  nameWithType.vb: FileStorageExtensions.SaveObjectAsync(Of T)(IFileStorage, String, T, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync(Of T)(Biwen.QuickApi.Storage.IFileStorage, String, T, System.Threading.CancellationToken)
+  name.vb: SaveObjectAsync(Of T)(IFileStorage, String, T, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,``0,System.Threading.CancellationToken)
+    name: SaveObjectAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String___0_System_Threading_CancellationToken_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync``1(Biwen.QuickApi.Storage.IFileStorage,System.String,``0,System.Threading.CancellationToken)
+    name: SaveObjectAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileStorageExtensions.html#Biwen_QuickApi_Storage_FileStorageExtensions_SaveObjectAsync__1_Biwen_QuickApi_Storage_IFileStorage_System_String___0_System_Threading_CancellationToken_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Storage.IFileStorage
+    name: IFileStorage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.QuickApiExcetion
+  commentId: T:Biwen.QuickApi.QuickApiExcetion
+  isExternal: true
+  href: Biwen.QuickApi.QuickApiExcetion.html
+  name: QuickApiExcetion
+  nameWithType: QuickApiExcetion
+  fullName: Biwen.QuickApi.QuickApiExcetion
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.#ctor*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage__ctor_System_IServiceProvider_System_String_
+  name: LocalFileStorage
+  nameWithType: LocalFileStorage.LocalFileStorage
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.LocalFileStorage
+  nameWithType.vb: LocalFileStorage.New
+  fullName.vb: Biwen.QuickApi.Storage.LocalFileStorage.New
+  name.vb: New
+- uid: System.IServiceProvider
+  commentId: T:System.IServiceProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  name: IServiceProvider
+  nameWithType: IServiceProvider
+  fullName: System.IServiceProvider
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.CopyFileAsync*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.CopyFileAsync
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_CopyFileAsync_System_String_System_String_System_Threading_CancellationToken_
+  name: CopyFileAsync
+  nameWithType: LocalFileStorage.CopyFileAsync
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.CopyFileAsync
+- uid: Biwen.QuickApi.Storage.IFileStorage.CopyFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.IFileStorage.CopyFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.IFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_CopyFileAsync_System_String_System_String_System_Threading_CancellationToken_
+  name: CopyFileAsync(string, string, CancellationToken)
+  nameWithType: IFileStorage.CopyFileAsync(string, string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.IFileStorage.CopyFileAsync(string, string, System.Threading.CancellationToken)
+  nameWithType.vb: IFileStorage.CopyFileAsync(String, String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.IFileStorage.CopyFileAsync(String, String, System.Threading.CancellationToken)
+  name.vb: CopyFileAsync(String, String, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.CopyFileAsync(System.String,System.String,System.Threading.CancellationToken)
+    name: CopyFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_CopyFileAsync_System_String_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.CopyFileAsync(System.String,System.String,System.Threading.CancellationToken)
+    name: CopyFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_CopyFileAsync_System_String_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFileAsync*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.DeleteFileAsync
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_DeleteFileAsync_System_String_System_Threading_CancellationToken_
+  name: DeleteFileAsync
+  nameWithType: LocalFileStorage.DeleteFileAsync
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFileAsync
+- uid: Biwen.QuickApi.Storage.IFileStorage.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.IFileStorage.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.IFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_DeleteFileAsync_System_String_System_Threading_CancellationToken_
+  name: DeleteFileAsync(string, CancellationToken)
+  nameWithType: IFileStorage.DeleteFileAsync(string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.IFileStorage.DeleteFileAsync(string, System.Threading.CancellationToken)
+  nameWithType.vb: IFileStorage.DeleteFileAsync(String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.IFileStorage.DeleteFileAsync(String, System.Threading.CancellationToken)
+  name.vb: DeleteFileAsync(String, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+    name: DeleteFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_DeleteFileAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+    name: DeleteFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_DeleteFileAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFilesAsync*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.DeleteFilesAsync
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_DeleteFilesAsync_System_String_System_Threading_CancellationToken_
+  name: DeleteFilesAsync
+  nameWithType: LocalFileStorage.DeleteFilesAsync
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.DeleteFilesAsync
+- uid: Biwen.QuickApi.Storage.IFileStorage.DeleteFilesAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.IFileStorage.DeleteFilesAsync(System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.IFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_DeleteFilesAsync_System_String_System_Threading_CancellationToken_
+  name: DeleteFilesAsync(string, CancellationToken)
+  nameWithType: IFileStorage.DeleteFilesAsync(string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.IFileStorage.DeleteFilesAsync(string, System.Threading.CancellationToken)
+  nameWithType.vb: IFileStorage.DeleteFilesAsync(String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.IFileStorage.DeleteFilesAsync(String, System.Threading.CancellationToken)
+  name.vb: DeleteFilesAsync(String, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.DeleteFilesAsync(System.String,System.Threading.CancellationToken)
+    name: DeleteFilesAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_DeleteFilesAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.DeleteFilesAsync(System.String,System.Threading.CancellationToken)
+    name: DeleteFilesAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_DeleteFilesAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.Dispose*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.Dispose
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_Dispose
+  name: Dispose
+  nameWithType: LocalFileStorage.Dispose
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.ExistsAsync*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.ExistsAsync
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_ExistsAsync_System_String_
+  name: ExistsAsync
+  nameWithType: LocalFileStorage.ExistsAsync
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.ExistsAsync
+- uid: Biwen.QuickApi.Storage.IFileStorage.ExistsAsync(System.String)
+  commentId: M:Biwen.QuickApi.Storage.IFileStorage.ExistsAsync(System.String)
+  parent: Biwen.QuickApi.Storage.IFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_ExistsAsync_System_String_
+  name: ExistsAsync(string)
+  nameWithType: IFileStorage.ExistsAsync(string)
+  fullName: Biwen.QuickApi.Storage.IFileStorage.ExistsAsync(string)
+  nameWithType.vb: IFileStorage.ExistsAsync(String)
+  fullName.vb: Biwen.QuickApi.Storage.IFileStorage.ExistsAsync(String)
+  name.vb: ExistsAsync(String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.ExistsAsync(System.String)
+    name: ExistsAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_ExistsAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.ExistsAsync(System.String)
+    name: ExistsAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_ExistsAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.GetFileInfoAsync*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.GetFileInfoAsync
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_GetFileInfoAsync_System_String_
+  name: GetFileInfoAsync
+  nameWithType: LocalFileStorage.GetFileInfoAsync
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.GetFileInfoAsync
+- uid: Biwen.QuickApi.Storage.IFileStorage.GetFileInfoAsync(System.String)
+  commentId: M:Biwen.QuickApi.Storage.IFileStorage.GetFileInfoAsync(System.String)
+  parent: Biwen.QuickApi.Storage.IFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetFileInfoAsync_System_String_
+  name: GetFileInfoAsync(string)
+  nameWithType: IFileStorage.GetFileInfoAsync(string)
+  fullName: Biwen.QuickApi.Storage.IFileStorage.GetFileInfoAsync(string)
+  nameWithType.vb: IFileStorage.GetFileInfoAsync(String)
+  fullName.vb: Biwen.QuickApi.Storage.IFileStorage.GetFileInfoAsync(String)
+  name.vb: GetFileInfoAsync(String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.GetFileInfoAsync(System.String)
+    name: GetFileInfoAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetFileInfoAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.GetFileInfoAsync(System.String)
+    name: GetFileInfoAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetFileInfoAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{Biwen.QuickApi.Storage.FileSpec}
+  commentId: T:System.Threading.Tasks.Task{Biwen.QuickApi.Storage.FileSpec}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<FileSpec>
+  nameWithType: Task<FileSpec>
+  fullName: System.Threading.Tasks.Task<Biwen.QuickApi.Storage.FileSpec>
+  nameWithType.vb: Task(Of FileSpec)
+  fullName.vb: System.Threading.Tasks.Task(Of Biwen.QuickApi.Storage.FileSpec)
+  name.vb: Task(Of FileSpec)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Biwen.QuickApi.Storage.FileSpec
+    name: FileSpec
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileSpec.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Storage.FileSpec
+    name: FileSpec
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileSpec.html
+  - name: )
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_GetFileStreamAsync_System_String_System_Threading_CancellationToken_
+  name: GetFileStreamAsync
+  nameWithType: LocalFileStorage.GetFileStreamAsync
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.GetFileStreamAsync
+- uid: Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.IFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetFileStreamAsync_System_String_System_Threading_CancellationToken_
+  name: GetFileStreamAsync(string, CancellationToken)
+  nameWithType: IFileStorage.GetFileStreamAsync(string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(string, System.Threading.CancellationToken)
+  nameWithType.vb: IFileStorage.GetFileStreamAsync(String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(String, System.Threading.CancellationToken)
+  name.vb: GetFileStreamAsync(String, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(System.String,System.Threading.CancellationToken)
+    name: GetFileStreamAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetFileStreamAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(System.String,System.Threading.CancellationToken)
+    name: GetFileStreamAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetFileStreamAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task{System.IO.Stream}
+  commentId: T:System.Threading.Tasks.Task{System.IO.Stream}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Stream>
+  nameWithType: Task<Stream>
+  fullName: System.Threading.Tasks.Task<System.IO.Stream>
+  nameWithType.vb: Task(Of Stream)
+  fullName.vb: System.Threading.Tasks.Task(Of System.IO.Stream)
+  name.vb: Task(Of Stream)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(System.String,Biwen.QuickApi.Storage.StreamMode,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(System.String,Biwen.QuickApi.Storage.StreamMode,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.IFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetFileStreamAsync_System_String_Biwen_QuickApi_Storage_StreamMode_System_Threading_CancellationToken_
+  name: GetFileStreamAsync(string, StreamMode, CancellationToken)
+  nameWithType: IFileStorage.GetFileStreamAsync(string, StreamMode, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(string, Biwen.QuickApi.Storage.StreamMode, System.Threading.CancellationToken)
+  nameWithType.vb: IFileStorage.GetFileStreamAsync(String, StreamMode, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(String, Biwen.QuickApi.Storage.StreamMode, System.Threading.CancellationToken)
+  name.vb: GetFileStreamAsync(String, StreamMode, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(System.String,Biwen.QuickApi.Storage.StreamMode,System.Threading.CancellationToken)
+    name: GetFileStreamAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetFileStreamAsync_System_String_Biwen_QuickApi_Storage_StreamMode_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Storage.StreamMode
+    name: StreamMode
+    isExternal: true
+    href: Biwen.QuickApi.Storage.StreamMode.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.GetFileStreamAsync(System.String,Biwen.QuickApi.Storage.StreamMode,System.Threading.CancellationToken)
+    name: GetFileStreamAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetFileStreamAsync_System_String_Biwen_QuickApi_Storage_StreamMode_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Storage.StreamMode
+    name: StreamMode
+    isExternal: true
+    href: Biwen.QuickApi.Storage.StreamMode.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.Storage.StreamMode
+  commentId: T:Biwen.QuickApi.Storage.StreamMode
+  parent: Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.StreamMode.html
+  name: StreamMode
+  nameWithType: StreamMode
+  fullName: Biwen.QuickApi.Storage.StreamMode
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.GetPagedFileListAsync*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.GetPagedFileListAsync
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_GetPagedFileListAsync_System_Int32_System_String_System_Threading_CancellationToken_
+  name: GetPagedFileListAsync
+  nameWithType: LocalFileStorage.GetPagedFileListAsync
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.GetPagedFileListAsync
+- uid: Biwen.QuickApi.Storage.IFileStorage.GetPagedFileListAsync(System.Int32,System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.IFileStorage.GetPagedFileListAsync(System.Int32,System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.IFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetPagedFileListAsync_System_Int32_System_String_System_Threading_CancellationToken_
+  name: GetPagedFileListAsync(int, string, CancellationToken)
+  nameWithType: IFileStorage.GetPagedFileListAsync(int, string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.IFileStorage.GetPagedFileListAsync(int, string, System.Threading.CancellationToken)
+  nameWithType.vb: IFileStorage.GetPagedFileListAsync(Integer, String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.IFileStorage.GetPagedFileListAsync(Integer, String, System.Threading.CancellationToken)
+  name.vb: GetPagedFileListAsync(Integer, String, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.GetPagedFileListAsync(System.Int32,System.String,System.Threading.CancellationToken)
+    name: GetPagedFileListAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetPagedFileListAsync_System_Int32_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.GetPagedFileListAsync(System.Int32,System.String,System.Threading.CancellationToken)
+    name: GetPagedFileListAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_GetPagedFileListAsync_System_Int32_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{Biwen.QuickApi.Storage.PagedFileListResult}
+  commentId: T:System.Threading.Tasks.Task{Biwen.QuickApi.Storage.PagedFileListResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<PagedFileListResult>
+  nameWithType: Task<PagedFileListResult>
+  fullName: System.Threading.Tasks.Task<Biwen.QuickApi.Storage.PagedFileListResult>
+  nameWithType.vb: Task(Of PagedFileListResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Biwen.QuickApi.Storage.PagedFileListResult)
+  name.vb: Task(Of PagedFileListResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Biwen.QuickApi.Storage.PagedFileListResult
+    name: PagedFileListResult
+    isExternal: true
+    href: Biwen.QuickApi.Storage.PagedFileListResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Storage.PagedFileListResult
+    name: PagedFileListResult
+    isExternal: true
+    href: Biwen.QuickApi.Storage.PagedFileListResult.html
+  - name: )
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.RenameFileAsync*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.RenameFileAsync
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_RenameFileAsync_System_String_System_String_System_Threading_CancellationToken_
+  name: RenameFileAsync
+  nameWithType: LocalFileStorage.RenameFileAsync
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.RenameFileAsync
+- uid: Biwen.QuickApi.Storage.IFileStorage.RenameFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.IFileStorage.RenameFileAsync(System.String,System.String,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.IFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_RenameFileAsync_System_String_System_String_System_Threading_CancellationToken_
+  name: RenameFileAsync(string, string, CancellationToken)
+  nameWithType: IFileStorage.RenameFileAsync(string, string, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.IFileStorage.RenameFileAsync(string, string, System.Threading.CancellationToken)
+  nameWithType.vb: IFileStorage.RenameFileAsync(String, String, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.IFileStorage.RenameFileAsync(String, String, System.Threading.CancellationToken)
+  name.vb: RenameFileAsync(String, String, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.RenameFileAsync(System.String,System.String,System.Threading.CancellationToken)
+    name: RenameFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_RenameFileAsync_System_String_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.RenameFileAsync(System.String,System.String,System.Threading.CancellationToken)
+    name: RenameFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_RenameFileAsync_System_String_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.SaveFileAsync*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.SaveFileAsync
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_SaveFileAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_
+  name: SaveFileAsync
+  nameWithType: LocalFileStorage.SaveFileAsync
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.SaveFileAsync
+- uid: Biwen.QuickApi.Storage.IFileStorage.SaveFileAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.Storage.IFileStorage.SaveFileAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.Storage.IFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_SaveFileAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_
+  name: SaveFileAsync(string, Stream, CancellationToken)
+  nameWithType: IFileStorage.SaveFileAsync(string, Stream, CancellationToken)
+  fullName: Biwen.QuickApi.Storage.IFileStorage.SaveFileAsync(string, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType.vb: IFileStorage.SaveFileAsync(String, Stream, CancellationToken)
+  fullName.vb: Biwen.QuickApi.Storage.IFileStorage.SaveFileAsync(String, System.IO.Stream, System.Threading.CancellationToken)
+  name.vb: SaveFileAsync(String, Stream, CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.SaveFileAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+    name: SaveFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_SaveFileAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Storage.IFileStorage.SaveFileAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+    name: SaveFileAsync
+    isExternal: true
+    href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_SaveFileAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.Folder*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.Folder
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_Folder
+  name: Folder
+  nameWithType: LocalFileStorage.Folder
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.Folder
+- uid: Biwen.QuickApi.Storage.LocalFileStorage.Serializer*
+  commentId: Overload:Biwen.QuickApi.Storage.LocalFileStorage.Serializer
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html#Biwen_QuickApi_Storage_LocalFileStorage_Serializer
+  name: Serializer
+  nameWithType: LocalFileStorage.Serializer
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage.Serializer
+- uid: Biwen.QuickApi.Storage.IFileStorage.Serializer
+  commentId: P:Biwen.QuickApi.Storage.IFileStorage.Serializer
+  parent: Biwen.QuickApi.Storage.IFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html#Biwen_QuickApi_Storage_IFileStorage_Serializer
+  name: Serializer
+  nameWithType: IFileStorage.Serializer
+  fullName: Biwen.QuickApi.Storage.IFileStorage.Serializer
+- uid: Biwen.QuickApi.Serializer.ISerializer
+  commentId: T:Biwen.QuickApi.Serializer.ISerializer
+  parent: Biwen.QuickApi.Serializer
+  isExternal: true
+  href: Biwen.QuickApi.Serializer.ISerializer.html
+  name: ISerializer
+  nameWithType: ISerializer
+  fullName: Biwen.QuickApi.Serializer.ISerializer
+- uid: Biwen.QuickApi.Serializer
+  commentId: N:Biwen.QuickApi.Serializer
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Serializer
+  nameWithType: Biwen.QuickApi.Serializer
+  fullName: Biwen.QuickApi.Serializer
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Serializer
+    name: Serializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Serializer
+    name: Serializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.html

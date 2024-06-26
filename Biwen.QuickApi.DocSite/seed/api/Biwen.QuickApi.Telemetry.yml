@@ -6,6 +6,7 @@ items:
   children:
   - Biwen.QuickApi.Telemetry.AutoInjectExtension
   - Biwen.QuickApi.Telemetry.Constant
+  - Biwen.QuickApi.Telemetry.TelemetryOptions
   langs:
   - csharp
   - vb
@@ -23,6 +24,13 @@ references:
   name: Constant
   nameWithType: Constant
   fullName: Biwen.QuickApi.Telemetry.Constant
+- uid: Biwen.QuickApi.Telemetry.TelemetryOptions
+  commentId: T:Biwen.QuickApi.Telemetry.TelemetryOptions
+  isExternal: true
+  href: Biwen.QuickApi.Telemetry.TelemetryOptions.html
+  name: TelemetryOptions
+  nameWithType: TelemetryOptions
+  fullName: Biwen.QuickApi.Telemetry.TelemetryOptions
 - uid: Biwen.QuickApi.Telemetry.AutoInjectExtension
   commentId: T:Biwen.QuickApi.Telemetry.AutoInjectExtension
   isExternal: true

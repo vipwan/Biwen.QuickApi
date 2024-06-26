@@ -1,0 +1,952 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Storage.PagedFileListResult
+  commentId: T:Biwen.QuickApi.Storage.PagedFileListResult
+  id: PagedFileListResult
+  parent: Biwen.QuickApi.Storage
+  children:
+  - Biwen.QuickApi.Storage.PagedFileListResult.#ctor(System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec})
+  - Biwen.QuickApi.Storage.PagedFileListResult.#ctor(System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec},System.Boolean,System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}})
+  - Biwen.QuickApi.Storage.PagedFileListResult.#ctor(System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}})
+  - Biwen.QuickApi.Storage.PagedFileListResult.Data
+  - Biwen.QuickApi.Storage.PagedFileListResult.Empty
+  - Biwen.QuickApi.Storage.PagedFileListResult.Files
+  - Biwen.QuickApi.Storage.PagedFileListResult.HasMore
+  - Biwen.QuickApi.Storage.PagedFileListResult.NextPageAsync
+  langs:
+  - csharp
+  - vb
+  name: PagedFileListResult
+  nameWithType: PagedFileListResult
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/IFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: 'public class PagedFileListResult : IHasNextPageFunc'
+    content.vb: Public Class PagedFileListResult Implements IHasNextPageFunc
+  inheritance:
+  - System.Object
+  implements:
+  - Biwen.QuickApi.Storage.IHasNextPageFunc
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.Empty
+  commentId: F:Biwen.QuickApi.Storage.PagedFileListResult.Empty
+  id: Empty
+  parent: Biwen.QuickApi.Storage.PagedFileListResult
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: PagedFileListResult.Empty
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.Empty
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/IFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: public static readonly PagedFileListResult Empty
+    return:
+      type: Biwen.QuickApi.Storage.PagedFileListResult
+    content.vb: Public Shared ReadOnly Empty As PagedFileListResult
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.#ctor(System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec})
+  commentId: M:Biwen.QuickApi.Storage.PagedFileListResult.#ctor(System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec})
+  id: '#ctor(System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec})'
+  parent: Biwen.QuickApi.Storage.PagedFileListResult
+  langs:
+  - csharp
+  - vb
+  name: PagedFileListResult(IReadOnlyCollection<FileSpec>)
+  nameWithType: PagedFileListResult.PagedFileListResult(IReadOnlyCollection<FileSpec>)
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.PagedFileListResult(System.Collections.Generic.IReadOnlyCollection<Biwen.QuickApi.Storage.FileSpec>)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/IFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: public PagedFileListResult(IReadOnlyCollection<FileSpec> files)
+    parameters:
+    - id: files
+      type: System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec}
+    content.vb: Public Sub New(files As IReadOnlyCollection(Of FileSpec))
+  overload: Biwen.QuickApi.Storage.PagedFileListResult.#ctor*
+  nameWithType.vb: PagedFileListResult.New(IReadOnlyCollection(Of FileSpec))
+  fullName.vb: Biwen.QuickApi.Storage.PagedFileListResult.New(System.Collections.Generic.IReadOnlyCollection(Of Biwen.QuickApi.Storage.FileSpec))
+  name.vb: New(IReadOnlyCollection(Of FileSpec))
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.#ctor(System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec},System.Boolean,System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}})
+  commentId: M:Biwen.QuickApi.Storage.PagedFileListResult.#ctor(System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec},System.Boolean,System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}})
+  id: '#ctor(System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec},System.Boolean,System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}})'
+  parent: Biwen.QuickApi.Storage.PagedFileListResult
+  langs:
+  - csharp
+  - vb
+  name: PagedFileListResult(IReadOnlyCollection<FileSpec>, bool, Func<PagedFileListResult, Task<NextPageResult>>)
+  nameWithType: PagedFileListResult.PagedFileListResult(IReadOnlyCollection<FileSpec>, bool, Func<PagedFileListResult, Task<NextPageResult>>)
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.PagedFileListResult(System.Collections.Generic.IReadOnlyCollection<Biwen.QuickApi.Storage.FileSpec>, bool, System.Func<Biwen.QuickApi.Storage.PagedFileListResult, System.Threading.Tasks.Task<Biwen.QuickApi.Storage.NextPageResult>>)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/IFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: public PagedFileListResult(IReadOnlyCollection<FileSpec> files, bool hasMore, Func<PagedFileListResult, Task<NextPageResult>> nextPageFunc)
+    parameters:
+    - id: files
+      type: System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec}
+    - id: hasMore
+      type: System.Boolean
+    - id: nextPageFunc
+      type: System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}}
+    content.vb: Public Sub New(files As IReadOnlyCollection(Of FileSpec), hasMore As Boolean, nextPageFunc As Func(Of PagedFileListResult, Task(Of NextPageResult)))
+  overload: Biwen.QuickApi.Storage.PagedFileListResult.#ctor*
+  nameWithType.vb: PagedFileListResult.New(IReadOnlyCollection(Of FileSpec), Boolean, Func(Of PagedFileListResult, Task(Of NextPageResult)))
+  fullName.vb: Biwen.QuickApi.Storage.PagedFileListResult.New(System.Collections.Generic.IReadOnlyCollection(Of Biwen.QuickApi.Storage.FileSpec), Boolean, System.Func(Of Biwen.QuickApi.Storage.PagedFileListResult, System.Threading.Tasks.Task(Of Biwen.QuickApi.Storage.NextPageResult)))
+  name.vb: New(IReadOnlyCollection(Of FileSpec), Boolean, Func(Of PagedFileListResult, Task(Of NextPageResult)))
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.#ctor(System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}})
+  commentId: M:Biwen.QuickApi.Storage.PagedFileListResult.#ctor(System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}})
+  id: '#ctor(System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}})'
+  parent: Biwen.QuickApi.Storage.PagedFileListResult
+  langs:
+  - csharp
+  - vb
+  name: PagedFileListResult(Func<PagedFileListResult, Task<NextPageResult>>)
+  nameWithType: PagedFileListResult.PagedFileListResult(Func<PagedFileListResult, Task<NextPageResult>>)
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.PagedFileListResult(System.Func<Biwen.QuickApi.Storage.PagedFileListResult, System.Threading.Tasks.Task<Biwen.QuickApi.Storage.NextPageResult>>)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/IFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: public PagedFileListResult(Func<PagedFileListResult, Task<NextPageResult>> nextPageFunc)
+    parameters:
+    - id: nextPageFunc
+      type: System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}}
+    content.vb: Public Sub New(nextPageFunc As Func(Of PagedFileListResult, Task(Of NextPageResult)))
+  overload: Biwen.QuickApi.Storage.PagedFileListResult.#ctor*
+  nameWithType.vb: PagedFileListResult.New(Func(Of PagedFileListResult, Task(Of NextPageResult)))
+  fullName.vb: Biwen.QuickApi.Storage.PagedFileListResult.New(System.Func(Of Biwen.QuickApi.Storage.PagedFileListResult, System.Threading.Tasks.Task(Of Biwen.QuickApi.Storage.NextPageResult)))
+  name.vb: New(Func(Of PagedFileListResult, Task(Of NextPageResult)))
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.NextPageAsync
+  commentId: M:Biwen.QuickApi.Storage.PagedFileListResult.NextPageAsync
+  id: NextPageAsync
+  parent: Biwen.QuickApi.Storage.PagedFileListResult
+  langs:
+  - csharp
+  - vb
+  name: NextPageAsync()
+  nameWithType: PagedFileListResult.NextPageAsync()
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.NextPageAsync()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/IFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: public Task<bool> NextPageAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function NextPageAsync() As Task(Of Boolean)
+  overload: Biwen.QuickApi.Storage.PagedFileListResult.NextPageAsync*
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.Files
+  commentId: P:Biwen.QuickApi.Storage.PagedFileListResult.Files
+  id: Files
+  parent: Biwen.QuickApi.Storage.PagedFileListResult
+  langs:
+  - csharp
+  - vb
+  name: Files
+  nameWithType: PagedFileListResult.Files
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.Files
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/IFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: public IReadOnlyCollection<FileSpec> Files { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec}
+    content.vb: Public ReadOnly Property Files As IReadOnlyCollection(Of FileSpec)
+  overload: Biwen.QuickApi.Storage.PagedFileListResult.Files*
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.HasMore
+  commentId: P:Biwen.QuickApi.Storage.PagedFileListResult.HasMore
+  id: HasMore
+  parent: Biwen.QuickApi.Storage.PagedFileListResult
+  langs:
+  - csharp
+  - vb
+  name: HasMore
+  nameWithType: PagedFileListResult.HasMore
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.HasMore
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/IFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: public bool HasMore { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasMore As Boolean
+  overload: Biwen.QuickApi.Storage.PagedFileListResult.HasMore*
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.Data
+  commentId: P:Biwen.QuickApi.Storage.PagedFileListResult.Data
+  id: Data
+  parent: Biwen.QuickApi.Storage.PagedFileListResult
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: PagedFileListResult.Data
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.Data
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Storage/IFileStorage.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Storage
+  syntax:
+    content: protected IDictionary<string, object> Data { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IDictionary{System.String,System.Object}
+    content.vb: Protected ReadOnly Property Data As IDictionary(Of String, Object)
+  overload: Biwen.QuickApi.Storage.PagedFileListResult.Data*
+references:
+- uid: Biwen.QuickApi.Storage
+  commentId: N:Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Storage
+  nameWithType: Biwen.QuickApi.Storage
+  fullName: Biwen.QuickApi.Storage
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Storage
+    name: Storage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Storage
+    name: Storage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Storage.IHasNextPageFunc
+  commentId: T:Biwen.QuickApi.Storage.IHasNextPageFunc
+  parent: Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IHasNextPageFunc.html
+  name: IHasNextPageFunc
+  nameWithType: IHasNextPageFunc
+  fullName: Biwen.QuickApi.Storage.IHasNextPageFunc
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Storage.PagedFileListResult
+  commentId: T:Biwen.QuickApi.Storage.PagedFileListResult
+  parent: Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.PagedFileListResult.html
+  name: PagedFileListResult
+  nameWithType: PagedFileListResult
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.#ctor*
+  commentId: Overload:Biwen.QuickApi.Storage.PagedFileListResult.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Storage.PagedFileListResult.html#Biwen_QuickApi_Storage_PagedFileListResult__ctor_System_Collections_Generic_IReadOnlyCollection_Biwen_QuickApi_Storage_FileSpec__
+  name: PagedFileListResult
+  nameWithType: PagedFileListResult.PagedFileListResult
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.PagedFileListResult
+  nameWithType.vb: PagedFileListResult.New
+  fullName.vb: Biwen.QuickApi.Storage.PagedFileListResult.New
+  name.vb: New
+- uid: System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{Biwen.QuickApi.Storage.FileSpec}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<FileSpec>
+  nameWithType: IReadOnlyCollection<FileSpec>
+  fullName: System.Collections.Generic.IReadOnlyCollection<Biwen.QuickApi.Storage.FileSpec>
+  nameWithType.vb: IReadOnlyCollection(Of FileSpec)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of Biwen.QuickApi.Storage.FileSpec)
+  name.vb: IReadOnlyCollection(Of FileSpec)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: Biwen.QuickApi.Storage.FileSpec
+    name: FileSpec
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileSpec.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Storage.FileSpec
+    name: FileSpec
+    isExternal: true
+    href: Biwen.QuickApi.Storage.FileSpec.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}}
+  commentId: T:System.Func{Biwen.QuickApi.Storage.PagedFileListResult,System.Threading.Tasks.Task{Biwen.QuickApi.Storage.NextPageResult}}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<PagedFileListResult, Task<NextPageResult>>
+  nameWithType: Func<PagedFileListResult, Task<NextPageResult>>
+  fullName: System.Func<Biwen.QuickApi.Storage.PagedFileListResult, System.Threading.Tasks.Task<Biwen.QuickApi.Storage.NextPageResult>>
+  nameWithType.vb: Func(Of PagedFileListResult, Task(Of NextPageResult))
+  fullName.vb: System.Func(Of Biwen.QuickApi.Storage.PagedFileListResult, System.Threading.Tasks.Task(Of Biwen.QuickApi.Storage.NextPageResult))
+  name.vb: Func(Of PagedFileListResult, Task(Of NextPageResult))
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Biwen.QuickApi.Storage.PagedFileListResult
+    name: PagedFileListResult
+    isExternal: true
+    href: Biwen.QuickApi.Storage.PagedFileListResult.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Biwen.QuickApi.Storage.NextPageResult
+    name: NextPageResult
+    isExternal: true
+    href: Biwen.QuickApi.Storage.NextPageResult.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Storage.PagedFileListResult
+    name: PagedFileListResult
+    isExternal: true
+    href: Biwen.QuickApi.Storage.PagedFileListResult.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Storage.NextPageResult
+    name: NextPageResult
+    isExternal: true
+    href: Biwen.QuickApi.Storage.NextPageResult.html
+  - name: )
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.NextPageAsync*
+  commentId: Overload:Biwen.QuickApi.Storage.PagedFileListResult.NextPageAsync
+  isExternal: true
+  href: Biwen.QuickApi.Storage.PagedFileListResult.html#Biwen_QuickApi_Storage_PagedFileListResult_NextPageAsync
+  name: NextPageAsync
+  nameWithType: PagedFileListResult.NextPageAsync
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.NextPageAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.Files*
+  commentId: Overload:Biwen.QuickApi.Storage.PagedFileListResult.Files
+  isExternal: true
+  href: Biwen.QuickApi.Storage.PagedFileListResult.html#Biwen_QuickApi_Storage_PagedFileListResult_Files
+  name: Files
+  nameWithType: PagedFileListResult.Files
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.Files
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.HasMore*
+  commentId: Overload:Biwen.QuickApi.Storage.PagedFileListResult.HasMore
+  isExternal: true
+  href: Biwen.QuickApi.Storage.PagedFileListResult.html#Biwen_QuickApi_Storage_PagedFileListResult_HasMore
+  name: HasMore
+  nameWithType: PagedFileListResult.HasMore
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.HasMore
+- uid: Biwen.QuickApi.Storage.PagedFileListResult.Data*
+  commentId: Overload:Biwen.QuickApi.Storage.PagedFileListResult.Data
+  isExternal: true
+  href: Biwen.QuickApi.Storage.PagedFileListResult.html#Biwen_QuickApi_Storage_PagedFileListResult_Data
+  name: Data
+  nameWithType: PagedFileListResult.Data
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult.Data
+- uid: System.Collections.Generic.IDictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<string, object>
+  nameWithType: IDictionary<string, object>
+  fullName: System.Collections.Generic.IDictionary<string, object>
+  nameWithType.vb: IDictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.IDictionary(Of String, Object)
+  name.vb: IDictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )

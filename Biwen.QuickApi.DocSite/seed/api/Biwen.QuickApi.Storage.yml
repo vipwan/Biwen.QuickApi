@@ -1,0 +1,138 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Storage
+  commentId: N:Biwen.QuickApi.Storage
+  id: Biwen.QuickApi.Storage
+  children:
+  - Biwen.QuickApi.Storage.FileSpec
+  - Biwen.QuickApi.Storage.FileStorageExtensions
+  - Biwen.QuickApi.Storage.FileStorageFactory
+  - Biwen.QuickApi.Storage.IFileStorage
+  - Biwen.QuickApi.Storage.IHasNextPageFunc
+  - Biwen.QuickApi.Storage.LocalFileStorage
+  - Biwen.QuickApi.Storage.NextPageResult
+  - Biwen.QuickApi.Storage.PagedFileListResult
+  - Biwen.QuickApi.Storage.ServiceRegistration
+  - Biwen.QuickApi.Storage.StreamMode
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Storage
+  nameWithType: Biwen.QuickApi.Storage
+  fullName: Biwen.QuickApi.Storage
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Storage.FileStorageExtensions
+  commentId: T:Biwen.QuickApi.Storage.FileStorageExtensions
+  parent: Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.FileStorageExtensions.html
+  name: FileStorageExtensions
+  nameWithType: FileStorageExtensions
+  fullName: Biwen.QuickApi.Storage.FileStorageExtensions
+- uid: Biwen.QuickApi.Storage.FileStorageFactory
+  commentId: T:Biwen.QuickApi.Storage.FileStorageFactory
+  isExternal: true
+  href: Biwen.QuickApi.Storage.FileStorageFactory.html
+  name: FileStorageFactory
+  nameWithType: FileStorageFactory
+  fullName: Biwen.QuickApi.Storage.FileStorageFactory
+- uid: Biwen.QuickApi.Storage.IFileStorage
+  commentId: T:Biwen.QuickApi.Storage.IFileStorage
+  parent: Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IFileStorage.html
+  name: IFileStorage
+  nameWithType: IFileStorage
+  fullName: Biwen.QuickApi.Storage.IFileStorage
+- uid: Biwen.QuickApi.Storage.IHasNextPageFunc
+  commentId: T:Biwen.QuickApi.Storage.IHasNextPageFunc
+  parent: Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.IHasNextPageFunc.html
+  name: IHasNextPageFunc
+  nameWithType: IHasNextPageFunc
+  fullName: Biwen.QuickApi.Storage.IHasNextPageFunc
+- uid: Biwen.QuickApi.Storage.NextPageResult
+  commentId: T:Biwen.QuickApi.Storage.NextPageResult
+  isExternal: true
+  href: Biwen.QuickApi.Storage.NextPageResult.html
+  name: NextPageResult
+  nameWithType: NextPageResult
+  fullName: Biwen.QuickApi.Storage.NextPageResult
+- uid: Biwen.QuickApi.Storage.PagedFileListResult
+  commentId: T:Biwen.QuickApi.Storage.PagedFileListResult
+  parent: Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.PagedFileListResult.html
+  name: PagedFileListResult
+  nameWithType: PagedFileListResult
+  fullName: Biwen.QuickApi.Storage.PagedFileListResult
+- uid: Biwen.QuickApi.Storage.FileSpec
+  commentId: T:Biwen.QuickApi.Storage.FileSpec
+  isExternal: true
+  href: Biwen.QuickApi.Storage.FileSpec.html
+  name: FileSpec
+  nameWithType: FileSpec
+  fullName: Biwen.QuickApi.Storage.FileSpec
+- uid: Biwen.QuickApi.Storage.LocalFileStorage
+  commentId: T:Biwen.QuickApi.Storage.LocalFileStorage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.LocalFileStorage.html
+  name: LocalFileStorage
+  nameWithType: LocalFileStorage
+  fullName: Biwen.QuickApi.Storage.LocalFileStorage
+- uid: Biwen.QuickApi.Storage.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Storage.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.Storage.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Storage.ServiceRegistration
+- uid: Biwen.QuickApi.Storage.StreamMode
+  commentId: T:Biwen.QuickApi.Storage.StreamMode
+  parent: Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.QuickApi.Storage.StreamMode.html
+  name: StreamMode
+  nameWithType: StreamMode
+  fullName: Biwen.QuickApi.Storage.StreamMode
+- uid: Biwen.QuickApi.Storage
+  commentId: N:Biwen.QuickApi.Storage
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Storage
+  nameWithType: Biwen.QuickApi.Storage
+  fullName: Biwen.QuickApi.Storage
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Storage
+    name: Storage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Storage
+    name: Storage
+    isExternal: true
+    href: Biwen.QuickApi.Storage.html

@@ -14,6 +14,8 @@ items:
   - Biwen.QuickApi.Scheduling.Constants.CronEveryNMinutes(System.Int32)
   - Biwen.QuickApi.Scheduling.Constants.CronEveryWeek
   - Biwen.QuickApi.Scheduling.Constants.CronEveryYear
+  - Biwen.QuickApi.Scheduling.Constants.CronForSeconds(System.Int32)
+  - Biwen.QuickApi.Scheduling.Constants.SecondFormat
   langs:
   - csharp
   - vb
@@ -22,7 +24,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -63,7 +65,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryMinute
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -86,7 +88,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEvery15Minutes
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -109,7 +111,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryHour
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -132,7 +134,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryDay
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -155,7 +157,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryWeek
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -178,7 +180,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryMonth
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -201,7 +203,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryYear
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -212,6 +214,29 @@ items:
     return:
       type: System.String
     content.vb: Public Const CronEveryYear As String = "0 0 1 1 *"
+- uid: Biwen.QuickApi.Scheduling.Constants.SecondFormat
+  commentId: F:Biwen.QuickApi.Scheduling.Constants.SecondFormat
+  id: SecondFormat
+  parent: Biwen.QuickApi.Scheduling.Constants
+  langs:
+  - csharp
+  - vb
+  name: SecondFormat
+  nameWithType: Constants.SecondFormat
+  fullName: Biwen.QuickApi.Scheduling.Constants.SecondFormat
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Scheduling
+  summary: 对秒级别的支持.自定义格式,且只支持10~59秒
+  example: []
+  syntax:
+    content: public const string SecondFormat = "{0}:SECONDS"
+    return:
+      type: System.String
+    content.vb: Public Const SecondFormat As String = "{0}:SECONDS"
 - uid: Biwen.QuickApi.Scheduling.Constants.CronEveryNMinutes(System.Int32)
   commentId: M:Biwen.QuickApi.Scheduling.Constants.CronEveryNMinutes(System.Int32)
   id: CronEveryNMinutes(System.Int32)
@@ -225,7 +250,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryNMinutes(int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -262,7 +287,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryNHours(int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aeaefdad7e363934396513d81be4f8652f8b022f/Biwen.QuickApi/Scheduling/Constants.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -282,6 +307,35 @@ items:
   nameWithType.vb: Constants.CronEveryNHours(Integer)
   fullName.vb: Biwen.QuickApi.Scheduling.Constants.CronEveryNHours(Integer)
   name.vb: CronEveryNHours(Integer)
+- uid: Biwen.QuickApi.Scheduling.Constants.CronForSeconds(System.Int32)
+  commentId: M:Biwen.QuickApi.Scheduling.Constants.CronForSeconds(System.Int32)
+  id: CronForSeconds(System.Int32)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.Scheduling.Constants
+  langs:
+  - csharp
+  - vb
+  name: CronForSeconds(int)
+  nameWithType: Constants.CronForSeconds(int)
+  fullName: Biwen.QuickApi.Scheduling.Constants.CronForSeconds(int)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Constants.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Scheduling
+  syntax:
+    content: public static string CronForSeconds(this int seconds)
+    parameters:
+    - id: seconds
+      type: System.Int32
+    return:
+      type: System.String
+    content.vb: Public Shared Function CronForSeconds(seconds As Integer) As String
+  overload: Biwen.QuickApi.Scheduling.Constants.CronForSeconds*
+  nameWithType.vb: Constants.CronForSeconds(Integer)
+  fullName.vb: Biwen.QuickApi.Scheduling.Constants.CronForSeconds(Integer)
+  name.vb: CronForSeconds(Integer)
 references:
 - uid: Biwen.QuickApi.Scheduling
   commentId: N:Biwen.QuickApi.Scheduling
@@ -600,3 +654,10 @@ references:
   name: CronEveryNHours
   nameWithType: Constants.CronEveryNHours
   fullName: Biwen.QuickApi.Scheduling.Constants.CronEveryNHours
+- uid: Biwen.QuickApi.Scheduling.Constants.CronForSeconds*
+  commentId: Overload:Biwen.QuickApi.Scheduling.Constants.CronForSeconds
+  isExternal: true
+  href: Biwen.QuickApi.Scheduling.Constants.html#Biwen_QuickApi_Scheduling_Constants_CronForSeconds_System_Int32_
+  name: CronForSeconds
+  nameWithType: Constants.CronForSeconds
+  fullName: Biwen.QuickApi.Scheduling.Constants.CronForSeconds

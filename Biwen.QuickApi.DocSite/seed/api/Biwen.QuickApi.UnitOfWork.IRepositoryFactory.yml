@@ -1,0 +1,180 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.UnitOfWork.IRepositoryFactory
+  commentId: T:Biwen.QuickApi.UnitOfWork.IRepositoryFactory
+  id: IRepositoryFactory
+  parent: Biwen.QuickApi.UnitOfWork
+  children:
+  - Biwen.QuickApi.UnitOfWork.IRepositoryFactory.GetRepository``1(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: IRepositoryFactory
+  nameWithType: IRepositoryFactory
+  fullName: Biwen.QuickApi.UnitOfWork.IRepositoryFactory
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepositoryFactory.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.UnitOfWork
+  summary: Defines the interfaces for <xref href="Biwen.QuickApi.UnitOfWork.IRepository%601" data-throw-if-not-resolved="false"></xref> interfaces.
+  example: []
+  syntax:
+    content: public interface IRepositoryFactory
+    content.vb: Public Interface IRepositoryFactory
+- uid: Biwen.QuickApi.UnitOfWork.IRepositoryFactory.GetRepository``1(System.Boolean)
+  commentId: M:Biwen.QuickApi.UnitOfWork.IRepositoryFactory.GetRepository``1(System.Boolean)
+  id: GetRepository``1(System.Boolean)
+  parent: Biwen.QuickApi.UnitOfWork.IRepositoryFactory
+  langs:
+  - csharp
+  - vb
+  name: GetRepository<TEntity>(bool)
+  nameWithType: IRepositoryFactory.GetRepository<TEntity>(bool)
+  fullName: Biwen.QuickApi.UnitOfWork.IRepositoryFactory.GetRepository<TEntity>(bool)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepositoryFactory.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.UnitOfWork
+  summary: Gets the specified repository for the <code class="typeparamref">TEntity</code>.
+  example: []
+  syntax:
+    content: 'IRepository<TEntity> GetRepository<TEntity>(bool hasCustomRepository = false) where TEntity : class'
+    parameters:
+    - id: hasCustomRepository
+      type: System.Boolean
+      description: <code>True</code> if providing custom repository
+    typeParameters:
+    - id: TEntity
+      description: The type of the entity.
+    return:
+      type: Biwen.QuickApi.UnitOfWork.IRepository{{TEntity}}
+      description: An instance of type inherited from <xref href="Biwen.QuickApi.UnitOfWork.IRepository%601" data-throw-if-not-resolved="false"></xref> interface.
+    content.vb: Function GetRepository(Of TEntity As Class)(hasCustomRepository As Boolean = False) As IRepository(Of TEntity)
+  overload: Biwen.QuickApi.UnitOfWork.IRepositoryFactory.GetRepository*
+  nameWithType.vb: IRepositoryFactory.GetRepository(Of TEntity)(Boolean)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.IRepositoryFactory.GetRepository(Of TEntity)(Boolean)
+  name.vb: GetRepository(Of TEntity)(Boolean)
+references:
+- uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+  commentId: T:Biwen.QuickApi.UnitOfWork.IRepository`1
+  isExternal: true
+  href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  name: IRepository<TEntity>
+  nameWithType: IRepository<TEntity>
+  fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>
+  nameWithType.vb: IRepository(Of TEntity)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.IRepository(Of TEntity)
+  name.vb: IRepository(Of TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.UnitOfWork
+  commentId: N:Biwen.QuickApi.UnitOfWork
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.UnitOfWork
+  nameWithType: Biwen.QuickApi.UnitOfWork
+  fullName: Biwen.QuickApi.UnitOfWork
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.UnitOfWork
+    name: UnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.UnitOfWork
+    name: UnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.html
+- uid: Biwen.QuickApi.UnitOfWork.IRepositoryFactory.GetRepository*
+  commentId: Overload:Biwen.QuickApi.UnitOfWork.IRepositoryFactory.GetRepository
+  isExternal: true
+  href: Biwen.QuickApi.UnitOfWork.IRepositoryFactory.html#Biwen_QuickApi_UnitOfWork_IRepositoryFactory_GetRepository__1_System_Boolean_
+  name: GetRepository
+  nameWithType: IRepositoryFactory.GetRepository
+  fullName: Biwen.QuickApi.UnitOfWork.IRepositoryFactory.GetRepository
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Biwen.QuickApi.UnitOfWork.IRepository{{TEntity}}
+  commentId: T:Biwen.QuickApi.UnitOfWork.IRepository{``0}
+  parent: Biwen.QuickApi.UnitOfWork
+  definition: Biwen.QuickApi.UnitOfWork.IRepository`1
+  href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  name: IRepository<TEntity>
+  nameWithType: IRepository<TEntity>
+  fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>
+  nameWithType.vb: IRepository(Of TEntity)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.IRepository(Of TEntity)
+  name.vb: IRepository(Of TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
