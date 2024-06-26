@@ -235,7 +235,9 @@ namespace Biwen.QuickApi.Storage
             return Task.FromResult(count);
         }
 
+#pragma warning disable CA1816 // Dispose 方法应调用 SuppressFinalize
         public void Dispose()
+#pragma warning restore CA1816 // Dispose 方法应调用 SuppressFinalize
         {
             //todo:
         }
@@ -261,7 +263,7 @@ namespace Biwen.QuickApi.Storage
         /// <param name="path"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
-        public Task<FileSpec> GetFileInfoAsync(string path)
+        public async Task<FileSpec?> GetFileInfoAsync(string path)
         {
             ArgumentNullException.ThrowIfNullOrEmpty(path);
 
@@ -276,7 +278,7 @@ namespace Biwen.QuickApi.Storage
                 return null!;
             }
 
-            return Task.FromResult(new FileSpec
+            return await Task.FromResult(new FileSpec
             {
                 Path = normalizedPath.Replace(Folder, String.Empty),
                 Created = info.CreationTimeUtc,

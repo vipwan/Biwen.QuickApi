@@ -24,13 +24,64 @@ namespace Biwen.QuickApi.Storage
         /// <param name="cancellationToken">Token to cancel</param>
         /// <returns>Stream in the specified mode</returns>
         Task<Stream> GetFileStreamAsync(string path, StreamMode streamMode, CancellationToken cancellationToken = default);
-        Task<FileSpec> GetFileInfoAsync(string path);
+
+        /// <summary>
+        /// 获取文件信息
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        Task<FileSpec?> GetFileInfoAsync(string path);
+        /// <summary>
+        /// 判断文件是否存在
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         Task<bool> ExistsAsync(string path);
+        /// <summary>
+        /// 保存文件
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="stream"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         Task<bool> SaveFileAsync(string path, Stream stream, CancellationToken cancellationToken = default);
+        /// <summary>
+        /// 重命名文件
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="newPath"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         Task<bool> RenameFileAsync(string path, string newPath, CancellationToken cancellationToken = default);
+        /// <summary>
+        /// 复制文件
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="targetPath"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         Task<bool> CopyFileAsync(string path, string targetPath, CancellationToken cancellationToken = default);
+        /// <summary>
+        /// 删除文件
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         Task<bool> DeleteFileAsync(string path, CancellationToken cancellationToken = default);
+        /// <summary>
+        /// 批量删除文件
+        /// </summary>
+        /// <param name="searchPattern"></param>
+        /// <param name="cancellation"></param>
+        /// <returns></returns>
         Task<int> DeleteFilesAsync(string? searchPattern = null, CancellationToken cancellation = default);
+        /// <summary>
+        /// 获取分页文件信息
+        /// </summary>
+        /// <param name="pageSize"></param>
+        /// <param name="searchPattern"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         Task<PagedFileListResult> GetPagedFileListAsync(int pageSize = 100, string? searchPattern = null, CancellationToken cancellationToken = default);
     }
 #pragma warning restore GEN031 // 使用[AutoGen]自动生成

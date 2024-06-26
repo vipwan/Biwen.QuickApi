@@ -21,6 +21,9 @@ namespace Biwen.QuickApi.Storage
             {
                 return new LocalFileStorage(path, sp);
             });
+
+            //add factory
+            services.TryAddSingleton<FileStorageFactory>();
         }
     }
 }
