@@ -38,8 +38,9 @@ namespace Biwen.QuickApi.Telemetry
                 .WithMetrics(builder =>
                 {
                     // Add ASP.NET Core Instrumentation
-                    builder.AddAspNetCoreInstrumentation();
-                    builder.AddHttpClientInstrumentation();
+                    builder.AddAspNetCoreInstrumentation();//AspnetCore指标
+                    builder.AddHttpClientInstrumentation();//HttpClient指标
+                    builder.AddProcessInstrumentation();//应用的进程指标
 
                     // Add Processor
                     builder.AddMeter(Constant.OpenTelemetryActivitySourceName);
