@@ -10,16 +10,15 @@ namespace Biwen.QuickApi.Storage.AliyunOss;
 
 public class AliyunOssStorage : IFileStorage
 {
-    public AliyunOssStorage(IServiceProvider serviceProvider)
+    public AliyunOssStorage(IServiceProvider serviceProvider, string connectionString)
     {
         _serializer = serviceProvider.GetService<ISerializer>() ?? DefaultSerializer.Instance;
         _logger = serviceProvider.GetRequiredService<ILogger<AliyunOssStorage>>();
-        var options = serviceProvider.GetRequiredService<IOptions<AliyunOssOptions>>();
+        //var options = serviceProvider.GetRequiredService<IOptions<AliyunOssOptions>>();
+        var connection = new AliyunFileStorageConnectionStringBuilder(connectionString);
+        _client = new OssClient(connection.Endpoint, connection.AccessKey, connection.SecretKey);
 
-        var connectionString = new AliyunFileStorageConnectionStringBuilder(options.Value.ConnectionString);
-        _client = new OssClient(connectionString.Endpoint, connectionString.AccessKey, connectionString.SecretKey);
-
-        _bucket = connectionString.Bucket;
+        _bucket = connection.Bucket;
         if (DoesBucketExist(_bucket))
             return;
 

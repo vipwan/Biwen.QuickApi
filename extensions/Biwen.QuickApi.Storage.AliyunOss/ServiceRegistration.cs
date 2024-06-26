@@ -18,14 +18,14 @@ namespace Biwen.QuickApi.Storage.AliyunOss
             ArgumentNullException.ThrowIfNullOrEmpty(key);
             ArgumentNullException.ThrowIfNullOrEmpty(connectionString);
 
-            services.AddOptions<AliyunOssOptions>().Configure(x =>
-            {
-                x.ConnectionString = connectionString;
-            });
+            //services.AddOptions<AliyunOssOptions>().Configure(x =>
+            //{
+            //    x.ConnectionString = connectionString;
+            //});
 
             services.AddKeyedSingleton<IFileStorage>(key, (sp, _) =>
             {
-                return new AliyunOssStorage(sp);
+                return new AliyunOssStorage(sp, connectionString);
             });
 
             //add factory
