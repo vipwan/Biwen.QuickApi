@@ -48,7 +48,10 @@ builder.Services.Configure<AuthorizationOptions>(options =>
     });
 });
 
-builder.Services.AddDbContext<IdentityDbContext>(options => options.UseInMemoryDatabase("net8"));
+
+//在DbModular中注册
+
+//builder.Services.AddDbContext<IdentityDbContext>(options => options.UseInMemoryDatabase("net8"));
 // adds a set of common identity services to the application
 builder.Services.AddIdentityApiEndpoints<IdentityUser>(o =>
 {
