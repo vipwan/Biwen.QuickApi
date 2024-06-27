@@ -3,8 +3,9 @@
 namespace Biwen.QuickApi.DemoWeb.Db
 {
     using Biwen.QuickApi.DemoWeb.Db.Entity;
+    using Biwen.QuickApi.UnitOfWork;
 
-    public class UserDbContext : DbContext
+    public class UserDbContext : AutoEventDbContext<UserDbContext>
     {
         public UserDbContext(DbContextOptions<UserDbContext> options) : base(options)
         {

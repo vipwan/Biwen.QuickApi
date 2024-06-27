@@ -215,6 +215,45 @@ await user.PublishUpdatedAsync();//更新事件
 
 ```
 
+如果你想一劳永逸,那么DbContext可以继承自`AutoEventDbContext<TDbContext>`,这样DbContext中的实体增删改事件会自动发布.<br/>
+
+如果实体类型不需要自动发布事件,可以通过`[AutoEventIgnore]`特性来忽略.
+
+```csharp
+[AutoEventIgnore]
+public class Book
+{
+	public int Id { get; set; }
+	public string Name { get; set; }
+}
+
+public class User
+{
+	public int Id { get; set; }
+	public string Name { get; set; }
+	public DateTime CreateTime { get; set; }
+}
+
+public class UserDbContext : AutoEventDbContext<UserDbContext>
+{
+    public UserDbContext(DbContextOptions<UserDbContext> options) : base(options)
+    {
+    }
+
+    public DbSet<User> Users { get; set; } = null!;
+    public DbSet<Book> Books { get; set; } = null!;//Book实体不会发布事件
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.CreateTime).HasDefaultValueSql("getdate()");
+        });
+    }
+}
+```
 
 
 
