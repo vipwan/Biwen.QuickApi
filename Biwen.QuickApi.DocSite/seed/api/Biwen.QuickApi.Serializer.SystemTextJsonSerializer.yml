@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -44,6 +44,9 @@ items:
   - Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize``1(System.String)
   - Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes``1({T})
   - Biwen.QuickApi.Serializer.ISerializer.Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString``1({T})
+  - Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
 - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.#ctor(System.Text.Json.JsonSerializerOptions,System.Text.Json.JsonSerializerOptions)
   commentId: M:Biwen.QuickApi.Serializer.SystemTextJsonSerializer.#ctor(System.Text.Json.JsonSerializerOptions,System.Text.Json.JsonSerializerOptions)
   id: '#ctor(System.Text.Json.JsonSerializerOptions,System.Text.Json.JsonSerializerOptions)'
@@ -56,7 +59,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.SystemTextJsonSerializer(System.Text.Json.JsonSerializerOptions?, System.Text.Json.JsonSerializerOptions?)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -84,7 +87,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Serialize(object, System.IO.Stream)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -116,7 +119,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Deserialize(System.IO.Stream, System.Type)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -796,6 +799,147 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<SystemTextJsonSerializer>(SystemTextJsonSerializer)
+  nameWithType: EntityExtensions.PublishAddedAsync<SystemTextJsonSerializer>(SystemTextJsonSerializer)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Serializer.SystemTextJsonSerializer>(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of SystemTextJsonSerializer)(SystemTextJsonSerializer)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Serializer.SystemTextJsonSerializer)(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+  name.vb: PublishAddedAsync(Of SystemTextJsonSerializer)(SystemTextJsonSerializer)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: )
+- uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<SystemTextJsonSerializer>(SystemTextJsonSerializer)
+  nameWithType: EntityExtensions.PublishDeletedAsync<SystemTextJsonSerializer>(SystemTextJsonSerializer)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Serializer.SystemTextJsonSerializer>(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of SystemTextJsonSerializer)(SystemTextJsonSerializer)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Serializer.SystemTextJsonSerializer)(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+  name.vb: PublishDeletedAsync(Of SystemTextJsonSerializer)(SystemTextJsonSerializer)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: )
+- uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<SystemTextJsonSerializer>(SystemTextJsonSerializer)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<SystemTextJsonSerializer>(SystemTextJsonSerializer)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Serializer.SystemTextJsonSerializer>(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of SystemTextJsonSerializer)(SystemTextJsonSerializer)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Serializer.SystemTextJsonSerializer)(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+  name.vb: PublishUpdatedAsync(Of SystemTextJsonSerializer)(SystemTextJsonSerializer)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Serializer.SystemTextJsonSerializer)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
+    name: SystemTextJsonSerializer
+    isExternal: true
+    href: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -1179,6 +1323,163 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents
+  commentId: N:Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Service.EntityEvents
+  nameWithType: Biwen.QuickApi.Service.EntityEvents
+  fullName: Biwen.QuickApi.Service.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
 - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.#ctor*
   commentId: Overload:Biwen.QuickApi.Serializer.SystemTextJsonSerializer.#ctor
   isExternal: true

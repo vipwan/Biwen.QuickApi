@@ -1,0 +1,121 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Service
+  commentId: N:Biwen.QuickApi.Service
+  id: Biwen.QuickApi.Service
+  children:
+  - Biwen.QuickApi.Service.BuinessServiceBase`1
+  - Biwen.QuickApi.Service.BuinessServiceBase`2
+  - Biwen.QuickApi.Service.BuinessServiceBase`3
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Service
+  nameWithType: Biwen.QuickApi.Service
+  fullName: Biwen.QuickApi.Service
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+  commentId: T:Biwen.QuickApi.Service.BuinessServiceBase`1
+  isExternal: true
+  href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  name: BuinessServiceBase<TDbContext>
+  nameWithType: BuinessServiceBase<TDbContext>
+  fullName: Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>
+  nameWithType.vb: BuinessServiceBase(Of TDbContext)
+  fullName.vb: Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext)
+  name.vb: BuinessServiceBase(Of TDbContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`2
+  commentId: T:Biwen.QuickApi.Service.BuinessServiceBase`2
+  isExternal: true
+  href: Biwen.QuickApi.Service.BuinessServiceBase-2.html
+  name: BuinessServiceBase<TDbContext1, TDbContext2>
+  nameWithType: BuinessServiceBase<TDbContext1, TDbContext2>
+  fullName: Biwen.QuickApi.Service.BuinessServiceBase<TDbContext1, TDbContext2>
+  nameWithType.vb: BuinessServiceBase(Of TDbContext1, TDbContext2)
+  fullName.vb: Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext1, TDbContext2)
+  name.vb: BuinessServiceBase(Of TDbContext1, TDbContext2)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`2
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-2.html
+  - name: <
+  - name: TDbContext1
+  - name: ','
+  - name: " "
+  - name: TDbContext2
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`2
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext1
+  - name: ','
+  - name: " "
+  - name: TDbContext2
+  - name: )
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`3
+  commentId: T:Biwen.QuickApi.Service.BuinessServiceBase`3
+  isExternal: true
+  href: Biwen.QuickApi.Service.BuinessServiceBase-3.html
+  name: BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>
+  nameWithType: BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>
+  fullName: Biwen.QuickApi.Service.BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>
+  nameWithType.vb: BuinessServiceBase(Of TDbContext1, TDbContext2, TDbContext3)
+  fullName.vb: Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext1, TDbContext2, TDbContext3)
+  name.vb: BuinessServiceBase(Of TDbContext1, TDbContext2, TDbContext3)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`3
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-3.html
+  - name: <
+  - name: TDbContext1
+  - name: ','
+  - name: " "
+  - name: TDbContext2
+  - name: ','
+  - name: " "
+  - name: TDbContext3
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`3
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext1
+  - name: ','
+  - name: " "
+  - name: TDbContext2
+  - name: ','
+  - name: " "
+  - name: TDbContext3
+  - name: )

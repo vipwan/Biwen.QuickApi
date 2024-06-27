@@ -29,7 +29,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -56,6 +56,10 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+  extensionMethods:
+  - Biwen.QuickApi.IResultResponse.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.IResultResponse.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.IResultResponse.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
   attributes:
   - type: System.ObsoleteAttribute
     ctor: System.ObsoleteAttribute.#ctor(System.String)
@@ -74,7 +78,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.IResultResponse(Microsoft.AspNetCore.Http.IResult)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -105,7 +109,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.OK(object?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -135,7 +139,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.BadRequest(object?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -165,7 +169,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Stream(System.IO.Stream, string?, string?, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -206,7 +210,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.File(string, string?, string?, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -247,7 +251,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Content(string?, string?, System.Text.Encoding?, int?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -288,7 +292,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Problem(Microsoft.AspNetCore.Mvc.ProblemDetails)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -317,7 +321,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Problem(string?, string?, int?, string?, string?, System.Collections.Generic.IDictionary<string, object?>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -364,7 +368,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Text(string, string?, System.Text.Encoding?, int?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -405,7 +409,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Redirect(string, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -443,7 +447,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Json<T>(T, System.Text.Json.JsonSerializerOptions?, string?, int?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -487,7 +491,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.StatusCode(int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -519,7 +523,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Result
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -542,7 +546,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Empty
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -567,7 +571,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.NotFound
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -592,7 +596,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Unauthorized
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -839,6 +843,147 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: Biwen.QuickApi.IResultResponse.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<IResultResponse>(IResultResponse)
+  nameWithType: EntityExtensions.PublishAddedAsync<IResultResponse>(IResultResponse)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.IResultResponse>(Biwen.QuickApi.IResultResponse)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of IResultResponse)(IResultResponse)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.IResultResponse)(Biwen.QuickApi.IResultResponse)
+  name.vb: PublishAddedAsync(Of IResultResponse)(IResultResponse)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.IResultResponse)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.IResultResponse)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: )
+- uid: Biwen.QuickApi.IResultResponse.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<IResultResponse>(IResultResponse)
+  nameWithType: EntityExtensions.PublishDeletedAsync<IResultResponse>(IResultResponse)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.IResultResponse>(Biwen.QuickApi.IResultResponse)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of IResultResponse)(IResultResponse)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.IResultResponse)(Biwen.QuickApi.IResultResponse)
+  name.vb: PublishDeletedAsync(Of IResultResponse)(IResultResponse)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.IResultResponse)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.IResultResponse)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: )
+- uid: Biwen.QuickApi.IResultResponse.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<IResultResponse>(IResultResponse)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<IResultResponse>(IResultResponse)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.IResultResponse>(Biwen.QuickApi.IResultResponse)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of IResultResponse)(IResultResponse)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.IResultResponse)(Biwen.QuickApi.IResultResponse)
+  name.vb: PublishUpdatedAsync(Of IResultResponse)(IResultResponse)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.IResultResponse)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.IResultResponse)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.IResultResponse
+    name: IResultResponse
+    isExternal: true
+    href: Biwen.QuickApi.IResultResponse.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -846,6 +991,163 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents
+  commentId: N:Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Service.EntityEvents
+  nameWithType: Biwen.QuickApi.Service.EntityEvents
+  fullName: Biwen.QuickApi.Service.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
 - uid: Biwen.QuickApi.IResultResponse.#ctor*
   commentId: Overload:Biwen.QuickApi.IResultResponse.#ctor
   isExternal: true

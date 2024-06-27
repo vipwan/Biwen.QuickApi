@@ -163,3 +163,59 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 }
 
 ```
+
+
+实体事件广播
+---------------------
+
+当实体增删改的后,我们可以通过实体事件广播来处理一些业务逻辑,例如:清理缓存,发送邮件,工作流程等.<br/>
+
+如下订阅User实体的事件:
+```csharp
+namespace Biwen.QuickApi.DemoWeb.Apis.Events
+{
+    using Biwen.QuickApi.DemoWeb.Db.Entity;
+    using Biwen.QuickApi.Service.EntityEvents;
+    using System.Threading;
+    using System.Threading.Tasks;
+
+    public class UserEvent(ILogger<UserEvent> logger) :
+        IEventSubscriber<EntityAdded<User>>,
+        IEventSubscriber<EntityDeleted<User>>,
+        IEventSubscriber<EntityUpdated<User>>
+    {
+        public Task HandleAsync(EntityAdded<User> @event, CancellationToken ct)
+        {
+            logger.LogInformation($"User实体添加,{@event.Entity.Id},{@event.Entity.Name}");
+            return Task.CompletedTask;
+        }
+
+        public Task HandleAsync(EntityDeleted<User> @event, CancellationToken ct)
+        {
+            logger.LogInformation($"User实体删除,{@event.Entity.Id},{@event.Entity.Name}");
+            return Task.CompletedTask;
+        }
+
+        public Task HandleAsync(EntityUpdated<User> @event, CancellationToken ct)
+        {
+            logger.LogInformation($"User实体更新,{@event.Entity.Id},{@event.Entity.Name}");
+            return Task.CompletedTask;
+        }
+    }
+}
+```
+
+如下是发布事件:
+```csharp
+using Biwen.QuickApi.Service.EntityEvents;
+
+await user.PublishDeletedAsync();//删除事件
+await user.PublishAddedAsync();//添加事件
+await user.PublishUpdatedAsync();//更新事件
+
+```
+
+
+
+
+

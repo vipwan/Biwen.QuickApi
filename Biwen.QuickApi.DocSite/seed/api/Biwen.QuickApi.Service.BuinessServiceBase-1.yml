@@ -1,0 +1,919 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+  commentId: T:Biwen.QuickApi.Service.BuinessServiceBase`1
+  id: BuinessServiceBase`1
+  parent: Biwen.QuickApi.Service
+  children:
+  - Biwen.QuickApi.Service.BuinessServiceBase`1.#ctor(Biwen.QuickApi.UnitOfWork.IUnitOfWork{`0},Microsoft.Extensions.Logging.ILogger)
+  - Biwen.QuickApi.Service.BuinessServiceBase`1.Logger
+  - Biwen.QuickApi.Service.BuinessServiceBase`1.Uow
+  langs:
+  - csharp
+  - vb
+  name: BuinessServiceBase<TDbContext>
+  nameWithType: BuinessServiceBase<TDbContext>
+  fullName: Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Service/BuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Service
+  summary: 业务服务基类
+  example: []
+  syntax:
+    content: 'public abstract class BuinessServiceBase<TDbContext> where TDbContext : DbContext'
+    typeParameters:
+    - id: TDbContext
+      description: ''
+    content.vb: Public MustInherit Class BuinessServiceBase(Of TDbContext As DbContext)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Biwen.QuickApi.Service.BuinessServiceBase`2
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  extensionMethods:
+  - Biwen.QuickApi.Service.BuinessServiceBase`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Service.BuinessServiceBase`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Service.BuinessServiceBase`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  nameWithType.vb: BuinessServiceBase(Of TDbContext)
+  fullName.vb: Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext)
+  name.vb: BuinessServiceBase(Of TDbContext)
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`1.#ctor(Biwen.QuickApi.UnitOfWork.IUnitOfWork{`0},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Biwen.QuickApi.Service.BuinessServiceBase`1.#ctor(Biwen.QuickApi.UnitOfWork.IUnitOfWork{`0},Microsoft.Extensions.Logging.ILogger)
+  id: '#ctor(Biwen.QuickApi.UnitOfWork.IUnitOfWork{`0},Microsoft.Extensions.Logging.ILogger)'
+  parent: Biwen.QuickApi.Service.BuinessServiceBase`1
+  langs:
+  - csharp
+  - vb
+  name: BuinessServiceBase(IUnitOfWork<TDbContext>, ILogger?)
+  nameWithType: BuinessServiceBase<TDbContext>.BuinessServiceBase(IUnitOfWork<TDbContext>, ILogger?)
+  fullName: Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>.BuinessServiceBase(Biwen.QuickApi.UnitOfWork.IUnitOfWork<TDbContext>, Microsoft.Extensions.Logging.ILogger?)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Service/BuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Service
+  syntax:
+    content: public BuinessServiceBase(IUnitOfWork<TDbContext> uow, ILogger? logger = null)
+    parameters:
+    - id: uow
+      type: Biwen.QuickApi.UnitOfWork.IUnitOfWork{{TDbContext}}
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+    content.vb: Public Sub New(uow As IUnitOfWork(Of TDbContext), logger As ILogger = Nothing)
+  overload: Biwen.QuickApi.Service.BuinessServiceBase`1.#ctor*
+  nameWithType.vb: BuinessServiceBase(Of TDbContext).New(IUnitOfWork(Of TDbContext), ILogger)
+  fullName.vb: Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext).New(Biwen.QuickApi.UnitOfWork.IUnitOfWork(Of TDbContext), Microsoft.Extensions.Logging.ILogger)
+  name.vb: New(IUnitOfWork(Of TDbContext), ILogger)
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`1.Uow
+  commentId: P:Biwen.QuickApi.Service.BuinessServiceBase`1.Uow
+  id: Uow
+  parent: Biwen.QuickApi.Service.BuinessServiceBase`1
+  langs:
+  - csharp
+  - vb
+  name: Uow
+  nameWithType: BuinessServiceBase<TDbContext>.Uow
+  fullName: Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>.Uow
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Service/BuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Service
+  summary: Uow
+  example: []
+  syntax:
+    content: protected IUnitOfWork<TDbContext> Uow { get; }
+    parameters: []
+    return:
+      type: Biwen.QuickApi.UnitOfWork.IUnitOfWork{{TDbContext}}
+    content.vb: Protected ReadOnly Property Uow As IUnitOfWork(Of TDbContext)
+  overload: Biwen.QuickApi.Service.BuinessServiceBase`1.Uow*
+  nameWithType.vb: BuinessServiceBase(Of TDbContext).Uow
+  fullName.vb: Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext).Uow
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`1.Logger
+  commentId: P:Biwen.QuickApi.Service.BuinessServiceBase`1.Logger
+  id: Logger
+  parent: Biwen.QuickApi.Service.BuinessServiceBase`1
+  langs:
+  - csharp
+  - vb
+  name: Logger
+  nameWithType: BuinessServiceBase<TDbContext>.Logger
+  fullName: Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>.Logger
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Service/BuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Service
+  summary: Logger
+  example: []
+  syntax:
+    content: protected ILogger Logger { get; }
+    parameters: []
+    return:
+      type: Microsoft.Extensions.Logging.ILogger
+    content.vb: Protected ReadOnly Property Logger As ILogger
+  overload: Biwen.QuickApi.Service.BuinessServiceBase`1.Logger*
+  nameWithType.vb: BuinessServiceBase(Of TDbContext).Logger
+  fullName.vb: Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext).Logger
+references:
+- uid: Biwen.QuickApi.Service
+  commentId: N:Biwen.QuickApi.Service
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Service
+  nameWithType: Biwen.QuickApi.Service
+  fullName: Biwen.QuickApi.Service
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<BuinessServiceBase<TDbContext>>(BuinessServiceBase<TDbContext>)
+  nameWithType: EntityExtensions.PublishAddedAsync<BuinessServiceBase<TDbContext>>(BuinessServiceBase<TDbContext>)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>>(Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of BuinessServiceBase(Of TDbContext))(BuinessServiceBase(Of TDbContext))
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext))(Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext))
+  name.vb: PublishAddedAsync(Of BuinessServiceBase(Of TDbContext))(BuinessServiceBase(Of TDbContext))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Service.BuinessServiceBase{`0})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Service.BuinessServiceBase{`0})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<BuinessServiceBase<TDbContext>>(BuinessServiceBase<TDbContext>)
+  nameWithType: EntityExtensions.PublishDeletedAsync<BuinessServiceBase<TDbContext>>(BuinessServiceBase<TDbContext>)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>>(Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of BuinessServiceBase(Of TDbContext))(BuinessServiceBase(Of TDbContext))
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext))(Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext))
+  name.vb: PublishDeletedAsync(Of BuinessServiceBase(Of TDbContext))(BuinessServiceBase(Of TDbContext))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Service.BuinessServiceBase{`0})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Service.BuinessServiceBase{`0})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<BuinessServiceBase<TDbContext>>(BuinessServiceBase<TDbContext>)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<BuinessServiceBase<TDbContext>>(BuinessServiceBase<TDbContext>)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>>(Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of BuinessServiceBase(Of TDbContext))(BuinessServiceBase(Of TDbContext))
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext))(Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext))
+  name.vb: PublishUpdatedAsync(Of BuinessServiceBase(Of TDbContext))(BuinessServiceBase(Of TDbContext))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Service.BuinessServiceBase{`0})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Service.BuinessServiceBase{`0})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Service.BuinessServiceBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents
+  commentId: N:Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Service.EntityEvents
+  nameWithType: Biwen.QuickApi.Service.EntityEvents
+  fullName: Biwen.QuickApi.Service.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`1.#ctor*
+  commentId: Overload:Biwen.QuickApi.Service.BuinessServiceBase`1.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Service.BuinessServiceBase-1.html#Biwen_QuickApi_Service_BuinessServiceBase_1__ctor_Biwen_QuickApi_UnitOfWork_IUnitOfWork__0__Microsoft_Extensions_Logging_ILogger_
+  name: BuinessServiceBase
+  nameWithType: BuinessServiceBase<TDbContext>.BuinessServiceBase
+  fullName: Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>.BuinessServiceBase
+  nameWithType.vb: BuinessServiceBase(Of TDbContext).New
+  fullName.vb: Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext).New
+  name.vb: New
+- uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork{{TDbContext}}
+  commentId: T:Biwen.QuickApi.UnitOfWork.IUnitOfWork{`0}
+  parent: Biwen.QuickApi.UnitOfWork
+  definition: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+  href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  name: IUnitOfWork<TDbContext>
+  nameWithType: IUnitOfWork<TDbContext>
+  fullName: Biwen.QuickApi.UnitOfWork.IUnitOfWork<TDbContext>
+  nameWithType.vb: IUnitOfWork(Of TDbContext)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.IUnitOfWork(Of TDbContext)
+  name.vb: IUnitOfWork(Of TDbContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+    name: IUnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+    name: IUnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+  commentId: T:Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+  isExternal: true
+  href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  name: IUnitOfWork<TContext>
+  nameWithType: IUnitOfWork<TContext>
+  fullName: Biwen.QuickApi.UnitOfWork.IUnitOfWork<TContext>
+  nameWithType.vb: IUnitOfWork(Of TContext)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.IUnitOfWork(Of TContext)
+  name.vb: IUnitOfWork(Of TContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+    name: IUnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  - name: <
+  - name: TContext
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+    name: IUnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContext
+  - name: )
+- uid: Biwen.QuickApi.UnitOfWork
+  commentId: N:Biwen.QuickApi.UnitOfWork
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.UnitOfWork
+  nameWithType: Biwen.QuickApi.UnitOfWork
+  fullName: Biwen.QuickApi.UnitOfWork
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.UnitOfWork
+    name: UnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.UnitOfWork
+    name: UnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.html
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`1.Uow*
+  commentId: Overload:Biwen.QuickApi.Service.BuinessServiceBase`1.Uow
+  isExternal: true
+  href: Biwen.QuickApi.Service.BuinessServiceBase-1.html#Biwen_QuickApi_Service_BuinessServiceBase_1_Uow
+  name: Uow
+  nameWithType: BuinessServiceBase<TDbContext>.Uow
+  fullName: Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>.Uow
+  nameWithType.vb: BuinessServiceBase(Of TDbContext).Uow
+  fullName.vb: Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext).Uow
+- uid: Biwen.QuickApi.Service.BuinessServiceBase`1.Logger*
+  commentId: Overload:Biwen.QuickApi.Service.BuinessServiceBase`1.Logger
+  isExternal: true
+  href: Biwen.QuickApi.Service.BuinessServiceBase-1.html#Biwen_QuickApi_Service_BuinessServiceBase_1_Logger
+  name: Logger
+  nameWithType: BuinessServiceBase<TDbContext>.Logger
+  fullName: Biwen.QuickApi.Service.BuinessServiceBase<TDbContext>.Logger
+  nameWithType.vb: BuinessServiceBase(Of TDbContext).Logger
+  fullName.vb: Biwen.QuickApi.Service.BuinessServiceBase(Of TDbContext).Logger

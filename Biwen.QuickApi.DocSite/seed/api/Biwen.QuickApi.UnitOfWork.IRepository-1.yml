@@ -66,7 +66,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -78,6 +78,10 @@ items:
     - id: TEntity
       description: The type of the entity.
     content.vb: Public Interface IRepository(Of TEntity As Class)
+  extensionMethods:
+  - Biwen.QuickApi.UnitOfWork.IRepository`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.UnitOfWork.IRepository`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.UnitOfWork.IRepository`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
   nameWithType.vb: IRepository(Of TEntity)
   fullName.vb: Biwen.QuickApi.UnitOfWork.IRepository(Of TEntity)
   name.vb: IRepository(Of TEntity)
@@ -93,7 +97,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetPagedList(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, int, int, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -147,7 +151,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetPagedListAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, int, int, bool, bool, bool, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -204,7 +208,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetPagedList<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, int, int, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -263,7 +267,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetPagedListAsync<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, int, int, bool, bool, bool, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -325,7 +329,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetFirstOrDefault(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -373,7 +377,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetFirstOrDefault<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -426,7 +430,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetFirstOrDefaultAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -474,7 +478,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Find(params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -506,7 +510,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.FindAsync(params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -538,7 +542,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.FindAsync(object[], System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -573,7 +577,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAll(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -605,7 +609,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAll<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -642,7 +646,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAll<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -682,7 +686,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAll(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -730,7 +734,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAll<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -783,7 +787,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAllAsync(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -815,7 +819,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAllAsync<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -852,7 +856,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAllAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -900,7 +904,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAllAsync<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -953,7 +957,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Insert(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -983,7 +987,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Insert(params TEntity[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1012,7 +1016,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Insert(System.Collections.Generic.IEnumerable<TEntity>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1041,7 +1045,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.InsertAsync(TEntity, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1075,7 +1079,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.InsertAsync(params TEntity[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1107,7 +1111,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.InsertAsync(System.Collections.Generic.IEnumerable<TEntity>, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1142,7 +1146,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Update(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1170,7 +1174,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Update(params TEntity[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1199,7 +1203,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Update(System.Collections.Generic.IEnumerable<TEntity>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1228,7 +1232,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ExecuteUpdate(System.Linq.Expressions.Expression<System.Func<Microsoft.EntityFrameworkCore.Query.SetPropertyCalls<TEntity>, Microsoft.EntityFrameworkCore.Query.SetPropertyCalls<TEntity>>>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1271,7 +1275,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ExecuteUpdateAsync(System.Linq.Expressions.Expression<System.Func<Microsoft.EntityFrameworkCore.Query.SetPropertyCalls<TEntity>, Microsoft.EntityFrameworkCore.Query.SetPropertyCalls<TEntity>>>, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1317,7 +1321,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Delete(object)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1346,7 +1350,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Delete(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1374,7 +1378,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Delete(params TEntity[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1403,7 +1407,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Delete(System.Collections.Generic.IEnumerable<TEntity>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1432,7 +1436,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ExecuteDelete()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1470,7 +1474,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ExecuteDeleteAsync(System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1512,7 +1516,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Count(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1544,7 +1548,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.CountAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1579,7 +1583,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.LongCount(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1611,7 +1615,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.LongCountAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1646,7 +1650,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Exists(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1678,7 +1682,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ExistsAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1713,7 +1717,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Max<T>(System.Linq.Expressions.Expression<System.Func<TEntity, T>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1750,7 +1754,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.MaxAsync<T>(System.Linq.Expressions.Expression<System.Func<TEntity, T>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1790,7 +1794,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Min<T>(System.Linq.Expressions.Expression<System.Func<TEntity, T>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1827,7 +1831,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.MinAsync<T>(System.Linq.Expressions.Expression<System.Func<TEntity, T>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1867,7 +1871,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Average(System.Linq.Expressions.Expression<System.Func<TEntity, decimal>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1902,7 +1906,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.AverageAsync(System.Linq.Expressions.Expression<System.Func<TEntity, decimal>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1940,7 +1944,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Sum(System.Linq.Expressions.Expression<System.Func<TEntity, decimal>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -1975,7 +1979,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.SumAsync(System.Linq.Expressions.Expression<System.Func<TEntity, decimal>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -2013,7 +2017,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ChangeEntityState(TEntity, Microsoft.EntityFrameworkCore.EntityState)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -2044,7 +2048,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ChangeTable(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -2074,7 +2078,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.FromSql(string, params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -2135,6 +2139,352 @@ references:
     name: UnitOfWork
     isExternal: true
     href: Biwen.QuickApi.UnitOfWork.html
+- uid: Biwen.QuickApi.UnitOfWork.IRepository`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<IRepository<TEntity>>(IRepository<TEntity>)
+  nameWithType: EntityExtensions.PublishAddedAsync<IRepository<TEntity>>(IRepository<TEntity>)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.UnitOfWork.IRepository<TEntity>>(Biwen.QuickApi.UnitOfWork.IRepository<TEntity>)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of IRepository(Of TEntity))(IRepository(Of TEntity))
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.UnitOfWork.IRepository(Of TEntity))(Biwen.QuickApi.UnitOfWork.IRepository(Of TEntity))
+  name.vb: PublishAddedAsync(Of IRepository(Of TEntity))(IRepository(Of TEntity))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.UnitOfWork.IRepository{`0})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.UnitOfWork.IRepository{`0})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.UnitOfWork.IRepository`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<IRepository<TEntity>>(IRepository<TEntity>)
+  nameWithType: EntityExtensions.PublishDeletedAsync<IRepository<TEntity>>(IRepository<TEntity>)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.UnitOfWork.IRepository<TEntity>>(Biwen.QuickApi.UnitOfWork.IRepository<TEntity>)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of IRepository(Of TEntity))(IRepository(Of TEntity))
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.UnitOfWork.IRepository(Of TEntity))(Biwen.QuickApi.UnitOfWork.IRepository(Of TEntity))
+  name.vb: PublishDeletedAsync(Of IRepository(Of TEntity))(IRepository(Of TEntity))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.UnitOfWork.IRepository{`0})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.UnitOfWork.IRepository{`0})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.UnitOfWork.IRepository`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<IRepository<TEntity>>(IRepository<TEntity>)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<IRepository<TEntity>>(IRepository<TEntity>)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.UnitOfWork.IRepository<TEntity>>(Biwen.QuickApi.UnitOfWork.IRepository<TEntity>)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of IRepository(Of TEntity))(IRepository(Of TEntity))
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.UnitOfWork.IRepository(Of TEntity))(Biwen.QuickApi.UnitOfWork.IRepository(Of TEntity))
+  name.vb: PublishUpdatedAsync(Of IRepository(Of TEntity))(IRepository(Of TEntity))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.UnitOfWork.IRepository{`0})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.UnitOfWork.IRepository{`0})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents
+  commentId: N:Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Service.EntityEvents
+  nameWithType: Biwen.QuickApi.Service.EntityEvents
+  fullName: Biwen.QuickApi.Service.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
 - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
   commentId: T:Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
   isExternal: true

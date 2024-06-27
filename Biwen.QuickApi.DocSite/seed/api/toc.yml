@@ -195,6 +195,17 @@ items:
   items:
   - uid: Biwen.QuickApi.Mapping.ServiceRegistration
     name: ServiceRegistration
+- uid: Biwen.QuickApi.Messaging.Sms
+  name: Biwen.QuickApi.Messaging.Sms
+  items:
+  - uid: Biwen.QuickApi.Messaging.Sms.ISmsSender
+    name: ISmsSender
+  - uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender
+    name: NullSmsSender
+  - uid: Biwen.QuickApi.Messaging.Sms.SmsMessage
+    name: SmsMessage
+  - uid: Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions
+    name: SmsSenderExtensions
 - uid: Biwen.QuickApi.Metadata
   name: Biwen.QuickApi.Metadata
   items:
@@ -287,6 +298,28 @@ items:
     name: ServiceRegistration
   - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
     name: SystemTextJsonSerializer
+- uid: Biwen.QuickApi.Service
+  name: Biwen.QuickApi.Service
+  items:
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
+    name: BuinessServiceBase<TDbContext>
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`2
+    name: BuinessServiceBase<TDbContext1, TDbContext2>
+  - uid: Biwen.QuickApi.Service.BuinessServiceBase`3
+    name: BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>
+- uid: Biwen.QuickApi.Service.EntityEvents
+  name: Biwen.QuickApi.Service.EntityEvents
+  items:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityAdded`1
+    name: EntityAdded<TEntity>
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityDeleted`1
+    name: EntityDeleted<TEntity>
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+    name: EntityExtensions
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityUpdated`1
+    name: EntityUpdated<TEntity>
+  - uid: Biwen.QuickApi.Service.EntityEvents.IEntityEvent
+    name: IEntityEvent
 - uid: Biwen.QuickApi.Storage
   name: Biwen.QuickApi.Storage
   items:

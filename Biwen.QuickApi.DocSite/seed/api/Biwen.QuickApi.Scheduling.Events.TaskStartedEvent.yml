@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
@@ -39,6 +39,9 @@ items:
   - System.Object.GetHashCode
   extensionMethods:
   - Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.Biwen.QuickApi.Events.EventExtensions.PublishAsync``1(System.Threading.CancellationToken)
+  - Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
 - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.#ctor(Biwen.QuickApi.Scheduling.IScheduleTask,System.DateTime)
   commentId: M:Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.#ctor(Biwen.QuickApi.Scheduling.IScheduleTask,System.DateTime)
   id: '#ctor(Biwen.QuickApi.Scheduling.IScheduleTask,System.DateTime)'
@@ -51,7 +54,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.TaskStartedEvent(Biwen.QuickApi.Scheduling.IScheduleTask, System.DateTime)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/1906f2df5802a4e3c7b5d66068b0c5f52a1ddf9b/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
@@ -416,6 +419,147 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
+- uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<TaskStartedEvent>(TaskStartedEvent)
+  nameWithType: EntityExtensions.PublishAddedAsync<TaskStartedEvent>(TaskStartedEvent)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Scheduling.Events.TaskStartedEvent>(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of TaskStartedEvent)(TaskStartedEvent)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+  name.vb: PublishAddedAsync(Of TaskStartedEvent)(TaskStartedEvent)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: )
+- uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<TaskStartedEvent>(TaskStartedEvent)
+  nameWithType: EntityExtensions.PublishDeletedAsync<TaskStartedEvent>(TaskStartedEvent)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Scheduling.Events.TaskStartedEvent>(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of TaskStartedEvent)(TaskStartedEvent)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+  name.vb: PublishDeletedAsync(Of TaskStartedEvent)(TaskStartedEvent)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: )
+- uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<TaskStartedEvent>(TaskStartedEvent)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<TaskStartedEvent>(TaskStartedEvent)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Scheduling.Events.TaskStartedEvent>(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of TaskStartedEvent)(TaskStartedEvent)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+  name.vb: PublishUpdatedAsync(Of TaskStartedEvent)(TaskStartedEvent)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Scheduling.Events.TaskStartedEvent)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
+    name: TaskStartedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -514,6 +658,163 @@ references:
   name: EventExtensions
   nameWithType: EventExtensions
   fullName: Biwen.QuickApi.Events.EventExtensions
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents
+  commentId: N:Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Service.EntityEvents
+  nameWithType: Biwen.QuickApi.Service.EntityEvents
+  fullName: Biwen.QuickApi.Service.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
 - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.#ctor*
   commentId: Overload:Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.#ctor
   isExternal: true

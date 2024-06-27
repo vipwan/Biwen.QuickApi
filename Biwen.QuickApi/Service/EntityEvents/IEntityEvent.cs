@@ -8,7 +8,7 @@ namespace Biwen.QuickApi.Service.EntityEvents
     }
 #pragma warning restore GEN031 // 使用[AutoGen]自动生成
 
-
+    [SuppressType]
     public static class EntityExtensions
     {
         /// <summary>

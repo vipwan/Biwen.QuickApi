@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Messaging.Sms
+  commentId: N:Biwen.QuickApi.Messaging.Sms
+  id: Biwen.QuickApi.Messaging.Sms
+  children:
+  - Biwen.QuickApi.Messaging.Sms.ISmsSender
+  - Biwen.QuickApi.Messaging.Sms.NullSmsSender
+  - Biwen.QuickApi.Messaging.Sms.SmsMessage
+  - Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Messaging.Sms
+  nameWithType: Biwen.QuickApi.Messaging.Sms
+  fullName: Biwen.QuickApi.Messaging.Sms
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Messaging.Sms.ISmsSender
+  commentId: T:Biwen.QuickApi.Messaging.Sms.ISmsSender
+  parent: Biwen.QuickApi.Messaging.Sms
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Sms.ISmsSender.html
+  name: ISmsSender
+  nameWithType: ISmsSender
+  fullName: Biwen.QuickApi.Messaging.Sms.ISmsSender
+- uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender
+  commentId: T:Biwen.QuickApi.Messaging.Sms.NullSmsSender
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Sms.NullSmsSender.html
+  name: NullSmsSender
+  nameWithType: NullSmsSender
+  fullName: Biwen.QuickApi.Messaging.Sms.NullSmsSender
+- uid: Biwen.QuickApi.Messaging.Sms.SmsMessage
+  commentId: T:Biwen.QuickApi.Messaging.Sms.SmsMessage
+  parent: Biwen.QuickApi.Messaging.Sms
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Sms.SmsMessage.html
+  name: SmsMessage
+  nameWithType: SmsMessage
+  fullName: Biwen.QuickApi.Messaging.Sms.SmsMessage
+- uid: Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions
+  commentId: T:Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions
+  parent: Biwen.QuickApi.Messaging.Sms
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions.html
+  name: SmsSenderExtensions
+  nameWithType: SmsSenderExtensions
+  fullName: Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions
+- uid: Biwen.QuickApi.Messaging.Sms
+  commentId: N:Biwen.QuickApi.Messaging.Sms
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Messaging.Sms
+  nameWithType: Biwen.QuickApi.Messaging.Sms
+  fullName: Biwen.QuickApi.Messaging.Sms
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Sms
+    name: Sms
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Sms.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Sms
+    name: Sms
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Sms.html

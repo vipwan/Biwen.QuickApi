@@ -1,15 +1,14 @@
-﻿
-namespace Biwen.QuickApi.Service.EntityEvents;
+﻿namespace Biwen.QuickApi.Service.EntityEvents;
 
 /// <summary>
 /// 实体添加事件
 /// </summary>
-/// <typeparam name="TEvent"></typeparam>
-public class EntityAdded<TEvent> : IEntityEvent where TEvent : class
+/// <typeparam name="TEntity"></typeparam>
+public class EntityAdded<TEntity> : IEntityEvent where TEntity : class
 {
-    public TEvent Entity { get; }
+    public TEntity Entity { get; }
 
-    public EntityAdded(TEvent entity)
+    public EntityAdded(TEntity entity)
     {
         ArgumentNullException.ThrowIfNull(entity, nameof(entity));
         Entity = entity;
