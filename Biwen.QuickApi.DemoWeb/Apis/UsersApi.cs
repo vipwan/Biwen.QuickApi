@@ -1,5 +1,6 @@
 ﻿using Biwen.QuickApi.DemoWeb.Db;
 using Biwen.QuickApi.DemoWeb.Db.Entity;
+using Biwen.QuickApi.Service.EntityEvents;
 using Biwen.QuickApi.UnitOfWork;
 using FluentValidation;
 using MapsterMapper;
@@ -66,6 +67,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             var user = _mapper.Map<User>(request);
             await _uow.GetRepository<User>().InsertAsync(user);
             await _uow.SaveChangesAsync();
+
+            //Event
+            await user.PublishAddedAsync();
+
             //返回插入的对象
             return Results.Ok(user);
         }
@@ -115,10 +120,23 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public override async ValueTask<IResult> ExecuteAsync(DeleteUserRequest request, CancellationToken cancellationToken = default)
         {
-            _uow.GetRepository<User>().Delete(request.Id);
+            var user = await _uow.GetRepository<User>().FindAsync(request.Id);
+
+            if (user == null)
+            {
+                return Results.BadRequest();
+            }
+
+            _uow.GetRepository<User>().Delete(user);
             var row = await _uow.SaveChangesAsync();
             if (row > 0)
+            {
+                //Event
+                await user.PublishDeletedAsync();
+
                 return Results.Ok();
+            }
+
             //不存在
             return Results.BadRequest();
         }

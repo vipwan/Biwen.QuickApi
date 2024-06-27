@@ -6,14 +6,10 @@ using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Metadata;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.WebEncoders;
 using System.Text.Encodings.Web;
-using System.Text.Unicode;
-
-using ServiceLifetime = Microsoft.Extensions.DependencyInjection.ServiceLifetime;
 
 namespace Biwen.QuickApi
 {
@@ -39,7 +35,7 @@ namespace Biwen.QuickApi
             //解决utf-8编码问题:
             services.Configure<WebEncoderOptions>(options =>
             {
-                options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.All);
+                options.TextEncoderSettings = new TextEncoderSettings(System.Text.Unicode.UnicodeRanges.All);
             });
 
             //add authorization
@@ -448,9 +444,10 @@ namespace Biwen.QuickApi
         /// <exception cref="QuickApiExcetion"></exception>
         async static Task<IResult> ProcessRequestAsync(IHttpContextAccessor ctx, Type apiType, QuickApiAttribute quickApiAttribute)
         {
-            if (ctx == null) throw new QuickApiExcetion($"HttpContextAccessor is null!");
-            if (apiType == null) throw new QuickApiExcetion($"apiType is null!");
-            if (quickApiAttribute == null) throw new QuickApiExcetion($"quickApiAttribute is null!");
+            ArgumentNullException.ThrowIfNull(ctx);
+            ArgumentNullException.ThrowIfNull(apiType);
+            ArgumentNullException.ThrowIfNull(quickApiAttribute);
+
             var sp = ctx.HttpContext!.RequestServices;
             var api = sp.GetRequiredService(apiType);
             var bindService = sp.GetRequiredService<RequestBindService>();
