@@ -20,6 +20,9 @@ builder.Services.AddBiwenQuickApis(o =>
 通过配置文件配置
 ---------------------
 
+如果你对配置不是很熟悉可以[下载schema](https://github.com/vipwan/Biwen.QuickApi/blob/master/quickapi-schema.json)文件并在配置文件中引入schema文件,这样可以方便的查看配置项的说明.
+
+
 ```json
 {
   "$schema": "../quickapi-schema.json",
