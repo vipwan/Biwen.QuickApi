@@ -1,7 +1,6 @@
-﻿using Biwen.QuickApi.DemoWeb.Db;
-using Biwen.QuickApi.DemoWeb.Db.Entity;
+﻿using Biwen.QuickApi.DemoWeb.Db.Entity;
+using Biwen.QuickApi.DemoWeb.Services;
 using Biwen.QuickApi.Service.EntityEvents;
-using Biwen.QuickApi.UnitOfWork;
 using FluentValidation;
 using MapsterMapper;
 using System.ComponentModel.DataAnnotations;
@@ -53,20 +52,21 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [ProducesResponseType<User>(200)]
     public class AddUserEndpoint : BaseQuickApi<CreateUserModal>
     {
-        public AddUserEndpoint(IUnitOfWork<UserDbContext> uow, IMapper mapper)
+        public AddUserEndpoint(UserService userService, IMapper mapper)
         {
-            _uow = uow;
+            _userService = userService;
             _mapper = mapper;
         }
 
-        private readonly IUnitOfWork<UserDbContext> _uow;
         private readonly IMapper _mapper;
+        private readonly UserService _userService;
 
         public override async ValueTask<IResult> ExecuteAsync(CreateUserModal request, CancellationToken cancellationToken = default)
         {
             var user = _mapper.Map<User>(request);
-            await _uow.GetRepository<User>().InsertAsync(user);
-            await _uow.SaveChangesAsync();
+
+            //添加
+            await _userService.AddAsync(user);
 
             //Event
             await user.PublishAddedAsync();
@@ -82,24 +82,21 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [ProducesResponseType<UserDto[]>(200)]
     public class GetUserListEndpoint : BaseQuickApi<PageModal, UserDto[]>
     {
-        public GetUserListEndpoint(IUnitOfWork<UserDbContext> uow, IMapper mapper)
+        public GetUserListEndpoint(UserService userService, IMapper mapper)
         {
-            _uow = uow;
+            _userService = userService;
             _mapper = mapper;
         }
 
-        private readonly IUnitOfWork<UserDbContext> _uow;
+        private readonly UserService _userService;
         private readonly IMapper _mapper;
 
         public override async ValueTask<UserDto[]> ExecuteAsync(PageModal pageModal, CancellationToken cancellationToken = default)
         {
-            var users = await _uow.GetRepository<User>().GetPagedListAsync(
-                pageIndex: pageModal.Page ?? 0,
-                pageSize: pageModal.PageSize ?? 20,
-                predicate: x => string.IsNullOrEmpty(pageModal.Name) || x.Name.Contains(pageModal.Name),
-                orderBy: x => x.OrderByDescending(x => x.CreateTime),
-                cancellationToken: cancellationToken
-            );
+            var users = await _userService.GetPagedList(
+                pageModal.Page ?? 0,
+                pageModal.PageSize ?? 20,
+                predicate: (u) => pageModal.Name == null || u.Name.Contains(pageModal.Name));
 
             var dtos = _mapper.Map<List<UserDto>>(users.Items);
             return dtos.ToArray();
@@ -112,33 +109,26 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [ProducesResponseType(200)]
     public class DeleteUserEndpoint : BaseQuickApi<DeleteUserRequest>
     {
-        public DeleteUserEndpoint(IUnitOfWork<UserDbContext> uow)
+        public DeleteUserEndpoint(UserService userService)
         {
-            _uow = uow;
+            _userService = userService;
         }
-        private readonly IUnitOfWork<UserDbContext> _uow;
+        private readonly UserService _userService;
 
         public override async ValueTask<IResult> ExecuteAsync(DeleteUserRequest request, CancellationToken cancellationToken = default)
         {
-            var user = await _uow.GetRepository<User>().FindAsync(request.Id);
+            var user = await _userService.GetAsync([request.Id]);
 
             if (user == null)
             {
                 return Results.BadRequest();
             }
 
-            _uow.GetRepository<User>().Delete(user);
-            var row = await _uow.SaveChangesAsync();
-            if (row > 0)
-            {
-                //Event
-                await user.PublishDeletedAsync();
+            await _userService.DeleteAsync(user);
+            //Event
+            await user.PublishDeletedAsync();
 
-                return Results.Ok();
-            }
-
-            //不存在
-            return Results.BadRequest();
+            return Results.Ok();
         }
     }
 }
