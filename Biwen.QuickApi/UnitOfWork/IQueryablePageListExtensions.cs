@@ -8,7 +8,6 @@ namespace Biwen.QuickApi.UnitOfWork;
 /// </summary>
 public static class IQueryablePageListExtensions
 {
-
     /// <summary>
     /// 分页扩展
     /// </summary>
@@ -16,13 +15,18 @@ public static class IQueryablePageListExtensions
     /// <param name="source"></param>
     /// <param name="pageIndex">0:开始</param>
     /// <param name="pageSize">默认:20</param>
-    /// <param name="indexFrom"></param>
+    /// <param name="indexFrom">默认:0,表示查询从0开始</param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentException"></exception>
     public static async Task<IPagedList<T>> ToPagedListAsync<T>(this IQueryable<T> source, int pageIndex = 0,
         int pageSize = 20, int indexFrom = 0, CancellationToken cancellationToken = default)
     {
+        if (pageIndex < 0)
+        {
+            throw new ArgumentException($"pageIndex: {pageIndex}, must pageIndex >= 0");
+        }
+
         if (indexFrom > pageIndex)
         {
             throw new ArgumentException(

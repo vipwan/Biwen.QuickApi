@@ -78,8 +78,7 @@ namespace Biwen.QuickApi
             {
                 if (tResponse is not null && typeof(IEndpointMetadataProvider).IsAssignableFrom(tResponse))
                 {
-                    var invokeArgs = new object[] { builder };
-                    _populateMethod.MakeGenericMethod(tResponse).Invoke(null, invokeArgs);
+                    _populateMethod.MakeGenericMethod(tResponse).Invoke(null, [builder]);
                 }
             }
 
@@ -177,8 +176,8 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public async Task CancelAsync()
         {
-            var asyncContext = ActivatorUtilities.GetServiceOrCreateInstance<AsyncContextService<CancellationTokenSource>>(
-                ServiceRegistration.ServiceProvider);
+            var asyncContext =
+                ActivatorUtilities.GetServiceOrCreateInstance<AsyncContextService<CancellationTokenSource>>(ServiceRegistration.ServiceProvider);
             if (asyncContext is not null)
             {
                 if (asyncContext.TryGet(out var cts) && cts is not null)

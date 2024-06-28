@@ -33,11 +33,9 @@ namespace Biwen.QuickApi
             var props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
             if (props?.Length == 0) return @default;
 
-            if (context.Request.Method != HttpMethods.Get)
+            if (context.Request.Method != HttpMethods.Get && context.Request.Method != HttpMethods.Head)
             {
-                //FromBodyReq
-                var fromBodyReq = type.GetCustomAttribute<FromBodyAttribute>();
-                if (fromBodyReq != null)
+                if (type.GetCustomAttribute<FromBodyAttribute>() is { })
                 {
                     @default = await context.Request.ReadFromJsonAsync<T>();
                     return @default!;
@@ -54,8 +52,7 @@ namespace Biwen.QuickApi
 
                 if (prop.PropertyType == typeof(IFormFile))
                 {
-                    var file = context.Request.Form.Files.SingleOrDefault();
-                    if (file != null)
+                    if (context.Request.Form.Files.SingleOrDefault() is { } file)
                     {
                         prop.SetValue(@default, file);
                         continue;
@@ -63,8 +60,7 @@ namespace Biwen.QuickApi
                 }
                 if (prop.PropertyType == typeof(IFormFileCollection))
                 {
-                    var files = context.Request.Form.Files;
-                    if (files != null)
+                    if (context.Request.Form.Files is { } files)
                     {
                         prop.SetValue(@default, files);
                         continue;

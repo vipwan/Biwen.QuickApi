@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 namespace Biwen.QuickApi.UnitOfWork;
 
 /// <summary>
-/// Defines the interfaces for generic repository.
+/// EfCore的泛型仓储接口
 /// </summary>
 /// <typeparam name="TEntity">The type of the entity.</typeparam>
 public interface IRepository<TEntity> where TEntity : class

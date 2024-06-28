@@ -118,11 +118,12 @@ namespace Biwen.QuickApi.Scheduling
                 {
                     return;
                 }
-                var metadatas = await store.GetAllAsync();
-                if (metadatas is null || metadatas.Length == 0)
+
+                if (await store.GetAllAsync() is not { Length: > 0 } metadatas)
                 {
                     return;
                 }
+
                 foreach (var metadata in metadatas)
                 {
                     var attr = new ScheduleTaskAttribute(metadata.Cron)
