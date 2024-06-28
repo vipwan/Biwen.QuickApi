@@ -1,5 +1,6 @@
 ﻿using Biwen.QuickApi.Service.EntityEvents;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace Biwen.QuickApi.UnitOfWork;
@@ -18,30 +19,21 @@ internal class AutoEventInterceptor : ISaveChangesInterceptor
     public InterceptionResult<int> SavingChanges(
         DbContextEventData eventData, InterceptionResult<int> result)
     {
-        var context = eventData.Context!;
-        foreach (var entry in context.ChangeTracker.Entries())
-        {
-            var entityType = entry.Entity.GetType();
-            if (entityType.GetCustomAttribute<AutoEventIgnoreAttribute>() is { })
-                continue;
-
-            _ = entry.State switch
-            {
-                EntityState.Deleted => _publishDeletedAsync.MakeGenericMethod(entityType).Invoke(null, [entry.Entity]),
-                EntityState.Modified => _publishUpdatedAsync.MakeGenericMethod(entityType).Invoke(null, [entry.Entity]),
-                EntityState.Added => _publishAddedAsync.MakeGenericMethod(entityType).Invoke(null, [entry.Entity]),
-                _ => null
-            };
-        }
-
+        ProcessEntityEvents(eventData.Context!.ChangeTracker.Entries());
         return result;
     }
 
     public async ValueTask<InterceptionResult<int>> SavingChangesAsync(
         DbContextEventData eventData, InterceptionResult<int> result, CancellationToken cancellationToken = default)
     {
-        var context = eventData.Context!;
-        foreach (var entry in context.ChangeTracker.Entries())
+        ProcessEntityEvents(eventData.Context!.ChangeTracker.Entries());
+        await Task.CompletedTask;
+        return result;
+    }
+
+    private void ProcessEntityEvents(IEnumerable<EntityEntry> entries)
+    {
+        foreach (var entry in entries)
         {
             var entityType = entry.Entity.GetType();
             if (entityType.GetCustomAttribute<AutoEventIgnoreAttribute>() is { })
@@ -55,9 +47,6 @@ internal class AutoEventInterceptor : ISaveChangesInterceptor
                 _ => null
             };
         }
-
-        await Task.CompletedTask;
-        return result;
     }
 
     #region private
