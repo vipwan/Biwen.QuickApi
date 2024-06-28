@@ -16,13 +16,19 @@ items:
   fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Service/EntityEvents/IEntityEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Service/EntityEvents/IEntityEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Service.EntityEvents
   syntax:
-    content: public static class EntityExtensions
-    content.vb: Public Module EntityExtensions
+    content: >-
+      [SuppressType]
+
+      public static class EntityExtensions
+    content.vb: >-
+      <SuppressType>
+
+      Public Module EntityExtensions
   inheritance:
   - System.Object
   inheritedMembers:
@@ -33,6 +39,10 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+  attributes:
+  - type: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+    ctor: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.#ctor
+    arguments: []
 - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
   commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
   id: PublishAddedAsync``1(``0)
@@ -46,7 +56,7 @@ items:
   fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Service/EntityEvents/IEntityEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Service/EntityEvents/IEntityEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Service.EntityEvents
@@ -82,7 +92,7 @@ items:
   fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Service/EntityEvents/IEntityEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Service/EntityEvents/IEntityEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Service.EntityEvents
@@ -118,7 +128,7 @@ items:
   fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Service/EntityEvents/IEntityEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Service/EntityEvents/IEntityEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Service.EntityEvents

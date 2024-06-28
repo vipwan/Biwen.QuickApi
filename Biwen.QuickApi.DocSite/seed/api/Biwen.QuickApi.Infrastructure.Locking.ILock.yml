@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.ILock
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
@@ -39,7 +39,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.AcquireLockAsync(string, System.TimeSpan?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
@@ -74,7 +74,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.TryAcquireLockAsync(string, System.TimeSpan, System.TimeSpan?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
@@ -111,7 +111,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.ILock.IsLockAcquiredAsync(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking

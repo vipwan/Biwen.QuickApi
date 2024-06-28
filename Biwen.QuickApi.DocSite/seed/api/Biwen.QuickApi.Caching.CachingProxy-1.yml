@@ -1,0 +1,988 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Caching.CachingProxy`1
+  commentId: T:Biwen.QuickApi.Caching.CachingProxy`1
+  id: CachingProxy`1
+  parent: Biwen.QuickApi.Caching
+  children:
+  - Biwen.QuickApi.Caching.CachingProxy`1.#ctor
+  - Biwen.QuickApi.Caching.CachingProxy`1.Create(`0)
+  - Biwen.QuickApi.Caching.CachingProxy`1.Invoke(System.Reflection.MethodInfo,System.Object[])
+  langs:
+  - csharp
+  - vb
+  name: CachingProxy<T>
+  nameWithType: CachingProxy<T>
+  fullName: Biwen.QuickApi.Caching.CachingProxy<T>
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Caching/CachingProxy.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Caching
+  syntax:
+    content: 'public class CachingProxy<T> : DispatchProxy where T : class'
+    typeParameters:
+    - id: T
+    content.vb: Public Class CachingProxy(Of T As Class) Inherits DispatchProxy
+  inheritance:
+  - System.Object
+  - System.Reflection.DispatchProxy
+  inheritedMembers:
+  - System.Reflection.DispatchProxy.Create``2
+  - System.Reflection.DispatchProxy.Create(System.Type,System.Type)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  extensionMethods:
+  - Biwen.QuickApi.Caching.CachingProxy`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Caching.CachingProxy`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Caching.CachingProxy`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  nameWithType.vb: CachingProxy(Of T)
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxy(Of T)
+  name.vb: CachingProxy(Of T)
+- uid: Biwen.QuickApi.Caching.CachingProxy`1.Invoke(System.Reflection.MethodInfo,System.Object[])
+  commentId: M:Biwen.QuickApi.Caching.CachingProxy`1.Invoke(System.Reflection.MethodInfo,System.Object[])
+  id: Invoke(System.Reflection.MethodInfo,System.Object[])
+  parent: Biwen.QuickApi.Caching.CachingProxy`1
+  langs:
+  - csharp
+  - vb
+  name: Invoke(MethodInfo?, object?[]?)
+  nameWithType: CachingProxy<T>.Invoke(MethodInfo?, object?[]?)
+  fullName: Biwen.QuickApi.Caching.CachingProxy<T>.Invoke(System.Reflection.MethodInfo?, object?[]?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Caching/CachingProxy.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Caching
+  example: []
+  syntax:
+    content: protected override object? Invoke(MethodInfo? targetMethod, object?[]? args)
+    parameters:
+    - id: targetMethod
+      type: System.Reflection.MethodInfo
+    - id: args
+      type: System.Object[]
+    return:
+      type: System.Object
+    content.vb: Protected Overrides Function Invoke(targetMethod As MethodInfo, args As Object()) As Object
+  overridden: System.Reflection.DispatchProxy.Invoke(System.Reflection.MethodInfo,System.Object[])
+  overload: Biwen.QuickApi.Caching.CachingProxy`1.Invoke*
+  nameWithType.vb: CachingProxy(Of T).Invoke(MethodInfo, Object())
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxy(Of T).Invoke(System.Reflection.MethodInfo, Object())
+  name.vb: Invoke(MethodInfo, Object())
+- uid: Biwen.QuickApi.Caching.CachingProxy`1.Create(`0)
+  commentId: M:Biwen.QuickApi.Caching.CachingProxy`1.Create(`0)
+  id: Create(`0)
+  parent: Biwen.QuickApi.Caching.CachingProxy`1
+  langs:
+  - csharp
+  - vb
+  name: Create(T)
+  nameWithType: CachingProxy<T>.Create(T)
+  fullName: Biwen.QuickApi.Caching.CachingProxy<T>.Create(T)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Caching/CachingProxy.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Caching
+  summary: 构造代理
+  example: []
+  syntax:
+    content: public static T Create(T decorated)
+    parameters:
+    - id: decorated
+      type: '{T}'
+      description: ''
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Public Shared Function Create(decorated As T) As T
+  overload: Biwen.QuickApi.Caching.CachingProxy`1.Create*
+  nameWithType.vb: CachingProxy(Of T).Create(T)
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxy(Of T).Create(T)
+- uid: Biwen.QuickApi.Caching.CachingProxy`1.#ctor
+  commentId: M:Biwen.QuickApi.Caching.CachingProxy`1.#ctor
+  id: '#ctor'
+  parent: Biwen.QuickApi.Caching.CachingProxy`1
+  langs:
+  - csharp
+  - vb
+  name: CachingProxy()
+  nameWithType: CachingProxy<T>.CachingProxy()
+  fullName: Biwen.QuickApi.Caching.CachingProxy<T>.CachingProxy()
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Caching/CachingProxy.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Caching
+  syntax:
+    content: public CachingProxy()
+    content.vb: Public Sub New()
+  overload: Biwen.QuickApi.Caching.CachingProxy`1.#ctor*
+  nameWithType.vb: CachingProxy(Of T).New()
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxy(Of T).New()
+  name.vb: New()
+references:
+- uid: Biwen.QuickApi.Caching
+  commentId: N:Biwen.QuickApi.Caching
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Caching
+  nameWithType: Biwen.QuickApi.Caching
+  fullName: Biwen.QuickApi.Caching
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching
+    name: Caching
+    isExternal: true
+    href: Biwen.QuickApi.Caching.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching
+    name: Caching
+    isExternal: true
+    href: Biwen.QuickApi.Caching.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Reflection.DispatchProxy
+  commentId: T:System.Reflection.DispatchProxy
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.dispatchproxy
+  name: DispatchProxy
+  nameWithType: DispatchProxy
+  fullName: System.Reflection.DispatchProxy
+- uid: System.Reflection.DispatchProxy.Create``2
+  commentId: M:System.Reflection.DispatchProxy.Create``2
+  parent: System.Reflection.DispatchProxy
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.dispatchproxy.create#system-reflection-dispatchproxy-create-2
+  name: Create<T, TProxy>()
+  nameWithType: DispatchProxy.Create<T, TProxy>()
+  fullName: System.Reflection.DispatchProxy.Create<T, TProxy>()
+  nameWithType.vb: DispatchProxy.Create(Of T, TProxy)()
+  fullName.vb: System.Reflection.DispatchProxy.Create(Of T, TProxy)()
+  name.vb: Create(Of T, TProxy)()
+  spec.csharp:
+  - uid: System.Reflection.DispatchProxy.Create``2
+    name: Create
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.dispatchproxy.create#system-reflection-dispatchproxy-create-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProxy
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Reflection.DispatchProxy.Create``2
+    name: Create
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.dispatchproxy.create#system-reflection-dispatchproxy-create-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProxy
+  - name: )
+  - name: (
+  - name: )
+- uid: System.Reflection.DispatchProxy.Create(System.Type,System.Type)
+  commentId: M:System.Reflection.DispatchProxy.Create(System.Type,System.Type)
+  parent: System.Reflection.DispatchProxy
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.dispatchproxy.create#system-reflection-dispatchproxy-create(system-type-system-type)
+  name: Create(Type, Type)
+  nameWithType: DispatchProxy.Create(Type, Type)
+  fullName: System.Reflection.DispatchProxy.Create(System.Type, System.Type)
+  spec.csharp:
+  - uid: System.Reflection.DispatchProxy.Create(System.Type,System.Type)
+    name: Create
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.dispatchproxy.create#system-reflection-dispatchproxy-create(system-type-system-type)
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: System.Reflection.DispatchProxy.Create(System.Type,System.Type)
+    name: Create
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.dispatchproxy.create#system-reflection-dispatchproxy-create(system-type-system-type)
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Caching.CachingProxy`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<CachingProxy<T>>(CachingProxy<T>)
+  nameWithType: EntityExtensions.PublishAddedAsync<CachingProxy<T>>(CachingProxy<T>)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Caching.CachingProxy<T>>(Biwen.QuickApi.Caching.CachingProxy<T>)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of CachingProxy(Of T))(CachingProxy(Of T))
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Caching.CachingProxy(Of T))(Biwen.QuickApi.Caching.CachingProxy(Of T))
+  name.vb: PublishAddedAsync(Of CachingProxy(Of T))(CachingProxy(Of T))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Caching.CachingProxy{`0})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Caching.CachingProxy{`0})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Caching.CachingProxy`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<CachingProxy<T>>(CachingProxy<T>)
+  nameWithType: EntityExtensions.PublishDeletedAsync<CachingProxy<T>>(CachingProxy<T>)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Caching.CachingProxy<T>>(Biwen.QuickApi.Caching.CachingProxy<T>)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of CachingProxy(Of T))(CachingProxy(Of T))
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Caching.CachingProxy(Of T))(Biwen.QuickApi.Caching.CachingProxy(Of T))
+  name.vb: PublishDeletedAsync(Of CachingProxy(Of T))(CachingProxy(Of T))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Caching.CachingProxy{`0})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Caching.CachingProxy{`0})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Caching.CachingProxy`1.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<CachingProxy<T>>(CachingProxy<T>)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<CachingProxy<T>>(CachingProxy<T>)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Caching.CachingProxy<T>>(Biwen.QuickApi.Caching.CachingProxy<T>)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of CachingProxy(Of T))(CachingProxy(Of T))
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Caching.CachingProxy(Of T))(Biwen.QuickApi.Caching.CachingProxy(Of T))
+  name.vb: PublishUpdatedAsync(Of CachingProxy(Of T))(CachingProxy(Of T))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Caching.CachingProxy{`0})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Caching.CachingProxy{`0})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents
+  commentId: N:Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Service.EntityEvents
+  nameWithType: Biwen.QuickApi.Service.EntityEvents
+  fullName: Biwen.QuickApi.Service.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
+- uid: System.Reflection.DispatchProxy.Invoke(System.Reflection.MethodInfo,System.Object[])
+  commentId: M:System.Reflection.DispatchProxy.Invoke(System.Reflection.MethodInfo,System.Object[])
+  parent: System.Reflection.DispatchProxy
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.dispatchproxy.invoke
+  name: Invoke(MethodInfo, object[])
+  nameWithType: DispatchProxy.Invoke(MethodInfo, object[])
+  fullName: System.Reflection.DispatchProxy.Invoke(System.Reflection.MethodInfo, object[])
+  nameWithType.vb: DispatchProxy.Invoke(MethodInfo, Object())
+  fullName.vb: System.Reflection.DispatchProxy.Invoke(System.Reflection.MethodInfo, Object())
+  name.vb: Invoke(MethodInfo, Object())
+  spec.csharp:
+  - uid: System.Reflection.DispatchProxy.Invoke(System.Reflection.MethodInfo,System.Object[])
+    name: Invoke
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.dispatchproxy.invoke
+  - name: (
+  - uid: System.Reflection.MethodInfo
+    name: MethodInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: System.Reflection.DispatchProxy.Invoke(System.Reflection.MethodInfo,System.Object[])
+    name: Invoke
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.dispatchproxy.invoke
+  - name: (
+  - uid: System.Reflection.MethodInfo
+    name: MethodInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Caching.CachingProxy`1.Invoke*
+  commentId: Overload:Biwen.QuickApi.Caching.CachingProxy`1.Invoke
+  isExternal: true
+  href: Biwen.QuickApi.Caching.CachingProxy-1.html#Biwen_QuickApi_Caching_CachingProxy_1_Invoke_System_Reflection_MethodInfo_System_Object___
+  name: Invoke
+  nameWithType: CachingProxy<T>.Invoke
+  fullName: Biwen.QuickApi.Caching.CachingProxy<T>.Invoke
+  nameWithType.vb: CachingProxy(Of T).Invoke
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxy(Of T).Invoke
+- uid: System.Reflection.MethodInfo
+  commentId: T:System.Reflection.MethodInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo
+  name: MethodInfo
+  nameWithType: MethodInfo
+  fullName: System.Reflection.MethodInfo
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Caching.CachingProxy`1.Create*
+  commentId: Overload:Biwen.QuickApi.Caching.CachingProxy`1.Create
+  isExternal: true
+  href: Biwen.QuickApi.Caching.CachingProxy-1.html#Biwen_QuickApi_Caching_CachingProxy_1_Create__0_
+  name: Create
+  nameWithType: CachingProxy<T>.Create
+  fullName: Biwen.QuickApi.Caching.CachingProxy<T>.Create
+  nameWithType.vb: CachingProxy(Of T).Create
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxy(Of T).Create
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Biwen.QuickApi.Caching.CachingProxy`1.#ctor*
+  commentId: Overload:Biwen.QuickApi.Caching.CachingProxy`1.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Caching.CachingProxy-1.html#Biwen_QuickApi_Caching_CachingProxy_1__ctor
+  name: CachingProxy
+  nameWithType: CachingProxy<T>.CachingProxy
+  fullName: Biwen.QuickApi.Caching.CachingProxy<T>.CachingProxy
+  nameWithType.vb: CachingProxy(Of T).New
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxy(Of T).New
+  name.vb: New

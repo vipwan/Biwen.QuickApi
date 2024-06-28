@@ -165,7 +165,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 ```
 
 
-实体事件广播
+Entity事件广播
 ---------------------
 
 当实体增删改的后,我们可以通过实体事件广播来处理一些业务逻辑,例如:清理缓存,发送邮件,工作流程等.<br/>
@@ -254,6 +254,8 @@ public class UserDbContext : AutoEventDbContext<UserDbContext>
     }
 }
 ```
+> [!NOTE]
+> 请注意`AutoEventDbContext<T>`拦截的是增删改`SaveChanges`前,因此可能存在数据库操作失败或者事务回滚的情况,因此重要业务不推荐这样使用!
 
 
 

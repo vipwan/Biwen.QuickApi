@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriberAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
@@ -107,7 +107,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriberAttribute.EventSubscriberAttribute()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
@@ -130,7 +130,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriberAttribute.ThrowIfError
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
@@ -155,7 +155,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriberAttribute.Order
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
@@ -180,7 +180,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventSubscriberAttribute.IsAsync
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Events/EventSubscriberAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events

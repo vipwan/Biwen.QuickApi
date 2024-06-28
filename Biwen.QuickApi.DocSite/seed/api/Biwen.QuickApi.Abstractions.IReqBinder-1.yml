@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.IReqBinder<T>
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Abstractions/IReqBinder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Abstractions/IReqBinder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions
@@ -44,7 +44,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.IReqBinder<T>.BindAsync(Microsoft.AspNetCore.Http.HttpContext, System.Reflection.ParameterInfo)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Abstractions/IReqBinder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Abstractions/IReqBinder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions

@@ -18,7 +18,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileSpec
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -53,7 +53,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileSpec.FileSpec()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -76,7 +76,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileSpec.Path
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -99,7 +99,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileSpec.Created
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -122,7 +122,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileSpec.Modified
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -145,7 +145,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileSpec.Size
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage

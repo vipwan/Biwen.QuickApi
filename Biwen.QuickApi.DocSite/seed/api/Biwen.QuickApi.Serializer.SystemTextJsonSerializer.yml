@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -59,7 +59,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.SystemTextJsonSerializer(System.Text.Json.JsonSerializerOptions?, System.Text.Json.JsonSerializerOptions?)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -87,7 +87,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Serialize(object, System.IO.Stream)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -119,7 +119,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SystemTextJsonSerializer.Deserialize(System.IO.Stream, System.Type)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/SystemTextJsonSerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer

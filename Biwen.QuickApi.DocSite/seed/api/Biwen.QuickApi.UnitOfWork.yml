@@ -4,6 +4,8 @@ items:
   commentId: N:Biwen.QuickApi.UnitOfWork
   id: Biwen.QuickApi.UnitOfWork
   children:
+  - Biwen.QuickApi.UnitOfWork.AutoEventDbContext`1
+  - Biwen.QuickApi.UnitOfWork.AutoEventIgnoreAttribute
   - Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
   - Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions
   - Biwen.QuickApi.UnitOfWork.IRepositoryFactory
@@ -24,6 +26,41 @@ items:
   assemblies:
   - Biwen.QuickApi
 references:
+- uid: Biwen.QuickApi.UnitOfWork.AutoEventDbContext`1
+  commentId: T:Biwen.QuickApi.UnitOfWork.AutoEventDbContext`1
+  isExternal: true
+  href: Biwen.QuickApi.UnitOfWork.AutoEventDbContext-1.html
+  name: AutoEventDbContext<TDbContext>
+  nameWithType: AutoEventDbContext<TDbContext>
+  fullName: Biwen.QuickApi.UnitOfWork.AutoEventDbContext<TDbContext>
+  nameWithType.vb: AutoEventDbContext(Of TDbContext)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.AutoEventDbContext(Of TDbContext)
+  name.vb: AutoEventDbContext(Of TDbContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.UnitOfWork.AutoEventDbContext`1
+    name: AutoEventDbContext
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.AutoEventDbContext-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.UnitOfWork.AutoEventDbContext`1
+    name: AutoEventDbContext
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.AutoEventDbContext-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+- uid: Biwen.QuickApi.UnitOfWork.AutoEventIgnoreAttribute
+  commentId: T:Biwen.QuickApi.UnitOfWork.AutoEventIgnoreAttribute
+  isExternal: true
+  href: Biwen.QuickApi.UnitOfWork.AutoEventIgnoreAttribute.html
+  name: AutoEventIgnoreAttribute
+  nameWithType: AutoEventIgnoreAttribute
+  fullName: Biwen.QuickApi.UnitOfWork.AutoEventIgnoreAttribute
 - uid: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
   commentId: T:Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
   parent: Biwen.QuickApi.UnitOfWork

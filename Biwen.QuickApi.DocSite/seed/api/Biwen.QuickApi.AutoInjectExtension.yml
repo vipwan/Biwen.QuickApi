@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.AutoInjectExtension
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoInjectSourceGenerator/Biwen.AutoClassGenInject.g.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoInjectSourceGenerator/Biwen.AutoClassGenInject.g.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -44,7 +44,7 @@ items:
   fullName: Biwen.QuickApi.AutoInjectExtension.AddAutoInject(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/aad620249cf55d592f3a5108a0f1bce4eda7f75f/Biwen.QuickApi/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoInjectSourceGenerator/Biwen.AutoClassGenInject.g.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoInjectSourceGenerator/Biwen.AutoClassGenInject.g.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
