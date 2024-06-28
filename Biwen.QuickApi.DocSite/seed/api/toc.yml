@@ -107,6 +107,13 @@ items:
     name: OpenApiMetadataAttribute
   - uid: Biwen.QuickApi.Attributes.QuickApiAttribute
     name: QuickApiAttribute
+- uid: Biwen.QuickApi.Caching
+  name: Biwen.QuickApi.Caching
+  items:
+  - uid: Biwen.QuickApi.Caching.AutoCacheAttribute
+    name: AutoCacheAttribute
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy<T>
 - uid: Biwen.QuickApi.Events
   name: Biwen.QuickApi.Events
   items:
@@ -195,6 +202,15 @@ items:
   items:
   - uid: Biwen.QuickApi.Mapping.ServiceRegistration
     name: ServiceRegistration
+- uid: Biwen.QuickApi.Messaging.Email
+  name: Biwen.QuickApi.Messaging.Email
+  items:
+  - uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    name: AdditionalEmailSendingArgs
+  - uid: Biwen.QuickApi.Messaging.Email.EmailAttachment
+    name: EmailAttachment
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
 - uid: Biwen.QuickApi.Messaging.Sms
   name: Biwen.QuickApi.Messaging.Sms
   items:
@@ -355,6 +371,10 @@ items:
 - uid: Biwen.QuickApi.UnitOfWork
   name: Biwen.QuickApi.UnitOfWork
   items:
+  - uid: Biwen.QuickApi.UnitOfWork.AutoEventDbContext`1
+    name: AutoEventDbContext<TDbContext>
+  - uid: Biwen.QuickApi.UnitOfWork.AutoEventIgnoreAttribute
+    name: AutoEventIgnoreAttribute
   - uid: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
     name: EnumerablePagedListExtensions
   - uid: Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions

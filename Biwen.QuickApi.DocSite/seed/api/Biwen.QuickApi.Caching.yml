@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Caching
+  commentId: N:Biwen.QuickApi.Caching
+  id: Biwen.QuickApi.Caching
+  children:
+  - Biwen.QuickApi.Caching.AutoCacheAttribute
+  - Biwen.QuickApi.Caching.CachingProxy`1
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Caching
+  nameWithType: Biwen.QuickApi.Caching
+  fullName: Biwen.QuickApi.Caching
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Caching.AutoCacheAttribute
+  commentId: T:Biwen.QuickApi.Caching.AutoCacheAttribute
+  isExternal: true
+  href: Biwen.QuickApi.Caching.AutoCacheAttribute.html
+  name: AutoCacheAttribute
+  nameWithType: AutoCacheAttribute
+  fullName: Biwen.QuickApi.Caching.AutoCacheAttribute
+- uid: Biwen.QuickApi.Caching.CachingProxy`1
+  commentId: T:Biwen.QuickApi.Caching.CachingProxy`1
+  isExternal: true
+  href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  name: CachingProxy<T>
+  nameWithType: CachingProxy<T>
+  fullName: Biwen.QuickApi.Caching.CachingProxy<T>
+  nameWithType.vb: CachingProxy(Of T)
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxy(Of T)
+  name.vb: CachingProxy(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Caching.CachingProxy`1
+    name: CachingProxy
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

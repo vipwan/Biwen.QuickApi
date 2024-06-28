@@ -1,0 +1,713 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+  commentId: T:Biwen.QuickApi.Messaging.Email.IEmailSender
+  id: IEmailSender
+  parent: Biwen.QuickApi.Messaging.Email
+  children:
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  langs:
+  - csharp
+  - vb
+  name: IEmailSender
+  nameWithType: IEmailSender
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Messaging/Email/IEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: This service can be used simply sending emails.
+  example: []
+  syntax:
+    content: public interface IEmailSender
+    content.vb: Public Interface IEmailSender
+  extensionMethods:
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  id: SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.IEmailSender
+  langs:
+  - csharp
+  - vb
+  name: SendAsync(string, string?, string?, bool, AdditionalEmailSendingArgs?)
+  nameWithType: IEmailSender.SendAsync(string, string?, string?, bool, AdditionalEmailSendingArgs?)
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(string, string?, string?, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Messaging/Email/IEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: Sends an email.
+  example: []
+  syntax:
+    content: Task SendAsync(string to, string? subject, string? body, bool isBodyHtml = true, AdditionalEmailSendingArgs? additionalEmailSendingArgs = null)
+    parameters:
+    - id: to
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: body
+      type: System.String
+    - id: isBodyHtml
+      type: System.Boolean
+    - id: additionalEmailSendingArgs
+      type: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SendAsync([to] As String, subject As String, body As String, isBodyHtml As Boolean = True, additionalEmailSendingArgs As AdditionalEmailSendingArgs = Nothing) As Task
+  overload: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync*
+  nameWithType.vb: IEmailSender.SendAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: SendAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  id: SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.IEmailSender
+  langs:
+  - csharp
+  - vb
+  name: SendAsync(string, string, string?, string?, bool, AdditionalEmailSendingArgs?)
+  nameWithType: IEmailSender.SendAsync(string, string, string?, string?, bool, AdditionalEmailSendingArgs?)
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(string, string, string?, string?, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Messaging/Email/IEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: Sends an email.
+  example: []
+  syntax:
+    content: Task SendAsync(string from, string to, string? subject, string? body, bool isBodyHtml = true, AdditionalEmailSendingArgs? additionalEmailSendingArgs = null)
+    parameters:
+    - id: from
+      type: System.String
+    - id: to
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: body
+      type: System.String
+    - id: isBodyHtml
+      type: System.Boolean
+    - id: additionalEmailSendingArgs
+      type: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SendAsync(from As String, [to] As String, subject As String, body As String, isBodyHtml As Boolean = True, additionalEmailSendingArgs As AdditionalEmailSendingArgs = Nothing) As Task
+  overload: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync*
+  nameWithType.vb: IEmailSender.SendAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(String, String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: SendAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+  commentId: M:Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+  id: SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+  parent: Biwen.QuickApi.Messaging.Email.IEmailSender
+  langs:
+  - csharp
+  - vb
+  name: SendAsync(MailMessage, bool)
+  nameWithType: IEmailSender.SendAsync(MailMessage, bool)
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage, bool)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Messaging/Email/IEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: Sends an email.
+  example: []
+  syntax:
+    content: Task SendAsync(MailMessage mail, bool normalize = true)
+    parameters:
+    - id: mail
+      type: System.Net.Mail.MailMessage
+      description: Mail to be sent
+    - id: normalize
+      type: System.Boolean
+      description: >-
+        Should normalize email?
+
+        If true, it sets sender address/name if it's not set before and makes mail encoding UTF-8.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SendAsync(mail As MailMessage, normalize As Boolean = True) As Task
+  overload: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync*
+  nameWithType.vb: IEmailSender.SendAsync(MailMessage, Boolean)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage, Boolean)
+  name.vb: SendAsync(MailMessage, Boolean)
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  id: QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.IEmailSender
+  langs:
+  - csharp
+  - vb
+  name: QueueAsync(string, string, string, bool, AdditionalEmailSendingArgs?)
+  nameWithType: IEmailSender.QueueAsync(string, string, string, bool, AdditionalEmailSendingArgs?)
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(string, string, string, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Messaging/Email/IEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: Adds an email to queue to send via background jobs.
+  example: []
+  syntax:
+    content: Task QueueAsync(string to, string subject, string body, bool isBodyHtml = true, AdditionalEmailSendingArgs? additionalEmailSendingArgs = null)
+    parameters:
+    - id: to
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: body
+      type: System.String
+    - id: isBodyHtml
+      type: System.Boolean
+    - id: additionalEmailSendingArgs
+      type: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function QueueAsync([to] As String, subject As String, body As String, isBodyHtml As Boolean = True, additionalEmailSendingArgs As AdditionalEmailSendingArgs = Nothing) As Task
+  overload: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync*
+  nameWithType.vb: IEmailSender.QueueAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: QueueAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  id: QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.IEmailSender
+  langs:
+  - csharp
+  - vb
+  name: QueueAsync(string, string, string, string, bool, AdditionalEmailSendingArgs?)
+  nameWithType: IEmailSender.QueueAsync(string, string, string, string, bool, AdditionalEmailSendingArgs?)
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(string, string, string, string, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Messaging/Email/IEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: Adds an email to queue to send via background jobs.
+  example: []
+  syntax:
+    content: Task QueueAsync(string from, string to, string subject, string body, bool isBodyHtml = true, AdditionalEmailSendingArgs? additionalEmailSendingArgs = null)
+    parameters:
+    - id: from
+      type: System.String
+    - id: to
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: body
+      type: System.String
+    - id: isBodyHtml
+      type: System.Boolean
+    - id: additionalEmailSendingArgs
+      type: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function QueueAsync(from As String, [to] As String, subject As String, body As String, isBodyHtml As Boolean = True, additionalEmailSendingArgs As AdditionalEmailSendingArgs = Nothing) As Task
+  overload: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync*
+  nameWithType.vb: IEmailSender.QueueAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(String, String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: QueueAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+references:
+- uid: Biwen.QuickApi.Messaging.Email
+  commentId: N:Biwen.QuickApi.Messaging.Email
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Messaging.Email
+  nameWithType: Biwen.QuickApi.Messaging.Email
+  fullName: Biwen.QuickApi.Messaging.Email
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Email
+    name: Email
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Email
+    name: Email
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.html
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<IEmailSender>(IEmailSender)
+  nameWithType: EntityExtensions.PublishAddedAsync<IEmailSender>(IEmailSender)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Messaging.Email.IEmailSender>(Biwen.QuickApi.Messaging.Email.IEmailSender)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of IEmailSender)(IEmailSender)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Messaging.Email.IEmailSender)(Biwen.QuickApi.Messaging.Email.IEmailSender)
+  name.vb: PublishAddedAsync(Of IEmailSender)(IEmailSender)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Messaging.Email.IEmailSender)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Messaging.Email.IEmailSender)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: )
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<IEmailSender>(IEmailSender)
+  nameWithType: EntityExtensions.PublishDeletedAsync<IEmailSender>(IEmailSender)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Messaging.Email.IEmailSender>(Biwen.QuickApi.Messaging.Email.IEmailSender)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of IEmailSender)(IEmailSender)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Messaging.Email.IEmailSender)(Biwen.QuickApi.Messaging.Email.IEmailSender)
+  name.vb: PublishDeletedAsync(Of IEmailSender)(IEmailSender)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Messaging.Email.IEmailSender)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Messaging.Email.IEmailSender)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: )
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<IEmailSender>(IEmailSender)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<IEmailSender>(IEmailSender)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Messaging.Email.IEmailSender>(Biwen.QuickApi.Messaging.Email.IEmailSender)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of IEmailSender)(IEmailSender)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Messaging.Email.IEmailSender)(Biwen.QuickApi.Messaging.Email.IEmailSender)
+  name.vb: PublishUpdatedAsync(Of IEmailSender)(IEmailSender)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Messaging.Email.IEmailSender)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Messaging.Email.IEmailSender)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+    name: IEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Service.EntityEvents
+  commentId: N:Biwen.QuickApi.Service.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Service.EntityEvents
+  nameWithType: Biwen.QuickApi.Service.EntityEvents
+  fullName: Biwen.QuickApi.Service.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Service
+    name: Service
+    isExternal: true
+    href: Biwen.QuickApi.Service.html
+  - name: .
+  - uid: Biwen.QuickApi.Service.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Service.EntityEvents.html
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync*
+  commentId: Overload:Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_SendAsync_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  name: SendAsync
+  nameWithType: IEmailSender.SendAsync
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+  commentId: T:Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+  parent: Biwen.QuickApi.Messaging.Email
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs.html
+  name: AdditionalEmailSendingArgs
+  nameWithType: AdditionalEmailSendingArgs
+  fullName: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.Net.Mail.MailMessage
+  commentId: T:System.Net.Mail.MailMessage
+  parent: System.Net.Mail
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.mail.mailmessage
+  name: MailMessage
+  nameWithType: MailMessage
+  fullName: System.Net.Mail.MailMessage
+- uid: System.Net.Mail
+  commentId: N:System.Net.Mail
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Mail
+  nameWithType: System.Net.Mail
+  fullName: System.Net.Mail
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Mail
+    name: Mail
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.mail
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Mail
+    name: Mail
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.mail
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync*
+  commentId: Overload:Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_QueueAsync_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  name: QueueAsync
+  nameWithType: IEmailSender.QueueAsync
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync

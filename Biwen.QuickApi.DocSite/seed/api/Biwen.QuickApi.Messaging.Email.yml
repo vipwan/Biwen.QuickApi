@@ -1,0 +1,88 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Messaging.Email
+  commentId: N:Biwen.QuickApi.Messaging.Email
+  id: Biwen.QuickApi.Messaging.Email
+  children:
+  - Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+  - Biwen.QuickApi.Messaging.Email.EmailAttachment
+  - Biwen.QuickApi.Messaging.Email.IEmailSender
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Messaging.Email
+  nameWithType: Biwen.QuickApi.Messaging.Email
+  fullName: Biwen.QuickApi.Messaging.Email
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Messaging.Email.EmailAttachment
+  commentId: T:Biwen.QuickApi.Messaging.Email.EmailAttachment
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.EmailAttachment.html
+  name: EmailAttachment
+  nameWithType: EmailAttachment
+  fullName: Biwen.QuickApi.Messaging.Email.EmailAttachment
+- uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+  commentId: T:Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+  parent: Biwen.QuickApi.Messaging.Email
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs.html
+  name: AdditionalEmailSendingArgs
+  nameWithType: AdditionalEmailSendingArgs
+  fullName: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+  commentId: T:Biwen.QuickApi.Messaging.Email.IEmailSender
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  name: IEmailSender
+  nameWithType: IEmailSender
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender
+- uid: Biwen.QuickApi.Messaging.Email
+  commentId: N:Biwen.QuickApi.Messaging.Email
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Messaging.Email
+  nameWithType: Biwen.QuickApi.Messaging.Email
+  fullName: Biwen.QuickApi.Messaging.Email
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Email
+    name: Email
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Email
+    name: Email
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.html
