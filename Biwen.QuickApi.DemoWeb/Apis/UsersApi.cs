@@ -52,14 +52,14 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [ProducesResponseType<User>(200)]
     public class AddUserEndpoint : BaseQuickApi<CreateUserModal>
     {
-        public AddUserEndpoint(UserService userService, IMapper mapper)
+        public AddUserEndpoint(IUserService userService, IMapper mapper)
         {
             _userService = userService;
             _mapper = mapper;
         }
 
         private readonly IMapper _mapper;
-        private readonly UserService _userService;
+        private readonly IUserService _userService;
 
         public override async ValueTask<IResult> ExecuteAsync(CreateUserModal request, CancellationToken cancellationToken = default)
         {
@@ -82,13 +82,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [ProducesResponseType<UserDto[]>(200)]
     public class GetUserListEndpoint : BaseQuickApi<PageModal, UserDto[]>
     {
-        public GetUserListEndpoint(UserService userService, IMapper mapper)
+        public GetUserListEndpoint(IUserService userService, IMapper mapper)
         {
             _userService = userService;
             _mapper = mapper;
         }
 
-        private readonly UserService _userService;
+        private readonly IUserService _userService;
         private readonly IMapper _mapper;
 
         public override async ValueTask<UserDto[]> ExecuteAsync(PageModal pageModal, CancellationToken cancellationToken = default)
@@ -109,11 +109,11 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [ProducesResponseType(200)]
     public class DeleteUserEndpoint : BaseQuickApi<DeleteUserRequest>
     {
-        public DeleteUserEndpoint(UserService userService)
+        public DeleteUserEndpoint(IUserService userService)
         {
             _userService = userService;
         }
-        private readonly UserService _userService;
+        private readonly IUserService _userService;
 
         public override async ValueTask<IResult> ExecuteAsync(DeleteUserRequest request, CancellationToken cancellationToken = default)
         {
