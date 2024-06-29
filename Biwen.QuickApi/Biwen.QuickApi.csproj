@@ -15,7 +15,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>webapi;minimal;api;endpoint;REPR;netcore</PackageTags>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<NoWarn>CA2254;CS1570;CS1587;CS1591;CS1712;CS1734</NoWarn>
+		<NoWarn>GEN031;CA2254;CS1570;CS1587;CS1591;CS1712;CS1734</NoWarn>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	</PropertyGroup>
 

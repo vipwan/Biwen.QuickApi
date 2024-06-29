@@ -1,12 +1,10 @@
 ﻿using Biwen.QuickApi.Events;
 
-namespace Biwen.QuickApi.Service.EntityEvents
+namespace Biwen.QuickApi.Application.EntityEvents
 {
-#pragma warning disable GEN031 // 使用[AutoGen]自动生成
     public interface IEntityEvent : IEvent
     {
     }
-#pragma warning restore GEN031 // 使用[AutoGen]自动生成
 
     [SuppressType]
     public static class EntityExtensions

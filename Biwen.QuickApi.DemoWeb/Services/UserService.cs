@@ -1,6 +1,6 @@
 ﻿using Biwen.QuickApi.DemoWeb.Db;
 using Biwen.QuickApi.DemoWeb.Db.Entity;
-using Biwen.QuickApi.Service;
+using Biwen.QuickApi.Application;
 using Biwen.QuickApi.UnitOfWork;
 
 namespace Biwen.QuickApi.DemoWeb.Services

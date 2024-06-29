@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
 
-namespace Biwen.QuickApi.Service
+namespace Biwen.QuickApi.Application
 {
     /// <summary>
     /// Entity Curd Service Base

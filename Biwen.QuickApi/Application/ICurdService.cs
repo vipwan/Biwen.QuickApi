@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
 
-namespace Biwen.QuickApi.Service;
+namespace Biwen.QuickApi.Application;
 
 /// <summary>
 /// <paramref name="TEntity"/> 增删改查接口.

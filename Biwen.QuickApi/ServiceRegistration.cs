@@ -1,4 +1,5 @@
 ﻿using Biwen.QuickApi.Http;
+using Biwen.QuickApi.Infrastructure.DependencyInjection;
 using Biwen.QuickApi.OpenApi;
 using Biwen.QuickApi.Serializer;
 using FluentValidation.AspNetCore;
@@ -56,6 +57,8 @@ namespace Biwen.QuickApi
             //注册验证器
             services.AddFluentValidationAutoValidation();
 
+            //作用域范围内缓存服务提供程序
+            services.AddScoped<ICachedServiceProvider, CachedServiceProvider>();
             //注册AsyncStateHttpContext & AsyncContextService
             services.AddAsyncStateHttpContext().TryAddSingleton(typeof(AsyncContextService<>));
 

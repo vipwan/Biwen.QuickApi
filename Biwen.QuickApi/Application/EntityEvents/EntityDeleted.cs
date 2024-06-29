@@ -1,4 +1,4 @@
-﻿namespace Biwen.QuickApi.Service.EntityEvents;
+﻿namespace Biwen.QuickApi.Application.EntityEvents;
 
 /// <summary>
 /// 实体删除事件

@@ -1,7 +1,7 @@
 ﻿namespace Biwen.QuickApi.DemoWeb.Apis.Events
 {
     using Biwen.QuickApi.DemoWeb.Db.Entity;
-    using Biwen.QuickApi.Service.EntityEvents;
+    using Biwen.QuickApi.Application.EntityEvents;
     using System.Threading;
     using System.Threading.Tasks;
 

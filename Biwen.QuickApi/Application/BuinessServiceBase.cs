@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace Biwen.QuickApi.Service
+namespace Biwen.QuickApi.Application
 {
     /// <summary>
     /// 业务服务基类

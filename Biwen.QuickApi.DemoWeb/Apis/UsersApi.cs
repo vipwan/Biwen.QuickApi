@@ -1,6 +1,6 @@
-﻿using Biwen.QuickApi.DemoWeb.Db.Entity;
+﻿using Biwen.QuickApi.Application.EntityEvents;
+using Biwen.QuickApi.DemoWeb.Db.Entity;
 using Biwen.QuickApi.DemoWeb.Services;
-using Biwen.QuickApi.Service.EntityEvents;
 using FluentValidation;
 using MapsterMapper;
 using System.ComponentModel.DataAnnotations;
@@ -69,6 +69,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             await _userService.AddAsync(user);
 
             //Event
+            //这里只是为了演示,实际上DbContext已经发布了事件,因为UserDbContext继承了AutoEventDbContext
             await user.PublishAddedAsync();
 
             //返回插入的对象
@@ -126,6 +127,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
             await _userService.DeleteAsync(user);
             //Event
+            //这里只是为了演示,实际上DbContext已经发布了事件,因为UserDbContext继承了AutoEventDbContext
             await user.PublishDeletedAsync();
 
             return Results.Ok();

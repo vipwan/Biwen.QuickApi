@@ -1,4 +1,4 @@
-﻿using Biwen.QuickApi.Service.EntityEvents;
+﻿using Biwen.QuickApi.Application.EntityEvents;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
