@@ -46,4 +46,14 @@ public readonly struct ServiceIdentifier : IEquatable<ServiceIdentifier>
             return (ServiceType.GetHashCode() * 397) ^ ServiceKey.GetHashCode();
         }
     }
+
+    public static bool operator ==(ServiceIdentifier left, ServiceIdentifier right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(ServiceIdentifier left, ServiceIdentifier right)
+    {
+        return !(left == right);
+    }
 }

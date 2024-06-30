@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace Biwen.QuickApi.Messaging.Sms;
+namespace Biwen.QuickApi.Messaging.Email;
 
 [SuppressType]
 public static class ServiceRegistration
@@ -10,18 +10,18 @@ public static class ServiceRegistration
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="services"></param>
-    public static void AddSmsSender<T>(this IServiceCollection services) where T : class, ISmsSender
+    public static void AddEmailSender<T>(this IServiceCollection services) where T : class, IEmailSender
     {
-        services.TryAddScoped<ISmsSender, T>();
+        services.TryAddScoped<IEmailSender, T>();
     }
 
     /// <summary>
     /// 添加空的短信发送器
     /// </summary>
     /// <param name="services"></param>
-    public static void AddNullSmsSender(this IServiceCollection services)
+    public static void AddNullEmailSender(this IServiceCollection services)
     {
-        services.TryAddScoped<ISmsSender, NullSmsSender>();
+        services.TryAddScoped<IEmailSender, NullEmailSender>();
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ public static class ServiceRegistration
     /// <param name="serviceProvider"></param>
     /// <param name="key"></param>
     /// <returns></returns>
-    public static ISmsSender? GetKeyedSmsSender(this IServiceProvider serviceProvider, string key)
+    public static IEmailSender? GetKeyedEmailSender(this IServiceProvider serviceProvider, string key)
     {
-        return serviceProvider.GetServices<ISmsSender>().FirstOrDefault(x => x.KeyedName == key);
+        return serviceProvider.GetServices<IEmailSender>().FirstOrDefault(x => x.KeyedName == key);
     }
 }
