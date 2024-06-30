@@ -16,7 +16,7 @@ public static class ServiceRegistration
     }
 
     /// <summary>
-    /// 添加空的短信发送器
+    /// 添加空的邮件发送器
     /// </summary>
     /// <param name="services"></param>
     public static void AddNullEmailSender(this IServiceCollection services)
