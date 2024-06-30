@@ -1,4 +1,5 @@
 ﻿using System.Net.Mail;
+using Biwen.QuickApi.Infrastructure.DependencyInjection;
 
 namespace Biwen.QuickApi.Messaging.Email;
 public class EmailAttachment

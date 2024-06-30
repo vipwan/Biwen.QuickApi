@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.Messaging.Sms
+﻿using Biwen.QuickApi.Infrastructure.DependencyInjection;
+
+namespace Biwen.QuickApi.Messaging.Sms
 {
     /// <summary>
     /// ISmsSender
