@@ -1,5 +1,6 @@
 ﻿using Biwen.QuickApi.Caching;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Biwen.QuickApi.Test
 {
@@ -10,10 +11,15 @@ namespace Biwen.QuickApi.Test
         {
             var services = new ServiceCollection();
             services.AddLogging();
+            services.TryAddSingleton(typeof(CachingProxyFactory<>));
+            services.AddScoped<ITestClass, TestClass>();
+
+
+            var proxy = services.BuildServiceProvider().GetRequiredService<CachingProxyFactory<ITestClass>>();
 
             //测试拦截TestClass
-            var testClass = new TestClass();
-            var decored = CachingProxy<ITestClass>.Create(testClass);
+            //var testClass = new TestClass();
+            var decored = proxy.Create();
 
             //测试拦截效果:
             decored.TestMethod();

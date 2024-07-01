@@ -4,7 +4,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Reflection;
 
-public class CachingProxy<T> : DispatchProxy where T : class
+internal class CachingProxy<T> : DispatchProxy where T : class
 {
     private T? _decorated;
 

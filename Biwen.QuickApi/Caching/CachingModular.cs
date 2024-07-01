@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Biwen.QuickApi.Caching
 {
@@ -18,6 +19,9 @@ namespace Biwen.QuickApi.Caching
 
             services.AddOutputCache();
             services.AddResponseCaching();
+
+            //注入Caching代理
+            services.TryAddSingleton(typeof(CachingProxyFactory<>));
         }
 
         public override void Configure(IApplicationBuilder app, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)
