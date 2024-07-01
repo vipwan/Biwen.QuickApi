@@ -129,19 +129,17 @@ namespace Biwen.QuickApi.Scheduling
 
                 foreach (var metadata in metadatas)
                 {
-                    var attr = new ScheduleTaskAttribute(metadata.Cron)
+                    if (ActivatorUtilities.GetServiceOrCreateInstance(_serviceProvider, metadata.ScheduleTaskType)
+                    as IScheduleTask is { } task)
                     {
-                        Description = metadata.Description,
-                        IsAsync = metadata.IsAsync,
-                        IsStartOnInit = metadata.IsStartOnInit,
-                    };
-
-                    var task = ActivatorUtilities.GetServiceOrCreateInstance(_serviceProvider, metadata.ScheduleTaskType) as IScheduleTask;
-                    if (task is null)
-                    {
-                        continue;
+                        var attr = new ScheduleTaskAttribute(metadata.Cron)
+                        {
+                            Description = metadata.Description,
+                            IsAsync = metadata.IsAsync,
+                            IsStartOnInit = metadata.IsStartOnInit,
+                        };
+                        await DoTaskAsync(task, attr);
                     }
-                    await DoTaskAsync(task, attr);
                 }
             });
 
