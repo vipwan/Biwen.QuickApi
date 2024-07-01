@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.Scheduling.Stores
+﻿using Biwen.QuickApi.Caching;
+
+namespace Biwen.QuickApi.Scheduling.Stores
 {
     /// <summary>
     /// 存储调度任务Metadata的接口,可以自行扩展配置文件或者数据库存储

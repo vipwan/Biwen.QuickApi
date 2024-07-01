@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.Scheduling.Stores
+﻿using Biwen.QuickApi.Caching;
+
+namespace Biwen.QuickApi.Scheduling.Stores
 {
     /// <summary>
     /// MetadataStore
@@ -40,6 +42,7 @@
             }
         }
 
+        [AutoCache(int.MaxValue)]
         public Task<ScheduleTaskMetadata[]> GetAllAsync()
         {
             return Task.FromResult(_cachedMetatas);

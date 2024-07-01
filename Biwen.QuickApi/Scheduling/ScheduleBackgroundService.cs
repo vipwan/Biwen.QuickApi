@@ -1,4 +1,5 @@
-﻿using Biwen.QuickApi.Events;
+﻿using Biwen.QuickApi.Caching;
+using Biwen.QuickApi.Events;
 using Biwen.QuickApi.Infrastructure.Locking;
 using Biwen.QuickApi.Scheduling.Events;
 using Biwen.QuickApi.Scheduling.Stores;
@@ -53,6 +54,7 @@ namespace Biwen.QuickApi.Scheduling
         {
             //调度器
             var scheduler = ActivatorUtilities.GetServiceOrCreateInstance<IScheduler>(_serviceProvider);
+            var cachingProxyFactory = ActivatorUtilities.GetServiceOrCreateInstance<CachingProxyFactory<IScheduleMetadataStore>>(_serviceProvider);
 
             async Task DoTaskAsync(IScheduleTask task, ScheduleTaskAttribute metadata)
             {
@@ -119,7 +121,8 @@ namespace Biwen.QuickApi.Scheduling
                     return;
                 }
 
-                if (await store.GetAllAsync() is not { Length: > 0 } metadatas)
+                //获取所有的元数据,使用缓存代理
+                if (await cachingProxyFactory.Create(store).GetAllAsync() is not { Length: > 0 } metadatas)
                 {
                     return;
                 }
