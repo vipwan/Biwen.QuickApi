@@ -1,5 +1,6 @@
 ﻿namespace Biwen.QuickApi.DemoWeb.Schedules
 {
+    using Biwen.QuickApi.Caching;
     using Biwen.QuickApi.Infrastructure.Locking;
     using Biwen.QuickApi.Scheduling.Stores;
 
@@ -45,6 +46,7 @@
 
     public class DemoStore : IScheduleMetadataStore
     {
+        [AutoCache(int.MaxValue)]//标注AutoCache特性,可以缓存.
         public Task<ScheduleTaskMetadata[]> GetAllAsync()
         {
             //模拟从数据库或配置文件中获取ScheduleTaskMetadata

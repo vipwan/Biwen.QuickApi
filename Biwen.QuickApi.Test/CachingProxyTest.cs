@@ -56,7 +56,6 @@ namespace Biwen.QuickApi.Test
         [AutoCache]
         Task TestTask();
 
-        [AutoCache]
         DateTime TestMethod2(int random, string random2);
 
         [AutoCache(5)]
@@ -75,6 +74,7 @@ namespace Biwen.QuickApi.Test
             return Task.CompletedTask;
         }
 
+        [AutoCache]
         public DateTime TestMethod2(int random, string random2)
         {
             return DateTime.Now;
