@@ -25,14 +25,15 @@ internal class CachingProxy<T> : DispatchProxy where T : class
             return targetMethod.Invoke(_decorated, args);
         }
 
-        if (targetMethod.GetCustomAttribute<AutoCacheAttribute>() is not { } cacheMeta)
+        //可以在接口定义中全局配置,也可以在实现类方法中单独配置
+        if (_decorated!.GetType().GetMethod(targetMethod.Name)!.GetCustomAttribute<AutoCacheAttribute>() is not { } cacheMeta)
         {
             return targetMethod.Invoke(_decorated, args);
         }
 
         try
         {
-            var cacheKey = $"{targetMethod.DeclaringType?.FullName}.{targetMethod.Name}.";
+            var cacheKey = $"{_decorated!.GetType().FullName}.{targetMethod.DeclaringType?.Name}.{targetMethod.Name}.";
             //串联参数:
             if (args != null)
             {
