@@ -7,6 +7,8 @@ items:
   - Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
   - Biwen.QuickApi.Messaging.Email.EmailAttachment
   - Biwen.QuickApi.Messaging.Email.IEmailSender
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender
+  - Biwen.QuickApi.Messaging.Email.ServiceRegistration
   langs:
   - csharp
   - vb
@@ -34,11 +36,27 @@ references:
   fullName: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
 - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
   commentId: T:Biwen.QuickApi.Messaging.Email.IEmailSender
+  parent: Biwen.QuickApi.Messaging.Email
   isExternal: true
   href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
   name: IEmailSender
   nameWithType: IEmailSender
   fullName: Biwen.QuickApi.Messaging.Email.IEmailSender
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+  commentId: T:Biwen.QuickApi.Messaging.Email.NullEmailSender
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  name: NullEmailSender
+  nameWithType: NullEmailSender
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender
+- uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Messaging.Email.ServiceRegistration
+  parent: Biwen.QuickApi.Messaging.Email
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Messaging.Email.ServiceRegistration
 - uid: Biwen.QuickApi.Messaging.Email
   commentId: N:Biwen.QuickApi.Messaging.Email
   isExternal: true

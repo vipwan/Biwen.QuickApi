@@ -1,0 +1,2489 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  commentId: T:Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  id: CurdBuinessServiceBase`2
+  parent: Biwen.QuickApi.Application
+  children:
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.#ctor(Biwen.QuickApi.UnitOfWork.IUnitOfWork{`1},Microsoft.Extensions.Logging.ILogger)
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.AddAsync(`0)
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.DeleteAsync(`0)
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetAsync(System.Object[])
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Repository
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.UpdateAsync(`0)
+  langs:
+  - csharp
+  - vb
+  name: CurdBuinessServiceBase<TEntity, TDbContext>
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Application
+  summary: Entity Curd Service Base
+  example: []
+  syntax:
+    content: 'public abstract class CurdBuinessServiceBase<TEntity, TDbContext> : BuinessServiceBase<TDbContext>, ICurdService<TEntity> where TEntity : class where TDbContext : DbContext'
+    typeParameters:
+    - id: TEntity
+      description: ''
+    - id: TDbContext
+      description: ''
+    content.vb: Public MustInherit Class CurdBuinessServiceBase(Of TEntity As Class, TDbContext As DbContext) Inherits BuinessServiceBase(Of TDbContext) Implements ICurdService(Of TEntity)
+  inheritance:
+  - System.Object
+  - Biwen.QuickApi.Application.BuinessServiceBase{{TDbContext}}
+  implements:
+  - Biwen.QuickApi.Application.ICurdService{{TEntity}}
+  inheritedMembers:
+  - Biwen.QuickApi.Application.BuinessServiceBase{{TDbContext}}.Uow
+  - Biwen.QuickApi.Application.BuinessServiceBase{{TDbContext}}.Logger
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  extensionMethods:
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext)
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext)
+  name.vb: CurdBuinessServiceBase(Of TEntity, TDbContext)
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.#ctor(Biwen.QuickApi.UnitOfWork.IUnitOfWork{`1},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.#ctor(Biwen.QuickApi.UnitOfWork.IUnitOfWork{`1},Microsoft.Extensions.Logging.ILogger)
+  id: '#ctor(Biwen.QuickApi.UnitOfWork.IUnitOfWork{`1},Microsoft.Extensions.Logging.ILogger)'
+  parent: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  langs:
+  - csharp
+  - vb
+  name: CurdBuinessServiceBase(IUnitOfWork<TDbContext>, ILogger?)
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.CurdBuinessServiceBase(IUnitOfWork<TDbContext>, ILogger?)
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.CurdBuinessServiceBase(Biwen.QuickApi.UnitOfWork.IUnitOfWork<TDbContext>, Microsoft.Extensions.Logging.ILogger?)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Application
+  syntax:
+    content: public CurdBuinessServiceBase(IUnitOfWork<TDbContext> uow, ILogger? logger = null)
+    parameters:
+    - id: uow
+      type: Biwen.QuickApi.UnitOfWork.IUnitOfWork{{TDbContext}}
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+    content.vb: Public Sub New(uow As IUnitOfWork(Of TDbContext), logger As ILogger = Nothing)
+  overload: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.#ctor*
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).New(IUnitOfWork(Of TDbContext), ILogger)
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).New(Biwen.QuickApi.UnitOfWork.IUnitOfWork(Of TDbContext), Microsoft.Extensions.Logging.ILogger)
+  name.vb: New(IUnitOfWork(Of TDbContext), ILogger)
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.AddAsync(`0)
+  commentId: M:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.AddAsync(`0)
+  id: AddAsync(`0)
+  parent: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  langs:
+  - csharp
+  - vb
+  name: AddAsync(TEntity)
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.AddAsync(TEntity)
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.AddAsync(TEntity)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Application
+  summary: 添加
+  example: []
+  syntax:
+    content: public virtual Task AddAsync(TEntity entity)
+    parameters:
+    - id: entity
+      type: '{TEntity}'
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Overridable Function AddAsync(entity As TEntity) As Task
+  overload: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.AddAsync*
+  implements:
+  - Biwen.QuickApi.Application.ICurdService{{TEntity}}.AddAsync({TEntity})
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).AddAsync(TEntity)
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).AddAsync(TEntity)
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.DeleteAsync(`0)
+  commentId: M:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.DeleteAsync(`0)
+  id: DeleteAsync(`0)
+  parent: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(TEntity)
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.DeleteAsync(TEntity)
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.DeleteAsync(TEntity)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Application
+  summary: 删除
+  example: []
+  syntax:
+    content: public virtual Task DeleteAsync(TEntity entity)
+    parameters:
+    - id: entity
+      type: '{TEntity}'
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Overridable Function DeleteAsync(entity As TEntity) As Task
+  overload: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.DeleteAsync*
+  implements:
+  - Biwen.QuickApi.Application.ICurdService{{TEntity}}.DeleteAsync({TEntity})
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).DeleteAsync(TEntity)
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).DeleteAsync(TEntity)
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetAsync(System.Object[])
+  commentId: M:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetAsync(System.Object[])
+  id: GetAsync(System.Object[])
+  parent: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  langs:
+  - csharp
+  - vb
+  name: GetAsync(object[])
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.GetAsync(object[])
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.GetAsync(object[])
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Application
+  summary: 获取
+  example: []
+  syntax:
+    content: public virtual Task<TEntity> GetAsync(object[] ids)
+    parameters:
+    - id: ids
+      type: System.Object[]
+      description: 可能存在双重主键
+    return:
+      type: System.Threading.Tasks.Task{{TEntity}}
+      description: ''
+    content.vb: Public Overridable Function GetAsync(ids As Object()) As Task(Of TEntity)
+  overload: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetAsync*
+  implements:
+  - Biwen.QuickApi.Application.ICurdService{{TEntity}}.GetAsync(System.Object[])
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).GetAsync(Object())
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).GetAsync(Object())
+  name.vb: GetAsync(Object())
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.UpdateAsync(`0)
+  commentId: M:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.UpdateAsync(`0)
+  id: UpdateAsync(`0)
+  parent: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(TEntity)
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.UpdateAsync(TEntity)
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.UpdateAsync(TEntity)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Application
+  summary: 更新
+  example: []
+  syntax:
+    content: public virtual Task UpdateAsync(TEntity entity)
+    parameters:
+    - id: entity
+      type: '{TEntity}'
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Overridable Function UpdateAsync(entity As TEntity) As Task
+  overload: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.UpdateAsync*
+  implements:
+  - Biwen.QuickApi.Application.ICurdService{{TEntity}}.UpdateAsync({TEntity})
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).UpdateAsync(TEntity)
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).UpdateAsync(TEntity)
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  commentId: M:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  id: GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  parent: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  langs:
+  - csharp
+  - vb
+  name: GetPagedList(int, int, Expression<Func<TEntity, bool>>?, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>?, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>?)
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedList(int, int, Expression<Func<TEntity, bool>>?, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>?, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>?)
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedList(int, int, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Application
+  summary: 获取分页数据
+  example: []
+  syntax:
+    content: public virtual Task<IPagedList<TEntity>> GetPagedList(int pageIndex = 0, int pageSize = 20, Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null)
+    parameters:
+    - id: pageIndex
+      type: System.Int32
+      description: ''
+    - id: pageSize
+      type: System.Int32
+      description: ''
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
+      description: ''
+    - id: orderBy
+      type: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
+      description: ''
+    - id: include
+      type: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{{TEntity}}}
+      description: ''
+    content.vb: Public Overridable Function GetPagedList(pageIndex As Integer = 0, pageSize As Integer = 20, predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing) As Task(Of IPagedList(Of TEntity))
+  overload: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList*
+  implements:
+  - Biwen.QuickApi.Application.ICurdService{{TEntity}}.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}},System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}},System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}})
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedList(Integer, Integer, System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)), System.Func(Of System.Linq.IQueryable(Of TEntity), System.Linq.IOrderedQueryable(Of TEntity)), System.Func(Of System.Linq.IQueryable(Of TEntity), Microsoft.EntityFrameworkCore.Query.IIncludableQueryable(Of TEntity, Object)))
+  name.vb: GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Repository
+  commentId: P:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Repository
+  id: Repository
+  parent: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  langs:
+  - csharp
+  - vb
+  name: Repository
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.Repository
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.Repository
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Application
+  summary: 仓储
+  example: []
+  syntax:
+    content: protected IRepository<TEntity> Repository { get; }
+    parameters: []
+    return:
+      type: Biwen.QuickApi.UnitOfWork.IRepository{{TEntity}}
+    content.vb: Protected ReadOnly Property Repository As IRepository(Of TEntity)
+  overload: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Repository*
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).Repository
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).Repository
+references:
+- uid: Biwen.QuickApi.Application
+  commentId: N:Biwen.QuickApi.Application
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application
+  nameWithType: Biwen.QuickApi.Application
+  fullName: Biwen.QuickApi.Application
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Application.BuinessServiceBase{{TDbContext}}
+  commentId: T:Biwen.QuickApi.Application.BuinessServiceBase{`1}
+  parent: Biwen.QuickApi.Application
+  definition: Biwen.QuickApi.Application.BuinessServiceBase`1
+  href: Biwen.QuickApi.Application.BuinessServiceBase-1.html
+  name: BuinessServiceBase<TDbContext>
+  nameWithType: BuinessServiceBase<TDbContext>
+  fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext>
+  nameWithType.vb: BuinessServiceBase(Of TDbContext)
+  fullName.vb: Biwen.QuickApi.Application.BuinessServiceBase(Of TDbContext)
+  name.vb: BuinessServiceBase(Of TDbContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.BuinessServiceBase-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.BuinessServiceBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+- uid: Biwen.QuickApi.Application.ICurdService{{TEntity}}
+  commentId: T:Biwen.QuickApi.Application.ICurdService{`0}
+  parent: Biwen.QuickApi.Application
+  definition: Biwen.QuickApi.Application.ICurdService`1
+  href: Biwen.QuickApi.Application.ICurdService-1.html
+  name: ICurdService<TEntity>
+  nameWithType: ICurdService<TEntity>
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>
+  nameWithType.vb: ICurdService(Of TEntity)
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity)
+  name.vb: ICurdService(Of TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService`1
+    name: ICurdService
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService`1
+    name: ICurdService
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.Application.BuinessServiceBase{{TDbContext}}.Uow
+  commentId: P:Biwen.QuickApi.Application.BuinessServiceBase{`1}.Uow
+  parent: Biwen.QuickApi.Application.BuinessServiceBase{{TDbContext}}
+  definition: Biwen.QuickApi.Application.BuinessServiceBase`1.Uow
+  href: Biwen.QuickApi.Application.BuinessServiceBase-1.html#Biwen_QuickApi_Application_BuinessServiceBase_1_Uow
+  name: Uow
+  nameWithType: BuinessServiceBase<TDbContext>.Uow
+  fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext>.Uow
+  nameWithType.vb: BuinessServiceBase(Of TDbContext).Uow
+  fullName.vb: Biwen.QuickApi.Application.BuinessServiceBase(Of TDbContext).Uow
+- uid: Biwen.QuickApi.Application.BuinessServiceBase{{TDbContext}}.Logger
+  commentId: P:Biwen.QuickApi.Application.BuinessServiceBase{`1}.Logger
+  parent: Biwen.QuickApi.Application.BuinessServiceBase{{TDbContext}}
+  definition: Biwen.QuickApi.Application.BuinessServiceBase`1.Logger
+  href: Biwen.QuickApi.Application.BuinessServiceBase-1.html#Biwen_QuickApi_Application_BuinessServiceBase_1_Logger
+  name: Logger
+  nameWithType: BuinessServiceBase<TDbContext>.Logger
+  fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext>.Logger
+  nameWithType.vb: BuinessServiceBase(Of TDbContext).Logger
+  fullName.vb: Biwen.QuickApi.Application.BuinessServiceBase(Of TDbContext).Logger
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<CurdBuinessServiceBase<TEntity, TDbContext>>(CurdBuinessServiceBase<TEntity, TDbContext>)
+  nameWithType: EntityExtensions.PublishAddedAsync<CurdBuinessServiceBase<TEntity, TDbContext>>(CurdBuinessServiceBase<TEntity, TDbContext>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>>(Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of CurdBuinessServiceBase(Of TEntity, TDbContext))(CurdBuinessServiceBase(Of TEntity, TDbContext))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext))(Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext))
+  name.vb: PublishAddedAsync(Of CurdBuinessServiceBase(Of TEntity, TDbContext))(CurdBuinessServiceBase(Of TEntity, TDbContext))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Application.CurdBuinessServiceBase{`0,`1})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Application.CurdBuinessServiceBase{`0,`1})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<CurdBuinessServiceBase<TEntity, TDbContext>>(CurdBuinessServiceBase<TEntity, TDbContext>)
+  nameWithType: EntityExtensions.PublishDeletedAsync<CurdBuinessServiceBase<TEntity, TDbContext>>(CurdBuinessServiceBase<TEntity, TDbContext>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>>(Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of CurdBuinessServiceBase(Of TEntity, TDbContext))(CurdBuinessServiceBase(Of TEntity, TDbContext))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext))(Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext))
+  name.vb: PublishDeletedAsync(Of CurdBuinessServiceBase(Of TEntity, TDbContext))(CurdBuinessServiceBase(Of TEntity, TDbContext))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Application.CurdBuinessServiceBase{`0,`1})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Application.CurdBuinessServiceBase{`0,`1})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<CurdBuinessServiceBase<TEntity, TDbContext>>(CurdBuinessServiceBase<TEntity, TDbContext>)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<CurdBuinessServiceBase<TEntity, TDbContext>>(CurdBuinessServiceBase<TEntity, TDbContext>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>>(Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of CurdBuinessServiceBase(Of TEntity, TDbContext))(CurdBuinessServiceBase(Of TEntity, TDbContext))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext))(Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext))
+  name.vb: PublishUpdatedAsync(Of CurdBuinessServiceBase(Of TEntity, TDbContext))(CurdBuinessServiceBase(Of TEntity, TDbContext))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Application.CurdBuinessServiceBase{`0,`1})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Application.CurdBuinessServiceBase{`0,`1})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Application.BuinessServiceBase`1
+  commentId: T:Biwen.QuickApi.Application.BuinessServiceBase`1
+  isExternal: true
+  href: Biwen.QuickApi.Application.BuinessServiceBase-1.html
+  name: BuinessServiceBase<TDbContext>
+  nameWithType: BuinessServiceBase<TDbContext>
+  fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext>
+  nameWithType.vb: BuinessServiceBase(Of TDbContext)
+  fullName.vb: Biwen.QuickApi.Application.BuinessServiceBase(Of TDbContext)
+  name.vb: BuinessServiceBase(Of TDbContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.BuinessServiceBase-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.BuinessServiceBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+- uid: Biwen.QuickApi.Application.ICurdService`1
+  commentId: T:Biwen.QuickApi.Application.ICurdService`1
+  isExternal: true
+  href: Biwen.QuickApi.Application.ICurdService-1.html
+  name: ICurdService<TEntity>
+  nameWithType: ICurdService<TEntity>
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>
+  nameWithType.vb: ICurdService(Of TEntity)
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity)
+  name.vb: ICurdService(Of TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService`1
+    name: ICurdService
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService`1
+    name: ICurdService
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.Application.BuinessServiceBase`1.Uow
+  commentId: P:Biwen.QuickApi.Application.BuinessServiceBase`1.Uow
+  isExternal: true
+  href: Biwen.QuickApi.Application.BuinessServiceBase-1.html#Biwen_QuickApi_Application_BuinessServiceBase_1_Uow
+  name: Uow
+  nameWithType: BuinessServiceBase<TDbContext>.Uow
+  fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext>.Uow
+  nameWithType.vb: BuinessServiceBase(Of TDbContext).Uow
+  fullName.vb: Biwen.QuickApi.Application.BuinessServiceBase(Of TDbContext).Uow
+- uid: Biwen.QuickApi.Application.BuinessServiceBase`1.Logger
+  commentId: P:Biwen.QuickApi.Application.BuinessServiceBase`1.Logger
+  isExternal: true
+  href: Biwen.QuickApi.Application.BuinessServiceBase-1.html#Biwen_QuickApi_Application_BuinessServiceBase_1_Logger
+  name: Logger
+  nameWithType: BuinessServiceBase<TDbContext>.Logger
+  fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext>.Logger
+  nameWithType.vb: BuinessServiceBase(Of TDbContext).Logger
+  fullName.vb: Biwen.QuickApi.Application.BuinessServiceBase(Of TDbContext).Logger
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.#ctor*
+  commentId: Overload:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html#Biwen_QuickApi_Application_CurdBuinessServiceBase_2__ctor_Biwen_QuickApi_UnitOfWork_IUnitOfWork__1__Microsoft_Extensions_Logging_ILogger_
+  name: CurdBuinessServiceBase
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.CurdBuinessServiceBase
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.CurdBuinessServiceBase
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).New
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).New
+  name.vb: New
+- uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork{{TDbContext}}
+  commentId: T:Biwen.QuickApi.UnitOfWork.IUnitOfWork{`0}
+  parent: Biwen.QuickApi.UnitOfWork
+  definition: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+  href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  name: IUnitOfWork<TDbContext>
+  nameWithType: IUnitOfWork<TDbContext>
+  fullName: Biwen.QuickApi.UnitOfWork.IUnitOfWork<TDbContext>
+  nameWithType.vb: IUnitOfWork(Of TDbContext)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.IUnitOfWork(Of TDbContext)
+  name.vb: IUnitOfWork(Of TDbContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+    name: IUnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+    name: IUnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+  commentId: T:Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+  isExternal: true
+  href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  name: IUnitOfWork<TContext>
+  nameWithType: IUnitOfWork<TContext>
+  fullName: Biwen.QuickApi.UnitOfWork.IUnitOfWork<TContext>
+  nameWithType.vb: IUnitOfWork(Of TContext)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.IUnitOfWork(Of TContext)
+  name.vb: IUnitOfWork(Of TContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+    name: IUnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  - name: <
+  - name: TContext
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
+    name: IUnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IUnitOfWork-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContext
+  - name: )
+- uid: Biwen.QuickApi.UnitOfWork
+  commentId: N:Biwen.QuickApi.UnitOfWork
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.UnitOfWork
+  nameWithType: Biwen.QuickApi.UnitOfWork
+  fullName: Biwen.QuickApi.UnitOfWork
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.UnitOfWork
+    name: UnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.UnitOfWork
+    name: UnitOfWork
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.html
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.AddAsync*
+  commentId: Overload:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.AddAsync
+  isExternal: true
+  href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html#Biwen_QuickApi_Application_CurdBuinessServiceBase_2_AddAsync__0_
+  name: AddAsync
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.AddAsync
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.AddAsync
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).AddAsync
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).AddAsync
+- uid: Biwen.QuickApi.Application.ICurdService{{TEntity}}.AddAsync({TEntity})
+  commentId: M:Biwen.QuickApi.Application.ICurdService{`0}.AddAsync(`0)
+  parent: Biwen.QuickApi.Application.ICurdService{{TEntity}}
+  definition: Biwen.QuickApi.Application.ICurdService`1.AddAsync(`0)
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_AddAsync__0_
+  name: AddAsync(TEntity)
+  nameWithType: ICurdService<TEntity>.AddAsync(TEntity)
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.AddAsync(TEntity)
+  nameWithType.vb: ICurdService(Of TEntity).AddAsync(TEntity)
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).AddAsync(TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.AddAsync(`0)
+    name: AddAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_AddAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.AddAsync(`0)
+    name: AddAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_AddAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: '{TEntity}'
+  commentId: '!:TEntity'
+  definition: TEntity
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Biwen.QuickApi.Application.ICurdService`1.AddAsync(`0)
+  commentId: M:Biwen.QuickApi.Application.ICurdService`1.AddAsync(`0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_AddAsync__0_
+  name: AddAsync(TEntity)
+  nameWithType: ICurdService<TEntity>.AddAsync(TEntity)
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.AddAsync(TEntity)
+  nameWithType.vb: ICurdService(Of TEntity).AddAsync(TEntity)
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).AddAsync(TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService`1.AddAsync(`0)
+    name: AddAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_AddAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService`1.AddAsync(`0)
+    name: AddAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_AddAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: TEntity
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.DeleteAsync*
+  commentId: Overload:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.DeleteAsync
+  isExternal: true
+  href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html#Biwen_QuickApi_Application_CurdBuinessServiceBase_2_DeleteAsync__0_
+  name: DeleteAsync
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.DeleteAsync
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.DeleteAsync
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).DeleteAsync
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).DeleteAsync
+- uid: Biwen.QuickApi.Application.ICurdService{{TEntity}}.DeleteAsync({TEntity})
+  commentId: M:Biwen.QuickApi.Application.ICurdService{`0}.DeleteAsync(`0)
+  parent: Biwen.QuickApi.Application.ICurdService{{TEntity}}
+  definition: Biwen.QuickApi.Application.ICurdService`1.DeleteAsync(`0)
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_DeleteAsync__0_
+  name: DeleteAsync(TEntity)
+  nameWithType: ICurdService<TEntity>.DeleteAsync(TEntity)
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.DeleteAsync(TEntity)
+  nameWithType.vb: ICurdService(Of TEntity).DeleteAsync(TEntity)
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).DeleteAsync(TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.DeleteAsync(`0)
+    name: DeleteAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_DeleteAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.DeleteAsync(`0)
+    name: DeleteAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_DeleteAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.Application.ICurdService`1.DeleteAsync(`0)
+  commentId: M:Biwen.QuickApi.Application.ICurdService`1.DeleteAsync(`0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_DeleteAsync__0_
+  name: DeleteAsync(TEntity)
+  nameWithType: ICurdService<TEntity>.DeleteAsync(TEntity)
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.DeleteAsync(TEntity)
+  nameWithType.vb: ICurdService(Of TEntity).DeleteAsync(TEntity)
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).DeleteAsync(TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService`1.DeleteAsync(`0)
+    name: DeleteAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_DeleteAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService`1.DeleteAsync(`0)
+    name: DeleteAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_DeleteAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetAsync*
+  commentId: Overload:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetAsync
+  isExternal: true
+  href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html#Biwen_QuickApi_Application_CurdBuinessServiceBase_2_GetAsync_System_Object___
+  name: GetAsync
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.GetAsync
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.GetAsync
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).GetAsync
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).GetAsync
+- uid: Biwen.QuickApi.Application.ICurdService{{TEntity}}.GetAsync(System.Object[])
+  commentId: M:Biwen.QuickApi.Application.ICurdService{`0}.GetAsync(System.Object[])
+  parent: Biwen.QuickApi.Application.ICurdService{{TEntity}}
+  definition: Biwen.QuickApi.Application.ICurdService`1.GetAsync(System.Object[])
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetAsync_System_Object___
+  name: GetAsync(object[])
+  nameWithType: ICurdService<TEntity>.GetAsync(object[])
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.GetAsync(object[])
+  nameWithType.vb: ICurdService(Of TEntity).GetAsync(Object())
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).GetAsync(Object())
+  name.vb: GetAsync(Object())
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.GetAsync(System.Object[])
+    name: GetAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetAsync_System_Object___
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.GetAsync(System.Object[])
+    name: GetAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetAsync_System_Object___
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task{{TEntity}}
+  commentId: T:System.Threading.Tasks.Task{`0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TEntity>
+  nameWithType: Task<TEntity>
+  fullName: System.Threading.Tasks.Task<TEntity>
+  nameWithType.vb: Task(Of TEntity)
+  fullName.vb: System.Threading.Tasks.Task(Of TEntity)
+  name.vb: Task(Of TEntity)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.Application.ICurdService`1.GetAsync(System.Object[])
+  commentId: M:Biwen.QuickApi.Application.ICurdService`1.GetAsync(System.Object[])
+  isExternal: true
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetAsync_System_Object___
+  name: GetAsync(object[])
+  nameWithType: ICurdService<TEntity>.GetAsync(object[])
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.GetAsync(object[])
+  nameWithType.vb: ICurdService(Of TEntity).GetAsync(Object())
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).GetAsync(Object())
+  name.vb: GetAsync(Object())
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService`1.GetAsync(System.Object[])
+    name: GetAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetAsync_System_Object___
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService`1.GetAsync(System.Object[])
+    name: GetAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetAsync_System_Object___
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.UpdateAsync*
+  commentId: Overload:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.UpdateAsync
+  isExternal: true
+  href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html#Biwen_QuickApi_Application_CurdBuinessServiceBase_2_UpdateAsync__0_
+  name: UpdateAsync
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.UpdateAsync
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.UpdateAsync
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).UpdateAsync
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).UpdateAsync
+- uid: Biwen.QuickApi.Application.ICurdService{{TEntity}}.UpdateAsync({TEntity})
+  commentId: M:Biwen.QuickApi.Application.ICurdService{`0}.UpdateAsync(`0)
+  parent: Biwen.QuickApi.Application.ICurdService{{TEntity}}
+  definition: Biwen.QuickApi.Application.ICurdService`1.UpdateAsync(`0)
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_UpdateAsync__0_
+  name: UpdateAsync(TEntity)
+  nameWithType: ICurdService<TEntity>.UpdateAsync(TEntity)
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.UpdateAsync(TEntity)
+  nameWithType.vb: ICurdService(Of TEntity).UpdateAsync(TEntity)
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).UpdateAsync(TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.UpdateAsync(`0)
+    name: UpdateAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_UpdateAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.UpdateAsync(`0)
+    name: UpdateAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_UpdateAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.Application.ICurdService`1.UpdateAsync(`0)
+  commentId: M:Biwen.QuickApi.Application.ICurdService`1.UpdateAsync(`0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_UpdateAsync__0_
+  name: UpdateAsync(TEntity)
+  nameWithType: ICurdService<TEntity>.UpdateAsync(TEntity)
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.UpdateAsync(TEntity)
+  nameWithType.vb: ICurdService(Of TEntity).UpdateAsync(TEntity)
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).UpdateAsync(TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService`1.UpdateAsync(`0)
+    name: UpdateAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_UpdateAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService`1.UpdateAsync(`0)
+    name: UpdateAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_UpdateAsync__0_
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList*
+  commentId: Overload:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList
+  isExternal: true
+  href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html#Biwen_QuickApi_Application_CurdBuinessServiceBase_2_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+  name: GetPagedList
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedList
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedList
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedList
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedList
+- uid: Biwen.QuickApi.Application.ICurdService{{TEntity}}.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}},System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}},System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}})
+  commentId: M:Biwen.QuickApi.Application.ICurdService{`0}.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  parent: Biwen.QuickApi.Application.ICurdService{{TEntity}}
+  definition: Biwen.QuickApi.Application.ICurdService`1.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+  name: GetPagedList(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
+  nameWithType: ICurdService<TEntity>.GetPagedList(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.GetPagedList(int, int, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>)
+  nameWithType.vb: ICurdService(Of TEntity).GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).GetPagedList(Integer, Integer, System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)), System.Func(Of System.Linq.IQueryable(Of TEntity), System.Linq.IOrderedQueryable(Of TEntity)), System.Func(Of System.Linq.IQueryable(Of TEntity), Microsoft.EntityFrameworkCore.Query.IIncludableQueryable(Of TEntity, Object)))
+  name.vb: GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+    name: GetPagedList
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iorderedqueryable-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.EntityFrameworkCore.Query.IIncludableQueryable`2
+    name: IIncludableQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.query.iincludablequeryable-2
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+    name: GetPagedList
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iorderedqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.EntityFrameworkCore.Query.IIncludableQueryable`2
+    name: IIncludableQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.query.iincludablequeryable-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<TEntity, bool>>
+  nameWithType: Expression<Func<TEntity, bool>>
+  fullName: System.Linq.Expressions.Expression<System.Func<TEntity, bool>>
+  nameWithType.vb: Expression(Of Func(Of TEntity, Boolean))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean))
+  name.vb: Expression(Of Func(Of TEntity, Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
+  commentId: T:System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>
+  nameWithType: Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>
+  fullName: System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>
+  nameWithType.vb: Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity))
+  fullName.vb: System.Func(Of System.Linq.IQueryable(Of TEntity), System.Linq.IOrderedQueryable(Of TEntity))
+  name.vb: Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity))
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iorderedqueryable-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iorderedqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: )
+- uid: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
+  commentId: T:System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>
+  nameWithType: Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>
+  fullName: System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>
+  nameWithType.vb: Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object))
+  fullName.vb: System.Func(Of System.Linq.IQueryable(Of TEntity), Microsoft.EntityFrameworkCore.Query.IIncludableQueryable(Of TEntity, Object))
+  name.vb: Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object))
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.EntityFrameworkCore.Query.IIncludableQueryable`2
+    name: IIncludableQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.query.iincludablequeryable-2
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.EntityFrameworkCore.Query.IIncludableQueryable`2
+    name: IIncludableQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.query.iincludablequeryable-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{{TEntity}}}
+  commentId: T:System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{`0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IPagedList<TEntity>>
+  nameWithType: Task<IPagedList<TEntity>>
+  fullName: System.Threading.Tasks.Task<Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<TEntity>>
+  nameWithType.vb: Task(Of IPagedList(Of TEntity))
+  fullName.vb: System.Threading.Tasks.Task(Of Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList(Of TEntity))
+  name.vb: Task(Of IPagedList(Of TEntity))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+    name: IPagedList
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+    name: IPagedList
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Application.ICurdService`1.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  commentId: M:Biwen.QuickApi.Application.ICurdService`1.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  isExternal: true
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+  name: GetPagedList(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
+  nameWithType: ICurdService<TEntity>.GetPagedList(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.GetPagedList(int, int, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>)
+  nameWithType.vb: ICurdService(Of TEntity).GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).GetPagedList(Integer, Integer, System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)), System.Func(Of System.Linq.IQueryable(Of TEntity), System.Linq.IOrderedQueryable(Of TEntity)), System.Func(Of System.Linq.IQueryable(Of TEntity), Microsoft.EntityFrameworkCore.Query.IIncludableQueryable(Of TEntity, Object)))
+  name.vb: GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService`1.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+    name: GetPagedList
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iorderedqueryable-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.EntityFrameworkCore.Query.IIncludableQueryable`2
+    name: IIncludableQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.query.iincludablequeryable-2
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService`1.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+    name: GetPagedList
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iorderedqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.EntityFrameworkCore.Query.IIncludableQueryable`2
+    name: IIncludableQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.query.iincludablequeryable-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Repository*
+  commentId: Overload:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Repository
+  isExternal: true
+  href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html#Biwen_QuickApi_Application_CurdBuinessServiceBase_2_Repository
+  name: Repository
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.Repository
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.Repository
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).Repository
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).Repository
+- uid: Biwen.QuickApi.UnitOfWork.IRepository{{TEntity}}
+  commentId: T:Biwen.QuickApi.UnitOfWork.IRepository{`0}
+  parent: Biwen.QuickApi.UnitOfWork
+  definition: Biwen.QuickApi.UnitOfWork.IRepository`1
+  href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  name: IRepository<TEntity>
+  nameWithType: IRepository<TEntity>
+  fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>
+  nameWithType.vb: IRepository(Of TEntity)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.IRepository(Of TEntity)
+  name.vb: IRepository(Of TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+  commentId: T:Biwen.QuickApi.UnitOfWork.IRepository`1
+  isExternal: true
+  href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  name: IRepository<TEntity>
+  nameWithType: IRepository<TEntity>
+  fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>
+  nameWithType.vb: IRepository(Of TEntity)
+  fullName.vb: Biwen.QuickApi.UnitOfWork.IRepository(Of TEntity)
+  name.vb: IRepository(Of TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
+    name: IRepository
+    isExternal: true
+    href: Biwen.QuickApi.UnitOfWork.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )

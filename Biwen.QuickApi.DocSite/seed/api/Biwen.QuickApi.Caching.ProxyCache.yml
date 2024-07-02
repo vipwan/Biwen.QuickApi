@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Caching.ProxyCache
+  commentId: N:Biwen.QuickApi.Caching.ProxyCache
+  id: Biwen.QuickApi.Caching.ProxyCache
+  children:
+  - Biwen.QuickApi.Caching.ProxyCache.IProxyCache
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Caching.ProxyCache
+  nameWithType: Biwen.QuickApi.Caching.ProxyCache
+  fullName: Biwen.QuickApi.Caching.ProxyCache
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Caching.ProxyCache.IProxyCache
+  commentId: T:Biwen.QuickApi.Caching.ProxyCache.IProxyCache
+  parent: Biwen.QuickApi.Caching.ProxyCache
+  isExternal: true
+  href: Biwen.QuickApi.Caching.ProxyCache.IProxyCache.html
+  name: IProxyCache
+  nameWithType: IProxyCache
+  fullName: Biwen.QuickApi.Caching.ProxyCache.IProxyCache
+- uid: Biwen.QuickApi.Caching.ProxyCache
+  commentId: N:Biwen.QuickApi.Caching.ProxyCache
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Caching.ProxyCache
+  nameWithType: Biwen.QuickApi.Caching.ProxyCache
+  fullName: Biwen.QuickApi.Caching.ProxyCache
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching
+    name: Caching
+    isExternal: true
+    href: Biwen.QuickApi.Caching.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching.ProxyCache
+    name: ProxyCache
+    isExternal: true
+    href: Biwen.QuickApi.Caching.ProxyCache.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching
+    name: Caching
+    isExternal: true
+    href: Biwen.QuickApi.Caching.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching.ProxyCache
+    name: ProxyCache
+    isExternal: true
+    href: Biwen.QuickApi.Caching.ProxyCache.html

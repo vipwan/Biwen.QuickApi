@@ -20,7 +20,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SerializerExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/ISerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Serializer/ISerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -50,7 +50,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize<T>(Biwen.QuickApi.Serializer.ISerializer, System.IO.Stream)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/ISerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Serializer/ISerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -83,7 +83,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize<T>(Biwen.QuickApi.Serializer.ISerializer, byte[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/ISerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Serializer/ISerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -116,7 +116,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer, byte[], System.Type)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/ISerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Serializer/ISerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -149,7 +149,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize<T>(Biwen.QuickApi.Serializer.ISerializer, string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/ISerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Serializer/ISerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -182,7 +182,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SerializerExtensions.Deserialize(Biwen.QuickApi.Serializer.ISerializer, string, System.Type)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/ISerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Serializer/ISerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -215,7 +215,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToString<T>(Biwen.QuickApi.Serializer.ISerializer, T)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/ISerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Serializer/ISerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer
@@ -248,7 +248,7 @@ items:
   fullName: Biwen.QuickApi.Serializer.SerializerExtensions.SerializeToBytes<T>(Biwen.QuickApi.Serializer.ISerializer, T)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Serializer/ISerializer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Serializer/ISerializer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Serializer

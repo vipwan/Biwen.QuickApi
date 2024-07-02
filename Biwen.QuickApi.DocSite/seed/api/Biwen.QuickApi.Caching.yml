@@ -5,7 +5,7 @@ items:
   id: Biwen.QuickApi.Caching
   children:
   - Biwen.QuickApi.Caching.AutoCacheAttribute
-  - Biwen.QuickApi.Caching.CachingProxy`1
+  - Biwen.QuickApi.Caching.CachingProxyFactory`1
   langs:
   - csharp
   - vb
@@ -23,29 +23,29 @@ references:
   name: AutoCacheAttribute
   nameWithType: AutoCacheAttribute
   fullName: Biwen.QuickApi.Caching.AutoCacheAttribute
-- uid: Biwen.QuickApi.Caching.CachingProxy`1
-  commentId: T:Biwen.QuickApi.Caching.CachingProxy`1
+- uid: Biwen.QuickApi.Caching.CachingProxyFactory`1
+  commentId: T:Biwen.QuickApi.Caching.CachingProxyFactory`1
   isExternal: true
-  href: Biwen.QuickApi.Caching.CachingProxy-1.html
-  name: CachingProxy<T>
-  nameWithType: CachingProxy<T>
-  fullName: Biwen.QuickApi.Caching.CachingProxy<T>
-  nameWithType.vb: CachingProxy(Of T)
-  fullName.vb: Biwen.QuickApi.Caching.CachingProxy(Of T)
-  name.vb: CachingProxy(Of T)
+  href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html
+  name: CachingProxyFactory<T>
+  nameWithType: CachingProxyFactory<T>
+  fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>
+  nameWithType.vb: CachingProxyFactory(Of T)
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T)
+  name.vb: CachingProxyFactory(Of T)
   spec.csharp:
-  - uid: Biwen.QuickApi.Caching.CachingProxy`1
-    name: CachingProxy
+  - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1
+    name: CachingProxyFactory
     isExternal: true
-    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+    href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: Biwen.QuickApi.Caching.CachingProxy`1
-    name: CachingProxy
+  - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1
+    name: CachingProxyFactory
     isExternal: true
-    href: Biwen.QuickApi.Caching.CachingProxy-1.html
+    href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html
   - name: (
   - name: Of
   - name: " "

@@ -1,4 +1,5 @@
 ﻿using Biwen.QuickApi.Caching;
+using Biwen.QuickApi.Caching.ProxyCache;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -11,9 +12,10 @@ namespace Biwen.QuickApi.Test
         {
             var services = new ServiceCollection();
             services.AddLogging();
-            services.TryAddSingleton(typeof(CachingProxyFactory<>));
             services.AddScoped<ITestClass, TestClass>();
-
+            services.AddMemoryCache();
+            services.AddSingleton<IProxyCache, MemoryProxyCache>();
+            services.TryAddSingleton(typeof(CachingProxyFactory<>));
 
             var proxy = services.BuildServiceProvider().GetRequiredService<CachingProxyFactory<ITestClass>>();
 

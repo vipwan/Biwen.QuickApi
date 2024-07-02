@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Events/EventExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Events/EventExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events
@@ -54,7 +54,7 @@ items:
   fullName: Biwen.QuickApi.Events.EventExtensions.PublishAsync<T>(T, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Events/EventExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Events/EventExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Events

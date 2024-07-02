@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+  commentId: N:Biwen.QuickApi.Infrastructure.DependencyInjection
+  id: Biwen.QuickApi.Infrastructure.DependencyInjection
+  children:
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Infrastructure.DependencyInjection
+  nameWithType: Biwen.QuickApi.Infrastructure.DependencyInjection
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+  commentId: T:Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  name: ICachedServiceProvider
+  nameWithType: ICachedServiceProvider
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  commentId: T:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  name: INamed<T>
+  nameWithType: INamed<T>
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>
+  nameWithType.vb: INamed(Of T)
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T)
+  name.vb: INamed(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier
+  commentId: T:Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier.html
+  name: ServiceIdentifier
+  nameWithType: ServiceIdentifier
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+  commentId: N:Biwen.QuickApi.Infrastructure.DependencyInjection
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.DependencyInjection
+  nameWithType: Biwen.QuickApi.Infrastructure.DependencyInjection
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.html

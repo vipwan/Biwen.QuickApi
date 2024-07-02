@@ -22,7 +22,7 @@ items:
   fullName: System.StringExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -64,7 +64,7 @@ items:
   fullName: System.StringExtensions.IsLetter(char)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -95,7 +95,7 @@ items:
   fullName: System.StringExtensions.IsSpace(char)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -128,7 +128,7 @@ items:
   fullName: System.StringExtensions.RemoveTags(string, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -164,7 +164,7 @@ items:
   fullName: System.StringExtensions.ToPascalCase(string, char)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -197,7 +197,7 @@ items:
   fullName: System.StringExtensions.ToCamalCase(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -230,7 +230,7 @@ items:
   fullName: System.StringExtensions.ReplaceAll(string, System.Collections.Generic.IDictionary<string, string>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -266,7 +266,7 @@ items:
   fullName: System.StringExtensions.IsJson(string, System.Text.Json.JsonDocumentOptions)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -299,7 +299,7 @@ items:
   fullName: System.StringExtensions.ToMD5(string, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System
@@ -335,7 +335,7 @@ items:
   fullName: System.StringExtensions.ToSHA1(string, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Extensions/StringExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Extensions/StringExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: System

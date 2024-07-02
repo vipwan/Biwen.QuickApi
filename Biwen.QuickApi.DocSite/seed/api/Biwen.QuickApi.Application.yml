@@ -1,0 +1,185 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Application
+  commentId: N:Biwen.QuickApi.Application
+  id: Biwen.QuickApi.Application
+  children:
+  - Biwen.QuickApi.Application.BuinessServiceBase`1
+  - Biwen.QuickApi.Application.BuinessServiceBase`2
+  - Biwen.QuickApi.Application.BuinessServiceBase`3
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  - Biwen.QuickApi.Application.ICurdService`1
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Application
+  nameWithType: Biwen.QuickApi.Application
+  fullName: Biwen.QuickApi.Application
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Application.BuinessServiceBase`1
+  commentId: T:Biwen.QuickApi.Application.BuinessServiceBase`1
+  isExternal: true
+  href: Biwen.QuickApi.Application.BuinessServiceBase-1.html
+  name: BuinessServiceBase<TDbContext>
+  nameWithType: BuinessServiceBase<TDbContext>
+  fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext>
+  nameWithType.vb: BuinessServiceBase(Of TDbContext)
+  fullName.vb: Biwen.QuickApi.Application.BuinessServiceBase(Of TDbContext)
+  name.vb: BuinessServiceBase(Of TDbContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.BuinessServiceBase-1.html
+  - name: <
+  - name: TDbContext
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`1
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.BuinessServiceBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext
+  - name: )
+- uid: Biwen.QuickApi.Application.BuinessServiceBase`2
+  commentId: T:Biwen.QuickApi.Application.BuinessServiceBase`2
+  isExternal: true
+  href: Biwen.QuickApi.Application.BuinessServiceBase-2.html
+  name: BuinessServiceBase<TDbContext1, TDbContext2>
+  nameWithType: BuinessServiceBase<TDbContext1, TDbContext2>
+  fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext1, TDbContext2>
+  nameWithType.vb: BuinessServiceBase(Of TDbContext1, TDbContext2)
+  fullName.vb: Biwen.QuickApi.Application.BuinessServiceBase(Of TDbContext1, TDbContext2)
+  name.vb: BuinessServiceBase(Of TDbContext1, TDbContext2)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`2
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.BuinessServiceBase-2.html
+  - name: <
+  - name: TDbContext1
+  - name: ','
+  - name: " "
+  - name: TDbContext2
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`2
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.BuinessServiceBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext1
+  - name: ','
+  - name: " "
+  - name: TDbContext2
+  - name: )
+- uid: Biwen.QuickApi.Application.BuinessServiceBase`3
+  commentId: T:Biwen.QuickApi.Application.BuinessServiceBase`3
+  isExternal: true
+  href: Biwen.QuickApi.Application.BuinessServiceBase-3.html
+  name: BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>
+  nameWithType: BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>
+  fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>
+  nameWithType.vb: BuinessServiceBase(Of TDbContext1, TDbContext2, TDbContext3)
+  fullName.vb: Biwen.QuickApi.Application.BuinessServiceBase(Of TDbContext1, TDbContext2, TDbContext3)
+  name.vb: BuinessServiceBase(Of TDbContext1, TDbContext2, TDbContext3)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`3
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.BuinessServiceBase-3.html
+  - name: <
+  - name: TDbContext1
+  - name: ','
+  - name: " "
+  - name: TDbContext2
+  - name: ','
+  - name: " "
+  - name: TDbContext3
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`3
+    name: BuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.BuinessServiceBase-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDbContext1
+  - name: ','
+  - name: " "
+  - name: TDbContext2
+  - name: ','
+  - name: " "
+  - name: TDbContext3
+  - name: )
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  commentId: T:Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  isExternal: true
+  href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  name: CurdBuinessServiceBase<TEntity, TDbContext>
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext)
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext)
+  name.vb: CurdBuinessServiceBase(Of TEntity, TDbContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase
+    isExternal: true
+    href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - name: TDbContext
+  - name: )
+- uid: Biwen.QuickApi.Application.ICurdService`1
+  commentId: T:Biwen.QuickApi.Application.ICurdService`1
+  isExternal: true
+  href: Biwen.QuickApi.Application.ICurdService-1.html
+  name: ICurdService<TEntity>
+  nameWithType: ICurdService<TEntity>
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>
+  nameWithType.vb: ICurdService(Of TEntity)
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity)
+  name.vb: ICurdService(Of TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.ICurdService`1
+    name: ICurdService
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.ICurdService`1
+    name: ICurdService
+    isExternal: true
+    href: Biwen.QuickApi.Application.ICurdService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )

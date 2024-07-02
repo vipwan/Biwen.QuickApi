@@ -1,0 +1,1585 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+  commentId: T:Biwen.QuickApi.Messaging.Email.NullEmailSender
+  id: NullEmailSender
+  parent: Biwen.QuickApi.Messaging.Email
+  children:
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender.#ctor
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender.KeyedName
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender.Name
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  langs:
+  - csharp
+  - vb
+  name: NullEmailSender
+  nameWithType: NullEmailSender
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  syntax:
+    content: 'public class NullEmailSender : IEmailSender, INamed<string>'
+    content.vb: Public Class NullEmailSender Implements IEmailSender, INamed(Of String)
+  inheritance:
+  - System.Object
+  implements:
+  - Biwen.QuickApi.Messaging.Email.IEmailSender
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  extensionMethods:
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Messaging.Email.NullEmailSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.Name
+  commentId: F:Biwen.QuickApi.Messaging.Email.NullEmailSender.Name
+  id: Name
+  parent: Biwen.QuickApi.Messaging.Email.NullEmailSender
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: NullEmailSender.Name
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.Name
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  syntax:
+    content: public const string Name = "NullEmailSender"
+    return:
+      type: System.String
+    content.vb: Public Const Name As String = "NullEmailSender"
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  id: QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.NullEmailSender
+  langs:
+  - csharp
+  - vb
+  name: QueueAsync(string, string, string, bool, AdditionalEmailSendingArgs?)
+  nameWithType: NullEmailSender.QueueAsync(string, string, string, bool, AdditionalEmailSendingArgs?)
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(string, string, string, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: Adds an email to queue to send via background jobs.
+  example: []
+  syntax:
+    content: public Task QueueAsync(string to, string subject, string body, bool isBodyHtml = true, AdditionalEmailSendingArgs? additionalEmailSendingArgs = null)
+    parameters:
+    - id: to
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: body
+      type: System.String
+    - id: isBodyHtml
+      type: System.Boolean
+    - id: additionalEmailSendingArgs
+      type: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function QueueAsync([to] As String, subject As String, body As String, isBodyHtml As Boolean = True, additionalEmailSendingArgs As AdditionalEmailSendingArgs = Nothing) As Task
+  overload: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync*
+  implements:
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  nameWithType.vb: NullEmailSender.QueueAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: QueueAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  id: QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.NullEmailSender
+  langs:
+  - csharp
+  - vb
+  name: QueueAsync(string, string, string, string, bool, AdditionalEmailSendingArgs?)
+  nameWithType: NullEmailSender.QueueAsync(string, string, string, string, bool, AdditionalEmailSendingArgs?)
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(string, string, string, string, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: Adds an email to queue to send via background jobs.
+  example: []
+  syntax:
+    content: public Task QueueAsync(string from, string to, string subject, string body, bool isBodyHtml = true, AdditionalEmailSendingArgs? additionalEmailSendingArgs = null)
+    parameters:
+    - id: from
+      type: System.String
+    - id: to
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: body
+      type: System.String
+    - id: isBodyHtml
+      type: System.Boolean
+    - id: additionalEmailSendingArgs
+      type: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function QueueAsync(from As String, [to] As String, subject As String, body As String, isBodyHtml As Boolean = True, additionalEmailSendingArgs As AdditionalEmailSendingArgs = Nothing) As Task
+  overload: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync*
+  implements:
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  nameWithType.vb: NullEmailSender.QueueAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(String, String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: QueueAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  id: SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.NullEmailSender
+  langs:
+  - csharp
+  - vb
+  name: SendAsync(string, string?, string?, bool, AdditionalEmailSendingArgs?)
+  nameWithType: NullEmailSender.SendAsync(string, string?, string?, bool, AdditionalEmailSendingArgs?)
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(string, string?, string?, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: Sends an email.
+  example: []
+  syntax:
+    content: public Task SendAsync(string to, string? subject, string? body, bool isBodyHtml = true, AdditionalEmailSendingArgs? additionalEmailSendingArgs = null)
+    parameters:
+    - id: to
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: body
+      type: System.String
+    - id: isBodyHtml
+      type: System.Boolean
+    - id: additionalEmailSendingArgs
+      type: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function SendAsync([to] As String, subject As String, body As String, isBodyHtml As Boolean = True, additionalEmailSendingArgs As AdditionalEmailSendingArgs = Nothing) As Task
+  overload: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync*
+  implements:
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  nameWithType.vb: NullEmailSender.SendAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: SendAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  id: SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.NullEmailSender
+  langs:
+  - csharp
+  - vb
+  name: SendAsync(string, string, string?, string?, bool, AdditionalEmailSendingArgs?)
+  nameWithType: NullEmailSender.SendAsync(string, string, string?, string?, bool, AdditionalEmailSendingArgs?)
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(string, string, string?, string?, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: Sends an email.
+  example: []
+  syntax:
+    content: public Task SendAsync(string from, string to, string? subject, string? body, bool isBodyHtml = true, AdditionalEmailSendingArgs? additionalEmailSendingArgs = null)
+    parameters:
+    - id: from
+      type: System.String
+    - id: to
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: body
+      type: System.String
+    - id: isBodyHtml
+      type: System.Boolean
+    - id: additionalEmailSendingArgs
+      type: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function SendAsync(from As String, [to] As String, subject As String, body As String, isBodyHtml As Boolean = True, additionalEmailSendingArgs As AdditionalEmailSendingArgs = Nothing) As Task
+  overload: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync*
+  implements:
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  nameWithType.vb: NullEmailSender.SendAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(String, String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: SendAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+  commentId: M:Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+  id: SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+  parent: Biwen.QuickApi.Messaging.Email.NullEmailSender
+  langs:
+  - csharp
+  - vb
+  name: SendAsync(MailMessage, bool)
+  nameWithType: NullEmailSender.SendAsync(MailMessage, bool)
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.Net.Mail.MailMessage, bool)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: Sends an email.
+  example: []
+  syntax:
+    content: public Task SendAsync(MailMessage mail, bool normalize = true)
+    parameters:
+    - id: mail
+      type: System.Net.Mail.MailMessage
+      description: Mail to be sent
+    - id: normalize
+      type: System.Boolean
+      description: >-
+        Should normalize email?
+
+        If true, it sets sender address/name if it's not set before and makes mail encoding UTF-8.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function SendAsync(mail As MailMessage, normalize As Boolean = True) As Task
+  overload: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync*
+  implements:
+  - Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+  nameWithType.vb: NullEmailSender.SendAsync(MailMessage, Boolean)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.Net.Mail.MailMessage, Boolean)
+  name.vb: SendAsync(MailMessage, Boolean)
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.#ctor
+  commentId: M:Biwen.QuickApi.Messaging.Email.NullEmailSender.#ctor
+  id: '#ctor'
+  parent: Biwen.QuickApi.Messaging.Email.NullEmailSender
+  langs:
+  - csharp
+  - vb
+  name: NullEmailSender()
+  nameWithType: NullEmailSender.NullEmailSender()
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.NullEmailSender()
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  syntax:
+    content: public NullEmailSender()
+    content.vb: Public Sub New()
+  overload: Biwen.QuickApi.Messaging.Email.NullEmailSender.#ctor*
+  nameWithType.vb: NullEmailSender.New()
+  fullName.vb: Biwen.QuickApi.Messaging.Email.NullEmailSender.New()
+  name.vb: New()
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.KeyedName
+  commentId: P:Biwen.QuickApi.Messaging.Email.NullEmailSender.KeyedName
+  id: KeyedName
+  parent: Biwen.QuickApi.Messaging.Email.NullEmailSender
+  langs:
+  - csharp
+  - vb
+  name: KeyedName
+  nameWithType: NullEmailSender.KeyedName
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.KeyedName
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: 针对同质化服务的键名区分
+  example: []
+  syntax:
+    content: public string KeyedName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property KeyedName As String
+  overload: Biwen.QuickApi.Messaging.Email.NullEmailSender.KeyedName*
+  implements:
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}.KeyedName
+references:
+- uid: Biwen.QuickApi.Messaging.Email
+  commentId: N:Biwen.QuickApi.Messaging.Email
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Messaging.Email
+  nameWithType: Biwen.QuickApi.Messaging.Email
+  fullName: Biwen.QuickApi.Messaging.Email
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Email
+    name: Email
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Email
+    name: Email
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender
+  commentId: T:Biwen.QuickApi.Messaging.Email.IEmailSender
+  parent: Biwen.QuickApi.Messaging.Email
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.IEmailSender.html
+  name: IEmailSender
+  nameWithType: IEmailSender
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}
+  commentId: T:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection
+  definition: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  name: INamed<string>
+  nameWithType: INamed<string>
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<string>
+  nameWithType.vb: INamed(Of String)
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of String)
+  name.vb: INamed(Of String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<NullEmailSender>(NullEmailSender)
+  nameWithType: EntityExtensions.PublishAddedAsync<NullEmailSender>(NullEmailSender)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Messaging.Email.NullEmailSender>(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of NullEmailSender)(NullEmailSender)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Messaging.Email.NullEmailSender)(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+  name.vb: PublishAddedAsync(Of NullEmailSender)(NullEmailSender)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: )
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<NullEmailSender>(NullEmailSender)
+  nameWithType: EntityExtensions.PublishDeletedAsync<NullEmailSender>(NullEmailSender)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Messaging.Email.NullEmailSender>(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of NullEmailSender)(NullEmailSender)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Messaging.Email.NullEmailSender)(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+  name.vb: PublishDeletedAsync(Of NullEmailSender)(NullEmailSender)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: )
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<NullEmailSender>(NullEmailSender)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<NullEmailSender>(NullEmailSender)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Messaging.Email.NullEmailSender>(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of NullEmailSender)(NullEmailSender)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Messaging.Email.NullEmailSender)(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+  name.vb: PublishUpdatedAsync(Of NullEmailSender)(NullEmailSender)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Messaging.Email.NullEmailSender)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  commentId: T:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  name: INamed<T>
+  nameWithType: INamed<T>
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>
+  nameWithType.vb: INamed(Of T)
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T)
+  name.vb: INamed(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+  commentId: N:Biwen.QuickApi.Infrastructure.DependencyInjection
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.DependencyInjection
+  nameWithType: Biwen.QuickApi.Infrastructure.DependencyInjection
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.html
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync*
+  commentId: Overload:Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html#Biwen_QuickApi_Messaging_Email_NullEmailSender_QueueAsync_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  name: QueueAsync
+  nameWithType: NullEmailSender.QueueAsync
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.IEmailSender
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_QueueAsync_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  name: QueueAsync(string, string, string, bool, AdditionalEmailSendingArgs)
+  nameWithType: IEmailSender.QueueAsync(string, string, string, bool, AdditionalEmailSendingArgs)
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(string, string, string, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  nameWithType.vb: IEmailSender.QueueAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: QueueAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+    name: QueueAsync
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_QueueAsync_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    name: AdditionalEmailSendingArgs
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+    name: QueueAsync
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_QueueAsync_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    name: AdditionalEmailSendingArgs
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+  commentId: T:Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+  parent: Biwen.QuickApi.Messaging.Email
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs.html
+  name: AdditionalEmailSendingArgs
+  nameWithType: AdditionalEmailSendingArgs
+  fullName: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.IEmailSender
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_QueueAsync_System_String_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  name: QueueAsync(string, string, string, string, bool, AdditionalEmailSendingArgs)
+  nameWithType: IEmailSender.QueueAsync(string, string, string, string, bool, AdditionalEmailSendingArgs)
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(string, string, string, string, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  nameWithType.vb: IEmailSender.QueueAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(String, String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: QueueAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+    name: QueueAsync
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_QueueAsync_System_String_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    name: AdditionalEmailSendingArgs
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender.QueueAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+    name: QueueAsync
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_QueueAsync_System_String_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    name: AdditionalEmailSendingArgs
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs.html
+  - name: )
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync*
+  commentId: Overload:Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html#Biwen_QuickApi_Messaging_Email_NullEmailSender_SendAsync_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  name: SendAsync
+  nameWithType: NullEmailSender.SendAsync
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.IEmailSender
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_SendAsync_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  name: SendAsync(string, string, string, bool, AdditionalEmailSendingArgs)
+  nameWithType: IEmailSender.SendAsync(string, string, string, bool, AdditionalEmailSendingArgs)
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(string, string, string, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  nameWithType.vb: IEmailSender.SendAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: SendAsync(String, String, String, Boolean, AdditionalEmailSendingArgs)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+    name: SendAsync
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_SendAsync_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    name: AdditionalEmailSendingArgs
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+    name: SendAsync
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_SendAsync_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    name: AdditionalEmailSendingArgs
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs.html
+  - name: )
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  commentId: M:Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  parent: Biwen.QuickApi.Messaging.Email.IEmailSender
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_SendAsync_System_String_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  name: SendAsync(string, string, string, string, bool, AdditionalEmailSendingArgs)
+  nameWithType: IEmailSender.SendAsync(string, string, string, string, bool, AdditionalEmailSendingArgs)
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(string, string, string, string, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  nameWithType.vb: IEmailSender.SendAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(String, String, String, String, Boolean, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+  name.vb: SendAsync(String, String, String, String, Boolean, AdditionalEmailSendingArgs)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+    name: SendAsync
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_SendAsync_System_String_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    name: AdditionalEmailSendingArgs
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.String,System.String,System.String,System.String,System.Boolean,Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs)
+    name: SendAsync
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_SendAsync_System_String_System_String_System_String_System_String_System_Boolean_Biwen_QuickApi_Messaging_Email_AdditionalEmailSendingArgs_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
+    name: AdditionalEmailSendingArgs
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs.html
+  - name: )
+- uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+  commentId: M:Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+  parent: Biwen.QuickApi.Messaging.Email.IEmailSender
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_SendAsync_System_Net_Mail_MailMessage_System_Boolean_
+  name: SendAsync(MailMessage, bool)
+  nameWithType: IEmailSender.SendAsync(MailMessage, bool)
+  fullName: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage, bool)
+  nameWithType.vb: IEmailSender.SendAsync(MailMessage, Boolean)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage, Boolean)
+  name.vb: SendAsync(MailMessage, Boolean)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+    name: SendAsync
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_SendAsync_System_Net_Mail_MailMessage_System_Boolean_
+  - name: (
+  - uid: System.Net.Mail.MailMessage
+    name: MailMessage
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.mail.mailmessage
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Messaging.Email.IEmailSender.SendAsync(System.Net.Mail.MailMessage,System.Boolean)
+    name: SendAsync
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.IEmailSender.html#Biwen_QuickApi_Messaging_Email_IEmailSender_SendAsync_System_Net_Mail_MailMessage_System_Boolean_
+  - name: (
+  - uid: System.Net.Mail.MailMessage
+    name: MailMessage
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.mail.mailmessage
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Net.Mail.MailMessage
+  commentId: T:System.Net.Mail.MailMessage
+  parent: System.Net.Mail
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.mail.mailmessage
+  name: MailMessage
+  nameWithType: MailMessage
+  fullName: System.Net.Mail.MailMessage
+- uid: System.Net.Mail
+  commentId: N:System.Net.Mail
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Mail
+  nameWithType: System.Net.Mail
+  fullName: System.Net.Mail
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Mail
+    name: Mail
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.mail
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Mail
+    name: Mail
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.mail
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.#ctor*
+  commentId: Overload:Biwen.QuickApi.Messaging.Email.NullEmailSender.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html#Biwen_QuickApi_Messaging_Email_NullEmailSender__ctor
+  name: NullEmailSender
+  nameWithType: NullEmailSender.NullEmailSender
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.NullEmailSender
+  nameWithType.vb: NullEmailSender.New
+  fullName.vb: Biwen.QuickApi.Messaging.Email.NullEmailSender.New
+  name.vb: New
+- uid: Biwen.QuickApi.Messaging.Email.NullEmailSender.KeyedName*
+  commentId: Overload:Biwen.QuickApi.Messaging.Email.NullEmailSender.KeyedName
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.NullEmailSender.html#Biwen_QuickApi_Messaging_Email_NullEmailSender_KeyedName
+  name: KeyedName
+  nameWithType: NullEmailSender.KeyedName
+  fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.KeyedName
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}.KeyedName
+  commentId: P:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}.KeyedName
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}
+  definition: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html#Biwen_QuickApi_Infrastructure_DependencyInjection_INamed_1_KeyedName
+  name: KeyedName
+  nameWithType: INamed<string>.KeyedName
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<string>.KeyedName
+  nameWithType.vb: INamed(Of String).KeyedName
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of String).KeyedName
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName
+  commentId: P:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html#Biwen_QuickApi_Infrastructure_DependencyInjection_INamed_1_KeyedName
+  name: KeyedName
+  nameWithType: INamed<T>.KeyedName
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>.KeyedName
+  nameWithType.vb: INamed(Of T).KeyedName
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T).KeyedName

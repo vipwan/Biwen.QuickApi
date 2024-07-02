@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/UnitOfWork/IQueryablePageListExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/UnitOfWork/IQueryablePageListExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -46,7 +46,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions.ToPagedListAsync<T>(System.Linq.IQueryable<T>, int, int, int, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/UnitOfWork/IQueryablePageListExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/UnitOfWork/IQueryablePageListExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -66,7 +66,7 @@ items:
       description: 默认:20
     - id: indexFrom
       type: System.Int32
-      description: ''
+      description: 默认:0,表示查询从0开始
     - id: cancellationToken
       type: System.Threading.CancellationToken
       description: ''

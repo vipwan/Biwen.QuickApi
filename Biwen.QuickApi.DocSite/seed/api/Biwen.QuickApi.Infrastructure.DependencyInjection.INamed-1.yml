@@ -1,0 +1,475 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  commentId: T:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  id: INamed`1
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection
+  children:
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName
+  langs:
+  - csharp
+  - vb
+  name: INamed<T>
+  nameWithType: INamed<T>
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/INamed.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
+  summary: 针对同质服务的键名区分 <code class="typeparamref">T</code>
+  example: []
+  syntax:
+    content: public interface INamed<T>
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: Public Interface INamed(Of T)
+  extensionMethods:
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  nameWithType.vb: INamed(Of T)
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T)
+  name.vb: INamed(Of T)
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName
+  commentId: P:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName
+  id: KeyedName
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  langs:
+  - csharp
+  - vb
+  name: KeyedName
+  nameWithType: INamed<T>.KeyedName
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>.KeyedName
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/INamed.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
+  summary: 针对同质化服务的键名区分
+  example: []
+  syntax:
+    content: T KeyedName { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: ReadOnly Property KeyedName As T
+  overload: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName*
+  nameWithType.vb: INamed(Of T).KeyedName
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T).KeyedName
+references:
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+  commentId: N:Biwen.QuickApi.Infrastructure.DependencyInjection
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.DependencyInjection
+  nameWithType: Biwen.QuickApi.Infrastructure.DependencyInjection
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.html
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<INamed<T>>(INamed<T>)
+  nameWithType: EntityExtensions.PublishAddedAsync<INamed<T>>(INamed<T>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>>(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of INamed(Of T))(INamed(Of T))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T))(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T))
+  name.vb: PublishAddedAsync(Of INamed(Of T))(INamed(Of T))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{`0})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{`0})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<INamed<T>>(INamed<T>)
+  nameWithType: EntityExtensions.PublishDeletedAsync<INamed<T>>(INamed<T>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>>(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of INamed(Of T))(INamed(Of T))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T))(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T))
+  name.vb: PublishDeletedAsync(Of INamed(Of T))(INamed(Of T))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{`0})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{`0})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<INamed<T>>(INamed<T>)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<INamed<T>>(INamed<T>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>>(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of INamed(Of T))(INamed(Of T))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T))(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T))
+  name.vb: PublishUpdatedAsync(Of INamed(Of T))(INamed(Of T))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{`0})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{`0})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName*
+  commentId: Overload:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html#Biwen_QuickApi_Infrastructure_DependencyInjection_INamed_1_KeyedName
+  name: KeyedName
+  nameWithType: INamed<T>.KeyedName
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>.KeyedName
+  nameWithType.vb: INamed(Of T).KeyedName
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T).KeyedName
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -57,7 +57,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions.AddUnitOfWork<TContext>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -88,7 +88,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions.AddUnitOfWork<TContext1, TContext2>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -120,7 +120,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions.AddUnitOfWork<TContext1, TContext2, TContext3>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -153,7 +153,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions.AddCustomRepository<TEntity, TRepository>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork

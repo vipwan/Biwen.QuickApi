@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Biwen.QuickApi.Caching.ProxyCache;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -20,6 +21,8 @@ namespace Biwen.QuickApi.Caching
             services.AddOutputCache();
             services.AddResponseCaching();
 
+            //注入IProxyCache,默认使用MemoryCache
+            services.AddSingleton<IProxyCache, MemoryProxyCache>();
             //注入Caching代理
             services.TryAddSingleton(typeof(CachingProxyFactory<>));
         }

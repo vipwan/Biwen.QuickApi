@@ -96,6 +96,32 @@ items:
     name: PreModularAttribute<T, T2, T3, T4, T5, T6>
   - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`7
     name: PreModularAttribute<T, T2, T3, T4, T5, T6, T7>
+- uid: Biwen.QuickApi.Application
+  name: Biwen.QuickApi.Application
+  items:
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`1
+    name: BuinessServiceBase<TDbContext>
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`2
+    name: BuinessServiceBase<TDbContext1, TDbContext2>
+  - uid: Biwen.QuickApi.Application.BuinessServiceBase`3
+    name: BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>
+  - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+    name: CurdBuinessServiceBase<TEntity, TDbContext>
+  - uid: Biwen.QuickApi.Application.ICurdService`1
+    name: ICurdService<TEntity>
+- uid: Biwen.QuickApi.Application.EntityEvents
+  name: Biwen.QuickApi.Application.EntityEvents
+  items:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityAdded`1
+    name: EntityAdded<TEntity>
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityDeleted`1
+    name: EntityDeleted<TEntity>
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+    name: EntityExtensions
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityUpdated`1
+    name: EntityUpdated<TEntity>
+  - uid: Biwen.QuickApi.Application.EntityEvents.IEntityEvent
+    name: IEntityEvent
 - uid: Biwen.QuickApi.Attributes
   name: Biwen.QuickApi.Attributes
   items:
@@ -112,8 +138,13 @@ items:
   items:
   - uid: Biwen.QuickApi.Caching.AutoCacheAttribute
     name: AutoCacheAttribute
-  - uid: Biwen.QuickApi.Caching.CachingProxy`1
-    name: CachingProxy<T>
+  - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1
+    name: CachingProxyFactory<T>
+- uid: Biwen.QuickApi.Caching.ProxyCache
+  name: Biwen.QuickApi.Caching.ProxyCache
+  items:
+  - uid: Biwen.QuickApi.Caching.ProxyCache.IProxyCache
+    name: IProxyCache
 - uid: Biwen.QuickApi.Events
   name: Biwen.QuickApi.Events
   items:
@@ -160,6 +191,15 @@ items:
     name: AsyncContextService<T>
   - uid: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
     name: SuppressTypeAttribute
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+  name: Biwen.QuickApi.Infrastructure.DependencyInjection
+  items:
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed<T>
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier
+    name: ServiceIdentifier
 - uid: Biwen.QuickApi.Infrastructure.Html
   name: Biwen.QuickApi.Infrastructure.Html
   items:
@@ -211,6 +251,10 @@ items:
     name: EmailAttachment
   - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
     name: IEmailSender
+  - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
+    name: NullEmailSender
+  - uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration
+    name: ServiceRegistration
 - uid: Biwen.QuickApi.Messaging.Sms
   name: Biwen.QuickApi.Messaging.Sms
   items:
@@ -218,6 +262,8 @@ items:
     name: ISmsSender
   - uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender
     name: NullSmsSender
+  - uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration
+    name: ServiceRegistration
   - uid: Biwen.QuickApi.Messaging.Sms.SmsMessage
     name: SmsMessage
   - uid: Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions
@@ -314,28 +360,6 @@ items:
     name: ServiceRegistration
   - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
     name: SystemTextJsonSerializer
-- uid: Biwen.QuickApi.Service
-  name: Biwen.QuickApi.Service
-  items:
-  - uid: Biwen.QuickApi.Service.BuinessServiceBase`1
-    name: BuinessServiceBase<TDbContext>
-  - uid: Biwen.QuickApi.Service.BuinessServiceBase`2
-    name: BuinessServiceBase<TDbContext1, TDbContext2>
-  - uid: Biwen.QuickApi.Service.BuinessServiceBase`3
-    name: BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>
-- uid: Biwen.QuickApi.Service.EntityEvents
-  name: Biwen.QuickApi.Service.EntityEvents
-  items:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityAdded`1
-    name: EntityAdded<TEntity>
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityDeleted`1
-    name: EntityDeleted<TEntity>
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
-    name: EntityExtensions
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityUpdated`1
-    name: EntityUpdated<TEntity>
-  - uid: Biwen.QuickApi.Service.EntityEvents.IEntityEvent
-    name: IEntityEvent
 - uid: Biwen.QuickApi.Storage
   name: Biwen.QuickApi.Storage
   items:

@@ -6,6 +6,7 @@ items:
   children:
   - Biwen.QuickApi.Messaging.Sms.ISmsSender
   - Biwen.QuickApi.Messaging.Sms.NullSmsSender
+  - Biwen.QuickApi.Messaging.Sms.ServiceRegistration
   - Biwen.QuickApi.Messaging.Sms.SmsMessage
   - Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions
   langs:
@@ -33,6 +34,14 @@ references:
   name: NullSmsSender
   nameWithType: NullSmsSender
   fullName: Biwen.QuickApi.Messaging.Sms.NullSmsSender
+- uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Messaging.Sms.ServiceRegistration
+  parent: Biwen.QuickApi.Messaging.Sms
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Messaging.Sms.ServiceRegistration
 - uid: Biwen.QuickApi.Messaging.Sms.SmsMessage
   commentId: T:Biwen.QuickApi.Messaging.Sms.SmsMessage
   parent: Biwen.QuickApi.Messaging.Sms

@@ -1,14 +1,13 @@
 ﻿namespace Biwen.QuickApi.Caching;
 
+using Biwen.QuickApi.Caching.ProxyCache;
 using System;
-using System.Collections.Concurrent;
 using System.Reflection;
 
 internal class CachingProxy<T> : DispatchProxy where T : class
 {
     private T? _decorated;
-
-    private static readonly ConcurrentDictionary<string, (DateTime Exp, object? Data)> CachedDatas = new();
+    private IProxyCache _proxyCache { get; set; } = null!;
 
     protected override object? Invoke(MethodInfo? targetMethod, object?[]? args)
     {
@@ -42,21 +41,14 @@ internal class CachingProxy<T> : DispatchProxy where T : class
                 cacheKey += string.Join('&', args);
             }
 
-            var hasCache = CachedDatas.TryGetValue(cacheKey, out var cacheData);
-            if (hasCache)
+            if (_proxyCache.Get(cacheKey) is { } cache)
             {
-                if (DateTime.Now < cacheData.Exp)
-                {
-                    return cacheData.Data;
-                }
-                CachedDatas.TryRemove(cacheKey, out _);
+                return cache;
             }
 
             //如果缓存不含的情况下:
             var data = targetMethod.Invoke(_decorated, args);
-            //插入缓存值
-            CachedDatas.TryAdd(cacheKey,
-                (DateTime.Now.Add(cacheMeta.Expiration ?? TimeSpan.FromSeconds(30 * 60)), data));
+            _proxyCache.Set(cacheKey, data, cacheMeta.Expiration ?? TimeSpan.FromSeconds(1800));
 
             return data;
 
@@ -75,12 +67,13 @@ internal class CachingProxy<T> : DispatchProxy where T : class
     /// 构造代理
     /// </summary>
     /// <param name="decorated"></param>
+    /// <param name="proxyCache"></param>
     /// <returns></returns>
-    public static T Create(T decorated)
+    public static T Create(T decorated, IProxyCache proxyCache)
     {
         object proxy = Create<T, CachingProxy<T>>();
         ((CachingProxy<T>)proxy)._decorated = decorated;
+        ((CachingProxy<T>)proxy)._proxyCache = proxyCache;
         return (T)proxy;
     }
-
 }

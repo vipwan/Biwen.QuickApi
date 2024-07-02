@@ -1,0 +1,1109 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+  commentId: T:Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+  id: ICachedServiceProvider
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection
+  children:
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type,System.Func{System.IServiceProvider,System.Object})
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type,System.Object)
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService``1(System.Func{System.IServiceProvider,System.Object})
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService``1(``0)
+  langs:
+  - csharp
+  - vb
+  name: ICachedServiceProvider
+  nameWithType: ICachedServiceProvider
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
+  summary: 提供ServiceProvider的缓存DI,能保证在同一个作用域获取到的服务是同一个实例
+  example: []
+  syntax:
+    content: 'public interface ICachedServiceProvider : IKeyedServiceProvider, IServiceProvider'
+    content.vb: Public Interface ICachedServiceProvider Inherits IKeyedServiceProvider, IServiceProvider
+  inheritedMembers:
+  - Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetKeyedService(System.Type,System.Object)
+  - Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetRequiredKeyedService(System.Type,System.Object)
+  - System.IServiceProvider.GetService(System.Type)
+  extensionMethods:
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  - System.IServiceProvider.Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.String)
+  - System.IServiceProvider.Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.String)
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService``1(``0)
+  commentId: M:Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService``1(``0)
+  id: GetService``1(``0)
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+  langs:
+  - csharp
+  - vb
+  name: GetService<T>(T)
+  nameWithType: ICachedServiceProvider.GetService<T>(T)
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService<T>(T)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
+  summary: 获取服务,保证在同一个作用域获取到的服务是同一个实例
+  example: []
+  syntax:
+    content: T GetService<T>(T defaultValue)
+    parameters:
+    - id: defaultValue
+      type: '{T}'
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Function GetService(Of T)(defaultValue As T) As T
+  overload: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService*
+  nameWithType.vb: ICachedServiceProvider.GetService(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(Of T)(T)
+  name.vb: GetService(Of T)(T)
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type,System.Object)
+  commentId: M:Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type,System.Object)
+  id: GetService(System.Type,System.Object)
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+  langs:
+  - csharp
+  - vb
+  name: GetService(Type, object)
+  nameWithType: ICachedServiceProvider.GetService(Type, object)
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type, object)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
+  summary: 获取服务,保证在同一个作用域获取到的服务是同一个实例
+  example: []
+  syntax:
+    content: object GetService(Type serviceType, object defaultValue)
+    parameters:
+    - id: serviceType
+      type: System.Type
+      description: ''
+    - id: defaultValue
+      type: System.Object
+      description: ''
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Function GetService(serviceType As Type, defaultValue As Object) As Object
+  overload: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService*
+  nameWithType.vb: ICachedServiceProvider.GetService(Type, Object)
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type, Object)
+  name.vb: GetService(Type, Object)
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService``1(System.Func{System.IServiceProvider,System.Object})
+  commentId: M:Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService``1(System.Func{System.IServiceProvider,System.Object})
+  id: GetService``1(System.Func{System.IServiceProvider,System.Object})
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+  langs:
+  - csharp
+  - vb
+  name: GetService<T>(Func<IServiceProvider, object>)
+  nameWithType: ICachedServiceProvider.GetService<T>(Func<IServiceProvider, object>)
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService<T>(System.Func<System.IServiceProvider, object>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
+  summary: 获取服务,保证在同一个作用域获取到的服务是同一个实例
+  example: []
+  syntax:
+    content: T GetService<T>(Func<IServiceProvider, object> factory)
+    parameters:
+    - id: factory
+      type: System.Func{System.IServiceProvider,System.Object}
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Function GetService(Of T)(factory As Func(Of IServiceProvider, Object)) As T
+  overload: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService*
+  nameWithType.vb: ICachedServiceProvider.GetService(Of T)(Func(Of IServiceProvider, Object))
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(Of T)(System.Func(Of System.IServiceProvider, Object))
+  name.vb: GetService(Of T)(Func(Of IServiceProvider, Object))
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type,System.Func{System.IServiceProvider,System.Object})
+  commentId: M:Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type,System.Func{System.IServiceProvider,System.Object})
+  id: GetService(System.Type,System.Func{System.IServiceProvider,System.Object})
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+  langs:
+  - csharp
+  - vb
+  name: GetService(Type, Func<IServiceProvider, object>)
+  nameWithType: ICachedServiceProvider.GetService(Type, Func<IServiceProvider, object>)
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type, System.Func<System.IServiceProvider, object>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
+  summary: 获取服务,保证在同一个作用域获取到的服务是同一个实例
+  example: []
+  syntax:
+    content: object GetService(Type serviceType, Func<IServiceProvider, object> factory)
+    parameters:
+    - id: serviceType
+      type: System.Type
+      description: ''
+    - id: factory
+      type: System.Func{System.IServiceProvider,System.Object}
+      description: ''
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Function GetService(serviceType As Type, factory As Func(Of IServiceProvider, Object)) As Object
+  overload: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService*
+  nameWithType.vb: ICachedServiceProvider.GetService(Type, Func(Of IServiceProvider, Object))
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type, System.Func(Of System.IServiceProvider, Object))
+  name.vb: GetService(Type, Func(Of IServiceProvider, Object))
+references:
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+  commentId: N:Biwen.QuickApi.Infrastructure.DependencyInjection
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.DependencyInjection
+  nameWithType: Biwen.QuickApi.Infrastructure.DependencyInjection
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.html
+- uid: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetKeyedService(System.Type,System.Object)
+  commentId: M:Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetKeyedService(System.Type,System.Object)
+  parent: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ikeyedserviceprovider.getkeyedservice
+  name: GetKeyedService(Type, object)
+  nameWithType: IKeyedServiceProvider.GetKeyedService(Type, object)
+  fullName: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetKeyedService(System.Type, object)
+  nameWithType.vb: IKeyedServiceProvider.GetKeyedService(Type, Object)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetKeyedService(System.Type, Object)
+  name.vb: GetKeyedService(Type, Object)
+  spec.csharp:
+  - uid: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetKeyedService(System.Type,System.Object)
+    name: GetKeyedService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ikeyedserviceprovider.getkeyedservice
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetKeyedService(System.Type,System.Object)
+    name: GetKeyedService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ikeyedserviceprovider.getkeyedservice
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetRequiredKeyedService(System.Type,System.Object)
+  commentId: M:Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetRequiredKeyedService(System.Type,System.Object)
+  parent: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ikeyedserviceprovider.getrequiredkeyedservice
+  name: GetRequiredKeyedService(Type, object)
+  nameWithType: IKeyedServiceProvider.GetRequiredKeyedService(Type, object)
+  fullName: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetRequiredKeyedService(System.Type, object)
+  nameWithType.vb: IKeyedServiceProvider.GetRequiredKeyedService(Type, Object)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetRequiredKeyedService(System.Type, Object)
+  name.vb: GetRequiredKeyedService(Type, Object)
+  spec.csharp:
+  - uid: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetRequiredKeyedService(System.Type,System.Object)
+    name: GetRequiredKeyedService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ikeyedserviceprovider.getrequiredkeyedservice
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetRequiredKeyedService(System.Type,System.Object)
+    name: GetRequiredKeyedService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ikeyedserviceprovider.getrequiredkeyedservice
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IServiceProvider.GetService(System.Type)
+  commentId: M:System.IServiceProvider.GetService(System.Type)
+  parent: System.IServiceProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider.getservice
+  name: GetService(Type)
+  nameWithType: IServiceProvider.GetService(Type)
+  fullName: System.IServiceProvider.GetService(System.Type)
+  spec.csharp:
+  - uid: System.IServiceProvider.GetService(System.Type)
+    name: GetService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider.getservice
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: System.IServiceProvider.GetService(System.Type)
+    name: GetService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider.getservice
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<ICachedServiceProvider>(ICachedServiceProvider)
+  nameWithType: EntityExtensions.PublishAddedAsync<ICachedServiceProvider>(ICachedServiceProvider)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider>(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of ICachedServiceProvider)(ICachedServiceProvider)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+  name.vb: PublishAddedAsync(Of ICachedServiceProvider)(ICachedServiceProvider)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<ICachedServiceProvider>(ICachedServiceProvider)
+  nameWithType: EntityExtensions.PublishDeletedAsync<ICachedServiceProvider>(ICachedServiceProvider)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider>(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of ICachedServiceProvider)(ICachedServiceProvider)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+  name.vb: PublishDeletedAsync(Of ICachedServiceProvider)(ICachedServiceProvider)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<ICachedServiceProvider>(ICachedServiceProvider)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<ICachedServiceProvider>(ICachedServiceProvider)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider>(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of ICachedServiceProvider)(ICachedServiceProvider)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+  name.vb: PublishUpdatedAsync(Of ICachedServiceProvider)(ICachedServiceProvider)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
+    name: ICachedServiceProvider
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html
+  - name: )
+- uid: System.IServiceProvider.Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.String)
+  commentId: M:Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider,System.String)
+  parent: Biwen.QuickApi.Messaging.Email.ServiceRegistration
+  definition: Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider,System.String)
+  href: Biwen.QuickApi.Messaging.Email.ServiceRegistration.html#Biwen_QuickApi_Messaging_Email_ServiceRegistration_GetKeyedEmailSender_System_IServiceProvider_System_String_
+  name: GetKeyedEmailSender(IServiceProvider, string)
+  nameWithType: ServiceRegistration.GetKeyedEmailSender(IServiceProvider, string)
+  fullName: Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider, string)
+  nameWithType.vb: ServiceRegistration.GetKeyedEmailSender(IServiceProvider, String)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider, String)
+  name.vb: GetKeyedEmailSender(IServiceProvider, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider,System.String)
+    name: GetKeyedEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.ServiceRegistration.html#Biwen_QuickApi_Messaging_Email_ServiceRegistration_GetKeyedEmailSender_System_IServiceProvider_System_String_
+  - name: (
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider,System.String)
+    name: GetKeyedEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.ServiceRegistration.html#Biwen_QuickApi_Messaging_Email_ServiceRegistration_GetKeyedEmailSender_System_IServiceProvider_System_String_
+  - name: (
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.IServiceProvider.Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.String)
+  commentId: M:Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider,System.String)
+  parent: Biwen.QuickApi.Messaging.Sms.ServiceRegistration
+  definition: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider,System.String)
+  href: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.html#Biwen_QuickApi_Messaging_Sms_ServiceRegistration_GetKeyedSmsSender_System_IServiceProvider_System_String_
+  name: GetKeyedSmsSender(IServiceProvider, string)
+  nameWithType: ServiceRegistration.GetKeyedSmsSender(IServiceProvider, string)
+  fullName: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider, string)
+  nameWithType.vb: ServiceRegistration.GetKeyedSmsSender(IServiceProvider, String)
+  fullName.vb: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider, String)
+  name.vb: GetKeyedSmsSender(IServiceProvider, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider,System.String)
+    name: GetKeyedSmsSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.html#Biwen_QuickApi_Messaging_Sms_ServiceRegistration_GetKeyedSmsSender_System_IServiceProvider_System_String_
+  - name: (
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider,System.String)
+    name: GetKeyedSmsSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.html#Biwen_QuickApi_Messaging_Sms_ServiceRegistration_GetKeyedSmsSender_System_IServiceProvider_System_String_
+  - name: (
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider
+  commentId: T:Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ikeyedserviceprovider
+  name: IKeyedServiceProvider
+  nameWithType: IKeyedServiceProvider
+  fullName: Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider
+- uid: System.IServiceProvider
+  commentId: T:System.IServiceProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  name: IServiceProvider
+  nameWithType: IServiceProvider
+  fullName: System.IServiceProvider
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider,System.String)
+  commentId: M:Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider,System.String)
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.ServiceRegistration.html#Biwen_QuickApi_Messaging_Email_ServiceRegistration_GetKeyedEmailSender_System_IServiceProvider_System_String_
+  name: GetKeyedEmailSender(IServiceProvider, string)
+  nameWithType: ServiceRegistration.GetKeyedEmailSender(IServiceProvider, string)
+  fullName: Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider, string)
+  nameWithType.vb: ServiceRegistration.GetKeyedEmailSender(IServiceProvider, String)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider, String)
+  name.vb: GetKeyedEmailSender(IServiceProvider, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider,System.String)
+    name: GetKeyedEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.ServiceRegistration.html#Biwen_QuickApi_Messaging_Email_ServiceRegistration_GetKeyedEmailSender_System_IServiceProvider_System_String_
+  - name: (
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider,System.String)
+    name: GetKeyedEmailSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.ServiceRegistration.html#Biwen_QuickApi_Messaging_Email_ServiceRegistration_GetKeyedEmailSender_System_IServiceProvider_System_String_
+  - name: (
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Messaging.Email.ServiceRegistration
+  parent: Biwen.QuickApi.Messaging.Email
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Messaging.Email.ServiceRegistration
+- uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider,System.String)
+  commentId: M:Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider,System.String)
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.html#Biwen_QuickApi_Messaging_Sms_ServiceRegistration_GetKeyedSmsSender_System_IServiceProvider_System_String_
+  name: GetKeyedSmsSender(IServiceProvider, string)
+  nameWithType: ServiceRegistration.GetKeyedSmsSender(IServiceProvider, string)
+  fullName: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider, string)
+  nameWithType.vb: ServiceRegistration.GetKeyedSmsSender(IServiceProvider, String)
+  fullName.vb: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider, String)
+  name.vb: GetKeyedSmsSender(IServiceProvider, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider,System.String)
+    name: GetKeyedSmsSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.html#Biwen_QuickApi_Messaging_Sms_ServiceRegistration_GetKeyedSmsSender_System_IServiceProvider_System_String_
+  - name: (
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider,System.String)
+    name: GetKeyedSmsSender
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.html#Biwen_QuickApi_Messaging_Sms_ServiceRegistration_GetKeyedSmsSender_System_IServiceProvider_System_String_
+  - name: (
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Messaging.Sms.ServiceRegistration
+  parent: Biwen.QuickApi.Messaging.Sms
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Messaging.Sms.ServiceRegistration
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.Messaging.Email
+  commentId: N:Biwen.QuickApi.Messaging.Email
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Messaging.Email
+  nameWithType: Biwen.QuickApi.Messaging.Email
+  fullName: Biwen.QuickApi.Messaging.Email
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Email
+    name: Email
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Email
+    name: Email
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Email.html
+- uid: Biwen.QuickApi.Messaging.Sms
+  commentId: N:Biwen.QuickApi.Messaging.Sms
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Messaging.Sms
+  nameWithType: Biwen.QuickApi.Messaging.Sms
+  fullName: Biwen.QuickApi.Messaging.Sms
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Sms
+    name: Sms
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Sms.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging
+    name: Messaging
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.html
+  - name: .
+  - uid: Biwen.QuickApi.Messaging.Sms
+    name: Sms
+    isExternal: true
+    href: Biwen.QuickApi.Messaging.Sms.html
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService*
+  commentId: Overload:Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.html#Biwen_QuickApi_Infrastructure_DependencyInjection_ICachedServiceProvider_GetService__1___0_
+  name: GetService
+  nameWithType: ICachedServiceProvider.GetService
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Func{System.IServiceProvider,System.Object}
+  commentId: T:System.Func{System.IServiceProvider,System.Object}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<IServiceProvider, object>
+  nameWithType: Func<IServiceProvider, object>
+  fullName: System.Func<System.IServiceProvider, object>
+  nameWithType.vb: Func(Of IServiceProvider, Object)
+  fullName.vb: System.Func(Of System.IServiceProvider, Object)
+  name.vb: Func(Of IServiceProvider, Object)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )

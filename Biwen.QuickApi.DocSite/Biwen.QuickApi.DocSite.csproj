@@ -20,7 +20,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Docfx.App" Version="2.76.0" />
+		<PackageReference Include="Docfx.App" Version="2.77.0" />
 		<PackageReference Include="System.Security.Cryptography.Xml" Version="8.0.1" />
 	</ItemGroup>
 

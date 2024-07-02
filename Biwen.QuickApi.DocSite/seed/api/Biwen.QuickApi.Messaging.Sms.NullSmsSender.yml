@@ -6,6 +6,8 @@ items:
   parent: Biwen.QuickApi.Messaging.Sms
   children:
   - Biwen.QuickApi.Messaging.Sms.NullSmsSender.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Messaging.Sms.NullSmsSender})
+  - Biwen.QuickApi.Messaging.Sms.NullSmsSender.KeyedName
+  - Biwen.QuickApi.Messaging.Sms.NullSmsSender.Name
   - Biwen.QuickApi.Messaging.Sms.NullSmsSender.SendAsync(Biwen.QuickApi.Messaging.Sms.SmsMessage)
   langs:
   - csharp
@@ -15,19 +17,20 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.NullSmsSender
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Messaging/Sms/NullSmsSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Sms/NullSmsSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
   summary: NullSmsSender
   example: []
   syntax:
-    content: 'public sealed class NullSmsSender : ISmsSender'
-    content.vb: Public NotInheritable Class NullSmsSender Implements ISmsSender
+    content: 'public sealed class NullSmsSender : ISmsSender, INamed<string>'
+    content.vb: Public NotInheritable Class NullSmsSender Implements ISmsSender, INamed(Of String)
   inheritance:
   - System.Object
   implements:
   - Biwen.QuickApi.Messaging.Sms.ISmsSender
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}
   inheritedMembers:
   - System.Object.GetType
   - System.Object.ToString
@@ -37,9 +40,32 @@ items:
   - System.Object.GetHashCode
   extensionMethods:
   - Biwen.QuickApi.Messaging.Sms.ISmsSender.Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions.SendAsync(System.String,System.String)
-  - Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
-  - Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
-  - Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  - Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender.Name
+  commentId: F:Biwen.QuickApi.Messaging.Sms.NullSmsSender.Name
+  id: Name
+  parent: Biwen.QuickApi.Messaging.Sms.NullSmsSender
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: NullSmsSender.Name
+  fullName: Biwen.QuickApi.Messaging.Sms.NullSmsSender.Name
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Sms/NullSmsSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Sms
+  summary: NullSmsSender
+  example: []
+  syntax:
+    content: public const string Name = "NullSmsSender"
+    return:
+      type: System.String
+    content.vb: Public Const Name As String = "NullSmsSender"
 - uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Messaging.Sms.NullSmsSender})
   commentId: M:Biwen.QuickApi.Messaging.Sms.NullSmsSender.#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Messaging.Sms.NullSmsSender})
   id: '#ctor(Microsoft.Extensions.Logging.ILogger{Biwen.QuickApi.Messaging.Sms.NullSmsSender})'
@@ -52,7 +78,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.NullSmsSender.NullSmsSender(Microsoft.Extensions.Logging.ILogger<Biwen.QuickApi.Messaging.Sms.NullSmsSender>)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Messaging/Sms/NullSmsSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Sms/NullSmsSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
@@ -80,7 +106,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.NullSmsSender.SendAsync(Biwen.QuickApi.Messaging.Sms.SmsMessage)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4837a5a324115802510ee27f8a866b3257e6db53/Biwen.QuickApi/Messaging/Sms/NullSmsSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Sms/NullSmsSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
@@ -99,6 +125,33 @@ items:
   overload: Biwen.QuickApi.Messaging.Sms.NullSmsSender.SendAsync*
   implements:
   - Biwen.QuickApi.Messaging.Sms.ISmsSender.SendAsync(Biwen.QuickApi.Messaging.Sms.SmsMessage)
+- uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender.KeyedName
+  commentId: P:Biwen.QuickApi.Messaging.Sms.NullSmsSender.KeyedName
+  id: KeyedName
+  parent: Biwen.QuickApi.Messaging.Sms.NullSmsSender
+  langs:
+  - csharp
+  - vb
+  name: KeyedName
+  nameWithType: NullSmsSender.KeyedName
+  fullName: Biwen.QuickApi.Messaging.Sms.NullSmsSender.KeyedName
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Sms/NullSmsSender.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Sms
+  summary: 针对同质化服务的键名区分
+  example: []
+  syntax:
+    content: public string KeyedName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property KeyedName As String
+  overload: Biwen.QuickApi.Messaging.Sms.NullSmsSender.KeyedName*
+  implements:
+  - Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}.KeyedName
 references:
 - uid: Biwen.QuickApi.Messaging.Sms
   commentId: N:Biwen.QuickApi.Messaging.Sms
@@ -166,6 +219,41 @@ references:
   name: ISmsSender
   nameWithType: ISmsSender
   fullName: Biwen.QuickApi.Messaging.Sms.ISmsSender
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}
+  commentId: T:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection
+  definition: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  name: INamed<string>
+  nameWithType: INamed<string>
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<string>
+  nameWithType.vb: INamed(Of String)
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of String)
+  name.vb: INamed(Of String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -418,22 +506,22 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
-- uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1
-  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
-  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
-  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
-  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+- uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
   name: PublishAddedAsync<NullSmsSender>(NullSmsSender)
   nameWithType: EntityExtensions.PublishAddedAsync<NullSmsSender>(NullSmsSender)
-  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Messaging.Sms.NullSmsSender>(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Messaging.Sms.NullSmsSender>(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
   nameWithType.vb: EntityExtensions.PublishAddedAsync(Of NullSmsSender)(NullSmsSender)
-  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Messaging.Sms.NullSmsSender)(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Messaging.Sms.NullSmsSender)(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
   name.vb: PublishAddedAsync(Of NullSmsSender)(NullSmsSender)
   spec.csharp:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
     name: PublishAddedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
   - name: <
   - uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender
     name: NullSmsSender
@@ -447,10 +535,10 @@ references:
     href: Biwen.QuickApi.Messaging.Sms.NullSmsSender.html
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
     name: PublishAddedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
   - name: (
   - name: Of
   - name: " "
@@ -465,22 +553,22 @@ references:
     isExternal: true
     href: Biwen.QuickApi.Messaging.Sms.NullSmsSender.html
   - name: )
-- uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1
-  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
-  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
-  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
-  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+- uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
   name: PublishDeletedAsync<NullSmsSender>(NullSmsSender)
   nameWithType: EntityExtensions.PublishDeletedAsync<NullSmsSender>(NullSmsSender)
-  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Messaging.Sms.NullSmsSender>(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Messaging.Sms.NullSmsSender>(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
   nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of NullSmsSender)(NullSmsSender)
-  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Messaging.Sms.NullSmsSender)(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Messaging.Sms.NullSmsSender)(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
   name.vb: PublishDeletedAsync(Of NullSmsSender)(NullSmsSender)
   spec.csharp:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
     name: PublishDeletedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
   - name: <
   - uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender
     name: NullSmsSender
@@ -494,10 +582,10 @@ references:
     href: Biwen.QuickApi.Messaging.Sms.NullSmsSender.html
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
     name: PublishDeletedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
   - name: (
   - name: Of
   - name: " "
@@ -512,22 +600,22 @@ references:
     isExternal: true
     href: Biwen.QuickApi.Messaging.Sms.NullSmsSender.html
   - name: )
-- uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
-  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
-  parent: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
-  definition: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
-  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+- uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
   name: PublishUpdatedAsync<NullSmsSender>(NullSmsSender)
   nameWithType: EntityExtensions.PublishUpdatedAsync<NullSmsSender>(NullSmsSender)
-  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Messaging.Sms.NullSmsSender>(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Messaging.Sms.NullSmsSender>(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
   nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of NullSmsSender)(NullSmsSender)
-  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Messaging.Sms.NullSmsSender)(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Messaging.Sms.NullSmsSender)(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
   name.vb: PublishUpdatedAsync(Of NullSmsSender)(NullSmsSender)
   spec.csharp:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
     name: PublishUpdatedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
   - name: <
   - uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender
     name: NullSmsSender
@@ -541,10 +629,10 @@ references:
     href: Biwen.QuickApi.Messaging.Sms.NullSmsSender.html
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Messaging.Sms.NullSmsSender)
     name: PublishUpdatedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
   - name: (
   - name: Of
   - name: " "
@@ -566,6 +654,81 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  commentId: T:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  name: INamed<T>
+  nameWithType: INamed<T>
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>
+  nameWithType.vb: INamed(Of T)
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T)
+  name.vb: INamed(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
+    name: INamed
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+  commentId: N:Biwen.QuickApi.Infrastructure.DependencyInjection
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Infrastructure.DependencyInjection
+  nameWithType: Biwen.QuickApi.Infrastructure.DependencyInjection
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.html
+  - name: .
+  - uid: Biwen.QuickApi.Infrastructure.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: Biwen.QuickApi.Infrastructure.DependencyInjection.html
 - uid: Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions.SendAsync(Biwen.QuickApi.Messaging.Sms.ISmsSender,System.String,System.String)
   commentId: M:Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions.SendAsync(Biwen.QuickApi.Messaging.Sms.ISmsSender,System.String,System.String)
   isExternal: true
@@ -630,21 +793,21 @@ references:
   name: SmsSenderExtensions
   nameWithType: SmsSenderExtensions
   fullName: Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions
-- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
-  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
   isExternal: true
-  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
   name: PublishAddedAsync<T>(T)
   nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
-  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
   nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
-  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
   name.vb: PublishAddedAsync(Of T)(T)
   spec.csharp:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
     name: PublishAddedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
   - name: <
   - name: T
   - name: '>'
@@ -652,10 +815,10 @@ references:
   - name: T
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
     name: PublishAddedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
   - name: (
   - name: Of
   - name: " "
@@ -664,29 +827,29 @@ references:
   - name: (
   - name: T
   - name: )
-- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
-  commentId: T:Biwen.QuickApi.Service.EntityEvents.EntityExtensions
-  parent: Biwen.QuickApi.Service.EntityEvents
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
   isExternal: true
-  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
   name: EntityExtensions
   nameWithType: EntityExtensions
-  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions
-- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
-  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
   isExternal: true
-  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
   name: PublishDeletedAsync<T>(T)
   nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
-  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
   nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
-  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
   name.vb: PublishDeletedAsync(Of T)(T)
   spec.csharp:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
     name: PublishDeletedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
   - name: <
   - name: T
   - name: '>'
@@ -694,10 +857,10 @@ references:
   - name: T
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
     name: PublishDeletedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
   - name: (
   - name: Of
   - name: " "
@@ -706,21 +869,21 @@ references:
   - name: (
   - name: T
   - name: )
-- uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
-  commentId: M:Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
   isExternal: true
-  href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
   name: PublishUpdatedAsync<T>(T)
   nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
-  fullName: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
   nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
-  fullName.vb: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
   name.vb: PublishUpdatedAsync(Of T)(T)
   spec.csharp:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
     name: PublishUpdatedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
   - name: <
   - name: T
   - name: '>'
@@ -728,10 +891,10 @@ references:
   - name: T
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
     name: PublishUpdatedAsync
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Service_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
   - name: (
   - name: Of
   - name: " "
@@ -740,13 +903,13 @@ references:
   - name: (
   - name: T
   - name: )
-- uid: Biwen.QuickApi.Service.EntityEvents
-  commentId: N:Biwen.QuickApi.Service.EntityEvents
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
   isExternal: true
   href: Biwen.html
-  name: Biwen.QuickApi.Service.EntityEvents
-  nameWithType: Biwen.QuickApi.Service.EntityEvents
-  fullName: Biwen.QuickApi.Service.EntityEvents
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
   spec.csharp:
   - uid: Biwen
     name: Biwen
@@ -758,15 +921,15 @@ references:
     isExternal: true
     href: Biwen.QuickApi.html
   - name: .
-  - uid: Biwen.QuickApi.Service
-    name: Service
+  - uid: Biwen.QuickApi.Application
+    name: Application
     isExternal: true
-    href: Biwen.QuickApi.Service.html
+    href: Biwen.QuickApi.Application.html
   - name: .
-  - uid: Biwen.QuickApi.Service.EntityEvents
+  - uid: Biwen.QuickApi.Application.EntityEvents
     name: EntityEvents
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.html
+    href: Biwen.QuickApi.Application.EntityEvents.html
   spec.vb:
   - uid: Biwen
     name: Biwen
@@ -778,15 +941,26 @@ references:
     isExternal: true
     href: Biwen.QuickApi.html
   - name: .
-  - uid: Biwen.QuickApi.Service
-    name: Service
+  - uid: Biwen.QuickApi.Application
+    name: Application
     isExternal: true
-    href: Biwen.QuickApi.Service.html
+    href: Biwen.QuickApi.Application.html
   - name: .
-  - uid: Biwen.QuickApi.Service.EntityEvents
+  - uid: Biwen.QuickApi.Application.EntityEvents
     name: EntityEvents
     isExternal: true
-    href: Biwen.QuickApi.Service.EntityEvents.html
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender.#ctor*
   commentId: Overload:Biwen.QuickApi.Messaging.Sms.NullSmsSender.#ctor
   isExternal: true
@@ -987,3 +1161,29 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender.KeyedName*
+  commentId: Overload:Biwen.QuickApi.Messaging.Sms.NullSmsSender.KeyedName
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Sms.NullSmsSender.html#Biwen_QuickApi_Messaging_Sms_NullSmsSender_KeyedName
+  name: KeyedName
+  nameWithType: NullSmsSender.KeyedName
+  fullName: Biwen.QuickApi.Messaging.Sms.NullSmsSender.KeyedName
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}.KeyedName
+  commentId: P:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}.KeyedName
+  parent: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed{System.String}
+  definition: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html#Biwen_QuickApi_Infrastructure_DependencyInjection_INamed_1_KeyedName
+  name: KeyedName
+  nameWithType: INamed<string>.KeyedName
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<string>.KeyedName
+  nameWithType.vb: INamed(Of String).KeyedName
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of String).KeyedName
+- uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName
+  commentId: P:Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1.KeyedName
+  isExternal: true
+  href: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed-1.html#Biwen_QuickApi_Infrastructure_DependencyInjection_INamed_1_KeyedName
+  name: KeyedName
+  nameWithType: INamed<T>.KeyedName
+  fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed<T>.KeyedName
+  nameWithType.vb: INamed(Of T).KeyedName
+  fullName.vb: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed(Of T).KeyedName

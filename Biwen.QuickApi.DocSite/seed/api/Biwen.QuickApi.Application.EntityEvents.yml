@@ -1,0 +1,168 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  id: Biwen.QuickApi.Application.EntityEvents
+  children:
+  - Biwen.QuickApi.Application.EntityEvents.EntityAdded`1
+  - Biwen.QuickApi.Application.EntityEvents.EntityDeleted`1
+  - Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  - Biwen.QuickApi.Application.EntityEvents.EntityUpdated`1
+  - Biwen.QuickApi.Application.EntityEvents.IEntityEvent
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityAdded`1
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityAdded`1
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityAdded-1.html
+  name: EntityAdded<TEntity>
+  nameWithType: EntityAdded<TEntity>
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityAdded<TEntity>
+  nameWithType.vb: EntityAdded(Of TEntity)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityAdded(Of TEntity)
+  name.vb: EntityAdded(Of TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityAdded`1
+    name: EntityAdded
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityAdded-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityAdded`1
+    name: EntityAdded
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityAdded-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityDeleted`1
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityDeleted`1
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityDeleted-1.html
+  name: EntityDeleted<TEntity>
+  nameWithType: EntityDeleted<TEntity>
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityDeleted<TEntity>
+  nameWithType.vb: EntityDeleted(Of TEntity)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityDeleted(Of TEntity)
+  name.vb: EntityDeleted(Of TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityDeleted`1
+    name: EntityDeleted
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityDeleted-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityDeleted`1
+    name: EntityDeleted
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityDeleted-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityUpdated`1
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityUpdated`1
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityUpdated-1.html
+  name: EntityUpdated<TEntity>
+  nameWithType: EntityUpdated<TEntity>
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityUpdated<TEntity>
+  nameWithType.vb: EntityUpdated(Of TEntity)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityUpdated(Of TEntity)
+  name.vb: EntityUpdated(Of TEntity)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityUpdated`1
+    name: EntityUpdated
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityUpdated-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityUpdated`1
+    name: EntityUpdated
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityUpdated-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.IEntityEvent
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.IEntityEvent
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.IEntityEvent.html
+  name: IEntityEvent
+  nameWithType: IEntityEvent
+  fullName: Biwen.QuickApi.Application.EntityEvents.IEntityEvent
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
