@@ -5,7 +5,6 @@ namespace Biwen.QuickApi.Caching.ProxyCache;
 /// <summary>
 /// 默认使用内存缓存
 /// </summary>
-/// <typeparam name="T"></typeparam>
 internal sealed class MemoryProxyCache : IProxyCache
 {
     private readonly IMemoryCache _memoryCache;

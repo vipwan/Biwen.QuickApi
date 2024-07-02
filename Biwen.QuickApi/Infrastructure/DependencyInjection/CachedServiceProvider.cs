@@ -1,6 +1,4 @@
-﻿using System.Collections.Concurrent;
-
-namespace Biwen.QuickApi.Infrastructure.DependencyInjection;
+﻿namespace Biwen.QuickApi.Infrastructure.DependencyInjection;
 
 /// <summary>
 /// ICachedServiceProvider 实现
