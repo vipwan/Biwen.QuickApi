@@ -33,8 +33,7 @@ namespace Biwen.QuickApi
             builder.WithMetadata(new QuickApiEndpointMetadata());
 
             //OpenApiMetadataAttribute
-            var openApiMetadata = attrs.OfType<OpenApiMetadataAttribute>().FirstOrDefault();
-            if (openApiMetadata is not null)
+            if (attrs.OfType<OpenApiMetadataAttribute>().FirstOrDefault() is { } openApiMetadata)
             {
                 if (openApiMetadata.Tags.Length > 0)
                 {
@@ -83,8 +82,12 @@ namespace Biwen.QuickApi
         /// <param name="verb">默认:GET</param>
         /// <param name="excludeFromDescription">是否从OpenApi文档中排除,默认:false不排除</param>
         /// <returns></returns>
-        public static RouteHandlerBuilder MapComponent<T>(this IEndpointRouteBuilder app, [StringSyntax("Route")] string pattern,
-         Func<HttpContext, object>? paramsBuilder = null, Verb verb = Verb.GET, bool excludeFromDescription = true) where T : class, IComponent
+        public static RouteHandlerBuilder MapComponent<T>(
+            this IEndpointRouteBuilder app,
+            [StringSyntax("Route")] string pattern,
+            Func<HttpContext, object>? paramsBuilder = null,
+            Verb verb = Verb.GET,
+            bool excludeFromDescription = true) where T : class, IComponent
         {
             var verbs = verb.SplitEnum();
             var builder = app.MapMethods(pattern, verbs.Select(x => x.ToString()),

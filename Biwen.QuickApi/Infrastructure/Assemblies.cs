@@ -34,6 +34,8 @@ namespace Biwen.QuickApi.Infrastructure
             "NJsonSchema",
             "Namotion.Reflection",
             "MiniProfiler",
+            "Serilog",//Serilog
+            "OpenTelemetry",//OpenTelemetry
             "Biwen.AutoClassGen" //AutoClassGen
         };
 

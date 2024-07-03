@@ -27,13 +27,13 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     public partial class PageModal : BaseRequest<PageModal>
     {
-        [FromQuery]
+        [FromQuery, Range(0, int.MaxValue)]
         public int? Page { get; set; } = 0;
 
-        [FromQuery]
+        [FromQuery, Range(1, 100)]
         public int? PageSize { get; set; } = 20;
 
-        [FromQuery]
+        [FromQuery, StringLength(50)]
         public string? Name { get; set; } = null;
     }
 
