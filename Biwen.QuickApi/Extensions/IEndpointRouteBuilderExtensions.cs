@@ -48,6 +48,7 @@ namespace Biwen.QuickApi
                     builder.WithDescription(openApiMetadata.Description);
                 }
 
+#if NET9_0_OR_GREATER
                 //兼容性问题,Verbs数量>1将不会添加OperationId等信息
                 if (verbs.Count() == 1)
                 {
@@ -59,6 +60,8 @@ namespace Biwen.QuickApi
                         //Parameters = GetParameters(T.Handler)
                     });
                 }
+#endif
+
             }
 
             //添加验证器Filter:

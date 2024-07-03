@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿#if NET9_0_OR_GREATER
+
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.OpenApi.Models;
 
@@ -31,3 +33,5 @@ namespace Biwen.QuickApi.OpenApi
         }
     }
 }
+
+#endif

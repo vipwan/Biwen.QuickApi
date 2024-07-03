@@ -336,6 +336,8 @@ namespace Biwen.QuickApi
                         if (!string.IsNullOrEmpty(openApiMetadata.Description))
                             rhBuilder?.WithDescription(openApiMetadata.Description);
 
+#if NET9_0_OR_GREATER
+
                         //兼容性问题,Verbs数量>1将不会添加OperationId等信息
                         if (verbs.Count() == 1)
                         {
@@ -345,36 +347,10 @@ namespace Biwen.QuickApi
                                 OperationId = openApiMetadata.OperationId,
                                 //参数的备注和example等:
                                 //Parameters = GetParameters(reqType),
-
-                                //RequestBody = new OpenApiRequestBody
-                                //{
-                                //    Required = true,
-                                //    Content =
-                                //    {
-                                //        {
-                                //            "application/json",
-                                //            new OpenApiMediaType
-                                //            {
-                                //               Schema=new OpenApiSchema
-                                //               {
-                                //                   Type="object",
-                                //                   Properties=GetParameters(reqType).ToDictionary(x=>x.Name,x=>new OpenApiSchema
-                                //                   {
-                                //                       Type=x.Name switch
-                                //                       {
-                                //                           "Hello"=>"string",
-                                //                           "World"=>"string",
-                                //                           _=>"string"
-                                //                       }
-                                //                   })
-                                //               }
-                                //        }
-                                //    }
-
-                                //}
-                                //}
                             });
                         }
+#endif
+
                     }
 
                     //401

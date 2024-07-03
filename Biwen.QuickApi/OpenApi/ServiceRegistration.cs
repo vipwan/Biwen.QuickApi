@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.OpenApi;
+﻿#if NET9_0_OR_GREATER
+
+using Microsoft.AspNetCore.OpenApi;
 
 namespace Biwen.QuickApi.OpenApi
 {
@@ -48,3 +50,5 @@ namespace Biwen.QuickApi.OpenApi
 
     }
 }
+
+#endif
