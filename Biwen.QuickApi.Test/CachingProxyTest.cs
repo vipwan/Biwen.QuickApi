@@ -7,8 +7,10 @@ namespace Biwen.QuickApi.Test
 {
     public class CachingProxyTest(ITestOutputHelper testOutput)
     {
-        [Fact]
-        public async Task SampleTest()
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public async Task SampleTest(bool scoped)
         {
             var services = new ServiceCollection();
             services.AddLogging();
@@ -21,7 +23,7 @@ namespace Biwen.QuickApi.Test
 
             //测试拦截TestClass
             //var testClass = new TestClass();
-            var decored = proxy.Create();
+            var decored = proxy.Create(scoped: scoped);
 
             //测试拦截效果:
             decored.TestMethod();
@@ -31,7 +33,7 @@ namespace Biwen.QuickApi.Test
             //由于命中了缓存,因此返回都是相同:
             var time1 = decored.TestMethod2(1, "123");
             testOutput.WriteLine(time1.ToString());
-            await Task.Delay(3000);
+            await Task.Delay(1000);
             var time2 = decored.TestMethod2(1, "123");
             testOutput.WriteLine(time2.ToString());
             Assert.Equal(time1, time2);
