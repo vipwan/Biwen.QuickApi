@@ -14,7 +14,7 @@ items:
   fullName: Microsoft.Extensions.DependencyInjection.HtmlSanitizerOptionsExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/Html/HtmlSanitizerOptionsExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Infrastructure/Html/HtmlSanitizerOptionsExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Microsoft.Extensions.DependencyInjection
@@ -54,7 +54,7 @@ items:
   fullName: Microsoft.Extensions.DependencyInjection.HtmlSanitizerOptionsExtensions.ConfigureHtmlSanitizer(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Ganss.Xss.HtmlSanitizer>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/Html/HtmlSanitizerOptionsExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Infrastructure/Html/HtmlSanitizerOptionsExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Microsoft.Extensions.DependencyInjection

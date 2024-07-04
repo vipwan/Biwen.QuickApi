@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -48,7 +48,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService<T>(T)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -83,7 +83,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type, object)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -118,7 +118,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService<T>(System.Func<System.IServiceProvider, object>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -153,7 +153,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider.GetService(System.Type, System.Func<System.IServiceProvider, object>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Infrastructure/DependencyInjection/ICachedServiceProvider.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection

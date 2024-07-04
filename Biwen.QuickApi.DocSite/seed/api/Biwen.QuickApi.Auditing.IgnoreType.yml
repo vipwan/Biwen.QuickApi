@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Auditing.IgnoreType
+  commentId: T:Biwen.QuickApi.Auditing.IgnoreType
+  id: IgnoreType
+  parent: Biwen.QuickApi.Auditing
+  children:
+  - Biwen.QuickApi.Auditing.IgnoreType.All
+  - Biwen.QuickApi.Auditing.IgnoreType.Parameter
+  - Biwen.QuickApi.Auditing.IgnoreType.ReturnValue
+  langs:
+  - csharp
+  - vb
+  name: IgnoreType
+  nameWithType: IgnoreType
+  fullName: Biwen.QuickApi.Auditing.IgnoreType
+  type: Enum
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Auditing
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum IgnoreType
+    content.vb: >-
+      <Flags>
+
+      Public Enum IgnoreType
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: Biwen.QuickApi.Auditing.IgnoreType.All
+  commentId: F:Biwen.QuickApi.Auditing.IgnoreType.All
+  id: All
+  parent: Biwen.QuickApi.Auditing.IgnoreType
+  langs:
+  - csharp
+  - vb
+  name: All
+  nameWithType: IgnoreType.All
+  fullName: Biwen.QuickApi.Auditing.IgnoreType.All
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Auditing
+  summary: 默认完全忽略
+  example: []
+  syntax:
+    content: All = 1
+    return:
+      type: Biwen.QuickApi.Auditing.IgnoreType
+- uid: Biwen.QuickApi.Auditing.IgnoreType.Parameter
+  commentId: F:Biwen.QuickApi.Auditing.IgnoreType.Parameter
+  id: Parameter
+  parent: Biwen.QuickApi.Auditing.IgnoreType
+  langs:
+  - csharp
+  - vb
+  name: Parameter
+  nameWithType: IgnoreType.Parameter
+  fullName: Biwen.QuickApi.Auditing.IgnoreType.Parameter
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Auditing
+  summary: 忽略传参
+  example: []
+  syntax:
+    content: Parameter = 2
+    return:
+      type: Biwen.QuickApi.Auditing.IgnoreType
+- uid: Biwen.QuickApi.Auditing.IgnoreType.ReturnValue
+  commentId: F:Biwen.QuickApi.Auditing.IgnoreType.ReturnValue
+  id: ReturnValue
+  parent: Biwen.QuickApi.Auditing.IgnoreType
+  langs:
+  - csharp
+  - vb
+  name: ReturnValue
+  nameWithType: IgnoreType.ReturnValue
+  fullName: Biwen.QuickApi.Auditing.IgnoreType.ReturnValue
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Auditing
+  summary: 忽略返回值
+  example: []
+  syntax:
+    content: ReturnValue = 4
+    return:
+      type: Biwen.QuickApi.Auditing.IgnoreType
+references:
+- uid: Biwen.QuickApi.Auditing
+  commentId: N:Biwen.QuickApi.Auditing
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Auditing
+  nameWithType: Biwen.QuickApi.Auditing
+  fullName: Biwen.QuickApi.Auditing
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Auditing
+    name: Auditing
+    isExternal: true
+    href: Biwen.QuickApi.Auditing.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Auditing
+    name: Auditing
+    isExternal: true
+    href: Biwen.QuickApi.Auditing.html
+- uid: Biwen.QuickApi.Auditing.IgnoreType
+  commentId: T:Biwen.QuickApi.Auditing.IgnoreType
+  parent: Biwen.QuickApi.Auditing
+  isExternal: true
+  href: Biwen.QuickApi.Auditing.IgnoreType.html
+  name: IgnoreType
+  nameWithType: IgnoreType
+  fullName: Biwen.QuickApi.Auditing.IgnoreType

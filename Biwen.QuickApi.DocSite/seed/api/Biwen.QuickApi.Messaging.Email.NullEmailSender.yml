@@ -21,7 +21,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
@@ -57,7 +57,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.Name
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
@@ -78,7 +78,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(string, string, string, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
@@ -118,7 +118,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.QueueAsync(string, string, string, string, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
@@ -160,7 +160,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(string, string?, string?, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
@@ -200,7 +200,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(string, string, string?, string?, bool, Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
@@ -242,7 +242,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.SendAsync(System.Net.Mail.MailMessage, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
@@ -281,7 +281,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.NullEmailSender()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
@@ -304,7 +304,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.NullEmailSender.KeyedName
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/NullEmailSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email

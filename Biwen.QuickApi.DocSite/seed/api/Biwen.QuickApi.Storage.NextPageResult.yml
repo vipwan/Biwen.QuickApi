@@ -18,7 +18,7 @@ items:
   fullName: Biwen.QuickApi.Storage.NextPageResult
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -51,7 +51,7 @@ items:
   fullName: Biwen.QuickApi.Storage.NextPageResult.NextPageResult()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -74,7 +74,7 @@ items:
   fullName: Biwen.QuickApi.Storage.NextPageResult.Success
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -97,7 +97,7 @@ items:
   fullName: Biwen.QuickApi.Storage.NextPageResult.HasMore
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -120,7 +120,7 @@ items:
   fullName: Biwen.QuickApi.Storage.NextPageResult.Files
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -143,7 +143,7 @@ items:
   fullName: Biwen.QuickApi.Storage.NextPageResult.NextPageFunc
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Storage/IFileStorage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Storage/IFileStorage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage

@@ -18,7 +18,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.Constant
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/extensions/Biwen.QuickApi.Telemetry/Constant.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -47,7 +47,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.Constant.CpuUsedPercentage
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/extensions/Biwen.QuickApi.Telemetry/Constant.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -70,7 +70,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.Constant.MemoryUsedPercentage
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/extensions/Biwen.QuickApi.Telemetry/Constant.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -93,7 +93,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.Constant.MemoryUsedInBytes
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/extensions/Biwen.QuickApi.Telemetry/Constant.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -116,7 +116,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.Constant.MaximumMemoryInBytes
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/extensions/Biwen.QuickApi.Telemetry/Constant.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -140,7 +140,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.Constant.GetPackageVersion(System.Reflection.Assembly)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/extensions/Biwen.QuickApi.Telemetry/Constant.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/extensions/Biwen.QuickApi.Telemetry/Constant.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry

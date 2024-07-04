@@ -133,6 +133,23 @@ items:
     name: OpenApiMetadataAttribute
   - uid: Biwen.QuickApi.Attributes.QuickApiAttribute
     name: QuickApiAttribute
+- uid: Biwen.QuickApi.Auditing
+  name: Biwen.QuickApi.Auditing
+  items:
+  - uid: Biwen.QuickApi.Auditing.ActionInfo
+    name: ActionInfo
+  - uid: Biwen.QuickApi.Auditing.AuditIgnoreAttribute
+    name: AuditIgnoreAttribute
+  - uid: Biwen.QuickApi.Auditing.AuditInfo
+    name: AuditInfo
+  - uid: Biwen.QuickApi.Auditing.AuditProxyFactory`1
+    name: AuditProxyFactory<T>
+  - uid: Biwen.QuickApi.Auditing.IAuditHandler
+    name: IAuditHandler
+  - uid: Biwen.QuickApi.Auditing.IgnoreType
+    name: IgnoreType
+  - uid: Biwen.QuickApi.Auditing.ServiceRegistration
+    name: ServiceRegistration
 - uid: Biwen.QuickApi.Caching
   name: Biwen.QuickApi.Caching
   items:

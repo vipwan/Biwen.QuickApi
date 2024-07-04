@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Caching.ProxyCache.IProxyCache
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Caching/ProxyCache/IProxyCache.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Caching/ProxyCache/IProxyCache.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching.ProxyCache
@@ -42,7 +42,7 @@ items:
   fullName: Biwen.QuickApi.Caching.ProxyCache.IProxyCache.Get(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Caching/ProxyCache/IProxyCache.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Caching/ProxyCache/IProxyCache.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching.ProxyCache
@@ -74,7 +74,7 @@ items:
   fullName: Biwen.QuickApi.Caching.ProxyCache.IProxyCache.Set(string, object?, System.TimeSpan)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Caching/ProxyCache/IProxyCache.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Caching/ProxyCache/IProxyCache.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching.ProxyCache
@@ -111,7 +111,7 @@ items:
   fullName: Biwen.QuickApi.Caching.ProxyCache.IProxyCache.Remove(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Caching/ProxyCache/IProxyCache.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Caching/ProxyCache/IProxyCache.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching.ProxyCache
@@ -142,7 +142,7 @@ items:
   fullName: Biwen.QuickApi.Caching.ProxyCache.IProxyCache.Exists(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Caching/ProxyCache/IProxyCache.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Caching/ProxyCache/IProxyCache.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching.ProxyCache

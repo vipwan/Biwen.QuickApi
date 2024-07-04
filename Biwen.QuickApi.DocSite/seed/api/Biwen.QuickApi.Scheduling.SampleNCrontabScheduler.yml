@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.SampleNCrontabScheduler
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -51,7 +51,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.SampleNCrontabScheduler.CanRun(Biwen.QuickApi.Scheduling.ScheduleTaskAttribute, System.DateTime)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -88,7 +88,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.SampleNCrontabScheduler.SampleNCrontabScheduler()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Scheduling/SampleNCrontabScheduler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling

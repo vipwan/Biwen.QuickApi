@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi.FeatureManagement/QuickApiFeatureManagementOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi.FeatureManagement/QuickApiFeatureManagementOptions.cs
   assemblies:
   - Biwen.QuickApi.FeatureManagement
   namespace: Biwen.QuickApi.FeatureManagement
@@ -51,7 +51,7 @@ items:
   fullName: Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions.QuickApiFeatureManagementOptions()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi.FeatureManagement/QuickApiFeatureManagementOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi.FeatureManagement/QuickApiFeatureManagementOptions.cs
   assemblies:
   - Biwen.QuickApi.FeatureManagement
   namespace: Biwen.QuickApi.FeatureManagement
@@ -74,7 +74,7 @@ items:
   fullName: Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions.StatusCode
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi.FeatureManagement/QuickApiFeatureManagementOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi.FeatureManagement/QuickApiFeatureManagementOptions.cs
   assemblies:
   - Biwen.QuickApi.FeatureManagement
   namespace: Biwen.QuickApi.FeatureManagement
@@ -99,7 +99,7 @@ items:
   fullName: Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions.OnErrorAsync
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi.FeatureManagement/QuickApiFeatureManagementOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi.FeatureManagement/QuickApiFeatureManagementOptions.cs
   assemblies:
   - Biwen.QuickApi.FeatureManagement
   namespace: Biwen.QuickApi.FeatureManagement

@@ -1,0 +1,133 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Auditing
+  commentId: N:Biwen.QuickApi.Auditing
+  id: Biwen.QuickApi.Auditing
+  children:
+  - Biwen.QuickApi.Auditing.ActionInfo
+  - Biwen.QuickApi.Auditing.AuditIgnoreAttribute
+  - Biwen.QuickApi.Auditing.AuditInfo
+  - Biwen.QuickApi.Auditing.AuditProxyFactory`1
+  - Biwen.QuickApi.Auditing.IAuditHandler
+  - Biwen.QuickApi.Auditing.IgnoreType
+  - Biwen.QuickApi.Auditing.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Auditing
+  nameWithType: Biwen.QuickApi.Auditing
+  fullName: Biwen.QuickApi.Auditing
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Auditing.AuditIgnoreAttribute
+  commentId: T:Biwen.QuickApi.Auditing.AuditIgnoreAttribute
+  isExternal: true
+  href: Biwen.QuickApi.Auditing.AuditIgnoreAttribute.html
+  name: AuditIgnoreAttribute
+  nameWithType: AuditIgnoreAttribute
+  fullName: Biwen.QuickApi.Auditing.AuditIgnoreAttribute
+- uid: Biwen.QuickApi.Auditing.IgnoreType
+  commentId: T:Biwen.QuickApi.Auditing.IgnoreType
+  parent: Biwen.QuickApi.Auditing
+  isExternal: true
+  href: Biwen.QuickApi.Auditing.IgnoreType.html
+  name: IgnoreType
+  nameWithType: IgnoreType
+  fullName: Biwen.QuickApi.Auditing.IgnoreType
+- uid: Biwen.QuickApi.Auditing.AuditInfo
+  commentId: T:Biwen.QuickApi.Auditing.AuditInfo
+  parent: Biwen.QuickApi.Auditing
+  isExternal: true
+  href: Biwen.QuickApi.Auditing.AuditInfo.html
+  name: AuditInfo
+  nameWithType: AuditInfo
+  fullName: Biwen.QuickApi.Auditing.AuditInfo
+- uid: Biwen.QuickApi.Auditing.ActionInfo
+  commentId: T:Biwen.QuickApi.Auditing.ActionInfo
+  parent: Biwen.QuickApi.Auditing
+  isExternal: true
+  href: Biwen.QuickApi.Auditing.ActionInfo.html
+  name: ActionInfo
+  nameWithType: ActionInfo
+  fullName: Biwen.QuickApi.Auditing.ActionInfo
+- uid: Biwen.QuickApi.Auditing.AuditProxyFactory`1
+  commentId: T:Biwen.QuickApi.Auditing.AuditProxyFactory`1
+  isExternal: true
+  href: Biwen.QuickApi.Auditing.AuditProxyFactory-1.html
+  name: AuditProxyFactory<T>
+  nameWithType: AuditProxyFactory<T>
+  fullName: Biwen.QuickApi.Auditing.AuditProxyFactory<T>
+  nameWithType.vb: AuditProxyFactory(Of T)
+  fullName.vb: Biwen.QuickApi.Auditing.AuditProxyFactory(Of T)
+  name.vb: AuditProxyFactory(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Auditing.AuditProxyFactory`1
+    name: AuditProxyFactory
+    isExternal: true
+    href: Biwen.QuickApi.Auditing.AuditProxyFactory-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Auditing.AuditProxyFactory`1
+    name: AuditProxyFactory
+    isExternal: true
+    href: Biwen.QuickApi.Auditing.AuditProxyFactory-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Auditing.IAuditHandler
+  commentId: T:Biwen.QuickApi.Auditing.IAuditHandler
+  isExternal: true
+  href: Biwen.QuickApi.Auditing.IAuditHandler.html
+  name: IAuditHandler
+  nameWithType: IAuditHandler
+  fullName: Biwen.QuickApi.Auditing.IAuditHandler
+- uid: Biwen.QuickApi.Auditing.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Auditing.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.Auditing.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Auditing.ServiceRegistration
+- uid: Biwen.QuickApi.Auditing
+  commentId: N:Biwen.QuickApi.Auditing
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Auditing
+  nameWithType: Biwen.QuickApi.Auditing
+  fullName: Biwen.QuickApi.Auditing
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Auditing
+    name: Auditing
+    isExternal: true
+    href: Biwen.QuickApi.Auditing.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Auditing
+    name: Auditing
+    isExternal: true
+    href: Biwen.QuickApi.Auditing.html

@@ -29,7 +29,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -78,7 +78,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.IResultResponse(Microsoft.AspNetCore.Http.IResult)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -109,7 +109,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.OK(object?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -139,7 +139,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.BadRequest(object?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -169,7 +169,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Stream(System.IO.Stream, string?, string?, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -210,7 +210,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.File(string, string?, string?, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -251,7 +251,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Content(string?, string?, System.Text.Encoding?, int?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -292,7 +292,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Problem(Microsoft.AspNetCore.Mvc.ProblemDetails)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -321,7 +321,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Problem(string?, string?, int?, string?, string?, System.Collections.Generic.IDictionary<string, object?>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -368,7 +368,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Text(string, string?, System.Text.Encoding?, int?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -409,7 +409,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Redirect(string, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -447,7 +447,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Json<T>(T, System.Text.Json.JsonSerializerOptions?, string?, int?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -491,7 +491,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.StatusCode(int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -523,7 +523,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Result
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -546,7 +546,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Empty
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -571,7 +571,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.NotFound
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -596,7 +596,7 @@ items:
   fullName: Biwen.QuickApi.IResultResponse.Unauthorized
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/BaseResponse.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/BaseResponse.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

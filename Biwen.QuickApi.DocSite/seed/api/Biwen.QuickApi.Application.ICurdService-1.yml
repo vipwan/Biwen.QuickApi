@@ -18,7 +18,7 @@ items:
   fullName: Biwen.QuickApi.Application.ICurdService<TEntity>
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/ICurdService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Application/ICurdService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -49,7 +49,7 @@ items:
   fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.AddAsync(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/ICurdService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Application/ICurdService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -80,7 +80,7 @@ items:
   fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.UpdateAsync(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/ICurdService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Application/ICurdService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -111,7 +111,7 @@ items:
   fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.DeleteAsync(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/ICurdService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Application/ICurdService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -142,7 +142,7 @@ items:
   fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.GetAsync(object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/ICurdService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Application/ICurdService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -174,7 +174,7 @@ items:
   fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.GetPagedList(int, int, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/67900c6dd4da4c9a7da43916a4a35c1977aa0c94/Biwen.QuickApi/Application/ICurdService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Application/ICurdService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
