@@ -1,6 +1,5 @@
 ﻿using Biwen.QuickApi.Scheduling.Stores;
 using Biwen.QuickApi.Scheduling.Stores.ConfigurationStore;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Biwen.QuickApi.Scheduling
 {

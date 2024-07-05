@@ -1,5 +1,4 @@
 ﻿using Biwen.QuickApi.Serializer;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Biwen.QuickApi.Storage
 {

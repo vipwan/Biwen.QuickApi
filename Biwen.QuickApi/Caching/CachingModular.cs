@@ -1,7 +1,6 @@
 ﻿using Biwen.QuickApi.Caching.ProxyCache;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Biwen.QuickApi.Caching
 {

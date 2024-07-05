@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection.Extensions;
-
-namespace Biwen.QuickApi.Auditing;
+﻿namespace Biwen.QuickApi.Auditing;
 
 [SuppressType]
 public static class ServiceRegistration

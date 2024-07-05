@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection.Extensions;
-
-namespace Biwen.QuickApi.Messaging.Sms;
+﻿namespace Biwen.QuickApi.Messaging.Sms;
 
 [SuppressType]
 public static class ServiceRegistration

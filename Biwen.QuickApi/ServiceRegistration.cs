@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.WebEncoders;
 using System.Text.Encodings.Web;
 
