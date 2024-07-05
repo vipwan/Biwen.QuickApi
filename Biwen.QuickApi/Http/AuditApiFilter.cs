@@ -14,28 +14,27 @@ namespace Biwen.QuickApi.Http
             {
                 try
                 {
-                    var audited = context.HttpContext.GetEndpoint()?.Metadata.GetMetadata<AuditApiAttribute>() is { };
-                    if (audited)
+                    if (httpContext.GetEndpoint()?.Metadata.GetMetadata<AuditApiAttribute>() is { })
                     {
                         var handlers = httpContext.RequestServices.GetService<IEnumerable<IAuditHandler>>()!;
                         var auditInfo = new AuditInfo
                         {
                             ApplicationName = "Biwen.QuickApi",
-                            UserId = httpContext?.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value,
-                            UserName = httpContext?.User.Identity?.Name,
-                            BrowserInfo = httpContext?.Request.Headers.UserAgent,
-                            ClientIpAddress = httpContext?.Connection.RemoteIpAddress?.ToString(),
-                            ClientName = httpContext?.Request.Headers["X-Forwarded-For"],
-                            HttpMethod = httpContext?.Request.Method,
-                            Url = httpContext?.Request.Path,
+                            UserId = httpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value,
+                            UserName = httpContext.User.Identity?.Name,
+                            BrowserInfo = httpContext.Request.Headers.UserAgent,
+                            ClientIpAddress = httpContext.Connection.RemoteIpAddress?.ToString(),
+                            ClientName = httpContext.Request.Headers["X-Forwarded-For"],
+                            HttpMethod = httpContext.Request.Method,
+                            Url = httpContext.Request.Path,
                             IsQuickApi = true,//表明这是一个QuickApi请求
                             ExtraInfos = new Dictionary<string, object?>()
                             {
                                 ["args"] = context.Arguments,
-                                ["result"] = context.HttpContext.Response.Body,
-                                ["headers"] = context.HttpContext.Response.Headers,
-                                ["query"] = context.HttpContext.Request.Query,
-                                ["cookies"] = context.HttpContext.Request.Cookies,
+                                ["result"] = httpContext.Response.Body,
+                                ["headers"] = httpContext.Response.Headers,
+                                ["query"] = httpContext.Request.Query,
+                                ["cookies"] = httpContext.Request.Cookies,
                             }
                         };
 
