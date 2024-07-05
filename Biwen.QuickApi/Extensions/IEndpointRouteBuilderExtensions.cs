@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Biwen.QuickApi.Http;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Routing;
@@ -66,6 +67,10 @@ namespace Biwen.QuickApi
 
             //添加验证器Filter:
             builder.AddEndpointFilter<ValidateRequestFilter>();
+
+            //审计
+            builder.AddEndpointFilter<AuditApiFilter>();
+
             //添加OpenApi:
             if (excludeFromDescription)
             {

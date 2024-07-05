@@ -301,6 +301,8 @@ namespace Biwen.QuickApi
 
                     //验证策略
                     rhBuilder.AddEndpointFilter<CheckPolicyFilter>();
+                    //审计
+                    rhBuilder.AddEndpointFilter<AuditApiFilter>();
 
                     //antiforgery
                     //net8.0以上使用UseAntiforgery,

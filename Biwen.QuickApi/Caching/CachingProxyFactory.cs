@@ -26,33 +26,17 @@ public class CachingProxyFactory<T>(IServiceProvider serviceProvider)
     /// 从DI容器中创建代理
     /// </summary>
     /// <param name="keyed">针对Keyed的服务实现别名,空表示非keyed</param>
-    /// <param name="scoped">是否作用域范围</param>
     /// <returns></returns>
-    public T Create(string? keyed = default, bool? scoped = false)
+    public T Create(string? keyed = default)
     {
-        var sp = serviceProvider;
+        using var scope = serviceProvider.CreateAsyncScope();
 
-        if (scoped is true)
-        {
-            using var scope = serviceProvider.CreateAsyncScope();
-            sp = scope.ServiceProvider;
+        var impl = string.IsNullOrEmpty(keyed) ?
+            scope.ServiceProvider.GetRequiredService<T>() :
+            scope.ServiceProvider.GetRequiredKeyedService<T>(keyed);
 
+        var proxyCache = scope.ServiceProvider.GetRequiredService<IProxyCache>();
+        return Create(impl, proxyCache);
 
-            var impl = string.IsNullOrEmpty(keyed) ?
-                sp.GetRequiredService<T>() :
-                sp.GetRequiredKeyedService<T>(keyed);
-
-            var proxyCache = sp.GetRequiredService<IProxyCache>();
-            return Create(impl, proxyCache);
-        }
-        else
-        {
-            var impl = string.IsNullOrEmpty(keyed) ?
-                sp.GetRequiredService<T>() :
-                sp.GetRequiredKeyedService<T>(keyed);
-
-            var proxyCache = sp.GetRequiredService<IProxyCache>();
-            return Create(impl, proxyCache);
-        }
     }
 }

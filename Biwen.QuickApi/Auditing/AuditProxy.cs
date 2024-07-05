@@ -43,11 +43,13 @@ internal class AuditProxy<T> : DispatchProxy where T : class
 
                 if (handlers is not null)
                 {
-                    var ignoreMeta = _decorated!.GetType()
-                       .GetMethod(targetMethod.Name, types: args?.Select(x => x?.GetType()!)?.ToArray() ?? [])!
-                       .GetCustomAttribute<AuditIgnoreAttribute>();
 
                     var decoratedType = _decorated.GetType();
+
+                    var methodinfo = decoratedType
+                        .GetMethod(targetMethod.Name, types: args?.Select(x => x?.GetType()!)?.ToArray() ?? [])!;
+
+                    var ignoreMeta = methodinfo.GetCustomAttribute<AuditIgnoreAttribute>();
 
                     var auditInfo = new AuditInfo
                     {
@@ -61,9 +63,7 @@ internal class AuditProxy<T> : DispatchProxy where T : class
                         Url = context?.Request.Path,
                         ActionInfo = new ActionInfo
                         {
-                            ClassName = decoratedType.Name,
-                            Namespace = decoratedType.Namespace,
-                            MethodName = targetMethod.Name
+                            MethodInfo = methodinfo,
                         },
                         ExtraInfos = new Dictionary<string, object?>()
                         {

@@ -1,14 +1,19 @@
-﻿using static Biwen.QuickApi.DemoWeb.HelloService;
+﻿namespace Biwen.QuickApi.DemoWeb;
 
-namespace Biwen.QuickApi.DemoWeb;
+
+public interface IHelloService
+{
+    string Hello(HelloService.HelloBody helloBody);
+}
+
 
 /// <summary>
 /// 测试服务
 /// </summary>
 
-[AutoInject]
-[AutoInjectKeyed<HelloService>("hello")]
-public partial class HelloService(ILogger<HelloService> logger)
+[AutoInject<IHelloService>]
+[AutoInjectKeyed<IHelloService>("hello")]
+public partial class HelloService(ILogger<HelloService> logger) : IHelloService
 {
     public record HelloBody(string name, int age);
 

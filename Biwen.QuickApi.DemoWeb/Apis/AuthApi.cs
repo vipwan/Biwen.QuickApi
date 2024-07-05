@@ -11,6 +11,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     [QuickApi("logined", Group = "admin")]
     [OpenApiMetadata("Login", description: "模拟直接登录,并且给予admin的Policy")]
+    [AuditApi]
     public class Login : BaseQuickApi
     {
 
@@ -77,6 +78,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     [QuickApi("Loginout", Group = "admin")]
     [OpenApiMetadata("loginout", "退出登录")]
+    [AuditApi]
     public class LoginOut : BaseQuickApiWithoutRequest<string>
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -113,6 +115,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     [QuickApi("index", Group = "admin", Verbs = Verb.GET, Policy = "admin")]
     [OpenApiMetadata("NeedAuthApi", "需要登录,NeedAuthApi")]
+    [AuditApi]
     public class NeedAuthApi : BaseQuickApi
     {
         public override ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
@@ -136,6 +139,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     /// </summary>
     [QuickApi("edit", Group = "admin", Verbs = Verb.GET)]
     [OpenApiMetadata("Edit,需要登录", description: "需要登录,EditDocumentApi")]
+    [AuditApi]
     public class EditDocumentApi : BaseAdminApi<EmptyRequest, IResult>
     {
         public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
@@ -150,6 +154,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     [Authorize(policy: "admin")]
     [QuickApi("an-auth", Group = "admin")]
     [OpenApiMetadata("[Authorize]特性", "使用特性标记需要登录")]
+    [AuditApi]
     public class AuthorizationTestApi : BaseQuickApi
     {
         public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)

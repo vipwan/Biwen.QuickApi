@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Biwen.QuickApi.Auditing;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
@@ -43,7 +44,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     [QuickApi("route2-{hello}", Group = "route", Verbs = Verb.POST)]
     [OpenApiMetadata("Route2Api", "Route2Api", Tags = ["QuickApis"])]
-    public class Route2Api(HelloService helloService) : BaseQuickApi<Route2Data, Route2Data>
+    public class Route2Api(IHelloService helloService) : BaseQuickApi<Route2Data, Route2Data>
     {
         public override async ValueTask<Route2Data> ExecuteAsync(Route2Data request, CancellationToken cancellationToken)
         {
@@ -52,5 +53,21 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             return request;
         }
     }
+
+
+    [QuickApi("route-audit-{hello}", Group = "route", Verbs = Verb.POST)]
+    [OpenApiMetadata("RouteAuditApi", "对HelloService审计", Tags = ["QuickApis"])]
+    public class RouteAuditApi(AuditProxyFactory<IHelloService> auditProxy) : BaseQuickApi<Route2Data, Route2Data>
+    {
+        public override async ValueTask<Route2Data> ExecuteAsync(Route2Data request, CancellationToken cancellationToken)
+        {
+            var helloService = auditProxy.Create();
+
+            var hello = helloService.Hello(new HelloService.HelloBody(request.Hello ?? "viwan", 18));
+            await Task.CompletedTask;
+            return request;
+        }
+    }
+
 
 }

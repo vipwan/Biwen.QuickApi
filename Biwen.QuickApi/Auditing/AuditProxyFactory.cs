@@ -15,12 +15,12 @@ public class AuditProxyFactory<T> where T : class
     public T Create(T impl)
     {
         ArgumentNullException.ThrowIfNull(impl);
-        return AuditProxy<T>.Create(impl, _serviceProvider);
+        return AuditProxy<T>.Create(impl, _serviceProvider.CreateAsyncScope().ServiceProvider);
     }
 
     public T Create()
     {
-        var impl = _serviceProvider.GetRequiredService<T>();
+        var impl = _serviceProvider.CreateAsyncScope().ServiceProvider.GetRequiredService<T>();
         return Create(impl);
     }
 

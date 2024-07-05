@@ -24,6 +24,12 @@ public class AuditInfo
     public ActionInfo? ActionInfo { get; set; }
 
     /// <summary>
+    /// 是否是QuickApi或者QuickEndpoint
+    /// </summary>
+    public bool IsQuickApi { get; set; }
+
+
+    /// <summary>
     /// 扩展信息
     /// </summary>
     public Dictionary<string, object?>? ExtraInfos { get; set; }
@@ -42,9 +48,6 @@ public class AuditInfo
 [Serializable]
 public class ActionInfo
 {
-    public string? MethodName { get; set; }
+    public MethodInfo? MethodInfo { get; set; }
 
-    public string? ClassName { get; set; }
-
-    public string? Namespace { get; set; }
 }

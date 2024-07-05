@@ -15,6 +15,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
     [ProducesResponseType<string>(200)]
     [EndpointGroupName("test")]
     [OpenApiMetadata("IQuickEndpoint测试", "测试IQuickEndpoint", Tags = ["Endpoints"], IsDeprecated = true, OperationId = "TestHelloEndpoint")]
+    [AuditApi]//审计
     public class HelloEndpoint : IQuickEndpoint
     {
         /// <summary>
