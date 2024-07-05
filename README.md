@@ -7,7 +7,7 @@
 
 ## 项目介绍
 Biwen.QuickApi 2+,是一个微型`aspnetcore`开发框架,提供minimalapi的QuickApi封装,提供`IQuickEndpoint`书写minimalapi,
-模块化支持`Modular`,发布订阅:`IEvent`,作业调度:`IScheduleTask`,LocalLock,OpenApi ~~
+模块化支持`Modular`,发布订阅:`IEvent`,作业调度:`IScheduleTask`,审计:`Auditing`,缓存,LocalLock,OpenApi ~~
 
 ```c#
 public class MyStore
