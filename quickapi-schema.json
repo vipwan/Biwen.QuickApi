@@ -105,9 +105,9 @@
             "SamplingInterval": {
               "type": "integer",
               "default": 15,
-              "description": "采样间隔,单位秒,默认:15",
+              "description": "采样间隔,单位秒,默认:15秒,介于5~900之间",
               "minimum": 5,
-              "maximum": 100000
+              "maximum": 900
             }
           }
         }
