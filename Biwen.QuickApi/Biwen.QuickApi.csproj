@@ -47,6 +47,7 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.6" />
 		<PackageReference Include="NCrontab" Version="3.3.3" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="$(FluentValidationAspNetCoreVer)" />
+		<PackageReference Include="System.Text.Json" Version="8.0.4" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
