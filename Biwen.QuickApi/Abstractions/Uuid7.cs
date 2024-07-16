@@ -10,7 +10,7 @@ namespace Biwen.QuickApi;
 
 /// <summary>
 /// UUID7,根据时间戳生成有序的Guid
-/// https://www.ietf.org/archive/id/draft-ietf-uuidrev-rfc4122bis-03.html.
+/// https://www.ietf.org/archive/id/draft-ietf-uuidrev-rfc4122bis-03.html
 /// </summary>
 [DebuggerDisplay("{ToString(),nq}")]
 [StructLayout(LayoutKind.Sequential)]
@@ -53,7 +53,6 @@ public readonly struct Uuid7
         Buffer.BlockCopy(buffer, 0, Bytes, 0, 16);
     }
 
-#if NET6_0_OR_GREATER
     /// <summary>
     /// Creates a new instance from given read-only byte span.
     /// No check if array is version 7 UUID is made.
@@ -66,7 +65,6 @@ public readonly struct Uuid7
         Bytes = new byte[16];
         span.CopyTo(Bytes);
     }
-#endif
 
     /// <summary>
     /// Creates a new instance from given GUID bytes.
@@ -638,8 +636,6 @@ public readonly struct Uuid7
     }
 
 
-#if NET6_0_OR_GREATER
-
     /// <summary>
     /// Tries to write the current instance into a span of bytes.
     /// </summary>
@@ -651,7 +647,6 @@ public readonly struct Uuid7
         return true;
     }
 
-#endif
 
 
     #region String
