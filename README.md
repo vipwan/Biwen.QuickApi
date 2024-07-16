@@ -34,11 +34,13 @@ public class TodoApi : BaseQuickApi<EmptyRequest,Todo[]>
 - (MinimalApi as REPR) Biwen.QuickApi遵循了 REPR 设计 （Request-Endpoint-Response）
 - 开箱即用
 - write less, do more ; write anywhere, do anything  
+- 完整开发文档请下载项目源代码运行`Biwen.QuickApi.DocSite`项目
 - 欢迎小伙伴们star&issue共同学习进步 [Biwen.QuickApi](https://github.com/vipwan/Biwen.QuickApi)
 
 ## 开发工具
 
-- [Visual Studio 2022 17.10.0 +](https://learn.microsoft.com/zh-cn/visualstudio/releases/2022/release-notes-preview)
+- [Visual Studio 2022 17.11.0 +](https://learn.microsoft.com/zh-cn/visualstudio/releases/2022/release-notes-preview)
+- [Visual Studio Code](https://code.visualstudio.com/Download)
 - [Net 9.0.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/9.0)
 
 ## 依赖环境&库
