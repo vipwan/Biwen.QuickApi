@@ -2,19 +2,23 @@
 using Biwen.QuickApi.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Net.Mail;
+using System.Reflection;
 
 namespace Biwen.QuickApi.Test
 {
     public class UnitOfWorkTest(ITestOutputHelper output)
     {
-        [Fact]
-        public async Task AllUnitOfWorkTest()
+        [Theory]
+        [UserAutoData(1)]
+        [UserAutoData(2)]
+        public async Task AllUnitOfWorkTest(int db, User user)
         {
             var services = new ServiceCollection();
             services.AddLogging();
             services.AddDbContext<TestDbContext>(options =>
             {
-                options.UseInMemoryDatabase("test");
+                options.UseInMemoryDatabase($"test-{db}");
             });
             services.AddUnitOfWork<TestDbContext>();
 
@@ -22,13 +26,6 @@ namespace Biwen.QuickApi.Test
             var uow = provider.GetRequiredService<IUnitOfWork<TestDbContext>>();
 
             //add user
-            var user = new User
-            {
-                Name = "test",
-                Address = "test address",
-                CreatedAt = DateTime.Now,
-                Email = "my@sina.com"
-            };
             await uow.GetRepository<User>().InsertAsync(user);
             await uow.SaveChangesAsync();
 
@@ -73,6 +70,33 @@ namespace Biwen.QuickApi.Test
             }
 
             Assert.True(pageList.TotalPages > 0);
+        }
+
+    }
+
+    /// <summary>
+    /// 生成符合要求的用户数据
+    /// </summary>
+    class UserAutoData : InlineAutoDataAttribute
+    {
+        public UserAutoData(params object[] values) : base(values)
+        {
+            ArgumentNullException.ThrowIfNull(values[0]);
+        }
+
+        public override IEnumerable<object[]> GetData(MethodInfo testMethod)
+        {
+            var fixture = new Fixture();
+
+            var user = fixture.Build<User>()
+                 .Without(x => x.Id)
+                 .Without(x => x.Email)
+                 .Create();
+
+            //邮箱地址,需要照规则生成
+            user.Email = fixture.Create<MailAddress>().Address;
+
+            yield return new object[] { Values[0], user };
         }
     }
 }

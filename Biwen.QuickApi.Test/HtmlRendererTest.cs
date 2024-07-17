@@ -8,8 +8,11 @@ namespace Biwen.QuickApi.Test
     public class BlazorRendererServiceTest(ITestOutputHelper testOutput)
     {
         //测试HtmlRenderer:
-        [Fact]
-        public async Task ShouldRenderHtml()
+        [Theory]
+        [InlineData("Hello from the Render Message component!")]
+        [InlineAutoData]
+        [InlineAutoData]
+        public async Task ShouldRenderHtml(string message)
         {
             var env = WebApplication.CreateSlimBuilder().Environment;
 
@@ -39,12 +42,12 @@ namespace Biwen.QuickApi.Test
 
             var pairs = new Dictionary<string, object?>
             {
-                { "Message", "Hello from the Render Message component!" }
+                { "Message", message }
             };
             var html = await service.Render<RenderMessage>(pairs);
 
             testOutput.WriteLine(html);
-            Assert.Contains("Hello from the Render Message component!", html);
+            Assert.Contains(message, html);
 
         }
     }
