@@ -2,7 +2,6 @@
 using Biwen.QuickApi.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System.Net.Mail;
 using System.Reflection;
 
 namespace Biwen.QuickApi.Test
@@ -77,9 +76,9 @@ namespace Biwen.QuickApi.Test
     /// <summary>
     /// 生成符合要求的用户数据
     /// </summary>
-    class UserAutoData : InlineAutoDataAttribute
+    class UserAutoDataAttribute : InlineAutoDataAttribute
     {
-        public UserAutoData(params object[] values) : base(values)
+        public UserAutoDataAttribute(params object[] values) : base(values)
         {
             ArgumentNullException.ThrowIfNull(values[0]);
         }
@@ -89,12 +88,10 @@ namespace Biwen.QuickApi.Test
             var fixture = new Fixture();
 
             var user = fixture.Build<User>()
-                 .Without(x => x.Id)
-                 .Without(x => x.Email)
+                 //.With(x => x.Id, 0)
+                 .Without(x => x.Id) //ID需要排除因为EFCore需要插入时自动生成
+                 .With(x => x.Email, $"{Uuid7.NewUuid7()}@example.com") //邮箱地址,需要照规则生成
                  .Create();
-
-            //邮箱地址,需要照规则生成
-            user.Email = fixture.Create<MailAddress>().Address;
 
             yield return new object[] { Values[0], user };
         }
