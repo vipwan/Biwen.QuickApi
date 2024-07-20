@@ -10,7 +10,7 @@
 	<Import Project="..\Version.props" />
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="4.0.0-preview3" />
+		<PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="4.0.0-preview4" />
 	</ItemGroup>
 
 	<ItemGroup>
