@@ -41,9 +41,9 @@
 		<PackageReference Include="Biwen.AutoClassGen" Version="1.3.3" />
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.3.3" />
 		<PackageReference Include="NCrontab" Version="3.3.3" />
-		<PackageReference Include="NSwag.AspNetCore" Version="14.0.8" />
+		<PackageReference Include="NSwag.AspNetCore" Version="14.1.0" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.7" />
 	</ItemGroup>
 
 </Project>
