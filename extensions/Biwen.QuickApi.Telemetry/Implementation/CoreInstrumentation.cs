@@ -46,7 +46,14 @@ namespace Biwen.QuickApi.Telemetry.Implementation
 
         public ValueTask DisposeAsync()
         {
-            OpenTelemetryPublisher.ResourceUtilizationChannel?.Writer.Complete();
+            try
+            {
+                OpenTelemetryPublisher.ResourceUtilizationChannel?.Writer?.Complete();
+            }
+            catch
+            {
+                //todo:
+            }
             return default;
         }
     }
