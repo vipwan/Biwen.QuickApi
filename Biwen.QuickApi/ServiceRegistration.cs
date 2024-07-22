@@ -247,11 +247,11 @@ namespace Biwen.QuickApi
             {
                 var g = app.MapGroup(string.Empty);
                 //quickapi前缀
-                if (!string.IsNullOrEmpty(prefix))
+                if (!string.IsNullOrWhiteSpace(prefix))
                 {
                     g = g.MapGroup(prefix);
                 }
-                if (!string.IsNullOrEmpty(group.Key))
+                if (!string.IsNullOrWhiteSpace(group.Key))
                 {
                     //url分组
                     g = g.MapGroup(group.Key);
@@ -269,13 +269,13 @@ namespace Biwen.QuickApi
 
                 foreach (var apiType in group)
                 {
-                    var attr = apiType.GetCustomAttribute<QuickApiAttribute>() ?? throw new QuickApiExcetion($"{apiType.Name}:必须标注QuickApi特性!");
-
-                    if (apiType.GetCustomAttribute<JustAsServiceAttribute>() != null)
+                    if (apiType.GetCustomAttribute<JustAsServiceAttribute>() is { })
                     {
                         //不需要注册路由的QuickApi
                         continue;
                     }
+
+                    var attr = apiType.GetCustomAttribute<QuickApiAttribute>() ?? throw new QuickApiExcetion($"{apiType.Name}:必须标注QuickApi特性!");
                     var verbs = attr.Verbs.SplitEnum();//拆分枚举
                     //reqType
                     var reqType = apiType.GetMethod(nameof(BaseQuickApi.ExecuteAsync))!.GetParameters()[0].ParameterType;
