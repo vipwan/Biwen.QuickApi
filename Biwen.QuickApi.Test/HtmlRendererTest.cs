@@ -5,8 +5,19 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Biwen.QuickApi.Test
 {
-    public class BlazorRendererServiceTest(ITestOutputHelper testOutput)
+    public class BlazorRendererServiceTest : IClassFixture<TestBase.QuickApiTestFactory>
     {
+
+        private readonly ITestOutputHelper _testOutput;
+        private readonly TestBase.QuickApiTestFactory _factory;
+
+        public BlazorRendererServiceTest(TestBase.QuickApiTestFactory factory, ITestOutputHelper testOutput)
+        {
+            _factory = factory;
+            _testOutput = testOutput;
+        }
+
+
         //测试HtmlRenderer:
         [Theory]
         [InlineData("Hello from the Render Message component!")]
@@ -14,31 +25,33 @@ namespace Biwen.QuickApi.Test
         [InlineAutoData]
         public async Task ShouldRenderHtml(string message)
         {
-            var env = WebApplication.CreateSlimBuilder().Environment;
+            //var env = WebApplication.CreateSlimBuilder().Environment;
 
-            IServiceCollection services = new ServiceCollection();
-            services.AddLogging();
+            //IServiceCollection services = new ServiceCollection();
+            //services.AddLogging();
 
-            //添加Env
-            services.AddSingleton(env);
+            ////添加Env
+            //services.AddSingleton(env);
 
-            //添加Configuration
-            var configuration = new ConfigurationBuilder().Build();
-            services.AddSingleton<IConfiguration>(configuration);
+            ////添加Configuration
+            //var configuration = new ConfigurationBuilder().Build();
+            //services.AddSingleton<IConfiguration>(configuration);
 
-            services.AddHttpContextAccessor();
-            //提供Blazor组件服务
-            services.AddRazorComponents().AddInteractiveServerComponents();
+            //services.AddHttpContextAccessor();
+            ////提供Blazor组件服务
+            //services.AddRazorComponents().AddInteractiveServerComponents();
 
-            //提供Blazor组件渲染服务
-            services.AddScoped<BlazorRendererService>();
+            ////提供Blazor组件渲染服务
+            //services.AddScoped<BlazorRendererService>();
 
-            var serviceProvider = services.BuildServiceProvider();
+            //var serviceProvider = services.BuildServiceProvider();
 
-            var httpContextAccessor = serviceProvider.GetRequiredService<IHttpContextAccessor>();
-            httpContextAccessor.HttpContext = new DefaultHttpContext();
+            //var httpContextAccessor = serviceProvider.GetRequiredService<IHttpContextAccessor>();
+            //httpContextAccessor.HttpContext = new DefaultHttpContext();
 
-            var service = serviceProvider.GetRequiredService<BlazorRendererService>();
+            //var service = serviceProvider.GetRequiredService<BlazorRendererService>();
+
+            var service = _factory.Services.CreateScope().ServiceProvider.GetRequiredService<BlazorRendererService>();
 
             var pairs = new Dictionary<string, object?>
             {
@@ -46,7 +59,7 @@ namespace Biwen.QuickApi.Test
             };
             var html = await service.Render<RenderMessage>(pairs);
 
-            testOutput.WriteLine(html);
+            _testOutput.WriteLine(html);
             Assert.Contains(message, html);
 
         }

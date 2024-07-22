@@ -14,6 +14,7 @@ namespace Biwen.QuickApi.DemoWeb.Db.Entity
 
         public string? Address { get; set; }
 
+        [EmailAddress]
         public string? Email { get; set; }
 
         public DateTime CreateTime { get; set; }
