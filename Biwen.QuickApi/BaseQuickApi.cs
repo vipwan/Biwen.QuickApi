@@ -130,7 +130,7 @@ namespace Biwen.QuickApi
         /// <summary>
         /// ReqType是否是:multipart/form-data
         /// </summary>
-        static readonly ConcurrentDictionary<Type, bool> ReqTypeIsFormdatas = new();
+        static readonly ConcurrentDictionary<Type, bool> _reqTypeIsFormdatas = new();
 
         /// <summary>
         /// 缓存请求类型是否form-data,避免重复反射
@@ -139,7 +139,7 @@ namespace Biwen.QuickApi
         {
             get
             {
-                return ReqTypeIsFormdatas.GetOrAdd(ReqType, type =>
+                return _reqTypeIsFormdatas.GetOrAdd(ReqType, type =>
                 {
                     return (ReqType.GetProperties().Any(x =>
                     x.PropertyType == typeof(IFormFile) ||

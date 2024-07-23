@@ -16,7 +16,7 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public IRuleBuilderInitial<T, TProperty> RuleFor<TProperty>(Expression<Func<T, TProperty>> expression)
         {
-            var valiadtor = InnerValidators.GetOrAdd(typeof(T), type => new InnerValidator());
+            var valiadtor = _innerValidators.GetOrAdd(typeof(T), type => new InnerValidator());
             return valiadtor.RuleFor(expression);
         }
 
@@ -25,7 +25,7 @@ namespace Biwen.QuickApi
         /// <summary>
         /// 验证器集合
         /// </summary>
-        private static readonly ConcurrentDictionary<Type, InnerValidator> InnerValidators = new();
+        private static readonly ConcurrentDictionary<Type, InnerValidator> _innerValidators = new();
 
         /// <summary>
         /// 验证请求对象
@@ -34,7 +34,7 @@ namespace Biwen.QuickApi
         public ValidationResult Validate()
         {
             var req = (T)MemberwiseClone();
-            var valiadtor = InnerValidators.GetOrAdd(typeof(T), type => new InnerValidator());
+            var valiadtor = _innerValidators.GetOrAdd(typeof(T), type => new InnerValidator());
             return valiadtor.Validate(req);
         }
         #endregion
@@ -44,13 +44,13 @@ namespace Biwen.QuickApi
             /// <summary>
             /// 缓存T是否有DataAnnotation
             /// </summary>
-            static readonly ConcurrentDictionary<string, bool> TAnnotationAttrs = new();
+            static readonly ConcurrentDictionary<string, bool> _tHasAnnotations = new();
 
-            private static bool HasAnnotationAttr
+            private static bool HasAnnotation
             {
                 get
                 {
-                    return TAnnotationAttrs.GetOrAdd(typeof(T).FullName!, type =>
+                    return _tHasAnnotations.GetOrAdd(typeof(T).FullName!, type =>
                     {
                         return typeof(T).GetProperties().Any(
                             prop => prop.GetCustomAttributes(true).Any(x => x is MSDA.ValidationAttribute));
@@ -61,7 +61,7 @@ namespace Biwen.QuickApi
             protected override bool PreValidate(ValidationContext<T> context, ValidationResult result)
             {
                 //用于提升性能,如果没有DataAnnotation,则不再执行DataAnnotation的验证
-                if (!HasAnnotationAttr)
+                if (!HasAnnotation)
                 {
                     return base.PreValidate(context, result);
                 }

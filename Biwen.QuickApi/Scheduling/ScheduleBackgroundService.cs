@@ -4,7 +4,6 @@ using Biwen.QuickApi.Events;
 using Biwen.QuickApi.Infrastructure.Locking;
 using Biwen.QuickApi.Scheduling.Events;
 using Biwen.QuickApi.Scheduling.Stores;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace Biwen.QuickApi.Scheduling

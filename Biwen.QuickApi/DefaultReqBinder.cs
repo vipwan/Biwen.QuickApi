@@ -24,7 +24,6 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public static async ValueTask<T> BindAsync(HttpContext context, ParameterInfo parameter = null!)
         {
-
             IDictionary<string, object>? ReadFromJsonDic = null;
 
             //route > header > body(Post) = querystring(Get)
@@ -33,13 +32,11 @@ namespace Biwen.QuickApi
             var props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
             if (props?.Length == 0) return @default;
 
-            if (context.Request.Method != HttpMethods.Get && context.Request.Method != HttpMethods.Head)
+            if (context.Request.Method != HttpMethods.Get && context.Request.Method != HttpMethods.Head
+                && type.GetCustomAttribute<FromBodyAttribute>() is not null)
             {
-                if (type.GetCustomAttribute<FromBodyAttribute>() is { })
-                {
-                    @default = await context.Request.ReadFromJsonAsync<T>();
-                    return @default!;
-                }
+                @default = await context.Request.ReadFromJsonAsync<T>();
+                return @default!;
             }
 
             foreach (var prop in props!)
@@ -50,21 +47,15 @@ namespace Biwen.QuickApi
 
                 #region IFormFile 和 IFormFileCollection 绑定
 
-                if (prop.PropertyType == typeof(IFormFile))
+                if (prop.PropertyType == typeof(IFormFile) && context.Request.Form.Files.SingleOrDefault() is { } file)
                 {
-                    if (context.Request.Form.Files.SingleOrDefault() is { } file)
-                    {
-                        prop.SetValue(@default, file);
-                        continue;
-                    }
+                    prop.SetValue(@default, file);
+                    continue;
                 }
-                if (prop.PropertyType == typeof(IFormFileCollection))
+                if (prop.PropertyType == typeof(IFormFileCollection) && context.Request.Form.Files is { } files)
                 {
-                    if (context.Request.Form.Files is { } files)
-                    {
-                        prop.SetValue(@default, files);
-                        continue;
-                    }
+                    prop.SetValue(@default, files);
+                    continue;
                 }
 
                 #endregion
@@ -173,6 +164,7 @@ namespace Biwen.QuickApi
                             }
                         }
                     }
+
                     if (requestMethod == HttpMethods.Post ||
                         requestMethod == HttpMethods.Put ||
                         requestMethod == HttpMethods.Options ||

@@ -478,13 +478,13 @@ namespace Biwen.QuickApi
             /// <returns></returns>
             static IResult InnerResult(object? result) => result switch
             {
-                null => TypedResults.Ok(),
+                null => Results.Ok(),
                 IResult iresult => iresult,
 #pragma warning disable CS0618
                 IResultResponse iresult => iresult.Result,
 #pragma warning restore CS0618
-                string iresult => TypedResults.Content(iresult),
-                _ => TypedResults.Json(result),
+                string iresult => Results.Content(iresult),
+                _ => Results.Json(result),
             };
         }
     }
