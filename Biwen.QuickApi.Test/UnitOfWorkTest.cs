@@ -2,9 +2,6 @@
 using Biwen.QuickApi.DemoWeb.Db.Entity;
 using Biwen.QuickApi.Test.TestBase;
 using Biwen.QuickApi.UnitOfWork;
-using Bogus;
-using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 
 namespace Biwen.QuickApi.Test
 {

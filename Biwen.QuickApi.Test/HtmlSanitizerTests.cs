@@ -1,5 +1,4 @@
 ﻿using Biwen.QuickApi.Infrastructure.Html;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
 namespace Biwen.QuickApi.Test

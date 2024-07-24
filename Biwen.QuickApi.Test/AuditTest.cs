@@ -1,7 +1,5 @@
-using Biwen.QuickApi.Auditing;
+ï»¿using Biwen.QuickApi.Auditing;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Security.Claims;
 
 namespace Biwen.QuickApi.Test;
@@ -14,7 +12,7 @@ public class AuditTest
     {
         var services = new ServiceCollection();
         services.AddLogging();
-        //×¢Èëhttpcontext
+        //æ³¨å…¥httpcontext
         services.AddHttpContextAccessor();
         services.AddAuditHandler<ConsoleAuditHandler>();
         services.AddScoped<IAuditTestClass, AuditTestClass>();
@@ -23,7 +21,7 @@ public class AuditTest
 
         using var scope = services.BuildServiceProvider().CreateScope();
 
-        //Ä£Äâhttpcontext user
+        //æ¨¡æ‹Ÿhttpcontext user
         scope.ServiceProvider.GetRequiredService<IHttpContextAccessor>().HttpContext =
             new DefaultHttpContext()
             {

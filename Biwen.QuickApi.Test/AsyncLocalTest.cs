@@ -1,7 +1,6 @@
 ﻿using Biwen.QuickApi.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.AsyncState;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Biwen.QuickApi.Test
 {

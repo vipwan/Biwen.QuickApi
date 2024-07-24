@@ -1,6 +1,5 @@
 ﻿using Biwen.QuickApi.Serializer;
 using Biwen.QuickApi.Storage;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Biwen.QuickApi.Test
 {

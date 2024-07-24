@@ -1,6 +1,5 @@
 ﻿using Biwen.QuickApi.Mapping;
 using MapsterMapper;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Biwen.QuickApi.Test
 {

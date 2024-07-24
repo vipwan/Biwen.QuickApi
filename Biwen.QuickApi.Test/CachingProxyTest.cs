@@ -1,7 +1,5 @@
 ﻿using Biwen.QuickApi.Caching;
 using Biwen.QuickApi.Caching.ProxyCache;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Biwen.QuickApi.Test
 {
