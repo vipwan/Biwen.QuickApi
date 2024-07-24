@@ -31,9 +31,7 @@
         }
 
         [Theory]
-        [InlineAutoData]//一组自动填充,可以部分填充
-        [InlineAutoData]
-        //[AutoData]//AutoFixture 完全自动填充参数
+        [ClassData(typeof(AutoGuid))]
         public void ParseUuid7_Test(Guid guid)
         {
             testOutputHelper.WriteLine(guid.ToString());
@@ -49,6 +47,14 @@
             Assert.NotEqual(guid, id.ToGuid());
         }
 
-
+        class AutoGuid : TheoryData<Guid>
+        {
+            public AutoGuid()
+            {
+                Add(Guid.NewGuid());
+                Add(Guid.NewGuid());
+                Add(Guid.NewGuid());
+            }
+        }
     }
 }

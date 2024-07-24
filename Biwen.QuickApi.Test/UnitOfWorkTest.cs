@@ -2,6 +2,7 @@
 using Biwen.QuickApi.DemoWeb.Db.Entity;
 using Biwen.QuickApi.Test.TestBase;
 using Biwen.QuickApi.UnitOfWork;
+using Bogus;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -20,8 +21,7 @@ namespace Biwen.QuickApi.Test
         }
 
         [Theory]
-        [UserAutoData]
-        [UserAutoData]
+        [ClassData(typeof(UserAutoData2))]
         public async Task AllUnitOfWorkTest(User user)
         {
             using var scope = _api.Services.CreateScope();
@@ -78,22 +78,24 @@ namespace Biwen.QuickApi.Test
 
     }
 
-    /// <summary>
-    /// 生成符合要求的用户数据
-    /// </summary>
-    class UserAutoDataAttribute : InlineAutoDataAttribute
+
+    class UserAutoData2 : TheoryData<User>
     {
-        public override IEnumerable<object[]> GetData(MethodInfo testMethod)
+        public UserAutoData2()
         {
-            var fixture = new Fixture();
+            var faker = new Faker<User>("zh_CN")
+                .Ignore(x => x.Id)
+                .RuleFor(x => x.Email, f => f.Internet.Email("vipwan"))
+                .RuleFor(x => x.Name, f => f.Name.FullName())
+                .RuleFor(x => x.Age, f => f.Random.Number(1, 100))
+                .RuleFor(x => x.Address, f => f.Address.FullAddress())
+                .RuleFor(x => x.CreateTime, f => f.Date.Past(1));
 
-            var user = fixture.Build<User>()
-                 //.With(x => x.Id, 0)
-                 .Without(x => x.Id) //ID需要排除因为EFCore需要插入时自动生成
-                 .With(x => x.Email, $"{Uuid7.NewUuid7()}@example.com") //邮箱地址,需要照规则生成
-                 .Create();
-
-            yield return new object[] { user };
+            for (var i = 0; i < 5; i++)
+            {
+                Add(faker.Generate());
+            }
         }
     }
+
 }

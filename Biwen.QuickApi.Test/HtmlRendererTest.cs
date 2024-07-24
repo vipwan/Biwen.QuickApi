@@ -21,8 +21,8 @@ namespace Biwen.QuickApi.Test
         //测试HtmlRenderer:
         [Theory]
         [InlineData("Hello from the Render Message component!")]
-        [InlineAutoData]
-        [InlineAutoData]
+        [InlineData("hello 2")]
+        [InlineData("hello 3")]
         public async Task ShouldRenderHtml(string message)
         {
             //var env = WebApplication.CreateSlimBuilder().Environment;

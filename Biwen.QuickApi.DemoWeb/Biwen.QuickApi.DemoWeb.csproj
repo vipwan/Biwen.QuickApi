@@ -12,7 +12,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-preview.5.24306.11" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0-preview.6.24327.4" />
 		<PackageReference Include="Microsoft.Extensions.Caching.Hybrid" Version="9.0.0-preview.6.24328.4" />
-		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.9.2" />
+		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.9.3" />
 	</ItemGroup>
 
 	<ItemGroup>
