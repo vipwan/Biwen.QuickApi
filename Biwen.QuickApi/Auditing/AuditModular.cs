@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection.Extensions;
-namespace Biwen.QuickApi.Auditing;
+﻿namespace Biwen.QuickApi.Auditing;
 
 [CoreModular]
 internal class AuditModular : ModularBase

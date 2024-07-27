@@ -40,7 +40,7 @@
 	<ItemGroup>
 		<PackageReference Include="Biwen.AutoClassGen" Version="$(BiwenAutoClassGenVer)" />
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="$(BiwenAutoClassGenVer)" />
-		<PackageReference Include="HtmlSanitizer" Version="8.0.865" />
+		<PackageReference Include="HtmlSanitizer" Version="8.1.870" />
 		<PackageReference Include="Mapster.DependencyInjection" Version="1.0.2-pre01" />
 		<PackageReference Include="Microsoft.AspNetCore.AsyncState" Version="$(MicrosoftExtensionsVer)" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
