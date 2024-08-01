@@ -1,4 +1,5 @@
-﻿using Biwen.QuickApi.Test.Components;
+﻿using Alba;
+using Biwen.QuickApi.Test.Components;
 
 namespace Biwen.QuickApi.Test
 {
@@ -59,6 +60,26 @@ namespace Biwen.QuickApi.Test
             _testOutput.WriteLine(html);
             Assert.Contains(message, html);
 
+        }
+
+        //使用alba测试 HtmlRenderer:
+        [Theory]
+        [InlineData("Hello from the Render Message component!")]
+        [InlineData("hello 2")]
+        [InlineData("hello 3")]
+        public async Task ShouldRenderHtml_With_Alba(string message)
+        {
+            var host = await AlbaHost.For<DemoWeb.Program>();
+            var service = host.Services.CreateScope().ServiceProvider.GetRequiredService<BlazorRendererService>();
+
+            var pairs = new Dictionary<string, object?>
+            {
+                { "Message", message }
+            };
+            var html = await service.Render<RenderMessage>(pairs);
+
+            _testOutput.WriteLine(html);
+            Assert.Contains(message, html);
         }
     }
 }

@@ -11,6 +11,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Alba" Version="8.0.0" />
 		<PackageReference Include="Bogus" Version="35.6.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.0-preview.6.24328.4" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.0-release-24373-02" />
