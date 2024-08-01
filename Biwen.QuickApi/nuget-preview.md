@@ -15,6 +15,9 @@ https://github.com/dotnet/sdk/blob/main/documentation/package-table.md
 ### 消除编译警告
 
 ```bash
+
+cd C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE
+
 .\vsregedit.exe set local HKCU Debugger\EngineSwitches ValidateDotnetDebugLibSignatures dword 0
 ```
 

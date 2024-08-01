@@ -8,14 +8,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<InternalsVisibleTo Include="Biwen.QuickApi.Test"/>
+		<InternalsVisibleTo Include="Biwen.QuickApi.Test" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0-rc.1.24381.7" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-rc.1.24381.7" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0-rc.1.24381.2" />
-		<PackageReference Include="Microsoft.Extensions.Caching.Hybrid" Version="9.0.0-rc.1.24381.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0-rc.1.24401.1" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-rc.1.24401.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0-rc.1.24401.2" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Hybrid" Version="9.0.0-rc.1.24401.1" />
 		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.9.3" />
 	</ItemGroup>
 
