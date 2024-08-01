@@ -8,6 +8,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<InternalsVisibleTo Include="Biwen.QuickApi.Test"/>
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0-rc.1.24381.7" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-rc.1.24381.7" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0-rc.1.24381.2" />
