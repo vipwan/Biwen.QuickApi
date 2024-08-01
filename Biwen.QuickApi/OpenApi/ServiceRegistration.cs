@@ -23,7 +23,7 @@ namespace Biwen.QuickApi.OpenApi
         {
             Action<OpenApiOptions> configureOptions = options =>
             {
-                options.UseTransformer<BearerSecuritySchemeTransformer>();
+                options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
                 if (onlyQuickApi)
                 {
                     options.ShouldInclude = desc =>

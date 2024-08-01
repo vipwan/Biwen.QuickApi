@@ -186,16 +186,8 @@ namespace Biwen.QuickApi.DemoWeb
             // ~/account/register    
             // ~/account/login 
 
-            if (environment.IsDevelopment())
-            {
-                //当前preview4 BUG因此必须:ExcludeFromDescription()
-                routes.MapGroup("account").MapIdentityApi<IdentityUser>().ExcludeFromDescription();
-            }
-            else
-            {
-                routes.MapGroup("account").MapIdentityApi<IdentityUser>();
-            }
-
+            //当前preview4 BUG因此必须:ExcludeFromDescription()
+            routes.MapGroup("account").MapIdentityApi<IdentityUser>();
 
             routes.MapGet("/hello-demo", (IOptions<DemoOptions> options) => options.Value.Name);
         }

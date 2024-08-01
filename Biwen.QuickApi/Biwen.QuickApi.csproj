@@ -40,18 +40,25 @@
 	<ItemGroup>
 		<PackageReference Include="Biwen.AutoClassGen" Version="$(BiwenAutoClassGenVer)" />
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="$(BiwenAutoClassGenVer)" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="$(FluentValidationAspNetCoreVer)" />
+		<PackageReference Include="NCrontab" Version="3.3.3" />
 		<PackageReference Include="HtmlSanitizer" Version="8.1.870" />
 		<PackageReference Include="Mapster.DependencyInjection" Version="1.0.2-pre01" />
 		<PackageReference Include="Microsoft.AspNetCore.AsyncState" Version="$(MicrosoftExtensionsVer)" />
+
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.7" />
-		<PackageReference Include="NCrontab" Version="3.3.3" />
-		<PackageReference Include="FluentValidation.AspNetCore" Version="$(FluentValidationAspNetCoreVer)" />
 		<PackageReference Include="System.Text.Json" Version="8.0.4" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-preview.5.24306.11" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-rc.1.24381.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.0-rc.1.24381.2" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-rc.1.24381.7" />
+		<PackageReference Include="System.Text.Json" Version="9.0.0-rc.1.24381.5" />
 	</ItemGroup>
 
 </Project>

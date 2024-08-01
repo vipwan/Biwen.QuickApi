@@ -4,6 +4,8 @@ using Serilog;
 
 namespace Biwen.QuickApi.Logging
 {
+
+
     [SuppressType]
     public static class ServiceRegistration
     {
