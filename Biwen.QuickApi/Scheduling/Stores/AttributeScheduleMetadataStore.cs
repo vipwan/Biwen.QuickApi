@@ -5,14 +5,14 @@ namespace Biwen.QuickApi.Scheduling.Stores
     /// <summary>
     /// MetadataStore
     /// </summary>
-    internal sealed class MetadataStore : IScheduleMetadataStore
+    internal sealed class AttributeScheduleMetadataStore : IScheduleMetadataStore
     {
         /// <summary>
         /// 特性中的metadatas缓存起来
         /// </summary>
         private static ScheduleTaskMetadata[] _cachedMetatas = [];
 
-        public MetadataStore(IServiceProvider serviceProvider)
+        public AttributeScheduleMetadataStore(IServiceProvider serviceProvider)
         {
             lock (this)
             {

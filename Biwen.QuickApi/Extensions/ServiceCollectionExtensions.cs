@@ -8,7 +8,7 @@ using Microsoft.Extensions.Options;
 /// <see cref="IServiceCollection"/> extension methods.
 /// </summary>
 [SuppressType]
-public static class ServiceCollectionExtensions
+public static partial class ServiceCollectionExtensions
 {
 
     /// <summary>
