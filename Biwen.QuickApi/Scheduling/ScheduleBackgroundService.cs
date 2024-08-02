@@ -19,16 +19,16 @@ namespace Biwen.QuickApi.Scheduling
         private static readonly TimeSpan _minIdleTime = TimeSpan.FromSeconds(5);
 
         private readonly ILogger<ScheduleBackgroundService> _logger;
-        private readonly IServiceProvider _serviceProvider;
+        private readonly IServiceScopeFactory _serviceScopeFactory;
         private readonly ILocalLock _localLock;
 
         public ScheduleBackgroundService(
             ILogger<ScheduleBackgroundService> logger,
-            IServiceProvider serviceProvider,
+            IServiceScopeFactory serviceScopeFactory,
             ILocalLock localLock)
         {
             _logger = logger;
-            _serviceProvider = serviceProvider;
+            _serviceScopeFactory = serviceScopeFactory;
             _localLock = localLock;
         }
 
@@ -53,11 +53,14 @@ namespace Biwen.QuickApi.Scheduling
 
         private Task RunAsync(CancellationToken stoppingToken)
         {
-            //调度器
-            var scheduler = ActivatorUtilities.GetServiceOrCreateInstance<IScheduler>(_serviceProvider);
+            using var scope = _serviceScopeFactory.CreateAsyncScope();
+            var sp = scope.ServiceProvider;
 
-            var cachingProxyFactory = ActivatorUtilities.GetServiceOrCreateInstance<CachingProxyFactory<IScheduleMetadataStore>>(_serviceProvider);
-            var proxyCache = ActivatorUtilities.GetServiceOrCreateInstance<IProxyCache>(_serviceProvider);
+            //调度器
+            var scheduler = ActivatorUtilities.GetServiceOrCreateInstance<IScheduler>(sp);
+
+            var cachingProxyFactory = ActivatorUtilities.GetServiceOrCreateInstance<CachingProxyFactory<IScheduleMetadataStore>>(sp);
+            var proxyCache = ActivatorUtilities.GetServiceOrCreateInstance<IProxyCache>(sp);
 
             async Task DoTaskAsync(IScheduleTask task, ScheduleTaskAttribute metadata)
             {
@@ -114,7 +117,7 @@ namespace Biwen.QuickApi.Scheduling
             };
 
             //store中的scheduler
-            var stores = _serviceProvider.GetServices<IScheduleMetadataStore>().ToArray();
+            var stores = sp.GetServices<IScheduleMetadataStore>().ToArray();
 
             //并行执行,提高性能
             Parallel.ForEach(stores, async store =>
@@ -132,7 +135,10 @@ namespace Biwen.QuickApi.Scheduling
 
                 foreach (var metadata in metadatas)
                 {
-                    if (ActivatorUtilities.GetServiceOrCreateInstance(_serviceProvider, metadata.ScheduleTaskType)
+                    using var scope2 = _serviceScopeFactory.CreateScope();
+                    var sp2 = scope2.ServiceProvider;
+
+                    if (ActivatorUtilities.GetServiceOrCreateInstance(sp2, metadata.ScheduleTaskType)
                     as IScheduleTask is { } task)
                     {
                         var attr = new ScheduleTaskAttribute(metadata.Cron)
