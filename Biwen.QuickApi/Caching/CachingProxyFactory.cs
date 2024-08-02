@@ -6,8 +6,8 @@ namespace Biwen.QuickApi.Caching;
 /// 提供 <typeparamref name="T"/> 的缓存代理服务工厂,构造的代理会自动缓存方法的返回值
 /// </summary>
 /// <typeparam name="T"></typeparam>
-/// <param name="serviceProvider"></param>
-public class CachingProxyFactory<T>(IServiceProvider serviceProvider)
+/// <param name="serviceScopeFactory"></param>
+public class CachingProxyFactory<T>(IServiceScopeFactory serviceScopeFactory)
     where T : class
 {
     /// <summary>
@@ -29,7 +29,7 @@ public class CachingProxyFactory<T>(IServiceProvider serviceProvider)
     /// <returns></returns>
     public T Create(string? keyed = default)
     {
-        using var scope = serviceProvider.CreateAsyncScope();
+        using var scope = serviceScopeFactory.CreateAsyncScope();
 
         var impl = string.IsNullOrEmpty(keyed) ?
             scope.ServiceProvider.GetRequiredService<T>() :

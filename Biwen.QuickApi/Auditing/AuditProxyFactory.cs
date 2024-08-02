@@ -8,12 +8,14 @@ public class AuditProxyFactory<T>(IServiceScopeFactory serviceScopeFactory) wher
     public T Create(T impl)
     {
         ArgumentNullException.ThrowIfNull(impl);
-        return AuditProxy<T>.Create(impl, serviceScopeFactory.CreateAsyncScope().ServiceProvider);
+        using var scope = serviceScopeFactory.CreateAsyncScope();
+        return AuditProxy<T>.Create(impl, scope.ServiceProvider);
     }
 
     public T Create()
     {
-        var impl = serviceScopeFactory.CreateAsyncScope().ServiceProvider.GetRequiredService<T>();
+        using var scope = serviceScopeFactory.CreateAsyncScope();
+        var impl = scope.ServiceProvider.GetRequiredService<T>();
         return Create(impl);
     }
 }

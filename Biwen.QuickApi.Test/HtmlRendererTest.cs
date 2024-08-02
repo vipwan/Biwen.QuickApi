@@ -49,7 +49,8 @@ namespace Biwen.QuickApi.Test
 
             //var service = serviceProvider.GetRequiredService<BlazorRendererService>();
 
-            var service = _factory.Services.CreateScope().ServiceProvider.GetRequiredService<BlazorRendererService>();
+            using var scope = _factory.Services.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<BlazorRendererService>();
 
             var pairs = new Dictionary<string, object?>
             {
@@ -70,8 +71,9 @@ namespace Biwen.QuickApi.Test
         public async Task ShouldRenderHtml_With_Alba(string message)
         {
             var host = await AlbaHost.For<DemoWeb.Program>();
-            var service = host.Services.CreateScope().ServiceProvider.GetRequiredService<BlazorRendererService>();
 
+            using var scope = host.Services.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<BlazorRendererService>();
             var pairs = new Dictionary<string, object?>
             {
                 { "Message", message }

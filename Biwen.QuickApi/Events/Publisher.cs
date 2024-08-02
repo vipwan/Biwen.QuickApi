@@ -1,6 +1,6 @@
 ﻿namespace Biwen.QuickApi.Events;
 
-internal class Publisher(IServiceProvider serviceProvider)
+internal class Publisher(IServiceScopeFactory serviceScopeFactory)
 {
     /// <summary>
     /// 缓存订阅者的Metadata
@@ -9,7 +9,7 @@ internal class Publisher(IServiceProvider serviceProvider)
 
     public async Task PublishAsync<T>(T @event, CancellationToken ct) where T : IEvent
     {
-        using var scope = serviceProvider.CreateAsyncScope();
+        using var scope = serviceScopeFactory.CreateAsyncScope();
         var subscribers = scope.ServiceProvider.GetServices<IEventSubscriber<T>>();
         //无订阅者直接返回
         if (subscribers is null || !subscribers.Any()) return;
