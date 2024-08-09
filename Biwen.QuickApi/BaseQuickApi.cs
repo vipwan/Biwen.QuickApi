@@ -197,7 +197,7 @@ namespace Biwen.QuickApi
     }
 
     /// <summary>
-    /// 没有请求参数的BaseQuickApi,没有返回值
+    /// 没有请求参数的BaseQuickApi,返回:<see cref="IResult"/>
     /// </summary>
     public abstract class BaseQuickApi : BaseQuickApi<EmptyRequest, IResult>
     {
