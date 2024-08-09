@@ -3,6 +3,7 @@ using Biwen.QuickApi.DemoWeb.Db.Entity;
 using Biwen.QuickApi.DemoWeb.Services;
 using FluentValidation;
 using MapsterMapper;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Biwen.QuickApi.DemoWeb.Apis
@@ -27,10 +28,10 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
     public partial class PageModal : BaseRequest<PageModal>
     {
-        [FromQuery, Range(0, int.MaxValue)]
+        [FromQuery, Range(0, int.MaxValue), DefaultValue(0)]
         public int? Page { get; set; } = 0;
 
-        [FromQuery, Range(1, 100)]
+        [FromQuery, Range(1, 100), DefaultValue(20)]
         public int? PageSize { get; set; } = 20;
 
         [FromQuery, StringLength(50)]
@@ -49,7 +50,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     //添加用户
     [QuickApi("/db/user/add", Group = "test", Verbs = Verb.POST)]
     [OpenApiMetadata("添加用户", "添加用户", Tags = ["用户管理"])]
-    [ProducesResponseType<User>(200)]
+    [ProducesResponseType<UserDto>(200)]
     public class AddUserEndpoint : BaseQuickApi<CreateUserModal>
     {
         public AddUserEndpoint(IUserService userService, IMapper mapper)
@@ -73,7 +74,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
             await user.PublishAddedAsync();
 
             //返回插入的对象
-            return Results.Ok(user);
+            return Results.Ok(user.MapperToUserDto());
         }
     }
 
