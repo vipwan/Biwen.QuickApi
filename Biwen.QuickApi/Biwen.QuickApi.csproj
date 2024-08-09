@@ -57,7 +57,7 @@
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-rc.1.24381.2" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.0-rc.1.24381.2" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-rc.1.24401.1" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-rc.1.24408.9" />
 		<PackageReference Include="System.Text.Json" Version="9.0.0-rc.1.24381.5" />
 	</ItemGroup>
 
