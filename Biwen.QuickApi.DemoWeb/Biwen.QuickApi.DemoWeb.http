@@ -1,9 +1,17 @@
-﻿@Biwen.QuickApi.DemoWeb_HostAddress = http://localhost:5101
+﻿@HostAddress = http://localhost:5101
 
-GET {{Biwen.QuickApi.DemoWeb_HostAddress}}/fromapi
+GET {{HostAddress}}/hello-demo
+
+###
+
+# @name custom
+GET {{HostAddress}}/new-feature
 
 ###
 
-GET {{Biwen.QuickApi.DemoWeb_HostAddress}}/quick/custom?u=1234&p=12345&c=5555555
-
-###
+POST {{HostAddress}}/endpoints/hello/postdata
+Content-Type: application/json
+{
+  "hello":"vipwan",
+  "world": "today is ."
+}
