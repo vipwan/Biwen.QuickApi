@@ -1,4 +1,30 @@
-﻿using System.Diagnostics;
+﻿//NET9自带V7版本的时序UUID
+#if NET9_0_OR_GREATER
+
+namespace Biwen.QuickApi;
+
+[SuppressType]
+public static class GuidHelper
+{
+    /// <summary>
+    /// 生成UUID7
+    /// </summary>
+    /// <param name="dateTimeOffset"></param>
+    /// <returns></returns>
+    public static Guid Uuid7(DateTimeOffset? dateTimeOffset = null) =>
+         dateTimeOffset switch
+         {
+             null => Guid.CreateVersion7(),
+             _ => Guid.CreateVersion7(dateTimeOffset.Value)
+         };
+}
+
+#endif
+
+
+#if !NET9_0_OR_GREATER
+
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
 using System.Runtime.CompilerServices;
@@ -1782,3 +1808,5 @@ public readonly struct Uuid7
     #endregion Helpers
 
 }
+
+#endif
