@@ -137,7 +137,7 @@ namespace Biwen.QuickApi
             }
         }
 
-        static List<Type> configedTypes = new();
+        static HashSet<Type> configedTypes = new();
         static void Configure(IStartup modular, IApplicationBuilder app, IEndpointRouteBuilder routes, ILogger? logger)
         {
             lock (_lock)
