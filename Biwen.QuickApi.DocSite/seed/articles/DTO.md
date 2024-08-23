@@ -2,7 +2,7 @@
 =====================
 
 系统提供源生成器支持[Biwen.AutoClassGen](https://github.com/vipwan/Biwen.AutoClassGen/blob/master/Gen-Dto.md),以及内置基于`Mapster`的对象映射
-当然如果你的习惯是使用`AutoMapper`等三方库也是可以的
+当然如果你的习惯是使用`AutoMapper`等三方库请自行集成使用!
 
 
 源生成器方式
