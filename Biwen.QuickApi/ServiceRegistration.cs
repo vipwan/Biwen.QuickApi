@@ -1,6 +1,4 @@
 ﻿using Biwen.QuickApi.Http;
-using Biwen.QuickApi.Infrastructure.DependencyInjection;
-using Biwen.QuickApi.OpenApi;
 using Biwen.QuickApi.Serializer;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Antiforgery;
@@ -401,7 +399,6 @@ namespace Biwen.QuickApi
             // Knowing that routes are already configured.
             app.UseEndpoints(routes => { });
             app.UseStaticFiles();
-
 
             return app;
         }

@@ -175,14 +175,11 @@ namespace Biwen.QuickApi
         /// <returns></returns>
         public async Task CancelAsync()
         {
-            var asyncContext =
-                ActivatorUtilities.GetServiceOrCreateInstance<AsyncContextService<CancellationTokenSource>>(ServiceRegistration.ServiceProvider);
-            if (asyncContext is not null)
+            var asyncContext = ActivatorUtilities.GetServiceOrCreateInstance<AsyncContextService<CancellationTokenSource>>(
+                ServiceRegistration.ServiceProvider);
+            if (asyncContext?.TryGet(out var cts) is true && cts is not null)
             {
-                if (asyncContext.TryGet(out var cts) && cts is not null)
-                {
-                    await cts.CancelAsync();
-                }
+                await cts.CancelAsync();
             }
         }
     }
@@ -228,7 +225,6 @@ namespace Biwen.QuickApi
         }
     }
 
-
     /// <summary>
     /// BaseQuickApi 作为服务使用,不注册Api路由
     /// </summary>
@@ -237,10 +233,5 @@ namespace Biwen.QuickApi
     [QuickApi(""), JustAsService]
     public abstract class BaseQuickApiJustAsService<Req, Rsp> : BaseQuickApi<Req, Rsp> where Req : BaseRequest<Req>, new()
     {
-
     }
-
-
-
-
 }

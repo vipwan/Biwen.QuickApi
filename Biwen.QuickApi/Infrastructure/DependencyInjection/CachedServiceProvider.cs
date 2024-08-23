@@ -2,6 +2,7 @@
 
 /// <summary>
 /// ICachedServiceProvider 实现
+/// 作用域范围内DI获取的服务会从作用域缓存中获取
 /// </summary>
 internal class CachedServiceProvider : ICachedServiceProvider
 {
