@@ -3,6 +3,12 @@ using Microsoft.AspNetCore.Http;
 
 namespace Biwen.QuickApi.MultiTenant.Finders;
 
+/// <summary>
+/// 基于Session的租户查找器
+/// </summary>
+/// <typeparam name="TInfo"></typeparam>
+/// <param name="httpContextAccessor"></param>
+/// <param name="tenantInfoProvider"></param>
 public class SessionTenantFinder<TInfo>(IHttpContextAccessor httpContextAccessor, ITenantInfoProvider<TInfo> tenantInfoProvider) :
     ITenantFinder<TInfo>
     where TInfo : ITenantInfo

@@ -1,10 +1,14 @@
-﻿
-using Biwen.QuickApi.MultiTenant.Abstractions;
+﻿using Biwen.QuickApi.MultiTenant.Abstractions;
 using Microsoft.AspNetCore.Http;
-using System.Net.Http;
 
 namespace Biwen.QuickApi.MultiTenant.Finders;
 
+/// <summary>
+/// 基于路由的租户查找器
+/// </summary>
+/// <typeparam name="TInfo"></typeparam>
+/// <param name="httpContextAccessor"></param>
+/// <param name="tenantInfoProvider"></param>
 public class RouteTenantFinder<TInfo>(IHttpContextAccessor httpContextAccessor, ITenantInfoProvider<TInfo> tenantInfoProvider) :
     ITenantFinder<TInfo>
     where TInfo : ITenantInfo

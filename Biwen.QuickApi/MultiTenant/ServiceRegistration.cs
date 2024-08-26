@@ -9,13 +9,13 @@ public static class ServiceRegistration
     /// <summary>
     /// 添加租户信息提供者
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="TInfoProvider"></typeparam>
     /// <param name="services"></param>
-    public static void AddTenantInfoProvider<T, TInfo>(this IServiceCollection services)
-        where T : class, ITenantInfoProvider<TInfo>
+    public static void AddTenantInfoProvider<TInfoProvider, TInfo>(this IServiceCollection services)
+        where TInfoProvider : class, ITenantInfoProvider<TInfo>
         where TInfo : class, ITenantInfo
     {
-        services.TryAddSingleton<ITenantInfoProvider<TInfo>, T>();
+        services.TryAddSingleton<ITenantInfoProvider<TInfo>, TInfoProvider>();
     }
 
     #region 租户查找器
@@ -23,13 +23,13 @@ public static class ServiceRegistration
     /// <summary>
     /// 添加自定义的租户查找器
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="TFinder"></typeparam>
     /// <param name="services"></param>
-    public static void AddTenantFinder<T, TInfo>(this IServiceCollection services)
-        where T : class, ITenantFinder<TInfo>
+    public static void AddTenantFinder<TFinder, TInfo>(this IServiceCollection services)
+        where TFinder : class, ITenantFinder<TInfo>
         where TInfo : class, ITenantInfo
     {
-        services.TryAddScoped<ITenantFinder<TInfo>, T>();
+        services.TryAddScoped<ITenantFinder<TInfo>, TFinder>();
     }
 
     /// <summary>
@@ -93,22 +93,22 @@ public static class ServiceRegistration
 
     #region 扩展MultiTenantBuilder
 
-    public static MultiTenantBuilder<TTenantInfo> AddMultiTenant<TTenantInfo>(this IServiceCollection services)
-        where TTenantInfo : class, ITenantInfo
+    public static MultiTenantBuilder<TInfo> AddMultiTenant<TInfo>(this IServiceCollection services)
+        where TInfo : class, ITenantInfo
     {
-        return services.AddMultiTenant<TTenantInfo>(o =>
+        return services.AddMultiTenant<TInfo>(o =>
         {
             o.Enabled = true;
-            o.TenantInfoType = typeof(TTenantInfo);
+            o.TenantInfoType = typeof(TInfo);
         });
     }
 
-    public static MultiTenantBuilder<TTenantInfo> AddMultiTenant<TTenantInfo>(this IServiceCollection services,
+    public static MultiTenantBuilder<TInfo> AddMultiTenant<TInfo>(this IServiceCollection services,
     Action<MultiTenantOptions> config)
-    where TTenantInfo : class, ITenantInfo
+    where TInfo : class, ITenantInfo
     {
         services.Configure(config);
-        return new MultiTenantBuilder<TTenantInfo>(services);
+        return new MultiTenantBuilder<TInfo>(services);
     }
 
     #endregion
