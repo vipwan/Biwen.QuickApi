@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.FluentUI.AspNetCore.Components;
 using System.Reflection;
+using Biwen.QuickApi.MultiTenant;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -87,6 +88,9 @@ builder.Services.AddQuickApiGroupRouteBuilder<DefaultGroupRouteBuilder>();
 builder.Services.AddScoped<IQuickApiExceptionHandler, CustomExceptionHandler>();
 
 var app = builder.Build();
+
+//如果需要多租户支持,UseMultiTenant必须在UseBiwenQuickApis,等中间件之前完成
+app.UseMultiTenant<TenantInfo>();
 
 app.UseIfElse(app.Environment.IsDevelopment(), builder =>
 {

@@ -16,12 +16,14 @@ namespace Biwen.QuickApi.DemoWeb.MultiTenant
                 {
                     Id = "tenant1",
                     Name = "租户1",
+                    Identifier = "tenant1",
                     ConnectionString = "Data Source=.;Initial Catalog=Db1;Integrated Security=True"
                 },
                 new TenantInfo
                 {
                     Id = "tenant2",
                     Name = "租户2",
+                    Identifier = "tenant2",
                     ConnectionString = "Data Source=.;Initial Catalog=Db2;Integrated Security=True"
                 }
             });

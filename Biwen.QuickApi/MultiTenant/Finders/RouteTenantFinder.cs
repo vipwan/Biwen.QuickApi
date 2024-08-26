@@ -29,6 +29,6 @@ public class RouteTenantFinder<TInfo>(IHttpContextAccessor httpContextAccessor, 
             return default;
         }
         var tenants = await tenantInfoProvider.GetAll();
-        return tenants.FirstOrDefault(t => t.Id.Equals(routeValue, StringComparison.OrdinalIgnoreCase));
+        return tenants.FirstOrDefault(t => t.Identifier.Equals(routeValue, StringComparison.OrdinalIgnoreCase));
     }
 }

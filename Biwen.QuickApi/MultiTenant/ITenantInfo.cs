@@ -9,7 +9,17 @@ public interface ITenantInfo
     /// 租户标识Id忽略大小写
     /// </summary>
     string Id { get; set; }
+
+    /// <summary>
+    /// 用于鉴别的标识,对于域名等方式的租户鉴别,使用正则表达式
+    /// </summary>
+    string Identifier { get; set; }
+
+    /// <summary>
+    /// 别名
+    /// </summary>
     string Name { get; }
+
 }
 
 /// <summary>
@@ -37,11 +47,13 @@ public record class TenantInfo : ITenantInfo
             }
         }
     }
+
+    public required string Identifier { get; set; }
+
     public required string Name { get; set; }
 
     /// <summary>
     /// 链接字符串
     /// </summary>
     public string? ConnectionString { get; set; }
-
 }

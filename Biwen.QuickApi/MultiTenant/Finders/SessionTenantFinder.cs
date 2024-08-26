@@ -3,14 +3,14 @@ using Microsoft.AspNetCore.Http;
 
 namespace Biwen.QuickApi.MultiTenant.Finders;
 
-public class HeaderTenantFinder<TInfo>(IHttpContextAccessor httpContextAccessor, ITenantInfoProvider<TInfo> tenantInfoProvider) :
+public class SessionTenantFinder<TInfo>(IHttpContextAccessor httpContextAccessor, ITenantInfoProvider<TInfo> tenantInfoProvider) :
     ITenantFinder<TInfo>
     where TInfo : ITenantInfo
 {
     /// <summary>
-    /// TenantIdHeader
+    /// TenantId
     /// </summary>
-    internal static volatile string TenantIdHeader = "X-Tenant-Id";
+    internal static volatile string TenantId = "TenantId";
 
     public async Task<TInfo?> FindAsync()
     {
@@ -20,13 +20,25 @@ public class HeaderTenantFinder<TInfo>(IHttpContextAccessor httpContextAccessor,
         {
             return default;
         }
-        var header = httpContextAccessor.HttpContext.Request.Headers[TenantIdHeader].FirstOrDefault();
-        if (string.IsNullOrEmpty(header))
+
+        if (httpContextAccessor.HttpContext == null)
+        {
+            return default;
+        }
+
+        var session = httpContextAccessor.HttpContext.Session;
+        if (session == null)
+        {
+            return default;
+        }
+        var tenantId = session.GetString(TenantId);
+        if (string.IsNullOrEmpty(tenantId))
         {
             return default;
         }
 
         var tenants = await tenantInfoProvider.GetAll();
-        return tenants.FirstOrDefault(t => t.Identifier.Equals(header, StringComparison.OrdinalIgnoreCase));
+        return tenants.FirstOrDefault(t => t.Identifier.Equals(tenantId, StringComparison.OrdinalIgnoreCase));
+
     }
 }

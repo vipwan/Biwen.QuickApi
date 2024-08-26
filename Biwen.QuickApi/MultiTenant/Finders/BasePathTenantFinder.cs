@@ -34,6 +34,6 @@ public class BasePathTenantFinder<TInfo>(IHttpContextAccessor httpContextAccesso
         string identifier = pathSegments[0];
 
         var tenants = await tenantInfoProvider.GetAll();
-        return tenants.FirstOrDefault(t => t.Id.Equals(identifier, StringComparison.OrdinalIgnoreCase));
+        return tenants.FirstOrDefault(t => t.Identifier.Equals(identifier, StringComparison.OrdinalIgnoreCase));
     }
 }
