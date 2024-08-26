@@ -7,6 +7,11 @@ internal class MultiTenantMiddleware<TInfo> where TInfo : class, ITenantInfo
 {
     private readonly RequestDelegate next;
 
+    /// <summary>
+    /// 缓存默认的租户信息
+    /// </summary>
+    private static TInfo CachedDefaultTenantInfo = null!;
+
     public MultiTenantMiddleware(RequestDelegate next)
     {
         this.next = next;
@@ -40,16 +45,22 @@ internal class MultiTenantMiddleware<TInfo> where TInfo : class, ITenantInfo
             //当没有找到租户信息时
             if (!string.IsNullOrWhiteSpace(options.Value.DefaultId))
             {
-                var infoProvider = context.RequestServices.GetRequiredService<ITenantInfoProvider<TInfo>>();
-                var all = await infoProvider.GetAll();
-                //如果配置的默认Id不存在,则抛出异常!
-                var defaultInfo = all.FirstOrDefault(t => t.Id == options.Value.DefaultId);
-
-                if (defaultInfo is null)
+                if (CachedDefaultTenantInfo is null)
                 {
-                    throw new QuickApiExcetion($"默认的租户信息不存在,Id:{options.Value.DefaultId} !");
+                    var infoProvider = context.RequestServices.GetRequiredService<ITenantInfoProvider<TInfo>>();
+                    var all = await infoProvider.GetAll();
+                    //如果配置的默认Id不存在,则抛出异常!
+                    var defaultInfo = all.FirstOrDefault(t => t.Id == options.Value.DefaultId);
+
+                    if (defaultInfo is null)
+                    {
+                        throw new QuickApiExcetion($"默认的租户信息不存在,Id:{options.Value.DefaultId} !");
+                    }
+
+                    CachedDefaultTenantInfo = defaultInfo;
                 }
-                tenantContextService.Set(defaultInfo);
+
+                tenantContextService.Set(CachedDefaultTenantInfo);
             }
         }
 
