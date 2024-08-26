@@ -44,6 +44,8 @@ internal class MyTenantInfoProvider : ITenantInfoProvider<TenantInfo>
 services.AddMultiTenant<TenantInfo>().AddTenantInfoProvider<MyTenantInfoProvider>().AddBasePathTenantFinder();
 
 ```
+当查找不到租户信息时,可以使用配置项默认租户Id,请传递`MultiTenantOptions`选项!
+
 
 使用多租户模块
 ---------------------

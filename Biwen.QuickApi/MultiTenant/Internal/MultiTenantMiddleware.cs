@@ -35,6 +35,23 @@ internal class MultiTenantMiddleware<TInfo> where TInfo : class, ITenantInfo
         {
             tenantContextService.Set(tenantInfo);
         }
+        else
+        {
+            //当没有找到租户信息时
+            if (!string.IsNullOrWhiteSpace(options.Value.DefaultId))
+            {
+                var infoProvider = context.RequestServices.GetRequiredService<ITenantInfoProvider<TInfo>>();
+                var all = await infoProvider.GetAll();
+                //如果配置的默认Id不存在,则抛出异常!
+                var defaultInfo = all.FirstOrDefault(t => t.Id == options.Value.DefaultId);
+
+                if (defaultInfo is null)
+                {
+                    throw new QuickApiExcetion($"默认的租户信息不存在,Id:{options.Value.DefaultId} !");
+                }
+                tenantContextService.Set(defaultInfo);
+            }
+        }
 
         await next(context);
     }

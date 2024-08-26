@@ -14,9 +14,11 @@ public class MultiTenantModular : ModularBase
         ////添加基于路径的租户查找器
         //services.AddBasePathTenantFinder<TenantInfo>();
 
-        services.AddMultiTenant<TenantInfo>()
-            .AddTenantInfoProvider<MyTenantInfoProvider>()
-            .AddBasePathTenantFinder();
+        services.AddMultiTenant<TenantInfo>(o =>
+        {
+            o.DefaultId = "tenant1";//当Finder无法找到租户信息时,使用默认的租户信息
+        }).AddTenantInfoProvider<MyTenantInfoProvider>()
+          .AddBasePathTenantFinder();
 
         //添加基于Header的租户查找器
         //services.AddHeaderTenantFinder<TenantInfo>("X-Tenant-Id");
@@ -68,6 +70,26 @@ public class MultiTenantModular : ModularBase
         .WithTags(["MutiTenant"])
         .Produces(StatusCodes.Status404NotFound)
         .Produces<List<TenantInfo>>();
+
+
+        //添加租户3的路由
+        //当前租户不存在,但是配置了默认租户,因此会返回默认的租户信息
+        var group3 = routes.MapGroup("tenant3");
+        group3.MapGet("api", (IHttpContextAccessor ctx) =>
+        {
+            var tenantInfo = ctx.HttpContext!.GetTenantInfo<TenantInfo>();
+
+            if (tenantInfo == null)
+            {
+                return Results.NotFound();
+            }
+
+            return Results.Ok(tenantInfo);
+        })
+        .WithTags(["MutiTenant"])
+        .Produces(StatusCodes.Status404NotFound)
+        .Produces<List<TenantInfo>>();
+
 
     }
 }
