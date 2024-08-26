@@ -50,6 +50,8 @@ items:
     name: FromBodyAttribute
   - uid: Biwen.QuickApi.FromKeyedServicesAttribute
     name: FromKeyedServicesAttribute
+  - uid: Biwen.QuickApi.GuidHelper
+    name: GuidHelper
   - uid: Biwen.QuickApi.IdGenerator
     name: IdGenerator
   - uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions
@@ -127,6 +129,8 @@ items:
   items:
   - uid: Biwen.QuickApi.Attributes.AliasAsAttribute
     name: AliasAsAttribute
+  - uid: Biwen.QuickApi.Attributes.AuditApiAttribute
+    name: AuditApiAttribute
   - uid: Biwen.QuickApi.Attributes.JustAsServiceAttribute
     name: JustAsServiceAttribute
   - uid: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
@@ -254,6 +258,11 @@ items:
   items:
   - uid: Biwen.QuickApi.Logging.Serilog.AutoInjectExtension
     name: AutoInjectExtension
+- uid: Biwen.QuickApi.Logging.Serilog.Enrichers
+  name: Biwen.QuickApi.Logging.Serilog.Enrichers
+  items:
+  - uid: Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich
+    name: ClientInfoEnrich
 - uid: Biwen.QuickApi.Mapping
   name: Biwen.QuickApi.Mapping
   items:
@@ -301,6 +310,43 @@ items:
     name: AutoInjectExtension
   - uid: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
     name: WrapMiniProfilerOptions
+- uid: Biwen.QuickApi.MultiTenant
+  name: Biwen.QuickApi.MultiTenant
+  items:
+  - uid: Biwen.QuickApi.MultiTenant.HttpContextExtensions
+    name: HttpContextExtensions
+  - uid: Biwen.QuickApi.MultiTenant.IApplicationBuilderExtensions
+    name: IApplicationBuilderExtensions
+  - uid: Biwen.QuickApi.MultiTenant.ITenantInfo
+    name: ITenantInfo
+  - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+    name: MultiTenantBuilder<TTenantInfo>
+  - uid: Biwen.QuickApi.MultiTenant.MultiTenantOptions
+    name: MultiTenantOptions
+  - uid: Biwen.QuickApi.MultiTenant.ServiceRegistration
+    name: ServiceRegistration
+  - uid: Biwen.QuickApi.MultiTenant.TenantInfo
+    name: TenantInfo
+- uid: Biwen.QuickApi.MultiTenant.Abstractions
+  name: Biwen.QuickApi.MultiTenant.Abstractions
+  items:
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder`1
+    name: ITenantFinder<TInfo>
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider<T>
+- uid: Biwen.QuickApi.MultiTenant.Finders
+  name: Biwen.QuickApi.MultiTenant.Finders
+  items:
+  - uid: Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder`1
+    name: BasePathTenantFinder<TInfo>
+  - uid: Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder`1
+    name: HeaderTenantFinder<TInfo>
+  - uid: Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder`1
+    name: HostTenantFinder<TInfo>
+  - uid: Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder`1
+    name: RouteTenantFinder<TInfo>
+  - uid: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1
+    name: SessionTenantFinder<TInfo>
 - uid: Biwen.QuickApi.OpenApi
   name: Biwen.QuickApi.OpenApi
   items:

@@ -5,8 +5,8 @@ items:
   id: CachingProxyFactory`1
   parent: Biwen.QuickApi.Caching
   children:
-  - Biwen.QuickApi.Caching.CachingProxyFactory`1.#ctor(System.IServiceProvider)
-  - Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(System.String,System.Nullable{System.Boolean})
+  - Biwen.QuickApi.Caching.CachingProxyFactory`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  - Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(System.String)
   - Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(`0,Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
   langs:
   - csharp
@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -45,35 +45,35 @@ items:
   nameWithType.vb: CachingProxyFactory(Of T)
   fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T)
   name.vb: CachingProxyFactory(Of T)
-- uid: Biwen.QuickApi.Caching.CachingProxyFactory`1.#ctor(System.IServiceProvider)
-  commentId: M:Biwen.QuickApi.Caching.CachingProxyFactory`1.#ctor(System.IServiceProvider)
-  id: '#ctor(System.IServiceProvider)'
+- uid: Biwen.QuickApi.Caching.CachingProxyFactory`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  commentId: M:Biwen.QuickApi.Caching.CachingProxyFactory`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  id: '#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)'
   parent: Biwen.QuickApi.Caching.CachingProxyFactory`1
   langs:
   - csharp
   - vb
-  name: CachingProxyFactory(IServiceProvider)
-  nameWithType: CachingProxyFactory<T>.CachingProxyFactory(IServiceProvider)
-  fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.CachingProxyFactory(System.IServiceProvider)
+  name: CachingProxyFactory(IServiceScopeFactory)
+  nameWithType: CachingProxyFactory<T>.CachingProxyFactory(IServiceScopeFactory)
+  fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.CachingProxyFactory(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
   summary: 提供 <code class="typeparamref">T</code> 的缓存代理服务工厂,构造的代理会自动缓存方法的返回值
   example: []
   syntax:
-    content: public CachingProxyFactory(IServiceProvider serviceProvider)
+    content: public CachingProxyFactory(IServiceScopeFactory serviceScopeFactory)
     parameters:
-    - id: serviceProvider
-      type: System.IServiceProvider
+    - id: serviceScopeFactory
+      type: Microsoft.Extensions.DependencyInjection.IServiceScopeFactory
       description: ''
-    content.vb: Public Sub New(serviceProvider As IServiceProvider)
+    content.vb: Public Sub New(serviceScopeFactory As IServiceScopeFactory)
   overload: Biwen.QuickApi.Caching.CachingProxyFactory`1.#ctor*
-  nameWithType.vb: CachingProxyFactory(Of T).New(IServiceProvider)
-  fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T).New(System.IServiceProvider)
-  name.vb: New(IServiceProvider)
+  nameWithType.vb: CachingProxyFactory(Of T).New(IServiceScopeFactory)
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T).New(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  name.vb: New(IServiceScopeFactory)
 - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(`0,Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
   commentId: M:Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(`0,Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
   id: Create(`0,Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
@@ -86,7 +86,7 @@ items:
   fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.Create(T, Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -108,41 +108,38 @@ items:
   overload: Biwen.QuickApi.Caching.CachingProxyFactory`1.Create*
   nameWithType.vb: CachingProxyFactory(Of T).Create(T, IProxyCache)
   fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T).Create(T, Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
-- uid: Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(System.String,System.Nullable{System.Boolean})
-  commentId: M:Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(System.String,System.Nullable{System.Boolean})
-  id: Create(System.String,System.Nullable{System.Boolean})
+- uid: Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(System.String)
+  commentId: M:Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(System.String)
+  id: Create(System.String)
   parent: Biwen.QuickApi.Caching.CachingProxyFactory`1
   langs:
   - csharp
   - vb
-  name: Create(string?, bool?)
-  nameWithType: CachingProxyFactory<T>.Create(string?, bool?)
-  fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.Create(string?, bool?)
+  name: Create(string?)
+  nameWithType: CachingProxyFactory<T>.Create(string?)
+  fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.Create(string?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
   summary: 从DI容器中创建代理
   example: []
   syntax:
-    content: public T Create(string? keyed = null, bool? scoped = false)
+    content: public T Create(string? keyed = null)
     parameters:
     - id: keyed
       type: System.String
       description: 针对Keyed的服务实现别名,空表示非keyed
-    - id: scoped
-      type: System.Nullable{System.Boolean}
-      description: 是否作用域范围
     return:
       type: '{T}'
       description: ''
-    content.vb: Public Function Create(keyed As String = Nothing, scoped As Boolean? = False) As T
+    content.vb: Public Function Create(keyed As String = Nothing) As T
   overload: Biwen.QuickApi.Caching.CachingProxyFactory`1.Create*
-  nameWithType.vb: CachingProxyFactory(Of T).Create(String, Boolean?)
-  fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T).Create(String, Boolean?)
-  name.vb: Create(String, Boolean?)
+  nameWithType.vb: CachingProxyFactory(Of T).Create(String)
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T).Create(String)
+  name.vb: Create(String)
 references:
 - uid: Biwen.QuickApi.Caching
   commentId: N:Biwen.QuickApi.Caching
@@ -767,21 +764,58 @@ references:
 - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1.#ctor*
   commentId: Overload:Biwen.QuickApi.Caching.CachingProxyFactory`1.#ctor
   isExternal: true
-  href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html#Biwen_QuickApi_Caching_CachingProxyFactory_1__ctor_System_IServiceProvider_
+  href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html#Biwen_QuickApi_Caching_CachingProxyFactory_1__ctor_Microsoft_Extensions_DependencyInjection_IServiceScopeFactory_
   name: CachingProxyFactory
   nameWithType: CachingProxyFactory<T>.CachingProxyFactory
   fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.CachingProxyFactory
   nameWithType.vb: CachingProxyFactory(Of T).New
   fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T).New
   name.vb: New
-- uid: System.IServiceProvider
-  commentId: T:System.IServiceProvider
-  parent: System
+- uid: Microsoft.Extensions.DependencyInjection.IServiceScopeFactory
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory
+  parent: Microsoft.Extensions.DependencyInjection
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
-  name: IServiceProvider
-  nameWithType: IServiceProvider
-  fullName: System.IServiceProvider
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicescopefactory
+  name: IServiceScopeFactory
+  nameWithType: IServiceScopeFactory
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceScopeFactory
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
 - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1.Create*
   commentId: Overload:Biwen.QuickApi.Caching.CachingProxyFactory`1.Create
   isExternal: true
@@ -867,54 +901,3 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: System.Nullable{System.Boolean}
-  commentId: T:System.Nullable{System.Boolean}
-  parent: System
-  definition: System.Nullable`1
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool?
-  nameWithType: bool?
-  fullName: bool?
-  nameWithType.vb: Boolean?
-  fullName.vb: Boolean?
-  name.vb: Boolean?
-  spec.csharp:
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: '?'
-  spec.vb:
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: '?'
-- uid: System.Nullable`1
-  commentId: T:System.Nullable`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  name: Nullable<T>
-  nameWithType: Nullable<T>
-  fullName: System.Nullable<T>
-  nameWithType.vb: Nullable(Of T)
-  fullName.vb: System.Nullable(Of T)
-  name.vb: Nullable(Of T)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )

@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Logging.Serilog.Enrichers
+  commentId: N:Biwen.QuickApi.Logging.Serilog.Enrichers
+  id: Biwen.QuickApi.Logging.Serilog.Enrichers
+  children:
+  - Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Logging.Serilog.Enrichers
+  nameWithType: Biwen.QuickApi.Logging.Serilog.Enrichers
+  fullName: Biwen.QuickApi.Logging.Serilog.Enrichers
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Logging.Serilog
+references:
+- uid: Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich
+  commentId: T:Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich
+  isExternal: true
+  href: Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich.html
+  name: ClientInfoEnrich
+  nameWithType: ClientInfoEnrich
+  fullName: Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich

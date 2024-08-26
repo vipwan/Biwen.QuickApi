@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.FeatureManagement.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi.FeatureManagement/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi.FeatureManagement/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi.FeatureManagement
   namespace: Biwen.QuickApi.FeatureManagement
@@ -54,7 +54,7 @@ items:
   fullName: Biwen.QuickApi.FeatureManagement.ServiceRegistration.ConfigureQuickApiFeatureManagementOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi.FeatureManagement/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi.FeatureManagement/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi.FeatureManagement
   namespace: Biwen.QuickApi.FeatureManagement

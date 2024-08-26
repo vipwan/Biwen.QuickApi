@@ -45,6 +45,11 @@ services.AddMultiTenant<TenantInfo>().AddTenantInfoProvider<MyTenantInfoProvider
 app.UseMultiTenant<TenantInfo>();
 
 ```
+然后使用HttpContext扩展方法获取租户信息
+
+```csharp
+var tenantInfo = HttpContext!.GetTenantInfo<TenantInfo>();
+```
 
 如果你不使用中间件的方式读取多租户信息,也可以注入`ITenantFinder<T>`按需获取租户信息
 ```csharp

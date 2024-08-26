@@ -1,0 +1,822 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration
+  commentId: T:Biwen.QuickApi.MultiTenant.ServiceRegistration
+  id: ServiceRegistration
+  parent: Biwen.QuickApi.MultiTenant
+  children:
+  - Biwen.QuickApi.MultiTenant.ServiceRegistration.AddBasePathTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  - Biwen.QuickApi.MultiTenant.ServiceRegistration.AddHeaderTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  - Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  - Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Biwen.QuickApi.MultiTenant.MultiTenantOptions})
+  - Biwen.QuickApi.MultiTenant.ServiceRegistration.AddRouteTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  - Biwen.QuickApi.MultiTenant.ServiceRegistration.AddSessionTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  - Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantFinder``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  - Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantInfoProvider``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  langs:
+  - csharp
+  - vb
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant
+  syntax:
+    content: >-
+      [SuppressType]
+
+      public static class ServiceRegistration
+    content.vb: >-
+      <SuppressType>
+
+      Public Module ServiceRegistration
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  attributes:
+  - type: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
+    ctor: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.#ctor
+    arguments: []
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantInfoProvider``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  commentId: M:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantInfoProvider``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  id: AddTenantInfoProvider``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.MultiTenant.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: AddTenantInfoProvider<T, TInfo>(IServiceCollection)
+  nameWithType: ServiceRegistration.AddTenantInfoProvider<T, TInfo>(IServiceCollection)
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantInfoProvider<T, TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant
+  summary: 添加租户信息提供者
+  example: []
+  syntax:
+    content: 'public static void AddTenantInfoProvider<T, TInfo>(this IServiceCollection services) where T : class, ITenantInfoProvider<TInfo> where TInfo : class, ITenantInfo'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    - id: TInfo
+    content.vb: Public Shared Sub AddTenantInfoProvider(Of T As {Class, ITenantInfoProvider(Of TInfo)}, TInfo As {Class, ITenantInfo})(services As IServiceCollection)
+  overload: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantInfoProvider*
+  nameWithType.vb: ServiceRegistration.AddTenantInfoProvider(Of T, TInfo)(IServiceCollection)
+  fullName.vb: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantInfoProvider(Of T, TInfo)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddTenantInfoProvider(Of T, TInfo)(IServiceCollection)
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantFinder``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  commentId: M:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantFinder``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  id: AddTenantFinder``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.MultiTenant.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: AddTenantFinder<T, TInfo>(IServiceCollection)
+  nameWithType: ServiceRegistration.AddTenantFinder<T, TInfo>(IServiceCollection)
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantFinder<T, TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant
+  summary: 添加自定义的租户查找器
+  example: []
+  syntax:
+    content: 'public static void AddTenantFinder<T, TInfo>(this IServiceCollection services) where T : class, ITenantFinder<TInfo> where TInfo : class, ITenantInfo'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    - id: TInfo
+    content.vb: Public Shared Sub AddTenantFinder(Of T As {Class, ITenantFinder(Of TInfo)}, TInfo As {Class, ITenantInfo})(services As IServiceCollection)
+  overload: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantFinder*
+  nameWithType.vb: ServiceRegistration.AddTenantFinder(Of T, TInfo)(IServiceCollection)
+  fullName.vb: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantFinder(Of T, TInfo)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddTenantFinder(Of T, TInfo)(IServiceCollection)
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddBasePathTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  commentId: M:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddBasePathTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  id: AddBasePathTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.MultiTenant.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: AddBasePathTenantFinder<TInfo>(IServiceCollection)
+  nameWithType: ServiceRegistration.AddBasePathTenantFinder<TInfo>(IServiceCollection)
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddBasePathTenantFinder<TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant
+  summary: 添加基于路径的租户查找器
+  example: []
+  syntax:
+    content: 'public static void AddBasePathTenantFinder<TInfo>(this IServiceCollection services) where TInfo : class, ITenantInfo'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    typeParameters:
+    - id: TInfo
+    content.vb: Public Shared Sub AddBasePathTenantFinder(Of TInfo As {Class, ITenantInfo})(services As IServiceCollection)
+  overload: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddBasePathTenantFinder*
+  nameWithType.vb: ServiceRegistration.AddBasePathTenantFinder(Of TInfo)(IServiceCollection)
+  fullName.vb: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddBasePathTenantFinder(Of TInfo)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddBasePathTenantFinder(Of TInfo)(IServiceCollection)
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddHeaderTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  commentId: M:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddHeaderTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  id: AddHeaderTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.MultiTenant.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: AddHeaderTenantFinder<TInfo>(IServiceCollection, string?)
+  nameWithType: ServiceRegistration.AddHeaderTenantFinder<TInfo>(IServiceCollection, string?)
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddHeaderTenantFinder<TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection, string?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant
+  summary: 添加基于Header的租户查找器
+  example: []
+  syntax:
+    content: 'public static void AddHeaderTenantFinder<TInfo>(this IServiceCollection services, string? tenantIdHeader = null) where TInfo : class, ITenantInfo'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    - id: tenantIdHeader
+      type: System.String
+      description: 默认空为:X-Tenant-Id
+    typeParameters:
+    - id: TInfo
+    content.vb: Public Shared Sub AddHeaderTenantFinder(Of TInfo As {Class, ITenantInfo})(services As IServiceCollection, tenantIdHeader As String = Nothing)
+  overload: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddHeaderTenantFinder*
+  nameWithType.vb: ServiceRegistration.AddHeaderTenantFinder(Of TInfo)(IServiceCollection, String)
+  fullName.vb: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddHeaderTenantFinder(Of TInfo)(Microsoft.Extensions.DependencyInjection.IServiceCollection, String)
+  name.vb: AddHeaderTenantFinder(Of TInfo)(IServiceCollection, String)
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddRouteTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  commentId: M:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddRouteTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  id: AddRouteTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.MultiTenant.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: AddRouteTenantFinder<TInfo>(IServiceCollection, string?)
+  nameWithType: ServiceRegistration.AddRouteTenantFinder<TInfo>(IServiceCollection, string?)
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddRouteTenantFinder<TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection, string?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant
+  summary: 添加基于路由的租户查找器,用于MVC项目
+  example: []
+  syntax:
+    content: 'public static void AddRouteTenantFinder<TInfo>(this IServiceCollection services, string? routeParam = null) where TInfo : class, ITenantInfo'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    - id: routeParam
+      type: System.String
+      description: 默认路由参数为__tenant__
+    typeParameters:
+    - id: TInfo
+      description: ''
+    content.vb: Public Shared Sub AddRouteTenantFinder(Of TInfo As {Class, ITenantInfo})(services As IServiceCollection, routeParam As String = Nothing)
+  overload: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddRouteTenantFinder*
+  nameWithType.vb: ServiceRegistration.AddRouteTenantFinder(Of TInfo)(IServiceCollection, String)
+  fullName.vb: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddRouteTenantFinder(Of TInfo)(Microsoft.Extensions.DependencyInjection.IServiceCollection, String)
+  name.vb: AddRouteTenantFinder(Of TInfo)(IServiceCollection, String)
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddSessionTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  commentId: M:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddSessionTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  id: AddSessionTenantFinder``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.MultiTenant.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: AddSessionTenantFinder<TInfo>(IServiceCollection, string?)
+  nameWithType: ServiceRegistration.AddSessionTenantFinder<TInfo>(IServiceCollection, string?)
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddSessionTenantFinder<TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection, string?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant
+  summary: 添加基于Session的租户查找器
+  example: []
+  syntax:
+    content: 'public static void AddSessionTenantFinder<TInfo>(this IServiceCollection services, string? sessionId = null) where TInfo : class, ITenantInfo'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    - id: sessionId
+      type: System.String
+      description: ''
+    typeParameters:
+    - id: TInfo
+      description: ''
+    content.vb: Public Shared Sub AddSessionTenantFinder(Of TInfo As {Class, ITenantInfo})(services As IServiceCollection, sessionId As String = Nothing)
+  overload: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddSessionTenantFinder*
+  nameWithType.vb: ServiceRegistration.AddSessionTenantFinder(Of TInfo)(IServiceCollection, String)
+  fullName.vb: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddSessionTenantFinder(Of TInfo)(Microsoft.Extensions.DependencyInjection.IServiceCollection, String)
+  name.vb: AddSessionTenantFinder(Of TInfo)(IServiceCollection, String)
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  commentId: M:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  id: AddMultiTenant``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.MultiTenant.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: AddMultiTenant<TTenantInfo>(IServiceCollection)
+  nameWithType: ServiceRegistration.AddMultiTenant<TTenantInfo>(IServiceCollection)
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant<TTenantInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant
+  syntax:
+    content: 'public static MultiTenantBuilder<TTenantInfo> AddMultiTenant<TTenantInfo>(this IServiceCollection services) where TTenantInfo : class, ITenantInfo'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    typeParameters:
+    - id: TTenantInfo
+    return:
+      type: Biwen.QuickApi.MultiTenant.MultiTenantBuilder{{TTenantInfo}}
+    content.vb: Public Shared Function AddMultiTenant(Of TTenantInfo As {Class, ITenantInfo})(services As IServiceCollection) As MultiTenantBuilder(Of TTenantInfo)
+  overload: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant*
+  nameWithType.vb: ServiceRegistration.AddMultiTenant(Of TTenantInfo)(IServiceCollection)
+  fullName.vb: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant(Of TTenantInfo)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddMultiTenant(Of TTenantInfo)(IServiceCollection)
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Biwen.QuickApi.MultiTenant.MultiTenantOptions})
+  commentId: M:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Biwen.QuickApi.MultiTenant.MultiTenantOptions})
+  id: AddMultiTenant``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Biwen.QuickApi.MultiTenant.MultiTenantOptions})
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.MultiTenant.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: AddMultiTenant<TTenantInfo>(IServiceCollection, Action<MultiTenantOptions>)
+  nameWithType: ServiceRegistration.AddMultiTenant<TTenantInfo>(IServiceCollection, Action<MultiTenantOptions>)
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant<TTenantInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Biwen.QuickApi.MultiTenant.MultiTenantOptions>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant
+  syntax:
+    content: 'public static MultiTenantBuilder<TTenantInfo> AddMultiTenant<TTenantInfo>(this IServiceCollection services, Action<MultiTenantOptions> config) where TTenantInfo : class, ITenantInfo'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: config
+      type: System.Action{Biwen.QuickApi.MultiTenant.MultiTenantOptions}
+    typeParameters:
+    - id: TTenantInfo
+    return:
+      type: Biwen.QuickApi.MultiTenant.MultiTenantBuilder{{TTenantInfo}}
+    content.vb: Public Shared Function AddMultiTenant(Of TTenantInfo As {Class, ITenantInfo})(services As IServiceCollection, config As Action(Of MultiTenantOptions)) As MultiTenantBuilder(Of TTenantInfo)
+  overload: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant*
+  nameWithType.vb: ServiceRegistration.AddMultiTenant(Of TTenantInfo)(IServiceCollection, Action(Of MultiTenantOptions))
+  fullName.vb: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant(Of TTenantInfo)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of Biwen.QuickApi.MultiTenant.MultiTenantOptions))
+  name.vb: AddMultiTenant(Of TTenantInfo)(IServiceCollection, Action(Of MultiTenantOptions))
+references:
+- uid: Biwen.QuickApi.MultiTenant
+  commentId: N:Biwen.QuickApi.MultiTenant
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.MultiTenant
+  nameWithType: Biwen.QuickApi.MultiTenant
+  fullName: Biwen.QuickApi.MultiTenant
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.MultiTenant
+    name: MultiTenant
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.MultiTenant
+    name: MultiTenant
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantInfoProvider*
+  commentId: Overload:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantInfoProvider
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.ServiceRegistration.html#Biwen_QuickApi_MultiTenant_ServiceRegistration_AddTenantInfoProvider__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  name: AddTenantInfoProvider
+  nameWithType: ServiceRegistration.AddTenantInfoProvider
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantInfoProvider
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantFinder*
+  commentId: Overload:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantFinder
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.ServiceRegistration.html#Biwen_QuickApi_MultiTenant_ServiceRegistration_AddTenantFinder__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  name: AddTenantFinder
+  nameWithType: ServiceRegistration.AddTenantFinder
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantFinder
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddBasePathTenantFinder*
+  commentId: Overload:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddBasePathTenantFinder
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.ServiceRegistration.html#Biwen_QuickApi_MultiTenant_ServiceRegistration_AddBasePathTenantFinder__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  name: AddBasePathTenantFinder
+  nameWithType: ServiceRegistration.AddBasePathTenantFinder
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddBasePathTenantFinder
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddHeaderTenantFinder*
+  commentId: Overload:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddHeaderTenantFinder
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.ServiceRegistration.html#Biwen_QuickApi_MultiTenant_ServiceRegistration_AddHeaderTenantFinder__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_
+  name: AddHeaderTenantFinder
+  nameWithType: ServiceRegistration.AddHeaderTenantFinder
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddHeaderTenantFinder
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddRouteTenantFinder*
+  commentId: Overload:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddRouteTenantFinder
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.ServiceRegistration.html#Biwen_QuickApi_MultiTenant_ServiceRegistration_AddRouteTenantFinder__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_
+  name: AddRouteTenantFinder
+  nameWithType: ServiceRegistration.AddRouteTenantFinder
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddRouteTenantFinder
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddSessionTenantFinder*
+  commentId: Overload:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddSessionTenantFinder
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.ServiceRegistration.html#Biwen_QuickApi_MultiTenant_ServiceRegistration_AddSessionTenantFinder__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_
+  name: AddSessionTenantFinder
+  nameWithType: ServiceRegistration.AddSessionTenantFinder
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddSessionTenantFinder
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant*
+  commentId: Overload:Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.ServiceRegistration.html#Biwen_QuickApi_MultiTenant_ServiceRegistration_AddMultiTenant__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  name: AddMultiTenant
+  nameWithType: ServiceRegistration.AddMultiTenant
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant
+- uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder{{TTenantInfo}}
+  commentId: T:Biwen.QuickApi.MultiTenant.MultiTenantBuilder{``0}
+  parent: Biwen.QuickApi.MultiTenant
+  definition: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+  href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
+  name: MultiTenantBuilder<TTenantInfo>
+  nameWithType: MultiTenantBuilder<TTenantInfo>
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>
+  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo)
+  name.vb: MultiTenantBuilder(Of TTenantInfo)
+  spec.csharp:
+  - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+    name: MultiTenantBuilder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
+  - name: <
+  - name: TTenantInfo
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+    name: MultiTenantBuilder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TTenantInfo
+  - name: )
+- uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+  commentId: T:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+  parent: Biwen.QuickApi.MultiTenant
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
+  name: MultiTenantBuilder<TTenantInfo>
+  nameWithType: MultiTenantBuilder<TTenantInfo>
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>
+  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo)
+  name.vb: MultiTenantBuilder(Of TTenantInfo)
+  spec.csharp:
+  - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+    name: MultiTenantBuilder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
+  - name: <
+  - name: TTenantInfo
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+    name: MultiTenantBuilder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TTenantInfo
+  - name: )
+- uid: System.Action{Biwen.QuickApi.MultiTenant.MultiTenantOptions}
+  commentId: T:System.Action{Biwen.QuickApi.MultiTenant.MultiTenantOptions}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<MultiTenantOptions>
+  nameWithType: Action<MultiTenantOptions>
+  fullName: System.Action<Biwen.QuickApi.MultiTenant.MultiTenantOptions>
+  nameWithType.vb: Action(Of MultiTenantOptions)
+  fullName.vb: System.Action(Of Biwen.QuickApi.MultiTenant.MultiTenantOptions)
+  name.vb: Action(Of MultiTenantOptions)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Biwen.QuickApi.MultiTenant.MultiTenantOptions
+    name: MultiTenantOptions
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.MultiTenantOptions.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.MultiTenant.MultiTenantOptions
+    name: MultiTenantOptions
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.MultiTenantOptions.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

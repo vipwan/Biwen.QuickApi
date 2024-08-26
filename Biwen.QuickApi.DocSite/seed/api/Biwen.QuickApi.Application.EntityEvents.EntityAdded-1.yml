@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Application.EntityEvents.EntityAdded<TEntity>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Application/EntityEvents/EntityAdded.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Application/EntityEvents/EntityAdded.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application.EntityEvents
@@ -60,7 +60,7 @@ items:
   fullName: Biwen.QuickApi.Application.EntityEvents.EntityAdded<TEntity>.EntityAdded(TEntity)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Application/EntityEvents/EntityAdded.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Application/EntityEvents/EntityAdded.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application.EntityEvents
@@ -86,7 +86,7 @@ items:
   fullName: Biwen.QuickApi.Application.EntityEvents.EntityAdded<TEntity>.Entity
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Application/EntityEvents/EntityAdded.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Application/EntityEvents/EntityAdded.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application.EntityEvents

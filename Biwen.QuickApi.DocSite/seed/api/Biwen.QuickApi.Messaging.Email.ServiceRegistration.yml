@@ -6,6 +6,7 @@ items:
   parent: Biwen.QuickApi.Messaging.Email
   children:
   - Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddEmailSender``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  - Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddKeyedEmailSender``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
   - Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddNullEmailSender(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   - Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider,System.String)
   langs:
@@ -16,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Email/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
@@ -56,11 +57,11 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddEmailSender<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Email/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
-  summary: Add SmsSender
+  summary: Add SmsSender,如果只有一个实现的情况下
   example: []
   syntax:
     content: 'public static void AddEmailSender<T>(this IServiceCollection services) where T : class, IEmailSender'
@@ -76,6 +77,42 @@ items:
   nameWithType.vb: ServiceRegistration.AddEmailSender(Of T)(IServiceCollection)
   fullName.vb: Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddEmailSender(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   name.vb: AddEmailSender(Of T)(IServiceCollection)
+- uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddKeyedEmailSender``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  commentId: M:Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddKeyedEmailSender``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  id: AddKeyedEmailSender``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.Messaging.Email.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: AddKeyedEmailSender<T>(IServiceCollection, string)
+  nameWithType: ServiceRegistration.AddKeyedEmailSender<T>(IServiceCollection, string)
+  fullName: Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddKeyedEmailSender<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, string)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Email/ServiceRegistration.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Email
+  summary: Add Keyed SmsSender,如果有多个的情况下需要指定key注入
+  example: []
+  syntax:
+    content: 'public static void AddKeyedEmailSender<T>(this IServiceCollection services, string key) where T : class, IEmailSender'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    - id: key
+      type: System.String
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: Public Shared Sub AddKeyedEmailSender(Of T As {Class, IEmailSender})(services As IServiceCollection, key As String)
+  overload: Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddKeyedEmailSender*
+  nameWithType.vb: ServiceRegistration.AddKeyedEmailSender(Of T)(IServiceCollection, String)
+  fullName.vb: Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddKeyedEmailSender(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, String)
+  name.vb: AddKeyedEmailSender(Of T)(IServiceCollection, String)
 - uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddNullEmailSender(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   commentId: M:Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddNullEmailSender(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   id: AddNullEmailSender(Microsoft.Extensions.DependencyInjection.IServiceCollection)
@@ -89,7 +126,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddNullEmailSender(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Email/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
@@ -116,7 +153,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Email.ServiceRegistration.GetKeyedEmailSender(System.IServiceProvider, string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Email/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Email/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Email
@@ -476,6 +513,24 @@ references:
     name: DependencyInjection
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+- uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddKeyedEmailSender*
+  commentId: Overload:Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddKeyedEmailSender
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Email.ServiceRegistration.html#Biwen_QuickApi_Messaging_Email_ServiceRegistration_AddKeyedEmailSender__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_
+  name: AddKeyedEmailSender
+  nameWithType: ServiceRegistration.AddKeyedEmailSender
+  fullName: Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddKeyedEmailSender
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddNullEmailSender*
   commentId: Overload:Biwen.QuickApi.Messaging.Email.ServiceRegistration.AddNullEmailSender
   isExternal: true
@@ -498,17 +553,6 @@ references:
   name: IServiceProvider
   nameWithType: IServiceProvider
   fullName: System.IServiceProvider
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
   commentId: T:Biwen.QuickApi.Messaging.Email.IEmailSender
   parent: Biwen.QuickApi.Messaging.Email

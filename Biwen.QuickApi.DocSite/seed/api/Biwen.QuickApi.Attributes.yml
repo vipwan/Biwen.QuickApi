@@ -5,6 +5,7 @@ items:
   id: Biwen.QuickApi.Attributes
   children:
   - Biwen.QuickApi.Attributes.AliasAsAttribute
+  - Biwen.QuickApi.Attributes.AuditApiAttribute
   - Biwen.QuickApi.Attributes.JustAsServiceAttribute
   - Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
   - Biwen.QuickApi.Attributes.QuickApiAttribute
@@ -25,6 +26,13 @@ references:
   name: AliasAsAttribute
   nameWithType: AliasAsAttribute
   fullName: Biwen.QuickApi.Attributes.AliasAsAttribute
+- uid: Biwen.QuickApi.Attributes.AuditApiAttribute
+  commentId: T:Biwen.QuickApi.Attributes.AuditApiAttribute
+  isExternal: true
+  href: Biwen.QuickApi.Attributes.AuditApiAttribute.html
+  name: AuditApiAttribute
+  nameWithType: AuditApiAttribute
+  fullName: Biwen.QuickApi.Attributes.AuditApiAttribute
 - uid: Biwen.QuickApi.Attributes.JustAsServiceAttribute
   commentId: T:Biwen.QuickApi.Attributes.JustAsServiceAttribute
   parent: Biwen.QuickApi.Attributes

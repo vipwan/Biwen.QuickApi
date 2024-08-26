@@ -17,6 +17,7 @@ items:
   - Biwen.QuickApi.EmptyRequest
   - Biwen.QuickApi.FromBodyAttribute
   - Biwen.QuickApi.FromKeyedServicesAttribute
+  - Biwen.QuickApi.GuidHelper
   - Biwen.QuickApi.IEndpointRouteBuilderExtensions
   - Biwen.QuickApi.IResultExtensions
   - Biwen.QuickApi.IResultResponse
@@ -44,6 +45,13 @@ references:
   name: IdGenerator
   nameWithType: IdGenerator
   fullName: Biwen.QuickApi.IdGenerator
+- uid: Biwen.QuickApi.GuidHelper
+  commentId: T:Biwen.QuickApi.GuidHelper
+  isExternal: true
+  href: Biwen.QuickApi.GuidHelper.html
+  name: GuidHelper
+  nameWithType: GuidHelper
+  fullName: Biwen.QuickApi.GuidHelper
 - uid: Biwen.QuickApi.FromBodyAttribute
   commentId: T:Biwen.QuickApi.FromBodyAttribute
   parent: Biwen.QuickApi

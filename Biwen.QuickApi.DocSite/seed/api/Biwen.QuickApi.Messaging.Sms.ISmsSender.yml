@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.ISmsSender
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Sms/ISmsSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/ISmsSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
@@ -42,7 +42,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.ISmsSender.SendAsync(Biwen.QuickApi.Messaging.Sms.SmsMessage)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Sms/ISmsSender.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/ISmsSender.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms

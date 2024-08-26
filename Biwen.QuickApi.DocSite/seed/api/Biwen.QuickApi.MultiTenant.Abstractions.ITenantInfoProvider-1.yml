@@ -1,0 +1,570 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+  commentId: T:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+  id: ITenantInfoProvider`1
+  parent: Biwen.QuickApi.MultiTenant.Abstractions
+  children:
+  - Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll
+  langs:
+  - csharp
+  - vb
+  name: ITenantInfoProvider<T>
+  nameWithType: ITenantInfoProvider<T>
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/Abstractions/ITenantInfoProvider.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant.Abstractions
+  syntax:
+    content: 'public interface ITenantInfoProvider<T> where T : ITenantInfo'
+    typeParameters:
+    - id: T
+    content.vb: Public Interface ITenantInfoProvider(Of T As ITenantInfo)
+  extensionMethods:
+  - Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  nameWithType.vb: ITenantInfoProvider(Of T)
+  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T)
+  name.vb: ITenantInfoProvider(Of T)
+- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll
+  commentId: M:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll
+  id: GetAll
+  parent: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: ITenantInfoProvider<T>.GetAll()
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>.GetAll()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/Abstractions/ITenantInfoProvider.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant.Abstractions
+  summary: 请注意如果是通过数据库,配置文件等方式,内部请使用缓存提升性能
+  example: []
+  syntax:
+    content: Task<IList<T>> GetAll()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IList{{T}}}
+      description: ''
+    content.vb: Function GetAll() As Task(Of IList(Of T))
+  overload: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll*
+  nameWithType.vb: ITenantInfoProvider(Of T).GetAll()
+  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T).GetAll()
+references:
+- uid: Biwen.QuickApi.MultiTenant.Abstractions
+  commentId: N:Biwen.QuickApi.MultiTenant.Abstractions
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.MultiTenant.Abstractions
+  nameWithType: Biwen.QuickApi.MultiTenant.Abstractions
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.MultiTenant
+    name: MultiTenant
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.html
+  - name: .
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.MultiTenant
+    name: MultiTenant
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.html
+  - name: .
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.html
+- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
+  nameWithType: EntityExtensions.PublishAddedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>>(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))
+  name.vb: PublishAddedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
+  nameWithType: EntityExtensions.PublishDeletedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>>(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))
+  name.vb: PublishDeletedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>>(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))
+  name.vb: PublishUpdatedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll*
+  commentId: Overload:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html#Biwen_QuickApi_MultiTenant_Abstractions_ITenantInfoProvider_1_GetAll
+  name: GetAll
+  nameWithType: ITenantInfoProvider<T>.GetAll
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>.GetAll
+  nameWithType.vb: ITenantInfoProvider(Of T).GetAll
+  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T).GetAll
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IList{{T}}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IList{`0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IList<T>>
+  nameWithType: Task<IList<T>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IList<T>>
+  nameWithType.vb: Task(Of IList(Of T))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IList(Of T))
+  name.vb: Task(Of IList(Of T))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.TelemetryOptions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/extensions/Biwen.QuickApi.Telemetry/TelemetryOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/extensions/Biwen.QuickApi.Telemetry/TelemetryOptions.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -52,7 +52,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.TelemetryOptions.Key
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/extensions/Biwen.QuickApi.Telemetry/TelemetryOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/extensions/Biwen.QuickApi.Telemetry/TelemetryOptions.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -73,7 +73,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.TelemetryOptions.TelemetryOptions()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/extensions/Biwen.QuickApi.Telemetry/TelemetryOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/extensions/Biwen.QuickApi.Telemetry/TelemetryOptions.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -96,7 +96,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.TelemetryOptions.Enable
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/extensions/Biwen.QuickApi.Telemetry/TelemetryOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/extensions/Biwen.QuickApi.Telemetry/TelemetryOptions.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry
@@ -121,7 +121,7 @@ items:
   fullName: Biwen.QuickApi.Telemetry.TelemetryOptions.SamplingInterval
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/extensions/Biwen.QuickApi.Telemetry/TelemetryOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/extensions/Biwen.QuickApi.Telemetry/TelemetryOptions.cs
   assemblies:
   - Biwen.QuickApi.Telemetry
   namespace: Biwen.QuickApi.Telemetry

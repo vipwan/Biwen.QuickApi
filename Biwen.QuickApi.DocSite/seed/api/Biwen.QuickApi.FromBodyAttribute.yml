@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.FromBodyAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -107,7 +107,7 @@ items:
   fullName: Biwen.QuickApi.FromBodyAttribute.FromBodyAttribute()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -130,7 +130,7 @@ items:
   fullName: Biwen.QuickApi.FromBodyAttribute.BindingSource
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

@@ -28,7 +28,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -73,7 +73,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.UnitOfWork(TContext)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -102,7 +102,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.BeginTransactionAsync(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -135,7 +135,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.BeginTransaction(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -168,7 +168,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.SetAutoDetectChanges(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -199,7 +199,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.GetRepository<TEntity>(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -237,7 +237,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.ExecuteSqlCommand(string, params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -274,7 +274,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.ExecuteSqlCommandAsync(string, params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -311,7 +311,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.FromSqlRaw<TEntity>(string, params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -351,7 +351,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.SaveChanges()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -380,7 +380,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.SaveChangesAsync()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -409,7 +409,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.SaveChangesAsync(params Biwen.QuickApi.UnitOfWork.IUnitOfWork[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -443,7 +443,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.Dispose()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -469,7 +469,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.TrackGraph(object, System.Action<Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntryGraphNode>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -503,7 +503,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.DbContext
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -533,7 +533,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.LastSaveChangesResult
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork

@@ -1,0 +1,133 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.MultiTenant
+  commentId: N:Biwen.QuickApi.MultiTenant
+  id: Biwen.QuickApi.MultiTenant
+  children:
+  - Biwen.QuickApi.MultiTenant.HttpContextExtensions
+  - Biwen.QuickApi.MultiTenant.IApplicationBuilderExtensions
+  - Biwen.QuickApi.MultiTenant.ITenantInfo
+  - Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+  - Biwen.QuickApi.MultiTenant.MultiTenantOptions
+  - Biwen.QuickApi.MultiTenant.ServiceRegistration
+  - Biwen.QuickApi.MultiTenant.TenantInfo
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.MultiTenant
+  nameWithType: Biwen.QuickApi.MultiTenant
+  fullName: Biwen.QuickApi.MultiTenant
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.MultiTenant.HttpContextExtensions
+  commentId: T:Biwen.QuickApi.MultiTenant.HttpContextExtensions
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.HttpContextExtensions.html
+  name: HttpContextExtensions
+  nameWithType: HttpContextExtensions
+  fullName: Biwen.QuickApi.MultiTenant.HttpContextExtensions
+- uid: Biwen.QuickApi.MultiTenant.IApplicationBuilderExtensions
+  commentId: T:Biwen.QuickApi.MultiTenant.IApplicationBuilderExtensions
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.IApplicationBuilderExtensions.html
+  name: IApplicationBuilderExtensions
+  nameWithType: IApplicationBuilderExtensions
+  fullName: Biwen.QuickApi.MultiTenant.IApplicationBuilderExtensions
+- uid: Biwen.QuickApi.MultiTenant.ITenantInfo
+  commentId: T:Biwen.QuickApi.MultiTenant.ITenantInfo
+  parent: Biwen.QuickApi.MultiTenant
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.ITenantInfo.html
+  name: ITenantInfo
+  nameWithType: ITenantInfo
+  fullName: Biwen.QuickApi.MultiTenant.ITenantInfo
+- uid: Biwen.QuickApi.MultiTenant.TenantInfo
+  commentId: T:Biwen.QuickApi.MultiTenant.TenantInfo
+  parent: Biwen.QuickApi.MultiTenant
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.TenantInfo.html
+  name: TenantInfo
+  nameWithType: TenantInfo
+  fullName: Biwen.QuickApi.MultiTenant.TenantInfo
+- uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+  commentId: T:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+  parent: Biwen.QuickApi.MultiTenant
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
+  name: MultiTenantBuilder<TTenantInfo>
+  nameWithType: MultiTenantBuilder<TTenantInfo>
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>
+  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo)
+  name.vb: MultiTenantBuilder(Of TTenantInfo)
+  spec.csharp:
+  - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+    name: MultiTenantBuilder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
+  - name: <
+  - name: TTenantInfo
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
+    name: MultiTenantBuilder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TTenantInfo
+  - name: )
+- uid: Biwen.QuickApi.MultiTenant.MultiTenantOptions
+  commentId: T:Biwen.QuickApi.MultiTenant.MultiTenantOptions
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.MultiTenantOptions.html
+  name: MultiTenantOptions
+  nameWithType: MultiTenantOptions
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantOptions
+- uid: Biwen.QuickApi.MultiTenant.ServiceRegistration
+  commentId: T:Biwen.QuickApi.MultiTenant.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration
+- uid: Biwen.QuickApi.MultiTenant
+  commentId: N:Biwen.QuickApi.MultiTenant
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.MultiTenant
+  nameWithType: Biwen.QuickApi.MultiTenant
+  fullName: Biwen.QuickApi.MultiTenant
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.MultiTenant
+    name: MultiTenant
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.MultiTenant
+    name: MultiTenant
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.html

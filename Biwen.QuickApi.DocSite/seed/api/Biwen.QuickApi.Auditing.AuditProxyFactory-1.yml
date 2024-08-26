@@ -5,7 +5,7 @@ items:
   id: AuditProxyFactory`1
   parent: Biwen.QuickApi.Auditing
   children:
-  - Biwen.QuickApi.Auditing.AuditProxyFactory`1.#ctor(System.IServiceProvider)
+  - Biwen.QuickApi.Auditing.AuditProxyFactory`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
   - Biwen.QuickApi.Auditing.AuditProxyFactory`1.Create
   - Biwen.QuickApi.Auditing.AuditProxyFactory`1.Create(`0)
   langs:
@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditProxyFactory<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -44,32 +44,34 @@ items:
   nameWithType.vb: AuditProxyFactory(Of T)
   fullName.vb: Biwen.QuickApi.Auditing.AuditProxyFactory(Of T)
   name.vb: AuditProxyFactory(Of T)
-- uid: Biwen.QuickApi.Auditing.AuditProxyFactory`1.#ctor(System.IServiceProvider)
-  commentId: M:Biwen.QuickApi.Auditing.AuditProxyFactory`1.#ctor(System.IServiceProvider)
-  id: '#ctor(System.IServiceProvider)'
+- uid: Biwen.QuickApi.Auditing.AuditProxyFactory`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  commentId: M:Biwen.QuickApi.Auditing.AuditProxyFactory`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  id: '#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)'
   parent: Biwen.QuickApi.Auditing.AuditProxyFactory`1
   langs:
   - csharp
   - vb
-  name: AuditProxyFactory(IServiceProvider)
-  nameWithType: AuditProxyFactory<T>.AuditProxyFactory(IServiceProvider)
-  fullName: Biwen.QuickApi.Auditing.AuditProxyFactory<T>.AuditProxyFactory(System.IServiceProvider)
+  name: AuditProxyFactory(IServiceScopeFactory)
+  nameWithType: AuditProxyFactory<T>.AuditProxyFactory(IServiceScopeFactory)
+  fullName: Biwen.QuickApi.Auditing.AuditProxyFactory<T>.AuditProxyFactory(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
+  summary: 提供 <code class="typeparamref">T</code> 的审计代理服务工厂,构造的代理会自动审计
+  example: []
   syntax:
-    content: public AuditProxyFactory(IServiceProvider serviceProvider)
+    content: public AuditProxyFactory(IServiceScopeFactory serviceScopeFactory)
     parameters:
-    - id: serviceProvider
-      type: System.IServiceProvider
-    content.vb: Public Sub New(serviceProvider As IServiceProvider)
+    - id: serviceScopeFactory
+      type: Microsoft.Extensions.DependencyInjection.IServiceScopeFactory
+    content.vb: Public Sub New(serviceScopeFactory As IServiceScopeFactory)
   overload: Biwen.QuickApi.Auditing.AuditProxyFactory`1.#ctor*
-  nameWithType.vb: AuditProxyFactory(Of T).New(IServiceProvider)
-  fullName.vb: Biwen.QuickApi.Auditing.AuditProxyFactory(Of T).New(System.IServiceProvider)
-  name.vb: New(IServiceProvider)
+  nameWithType.vb: AuditProxyFactory(Of T).New(IServiceScopeFactory)
+  fullName.vb: Biwen.QuickApi.Auditing.AuditProxyFactory(Of T).New(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  name.vb: New(IServiceScopeFactory)
 - uid: Biwen.QuickApi.Auditing.AuditProxyFactory`1.Create(`0)
   commentId: M:Biwen.QuickApi.Auditing.AuditProxyFactory`1.Create(`0)
   id: Create(`0)
@@ -82,7 +84,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditProxyFactory<T>.Create(T)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -109,7 +111,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditProxyFactory<T>.Create()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -745,21 +747,58 @@ references:
 - uid: Biwen.QuickApi.Auditing.AuditProxyFactory`1.#ctor*
   commentId: Overload:Biwen.QuickApi.Auditing.AuditProxyFactory`1.#ctor
   isExternal: true
-  href: Biwen.QuickApi.Auditing.AuditProxyFactory-1.html#Biwen_QuickApi_Auditing_AuditProxyFactory_1__ctor_System_IServiceProvider_
+  href: Biwen.QuickApi.Auditing.AuditProxyFactory-1.html#Biwen_QuickApi_Auditing_AuditProxyFactory_1__ctor_Microsoft_Extensions_DependencyInjection_IServiceScopeFactory_
   name: AuditProxyFactory
   nameWithType: AuditProxyFactory<T>.AuditProxyFactory
   fullName: Biwen.QuickApi.Auditing.AuditProxyFactory<T>.AuditProxyFactory
   nameWithType.vb: AuditProxyFactory(Of T).New
   fullName.vb: Biwen.QuickApi.Auditing.AuditProxyFactory(Of T).New
   name.vb: New
-- uid: System.IServiceProvider
-  commentId: T:System.IServiceProvider
-  parent: System
+- uid: Microsoft.Extensions.DependencyInjection.IServiceScopeFactory
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory
+  parent: Microsoft.Extensions.DependencyInjection
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
-  name: IServiceProvider
-  nameWithType: IServiceProvider
-  fullName: System.IServiceProvider
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicescopefactory
+  name: IServiceScopeFactory
+  nameWithType: IServiceScopeFactory
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceScopeFactory
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
 - uid: Biwen.QuickApi.Auditing.AuditProxyFactory`1.Create*
   commentId: Overload:Biwen.QuickApi.Auditing.AuditProxyFactory`1.Create
   isExternal: true

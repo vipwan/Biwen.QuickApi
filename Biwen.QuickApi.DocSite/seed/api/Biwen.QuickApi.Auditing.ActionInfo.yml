@@ -6,9 +6,7 @@ items:
   parent: Biwen.QuickApi.Auditing
   children:
   - Biwen.QuickApi.Auditing.ActionInfo.#ctor
-  - Biwen.QuickApi.Auditing.ActionInfo.ClassName
-  - Biwen.QuickApi.Auditing.ActionInfo.MethodName
-  - Biwen.QuickApi.Auditing.ActionInfo.Namespace
+  - Biwen.QuickApi.Auditing.ActionInfo.MethodInfo
   langs:
   - csharp
   - vb
@@ -17,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.ActionInfo
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -50,7 +48,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.ActionInfo.ActionInfo()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -61,75 +59,29 @@ items:
   nameWithType.vb: ActionInfo.New()
   fullName.vb: Biwen.QuickApi.Auditing.ActionInfo.New()
   name.vb: New()
-- uid: Biwen.QuickApi.Auditing.ActionInfo.MethodName
-  commentId: P:Biwen.QuickApi.Auditing.ActionInfo.MethodName
-  id: MethodName
+- uid: Biwen.QuickApi.Auditing.ActionInfo.MethodInfo
+  commentId: P:Biwen.QuickApi.Auditing.ActionInfo.MethodInfo
+  id: MethodInfo
   parent: Biwen.QuickApi.Auditing.ActionInfo
   langs:
   - csharp
   - vb
-  name: MethodName
-  nameWithType: ActionInfo.MethodName
-  fullName: Biwen.QuickApi.Auditing.ActionInfo.MethodName
+  name: MethodInfo
+  nameWithType: ActionInfo.MethodInfo
+  fullName: Biwen.QuickApi.Auditing.ActionInfo.MethodInfo
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
   syntax:
-    content: public string? MethodName { get; set; }
+    content: public MethodInfo? MethodInfo { get; set; }
     parameters: []
     return:
-      type: System.String
-    content.vb: Public Property MethodName As String
-  overload: Biwen.QuickApi.Auditing.ActionInfo.MethodName*
-- uid: Biwen.QuickApi.Auditing.ActionInfo.ClassName
-  commentId: P:Biwen.QuickApi.Auditing.ActionInfo.ClassName
-  id: ClassName
-  parent: Biwen.QuickApi.Auditing.ActionInfo
-  langs:
-  - csharp
-  - vb
-  name: ClassName
-  nameWithType: ActionInfo.ClassName
-  fullName: Biwen.QuickApi.Auditing.ActionInfo.ClassName
-  type: Property
-  source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditInfo.cs
-  assemblies:
-  - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Auditing
-  syntax:
-    content: public string? ClassName { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property ClassName As String
-  overload: Biwen.QuickApi.Auditing.ActionInfo.ClassName*
-- uid: Biwen.QuickApi.Auditing.ActionInfo.Namespace
-  commentId: P:Biwen.QuickApi.Auditing.ActionInfo.Namespace
-  id: Namespace
-  parent: Biwen.QuickApi.Auditing.ActionInfo
-  langs:
-  - csharp
-  - vb
-  name: Namespace
-  nameWithType: ActionInfo.Namespace
-  fullName: Biwen.QuickApi.Auditing.ActionInfo.Namespace
-  type: Property
-  source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Auditing/AuditInfo.cs
-  assemblies:
-  - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Auditing
-  syntax:
-    content: public string? Namespace { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property [Namespace] As String
-  overload: Biwen.QuickApi.Auditing.ActionInfo.Namespace*
+      type: System.Reflection.MethodInfo
+    content.vb: Public Property MethodInfo As MethodInfo
+  overload: Biwen.QuickApi.Auditing.ActionInfo.MethodInfo*
 references:
 - uid: Biwen.QuickApi.Auditing
   commentId: N:Biwen.QuickApi.Auditing
@@ -713,35 +665,45 @@ references:
   nameWithType.vb: ActionInfo.New
   fullName.vb: Biwen.QuickApi.Auditing.ActionInfo.New
   name.vb: New
-- uid: Biwen.QuickApi.Auditing.ActionInfo.MethodName*
-  commentId: Overload:Biwen.QuickApi.Auditing.ActionInfo.MethodName
+- uid: Biwen.QuickApi.Auditing.ActionInfo.MethodInfo*
+  commentId: Overload:Biwen.QuickApi.Auditing.ActionInfo.MethodInfo
   isExternal: true
-  href: Biwen.QuickApi.Auditing.ActionInfo.html#Biwen_QuickApi_Auditing_ActionInfo_MethodName
-  name: MethodName
-  nameWithType: ActionInfo.MethodName
-  fullName: Biwen.QuickApi.Auditing.ActionInfo.MethodName
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+  href: Biwen.QuickApi.Auditing.ActionInfo.html#Biwen_QuickApi_Auditing_ActionInfo_MethodInfo
+  name: MethodInfo
+  nameWithType: ActionInfo.MethodInfo
+  fullName: Biwen.QuickApi.Auditing.ActionInfo.MethodInfo
+- uid: System.Reflection.MethodInfo
+  commentId: T:System.Reflection.MethodInfo
+  parent: System.Reflection
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: Biwen.QuickApi.Auditing.ActionInfo.ClassName*
-  commentId: Overload:Biwen.QuickApi.Auditing.ActionInfo.ClassName
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo
+  name: MethodInfo
+  nameWithType: MethodInfo
+  fullName: System.Reflection.MethodInfo
+- uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: true
-  href: Biwen.QuickApi.Auditing.ActionInfo.html#Biwen_QuickApi_Auditing_ActionInfo_ClassName
-  name: ClassName
-  nameWithType: ActionInfo.ClassName
-  fullName: Biwen.QuickApi.Auditing.ActionInfo.ClassName
-- uid: Biwen.QuickApi.Auditing.ActionInfo.Namespace*
-  commentId: Overload:Biwen.QuickApi.Auditing.ActionInfo.Namespace
-  isExternal: true
-  href: Biwen.QuickApi.Auditing.ActionInfo.html#Biwen_QuickApi_Auditing_ActionInfo_Namespace
-  name: Namespace
-  nameWithType: ActionInfo.Namespace
-  fullName: Biwen.QuickApi.Auditing.ActionInfo.Namespace
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection

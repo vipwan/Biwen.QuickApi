@@ -17,7 +17,8 @@
   href: UnitOfWork.md
 - name: 审计
   href: Auditing.md
-
+- name: 多租户
+  href: MultiTenant.md
 
 - name: 扩展组件
   expanded: true

@@ -1,0 +1,74 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.MultiTenant.Abstractions
+  commentId: N:Biwen.QuickApi.MultiTenant.Abstractions
+  id: Biwen.QuickApi.MultiTenant.Abstractions
+  children:
+  - Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder`1
+  - Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.MultiTenant.Abstractions
+  nameWithType: Biwen.QuickApi.MultiTenant.Abstractions
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder`1
+  commentId: T:Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder`1
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder-1.html
+  name: ITenantFinder<TInfo>
+  nameWithType: ITenantFinder<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder<TInfo>
+  nameWithType.vb: ITenantFinder(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder(Of TInfo)
+  name.vb: ITenantFinder(Of TInfo)
+  spec.csharp:
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder`1
+    name: ITenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder-1.html
+  - name: <
+  - name: TInfo
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder`1
+    name: ITenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInfo
+  - name: )
+- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+  commentId: T:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  name: ITenantInfoProvider<T>
+  nameWithType: ITenantInfoProvider<T>
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>
+  nameWithType.vb: ITenantInfoProvider(Of T)
+  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T)
+  name.vb: ITenantInfoProvider(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+    name: ITenantInfoProvider
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

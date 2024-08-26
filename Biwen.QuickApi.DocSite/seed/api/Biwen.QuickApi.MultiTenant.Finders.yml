@@ -1,0 +1,161 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.MultiTenant.Finders
+  commentId: N:Biwen.QuickApi.MultiTenant.Finders
+  id: Biwen.QuickApi.MultiTenant.Finders
+  children:
+  - Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder`1
+  - Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder`1
+  - Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder`1
+  - Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder`1
+  - Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.MultiTenant.Finders
+  nameWithType: Biwen.QuickApi.MultiTenant.Finders
+  fullName: Biwen.QuickApi.MultiTenant.Finders
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder`1
+  commentId: T:Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder`1
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder-1.html
+  name: BasePathTenantFinder<TInfo>
+  nameWithType: BasePathTenantFinder<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder<TInfo>
+  nameWithType.vb: BasePathTenantFinder(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder(Of TInfo)
+  name.vb: BasePathTenantFinder(Of TInfo)
+  spec.csharp:
+  - uid: Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder`1
+    name: BasePathTenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder-1.html
+  - name: <
+  - name: TInfo
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder`1
+    name: BasePathTenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInfo
+  - name: )
+- uid: Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder`1
+  commentId: T:Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder`1
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder-1.html
+  name: HeaderTenantFinder<TInfo>
+  nameWithType: HeaderTenantFinder<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder<TInfo>
+  nameWithType.vb: HeaderTenantFinder(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder(Of TInfo)
+  name.vb: HeaderTenantFinder(Of TInfo)
+  spec.csharp:
+  - uid: Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder`1
+    name: HeaderTenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder-1.html
+  - name: <
+  - name: TInfo
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder`1
+    name: HeaderTenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInfo
+  - name: )
+- uid: Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder`1
+  commentId: T:Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder`1
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder-1.html
+  name: HostTenantFinder<TInfo>
+  nameWithType: HostTenantFinder<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder<TInfo>
+  nameWithType.vb: HostTenantFinder(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder(Of TInfo)
+  name.vb: HostTenantFinder(Of TInfo)
+  spec.csharp:
+  - uid: Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder`1
+    name: HostTenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder-1.html
+  - name: <
+  - name: TInfo
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder`1
+    name: HostTenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInfo
+  - name: )
+- uid: Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder`1
+  commentId: T:Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder`1
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder-1.html
+  name: RouteTenantFinder<TInfo>
+  nameWithType: RouteTenantFinder<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder<TInfo>
+  nameWithType.vb: RouteTenantFinder(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder(Of TInfo)
+  name.vb: RouteTenantFinder(Of TInfo)
+  spec.csharp:
+  - uid: Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder`1
+    name: RouteTenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder-1.html
+  - name: <
+  - name: TInfo
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder`1
+    name: RouteTenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInfo
+  - name: )
+- uid: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1
+  commentId: T:Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder-1.html
+  name: SessionTenantFinder<TInfo>
+  nameWithType: SessionTenantFinder<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder<TInfo>
+  nameWithType.vb: SessionTenantFinder(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder(Of TInfo)
+  name.vb: SessionTenantFinder(Of TInfo)
+  spec.csharp:
+  - uid: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1
+    name: SessionTenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder-1.html
+  - name: <
+  - name: TInfo
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1
+    name: SessionTenantFinder
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInfo
+  - name: )

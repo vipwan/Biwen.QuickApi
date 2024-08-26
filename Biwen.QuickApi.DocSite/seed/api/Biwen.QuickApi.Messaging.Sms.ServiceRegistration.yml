@@ -5,6 +5,7 @@ items:
   id: ServiceRegistration
   parent: Biwen.QuickApi.Messaging.Sms
   children:
+  - Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddKeyedSmsSender``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
   - Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddNullSmsSender(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   - Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddSmsSender``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   - Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider,System.String)
@@ -16,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Sms/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
@@ -56,11 +57,11 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddSmsSender<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Sms/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
-  summary: Add SmsSender
+  summary: Add SmsSender,如果只有一个实现的情况下
   example: []
   syntax:
     content: 'public static void AddSmsSender<T>(this IServiceCollection services) where T : class, ISmsSender'
@@ -89,7 +90,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddNullSmsSender(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Sms/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
@@ -103,6 +104,42 @@ items:
       description: ''
     content.vb: Public Shared Sub AddNullSmsSender(services As IServiceCollection)
   overload: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddNullSmsSender*
+- uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddKeyedSmsSender``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  commentId: M:Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddKeyedSmsSender``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  id: AddKeyedSmsSender``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  isExtensionMethod: true
+  parent: Biwen.QuickApi.Messaging.Sms.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: AddKeyedSmsSender<T>(IServiceCollection, string)
+  nameWithType: ServiceRegistration.AddKeyedSmsSender<T>(IServiceCollection, string)
+  fullName: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddKeyedSmsSender<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, string)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/ServiceRegistration.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Messaging.Sms
+  summary: 当存在多个实现时，需要指定key注入
+  example: []
+  syntax:
+    content: 'public static void AddKeyedSmsSender<T>(this IServiceCollection services, string key) where T : class, ISmsSender'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    - id: key
+      type: System.String
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: Public Shared Sub AddKeyedSmsSender(Of T As {Class, ISmsSender})(services As IServiceCollection, key As String)
+  overload: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddKeyedSmsSender*
+  nameWithType.vb: ServiceRegistration.AddKeyedSmsSender(Of T)(IServiceCollection, String)
+  fullName.vb: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddKeyedSmsSender(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, String)
+  name.vb: AddKeyedSmsSender(Of T)(IServiceCollection, String)
 - uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider,System.String)
   commentId: M:Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider,System.String)
   id: GetKeyedSmsSender(System.IServiceProvider,System.String)
@@ -116,7 +153,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender(System.IServiceProvider, string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/2ab3947af77dca66b756f450e880dc2ab9409137/Biwen.QuickApi/Messaging/Sms/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
@@ -483,6 +520,24 @@ references:
   name: AddNullSmsSender
   nameWithType: ServiceRegistration.AddNullSmsSender
   fullName: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddNullSmsSender
+- uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddKeyedSmsSender*
+  commentId: Overload:Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddKeyedSmsSender
+  isExternal: true
+  href: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.html#Biwen_QuickApi_Messaging_Sms_ServiceRegistration_AddKeyedSmsSender__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_
+  name: AddKeyedSmsSender
+  nameWithType: ServiceRegistration.AddKeyedSmsSender
+  fullName: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.AddKeyedSmsSender
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender*
   commentId: Overload:Biwen.QuickApi.Messaging.Sms.ServiceRegistration.GetKeyedSmsSender
   isExternal: true
@@ -498,17 +553,6 @@ references:
   name: IServiceProvider
   nameWithType: IServiceProvider
   fullName: System.IServiceProvider
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: Biwen.QuickApi.Messaging.Sms.ISmsSender
   commentId: T:Biwen.QuickApi.Messaging.Sms.ISmsSender
   parent: Biwen.QuickApi.Messaging.Sms
