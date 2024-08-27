@@ -7,7 +7,7 @@ items:
   children:
   - Biwen.QuickApi.Caching.CachingProxyFactory`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
   - Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(System.String)
-  - Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(`0,Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
+  - Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(`0,Biwen.QuickApi.Caching.Abstractions.IProxyCache)
   langs:
   - csharp
   - vb
@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -57,7 +57,7 @@ items:
   fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.CachingProxyFactory(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -74,19 +74,19 @@ items:
   nameWithType.vb: CachingProxyFactory(Of T).New(IServiceScopeFactory)
   fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T).New(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
   name.vb: New(IServiceScopeFactory)
-- uid: Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(`0,Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
-  commentId: M:Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(`0,Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
-  id: Create(`0,Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
+- uid: Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(`0,Biwen.QuickApi.Caching.Abstractions.IProxyCache)
+  commentId: M:Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(`0,Biwen.QuickApi.Caching.Abstractions.IProxyCache)
+  id: Create(`0,Biwen.QuickApi.Caching.Abstractions.IProxyCache)
   parent: Biwen.QuickApi.Caching.CachingProxyFactory`1
   langs:
   - csharp
   - vb
   name: Create(T, IProxyCache)
   nameWithType: CachingProxyFactory<T>.Create(T, IProxyCache)
-  fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.Create(T, Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
+  fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.Create(T, Biwen.QuickApi.Caching.Abstractions.IProxyCache)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -99,7 +99,7 @@ items:
       type: '{T}'
       description: ''
     - id: proxyCache
-      type: Biwen.QuickApi.Caching.ProxyCache.IProxyCache
+      type: Biwen.QuickApi.Caching.Abstractions.IProxyCache
       description: ''
     return:
       type: '{T}'
@@ -107,7 +107,7 @@ items:
     content.vb: Public Function Create(impl As T, proxyCache As IProxyCache) As T
   overload: Biwen.QuickApi.Caching.CachingProxyFactory`1.Create*
   nameWithType.vb: CachingProxyFactory(Of T).Create(T, IProxyCache)
-  fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T).Create(T, Biwen.QuickApi.Caching.ProxyCache.IProxyCache)
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T).Create(T, Biwen.QuickApi.Caching.Abstractions.IProxyCache)
 - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(System.String)
   commentId: M:Biwen.QuickApi.Caching.CachingProxyFactory`1.Create(System.String)
   id: Create(System.String)
@@ -120,7 +120,7 @@ items:
   fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.Create(string?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -819,7 +819,7 @@ references:
 - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1.Create*
   commentId: Overload:Biwen.QuickApi.Caching.CachingProxyFactory`1.Create
   isExternal: true
-  href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html#Biwen_QuickApi_Caching_CachingProxyFactory_1_Create__0_Biwen_QuickApi_Caching_ProxyCache_IProxyCache_
+  href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html#Biwen_QuickApi_Caching_CachingProxyFactory_1_Create__0_Biwen_QuickApi_Caching_Abstractions_IProxyCache_
   name: Create
   nameWithType: CachingProxyFactory<T>.Create
   fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.Create
@@ -831,25 +831,25 @@ references:
   name: T
   nameWithType: T
   fullName: T
-- uid: Biwen.QuickApi.Caching.ProxyCache.IProxyCache
-  commentId: T:Biwen.QuickApi.Caching.ProxyCache.IProxyCache
-  parent: Biwen.QuickApi.Caching.ProxyCache
+- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache
+  commentId: T:Biwen.QuickApi.Caching.Abstractions.IProxyCache
+  parent: Biwen.QuickApi.Caching.Abstractions
   isExternal: true
-  href: Biwen.QuickApi.Caching.ProxyCache.IProxyCache.html
+  href: Biwen.QuickApi.Caching.Abstractions.IProxyCache.html
   name: IProxyCache
   nameWithType: IProxyCache
-  fullName: Biwen.QuickApi.Caching.ProxyCache.IProxyCache
+  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache
 - uid: T
   name: T
   nameWithType: T
   fullName: T
-- uid: Biwen.QuickApi.Caching.ProxyCache
-  commentId: N:Biwen.QuickApi.Caching.ProxyCache
+- uid: Biwen.QuickApi.Caching.Abstractions
+  commentId: N:Biwen.QuickApi.Caching.Abstractions
   isExternal: true
   href: Biwen.html
-  name: Biwen.QuickApi.Caching.ProxyCache
-  nameWithType: Biwen.QuickApi.Caching.ProxyCache
-  fullName: Biwen.QuickApi.Caching.ProxyCache
+  name: Biwen.QuickApi.Caching.Abstractions
+  nameWithType: Biwen.QuickApi.Caching.Abstractions
+  fullName: Biwen.QuickApi.Caching.Abstractions
   spec.csharp:
   - uid: Biwen
     name: Biwen
@@ -866,10 +866,10 @@ references:
     isExternal: true
     href: Biwen.QuickApi.Caching.html
   - name: .
-  - uid: Biwen.QuickApi.Caching.ProxyCache
-    name: ProxyCache
+  - uid: Biwen.QuickApi.Caching.Abstractions
+    name: Abstractions
     isExternal: true
-    href: Biwen.QuickApi.Caching.ProxyCache.html
+    href: Biwen.QuickApi.Caching.Abstractions.html
   spec.vb:
   - uid: Biwen
     name: Biwen
@@ -886,10 +886,10 @@ references:
     isExternal: true
     href: Biwen.QuickApi.Caching.html
   - name: .
-  - uid: Biwen.QuickApi.Caching.ProxyCache
-    name: ProxyCache
+  - uid: Biwen.QuickApi.Caching.Abstractions
+    name: Abstractions
     isExternal: true
-    href: Biwen.QuickApi.Caching.ProxyCache.html
+    href: Biwen.QuickApi.Caching.Abstractions.html
 - uid: System.String
   commentId: T:System.String
   parent: System

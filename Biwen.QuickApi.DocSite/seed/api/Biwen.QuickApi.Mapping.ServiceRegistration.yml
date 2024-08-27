@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Mapping.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Mapping/Mapster/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Mapping/Mapster/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Mapping
@@ -54,7 +54,7 @@ items:
   fullName: Biwen.QuickApi.Mapping.ServiceRegistration.AddMapsterMapper(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Mapping/Mapster/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Mapping/Mapster/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Mapping

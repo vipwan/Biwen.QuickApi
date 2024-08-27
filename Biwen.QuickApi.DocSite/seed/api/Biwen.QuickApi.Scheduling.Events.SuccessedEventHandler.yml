@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
@@ -66,7 +66,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.SuccessedEventHandler(Microsoft.Extensions.Logging.ILogger<Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler>)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
@@ -95,7 +95,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler.HandleAsync(Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/Events/SuccessedEventHandler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events

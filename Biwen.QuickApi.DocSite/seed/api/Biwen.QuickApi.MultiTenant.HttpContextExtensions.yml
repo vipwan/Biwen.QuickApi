@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.HttpContextExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/HttpContextExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/HttpContextExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -55,7 +55,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.HttpContextExtensions.GetTenantInfo<TInfo>(Microsoft.AspNetCore.Http.HttpContext)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/HttpContextExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/HttpContextExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -91,7 +91,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.HttpContextExtensions.SetTenantInfo<TInfo>(Microsoft.AspNetCore.Http.HttpContext, TInfo)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/HttpContextExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/HttpContextExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant

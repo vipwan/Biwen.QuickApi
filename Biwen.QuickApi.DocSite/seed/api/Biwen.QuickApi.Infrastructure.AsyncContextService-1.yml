@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.AsyncContextService<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure
@@ -59,7 +59,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.AsyncContextService<T>.AsyncContextService(System.IServiceProvider)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure
@@ -85,7 +85,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.AsyncContextService<T>.Get()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure
@@ -114,7 +114,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.AsyncContextService<T>.TryGet(out T?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure
@@ -148,7 +148,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.AsyncContextService<T>.Set(T?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Infrastructure/AsyncContextService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure

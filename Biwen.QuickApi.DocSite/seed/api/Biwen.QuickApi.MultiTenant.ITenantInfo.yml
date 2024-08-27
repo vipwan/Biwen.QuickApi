@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ITenantInfo
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ITenantInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ITenantInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -41,7 +41,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ITenantInfo.Id
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ITenantInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ITenantInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -66,7 +66,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ITenantInfo.Identifier
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ITenantInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ITenantInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -91,7 +91,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ITenantInfo.Name
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/ITenantInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ITenantInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant

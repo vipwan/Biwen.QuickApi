@@ -17,23 +17,23 @@ items:
   langs:
   - csharp
   - vb
-  name: MultiTenantBuilder<TTenantInfo>
-  nameWithType: MultiTenantBuilder<TTenantInfo>
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>
+  name: MultiTenantBuilder<TInfo>
+  nameWithType: MultiTenantBuilder<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
   summary: 多租户构建器
   example: []
   syntax:
-    content: 'public class MultiTenantBuilder<TTenantInfo> where TTenantInfo : class, ITenantInfo'
+    content: 'public class MultiTenantBuilder<TInfo> where TInfo : class, ITenantInfo'
     typeParameters:
-    - id: TTenantInfo
+    - id: TInfo
       description: ''
-    content.vb: Public Class MultiTenantBuilder(Of TTenantInfo As {Class, ITenantInfo})
+    content.vb: Public Class MultiTenantBuilder(Of TInfo As {Class, ITenantInfo})
   inheritance:
   - System.Object
   inheritedMembers:
@@ -48,9 +48,9 @@ items:
   - Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
   - Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
   - Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo)
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo)
-  name.vb: MultiTenantBuilder(Of TTenantInfo)
+  nameWithType.vb: MultiTenantBuilder(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo)
+  name.vb: MultiTenantBuilder(Of TInfo)
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   commentId: M:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   id: '#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)'
@@ -59,11 +59,11 @@ items:
   - csharp
   - vb
   name: MultiTenantBuilder(IServiceCollection)
-  nameWithType: MultiTenantBuilder<TTenantInfo>.MultiTenantBuilder(IServiceCollection)
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.MultiTenantBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: MultiTenantBuilder<TInfo>.MultiTenantBuilder(IServiceCollection)
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.MultiTenantBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -74,8 +74,8 @@ items:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     content.vb: Public Sub New(services As IServiceCollection)
   overload: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.#ctor*
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).New(IServiceCollection)
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).New(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).New(IServiceCollection)
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).New(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   name.vb: New(IServiceCollection)
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddTenantInfoProvider``1
   commentId: M:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddTenantInfoProvider``1
@@ -85,28 +85,28 @@ items:
   - csharp
   - vb
   name: AddTenantInfoProvider<TProvider>()
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddTenantInfoProvider<TProvider>()
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddTenantInfoProvider<TProvider>()
+  nameWithType: MultiTenantBuilder<TInfo>.AddTenantInfoProvider<TProvider>()
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddTenantInfoProvider<TProvider>()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
   summary: 添加租户信息提供者
   example: []
   syntax:
-    content: 'public MultiTenantBuilder<TTenantInfo> AddTenantInfoProvider<TProvider>() where TProvider : class, ITenantInfoProvider<TTenantInfo>'
+    content: 'public MultiTenantBuilder<TInfo> AddTenantInfoProvider<TProvider>() where TProvider : class, ITenantInfoProvider<TInfo>'
     typeParameters:
     - id: TProvider
       description: ''
     return:
       type: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
       description: ''
-    content.vb: Public Function AddTenantInfoProvider(Of TProvider As {Class, ITenantInfoProvider(Of TTenantInfo)})() As MultiTenantBuilder(Of TTenantInfo)
+    content.vb: Public Function AddTenantInfoProvider(Of TProvider As {Class, ITenantInfoProvider(Of TInfo)})() As MultiTenantBuilder(Of TInfo)
   overload: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddTenantInfoProvider*
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddTenantInfoProvider(Of TProvider)()
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddTenantInfoProvider(Of TProvider)()
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddTenantInfoProvider(Of TProvider)()
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddTenantInfoProvider(Of TProvider)()
   name.vb: AddTenantInfoProvider(Of TProvider)()
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddTenantFinder``1
   commentId: M:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddTenantFinder``1
@@ -116,28 +116,28 @@ items:
   - csharp
   - vb
   name: AddTenantFinder<TFinder>()
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddTenantFinder<TFinder>()
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddTenantFinder<TFinder>()
+  nameWithType: MultiTenantBuilder<TInfo>.AddTenantFinder<TFinder>()
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddTenantFinder<TFinder>()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
   summary: 添加租户查找器
   example: []
   syntax:
-    content: 'public MultiTenantBuilder<TTenantInfo> AddTenantFinder<TFinder>() where TFinder : class, ITenantFinder<TTenantInfo>'
+    content: 'public MultiTenantBuilder<TInfo> AddTenantFinder<TFinder>() where TFinder : class, ITenantFinder<TInfo>'
     typeParameters:
     - id: TFinder
       description: ''
     return:
       type: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
       description: ''
-    content.vb: Public Function AddTenantFinder(Of TFinder As {Class, ITenantFinder(Of TTenantInfo)})() As MultiTenantBuilder(Of TTenantInfo)
+    content.vb: Public Function AddTenantFinder(Of TFinder As {Class, ITenantFinder(Of TInfo)})() As MultiTenantBuilder(Of TInfo)
   overload: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddTenantFinder*
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddTenantFinder(Of TFinder)()
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddTenantFinder(Of TFinder)()
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddTenantFinder(Of TFinder)()
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddTenantFinder(Of TFinder)()
   name.vb: AddTenantFinder(Of TFinder)()
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddBasePathTenantFinder
   commentId: M:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddBasePathTenantFinder
@@ -147,25 +147,25 @@ items:
   - csharp
   - vb
   name: AddBasePathTenantFinder()
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddBasePathTenantFinder()
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddBasePathTenantFinder()
+  nameWithType: MultiTenantBuilder<TInfo>.AddBasePathTenantFinder()
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddBasePathTenantFinder()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
   summary: 基于路径的租户查找器
   example: []
   syntax:
-    content: public MultiTenantBuilder<TTenantInfo> AddBasePathTenantFinder()
+    content: public MultiTenantBuilder<TInfo> AddBasePathTenantFinder()
     return:
       type: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
       description: ''
-    content.vb: Public Function AddBasePathTenantFinder() As MultiTenantBuilder(Of TTenantInfo)
+    content.vb: Public Function AddBasePathTenantFinder() As MultiTenantBuilder(Of TInfo)
   overload: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddBasePathTenantFinder*
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddBasePathTenantFinder()
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddBasePathTenantFinder()
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddBasePathTenantFinder()
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddBasePathTenantFinder()
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddHeaderTenantFinder(System.String)
   commentId: M:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddHeaderTenantFinder(System.String)
   id: AddHeaderTenantFinder(System.String)
@@ -174,18 +174,18 @@ items:
   - csharp
   - vb
   name: AddHeaderTenantFinder(string?)
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddHeaderTenantFinder(string?)
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddHeaderTenantFinder(string?)
+  nameWithType: MultiTenantBuilder<TInfo>.AddHeaderTenantFinder(string?)
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddHeaderTenantFinder(string?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
   summary: 基于Header的租户查找器
   example: []
   syntax:
-    content: public MultiTenantBuilder<TTenantInfo> AddHeaderTenantFinder(string? tenantIdHeader = null)
+    content: public MultiTenantBuilder<TInfo> AddHeaderTenantFinder(string? tenantIdHeader = null)
     parameters:
     - id: tenantIdHeader
       type: System.String
@@ -193,10 +193,10 @@ items:
     return:
       type: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
       description: ''
-    content.vb: Public Function AddHeaderTenantFinder(tenantIdHeader As String = Nothing) As MultiTenantBuilder(Of TTenantInfo)
+    content.vb: Public Function AddHeaderTenantFinder(tenantIdHeader As String = Nothing) As MultiTenantBuilder(Of TInfo)
   overload: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddHeaderTenantFinder*
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddHeaderTenantFinder(String)
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddHeaderTenantFinder(String)
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddHeaderTenantFinder(String)
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddHeaderTenantFinder(String)
   name.vb: AddHeaderTenantFinder(String)
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddHostTenantFinder
   commentId: M:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddHostTenantFinder
@@ -206,25 +206,25 @@ items:
   - csharp
   - vb
   name: AddHostTenantFinder()
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddHostTenantFinder()
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddHostTenantFinder()
+  nameWithType: MultiTenantBuilder<TInfo>.AddHostTenantFinder()
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddHostTenantFinder()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
   summary: 基于Host的租户查找器
   example: []
   syntax:
-    content: public MultiTenantBuilder<TTenantInfo> AddHostTenantFinder()
+    content: public MultiTenantBuilder<TInfo> AddHostTenantFinder()
     return:
       type: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
       description: ''
-    content.vb: Public Function AddHostTenantFinder() As MultiTenantBuilder(Of TTenantInfo)
+    content.vb: Public Function AddHostTenantFinder() As MultiTenantBuilder(Of TInfo)
   overload: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddHostTenantFinder*
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddHostTenantFinder()
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddHostTenantFinder()
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddHostTenantFinder()
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddHostTenantFinder()
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddSessionTenantFinder(System.String)
   commentId: M:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddSessionTenantFinder(System.String)
   id: AddSessionTenantFinder(System.String)
@@ -233,18 +233,18 @@ items:
   - csharp
   - vb
   name: AddSessionTenantFinder(string?)
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddSessionTenantFinder(string?)
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddSessionTenantFinder(string?)
+  nameWithType: MultiTenantBuilder<TInfo>.AddSessionTenantFinder(string?)
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddSessionTenantFinder(string?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
   summary: 基于Session的租户查找器
   example: []
   syntax:
-    content: public MultiTenantBuilder<TTenantInfo> AddSessionTenantFinder(string? sessionId = null)
+    content: public MultiTenantBuilder<TInfo> AddSessionTenantFinder(string? sessionId = null)
     parameters:
     - id: sessionId
       type: System.String
@@ -252,10 +252,10 @@ items:
     return:
       type: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
       description: ''
-    content.vb: Public Function AddSessionTenantFinder(sessionId As String = Nothing) As MultiTenantBuilder(Of TTenantInfo)
+    content.vb: Public Function AddSessionTenantFinder(sessionId As String = Nothing) As MultiTenantBuilder(Of TInfo)
   overload: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddSessionTenantFinder*
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddSessionTenantFinder(String)
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddSessionTenantFinder(String)
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddSessionTenantFinder(String)
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddSessionTenantFinder(String)
   name.vb: AddSessionTenantFinder(String)
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddRouteTenantFinder(System.String)
   commentId: M:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddRouteTenantFinder(System.String)
@@ -265,18 +265,18 @@ items:
   - csharp
   - vb
   name: AddRouteTenantFinder(string?)
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddRouteTenantFinder(string?)
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddRouteTenantFinder(string?)
+  nameWithType: MultiTenantBuilder<TInfo>.AddRouteTenantFinder(string?)
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddRouteTenantFinder(string?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
   summary: 基于路由的租户查找器
   example: []
   syntax:
-    content: public MultiTenantBuilder<TTenantInfo> AddRouteTenantFinder(string? routeParameter = null)
+    content: public MultiTenantBuilder<TInfo> AddRouteTenantFinder(string? routeParameter = null)
     parameters:
     - id: routeParameter
       type: System.String
@@ -284,10 +284,10 @@ items:
     return:
       type: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
       description: ''
-    content.vb: Public Function AddRouteTenantFinder(routeParameter As String = Nothing) As MultiTenantBuilder(Of TTenantInfo)
+    content.vb: Public Function AddRouteTenantFinder(routeParameter As String = Nothing) As MultiTenantBuilder(Of TInfo)
   overload: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddRouteTenantFinder*
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddRouteTenantFinder(String)
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddRouteTenantFinder(String)
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddRouteTenantFinder(String)
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddRouteTenantFinder(String)
   name.vb: AddRouteTenantFinder(String)
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.Services
   commentId: P:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.Services
@@ -297,11 +297,11 @@ items:
   - csharp
   - vb
   name: Services
-  nameWithType: MultiTenantBuilder<TTenantInfo>.Services
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.Services
+  nameWithType: MultiTenantBuilder<TInfo>.Services
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.Services
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -312,8 +312,8 @@ items:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     content.vb: Public ReadOnly Property Services As IServiceCollection
   overload: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.Services*
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).Services
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).Services
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).Services
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).Services
 references:
 - uid: Biwen.QuickApi.MultiTenant
   commentId: N:Biwen.QuickApi.MultiTenant
@@ -587,12 +587,12 @@ references:
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
-  name: PublishAddedAsync<MultiTenantBuilder<TTenantInfo>>(MultiTenantBuilder<TTenantInfo>)
-  nameWithType: EntityExtensions.PublishAddedAsync<MultiTenantBuilder<TTenantInfo>>(MultiTenantBuilder<TTenantInfo>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>>(Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>)
-  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of MultiTenantBuilder(Of TTenantInfo))(MultiTenantBuilder(Of TTenantInfo))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo))(Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo))
-  name.vb: PublishAddedAsync(Of MultiTenantBuilder(Of TTenantInfo))(MultiTenantBuilder(Of TTenantInfo))
+  name: PublishAddedAsync<MultiTenantBuilder<TInfo>>(MultiTenantBuilder<TInfo>)
+  nameWithType: EntityExtensions.PublishAddedAsync<MultiTenantBuilder<TInfo>>(MultiTenantBuilder<TInfo>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>>(Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of MultiTenantBuilder(Of TInfo))(MultiTenantBuilder(Of TInfo))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo))(Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo))
+  name.vb: PublishAddedAsync(Of MultiTenantBuilder(Of TInfo))(MultiTenantBuilder(Of TInfo))
   spec.csharp:
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.MultiTenant.MultiTenantBuilder{`0})
     name: PublishAddedAsync
@@ -604,7 +604,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
   - name: <
-  - name: TTenantInfo
+  - name: TInfo
   - name: '>'
   - name: '>'
   - name: (
@@ -613,7 +613,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
   - name: <
-  - name: TTenantInfo
+  - name: TInfo
   - name: '>'
   - name: )
   spec.vb:
@@ -631,7 +631,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: TTenantInfo
+  - name: TInfo
   - name: )
   - name: )
   - name: (
@@ -642,7 +642,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: TTenantInfo
+  - name: TInfo
   - name: )
   - name: )
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
@@ -650,12 +650,12 @@ references:
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
-  name: PublishDeletedAsync<MultiTenantBuilder<TTenantInfo>>(MultiTenantBuilder<TTenantInfo>)
-  nameWithType: EntityExtensions.PublishDeletedAsync<MultiTenantBuilder<TTenantInfo>>(MultiTenantBuilder<TTenantInfo>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>>(Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>)
-  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of MultiTenantBuilder(Of TTenantInfo))(MultiTenantBuilder(Of TTenantInfo))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo))(Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo))
-  name.vb: PublishDeletedAsync(Of MultiTenantBuilder(Of TTenantInfo))(MultiTenantBuilder(Of TTenantInfo))
+  name: PublishDeletedAsync<MultiTenantBuilder<TInfo>>(MultiTenantBuilder<TInfo>)
+  nameWithType: EntityExtensions.PublishDeletedAsync<MultiTenantBuilder<TInfo>>(MultiTenantBuilder<TInfo>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>>(Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of MultiTenantBuilder(Of TInfo))(MultiTenantBuilder(Of TInfo))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo))(Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo))
+  name.vb: PublishDeletedAsync(Of MultiTenantBuilder(Of TInfo))(MultiTenantBuilder(Of TInfo))
   spec.csharp:
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.MultiTenant.MultiTenantBuilder{`0})
     name: PublishDeletedAsync
@@ -667,7 +667,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
   - name: <
-  - name: TTenantInfo
+  - name: TInfo
   - name: '>'
   - name: '>'
   - name: (
@@ -676,7 +676,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
   - name: <
-  - name: TTenantInfo
+  - name: TInfo
   - name: '>'
   - name: )
   spec.vb:
@@ -694,7 +694,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: TTenantInfo
+  - name: TInfo
   - name: )
   - name: )
   - name: (
@@ -705,7 +705,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: TTenantInfo
+  - name: TInfo
   - name: )
   - name: )
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
@@ -713,12 +713,12 @@ references:
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
-  name: PublishUpdatedAsync<MultiTenantBuilder<TTenantInfo>>(MultiTenantBuilder<TTenantInfo>)
-  nameWithType: EntityExtensions.PublishUpdatedAsync<MultiTenantBuilder<TTenantInfo>>(MultiTenantBuilder<TTenantInfo>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>>(Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>)
-  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of MultiTenantBuilder(Of TTenantInfo))(MultiTenantBuilder(Of TTenantInfo))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo))(Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo))
-  name.vb: PublishUpdatedAsync(Of MultiTenantBuilder(Of TTenantInfo))(MultiTenantBuilder(Of TTenantInfo))
+  name: PublishUpdatedAsync<MultiTenantBuilder<TInfo>>(MultiTenantBuilder<TInfo>)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<MultiTenantBuilder<TInfo>>(MultiTenantBuilder<TInfo>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>>(Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of MultiTenantBuilder(Of TInfo))(MultiTenantBuilder(Of TInfo))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo))(Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo))
+  name.vb: PublishUpdatedAsync(Of MultiTenantBuilder(Of TInfo))(MultiTenantBuilder(Of TInfo))
   spec.csharp:
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.MultiTenant.MultiTenantBuilder{`0})
     name: PublishUpdatedAsync
@@ -730,7 +730,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
   - name: <
-  - name: TTenantInfo
+  - name: TInfo
   - name: '>'
   - name: '>'
   - name: (
@@ -739,7 +739,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
   - name: <
-  - name: TTenantInfo
+  - name: TInfo
   - name: '>'
   - name: )
   spec.vb:
@@ -757,7 +757,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: TTenantInfo
+  - name: TInfo
   - name: )
   - name: )
   - name: (
@@ -768,7 +768,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: TTenantInfo
+  - name: TInfo
   - name: )
   - name: )
 - uid: System
@@ -940,10 +940,10 @@ references:
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html#Biwen_QuickApi_MultiTenant_MultiTenantBuilder_1__ctor_Microsoft_Extensions_DependencyInjection_IServiceCollection_
   name: MultiTenantBuilder
-  nameWithType: MultiTenantBuilder<TTenantInfo>.MultiTenantBuilder
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.MultiTenantBuilder
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).New
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).New
+  nameWithType: MultiTenantBuilder<TInfo>.MultiTenantBuilder
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.MultiTenantBuilder
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).New
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).New
   name.vb: New
 - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
   commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
@@ -995,28 +995,28 @@ references:
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html#Biwen_QuickApi_MultiTenant_MultiTenantBuilder_1_AddTenantInfoProvider__1
   name: AddTenantInfoProvider
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddTenantInfoProvider
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddTenantInfoProvider
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddTenantInfoProvider
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddTenantInfoProvider
+  nameWithType: MultiTenantBuilder<TInfo>.AddTenantInfoProvider
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddTenantInfoProvider
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddTenantInfoProvider
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddTenantInfoProvider
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
   commentId: T:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
   parent: Biwen.QuickApi.MultiTenant
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
-  name: MultiTenantBuilder<TTenantInfo>
-  nameWithType: MultiTenantBuilder<TTenantInfo>
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo)
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo)
-  name.vb: MultiTenantBuilder(Of TTenantInfo)
+  name: MultiTenantBuilder<TInfo>
+  nameWithType: MultiTenantBuilder<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>
+  nameWithType.vb: MultiTenantBuilder(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo)
+  name.vb: MultiTenantBuilder(Of TInfo)
   spec.csharp:
   - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
     name: MultiTenantBuilder
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
   - name: <
-  - name: TTenantInfo
+  - name: TInfo
   - name: '>'
   spec.vb:
   - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
@@ -1026,35 +1026,35 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: TTenantInfo
+  - name: TInfo
   - name: )
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddTenantFinder*
   commentId: Overload:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddTenantFinder
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html#Biwen_QuickApi_MultiTenant_MultiTenantBuilder_1_AddTenantFinder__1
   name: AddTenantFinder
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddTenantFinder
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddTenantFinder
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddTenantFinder
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddTenantFinder
+  nameWithType: MultiTenantBuilder<TInfo>.AddTenantFinder
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddTenantFinder
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddTenantFinder
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddTenantFinder
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddBasePathTenantFinder*
   commentId: Overload:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddBasePathTenantFinder
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html#Biwen_QuickApi_MultiTenant_MultiTenantBuilder_1_AddBasePathTenantFinder
   name: AddBasePathTenantFinder
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddBasePathTenantFinder
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddBasePathTenantFinder
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddBasePathTenantFinder
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddBasePathTenantFinder
+  nameWithType: MultiTenantBuilder<TInfo>.AddBasePathTenantFinder
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddBasePathTenantFinder
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddBasePathTenantFinder
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddBasePathTenantFinder
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddHeaderTenantFinder*
   commentId: Overload:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddHeaderTenantFinder
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html#Biwen_QuickApi_MultiTenant_MultiTenantBuilder_1_AddHeaderTenantFinder_System_String_
   name: AddHeaderTenantFinder
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddHeaderTenantFinder
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddHeaderTenantFinder
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddHeaderTenantFinder
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddHeaderTenantFinder
+  nameWithType: MultiTenantBuilder<TInfo>.AddHeaderTenantFinder
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddHeaderTenantFinder
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddHeaderTenantFinder
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddHeaderTenantFinder
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -1071,34 +1071,34 @@ references:
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html#Biwen_QuickApi_MultiTenant_MultiTenantBuilder_1_AddHostTenantFinder
   name: AddHostTenantFinder
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddHostTenantFinder
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddHostTenantFinder
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddHostTenantFinder
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddHostTenantFinder
+  nameWithType: MultiTenantBuilder<TInfo>.AddHostTenantFinder
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddHostTenantFinder
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddHostTenantFinder
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddHostTenantFinder
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddSessionTenantFinder*
   commentId: Overload:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddSessionTenantFinder
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html#Biwen_QuickApi_MultiTenant_MultiTenantBuilder_1_AddSessionTenantFinder_System_String_
   name: AddSessionTenantFinder
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddSessionTenantFinder
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddSessionTenantFinder
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddSessionTenantFinder
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddSessionTenantFinder
+  nameWithType: MultiTenantBuilder<TInfo>.AddSessionTenantFinder
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddSessionTenantFinder
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddSessionTenantFinder
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddSessionTenantFinder
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddRouteTenantFinder*
   commentId: Overload:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.AddRouteTenantFinder
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html#Biwen_QuickApi_MultiTenant_MultiTenantBuilder_1_AddRouteTenantFinder_System_String_
   name: AddRouteTenantFinder
-  nameWithType: MultiTenantBuilder<TTenantInfo>.AddRouteTenantFinder
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.AddRouteTenantFinder
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).AddRouteTenantFinder
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).AddRouteTenantFinder
+  nameWithType: MultiTenantBuilder<TInfo>.AddRouteTenantFinder
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.AddRouteTenantFinder
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).AddRouteTenantFinder
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).AddRouteTenantFinder
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.Services*
   commentId: Overload:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1.Services
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html#Biwen_QuickApi_MultiTenant_MultiTenantBuilder_1_Services
   name: Services
-  nameWithType: MultiTenantBuilder<TTenantInfo>.Services
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>.Services
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo).Services
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo).Services
+  nameWithType: MultiTenantBuilder<TInfo>.Services
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>.Services
+  nameWithType.vb: MultiTenantBuilder(Of TInfo).Services
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo).Services

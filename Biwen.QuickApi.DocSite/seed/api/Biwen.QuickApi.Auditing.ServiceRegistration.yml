@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -55,7 +55,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.ServiceRegistration.AddAuditHandler<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -91,7 +91,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.ServiceRegistration.CleanAllAuditHandler(Microsoft.Extensions.DependencyInjection.ServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing

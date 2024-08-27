@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Auditing.Abstractions
+  commentId: N:Biwen.QuickApi.Auditing.Abstractions
+  id: Biwen.QuickApi.Auditing.Abstractions
+  children:
+  - Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Auditing.Abstractions
+  nameWithType: Biwen.QuickApi.Auditing.Abstractions
+  fullName: Biwen.QuickApi.Auditing.Abstractions
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+  commentId: T:Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+  isExternal: true
+  href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
+  name: IAuditHandler
+  nameWithType: IAuditHandler
+  fullName: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler

@@ -18,7 +18,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
@@ -56,7 +56,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock.LocalLock(Microsoft.Extensions.Logging.ILogger<Biwen.QuickApi.Infrastructure.Locking.LocalLock>)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
@@ -82,7 +82,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock.AcquireLockAsync(string, System.TimeSpan?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
@@ -119,7 +119,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock.TryAcquireLockAsync(string, System.TimeSpan, System.TimeSpan?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
@@ -158,7 +158,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock.IsLockAcquiredAsync(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking
@@ -190,7 +190,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.Locking.LocalLock.Dispose()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Infrastructure/Locking/LocalLock.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.Locking

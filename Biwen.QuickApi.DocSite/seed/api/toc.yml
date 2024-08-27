@@ -148,12 +148,15 @@ items:
     name: AuditInfo
   - uid: Biwen.QuickApi.Auditing.AuditProxyFactory`1
     name: AuditProxyFactory<T>
-  - uid: Biwen.QuickApi.Auditing.IAuditHandler
-    name: IAuditHandler
   - uid: Biwen.QuickApi.Auditing.IgnoreType
     name: IgnoreType
   - uid: Biwen.QuickApi.Auditing.ServiceRegistration
     name: ServiceRegistration
+- uid: Biwen.QuickApi.Auditing.Abstractions
+  name: Biwen.QuickApi.Auditing.Abstractions
+  items:
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
 - uid: Biwen.QuickApi.Caching
   name: Biwen.QuickApi.Caching
   items:
@@ -161,10 +164,10 @@ items:
     name: AutoCacheAttribute
   - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1
     name: CachingProxyFactory<T>
-- uid: Biwen.QuickApi.Caching.ProxyCache
-  name: Biwen.QuickApi.Caching.ProxyCache
+- uid: Biwen.QuickApi.Caching.Abstractions
+  name: Biwen.QuickApi.Caching.Abstractions
   items:
-  - uid: Biwen.QuickApi.Caching.ProxyCache.IProxyCache
+  - uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache
     name: IProxyCache
 - uid: Biwen.QuickApi.Events
   name: Biwen.QuickApi.Events
@@ -320,7 +323,7 @@ items:
   - uid: Biwen.QuickApi.MultiTenant.ITenantInfo
     name: ITenantInfo
   - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
-    name: MultiTenantBuilder<TTenantInfo>
+    name: MultiTenantBuilder<TInfo>
   - uid: Biwen.QuickApi.MultiTenant.MultiTenantOptions
     name: MultiTenantOptions
   - uid: Biwen.QuickApi.MultiTenant.ServiceRegistration
@@ -333,7 +336,7 @@ items:
   - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder`1
     name: ITenantFinder<TInfo>
   - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
-    name: ITenantInfoProvider<T>
+    name: ITenantInfoProvider<TInfo>
 - uid: Biwen.QuickApi.MultiTenant.Finders
   name: Biwen.QuickApi.MultiTenant.Finders
   items:

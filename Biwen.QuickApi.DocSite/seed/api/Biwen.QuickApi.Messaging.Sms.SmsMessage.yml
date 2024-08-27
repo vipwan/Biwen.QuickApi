@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.SmsMessage
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/SmsMessage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Messaging/Sms/SmsMessage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
@@ -52,7 +52,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.SmsMessage.SmsMessage(string, string)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/SmsMessage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Messaging/Sms/SmsMessage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
@@ -80,7 +80,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.SmsMessage.PhoneNumber
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/SmsMessage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Messaging/Sms/SmsMessage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
@@ -103,7 +103,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.SmsMessage.Text
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/SmsMessage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Messaging/Sms/SmsMessage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms
@@ -126,7 +126,7 @@ items:
   fullName: Biwen.QuickApi.Messaging.Sms.SmsMessage.Properties
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Messaging/Sms/SmsMessage.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Messaging/Sms/SmsMessage.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Messaging.Sms

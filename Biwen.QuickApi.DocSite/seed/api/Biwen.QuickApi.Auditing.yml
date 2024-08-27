@@ -8,7 +8,6 @@ items:
   - Biwen.QuickApi.Auditing.AuditIgnoreAttribute
   - Biwen.QuickApi.Auditing.AuditInfo
   - Biwen.QuickApi.Auditing.AuditProxyFactory`1
-  - Biwen.QuickApi.Auditing.IAuditHandler
   - Biwen.QuickApi.Auditing.IgnoreType
   - Biwen.QuickApi.Auditing.ServiceRegistration
   langs:
@@ -80,13 +79,6 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: Biwen.QuickApi.Auditing.IAuditHandler
-  commentId: T:Biwen.QuickApi.Auditing.IAuditHandler
-  isExternal: true
-  href: Biwen.QuickApi.Auditing.IAuditHandler.html
-  name: IAuditHandler
-  nameWithType: IAuditHandler
-  fullName: Biwen.QuickApi.Auditing.IAuditHandler
 - uid: Biwen.QuickApi.Auditing.ServiceRegistration
   commentId: T:Biwen.QuickApi.Auditing.ServiceRegistration
   isExternal: true

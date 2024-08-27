@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/IQueryablePageListExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/IQueryablePageListExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -46,7 +46,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions.ToPagedListAsync<T>(System.Linq.IQueryable<T>, int, int, int, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/IQueryablePageListExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/IQueryablePageListExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork

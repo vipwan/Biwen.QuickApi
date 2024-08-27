@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Caching.Abstractions
+  commentId: N:Biwen.QuickApi.Caching.Abstractions
+  id: Biwen.QuickApi.Caching.Abstractions
+  children:
+  - Biwen.QuickApi.Caching.Abstractions.IProxyCache
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Caching.Abstractions
+  nameWithType: Biwen.QuickApi.Caching.Abstractions
+  fullName: Biwen.QuickApi.Caching.Abstractions
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache
+  commentId: T:Biwen.QuickApi.Caching.Abstractions.IProxyCache
+  parent: Biwen.QuickApi.Caching.Abstractions
+  isExternal: true
+  href: Biwen.QuickApi.Caching.Abstractions.IProxyCache.html
+  name: IProxyCache
+  nameWithType: IProxyCache
+  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache
+- uid: Biwen.QuickApi.Caching.Abstractions
+  commentId: N:Biwen.QuickApi.Caching.Abstractions
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Caching.Abstractions
+  nameWithType: Biwen.QuickApi.Caching.Abstractions
+  fullName: Biwen.QuickApi.Caching.Abstractions
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching
+    name: Caching
+    isExternal: true
+    href: Biwen.QuickApi.Caching.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Caching.Abstractions.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching
+    name: Caching
+    isExternal: true
+    href: Biwen.QuickApi.Caching.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Caching.Abstractions.html

@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -66,7 +66,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req>.ExecuteAsync(Req, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -101,7 +101,7 @@ items:
   fullName: Biwen.QuickApi.BaseQuickApi<Req>.BaseQuickApi()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/BaseQuickApi.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/BaseQuickApi.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

@@ -5,7 +5,7 @@ items:
   id: SessionTenantFinder`1
   parent: Biwen.QuickApi.MultiTenant.Finders
   children:
-  - Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
+  - Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Biwen.QuickApi.Caching.CachingProxyFactory{Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0}})
   - Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.FindAsync
   langs:
   - csharp
@@ -15,14 +15,17 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder<TInfo>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/Finders/SessionTenantFinder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/Finders/SessionTenantFinder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant.Finders
+  summary: 基于Session的租户查找器
+  example: []
   syntax:
     content: 'public class SessionTenantFinder<TInfo> : ITenantFinder<TInfo> where TInfo : ITenantInfo'
     typeParameters:
     - id: TInfo
+      description: ''
     content.vb: Public Class SessionTenantFinder(Of TInfo As ITenantInfo) Implements ITenantFinder(Of TInfo)
   inheritance:
   - System.Object
@@ -43,34 +46,38 @@ items:
   nameWithType.vb: SessionTenantFinder(Of TInfo)
   fullName.vb: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder(Of TInfo)
   name.vb: SessionTenantFinder(Of TInfo)
-- uid: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
-  commentId: M:Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
-  id: '#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})'
+- uid: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Biwen.QuickApi.Caching.CachingProxyFactory{Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0}})
+  commentId: M:Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Biwen.QuickApi.Caching.CachingProxyFactory{Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0}})
+  id: '#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Biwen.QuickApi.Caching.CachingProxyFactory{Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0}})'
   parent: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1
   langs:
   - csharp
   - vb
-  name: SessionTenantFinder(IHttpContextAccessor, ITenantInfoProvider<TInfo>)
-  nameWithType: SessionTenantFinder<TInfo>.SessionTenantFinder(IHttpContextAccessor, ITenantInfoProvider<TInfo>)
-  fullName: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder<TInfo>.SessionTenantFinder(Microsoft.AspNetCore.Http.IHttpContextAccessor, Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>)
+  name: SessionTenantFinder(IHttpContextAccessor, CachingProxyFactory<ITenantInfoProvider<TInfo>>)
+  nameWithType: SessionTenantFinder<TInfo>.SessionTenantFinder(IHttpContextAccessor, CachingProxyFactory<ITenantInfoProvider<TInfo>>)
+  fullName: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder<TInfo>.SessionTenantFinder(Microsoft.AspNetCore.Http.IHttpContextAccessor, Biwen.QuickApi.Caching.CachingProxyFactory<Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>>)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/Finders/SessionTenantFinder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/Finders/SessionTenantFinder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant.Finders
+  summary: 基于Session的租户查找器
+  example: []
   syntax:
-    content: public SessionTenantFinder(IHttpContextAccessor httpContextAccessor, ITenantInfoProvider<TInfo> tenantInfoProvider)
+    content: public SessionTenantFinder(IHttpContextAccessor httpContextAccessor, CachingProxyFactory<ITenantInfoProvider<TInfo>> cachingProxyFactory)
     parameters:
     - id: httpContextAccessor
       type: Microsoft.AspNetCore.Http.IHttpContextAccessor
-    - id: tenantInfoProvider
-      type: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{{TInfo}}
-    content.vb: Public Sub New(httpContextAccessor As IHttpContextAccessor, tenantInfoProvider As ITenantInfoProvider(Of TInfo))
+      description: ''
+    - id: cachingProxyFactory
+      type: Biwen.QuickApi.Caching.CachingProxyFactory{Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{{TInfo}}}
+      description: ''
+    content.vb: Public Sub New(httpContextAccessor As IHttpContextAccessor, cachingProxyFactory As CachingProxyFactory(Of ITenantInfoProvider(Of TInfo)))
   overload: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.#ctor*
-  nameWithType.vb: SessionTenantFinder(Of TInfo).New(IHttpContextAccessor, ITenantInfoProvider(Of TInfo))
-  fullName.vb: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder(Of TInfo).New(Microsoft.AspNetCore.Http.IHttpContextAccessor, Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo))
-  name.vb: New(IHttpContextAccessor, ITenantInfoProvider(Of TInfo))
+  nameWithType.vb: SessionTenantFinder(Of TInfo).New(IHttpContextAccessor, CachingProxyFactory(Of ITenantInfoProvider(Of TInfo)))
+  fullName.vb: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder(Of TInfo).New(Microsoft.AspNetCore.Http.IHttpContextAccessor, Biwen.QuickApi.Caching.CachingProxyFactory(Of Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo)))
+  name.vb: New(IHttpContextAccessor, CachingProxyFactory(Of ITenantInfoProvider(Of TInfo)))
 - uid: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.FindAsync
   commentId: M:Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.FindAsync
   id: FindAsync
@@ -83,7 +90,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder<TInfo>.FindAsync()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/Finders/SessionTenantFinder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/Finders/SessionTenantFinder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant.Finders
@@ -838,7 +845,7 @@ references:
 - uid: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.#ctor*
   commentId: Overload:Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.#ctor
   isExternal: true
-  href: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder-1.html#Biwen_QuickApi_MultiTenant_Finders_SessionTenantFinder_1__ctor_Microsoft_AspNetCore_Http_IHttpContextAccessor_Biwen_QuickApi_MultiTenant_Abstractions_ITenantInfoProvider__0__
+  href: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder-1.html#Biwen_QuickApi_MultiTenant_Finders_SessionTenantFinder_1__ctor_Microsoft_AspNetCore_Http_IHttpContextAccessor_Biwen_QuickApi_Caching_CachingProxyFactory_Biwen_QuickApi_MultiTenant_Abstractions_ITenantInfoProvider__0___
   name: SessionTenantFinder
   nameWithType: SessionTenantFinder<TInfo>.SessionTenantFinder
   fullName: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder<TInfo>.SessionTenantFinder
@@ -853,18 +860,23 @@ references:
   name: IHttpContextAccessor
   nameWithType: IHttpContextAccessor
   fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor
-- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{{TInfo}}
-  commentId: T:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0}
-  parent: Biwen.QuickApi.MultiTenant.Abstractions
-  definition: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
-  href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
-  name: ITenantInfoProvider<TInfo>
-  nameWithType: ITenantInfoProvider<TInfo>
-  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>
-  nameWithType.vb: ITenantInfoProvider(Of TInfo)
-  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo)
-  name.vb: ITenantInfoProvider(Of TInfo)
+- uid: Biwen.QuickApi.Caching.CachingProxyFactory{Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{{TInfo}}}
+  commentId: T:Biwen.QuickApi.Caching.CachingProxyFactory{Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0}}
+  parent: Biwen.QuickApi.Caching
+  definition: Biwen.QuickApi.Caching.CachingProxyFactory`1
+  href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html
+  name: CachingProxyFactory<ITenantInfoProvider<TInfo>>
+  nameWithType: CachingProxyFactory<ITenantInfoProvider<TInfo>>
+  fullName: Biwen.QuickApi.Caching.CachingProxyFactory<Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>>
+  nameWithType.vb: CachingProxyFactory(Of ITenantInfoProvider(Of TInfo))
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo))
+  name.vb: CachingProxyFactory(Of ITenantInfoProvider(Of TInfo))
   spec.csharp:
+  - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1
+    name: CachingProxyFactory
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html
+  - name: <
   - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
     name: ITenantInfoProvider
     isExternal: true
@@ -872,7 +884,15 @@ references:
   - name: <
   - name: TInfo
   - name: '>'
+  - name: '>'
   spec.vb:
+  - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1
+    name: CachingProxyFactory
+    isExternal: true
+    href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html
+  - name: (
+  - name: Of
+  - name: " "
   - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
     name: ITenantInfoProvider
     isExternal: true
@@ -881,6 +901,7 @@ references:
   - name: Of
   - name: " "
   - name: TInfo
+  - name: )
   - name: )
 - uid: Microsoft.AspNetCore.Http
   commentId: N:Microsoft.AspNetCore.Http
@@ -919,34 +940,71 @@ references:
     name: Http
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http
-- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
-  commentId: T:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
+- uid: Biwen.QuickApi.Caching.CachingProxyFactory`1
+  commentId: T:Biwen.QuickApi.Caching.CachingProxyFactory`1
   isExternal: true
-  href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
-  name: ITenantInfoProvider<T>
-  nameWithType: ITenantInfoProvider<T>
-  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>
-  nameWithType.vb: ITenantInfoProvider(Of T)
-  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T)
-  name.vb: ITenantInfoProvider(Of T)
+  href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html
+  name: CachingProxyFactory<T>
+  nameWithType: CachingProxyFactory<T>
+  fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>
+  nameWithType.vb: CachingProxyFactory(Of T)
+  fullName.vb: Biwen.QuickApi.Caching.CachingProxyFactory(Of T)
+  name.vb: CachingProxyFactory(Of T)
   spec.csharp:
-  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
-    name: ITenantInfoProvider
+  - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1
+    name: CachingProxyFactory
     isExternal: true
-    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+    href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
-    name: ITenantInfoProvider
+  - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1
+    name: CachingProxyFactory
     isExternal: true
-    href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
+    href: Biwen.QuickApi.Caching.CachingProxyFactory-1.html
   - name: (
   - name: Of
   - name: " "
   - name: T
   - name: )
+- uid: Biwen.QuickApi.Caching
+  commentId: N:Biwen.QuickApi.Caching
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Caching
+  nameWithType: Biwen.QuickApi.Caching
+  fullName: Biwen.QuickApi.Caching
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching
+    name: Caching
+    isExternal: true
+    href: Biwen.QuickApi.Caching.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching
+    name: Caching
+    isExternal: true
+    href: Biwen.QuickApi.Caching.html
 - uid: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.FindAsync*
   commentId: Overload:Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1.FindAsync
   isExternal: true

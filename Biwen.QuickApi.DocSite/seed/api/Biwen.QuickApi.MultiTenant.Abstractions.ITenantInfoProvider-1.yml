@@ -9,27 +9,30 @@ items:
   langs:
   - csharp
   - vb
-  name: ITenantInfoProvider<T>
-  nameWithType: ITenantInfoProvider<T>
-  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>
+  name: ITenantInfoProvider<TInfo>
+  nameWithType: ITenantInfoProvider<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/Abstractions/ITenantInfoProvider.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/Abstractions/ITenantInfoProvider.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant.Abstractions
+  summary: 租户信息提供者
+  example: []
   syntax:
-    content: 'public interface ITenantInfoProvider<T> where T : ITenantInfo'
+    content: 'public interface ITenantInfoProvider<TInfo> where TInfo : ITenantInfo'
     typeParameters:
-    - id: T
-    content.vb: Public Interface ITenantInfoProvider(Of T As ITenantInfo)
+    - id: TInfo
+      description: ''
+    content.vb: Public Interface ITenantInfoProvider(Of TInfo As ITenantInfo)
   extensionMethods:
   - Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
   - Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
   - Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
-  nameWithType.vb: ITenantInfoProvider(Of T)
-  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T)
-  name.vb: ITenantInfoProvider(Of T)
+  nameWithType.vb: ITenantInfoProvider(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo)
+  name.vb: ITenantInfoProvider(Of TInfo)
 - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll
   commentId: M:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll
   id: GetAll
@@ -38,25 +41,37 @@ items:
   - csharp
   - vb
   name: GetAll()
-  nameWithType: ITenantInfoProvider<T>.GetAll()
-  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>.GetAll()
+  nameWithType: ITenantInfoProvider<TInfo>.GetAll()
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>.GetAll()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/Abstractions/ITenantInfoProvider.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/Abstractions/ITenantInfoProvider.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant.Abstractions
   summary: 请注意如果是通过数据库,配置文件等方式,内部请使用缓存提升性能
   example: []
   syntax:
-    content: Task<IList<T>> GetAll()
+    content: >-
+      [AutoCache(1800)]
+
+      Task<IList<TInfo>> GetAll()
     return:
-      type: System.Threading.Tasks.Task{System.Collections.Generic.IList{{T}}}
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IList{{TInfo}}}
       description: ''
-    content.vb: Function GetAll() As Task(Of IList(Of T))
+    content.vb: >-
+      <AutoCache(1800)>
+
+      Function GetAll() As Task(Of IList(Of TInfo))
   overload: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll*
-  nameWithType.vb: ITenantInfoProvider(Of T).GetAll()
-  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T).GetAll()
+  attributes:
+  - type: Biwen.QuickApi.Caching.AutoCacheAttribute
+    ctor: Biwen.QuickApi.Caching.AutoCacheAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 1800
+  nameWithType.vb: ITenantInfoProvider(Of TInfo).GetAll()
+  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo).GetAll()
 references:
 - uid: Biwen.QuickApi.MultiTenant.Abstractions
   commentId: N:Biwen.QuickApi.MultiTenant.Abstractions
@@ -110,12 +125,12 @@ references:
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
-  name: PublishAddedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
-  nameWithType: EntityExtensions.PublishAddedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>>(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>)
-  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))
-  name.vb: PublishAddedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
+  name: PublishAddedAsync<ITenantInfoProvider<TInfo>>(ITenantInfoProvider<TInfo>)
+  nameWithType: EntityExtensions.PublishAddedAsync<ITenantInfoProvider<TInfo>>(ITenantInfoProvider<TInfo>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>>(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of ITenantInfoProvider(Of TInfo))(ITenantInfoProvider(Of TInfo))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo))(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo))
+  name.vb: PublishAddedAsync(Of ITenantInfoProvider(Of TInfo))(ITenantInfoProvider(Of TInfo))
   spec.csharp:
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
     name: PublishAddedAsync
@@ -127,7 +142,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
   - name: <
-  - name: T
+  - name: TInfo
   - name: '>'
   - name: '>'
   - name: (
@@ -136,7 +151,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
   - name: <
-  - name: T
+  - name: TInfo
   - name: '>'
   - name: )
   spec.vb:
@@ -154,7 +169,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: TInfo
   - name: )
   - name: )
   - name: (
@@ -165,7 +180,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: TInfo
   - name: )
   - name: )
 - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
@@ -173,12 +188,12 @@ references:
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
-  name: PublishDeletedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
-  nameWithType: EntityExtensions.PublishDeletedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>>(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>)
-  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))
-  name.vb: PublishDeletedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
+  name: PublishDeletedAsync<ITenantInfoProvider<TInfo>>(ITenantInfoProvider<TInfo>)
+  nameWithType: EntityExtensions.PublishDeletedAsync<ITenantInfoProvider<TInfo>>(ITenantInfoProvider<TInfo>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>>(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of ITenantInfoProvider(Of TInfo))(ITenantInfoProvider(Of TInfo))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo))(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo))
+  name.vb: PublishDeletedAsync(Of ITenantInfoProvider(Of TInfo))(ITenantInfoProvider(Of TInfo))
   spec.csharp:
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
     name: PublishDeletedAsync
@@ -190,7 +205,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
   - name: <
-  - name: T
+  - name: TInfo
   - name: '>'
   - name: '>'
   - name: (
@@ -199,7 +214,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
   - name: <
-  - name: T
+  - name: TInfo
   - name: '>'
   - name: )
   spec.vb:
@@ -217,7 +232,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: TInfo
   - name: )
   - name: )
   - name: (
@@ -228,7 +243,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: TInfo
   - name: )
   - name: )
 - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
@@ -236,12 +251,12 @@ references:
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
-  name: PublishUpdatedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
-  nameWithType: EntityExtensions.PublishUpdatedAsync<ITenantInfoProvider<T>>(ITenantInfoProvider<T>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>>(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>)
-  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T))
-  name.vb: PublishUpdatedAsync(Of ITenantInfoProvider(Of T))(ITenantInfoProvider(Of T))
+  name: PublishUpdatedAsync<ITenantInfoProvider<TInfo>>(ITenantInfoProvider<TInfo>)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<ITenantInfoProvider<TInfo>>(ITenantInfoProvider<TInfo>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>>(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of ITenantInfoProvider(Of TInfo))(ITenantInfoProvider(Of TInfo))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo))(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo))
+  name.vb: PublishUpdatedAsync(Of ITenantInfoProvider(Of TInfo))(ITenantInfoProvider(Of TInfo))
   spec.csharp:
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider{`0})
     name: PublishUpdatedAsync
@@ -253,7 +268,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
   - name: <
-  - name: T
+  - name: TInfo
   - name: '>'
   - name: '>'
   - name: (
@@ -262,7 +277,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
   - name: <
-  - name: T
+  - name: TInfo
   - name: '>'
   - name: )
   spec.vb:
@@ -280,7 +295,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: TInfo
   - name: )
   - name: )
   - name: (
@@ -291,7 +306,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: TInfo
   - name: )
   - name: )
 - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
@@ -456,21 +471,21 @@ references:
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html#Biwen_QuickApi_MultiTenant_Abstractions_ITenantInfoProvider_1_GetAll
   name: GetAll
-  nameWithType: ITenantInfoProvider<T>.GetAll
-  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>.GetAll
-  nameWithType.vb: ITenantInfoProvider(Of T).GetAll
-  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T).GetAll
-- uid: System.Threading.Tasks.Task{System.Collections.Generic.IList{{T}}}
+  nameWithType: ITenantInfoProvider<TInfo>.GetAll
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>.GetAll
+  nameWithType.vb: ITenantInfoProvider(Of TInfo).GetAll
+  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo).GetAll
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IList{{TInfo}}}
   commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IList{`0}}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<IList<T>>
-  nameWithType: Task<IList<T>>
-  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IList<T>>
-  nameWithType.vb: Task(Of IList(Of T))
-  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IList(Of T))
-  name.vb: Task(Of IList(Of T))
+  name: Task<IList<TInfo>>
+  nameWithType: Task<IList<TInfo>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IList<TInfo>>
+  nameWithType.vb: Task(Of IList(Of TInfo))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IList(Of TInfo))
+  name.vb: Task(Of IList(Of TInfo))
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
@@ -482,7 +497,7 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
   - name: <
-  - name: T
+  - name: TInfo
   - name: '>'
   - name: '>'
   spec.vb:
@@ -500,7 +515,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: TInfo
   - name: )
   - name: )
 - uid: System.Threading.Tasks.Task`1

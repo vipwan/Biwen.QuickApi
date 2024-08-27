@@ -22,7 +22,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -66,7 +66,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList<T>.PagedList(System.Collections.Generic.IEnumerable<T>, int, int, int, int)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -107,7 +107,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList<T>.PageIndex
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -136,7 +136,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList<T>.PageSize
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -165,7 +165,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList<T>.TotalCount
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -194,7 +194,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList<T>.TotalPages
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -223,7 +223,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList<T>.IndexFrom
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -253,7 +253,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList<T>.Items
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -282,7 +282,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList<T>.HasPreviousPage
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -312,7 +312,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList<T>.HasNextPage
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/Pagenation/PagedListOfT.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation

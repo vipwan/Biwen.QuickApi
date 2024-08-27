@@ -43,32 +43,24 @@ references:
   name: ITenantInfo
   nameWithType: ITenantInfo
   fullName: Biwen.QuickApi.MultiTenant.ITenantInfo
-- uid: Biwen.QuickApi.MultiTenant.TenantInfo
-  commentId: T:Biwen.QuickApi.MultiTenant.TenantInfo
-  parent: Biwen.QuickApi.MultiTenant
-  isExternal: true
-  href: Biwen.QuickApi.MultiTenant.TenantInfo.html
-  name: TenantInfo
-  nameWithType: TenantInfo
-  fullName: Biwen.QuickApi.MultiTenant.TenantInfo
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
   commentId: T:Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
   parent: Biwen.QuickApi.MultiTenant
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
-  name: MultiTenantBuilder<TTenantInfo>
-  nameWithType: MultiTenantBuilder<TTenantInfo>
-  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TTenantInfo>
-  nameWithType.vb: MultiTenantBuilder(Of TTenantInfo)
-  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TTenantInfo)
-  name.vb: MultiTenantBuilder(Of TTenantInfo)
+  name: MultiTenantBuilder<TInfo>
+  nameWithType: MultiTenantBuilder<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantBuilder<TInfo>
+  nameWithType.vb: MultiTenantBuilder(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.MultiTenantBuilder(Of TInfo)
+  name.vb: MultiTenantBuilder(Of TInfo)
   spec.csharp:
   - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
     name: MultiTenantBuilder
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.MultiTenantBuilder-1.html
   - name: <
-  - name: TTenantInfo
+  - name: TInfo
   - name: '>'
   spec.vb:
   - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
@@ -78,7 +70,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: TTenantInfo
+  - name: TInfo
   - name: )
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantOptions
   commentId: T:Biwen.QuickApi.MultiTenant.MultiTenantOptions
@@ -94,6 +86,14 @@ references:
   name: ServiceRegistration
   nameWithType: ServiceRegistration
   fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration
+- uid: Biwen.QuickApi.MultiTenant.TenantInfo
+  commentId: T:Biwen.QuickApi.MultiTenant.TenantInfo
+  parent: Biwen.QuickApi.MultiTenant
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.TenantInfo.html
+  name: TenantInfo
+  nameWithType: TenantInfo
+  fullName: Biwen.QuickApi.MultiTenant.TenantInfo
 - uid: Biwen.QuickApi.MultiTenant
   commentId: N:Biwen.QuickApi.MultiTenant
   isExternal: true

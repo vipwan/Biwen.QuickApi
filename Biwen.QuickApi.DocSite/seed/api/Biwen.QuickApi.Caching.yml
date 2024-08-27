@@ -18,6 +18,7 @@ items:
 references:
 - uid: Biwen.QuickApi.Caching.AutoCacheAttribute
   commentId: T:Biwen.QuickApi.Caching.AutoCacheAttribute
+  parent: Biwen.QuickApi.Caching
   isExternal: true
   href: Biwen.QuickApi.Caching.AutoCacheAttribute.html
   name: AutoCacheAttribute
@@ -51,3 +52,40 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Biwen.QuickApi.Caching
+  commentId: N:Biwen.QuickApi.Caching
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Caching
+  nameWithType: Biwen.QuickApi.Caching
+  fullName: Biwen.QuickApi.Caching
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching
+    name: Caching
+    isExternal: true
+    href: Biwen.QuickApi.Caching.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Caching
+    name: Caching
+    isExternal: true
+    href: Biwen.QuickApi.Caching.html

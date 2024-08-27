@@ -48,19 +48,19 @@ references:
   commentId: T:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
   isExternal: true
   href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
-  name: ITenantInfoProvider<T>
-  nameWithType: ITenantInfoProvider<T>
-  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<T>
-  nameWithType.vb: ITenantInfoProvider(Of T)
-  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of T)
-  name.vb: ITenantInfoProvider(Of T)
+  name: ITenantInfoProvider<TInfo>
+  nameWithType: ITenantInfoProvider<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>
+  nameWithType.vb: ITenantInfoProvider(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo)
+  name.vb: ITenantInfoProvider(Of TInfo)
   spec.csharp:
   - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
     name: ITenantInfoProvider
     isExternal: true
     href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html
   - name: <
-  - name: T
+  - name: TInfo
   - name: '>'
   spec.vb:
   - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
@@ -70,5 +70,5 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: TInfo
   - name: )

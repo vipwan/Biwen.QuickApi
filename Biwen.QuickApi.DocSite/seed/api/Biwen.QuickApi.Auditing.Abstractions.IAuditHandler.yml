@@ -1,77 +1,66 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Biwen.QuickApi.Events.IEventSubscriber`1
-  commentId: T:Biwen.QuickApi.Events.IEventSubscriber`1
-  id: IEventSubscriber`1
-  parent: Biwen.QuickApi.Events
+- uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+  commentId: T:Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+  id: IAuditHandler
+  parent: Biwen.QuickApi.Auditing.Abstractions
   children:
-  - Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync(`0,System.Threading.CancellationToken)
+  - Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle(Biwen.QuickApi.Auditing.AuditInfo)
   langs:
   - csharp
   - vb
-  name: IEventSubscriber<T>
-  nameWithType: IEventSubscriber<T>
-  fullName: Biwen.QuickApi.Events.IEventSubscriber<T>
+  name: IAuditHandler
+  nameWithType: IAuditHandler
+  fullName: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Events/IEventSubscriber.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/Abstractions/IAuditHandler.cs
   assemblies:
   - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Events
+  namespace: Biwen.QuickApi.Auditing.Abstractions
   syntax:
-    content: 'public interface IEventSubscriber<T> where T : IEvent'
-    typeParameters:
-    - id: T
-    content.vb: Public Interface IEventSubscriber(Of T As IEvent)
+    content: public interface IAuditHandler
+    content.vb: Public Interface IAuditHandler
   extensionMethods:
-  - Biwen.QuickApi.Events.IEventSubscriber`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
-  - Biwen.QuickApi.Events.IEventSubscriber`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
-  - Biwen.QuickApi.Events.IEventSubscriber`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
-  nameWithType.vb: IEventSubscriber(Of T)
-  fullName.vb: Biwen.QuickApi.Events.IEventSubscriber(Of T)
-  name.vb: IEventSubscriber(Of T)
-- uid: Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync(`0,System.Threading.CancellationToken)
-  commentId: M:Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync(`0,System.Threading.CancellationToken)
-  id: HandleAsync(`0,System.Threading.CancellationToken)
-  parent: Biwen.QuickApi.Events.IEventSubscriber`1
+  - Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle(Biwen.QuickApi.Auditing.AuditInfo)
+  commentId: M:Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle(Biwen.QuickApi.Auditing.AuditInfo)
+  id: Handle(Biwen.QuickApi.Auditing.AuditInfo)
+  parent: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
   langs:
   - csharp
   - vb
-  name: HandleAsync(T, CancellationToken)
-  nameWithType: IEventSubscriber<T>.HandleAsync(T, CancellationToken)
-  fullName: Biwen.QuickApi.Events.IEventSubscriber<T>.HandleAsync(T, System.Threading.CancellationToken)
+  name: Handle(AuditInfo)
+  nameWithType: IAuditHandler.Handle(AuditInfo)
+  fullName: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle(Biwen.QuickApi.Auditing.AuditInfo)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Events/IEventSubscriber.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/Abstractions/IAuditHandler.cs
   assemblies:
   - Biwen.QuickApi
-  namespace: Biwen.QuickApi.Events
-  summary: 处理事件
+  namespace: Biwen.QuickApi.Auditing.Abstractions
+  summary: 处理审计日志
   example: []
   syntax:
-    content: Task HandleAsync(T @event, CancellationToken ct)
+    content: Task Handle(AuditInfo auditInfo)
     parameters:
-    - id: event
-      type: '{T}'
-      description: 事件
-    - id: ct
-      type: System.Threading.CancellationToken
+    - id: auditInfo
+      type: Biwen.QuickApi.Auditing.AuditInfo
       description: ''
     return:
       type: System.Threading.Tasks.Task
-      description: ''
-    content.vb: Function HandleAsync([event] As T, ct As CancellationToken) As Task
-  overload: Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync*
-  nameWithType.vb: IEventSubscriber(Of T).HandleAsync(T, CancellationToken)
-  fullName.vb: Biwen.QuickApi.Events.IEventSubscriber(Of T).HandleAsync(T, System.Threading.CancellationToken)
+    content.vb: Function Handle(auditInfo As AuditInfo) As Task
+  overload: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle*
 references:
-- uid: Biwen.QuickApi.Events
-  commentId: N:Biwen.QuickApi.Events
+- uid: Biwen.QuickApi.Auditing.Abstractions
+  commentId: N:Biwen.QuickApi.Auditing.Abstractions
   isExternal: true
   href: Biwen.html
-  name: Biwen.QuickApi.Events
-  nameWithType: Biwen.QuickApi.Events
-  fullName: Biwen.QuickApi.Events
+  name: Biwen.QuickApi.Auditing.Abstractions
+  nameWithType: Biwen.QuickApi.Auditing.Abstractions
+  fullName: Biwen.QuickApi.Auditing.Abstractions
   spec.csharp:
   - uid: Biwen
     name: Biwen
@@ -83,10 +72,15 @@ references:
     isExternal: true
     href: Biwen.QuickApi.html
   - name: .
-  - uid: Biwen.QuickApi.Events
-    name: Events
+  - uid: Biwen.QuickApi.Auditing
+    name: Auditing
     isExternal: true
-    href: Biwen.QuickApi.Events.html
+    href: Biwen.QuickApi.Auditing.html
+  - name: .
+  - uid: Biwen.QuickApi.Auditing.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Auditing.Abstractions.html
   spec.vb:
   - uid: Biwen
     name: Biwen
@@ -98,198 +92,155 @@ references:
     isExternal: true
     href: Biwen.QuickApi.html
   - name: .
-  - uid: Biwen.QuickApi.Events
-    name: Events
+  - uid: Biwen.QuickApi.Auditing
+    name: Auditing
     isExternal: true
-    href: Biwen.QuickApi.Events.html
-- uid: Biwen.QuickApi.Events.IEventSubscriber`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+    href: Biwen.QuickApi.Auditing.html
+  - name: .
+  - uid: Biwen.QuickApi.Auditing.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Auditing.Abstractions.html
+- uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
   commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
-  name: PublishAddedAsync<IEventSubscriber<T>>(IEventSubscriber<T>)
-  nameWithType: EntityExtensions.PublishAddedAsync<IEventSubscriber<T>>(IEventSubscriber<T>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Events.IEventSubscriber<T>>(Biwen.QuickApi.Events.IEventSubscriber<T>)
-  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of IEventSubscriber(Of T))(IEventSubscriber(Of T))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Events.IEventSubscriber(Of T))(Biwen.QuickApi.Events.IEventSubscriber(Of T))
-  name.vb: PublishAddedAsync(Of IEventSubscriber(Of T))(IEventSubscriber(Of T))
+  name: PublishAddedAsync<IAuditHandler>(IAuditHandler)
+  nameWithType: EntityExtensions.PublishAddedAsync<IAuditHandler>(IAuditHandler)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Auditing.Abstractions.IAuditHandler>(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of IAuditHandler)(IAuditHandler)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
+  name.vb: PublishAddedAsync(Of IAuditHandler)(IAuditHandler)
   spec.csharp:
-  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Events.IEventSubscriber{`0})
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
     name: PublishAddedAsync
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
   - name: <
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: <
-  - name: T
-  - name: '>'
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: '>'
   - name: (
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: <
-  - name: T
-  - name: '>'
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Events.IEventSubscriber{`0})
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
     name: PublishAddedAsync
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
   - name: (
   - name: Of
   - name: " "
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: )
   - name: (
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: )
-  - name: )
-- uid: Biwen.QuickApi.Events.IEventSubscriber`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+- uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
   commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
-  name: PublishDeletedAsync<IEventSubscriber<T>>(IEventSubscriber<T>)
-  nameWithType: EntityExtensions.PublishDeletedAsync<IEventSubscriber<T>>(IEventSubscriber<T>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Events.IEventSubscriber<T>>(Biwen.QuickApi.Events.IEventSubscriber<T>)
-  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of IEventSubscriber(Of T))(IEventSubscriber(Of T))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Events.IEventSubscriber(Of T))(Biwen.QuickApi.Events.IEventSubscriber(Of T))
-  name.vb: PublishDeletedAsync(Of IEventSubscriber(Of T))(IEventSubscriber(Of T))
+  name: PublishDeletedAsync<IAuditHandler>(IAuditHandler)
+  nameWithType: EntityExtensions.PublishDeletedAsync<IAuditHandler>(IAuditHandler)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Auditing.Abstractions.IAuditHandler>(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of IAuditHandler)(IAuditHandler)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
+  name.vb: PublishDeletedAsync(Of IAuditHandler)(IAuditHandler)
   spec.csharp:
-  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Events.IEventSubscriber{`0})
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
     name: PublishDeletedAsync
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
   - name: <
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: <
-  - name: T
-  - name: '>'
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: '>'
   - name: (
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: <
-  - name: T
-  - name: '>'
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Events.IEventSubscriber{`0})
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
     name: PublishDeletedAsync
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
   - name: (
   - name: Of
   - name: " "
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: )
   - name: (
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: )
-  - name: )
-- uid: Biwen.QuickApi.Events.IEventSubscriber`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
   commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
-  name: PublishUpdatedAsync<IEventSubscriber<T>>(IEventSubscriber<T>)
-  nameWithType: EntityExtensions.PublishUpdatedAsync<IEventSubscriber<T>>(IEventSubscriber<T>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Events.IEventSubscriber<T>>(Biwen.QuickApi.Events.IEventSubscriber<T>)
-  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of IEventSubscriber(Of T))(IEventSubscriber(Of T))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Events.IEventSubscriber(Of T))(Biwen.QuickApi.Events.IEventSubscriber(Of T))
-  name.vb: PublishUpdatedAsync(Of IEventSubscriber(Of T))(IEventSubscriber(Of T))
+  name: PublishUpdatedAsync<IAuditHandler>(IAuditHandler)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<IAuditHandler>(IAuditHandler)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Auditing.Abstractions.IAuditHandler>(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of IAuditHandler)(IAuditHandler)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
+  name.vb: PublishUpdatedAsync(Of IAuditHandler)(IAuditHandler)
   spec.csharp:
-  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Events.IEventSubscriber{`0})
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
     name: PublishUpdatedAsync
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
   - name: <
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: <
-  - name: T
-  - name: '>'
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: '>'
   - name: (
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: <
-  - name: T
-  - name: '>'
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Events.IEventSubscriber{`0})
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Auditing.Abstractions.IAuditHandler)
     name: PublishUpdatedAsync
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
   - name: (
   - name: Of
   - name: " "
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: )
   - name: (
-  - uid: Biwen.QuickApi.Events.IEventSubscriber`1
-    name: IEventSubscriber
+  - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
+    name: IAuditHandler
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
+    href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html
   - name: )
 - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
   commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
@@ -448,29 +399,21 @@ references:
     name: EntityEvents
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.html
-- uid: Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync*
-  commentId: Overload:Biwen.QuickApi.Events.IEventSubscriber`1.HandleAsync
+- uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle*
+  commentId: Overload:Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle
   isExternal: true
-  href: Biwen.QuickApi.Events.IEventSubscriber-1.html#Biwen_QuickApi_Events_IEventSubscriber_1_HandleAsync__0_System_Threading_CancellationToken_
-  name: HandleAsync
-  nameWithType: IEventSubscriber<T>.HandleAsync
-  fullName: Biwen.QuickApi.Events.IEventSubscriber<T>.HandleAsync
-  nameWithType.vb: IEventSubscriber(Of T).HandleAsync
-  fullName.vb: Biwen.QuickApi.Events.IEventSubscriber(Of T).HandleAsync
-- uid: '{T}'
-  commentId: '!:T'
-  definition: T
-  name: T
-  nameWithType: T
-  fullName: T
-- uid: System.Threading.CancellationToken
-  commentId: T:System.Threading.CancellationToken
-  parent: System.Threading
+  href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html#Biwen_QuickApi_Auditing_Abstractions_IAuditHandler_Handle_Biwen_QuickApi_Auditing_AuditInfo_
+  name: Handle
+  nameWithType: IAuditHandler.Handle
+  fullName: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle
+- uid: Biwen.QuickApi.Auditing.AuditInfo
+  commentId: T:Biwen.QuickApi.Auditing.AuditInfo
+  parent: Biwen.QuickApi.Auditing
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
-  name: CancellationToken
-  nameWithType: CancellationToken
-  fullName: System.Threading.CancellationToken
+  href: Biwen.QuickApi.Auditing.AuditInfo.html
+  name: AuditInfo
+  nameWithType: AuditInfo
+  fullName: Biwen.QuickApi.Auditing.AuditInfo
 - uid: System.Threading.Tasks.Task
   commentId: T:System.Threading.Tasks.Task
   parent: System.Threading.Tasks
@@ -479,37 +422,43 @@ references:
   name: Task
   nameWithType: Task
   fullName: System.Threading.Tasks.Task
-- uid: T
-  name: T
-  nameWithType: T
-  fullName: T
-- uid: System.Threading
-  commentId: N:System.Threading
+- uid: Biwen.QuickApi.Auditing
+  commentId: N:Biwen.QuickApi.Auditing
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Threading
-  nameWithType: System.Threading
-  fullName: System.Threading
+  href: Biwen.html
+  name: Biwen.QuickApi.Auditing
+  nameWithType: Biwen.QuickApi.Auditing
+  fullName: Biwen.QuickApi.Auditing
   spec.csharp:
-  - uid: System
-    name: System
+  - uid: Biwen
+    name: Biwen
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
+    href: Biwen.html
   - name: .
-  - uid: System.Threading
-    name: Threading
+  - uid: Biwen.QuickApi
+    name: QuickApi
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Auditing
+    name: Auditing
+    isExternal: true
+    href: Biwen.QuickApi.Auditing.html
   spec.vb:
-  - uid: System
-    name: System
+  - uid: Biwen
+    name: Biwen
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
+    href: Biwen.html
   - name: .
-  - uid: System.Threading
-    name: Threading
+  - uid: Biwen.QuickApi
+    name: QuickApi
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Auditing
+    name: Auditing
+    isExternal: true
+    href: Biwen.QuickApi.Auditing.html
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true

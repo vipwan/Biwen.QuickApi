@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.IScheduler
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Scheduling/IScheduler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/IScheduler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -39,7 +39,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.IScheduler.CanRun(Biwen.QuickApi.Scheduling.ScheduleTaskAttribute, System.DateTime)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Scheduling/IScheduler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/IScheduler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling

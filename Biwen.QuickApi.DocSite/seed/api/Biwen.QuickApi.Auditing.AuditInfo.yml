@@ -26,7 +26,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -58,7 +58,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.ToString()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -84,7 +84,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.AuditInfo()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -107,7 +107,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.ApplicationName
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -130,7 +130,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.UserId
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -153,7 +153,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.UserName
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -176,7 +176,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.ClientIpAddress
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -199,7 +199,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.ClientName
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -222,7 +222,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.BrowserInfo
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -245,7 +245,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.HttpMethod
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -268,7 +268,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.Url
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -291,7 +291,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.ActionInfo
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -314,7 +314,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.IsQuickApi
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -339,7 +339,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditInfo.ExtraInfos
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditInfo.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditInfo.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing

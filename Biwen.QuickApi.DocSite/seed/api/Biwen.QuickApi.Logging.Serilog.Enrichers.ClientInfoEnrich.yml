@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi.Logging.Serilog/Enrichers/ClientInfoEnrich.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi.Logging.Serilog/Enrichers/ClientInfoEnrich.cs
   assemblies:
   - Biwen.QuickApi.Logging.Serilog
   namespace: Biwen.QuickApi.Logging.Serilog.Enrichers
@@ -57,7 +57,7 @@ items:
   fullName: Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich.ClientInfoEnrich(Microsoft.AspNetCore.Http.IHttpContextAccessor, string)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi.Logging.Serilog/Enrichers/ClientInfoEnrich.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi.Logging.Serilog/Enrichers/ClientInfoEnrich.cs
   assemblies:
   - Biwen.QuickApi.Logging.Serilog
   namespace: Biwen.QuickApi.Logging.Serilog.Enrichers
@@ -85,7 +85,7 @@ items:
   fullName: Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich.ClientInfoEnrich(string)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi.Logging.Serilog/Enrichers/ClientInfoEnrich.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi.Logging.Serilog/Enrichers/ClientInfoEnrich.cs
   assemblies:
   - Biwen.QuickApi.Logging.Serilog
   namespace: Biwen.QuickApi.Logging.Serilog.Enrichers
@@ -111,7 +111,7 @@ items:
   fullName: Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich.ClientInfoEnrich()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi.Logging.Serilog/Enrichers/ClientInfoEnrich.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi.Logging.Serilog/Enrichers/ClientInfoEnrich.cs
   assemblies:
   - Biwen.QuickApi.Logging.Serilog
   namespace: Biwen.QuickApi.Logging.Serilog.Enrichers
@@ -134,7 +134,7 @@ items:
   fullName: Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich.Enrich(Serilog.Events.LogEvent, Serilog.Core.ILogEventPropertyFactory)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi.Logging.Serilog/Enrichers/ClientInfoEnrich.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi.Logging.Serilog/Enrichers/ClientInfoEnrich.cs
   assemblies:
   - Biwen.QuickApi.Logging.Serilog
   namespace: Biwen.QuickApi.Logging.Serilog.Enrichers

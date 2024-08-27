@@ -6,6 +6,7 @@ items:
   parent: Biwen.QuickApi.MultiTenant
   children:
   - Biwen.QuickApi.MultiTenant.MultiTenantOptions.#ctor
+  - Biwen.QuickApi.MultiTenant.MultiTenantOptions.DefaultId
   - Biwen.QuickApi.MultiTenant.MultiTenantOptions.Enabled
   - Biwen.QuickApi.MultiTenant.MultiTenantOptions.TenantInfoType
   langs:
@@ -16,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.MultiTenantOptions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -49,7 +50,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.MultiTenantOptions.MultiTenantOptions()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -72,16 +73,16 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.MultiTenantOptions.Enabled
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
   syntax:
-    content: public bool Enabled { get; set; }
+    content: public bool Enabled { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property Enabled As Boolean
+    content.vb: Public ReadOnly Property Enabled As Boolean
   overload: Biwen.QuickApi.MultiTenant.MultiTenantOptions.Enabled*
 - uid: Biwen.QuickApi.MultiTenant.MultiTenantOptions.TenantInfoType
   commentId: P:Biwen.QuickApi.MultiTenant.MultiTenantOptions.TenantInfoType
@@ -95,7 +96,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.MultiTenantOptions.TenantInfoType
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/MultiTenant/MultiTenantOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -106,6 +107,34 @@ items:
       type: System.Type
     content.vb: Public ReadOnly Property TenantInfoType As Type
   overload: Biwen.QuickApi.MultiTenant.MultiTenantOptions.TenantInfoType*
+- uid: Biwen.QuickApi.MultiTenant.MultiTenantOptions.DefaultId
+  commentId: P:Biwen.QuickApi.MultiTenant.MultiTenantOptions.DefaultId
+  id: DefaultId
+  parent: Biwen.QuickApi.MultiTenant.MultiTenantOptions
+  langs:
+  - csharp
+  - vb
+  name: DefaultId
+  nameWithType: MultiTenantOptions.DefaultId
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantOptions.DefaultId
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/MultiTenantOptions.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.MultiTenant
+  summary: >-
+    默认的租户标识符,如果没有找到租户信息,则使用Id,
+
+    默认为null表示不使用,表示如果没有找到租户信息,则不进行处理
+  example: []
+  syntax:
+    content: public string? DefaultId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultId As String
+  overload: Biwen.QuickApi.MultiTenant.MultiTenantOptions.DefaultId*
 references:
 - uid: Biwen.QuickApi.MultiTenant
   commentId: N:Biwen.QuickApi.MultiTenant
@@ -722,3 +751,21 @@ references:
   name: Type
   nameWithType: Type
   fullName: System.Type
+- uid: Biwen.QuickApi.MultiTenant.MultiTenantOptions.DefaultId*
+  commentId: Overload:Biwen.QuickApi.MultiTenant.MultiTenantOptions.DefaultId
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.MultiTenantOptions.html#Biwen_QuickApi_MultiTenant_MultiTenantOptions_DefaultId
+  name: DefaultId
+  nameWithType: MultiTenantOptions.DefaultId
+  fullName: Biwen.QuickApi.MultiTenant.MultiTenantOptions.DefaultId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

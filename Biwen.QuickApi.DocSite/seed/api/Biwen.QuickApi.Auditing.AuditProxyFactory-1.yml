@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditProxyFactory<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -56,7 +56,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditProxyFactory<T>.AuditProxyFactory(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -84,7 +84,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditProxyFactory<T>.Create(T)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -111,7 +111,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.AuditProxyFactory<T>.Create()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing

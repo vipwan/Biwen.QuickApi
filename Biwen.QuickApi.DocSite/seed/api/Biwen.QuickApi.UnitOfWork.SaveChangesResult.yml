@@ -18,7 +18,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.SaveChangesResult
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -52,7 +52,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.SaveChangesResult.SaveChangesResult()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -77,7 +77,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.SaveChangesResult.SaveChangesResult(string)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -104,7 +104,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.SaveChangesResult.AddMessage(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -133,7 +133,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.SaveChangesResult.Exception
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -158,7 +158,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.SaveChangesResult.IsOk
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/bd8870191ccc2a7c983db159670b014f9580ca94/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/UnitOfWork/SaveChangesResult.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
