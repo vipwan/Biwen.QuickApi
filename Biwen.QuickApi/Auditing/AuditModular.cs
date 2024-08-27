@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.Auditing;
+﻿using Biwen.QuickApi.Auditing.Internal;
+
+namespace Biwen.QuickApi.Auditing;
 
 [CoreModular]
 internal class AuditModular : ModularBase

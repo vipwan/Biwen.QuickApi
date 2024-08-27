@@ -1,4 +1,5 @@
 ﻿using Biwen.QuickApi.Auditing;
+using Biwen.QuickApi.Auditing.Internal;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 

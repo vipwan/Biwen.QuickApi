@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.MultiTenant.Abstractions;
+﻿using Biwen.QuickApi.Caching;
+
+namespace Biwen.QuickApi.MultiTenant.Abstractions;
 
 /// <summary>
 /// 租户信息提供者
@@ -10,5 +12,6 @@ public interface ITenantInfoProvider<TInfo> where TInfo : ITenantInfo
     /// 请注意如果是通过数据库,配置文件等方式,内部请使用缓存提升性能
     /// </summary>
     /// <returns></returns>
+    [AutoCache]
     Task<IList<TInfo>> GetAll();
 }

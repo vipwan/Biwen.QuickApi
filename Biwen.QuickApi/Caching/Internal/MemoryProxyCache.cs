@@ -1,6 +1,7 @@
-﻿using Microsoft.Extensions.Caching.Memory;
+﻿using Biwen.QuickApi.Caching.Abstractions;
+using Microsoft.Extensions.Caching.Memory;
 
-namespace Biwen.QuickApi.Caching.ProxyCache;
+namespace Biwen.QuickApi.Caching.Internal;
 
 /// <summary>
 /// 默认使用内存缓存

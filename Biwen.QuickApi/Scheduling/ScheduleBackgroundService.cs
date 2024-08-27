@@ -1,5 +1,5 @@
 ﻿using Biwen.QuickApi.Caching;
-using Biwen.QuickApi.Caching.ProxyCache;
+using Biwen.QuickApi.Caching.Abstractions;
 using Biwen.QuickApi.Events;
 using Biwen.QuickApi.Infrastructure.Locking;
 using Biwen.QuickApi.Scheduling.Events;

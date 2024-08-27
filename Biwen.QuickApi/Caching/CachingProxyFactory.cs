@@ -1,4 +1,4 @@
-﻿using Biwen.QuickApi.Caching.ProxyCache;
+﻿using Biwen.QuickApi.Caching.Abstractions;
 
 namespace Biwen.QuickApi.Caching;
 

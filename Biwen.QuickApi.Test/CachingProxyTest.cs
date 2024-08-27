@@ -1,5 +1,6 @@
 ﻿using Biwen.QuickApi.Caching;
-using Biwen.QuickApi.Caching.ProxyCache;
+using Biwen.QuickApi.Caching.Abstractions;
+using Biwen.QuickApi.Caching.Internal;
 
 namespace Biwen.QuickApi.Test
 {

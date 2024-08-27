@@ -1,5 +1,6 @@
 ﻿namespace Biwen.QuickApi.Auditing;
 
+using Biwen.QuickApi.Auditing.Abstractions;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Reflection;

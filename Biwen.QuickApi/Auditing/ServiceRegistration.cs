@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.Auditing;
+﻿using Biwen.QuickApi.Auditing.Abstractions;
+
+namespace Biwen.QuickApi.Auditing;
 
 [SuppressType]
 public static class ServiceRegistration

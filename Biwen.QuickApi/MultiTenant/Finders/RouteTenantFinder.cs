@@ -1,4 +1,5 @@
-﻿using Biwen.QuickApi.MultiTenant.Abstractions;
+﻿using Biwen.QuickApi.Caching;
+using Biwen.QuickApi.MultiTenant.Abstractions;
 using Microsoft.AspNetCore.Http;
 
 namespace Biwen.QuickApi.MultiTenant.Finders;
@@ -8,8 +9,10 @@ namespace Biwen.QuickApi.MultiTenant.Finders;
 /// </summary>
 /// <typeparam name="TInfo"></typeparam>
 /// <param name="httpContextAccessor"></param>
-/// <param name="tenantInfoProvider"></param>
-public class RouteTenantFinder<TInfo>(IHttpContextAccessor httpContextAccessor, ITenantInfoProvider<TInfo> tenantInfoProvider) :
+/// <param name="cachingProxyFactory"></param>
+public class RouteTenantFinder<TInfo>(
+    IHttpContextAccessor httpContextAccessor,
+    CachingProxyFactory<ITenantInfoProvider<TInfo>> cachingProxyFactory) :
     ITenantFinder<TInfo>
     where TInfo : ITenantInfo
 {
@@ -21,7 +24,7 @@ public class RouteTenantFinder<TInfo>(IHttpContextAccessor httpContextAccessor, 
     public async Task<TInfo?> FindAsync()
     {
         ArgumentNullException.ThrowIfNull(httpContextAccessor, nameof(httpContextAccessor));
-        ArgumentNullException.ThrowIfNull(tenantInfoProvider, nameof(tenantInfoProvider));
+        ArgumentNullException.ThrowIfNull(cachingProxyFactory, nameof(cachingProxyFactory));
         if (httpContextAccessor.HttpContext == null)
         {
             return default;
@@ -32,6 +35,9 @@ public class RouteTenantFinder<TInfo>(IHttpContextAccessor httpContextAccessor, 
         {
             return default;
         }
+
+        var tenantInfoProvider = cachingProxyFactory.Create();
+
         var tenants = await tenantInfoProvider.GetAll();
         return tenants.FirstOrDefault(t => t.Identifier.Equals(routeValue, StringComparison.OrdinalIgnoreCase));
     }

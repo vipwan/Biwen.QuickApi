@@ -1,4 +1,4 @@
-﻿namespace Biwen.QuickApi.Caching.ProxyCache;
+﻿namespace Biwen.QuickApi.Caching.Abstractions;
 
 /// <summary>
 /// 提供给CachingProxy的缓存接口

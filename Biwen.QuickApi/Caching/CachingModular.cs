@@ -1,4 +1,5 @@
-﻿using Biwen.QuickApi.Caching.ProxyCache;
+﻿using Biwen.QuickApi.Caching.Abstractions;
+using Biwen.QuickApi.Caching.Internal;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 

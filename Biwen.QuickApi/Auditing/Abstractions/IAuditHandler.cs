@@ -1,4 +1,4 @@
-﻿namespace Biwen.QuickApi.Auditing;
+﻿namespace Biwen.QuickApi.Auditing.Abstractions;
 
 public interface IAuditHandler
 {

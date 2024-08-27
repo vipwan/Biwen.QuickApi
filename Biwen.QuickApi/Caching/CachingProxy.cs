@@ -1,6 +1,6 @@
 ﻿namespace Biwen.QuickApi.Caching;
 
-using Biwen.QuickApi.Caching.ProxyCache;
+using Biwen.QuickApi.Caching.Abstractions;
 using System;
 using System.Reflection;
 

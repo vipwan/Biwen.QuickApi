@@ -1,4 +1,5 @@
-﻿using Biwen.QuickApi.MultiTenant.Abstractions;
+﻿using Biwen.QuickApi.Caching;
+using Biwen.QuickApi.MultiTenant.Abstractions;
 using Microsoft.AspNetCore.Http;
 
 namespace Biwen.QuickApi.MultiTenant.Internal;
@@ -10,15 +11,18 @@ namespace Biwen.QuickApi.MultiTenant.Internal;
 internal class MultiTenantMiddleware<TInfo> where TInfo : class, ITenantInfo
 {
     private readonly RequestDelegate _next;
+    private readonly Lazy<ITenantInfoProvider<TInfo>> _infoProvider;
 
     /// <summary>
     /// 缓存默认的租户信息
     /// </summary>
     private static TInfo CachedDefaultTenantInfo = null!;
 
-    public MultiTenantMiddleware(RequestDelegate next)
+    public MultiTenantMiddleware(RequestDelegate next, IHttpContextAccessor httpContextAccessor)
     {
         _next = next;
+        _infoProvider = new Lazy<ITenantInfoProvider<TInfo>>(() =>
+        httpContextAccessor.HttpContext!.RequestServices.GetRequiredService<CachingProxyFactory<ITenantInfoProvider<TInfo>>>().Create());
     }
 
     public async Task Invoke(HttpContext context)
@@ -51,8 +55,7 @@ internal class MultiTenantMiddleware<TInfo> where TInfo : class, ITenantInfo
             {
                 if (CachedDefaultTenantInfo is null)
                 {
-                    var infoProvider = context.RequestServices.GetRequiredService<ITenantInfoProvider<TInfo>>();
-                    var all = await infoProvider.GetAll();
+                    var all = await _infoProvider.Value.GetAll();
                     //如果配置的默认Id不存在,则抛出异常!
                     var defaultInfo = all.FirstOrDefault(t => t.Id == options.Value.DefaultId);
                     if (defaultInfo is null)
