@@ -17,7 +17,9 @@ public class MultiTenantModular : ModularBase
         services.AddMultiTenant<TenantInfo>(o =>
         {
             o.DefaultId = "tenant1";//当Finder无法找到租户信息时,使用默认的租户信息
-        }).AddTenantInfoProvider<MyTenantInfoProvider>()
+        })
+          //.AddTenantInfoProvider<MyTenantInfoProvider>()
+          .AddConfigurationInfoProvider() //使用配置项提供租户信息
           .AddBasePathTenantFinder();
 
         //添加基于Header的租户查找器
@@ -36,6 +38,7 @@ public class MultiTenantModular : ModularBase
             //方式一使用ITenantFinder获取租户信息,不推荐使用此方式,
             //但是当没有注册`UseMultiTenant<T>`时或者注册中间件顺序问题,只能使用此方式!
             var tenantFinder = ctx.HttpContext!.RequestServices.GetRequiredService<ITenantFinder<TenantInfo>>();
+
             var tenantInfo = await tenantFinder.FindAsync();
 
             if (tenantInfo == null)

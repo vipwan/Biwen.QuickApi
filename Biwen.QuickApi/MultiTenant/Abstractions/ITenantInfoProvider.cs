@@ -1,6 +1,4 @@
-﻿using Biwen.QuickApi.Caching;
-
-namespace Biwen.QuickApi.MultiTenant.Abstractions;
+﻿namespace Biwen.QuickApi.MultiTenant.Abstractions;
 
 /// <summary>
 /// 租户信息提供者

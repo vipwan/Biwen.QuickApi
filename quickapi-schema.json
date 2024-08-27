@@ -110,6 +110,35 @@
               "maximum": 900
             }
           }
+        },
+
+        "MultiTenants": {
+
+          "type": "array",
+          "description": "多租户配置",
+          "items": {
+
+            "type": "object",
+            "properties": {
+              "Id": {
+                "type": "string",
+                "description": "租户Id"
+              },
+              "Name": {
+                "type": "string",
+                "description": "租户名称"
+              },
+              "Identifier": {
+                "type": "string",
+                "description": "Identifier,针对不同的Finder可能是正则表达式等,默认忽略大小写!"
+              },
+              "ConnectionString": {
+                "type": "string",
+                "description": "数据库连接字符串,该项针对自定义TInfo不是必须项!"
+              }
+            },
+            "required": [ "Id", "Name", "Identifier" ]
+          }
         }
       }
 

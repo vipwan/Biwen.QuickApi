@@ -1,5 +1,4 @@
-﻿using Biwen.QuickApi.Caching;
-using Biwen.QuickApi.MultiTenant.Abstractions;
+﻿using Biwen.QuickApi.MultiTenant.Abstractions;
 using Microsoft.AspNetCore.Http;
 
 namespace Biwen.QuickApi.MultiTenant.Internal;
@@ -57,7 +56,8 @@ internal class MultiTenantMiddleware<TInfo> where TInfo : class, ITenantInfo
                 {
                     var all = await _infoProvider.Value.GetAll();
                     //如果配置的默认Id不存在,则抛出异常!
-                    var defaultInfo = all.FirstOrDefault(t => t.Id == options.Value.DefaultId);
+                    var defaultInfo = all.FirstOrDefault(t =>
+                    t.Id.Equals(options.Value.DefaultId, StringComparison.OrdinalIgnoreCase));
                     if (defaultInfo is null)
                     {
                         throw new QuickApiExcetion($"默认的租户信息不存在,Id:{options.Value.DefaultId} !");

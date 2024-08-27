@@ -53,7 +53,7 @@ namespace Biwen.QuickApi.DemoWeb
     /// </summary>
     /// <param name="environment"></param>
     [PreModular<PreModular1>]
-    public class DemoModular(IHostEnvironment environment, IOptions<DemoOptions> options) : ModularBase
+    public class DemoModular(/*IHostEnvironment environment, */IOptions<DemoOptions> options) : ModularBase
     {
         public override int Order => Constants.Order + 1;
 

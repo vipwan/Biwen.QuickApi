@@ -1,4 +1,6 @@
-﻿namespace Biwen.QuickApi.Scheduling.Stores.ConfigurationStore;
+﻿using Biwen.QuickApi.Caching;
+
+namespace Biwen.QuickApi.Scheduling.Stores.ConfigurationStore;
 
 /// <summary>
 /// 配置文件Store
@@ -12,6 +14,7 @@ internal class ConfigurationScheduleMetadataStore(IConfiguration configuration) 
     public const string Key = "BiwenQuickApi:Schedules";
     private static readonly ConcurrentDictionary<string, ScheduleTaskMetadata> ScheduleTaskTypes = new();
 
+    [AutoCache]
     public Task<ScheduleTaskMetadata[]> GetAllAsync()
     {
         var options = configuration.GetSection(Key).GetChildren();

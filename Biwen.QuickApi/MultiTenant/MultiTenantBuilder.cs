@@ -28,6 +28,17 @@ public class MultiTenantBuilder<TInfo> where TInfo : class, ITenantInfo
     }
 
     /// <summary>
+    /// 添加通过配置文件提供租户信息
+    /// </summary>
+    /// <param name="configSection">不填则默认:BiwenQuickApi:MultiTenants</param>
+    /// <returns></returns>
+    public MultiTenantBuilder<TInfo> AddConfigurationInfoProvider(string? configSection = null)
+    {
+        Services.AddConfigurationInfoProvider<TInfo>(configSection);
+        return this;
+    }
+
+    /// <summary>
     /// 添加租户查找器
     /// </summary>
     /// <typeparam name="TFinder"></typeparam>

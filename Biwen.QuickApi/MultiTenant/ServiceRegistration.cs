@@ -1,5 +1,6 @@
 ﻿using Biwen.QuickApi.MultiTenant.Abstractions;
 using Biwen.QuickApi.MultiTenant.Finders;
+using Biwen.QuickApi.MultiTenant.InfoProviders;
 
 namespace Biwen.QuickApi.MultiTenant;
 
@@ -16,6 +17,22 @@ public static class ServiceRegistration
         where TInfo : class, ITenantInfo
     {
         services.TryAddSingleton<ITenantInfoProvider<TInfo>, TInfoProvider>();
+    }
+
+    /// <summary>
+    /// 添加通过配置文件提供租户信息
+    /// </summary>
+    /// <typeparam name="TInfo"></typeparam>
+    /// <param name="services"></param>
+    /// <param name="configSection">不填则默认:BiwenQuickApi:MultiTenants</param>
+    public static void AddConfigurationInfoProvider<TInfo>(this IServiceCollection services, string? configSection = null)
+        where TInfo : class, ITenantInfo
+    {
+        if (!string.IsNullOrEmpty(configSection))
+        {
+            ConfigurationInfoProvider<TInfo>.DefaultSectionName = configSection;
+        }
+        services.AddTenantInfoProvider<ConfigurationInfoProvider<TInfo>, TInfo>();
     }
 
     #region 租户查找器

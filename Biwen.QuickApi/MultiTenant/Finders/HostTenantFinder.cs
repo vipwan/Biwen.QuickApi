@@ -1,5 +1,4 @@
-﻿using Biwen.QuickApi.Caching;
-using Biwen.QuickApi.MultiTenant.Abstractions;
+﻿using Biwen.QuickApi.MultiTenant.Abstractions;
 using Microsoft.AspNetCore.Http;
 using System.Text.RegularExpressions;
 

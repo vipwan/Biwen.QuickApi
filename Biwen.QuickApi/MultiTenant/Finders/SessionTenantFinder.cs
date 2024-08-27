@@ -1,5 +1,4 @@
-﻿using Biwen.QuickApi.Caching;
-using Biwen.QuickApi.MultiTenant.Abstractions;
+﻿using Biwen.QuickApi.MultiTenant.Abstractions;
 using Microsoft.AspNetCore.Http;
 
 namespace Biwen.QuickApi.MultiTenant.Finders;
