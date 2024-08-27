@@ -46,6 +46,27 @@ namespace Biwen.QuickApi.Test
 
             await Task.CompletedTask;
         }
+
+
+        [Fact]
+        public async Task Test_Disable_Cache()
+        {
+            var services = new ServiceCollection();
+            services.AddLogging();
+            services.AddScoped<ITestClass, TestClass>();
+            services.AddMemoryCache();
+            services.AddSingleton<IProxyCache, MemoryProxyCache>();
+            services.TryAddSingleton(typeof(CachingProxyFactory<>));
+            var proxy = services.BuildServiceProvider().GetRequiredService<CachingProxyFactory<ITestClass>>();
+            //测试拦截TestClass
+            var decored = proxy.Create();
+
+            //测试禁用缓存
+            var time1 = await decored.TestTask3();
+            await Task.Delay(1000);
+            var time2 = await decored.TestTask3();
+            Assert.NotEqual(time1, time2);
+        }
     }
 
 
@@ -61,6 +82,9 @@ namespace Biwen.QuickApi.Test
 
         [AutoCache(5)]
         Task<DateTime> TestTask2(int random);
+
+        [AutoCache]
+        Task<DateTime> TestTask3();
     }
 
     public class TestClass : ITestClass
@@ -82,6 +106,16 @@ namespace Biwen.QuickApi.Test
         }
 
         public Task<DateTime> TestTask2(int random)
+        {
+            return Task.FromResult(DateTime.Now);
+        }
+
+        /// <summary>
+        /// 测试禁用缓存
+        /// </summary>
+        /// <returns></returns>
+        [AutoCache(false)]
+        public Task<DateTime> TestTask3()
         {
             return Task.FromResult(DateTime.Now);
         }

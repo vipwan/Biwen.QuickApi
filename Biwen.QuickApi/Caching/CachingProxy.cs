@@ -24,10 +24,18 @@ internal class CachingProxy<T> : DispatchProxy where T : class
             return targetMethod.Invoke(_decorated, args);
         }
 
-        //可以在接口定义中全局配置,也可以在实现类方法中单独配置
-        if (_decorated!.GetType()
+        AutoCacheAttribute? cacheMeta = null;
+
+        //装饰器上的配置
+        cacheMeta = _decorated!.GetType()
             .GetMethod(targetMethod.Name, types: args?.Select(x => x?.GetType()!)?.ToArray() ?? [])!
-            .GetCustomAttribute<AutoCacheAttribute>() is not { } cacheMeta)
+            .GetCustomAttribute<AutoCacheAttribute>();
+
+        //原始方法上的配置
+        cacheMeta ??= targetMethod.GetCustomAttribute<AutoCacheAttribute>();
+
+        //如果都没有配置 或者明确禁用 ，直接调用原始方法
+        if (cacheMeta is null || (!cacheMeta.IsEnabled))
         {
             return targetMethod.Invoke(_decorated, args);
         }

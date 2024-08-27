@@ -9,7 +9,12 @@ public sealed class AutoCacheAttribute : Attribute
     /// <summary>
     /// 缓存过期时间
     /// </summary>
-    public TimeSpan? Expiration { get; }
+    public TimeSpan? Expiration { get; init; }
+
+    /// <summary>
+    /// 默认缓存是否启用.默认true
+    /// </summary>
+    public bool IsEnabled { get; init; } = true;
 
     /// <summary>
     /// 构造
@@ -23,4 +28,15 @@ public sealed class AutoCacheAttribute : Attribute
         }
         Expiration = TimeSpan.FromSeconds(expiration);
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="isEnabled">如果需要禁止缓存可以配置isEnabled:false</param>
+    /// <param name="expiration"></param>
+    public AutoCacheAttribute(bool isEnabled, int expiration = 1800) : this(expiration)
+    {
+        IsEnabled = isEnabled;
+    }
+
 }
