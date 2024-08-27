@@ -15,6 +15,7 @@
             await Task.CompletedTask;
         }
 
+#if !NET9_0_OR_GREATER
 
         [Fact]
         public void Uuid7_Test()
@@ -47,6 +48,7 @@
             Assert.NotEqual(guid, id.ToGuid());
         }
 
+#endif
         class AutoGuid : TheoryData<Guid>
         {
             public AutoGuid()
