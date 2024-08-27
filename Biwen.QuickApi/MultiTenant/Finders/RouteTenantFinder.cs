@@ -37,7 +37,7 @@ public class RouteTenantFinder<TInfo>(
 
         var tenantInfoProvider = cachingProxyFactory.Create();
 
-        var tenants = await tenantInfoProvider.GetAll();
+        var tenants = await tenantInfoProvider.GetAllAsync();
         return tenants.FirstOrDefault(t => t.Identifier.Equals(routeValue, StringComparison.OrdinalIgnoreCase));
     }
 }

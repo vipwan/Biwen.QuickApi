@@ -54,7 +54,7 @@ internal class MultiTenantMiddleware<TInfo> where TInfo : class, ITenantInfo
             {
                 if (CachedDefaultTenantInfo is null)
                 {
-                    var all = await _infoProvider.Value.GetAll();
+                    var all = await _infoProvider.Value.GetAllAsync();
                     //如果配置的默认Id不存在,则抛出异常!
                     var defaultInfo = all.FirstOrDefault(t =>
                     t.Id.Equals(options.Value.DefaultId, StringComparison.OrdinalIgnoreCase));

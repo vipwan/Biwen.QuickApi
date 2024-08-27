@@ -47,7 +47,7 @@ public class SessionTenantFinder<TInfo>(
 
         var tenantInfoProvider = cachingProxyFactory.Create();
 
-        var tenants = await tenantInfoProvider.GetAll();
+        var tenants = await tenantInfoProvider.GetAllAsync();
         return tenants.FirstOrDefault(t => t.Identifier.Equals(tenantId, StringComparison.OrdinalIgnoreCase));
 
     }

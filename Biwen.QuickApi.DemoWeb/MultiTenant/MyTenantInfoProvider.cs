@@ -8,7 +8,7 @@ namespace Biwen.QuickApi.DemoWeb.MultiTenant
     /// </summary>
     internal class MyTenantInfoProvider : ITenantInfoProvider<TenantInfo>
     {
-        public Task<IList<TenantInfo>> GetAll()
+        public Task<IList<TenantInfo>> GetAllAsync()
         {
             return Task.FromResult<IList<TenantInfo>>(new List<TenantInfo>
             {

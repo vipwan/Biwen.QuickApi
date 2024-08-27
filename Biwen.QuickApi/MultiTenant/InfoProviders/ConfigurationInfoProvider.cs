@@ -13,7 +13,7 @@ public class ConfigurationInfoProvider<TInfo>(IConfiguration configuration) :
 {
     internal static volatile string DefaultSectionName = "BiwenQuickApi:MultiTenants";
 
-    public virtual Task<IList<TInfo>> GetAll()
+    public virtual Task<IList<TInfo>> GetAllAsync()
     {
         var section = configuration.GetSection(DefaultSectionName);
 

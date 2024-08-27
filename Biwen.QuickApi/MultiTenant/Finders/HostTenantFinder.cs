@@ -32,7 +32,7 @@ public class HostTenantFinder<TInfo>(
 
         var tenantInfoProvider = cachingProxyFactory.Create();
 
-        var tenants = await tenantInfoProvider.GetAll();
+        var tenants = await tenantInfoProvider.GetAllAsync();
 
         foreach (var tenant in tenants)
         {

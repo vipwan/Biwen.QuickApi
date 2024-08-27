@@ -11,5 +11,5 @@ public interface ITenantInfoProvider<TInfo> where TInfo : ITenantInfo
     /// </summary>
     /// <returns></returns>
     [AutoCache]
-    Task<IList<TInfo>> GetAll();
+    Task<IList<TInfo>> GetAllAsync();
 }
