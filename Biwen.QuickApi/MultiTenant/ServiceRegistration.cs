@@ -48,6 +48,16 @@ public static class ServiceRegistration
         services.AddTenantInfoProvider<MemoryInfoProvider<TInfo>, TInfo>();
     }
 
+    /// <summary>
+    /// 添加租户上下文Accessor
+    /// </summary>
+    /// <typeparam name="TInfo"></typeparam>
+    /// <param name="services"></param>
+    internal static void AddTenantContextAccessor<TInfo>(this IServiceCollection services)
+        where TInfo : class, ITenantInfo
+    {
+        services.AddScoped<TenantContextAccessor<TInfo>>();
+    }
 
     #region 租户查找器
 
@@ -138,7 +148,12 @@ public static class ServiceRegistration
     Action<MultiTenantOptions> config)
     where TInfo : class, ITenantInfo
     {
+        //添加配置
         services.Configure(config);
+
+        //添加租户上下文Accessor
+        services.AddTenantContextAccessor<TInfo>();
+
         return new MultiTenantBuilder<TInfo>(services);
     }
 
