@@ -25,7 +25,7 @@ public static class ServiceRegistration
     /// <typeparam name="TInfo"></typeparam>
     /// <param name="services"></param>
     /// <param name="configSection">不填则默认:BiwenQuickApi:MultiTenants</param>
-    public static void AddConfigurationInfoProvider<TInfo>(this IServiceCollection services, string? configSection = null)
+    internal static void AddConfigurationInfoProvider<TInfo>(this IServiceCollection services, string? configSection = null)
         where TInfo : class, ITenantInfo
     {
         if (!string.IsNullOrEmpty(configSection))
@@ -34,6 +34,20 @@ public static class ServiceRegistration
         }
         services.AddTenantInfoProvider<ConfigurationInfoProvider<TInfo>, TInfo>();
     }
+
+    /// <summary>
+    /// 添加基于内存提供租户信息
+    /// </summary>
+    /// <typeparam name="TInfo"></typeparam>
+    /// <param name="services"></param>
+    /// <param name="func"></param>
+    internal static void AddMemoryInfoProvider<TInfo>(this IServiceCollection services, Func<IList<TInfo>?>? func)
+        where TInfo : class, ITenantInfo
+    {
+        MemoryInfoProvider<TInfo>._infos = func?.Invoke();
+        services.AddTenantInfoProvider<MemoryInfoProvider<TInfo>, TInfo>();
+    }
+
 
     #region 租户查找器
 
@@ -56,7 +70,7 @@ public static class ServiceRegistration
     public static void AddBasePathTenantFinder<TInfo>(this IServiceCollection services)
         where TInfo : class, ITenantInfo
     {
-        services.AddTenantFinder<BasePathTenantFinder<TInfo>, TInfo>();
+        services.AddTenantFinder<BasePathFinder<TInfo>, TInfo>();
     }
 
     /// <summary>
@@ -69,9 +83,9 @@ public static class ServiceRegistration
     {
         if (!string.IsNullOrEmpty(tenantIdHeader))
         {
-            HeaderTenantFinder<TInfo>.TenantIdHeader = tenantIdHeader;
+            HeaderFinder<TInfo>.TenantIdHeader = tenantIdHeader;
         }
-        services.AddTenantFinder<HeaderTenantFinder<TInfo>, TInfo>();
+        services.AddTenantFinder<HeaderFinder<TInfo>, TInfo>();
     }
 
     /// <summary>
@@ -85,9 +99,9 @@ public static class ServiceRegistration
     {
         if (!string.IsNullOrEmpty(routeParam))
         {
-            RouteTenantFinder<TInfo>.RouteParameter = routeParam;
+            RouteFinder<TInfo>.RouteParameter = routeParam;
         }
-        services.AddTenantFinder<RouteTenantFinder<TInfo>, TInfo>();
+        services.AddTenantFinder<RouteFinder<TInfo>, TInfo>();
     }
 
     /// <summary>
@@ -101,9 +115,9 @@ public static class ServiceRegistration
     {
         if (!string.IsNullOrEmpty(sessionId))
         {
-            SessionTenantFinder<TInfo>.TenantId = sessionId;
+            SessionFinder<TInfo>.TenantId = sessionId;
         }
-        services.AddTenantFinder<SessionTenantFinder<TInfo>, TInfo>();
+        services.AddTenantFinder<SessionFinder<TInfo>, TInfo>();
     }
 
     #endregion

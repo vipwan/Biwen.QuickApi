@@ -7,13 +7,12 @@ namespace Biwen.QuickApi.MultiTenant.InfoProviders;
 /// </summary>
 /// <typeparam name="TInfo"></typeparam>
 /// <param name="configuration"></param>
-public class ConfigurationInfoProvider<TInfo>(IConfiguration configuration) :
-    ITenantInfoProvider<TInfo>
+internal class ConfigurationInfoProvider<TInfo>(IConfiguration configuration) : ITenantInfoProvider<TInfo>
     where TInfo : class, ITenantInfo
 {
     internal static volatile string DefaultSectionName = "BiwenQuickApi:MultiTenants";
 
-    public virtual Task<IList<TInfo>> GetAllAsync()
+    public Task<IList<TInfo>> GetAllAsync()
     {
         var section = configuration.GetSection(DefaultSectionName);
 

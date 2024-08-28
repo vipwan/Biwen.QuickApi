@@ -8,7 +8,7 @@ namespace Biwen.QuickApi.MultiTenant.Finders;
 /// </summary>
 /// <param name="httpContextAccessor"></param>
 /// <param name="cachingProxyFactory"></param>
-public class BasePathTenantFinder<TInfo>(
+public class BasePathFinder<TInfo>(
     IHttpContextAccessor httpContextAccessor,
     CachingProxyFactory<ITenantInfoProvider<TInfo>> cachingProxyFactory) :
     ITenantFinder<TInfo>

@@ -4,23 +4,23 @@ using Microsoft.AspNetCore.Http;
 namespace Biwen.QuickApi.MultiTenant.Finders;
 
 /// <summary>
-/// 基于Session的租户查找器
+/// 基于路由的租户查找器
 /// </summary>
 /// <typeparam name="TInfo"></typeparam>
 /// <param name="httpContextAccessor"></param>
 /// <param name="cachingProxyFactory"></param>
-public class SessionTenantFinder<TInfo>(
+public class RouteFinder<TInfo>(
     IHttpContextAccessor httpContextAccessor,
     CachingProxyFactory<ITenantInfoProvider<TInfo>> cachingProxyFactory) :
     ITenantFinder<TInfo>
     where TInfo : ITenantInfo
 {
     /// <summary>
-    /// TenantId
+    /// RouteParameter
     /// </summary>
-    internal static volatile string TenantId = "TenantId";
+    internal static volatile string RouteParameter = "__tenant__";
 
-    public async Task<TInfo?> FindAsync()
+    public virtual async Task<TInfo?> FindAsync()
     {
         ArgumentNullException.ThrowIfNull(httpContextAccessor, nameof(httpContextAccessor));
         ArgumentNullException.ThrowIfNull(cachingProxyFactory, nameof(cachingProxyFactory));
@@ -29,18 +29,8 @@ public class SessionTenantFinder<TInfo>(
             return default;
         }
 
-        if (httpContextAccessor.HttpContext == null)
-        {
-            return default;
-        }
-
-        var session = httpContextAccessor.HttpContext.Session;
-        if (session == null)
-        {
-            return default;
-        }
-        var tenantId = session.GetString(TenantId);
-        if (string.IsNullOrEmpty(tenantId))
+        var routeValue = httpContextAccessor.HttpContext.Request.RouteValues[RouteParameter]?.ToString();
+        if (string.IsNullOrEmpty(routeValue))
         {
             return default;
         }
@@ -48,7 +38,6 @@ public class SessionTenantFinder<TInfo>(
         var tenantInfoProvider = cachingProxyFactory.Create();
 
         var tenants = await tenantInfoProvider.GetAllAsync();
-        return tenants.FirstOrDefault(t => t.Identifier.Equals(tenantId, StringComparison.OrdinalIgnoreCase));
-
+        return tenants.FirstOrDefault(t => t.Identifier.Equals(routeValue, StringComparison.OrdinalIgnoreCase));
     }
 }

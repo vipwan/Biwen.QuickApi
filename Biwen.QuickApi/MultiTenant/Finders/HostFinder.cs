@@ -8,7 +8,7 @@ namespace Biwen.QuickApi.MultiTenant.Finders;
 /// 基于Host的租户查找器
 /// </summary>
 /// <typeparam name="TInfo"></typeparam>
-public class HostTenantFinder<TInfo>(
+public class HostFinder<TInfo>(
     IHttpContextAccessor httpContextAccessor,
     CachingProxyFactory<ITenantInfoProvider<TInfo>> cachingProxyFactory) :
     ITenantFinder<TInfo>

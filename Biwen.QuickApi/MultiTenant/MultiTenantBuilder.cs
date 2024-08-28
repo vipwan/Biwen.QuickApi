@@ -39,6 +39,17 @@ public class MultiTenantBuilder<TInfo> where TInfo : class, ITenantInfo
     }
 
     /// <summary>
+    /// 添加基于内存提供租户信息
+    /// </summary>
+    /// <param name="func"></param>
+    /// <returns></returns>
+    public MultiTenantBuilder<TInfo> AddMemoryInfoProvider(Func<IList<TInfo>?>? func)
+    {
+        Services.AddMemoryInfoProvider(func);
+        return this;
+    }
+
+    /// <summary>
     /// 添加租户查找器
     /// </summary>
     /// <typeparam name="TFinder"></typeparam>
@@ -56,7 +67,7 @@ public class MultiTenantBuilder<TInfo> where TInfo : class, ITenantInfo
     /// <returns></returns>
     public MultiTenantBuilder<TInfo> AddBasePathTenantFinder()
     {
-        Services.AddTenantFinder<BasePathTenantFinder<TInfo>, TInfo>();
+        Services.AddTenantFinder<BasePathFinder<TInfo>, TInfo>();
         return this;
     }
 
@@ -69,9 +80,9 @@ public class MultiTenantBuilder<TInfo> where TInfo : class, ITenantInfo
     {
         if (!string.IsNullOrEmpty(tenantIdHeader))
         {
-            HeaderTenantFinder<TInfo>.TenantIdHeader = tenantIdHeader;
+            HeaderFinder<TInfo>.TenantIdHeader = tenantIdHeader;
         }
-        Services.AddTenantFinder<HeaderTenantFinder<TInfo>, TInfo>();
+        Services.AddTenantFinder<HeaderFinder<TInfo>, TInfo>();
         return this;
     }
 
@@ -81,7 +92,7 @@ public class MultiTenantBuilder<TInfo> where TInfo : class, ITenantInfo
     /// <returns></returns>
     public MultiTenantBuilder<TInfo> AddHostTenantFinder()
     {
-        Services.AddTenantFinder<HostTenantFinder<TInfo>, TInfo>();
+        Services.AddTenantFinder<HostFinder<TInfo>, TInfo>();
         return this;
     }
 
@@ -94,9 +105,9 @@ public class MultiTenantBuilder<TInfo> where TInfo : class, ITenantInfo
     {
         if (!string.IsNullOrEmpty(sessionId))
         {
-            SessionTenantFinder<TInfo>.TenantId = sessionId;
+            SessionFinder<TInfo>.TenantId = sessionId;
         }
-        Services.AddTenantFinder<SessionTenantFinder<TInfo>, TInfo>();
+        Services.AddTenantFinder<SessionFinder<TInfo>, TInfo>();
         return this;
     }
 
@@ -109,9 +120,9 @@ public class MultiTenantBuilder<TInfo> where TInfo : class, ITenantInfo
     {
         if (!string.IsNullOrEmpty(routeParameter))
         {
-            RouteTenantFinder<TInfo>.RouteParameter = routeParameter;
+            RouteFinder<TInfo>.RouteParameter = routeParameter;
         }
-        Services.AddTenantFinder<RouteTenantFinder<TInfo>, TInfo>();
+        Services.AddTenantFinder<RouteFinder<TInfo>, TInfo>();
         return this;
     }
 

@@ -9,7 +9,7 @@ namespace Biwen.QuickApi.MultiTenant.Finders;
 /// <typeparam name="TInfo"></typeparam>
 /// <param name="httpContextAccessor"></param>
 /// <param name="cachingProxyFactory"></param>
-public class HeaderTenantFinder<TInfo>(
+public class HeaderFinder<TInfo>(
     IHttpContextAccessor httpContextAccessor,
     CachingProxyFactory<ITenantInfoProvider<TInfo>> cachingProxyFactory) :
     ITenantFinder<TInfo>
@@ -20,7 +20,7 @@ public class HeaderTenantFinder<TInfo>(
     /// </summary>
     internal static volatile string TenantIdHeader = "X-Tenant-Id";
 
-    public async Task<TInfo?> FindAsync()
+    public virtual async Task<TInfo?> FindAsync()
     {
         ArgumentNullException.ThrowIfNull(httpContextAccessor, nameof(httpContextAccessor));
         ArgumentNullException.ThrowIfNull(cachingProxyFactory, nameof(cachingProxyFactory));

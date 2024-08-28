@@ -19,6 +19,23 @@ public class MultiTenantModular : ModularBase
             o.DefaultId = "tenant1";//当Finder无法找到租户信息时,使用默认的租户信息
         })
           //.AddTenantInfoProvider<MyTenantInfoProvider>()
+          //.AddMemoryInfoProvider(() => new List<TenantInfo>
+          //{
+          //    new TenantInfo
+          //    {
+          //        Id = "tenant1",
+          //        Name = "租户1",
+          //        Identifier = "tenant1",
+          //        ConnectionString = "server=.;database=tenant1;uid=sa;pwd=123456"
+          //    },
+          //    new TenantInfo
+          //    {
+          //        Id = "tenant2",
+          //        Name = "租户2",
+          //        Identifier = "tenant2",
+          //        ConnectionString = "server=.;database=tenant2;uid=sa;pwd=123456"
+          //    }
+          //})
           .AddConfigurationInfoProvider() //使用配置项提供租户信息
           .AddBasePathTenantFinder();
 
