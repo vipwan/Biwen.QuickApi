@@ -20,7 +20,12 @@ public sealed class TenantContextAccessor<TInfo>(IHttpContextAccessor httpContex
                 return _tenantInfo;
             }
 
-            var contextService = httpContextAccessor.HttpContext!.RequestServices.GetRequiredService<AsyncContextService<TInfo>>();
+            if (httpContextAccessor?.HttpContext is null)
+            {
+                throw new InvalidOperationException("HttpContext is null");
+            }
+
+            var contextService = httpContextAccessor.HttpContext.RequestServices.GetRequiredService<AsyncContextService<TInfo>>();
             contextService.TryGet(out _tenantInfo);
 
             return _tenantInfo;

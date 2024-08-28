@@ -21,7 +21,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -61,7 +61,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantInfoProvider<TInfoProvider, TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -95,7 +95,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddTenantFinder<TFinder, TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -129,7 +129,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddBasePathTenantFinder<TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -161,7 +161,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddHeaderTenantFinder<TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection, string?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -196,7 +196,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddRouteTenantFinder<TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection, string?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -232,7 +232,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddSessionTenantFinder<TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection, string?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -268,7 +268,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant<TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -299,7 +299,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration.AddMultiTenant<TInfo>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Biwen.QuickApi.MultiTenant.MultiTenantOptions>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/ServiceRegistration.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant

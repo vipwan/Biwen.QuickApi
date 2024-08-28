@@ -5,12 +5,13 @@
 
 实现租户信息提供者接口
 ---------------------
-实现`ITenantInfoProvider<T>`请务必考虑缓存等性能问题,多租户信息不会频繁变动,可以适当缓存
+实现`ITenantInfoProvider<T>`请务必考虑缓存等性能问题,多租户信息不会频繁变动,可以适当缓存,
+系统提供`基于内存`和`配置文件`的提供者
 
 ```csharp
 internal class MyTenantInfoProvider : ITenantInfoProvider<TenantInfo>
 {
-    public Task<IList<TenantInfo>> GetAll()
+    public Task<IList<TenantInfo>> GetAllAsync()
     {
         return Task.FromResult<IList<TenantInfo>>(new List<TenantInfo>
         {
@@ -59,10 +60,9 @@ app.UseMultiTenant<TenantInfo>();
 
 ```
 
+可以通过注入`TenantContextAccessor<TInfo>`获取当前上下文的租户信息 &nbsp;
 
-
-
-如果你不使用中间件的方式读取多租户信息,也可以注入`ITenantFinder<T>`按需获取租户信息
+如果你不使用中间件的方式读取多租户信息,也可以注入`ITenantFinder<TInfo>`按需获取租户信息
 
 ```csharp
 
@@ -83,5 +83,6 @@ API文档
 ---------------------
 相关API文档:
 [ITenantInfo](../api/Biwen.QuickApi.MultiTenant.ITenantInfo.yml) &nbsp;
+[TenantContextAccessor](../api/Biwen.QuickApi.MultiTenant.TenantContextAccessor-1.yml) &nbsp;
 [ITenantInfoProvider](../api/Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.yml)&nbsp;
 [ITenantFinder](../api/Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder-1.yml)&nbsp;

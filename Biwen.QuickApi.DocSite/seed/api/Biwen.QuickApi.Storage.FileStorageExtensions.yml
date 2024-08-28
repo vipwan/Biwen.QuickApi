@@ -20,7 +20,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileStorageExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Storage/FileStorageExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Storage/FileStorageExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -52,7 +52,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileStorageExtensions.SaveObjectAsync<T>(Biwen.QuickApi.Storage.IFileStorage, string, T, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Storage/FileStorageExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Storage/FileStorageExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -97,7 +97,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetObjectAsync<T>(Biwen.QuickApi.Storage.IFileStorage, string, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Storage/FileStorageExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Storage/FileStorageExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -132,7 +132,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileStorageExtensions.DeleteFilesAsync(Biwen.QuickApi.Storage.IFileStorage, System.Collections.Generic.IEnumerable<Biwen.QuickApi.Storage.FileSpec>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Storage/FileStorageExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Storage/FileStorageExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -168,7 +168,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsAsync(Biwen.QuickApi.Storage.IFileStorage, string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Storage/FileStorageExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Storage/FileStorageExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -204,7 +204,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileContentsRawAsync(Biwen.QuickApi.Storage.IFileStorage, string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Storage/FileStorageExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Storage/FileStorageExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -235,7 +235,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileStorageExtensions.SaveFileAsync(Biwen.QuickApi.Storage.IFileStorage, string, string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Storage/FileStorageExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Storage/FileStorageExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -274,7 +274,7 @@ items:
   fullName: Biwen.QuickApi.Storage.FileStorageExtensions.GetFileListAsync(Biwen.QuickApi.Storage.IFileStorage, string?, int?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Storage/FileStorageExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Storage/FileStorageExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage

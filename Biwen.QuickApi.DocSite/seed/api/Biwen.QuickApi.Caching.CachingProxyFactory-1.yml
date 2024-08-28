@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -57,7 +57,7 @@ items:
   fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.CachingProxyFactory(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -86,7 +86,7 @@ items:
   fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.Create(T, Biwen.QuickApi.Caching.Abstractions.IProxyCache)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -120,7 +120,7 @@ items:
   fullName: Biwen.QuickApi.Caching.CachingProxyFactory<T>.Create(string?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Caching/CachingProxyFactory.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/CachingProxyFactory.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching

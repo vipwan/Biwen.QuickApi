@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.IgnoreType
   type: Enum
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -45,7 +45,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.IgnoreType.All
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -67,7 +67,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.IgnoreType.Parameter
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing
@@ -89,7 +89,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.IgnoreType.ReturnValue
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Auditing/AuditIgnoreAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing

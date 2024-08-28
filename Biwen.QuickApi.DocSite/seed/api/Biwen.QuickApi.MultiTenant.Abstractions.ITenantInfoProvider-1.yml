@@ -5,7 +5,7 @@ items:
   id: ITenantInfoProvider`1
   parent: Biwen.QuickApi.MultiTenant.Abstractions
   children:
-  - Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll
+  - Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAllAsync
   langs:
   - csharp
   - vb
@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/Abstractions/ITenantInfoProvider.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/Abstractions/ITenantInfoProvider.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant.Abstractions
@@ -33,19 +33,19 @@ items:
   nameWithType.vb: ITenantInfoProvider(Of TInfo)
   fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo)
   name.vb: ITenantInfoProvider(Of TInfo)
-- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll
-  commentId: M:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll
-  id: GetAll
+- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAllAsync
+  commentId: M:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAllAsync
+  id: GetAllAsync
   parent: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
   langs:
   - csharp
   - vb
-  name: GetAll()
-  nameWithType: ITenantInfoProvider<TInfo>.GetAll()
-  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>.GetAll()
+  name: GetAllAsync()
+  nameWithType: ITenantInfoProvider<TInfo>.GetAllAsync()
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>.GetAllAsync()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/MultiTenant/Abstractions/ITenantInfoProvider.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/Abstractions/ITenantInfoProvider.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant.Abstractions
@@ -55,23 +55,23 @@ items:
     content: >-
       [AutoCache(1800)]
 
-      Task<IList<TInfo>> GetAll()
+      Task<IList<TInfo>> GetAllAsync()
     return:
       type: System.Threading.Tasks.Task{System.Collections.Generic.IList{{TInfo}}}
       description: ''
     content.vb: >-
       <AutoCache(1800)>
 
-      Function GetAll() As Task(Of IList(Of TInfo))
-  overload: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll*
+      Function GetAllAsync() As Task(Of IList(Of TInfo))
+  overload: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAllAsync*
   attributes:
   - type: Biwen.QuickApi.Caching.AutoCacheAttribute
     ctor: Biwen.QuickApi.Caching.AutoCacheAttribute.#ctor(System.Int32)
     arguments:
     - type: System.Int32
       value: 1800
-  nameWithType.vb: ITenantInfoProvider(Of TInfo).GetAll()
-  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo).GetAll()
+  nameWithType.vb: ITenantInfoProvider(Of TInfo).GetAllAsync()
+  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo).GetAllAsync()
 references:
 - uid: Biwen.QuickApi.MultiTenant.Abstractions
   commentId: N:Biwen.QuickApi.MultiTenant.Abstractions
@@ -466,15 +466,15 @@ references:
     name: EntityEvents
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.html
-- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll*
-  commentId: Overload:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAll
+- uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAllAsync*
+  commentId: Overload:Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1.GetAllAsync
   isExternal: true
-  href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html#Biwen_QuickApi_MultiTenant_Abstractions_ITenantInfoProvider_1_GetAll
-  name: GetAll
-  nameWithType: ITenantInfoProvider<TInfo>.GetAll
-  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>.GetAll
-  nameWithType.vb: ITenantInfoProvider(Of TInfo).GetAll
-  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo).GetAll
+  href: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider-1.html#Biwen_QuickApi_MultiTenant_Abstractions_ITenantInfoProvider_1_GetAllAsync
+  name: GetAllAsync
+  nameWithType: ITenantInfoProvider<TInfo>.GetAllAsync
+  fullName: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider<TInfo>.GetAllAsync
+  nameWithType.vb: ITenantInfoProvider(Of TInfo).GetAllAsync
+  fullName.vb: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider(Of TInfo).GetAllAsync
 - uid: System.Threading.Tasks.Task{System.Collections.Generic.IList{{TInfo}}}
   commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IList{`0}}
   parent: System.Threading.Tasks

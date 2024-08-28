@@ -10,6 +10,7 @@ items:
   - Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
   - Biwen.QuickApi.MultiTenant.MultiTenantOptions
   - Biwen.QuickApi.MultiTenant.ServiceRegistration
+  - Biwen.QuickApi.MultiTenant.TenantContextAccessor`1
   - Biwen.QuickApi.MultiTenant.TenantInfo
   langs:
   - csharp
@@ -86,6 +87,34 @@ references:
   name: ServiceRegistration
   nameWithType: ServiceRegistration
   fullName: Biwen.QuickApi.MultiTenant.ServiceRegistration
+- uid: Biwen.QuickApi.MultiTenant.TenantContextAccessor`1
+  commentId: T:Biwen.QuickApi.MultiTenant.TenantContextAccessor`1
+  isExternal: true
+  href: Biwen.QuickApi.MultiTenant.TenantContextAccessor-1.html
+  name: TenantContextAccessor<TInfo>
+  nameWithType: TenantContextAccessor<TInfo>
+  fullName: Biwen.QuickApi.MultiTenant.TenantContextAccessor<TInfo>
+  nameWithType.vb: TenantContextAccessor(Of TInfo)
+  fullName.vb: Biwen.QuickApi.MultiTenant.TenantContextAccessor(Of TInfo)
+  name.vb: TenantContextAccessor(Of TInfo)
+  spec.csharp:
+  - uid: Biwen.QuickApi.MultiTenant.TenantContextAccessor`1
+    name: TenantContextAccessor
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.TenantContextAccessor-1.html
+  - name: <
+  - name: TInfo
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.MultiTenant.TenantContextAccessor`1
+    name: TenantContextAccessor
+    isExternal: true
+    href: Biwen.QuickApi.MultiTenant.TenantContextAccessor-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInfo
+  - name: )
 - uid: Biwen.QuickApi.MultiTenant.TenantInfo
   commentId: T:Biwen.QuickApi.MultiTenant.TenantInfo
   parent: Biwen.QuickApi.MultiTenant

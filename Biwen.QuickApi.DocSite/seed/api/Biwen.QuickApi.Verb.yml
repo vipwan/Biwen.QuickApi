@@ -20,7 +20,7 @@ items:
   fullName: Biwen.QuickApi.Verb
   type: Enum
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Verb.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Verb.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -51,7 +51,7 @@ items:
   fullName: Biwen.QuickApi.Verb.GET
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Verb.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Verb.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -73,7 +73,7 @@ items:
   fullName: Biwen.QuickApi.Verb.POST
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Verb.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Verb.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -95,7 +95,7 @@ items:
   fullName: Biwen.QuickApi.Verb.PUT
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Verb.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Verb.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -117,7 +117,7 @@ items:
   fullName: Biwen.QuickApi.Verb.DELETE
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Verb.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Verb.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -137,7 +137,7 @@ items:
   fullName: Biwen.QuickApi.Verb.PATCH
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Verb.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Verb.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -159,7 +159,7 @@ items:
   fullName: Biwen.QuickApi.Verb.HEAD
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Verb.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Verb.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -181,7 +181,7 @@ items:
   fullName: Biwen.QuickApi.Verb.OPTIONS
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Verb.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Verb.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi

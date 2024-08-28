@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Storage.StreamMode
   type: Enum
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Storage/StreamMode.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Storage/StreamMode.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -36,7 +36,7 @@ items:
   fullName: Biwen.QuickApi.Storage.StreamMode.Read
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Storage/StreamMode.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Storage/StreamMode.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage
@@ -56,7 +56,7 @@ items:
   fullName: Biwen.QuickApi.Storage.StreamMode.Write
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Storage/StreamMode.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Storage/StreamMode.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Storage

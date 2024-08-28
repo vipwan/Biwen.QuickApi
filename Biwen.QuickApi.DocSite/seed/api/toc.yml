@@ -328,6 +328,8 @@ items:
     name: MultiTenantOptions
   - uid: Biwen.QuickApi.MultiTenant.ServiceRegistration
     name: ServiceRegistration
+  - uid: Biwen.QuickApi.MultiTenant.TenantContextAccessor`1
+    name: TenantContextAccessor<TInfo>
   - uid: Biwen.QuickApi.MultiTenant.TenantInfo
     name: TenantInfo
 - uid: Biwen.QuickApi.MultiTenant.Abstractions
@@ -340,16 +342,16 @@ items:
 - uid: Biwen.QuickApi.MultiTenant.Finders
   name: Biwen.QuickApi.MultiTenant.Finders
   items:
-  - uid: Biwen.QuickApi.MultiTenant.Finders.BasePathTenantFinder`1
-    name: BasePathTenantFinder<TInfo>
-  - uid: Biwen.QuickApi.MultiTenant.Finders.HeaderTenantFinder`1
-    name: HeaderTenantFinder<TInfo>
-  - uid: Biwen.QuickApi.MultiTenant.Finders.HostTenantFinder`1
-    name: HostTenantFinder<TInfo>
-  - uid: Biwen.QuickApi.MultiTenant.Finders.RouteTenantFinder`1
-    name: RouteTenantFinder<TInfo>
-  - uid: Biwen.QuickApi.MultiTenant.Finders.SessionTenantFinder`1
-    name: SessionTenantFinder<TInfo>
+  - uid: Biwen.QuickApi.MultiTenant.Finders.BasePathFinder`1
+    name: BasePathFinder<TInfo>
+  - uid: Biwen.QuickApi.MultiTenant.Finders.HeaderFinder`1
+    name: HeaderFinder<TInfo>
+  - uid: Biwen.QuickApi.MultiTenant.Finders.HostFinder`1
+    name: HostFinder<TInfo>
+  - uid: Biwen.QuickApi.MultiTenant.Finders.RouteFinder`1
+    name: RouteFinder<TInfo>
+  - uid: Biwen.QuickApi.MultiTenant.Finders.SessionFinder`1
+    name: SessionFinder<TInfo>
 - uid: Biwen.QuickApi.OpenApi
   name: Biwen.QuickApi.OpenApi
   items:

@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Application/BuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/BuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -60,7 +60,7 @@ items:
   fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>.BuinessServiceBase(Biwen.QuickApi.UnitOfWork.IUnitOfWork<TDbContext1>, Biwen.QuickApi.UnitOfWork.IUnitOfWork<TDbContext2>, Biwen.QuickApi.UnitOfWork.IUnitOfWork<TDbContext3>, Microsoft.Extensions.Logging.ILogger?)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Application/BuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/BuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -92,7 +92,7 @@ items:
   fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>.Uow3
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Application/BuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/BuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application

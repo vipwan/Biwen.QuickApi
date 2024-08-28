@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.BearerSecuritySchemeTransformer
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/OpenApi/BearerSecuritySchemeTransformer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/BearerSecuritySchemeTransformer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi
@@ -51,7 +51,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.BearerSecuritySchemeTransformer.BearerSecuritySchemeTransformer(Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/OpenApi/BearerSecuritySchemeTransformer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/BearerSecuritySchemeTransformer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi
@@ -80,7 +80,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.BearerSecuritySchemeTransformer.TransformAsync(Microsoft.OpenApi.Models.OpenApiDocument, Microsoft.AspNetCore.OpenApi.OpenApiDocumentTransformerContext, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/OpenApi/BearerSecuritySchemeTransformer.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/BearerSecuritySchemeTransformer.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi

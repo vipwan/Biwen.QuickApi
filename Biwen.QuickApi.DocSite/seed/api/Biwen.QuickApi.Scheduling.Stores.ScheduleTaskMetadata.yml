@@ -19,7 +19,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
@@ -52,7 +52,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata.ScheduleTaskMetadata(System.Type, string)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
@@ -80,7 +80,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata.ScheduleTaskType
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
@@ -105,7 +105,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata.Cron
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
@@ -130,7 +130,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata.Description
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
@@ -155,7 +155,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata.IsAsync
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
@@ -180,7 +180,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata.IsStartOnInit
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/38e408bd0a58385491e8c70a6f69276e9eedf8c6/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/Stores/ScheduleTaskMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Stores
