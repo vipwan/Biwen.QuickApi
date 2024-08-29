@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Biwen.AutoClassGen.Attributes;
+using Microsoft.Extensions.Logging;
 
 namespace Biwen.QuickApi.Test
 {
@@ -57,12 +58,29 @@ namespace Biwen.QuickApi.Test
             Assert.Equal("Decorated2: hello world", result);
         }
 
-        interface ITestService
+        [Fact]
+        public async Task TestDecorate_With_autogen()
+        {
+            var services = new ServiceCollection();
+            services.AddSingleton<ITestService, TestService>();
+            //使用源生成器模式
+            services.AddAutoDecor();
+
+            var provider = services.BuildServiceProvider();
+            var service = provider.GetRequiredService<ITestService>();
+            var result = await service.SayHello();
+            testOutput.WriteLine(result);
+            Assert.Equal("Decorated3: hello world", result);
+
+        }
+
+        [AutoDecor<DecorateTestService3>]
+        public interface ITestService
         {
             Task<string?> SayHello();
         }
 
-        class TestService : ITestService
+        public class TestService : ITestService
         {
             public async Task<string?> SayHello()
             {
@@ -75,7 +93,7 @@ namespace Biwen.QuickApi.Test
         /// 不含其他注入的情况
         /// </summary>
         /// <param name="inner"></param>
-        class DecorateTestService(ITestService inner) : ITestService
+        public class DecorateTestService(ITestService inner) : ITestService
         {
             public async Task<string?> SayHello()
             {
@@ -89,18 +107,24 @@ namespace Biwen.QuickApi.Test
         /// </summary>
         /// <param name="inner"></param>
         /// <param name="logger"></param>
-        class DecorateTestService2(ITestService inner, ILogger<DecorateTestService> logger) : ITestService
+        public class DecorateTestService2(ITestService inner, ILogger<DecorateTestService> logger) : ITestService
         {
             public async Task<string?> SayHello()
             {
                 var old = await inner.SayHello();
-
                 logger.LogInformation(old);
-
                 return $"Decorated2: {old}";
             }
         }
 
+        public class DecorateTestService3(ITestService inner) : ITestService
+        {
+            public async Task<string?> SayHello()
+            {
+                var old = await inner.SayHello();
+                return $"Decorated3: {old}";
+            }
+        }
 
     }
 }
