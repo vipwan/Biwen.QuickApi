@@ -9,7 +9,7 @@
 
 	<PropertyGroup Label="Package versions used in this repository">
 		<FluentValidationAspNetCoreVer>11.3.0</FluentValidationAspNetCoreVer>
-		<BiwenAutoClassGenVer>1.3.5</BiwenAutoClassGenVer>
+		<BiwenAutoClassGenVer>1.3.6</BiwenAutoClassGenVer>
 		<MicrosoftExtensionsVer>8.8.0</MicrosoftExtensionsVer>
 	</PropertyGroup>
 
