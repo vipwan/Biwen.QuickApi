@@ -11,7 +11,7 @@ using System.Reflection;
 using Biwen.QuickApi.MultiTenant;
 
 //verison 
-Console.WriteLine($"Biwen.QuickApi Version:{Biwen.QuickApi.Generated.Version.Current}");
+Console.WriteLine($"Biwen.QuickApi Version:{Biwen.QuickApi.Generated.Version.AssemblyVersion}");
 
 var builder = WebApplication.CreateBuilder(args);
 
