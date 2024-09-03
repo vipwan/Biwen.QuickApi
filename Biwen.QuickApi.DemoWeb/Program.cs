@@ -10,6 +10,9 @@ using Microsoft.FluentUI.AspNetCore.Components;
 using System.Reflection;
 using Biwen.QuickApi.MultiTenant;
 
+//verison 
+Console.WriteLine($"Biwen.QuickApi Version:{Biwen.QuickApi.Generated.Version.Current}");
+
 var builder = WebApplication.CreateBuilder(args);
 
 
