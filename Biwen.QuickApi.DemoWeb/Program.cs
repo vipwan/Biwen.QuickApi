@@ -17,6 +17,10 @@ using NSwag;
 using System.Reflection;
 
 
+Console.WriteLine($"Biwen.QuickApi Version:{Biwen.QuickApi.Generated.Version.AssemblyVersion}");
+
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
