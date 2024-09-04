@@ -3,9 +3,9 @@
 	<PropertyGroup>
 		<PackageVersion>2.0.0-preview4</PackageVersion>
 		<PackageReleaseNotes></PackageReleaseNotes>
-		<AssemblyVersion>2.0.0</AssemblyVersion>
-		<FileVersion>2.0.0</FileVersion>
 		<Version>2.0.0</Version>
+		<AssemblyVersion>$(Version)</AssemblyVersion>
+		<FileVersion>$(Version)</FileVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Label="Package versions used in this repository">
