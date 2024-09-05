@@ -12,6 +12,7 @@ using Biwen.QuickApi.MultiTenant;
 
 //verison 
 Console.WriteLine($"Biwen.QuickApi Version:{Biwen.QuickApi.Generated.Version.AssemblyVersion}");
+Console.WriteLine($"Biwen.QuickApi Author:{Biwen.QuickApi.Generated.AssemblyMetadata.Company}");
 
 var builder = WebApplication.CreateBuilder(args);
 

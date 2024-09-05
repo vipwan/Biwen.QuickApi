@@ -38,7 +38,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Biwen.AutoClassGen" Version="1.3.7.2" />
+		<PackageReference Include="Biwen.AutoClassGen" Version="1.3.8" />
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.3.6" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="$(FluentValidationAspNetCoreVer)" />
 		<PackageReference Include="NCrontab" Version="3.3.3" />
