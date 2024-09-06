@@ -1,4 +1,10 @@
-﻿using Biwen.QuickApi.Infrastructure;
+﻿// Licensed to the Biwen.QuickApi.FeatureManagement under one or more agreements.
+// The Biwen.QuickApi.FeatureManagement licenses this file to you under the MIT license. 
+// See the LICENSE file in the project root for more information.
+// Biwen.QuickApi.FeatureManagement Author: 万雅虎 Github: https://github.com/vipwan
+// Modify Date: 2024-09-06 16:59:03 ServiceRegistration.cs
+
+using Biwen.QuickApi.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Biwen.QuickApi.FeatureManagement

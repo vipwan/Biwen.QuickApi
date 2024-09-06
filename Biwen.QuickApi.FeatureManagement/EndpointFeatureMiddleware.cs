@@ -1,4 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿// Licensed to the Biwen.QuickApi.FeatureManagement under one or more agreements.
+// The Biwen.QuickApi.FeatureManagement licenses this file to you under the MIT license. 
+// See the LICENSE file in the project root for more information.
+// Biwen.QuickApi.FeatureManagement Author: 万雅虎 Github: https://github.com/vipwan
+// Modify Date: 2024-09-06 16:58:39 EndpointFeatureMiddleware.cs
+
+using Microsoft.AspNetCore.Http;
 using Microsoft.FeatureManagement.Mvc;
 using Microsoft.FeatureManagement;
 using Microsoft.Extensions.DependencyInjection;
@@ -6,94 +12,93 @@ using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Mvc.Controllers;
 
-namespace Biwen.QuickApi.FeatureManagement
+namespace Biwen.QuickApi.FeatureManagement;
+
+/// <summary>
+/// 处理特性的中间件,主要扩展了Endpoint & QuickApi支持
+/// </summary>
+internal class EndpointFeatureMiddleware
 {
-    /// <summary>
-    /// 处理特性的中间件,主要扩展了Endpoint & QuickApi支持
-    /// </summary>
-    internal class EndpointFeatureMiddleware
+    private readonly RequestDelegate _next;
+
+    public EndpointFeatureMiddleware(RequestDelegate next)
     {
-        private readonly RequestDelegate _next;
+        _next = next;
+    }
 
-        public EndpointFeatureMiddleware(RequestDelegate next)
+    public async Task InvokeAsync(HttpContext context)
+    {
+        if (context.GetEndpoint() is { } endpoint)
         {
-            _next = next;
-        }
-
-        public async Task InvokeAsync(HttpContext context)
-        {
-            if (context.GetEndpoint() is { } endpoint)
+            //这里不处理PageRouteMetadata,因为PageRouteMetadata是用于RazorPage的,不是用于MinimalApi的
+            if (endpoint.Metadata.OfType<PageRouteMetadata>().Any())
             {
-                //这里不处理PageRouteMetadata,因为PageRouteMetadata是用于RazorPage的,不是用于MinimalApi的
-                if (endpoint.Metadata.OfType<PageRouteMetadata>().Any())
-                {
-                    await _next(context);
-                    return;
-                }
+                await _next(context);
+                return;
+            }
 
-                //不处理Mvc Controller
-                if (endpoint.Metadata.OfType<ControllerActionDescriptor>().Any())
-                {
-                    await _next(context);
-                    return;
-                }
+            //不处理Mvc Controller
+            if (endpoint.Metadata.OfType<ControllerActionDescriptor>().Any())
+            {
+                await _next(context);
+                return;
+            }
 
-                if (endpoint.Metadata.GetMetadata<FeatureGateAttribute>() is { } metadata)
-                {
-                    //IFeatureManagerSnapshot 比 IFeatureManager 多了一层缓存封装,性能更好
-                    //IFeatureManagerSnapshot 适用于作用域请求,IFeatureManager 适用于单例请求. 因此IFeatureManagerSnapshot不要在构造器中注入
-                    var _featureManager = context.RequestServices.GetRequiredService<IFeatureManagerSnapshot>();
-                    var options = context.RequestServices.GetRequiredService<IOptions<QuickApiFeatureManagementOptions>>().Value;
-                    var features = metadata.Features;
+            if (endpoint.Metadata.GetMetadata<FeatureGateAttribute>() is { } metadata)
+            {
+                //IFeatureManagerSnapshot 比 IFeatureManager 多了一层缓存封装,性能更好
+                //IFeatureManagerSnapshot 适用于作用域请求,IFeatureManager 适用于单例请求. 因此IFeatureManagerSnapshot不要在构造器中注入
+                var _featureManager = context.RequestServices.GetRequiredService<IFeatureManagerSnapshot>();
+                var options = context.RequestServices.GetRequiredService<IOptions<QuickApiFeatureManagementOptions>>().Value;
+                var features = metadata.Features;
 
-                    //只要有一个特性开启就可以:
-                    if (metadata.RequirementType == RequirementType.Any)
+                //只要有一个特性开启就可以:
+                if (metadata.RequirementType == RequirementType.Any)
+                {
+                    foreach (var feature in features)
                     {
-                        foreach (var feature in features)
+                        if (await _featureManager.IsEnabledAsync(feature))
                         {
-                            if (await _featureManager.IsEnabledAsync(feature))
-                            {
-                                await _next(context);
-                                return;
-                            }
+                            await _next(context);
+                            return;
                         }
-                        context.Response.StatusCode = options.StatusCode;
-                        if (options.OnErrorAsync is { } errorHandler)
-                        {
-                            errorHandler.Invoke(context);
-                        }
-                        else
-                        {
-                            //返回规范的Result.Problem:
-                            await Results.Problem(statusCode: options.StatusCode).ExecuteAsync(context);
-                        }
-                        return;
                     }
-                    //所有特性都必须开启:
+                    context.Response.StatusCode = options.StatusCode;
+                    if (options.OnErrorAsync is { } errorHandler)
+                    {
+                        errorHandler.Invoke(context);
+                    }
                     else
                     {
-                        foreach (var feature in features)
+                        //返回规范的Result.Problem:
+                        await Results.Problem(statusCode: options.StatusCode).ExecuteAsync(context);
+                    }
+                    return;
+                }
+                //所有特性都必须开启:
+                else
+                {
+                    foreach (var feature in features)
+                    {
+                        if (!await _featureManager.IsEnabledAsync(feature))
                         {
-                            if (!await _featureManager.IsEnabledAsync(feature))
+                            context.Response.StatusCode = options.StatusCode;
+                            if (options.OnErrorAsync is { } errorHandler)
                             {
-                                context.Response.StatusCode = options.StatusCode;
-                                if (options.OnErrorAsync is { } errorHandler)
-                                {
-                                    errorHandler.Invoke(context);
-                                }
-                                else
-                                {
-                                    //返回规范的Result.Problem:
-                                    await Results.Problem(statusCode: options.StatusCode).ExecuteAsync(context);
-                                }
-                                return;
+                                errorHandler.Invoke(context);
                             }
+                            else
+                            {
+                                //返回规范的Result.Problem:
+                                await Results.Problem(statusCode: options.StatusCode).ExecuteAsync(context);
+                            }
+                            return;
                         }
                     }
                 }
             }
-            await _next(context);
         }
-
+        await _next(context);
     }
+
 }

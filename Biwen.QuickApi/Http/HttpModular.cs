@@ -1,4 +1,10 @@
-﻿using Biwen.QuickApi.Infrastructure.Html;
+﻿// Licensed to the Biwen.QuickApi under one or more agreements.
+// The Biwen.QuickApi licenses this file to you under the MIT license. 
+// See the LICENSE file in the project root for more information.
+// Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
+// Modify Date: 2024-09-06 16:44:15 HttpModular.cs
+
+using Biwen.QuickApi.Infrastructure.Html;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Biwen.QuickApi.Http;
