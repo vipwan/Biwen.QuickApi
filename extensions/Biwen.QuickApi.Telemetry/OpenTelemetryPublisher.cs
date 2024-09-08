@@ -12,6 +12,7 @@ namespace Biwen.QuickApi.Telemetry
     /// <summary>
     /// 提供性能数据输出到OpenTelemetry
     /// </summary>
+    [Obsolete("未来版本将停用!", false)]
     internal class OpenTelemetryPublisher : IResourceUtilizationPublisher
     {
         public static readonly Channel<ResourceUtilization> ResourceUtilizationChannel = Channel.CreateUnbounded<ResourceUtilization>();

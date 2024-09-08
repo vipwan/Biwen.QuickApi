@@ -29,11 +29,13 @@ namespace Biwen.QuickApi.Telemetry.Implementation
                 // Create a counter
                 var counter = meter.CreateCounter<long>($"{Constant.Prefix}InvokedCount", "counter", description: "性能监控推送次数");
 
+#pragma warning disable CS0618 // 类型或成员已过时
                 await foreach (var utilization in OpenTelemetryPublisher.ResourceUtilizationChannel.Reader.ReadAllAsync())
                 {
                     PublishAsync(utilization, CancellationToken.None);
                     counter.Add(1);
                 }
+#pragma warning restore CS0618 // 类型或成员已过时
             });
         }
 
@@ -54,7 +56,9 @@ namespace Biwen.QuickApi.Telemetry.Implementation
         {
             try
             {
+#pragma warning disable CS0618 // 类型或成员已过时
                 OpenTelemetryPublisher.ResourceUtilizationChannel?.Writer?.Complete();
+#pragma warning restore CS0618 // 类型或成员已过时
             }
             catch
             {

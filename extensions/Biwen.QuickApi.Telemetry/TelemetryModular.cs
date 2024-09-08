@@ -17,9 +17,11 @@ using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Biwen.QuickApi.Telemetry
 {
+    [ExcludeFromCodeCoverage]
     internal class TelemetryModular(IConfiguration configuration) : ModularBase
     {
         /// <summary>
@@ -88,10 +90,12 @@ namespace Biwen.QuickApi.Telemetry
                 });
 
                 //添加SpectreConsolePublisher
+#pragma warning disable
                 o.AddPublisher<SpectreConsolePublisher>();
 
                 //添加OpenTelemetryPublisher
                 o.AddPublisher<OpenTelemetryPublisher>();
+#pragma warning restore
 
             });
 
