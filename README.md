@@ -6,6 +6,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/vipwan/Biwen.QuickApi/pulls) 
 
 ## 项目介绍
+[临时文档地址](http://39.108.3.212:8086/index.html) <br/>
 Biwen.QuickApi 2+,是一个微型`aspnetcore`开发框架,提供minimalapi的QuickApi封装,提供`IQuickEndpoint`书写minimalapi,
 模块化支持`Modular`,`多租户`,发布订阅:`IEvent`,作业调度:`IScheduleTask`,审计:`Auditing`,缓存,LocalLock,`OpenApi` ~~
 
