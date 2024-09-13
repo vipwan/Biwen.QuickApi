@@ -458,7 +458,7 @@ namespace Biwen.QuickApi
                 //规范化异常返回
                 if (sp.GetService<IQuickApiExceptionResultBuilder>() is { } exceptionResultBuilder)
                 {
-                    return await exceptionResultBuilder.ErrorResult(ex);
+                    return await exceptionResultBuilder.ErrorResultAsync(ex);
                 }
                 //默认使用ProblemDetails
                 throw;

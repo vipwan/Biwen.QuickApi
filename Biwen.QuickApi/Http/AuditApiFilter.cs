@@ -48,7 +48,7 @@ namespace Biwen.QuickApi.Http
                         foreach (var handler in handlers)
                         {
                             //审计不要阻塞业务
-                            _ = handler.Handle(auditInfo);
+                            _ = handler.HandleAsync(auditInfo);
                         }
                     }
                 }

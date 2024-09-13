@@ -7,7 +7,7 @@
     [ScheduleTask(Constants.CronEveryMinute, IsStartOnInit = true)]
     public class OnlyOneTask(ILogger<OnlyOneTask> logger) : OnlyOneRunningScheduleTask
     {
-        public override Task OnAbort()
+        public override Task OnAbortAsync()
         {
             logger.LogWarning($"[{DateTime.Now}]任务被打断.因为有一个相同的任务正在执行!");
             return Task.CompletedTask;

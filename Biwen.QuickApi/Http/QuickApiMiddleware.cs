@@ -21,7 +21,9 @@ namespace Biwen.QuickApi.Http
         {
             _next = next;
         }
+#pragma warning disable GEN051 // 将异步方法名改为以Async结尾
         public async Task Invoke(HttpContext context)
+#pragma warning restore GEN051 // 将异步方法名改为以Async结尾
         {
             var addHeader = () =>
             {

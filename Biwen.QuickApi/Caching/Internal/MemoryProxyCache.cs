@@ -21,19 +21,19 @@ internal sealed class MemoryProxyCache(IMemoryCache memoryCache) : IProxyCache
         return _memoryCache.Get(key);
     }
 
-    public Task Set(string key, object? value, TimeSpan expire)
+    public Task SetAsync(string key, object? value, TimeSpan expire)
     {
         _memoryCache.Set(key, value, expire);
         return Task.CompletedTask;
     }
 
-    public Task Remove(string key)
+    public Task RemoveAsync(string key)
     {
         _memoryCache.Remove(key);
         return Task.CompletedTask;
     }
 
-    public Task Exists(string key)
+    public Task ExistsAsync(string key)
     {
         return Task.FromResult(_memoryCache.TryGetValue(key, out _));
     }

@@ -81,7 +81,7 @@ internal class AuditProxy<T> : DispatchProxy where T : class
 
                     foreach (var handler in handlers)
                     {
-                        handler.Handle(auditInfo).GetAwaiter().GetResult();
+                        handler.HandleAsync(auditInfo).GetAwaiter().GetResult();
                     }
                 }
             }

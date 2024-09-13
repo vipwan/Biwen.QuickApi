@@ -62,9 +62,9 @@ namespace Biwen.QuickApi.OpenApi.Scalar
                           <body>
                               <script id="api-reference" data-url="{{openapiPathPrefix}}/{{documentName}}.json"></script>
                               <script>
-                              var configuration = {
-                                  {{configurationJson}}
-                              }
+
+                              var configuration = {{configurationJson}}
+                              
                               document.getElementById('api-reference').dataset.configuration =
                                   JSON.stringify(configuration)
                               </script>

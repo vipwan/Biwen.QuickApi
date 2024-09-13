@@ -24,18 +24,18 @@ public interface IProxyCache
     /// <param name="key"></param>
     /// <param name="value"></param>
     /// <param name="expire"></param>
-    Task Set(string key, object? value, TimeSpan expire);
+    Task SetAsync(string key, object? value, TimeSpan expire);
 
     /// <summary>
     /// 移除缓存
     /// </summary>
     /// <param name="key"></param>
-    Task Remove(string key);
+    Task RemoveAsync(string key);
 
     /// <summary>
     /// 是否存在
     /// </summary>
     /// <param name="key"></param>
     /// <returns></returns>
-    Task Exists(string key);
+    Task ExistsAsync(string key);
 }

@@ -53,7 +53,7 @@ public interface ICurdService<TEntity> where TEntity : class
     /// <param name="orderBy"></param>
     /// <param name="include"></param>
     /// <returns></returns>
-    Task<IPagedList<TEntity>> GetPagedList(
+    Task<IPagedList<TEntity>> GetPagedListAsync(
         int pageIndex = 0,
         int pageSize = 20,
         Expression<Func<TEntity, bool>>? predicate = null,

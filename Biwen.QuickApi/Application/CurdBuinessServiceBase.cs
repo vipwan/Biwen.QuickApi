@@ -53,7 +53,7 @@ namespace Biwen.QuickApi.Application
             await Uow.SaveChangesAsync();
         }
 
-        public virtual async Task<IPagedList<TEntity>> GetPagedList(
+        public virtual async Task<IPagedList<TEntity>> GetPagedListAsync(
             int pageIndex = 0,
             int pageSize = 20,
             Expression<Func<TEntity, bool>>? predicate = null,

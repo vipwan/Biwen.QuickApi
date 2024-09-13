@@ -10,7 +10,7 @@ namespace Biwen.QuickApi.Auditing.Internal;
 
 internal class ConsoleAuditHandler(ILogger<ConsoleAuditHandler> logger) : IAuditHandler
 {
-    public Task Handle(AuditInfo auditInfo)
+    public Task HandleAsync(AuditInfo auditInfo)
     {
         //仅针对Public方法拦截打印
         if (auditInfo.ActionInfo?.MethodInfo?.IsPublic is true)

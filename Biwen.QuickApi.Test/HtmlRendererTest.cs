@@ -56,7 +56,7 @@ namespace Biwen.QuickApi.Test
             {
                 { "Message", message }
             };
-            var html = await service.Render<RenderMessage>(pairs);
+            var html = await service.RenderAsync<RenderMessage>(pairs);
 
             _testOutput.WriteLine(html);
             Assert.Contains(message, html);
@@ -78,7 +78,7 @@ namespace Biwen.QuickApi.Test
             {
                 { "Message", message }
             };
-            var html = await service.Render<RenderMessage>(pairs);
+            var html = await service.RenderAsync<RenderMessage>(pairs);
 
             _testOutput.WriteLine(html);
             Assert.Contains(message, html);

@@ -4,7 +4,7 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<NoWarn>CA2254;CA2016;GEN050</NoWarn>
+		<NoWarn>CA2254;CA2016;GEN050;GEN051</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>

@@ -62,7 +62,7 @@ internal class CachingProxy<T> : DispatchProxy where T : class
 
             //如果缓存不含的情况下:
             var data = targetMethod.Invoke(_decorated, args);
-            _proxyCache.Set(cacheKey, data, cacheMeta.Expiration ?? TimeSpan.FromSeconds(1800));
+            _proxyCache.SetAsync(cacheKey, data, cacheMeta.Expiration ?? TimeSpan.FromSeconds(1800));
 
             return data;
 

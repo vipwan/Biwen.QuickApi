@@ -22,7 +22,7 @@ namespace Biwen.QuickApi.Http
                 var quickApiMetadata = context.HttpContext.GetEndpoint()?.Metadata.GetMetadata<QuickApiMetadata>();
                 if (quickApiMetadata is QuickApiMetadata { QuickApiAttribute: { } })
                 {
-                    var (flag, result) = await CheckPolicy(httpContext, quickApiMetadata.QuickApiAttribute.Policy);
+                    var (flag, result) = await CheckPolicyAsync(httpContext, quickApiMetadata.QuickApiAttribute.Policy);
                     if (!flag)
                     {
                         return result;
@@ -31,7 +31,7 @@ namespace Biwen.QuickApi.Http
                 else if (quickApiMetadata is QuickApiMetadata { QuickApiAttribute: null })
                 {
                     var attr = quickApiMetadata.QuickApiType!.GetCustomAttribute<QuickApiAttribute>() ?? throw new QuickApiExcetion($"{quickApiMetadata.QuickApiType!.Name}:必须标注QuickApi特性!");
-                    var (flag, result) = await CheckPolicy(httpContext, attr.Policy);
+                    var (flag, result) = await CheckPolicyAsync(httpContext, attr.Policy);
                     if (!flag)
                     {
                         return result;
@@ -45,7 +45,7 @@ namespace Biwen.QuickApi.Http
         /// 验证Policy
         /// </summary>
         /// <exception cref="QuickApiExcetion"></exception>
-        async static Task<(bool Flag, IResult? Result)> CheckPolicy(HttpContext ctx, string? policy)
+        async static Task<(bool Flag, IResult? Result)> CheckPolicyAsync(HttpContext ctx, string? policy)
         {
             if (string.IsNullOrWhiteSpace(policy))
             {

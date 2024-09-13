@@ -107,7 +107,7 @@ namespace Biwen.QuickApi.Scheduling
                     if (locker is null)
                     {
                         //如果有正在运行的相同任务,打断当前的执行的回调
-                        await onlyOneRunningScheduleTask.OnAbort();
+                        await onlyOneRunningScheduleTask.OnAbortAsync();
                         return;
                     }
                     using (locker)

@@ -16,7 +16,8 @@ namespace Biwen.QuickApi.DemoWeb.Apis
     {
         public CreateUserModal()
         {
-            RuleFor(x => x.Email).EmailAddress();
+            RuleFor(x => x.Name).NotEmpty();
+            RuleFor(x => x.Email).NotEmpty().EmailAddress();
         }
     }
 
@@ -95,7 +96,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis
 
         public override async ValueTask<UserDto[]> ExecuteAsync(PageModal pageModal, CancellationToken cancellationToken = default)
         {
-            var users = await _userService.GetPagedList(
+            var users = await _userService.GetPagedListAsync(
                 pageModal.Page ?? 0,
                 pageModal.PageSize ?? 20,
                 predicate: (u) => pageModal.Name == null || u.Name.Contains(pageModal.Name));

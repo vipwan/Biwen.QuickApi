@@ -15,7 +15,7 @@ namespace Biwen.QuickApi.DemoWeb
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public Task<IResult> ErrorResult(Exception exception)
+        public Task<IResult> ErrorResultAsync(Exception exception)
         {
             return Task.FromResult<IResult>(TypedResults.Json(new
             {

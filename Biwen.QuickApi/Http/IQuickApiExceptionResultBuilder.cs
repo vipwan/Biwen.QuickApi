@@ -18,5 +18,5 @@ public interface IQuickApiExceptionResultBuilder
     /// </summary>
     /// <param name="exception"></param>
     /// <returns></returns>
-    Task<IResult> ErrorResult(Exception exception);
+    Task<IResult> ErrorResultAsync(Exception exception);
 }

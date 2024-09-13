@@ -23,7 +23,7 @@ namespace Biwen.QuickApi.Http
         /// <typeparam name="T">Blazor组件</typeparam>
         /// <param name="parms">传递的参数字典</param>
         /// <returns></returns>
-        public async Task<string> Render<T>(IDictionary<string, object?>? parms) where T : class, IComponent
+        public async Task<string> RenderAsync<T>(IDictionary<string, object?>? parms) where T : class, IComponent
         {
             using var htmlRenderer = ActivatorUtilities.GetServiceOrCreateInstance<HtmlRenderer>(serviceProvider);
 

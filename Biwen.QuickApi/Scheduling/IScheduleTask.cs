@@ -38,7 +38,7 @@ namespace Biwen.QuickApi.Scheduling
         /// 如果有正在运行的相同任务,打断当前的执行的回调
         /// </summary>
         /// <returns></returns>
-        public virtual Task OnAbort()
+        public virtual Task OnAbortAsync()
         {
             return Task.CompletedTask;
         }

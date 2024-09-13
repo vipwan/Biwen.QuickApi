@@ -60,7 +60,7 @@ namespace Biwen.QuickApi.DemoWeb.Apis.Endpoints
                     { "Message", "Hello from the Render Message component!" }
                 };
 
-            var html = await rendererService.Render<RenderMessage>(dictionary);
+            var html = await rendererService.RenderAsync<RenderMessage>(dictionary);
             return Results.Content(html, "text/html");
         };
 

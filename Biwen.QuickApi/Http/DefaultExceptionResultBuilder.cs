@@ -27,7 +27,7 @@ internal class DefaultExceptionResultBuilder : IQuickApiExceptionResultBuilder
         _contextAccessor = contextAccessor;
     }
 
-    public async Task<IResult> ErrorResult(Exception exception)
+    public async Task<IResult> ErrorResultAsync(Exception exception)
     {
         //通过全局配置
         //if (_environment.IsProduction())

@@ -12,6 +12,6 @@ public interface IAuditHandler
     /// 处理审计日志
     /// </summary>
     /// <param name="auditInfo"></param>
-    Task Handle(AuditInfo auditInfo);
+    Task HandleAsync(AuditInfo auditInfo);
 
 }
