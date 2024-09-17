@@ -48,6 +48,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biwen.QuickApi.Storage.Aliy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biwen.QuickApi.Messaging.AliyunSms", "extensions\Biwen.QuickApi.Messaging.AliyunSms\Biwen.QuickApi.Messaging.AliyunSms.csproj", "{6440AA25-9612-406B-81CA-4FA8544E7CC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biwen.QuickApi.Locking.DistributedLock", "extensions\Biwen.QuickApi.Locking.DistributedLock\Biwen.QuickApi.Locking.DistributedLock.csproj", "{DEE91143-93E0-44C3-94B3-4FE2285282D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -106,6 +108,10 @@ Global
 		{6440AA25-9612-406B-81CA-4FA8544E7CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6440AA25-9612-406B-81CA-4FA8544E7CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6440AA25-9612-406B-81CA-4FA8544E7CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEE91143-93E0-44C3-94B3-4FE2285282D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE91143-93E0-44C3-94B3-4FE2285282D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE91143-93E0-44C3-94B3-4FE2285282D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE91143-93E0-44C3-94B3-4FE2285282D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,6 +128,7 @@ Global
 		{50652289-B4A2-4F74-85A9-0F0ECDA0C5EA} = {81A129FD-9B47-4F4A-B80C-1785A3DDB6CA}
 		{5A5BB986-7FA8-4B1F-BF5A-A2B8912BF7F3} = {72E63A55-F682-4AC4-8ED5-535DE652DAC4}
 		{6440AA25-9612-406B-81CA-4FA8544E7CC8} = {72E63A55-F682-4AC4-8ED5-535DE652DAC4}
+		{DEE91143-93E0-44C3-94B3-4FE2285282D2} = {72E63A55-F682-4AC4-8ED5-535DE652DAC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3859D772-48C9-4531-BC8B-583D2B4DF111}

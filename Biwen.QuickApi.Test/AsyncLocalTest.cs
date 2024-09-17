@@ -1,4 +1,6 @@
 ﻿using Biwen.QuickApi.Infrastructure;
+using Biwen.QuickApi.Infrastructure.Locking.DistributedLock;
+using Medallion.Threading;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.AsyncState;
 
@@ -116,6 +118,41 @@ namespace Biwen.QuickApi.Test
 
             Assert.NotNull(raw);
         }
+
+
+        [Fact]
+        public async Task TestDistributedLock()
+        {
+            var services = new ServiceCollection();
+
+            services.AddDistributedLock();//localhost:6379
+
+            var provider = services.BuildServiceProvider();
+            var lockProvider = provider.GetRequiredService<IDistributedLockProvider>();
+
+            var key = "test-1";
+
+            _ = Task.Run(async () =>
+            {
+                using var distributedLock = await lockProvider.TryAcquireLockAsync(key, TimeSpan.FromSeconds(10));
+                // 模拟一个长时间的任务
+                await Task.Delay(TimeSpan.FromSeconds(3));
+            });
+
+            await Task.Delay(500);
+
+            //当前线程尝试获取锁, 由于上一个线程持有锁, 所以获取锁失败
+            using var distributedLock2 = await lockProvider.TryAcquireLockAsync(key, TimeSpan.FromSeconds(1));
+            Assert.Null(distributedLock2);
+
+            await Task.Delay(3 * 1000);
+            //上一个线程释放锁后, 当前线程获取锁成功
+            using var distributedLock3 = await lockProvider.TryAcquireLockAsync(key, TimeSpan.FromSeconds(1));
+            Assert.NotNull(distributedLock3);
+
+        }
+
+
 
 
         class User

@@ -7,7 +7,7 @@
 
 		<IsPackable>false</IsPackable>
 		<IsTestProject>true</IsTestProject>
-		<NoWarn>xUnit1045;GEN050</NoWarn>
+		<NoWarn>xUnit1045;GEN050;GEN051</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -43,6 +43,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\Biwen.QuickApi.DemoWeb\Biwen.QuickApi.DemoWeb.csproj" />
 		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
+		<ProjectReference Include="..\extensions\Biwen.QuickApi.Locking.DistributedLock\Biwen.QuickApi.Locking.DistributedLock.csproj" />
 	</ItemGroup>
 
 

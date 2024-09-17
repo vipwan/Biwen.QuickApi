@@ -54,6 +54,8 @@
     href: BlazorRendererService.md
   - name: 本地锁
     href: 5.md
+  - name: 分布式锁
+    href: DistributedLock.md
   - name: 异步流服务
     href: AsyncContextService.md
   - name: 启动任务
