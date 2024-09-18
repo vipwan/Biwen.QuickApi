@@ -4,14 +4,13 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 16:47:10 MapsterModular.cs
 
-namespace Biwen.QuickApi.Mapping.Mapster
+namespace Biwen.QuickApi.Mapping.Mapster;
+
+[CoreModular]
+internal class MapsterModular : ModularBase
 {
-    [CoreModular]
-    internal class MapsterModular : ModularBase
+    public override void ConfigureServices(IServiceCollection services)
     {
-        public override void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMapsterMapper();
-        }
+        services.AddMapsterMapper();
     }
 }

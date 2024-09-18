@@ -4,15 +4,14 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 16:45:40 IHtmlSanitizerService.cs
 
-namespace Biwen.QuickApi.Infrastructure.Html
+namespace Biwen.QuickApi.Infrastructure.Html;
+
+public interface IHtmlSanitizerService
 {
-    public interface IHtmlSanitizerService
-    {
-        /// <summary>
-        /// 消除HTML中的XSS攻击
-        /// </summary>
-        /// <param name="html"></param>
-        /// <returns></returns>
-        string Sanitize(string html);
-    }
+    /// <summary>
+    /// 消除HTML中的XSS攻击
+    /// </summary>
+    /// <param name="html"></param>
+    /// <returns></returns>
+    string Sanitize(string html);
 }

@@ -4,17 +4,16 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 16:46:29 FindTypes.cs
 
-namespace Biwen.QuickApi.Infrastructure.TypeFinder
+namespace Biwen.QuickApi.Infrastructure.TypeFinder;
+
+[SuppressType]
+internal static class FindTypes
 {
-    [SuppressType]
-    internal static class FindTypes
-    {
-        public static IInAssemblyFinder InAssembly(Assembly assembly) => new InAssemblyFinder(new[] { assembly });
+    public static IInAssemblyFinder InAssembly(Assembly assembly) => new InAssemblyFinder(new[] { assembly });
 
-        public static IInAssemblyFinder InAssemblies(params Assembly[] assemblies) => new InAssemblyFinder(assemblies);
+    public static IInAssemblyFinder InAssemblies(params Assembly[] assemblies) => new InAssemblyFinder(assemblies);
 
-        public static IInAssemblyFinder InCurrentAssembly => InAssembly(Assembly.GetCallingAssembly());
+    public static IInAssemblyFinder InCurrentAssembly => InAssembly(Assembly.GetCallingAssembly());
 
-        public static IInAssemblyFinder InAllAssemblies => InAssemblies(AppDomain.CurrentDomain.GetAssemblies());
-    }
+    public static IInAssemblyFinder InAllAssemblies => InAssemblies(AppDomain.CurrentDomain.GetAssemblies());
 }

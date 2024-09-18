@@ -4,27 +4,26 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 16:56:57 SmsSenderExtensions.cs
 
-namespace Biwen.QuickApi.Messaging.Sms
+namespace Biwen.QuickApi.Messaging.Sms;
+
+/// <summary>
+/// ISmsSender扩展
+/// </summary>
+public static class SmsSenderExtensions
 {
     /// <summary>
-    /// ISmsSender扩展
+    /// 发送短信
     /// </summary>
-    public static class SmsSenderExtensions
+    /// <param name="smsSender"></param>
+    /// <param name="phoneNumber"></param>
+    /// <param name="text"></param>
+    /// <returns></returns>
+    public static Task SendAsync(this ISmsSender smsSender, string phoneNumber, string text)
     {
-        /// <summary>
-        /// 发送短信
-        /// </summary>
-        /// <param name="smsSender"></param>
-        /// <param name="phoneNumber"></param>
-        /// <param name="text"></param>
-        /// <returns></returns>
-        public static Task SendAsync(this ISmsSender smsSender, string phoneNumber, string text)
-        {
-            ArgumentNullException.ThrowIfNull(smsSender);
-            ArgumentNullException.ThrowIfNullOrWhiteSpace(phoneNumber);
-            ArgumentNullException.ThrowIfNullOrWhiteSpace(text);
+        ArgumentNullException.ThrowIfNull(smsSender);
+        ArgumentNullException.ThrowIfNullOrWhiteSpace(phoneNumber);
+        ArgumentNullException.ThrowIfNullOrWhiteSpace(text);
 
-            return smsSender.SendAsync(new SmsMessage(phoneNumber, text));
-        }
+        return smsSender.SendAsync(new SmsMessage(phoneNumber, text));
     }
 }

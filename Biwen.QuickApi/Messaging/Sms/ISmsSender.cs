@@ -4,19 +4,18 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 16:56:36 ISmsSender.cs
 
-namespace Biwen.QuickApi.Messaging.Sms
+namespace Biwen.QuickApi.Messaging.Sms;
+
+/// <summary>
+/// ISmsSender
+/// </summary>
+public interface ISmsSender : INamed<string>
 {
     /// <summary>
-    /// ISmsSender
+    /// 发送消息
     /// </summary>
-    public interface ISmsSender : INamed<string>
-    {
-        /// <summary>
-        /// 发送消息
-        /// </summary>
-        /// <param name="smsMessage"></param>
-        /// <returns></returns>
-        Task SendAsync(SmsMessage smsMessage);
+    /// <param name="smsMessage"></param>
+    /// <returns></returns>
+    Task SendAsync(SmsMessage smsMessage);
 
-    }
 }

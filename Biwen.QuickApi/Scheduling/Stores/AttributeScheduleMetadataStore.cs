@@ -4,52 +4,51 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 16:52:50 AttributeScheduleMetadataStore.cs
 
-namespace Biwen.QuickApi.Scheduling.Stores
+namespace Biwen.QuickApi.Scheduling.Stores;
+
+/// <summary>
+/// MetadataStore
+/// </summary>
+internal sealed class AttributeScheduleMetadataStore : IScheduleMetadataStore
 {
     /// <summary>
-    /// MetadataStore
+    /// 特性中的metadatas缓存起来
     /// </summary>
-    internal sealed class AttributeScheduleMetadataStore : IScheduleMetadataStore
+    private static ScheduleTaskMetadata[] _cachedMetatas = [];
+
+    public AttributeScheduleMetadataStore(IServiceProvider serviceProvider)
     {
-        /// <summary>
-        /// 特性中的metadatas缓存起来
-        /// </summary>
-        private static ScheduleTaskMetadata[] _cachedMetatas = [];
-
-        public AttributeScheduleMetadataStore(IServiceProvider serviceProvider)
+        lock (this)
         {
-            lock (this)
+            var tasks = serviceProvider.GetServices<IScheduleTask>();
+            if (tasks is null || !tasks.Any())
             {
-                var tasks = serviceProvider.GetServices<IScheduleTask>();
-                if (tasks is null || !tasks.Any())
-                {
-                    return;
-                }
+                return;
+            }
 
-                //注解中的task
-                foreach (var task in tasks)
+            //注解中的task
+            foreach (var task in tasks)
+            {
+                var taskType = task.GetType();
+                //标注的metadatas
+                var metadatas = taskType.GetCustomAttributes<ScheduleTaskAttribute>();
+                if (metadatas.Any())
                 {
-                    var taskType = task.GetType();
-                    //标注的metadatas
-                    var metadatas = taskType.GetCustomAttributes<ScheduleTaskAttribute>();
-                    if (metadatas.Any())
-                    {
-                        _cachedMetatas = [.._cachedMetatas, .. metadatas.Select(metadata =>
-                            new ScheduleTaskMetadata(taskType, metadata.Cron)
-                            {
-                                Description = metadata.Description,
-                                IsAsync = metadata.IsAsync,
-                                IsStartOnInit = metadata.IsStartOnInit,
-                        })];
-                    }
+                    _cachedMetatas = [.._cachedMetatas, .. metadatas.Select(metadata =>
+                        new ScheduleTaskMetadata(taskType, metadata.Cron)
+                        {
+                            Description = metadata.Description,
+                            IsAsync = metadata.IsAsync,
+                            IsStartOnInit = metadata.IsStartOnInit,
+                    })];
                 }
             }
         }
+    }
 
-        [AutoCache(int.MaxValue)]
-        public Task<ScheduleTaskMetadata[]> GetAllAsync()
-        {
-            return Task.FromResult(_cachedMetatas);
-        }
+    [AutoCache(int.MaxValue)]
+    public Task<ScheduleTaskMetadata[]> GetAllAsync()
+    {
+        return Task.FromResult(_cachedMetatas);
     }
 }

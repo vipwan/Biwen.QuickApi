@@ -4,13 +4,12 @@
 // Biwen.QuickApi (net8.0) Author: vipwa Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 15:10:12 CoreModularAttribute.cs
 
-namespace Biwen.QuickApi.Abstractions.Modular
+namespace Biwen.QuickApi.Abstractions.Modular;
+
+/// <summary>
+/// 内核模块
+/// </summary>
+[AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+internal class CoreModularAttribute : Attribute
 {
-    /// <summary>
-    /// 内核模块
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
-    internal class CoreModularAttribute : Attribute
-    {
-    }
 }

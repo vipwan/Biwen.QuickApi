@@ -4,13 +4,12 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 16:47:45 QuickApiExampleMetadata.cs
 
-namespace Biwen.QuickApi.Metadata
+namespace Biwen.QuickApi.Metadata;
+
+/// <summary>
+/// Example Metadata for QuickApi
+/// </summary>
+public class QuickApiExampleMetadata(ICollection<object?> examples)
 {
-    /// <summary>
-    /// Example Metadata for QuickApi
-    /// </summary>
-    public class QuickApiExampleMetadata(ICollection<object?> examples)
-    {
-        public ICollection<object?> Examples { get; set; } = examples;
-    }
+    public ICollection<object?> Examples { get; set; } = examples;
 }

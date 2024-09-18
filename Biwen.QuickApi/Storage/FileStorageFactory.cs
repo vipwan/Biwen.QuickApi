@@ -4,23 +4,22 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 16:54:12 FileStorageFactory.cs
 
-namespace Biwen.QuickApi.Storage
+namespace Biwen.QuickApi.Storage;
+
+/// <summary>
+/// FileStorage Factory
+/// </summary>
+public class FileStorageFactory
 {
-    /// <summary>
-    /// FileStorage Factory
-    /// </summary>
-    public class FileStorageFactory
+    private readonly IServiceProvider _serviceProvider;
+
+    public FileStorageFactory(IServiceProvider serviceProvider)
     {
-        private readonly IServiceProvider _serviceProvider;
+        _serviceProvider = serviceProvider;
+    }
 
-        public FileStorageFactory(IServiceProvider serviceProvider)
-        {
-            _serviceProvider = serviceProvider;
-        }
-
-        public IFileStorage Create(string key)
-        {
-            return _serviceProvider.GetRequiredKeyedService<IFileStorage>(key);
-        }
+    public IFileStorage Create(string key)
+    {
+        return _serviceProvider.GetRequiredKeyedService<IFileStorage>(key);
     }
 }

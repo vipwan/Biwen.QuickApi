@@ -6,38 +6,37 @@
 
 using Microsoft.AspNetCore.Routing;
 
-namespace Biwen.QuickApi.Http
+namespace Biwen.QuickApi.Http;
+
+/// <summary>
+/// Group HanderBuilder
+/// </summary>
+public interface IQuickApiGroupRouteBuilder
 {
     /// <summary>
-    /// Group HanderBuilder
+    /// 分组
     /// </summary>
-    public interface IQuickApiGroupRouteBuilder
-    {
-        /// <summary>
-        /// 分组
-        /// </summary>
-        string Group { get; }
+    string Group { get; }
 
-        RouteGroupBuilder Builder(RouteGroupBuilder routeBuilder);
-
-        /// <summary>
-        /// 执行顺序
-        /// </summary>
-        int Order { get; }
-    }
+    RouteGroupBuilder Builder(RouteGroupBuilder routeBuilder);
 
     /// <summary>
-    /// DI: services.AddQuickApiGroupRouteBuilder<QuickApiGroupRouteBuilder>();
+    /// 执行顺序
     /// </summary>
-    public abstract class BaseQuickApiGroupRouteBuilder : IQuickApiGroupRouteBuilder
+    int Order { get; }
+}
+
+/// <summary>
+/// DI: services.AddQuickApiGroupRouteBuilder<QuickApiGroupRouteBuilder>();
+/// </summary>
+public abstract class BaseQuickApiGroupRouteBuilder : IQuickApiGroupRouteBuilder
+{
+    public abstract string Group { get; }
+
+    public abstract int Order { get; }
+
+    public virtual RouteGroupBuilder Builder(RouteGroupBuilder builder)
     {
-        public abstract string Group { get; }
-
-        public abstract int Order { get; }
-
-        public virtual RouteGroupBuilder Builder(RouteGroupBuilder builder)
-        {
-            return builder;
-        }
+        return builder;
     }
 }

@@ -4,18 +4,17 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 16:52:41 ConfigurationScheduleOptions.cs
 
-namespace Biwen.QuickApi.Scheduling.Stores.ConfigurationStore
+namespace Biwen.QuickApi.Scheduling.Stores.ConfigurationStore;
+
+[Obsolete]
+internal class ConfigurationScheduleOptions
 {
-    [Obsolete]
-    internal class ConfigurationScheduleOptions
-    {
-        public string ScheduleType { get; set; } = null!;
-        public string Cron { get; set; } = null!;
-        public string? Description { get; set; }
+    public string ScheduleType { get; set; } = null!;
+    public string Cron { get; set; } = null!;
+    public string? Description { get; set; }
 
-        public bool IsAsync { get; set; } = false;
+    public bool IsAsync { get; set; } = false;
 
-        public bool IsStartOnInit { get; set; } = false;
+    public bool IsStartOnInit { get; set; } = false;
 
-    }
 }

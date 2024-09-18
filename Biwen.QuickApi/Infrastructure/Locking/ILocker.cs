@@ -4,9 +4,8 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 16:46:04 ILocker.cs
 
-namespace Biwen.QuickApi.Infrastructure.Locking
+namespace Biwen.QuickApi.Infrastructure.Locking;
+
+public interface ILocker : IDisposable, IAsyncDisposable
 {
-    public interface ILocker : IDisposable, IAsyncDisposable
-    {
-    }
 }

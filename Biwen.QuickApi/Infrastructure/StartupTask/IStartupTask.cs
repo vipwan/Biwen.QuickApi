@@ -4,42 +4,40 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 16:46:19 IStartupTask.cs
 
-namespace Biwen.QuickApi.Infrastructure.StartupTask
+namespace Biwen.QuickApi.Infrastructure.StartupTask;
+
+/// <summary>
+/// 启动任务,系统启动后只执行一次的任务
+/// </summary>
+public interface IStartupTask
 {
     /// <summary>
-    /// 启动任务,系统启动后只执行一次的任务
+    /// 启动系统后执行的任务
     /// </summary>
-    public interface IStartupTask
-    {
-        /// <summary>
-        /// 启动系统后执行的任务
-        /// </summary>
-        /// <param name="ct"></param>
-        /// <returns></returns>
-        Task ExecuteAsync(CancellationToken ct);
-
-        /// <summary>
-        /// 执行顺序
-        /// </summary>
-        int Order { get; }
-
-        /// <summary>
-        /// 启动延迟 默认为null,不延迟
-        /// </summary>
-        TimeSpan? Delay { get; }
-
-    }
+    /// <param name="ct"></param>
+    /// <returns></returns>
+    Task ExecuteAsync(CancellationToken ct);
 
     /// <summary>
-    /// 启动任务,系统启动后只执行一次的任务
+    /// 执行顺序
     /// </summary>
-    public abstract class StartupTaskBase : IStartupTask
-    {
-        public virtual int Order => 0;
+    int Order { get; }
 
-        public virtual TimeSpan? Delay => null;
+    /// <summary>
+    /// 启动延迟 默认为null,不延迟
+    /// </summary>
+    TimeSpan? Delay { get; }
 
-        public abstract Task ExecuteAsync(CancellationToken ct);
-    }
+}
 
+/// <summary>
+/// 启动任务,系统启动后只执行一次的任务
+/// </summary>
+public abstract class StartupTaskBase : IStartupTask
+{
+    public virtual int Order => 0;
+
+    public virtual TimeSpan? Delay => null;
+
+    public abstract Task ExecuteAsync(CancellationToken ct);
 }
