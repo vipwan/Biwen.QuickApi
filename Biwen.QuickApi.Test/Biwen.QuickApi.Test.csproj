@@ -4,11 +4,13 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-
+		<Authors>万雅虎</Authors>
 		<IsPackable>false</IsPackable>
 		<IsTestProject>true</IsTestProject>
-		<NoWarn>xUnit1045;GEN050;GEN051</NoWarn>
+		<NoWarn>xUnit1045;GEN051</NoWarn>
 	</PropertyGroup>
+
+	<Import Project="..\SharedReference.Props"/>
 
 	<ItemGroup>
 		<PackageReference Include="Alba" Version="8.0.0" />

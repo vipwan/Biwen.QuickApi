@@ -4,25 +4,24 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 17:00:04 AliyunSmsOptions.cs
 
-namespace Biwen.QuickApi.Messaging.AliyunSms
+namespace Biwen.QuickApi.Messaging.AliyunSms;
+
+/// <summary>
+/// 阿里云短信配置
+/// </summary>
+public class AliyunSmsOptions
 {
     /// <summary>
-    /// 阿里云短信配置
+    /// Secret
     /// </summary>
-    public class AliyunSmsOptions
-    {
-        /// <summary>
-        /// Secret
-        /// </summary>
-        public string AccessKeySecret { get; set; } = default!;
-        /// <summary>
-        /// AccessKeyId
-        /// </summary>
-        public string AccessKeyId { get; set; } = default!;
-        /// <summary>
-        /// Endpoint
-        /// </summary>
-        public string EndPoint { get; set; } = default!;
+    public string AccessKeySecret { get; set; } = default!;
+    /// <summary>
+    /// AccessKeyId
+    /// </summary>
+    public string AccessKeyId { get; set; } = default!;
+    /// <summary>
+    /// Endpoint
+    /// </summary>
+    public string EndPoint { get; set; } = default!;
 
-    }
 }

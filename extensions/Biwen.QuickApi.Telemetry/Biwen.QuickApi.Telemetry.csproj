@@ -9,6 +9,7 @@
 	</PropertyGroup>
 
 	<Import Project="..\..\Version.props" />
+	<Import Project="..\..\SharedReference.Props" />
 
 	<ItemGroup>
 		<!--<PackageReference Include="Microsoft.AspNetCore.Diagnostics.Middleware" Version="8.6.0" />-->

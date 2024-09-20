@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LICENSE.txt = LICENSE.txt
 		quickapi-schema.json = quickapi-schema.json
 		README.md = README.md
+		SharedReference.Props = SharedReference.Props
 		Version.Props = Version.Props
 	EndProjectSection
 EndProject

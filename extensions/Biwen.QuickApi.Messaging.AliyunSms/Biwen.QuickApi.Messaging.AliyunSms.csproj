@@ -6,6 +6,9 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
+	<Import Project="..\..\Version.props" />
+	<Import Project="..\..\SharedReference.Props" />
+
 	<ItemGroup>
 		<PackageReference Include="AlibabaCloud.SDK.Dysmsapi20170525" Version="3.0.0" />
 	</ItemGroup>

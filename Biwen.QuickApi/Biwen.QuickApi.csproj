@@ -20,6 +20,7 @@
 	</PropertyGroup>
 
 	<Import Project="..\Version.props" />
+	<Import Project="..\SharedReference.Props"/>
 
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
@@ -38,7 +39,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Biwen.AutoClassGen" Version="1.5.0" PrivateAssets="All" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="$(FluentValidationAspNetCoreVer)" />
 		<PackageReference Include="NCrontab" Version="3.3.3" />
 		<PackageReference Include="HtmlSanitizer" Version="8.1.870" />

@@ -6,12 +6,15 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
+	<Import Project="..\..\Version.props" />
+	<Import Project="..\..\SharedReference.Props" />
+
 	<ItemGroup>
-	  <PackageReference Include="DistributedLock.Redis" Version="1.0.3" />
+		<PackageReference Include="DistributedLock.Redis" Version="1.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
+		<ProjectReference Include="..\..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
 	</ItemGroup>
 
 </Project>

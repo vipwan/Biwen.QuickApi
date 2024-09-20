@@ -1,4 +1,11 @@
-﻿using Biwen.QuickApi.Auditing;
+﻿// Licensed to the Biwen.QuickApi.Test under one or more agreements.
+// The Biwen.QuickApi.Test licenses this file to you under the MIT license. 
+// See the LICENSE file in the project root for more information.
+// Biwen.QuickApi.Test Author: vipwa, Github: https://github.com/vipwan
+// 
+// Modify Date: 2024-09-21 00:57:50 AuditTest.cs
+
+using Biwen.QuickApi.Auditing;
 using Biwen.QuickApi.Auditing.Internal;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;

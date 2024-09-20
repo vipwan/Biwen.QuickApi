@@ -4,25 +4,24 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 17:01:54 TelemetryOptions.cs
 
-namespace Biwen.QuickApi.Telemetry
+namespace Biwen.QuickApi.Telemetry;
+
+/// <summary>
+/// TelemetryOptions 配置项
+/// </summary>
+public class TelemetryOptions
 {
+
+    public const string Key = "BiwenQuickApi:Telemetry";
+
     /// <summary>
-    /// TelemetryOptions 配置项
+    /// 是否启用 默认: false
     /// </summary>
-    public class TelemetryOptions
-    {
-
-        public const string Key = "BiwenQuickApi:Telemetry";
-
-        /// <summary>
-        /// 是否启用 默认: false
-        /// </summary>
-        public bool Enable { get; set; } = false;
+    public bool Enable { get; set; } = false;
 
 
-        /// <summary>
-        /// 服务监控采样间隔 默认: 15s
-        /// </summary>
-        public uint SamplingInterval { get; set; } = 15;
-    }
+    /// <summary>
+    /// 服务监控采样间隔 默认: 15s
+    /// </summary>
+    public uint SamplingInterval { get; set; } = 15;
 }

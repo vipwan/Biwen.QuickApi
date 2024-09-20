@@ -4,15 +4,14 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2024-09-06 17:00:58 AliyunOssOptions.cs
 
-namespace Biwen.QuickApi.Storage.AliyunOss
-{
-    /// <summary>
-    /// AliyunOss Options
-    /// </summary>
+namespace Biwen.QuickApi.Storage.AliyunOss;
 
-    [Obsolete]
-    internal class AliyunOssOptions
-    {
-        public string ConnectionString { get; set; } = null!;
-    }
+/// <summary>
+/// AliyunOss Options
+/// </summary>
+
+[Obsolete]
+internal class AliyunOssOptions
+{
+    public string ConnectionString { get; set; } = null!;
 }

@@ -133,7 +133,7 @@ public class AliyunOssStorage : IFileStorage
         }).ToList();
     }
 
-    private async Task<NextPageResult> GetFiles(string? searchPattern, int page, int pageSize, CancellationToken cancellationToken)
+    private async Task<NextPageResult> GetFilesAsync(string? searchPattern, int page, int pageSize, CancellationToken cancellationToken)
     {
         var criteria = GetRequestCriteria(searchPattern);
 
@@ -196,7 +196,7 @@ public class AliyunOssStorage : IFileStorage
             Success = true,
             HasMore = hasMore,
             Files = list,
-            NextPageFunc = hasMore ? _ => GetFiles(searchPattern, page + 1, pageSize, cancellationToken) : null
+            NextPageFunc = hasMore ? _ => GetFilesAsync(searchPattern, page + 1, pageSize, cancellationToken) : null
         };
     }
 
@@ -382,7 +382,7 @@ public class AliyunOssStorage : IFileStorage
         if (pageSize <= 0)
             return PagedFileListResult.Empty;
 
-        var result = new PagedFileListResult(_ => GetFiles(searchPattern, 1, pageSize, cancellationToken));
+        var result = new PagedFileListResult(_ => GetFilesAsync(searchPattern, 1, pageSize, cancellationToken));
         await result.NextPageAsync();
         return result;
     }
