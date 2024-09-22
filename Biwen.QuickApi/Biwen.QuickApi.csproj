@@ -48,16 +48,16 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.8" />
-		<PackageReference Include="System.Text.Json" Version="8.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="[8.0.8,9.0.0)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="[8.0.8,9.0.0)" />
+		<PackageReference Include="System.Text.Json" Version="[8.0.4,9.0.0)" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-rc.2.24422.2" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.0-rc.2.24422.2" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-rc.2.24420.12" />
-		<PackageReference Include="System.Text.Json" Version="9.0.0-rc.2.24421.12" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="[9.0.0-rc.2.24422.2,10.0.0)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="[9.0.0-rc.2.24422.2,10.0.0)" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="[9.0.0-rc.2.24420.12,10.0.0)" />
+		<PackageReference Include="System.Text.Json" Version="[9.0.0-rc.2.24421.12,10.0.0)" />
 	</ItemGroup>
 
 </Project>
