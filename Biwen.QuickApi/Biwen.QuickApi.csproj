@@ -39,7 +39,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="FluentValidation.AspNetCore" Version="$(FluentValidationAspNetCoreVer)" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="$(FluentValidationAspNetCoreVer)" />
 		<PackageReference Include="NCrontab" Version="3.3.3" />
 		<PackageReference Include="HtmlSanitizer" Version="[8.2.871-beta,9.0.0)" />
 		<PackageReference Include="Mapster.DependencyInjection" Version="1.0.2-pre01" />

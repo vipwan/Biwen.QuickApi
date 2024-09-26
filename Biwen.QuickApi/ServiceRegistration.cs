@@ -6,7 +6,6 @@
 
 using Biwen.QuickApi.Http;
 using Biwen.QuickApi.Serializer;
-using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -58,7 +57,7 @@ public static class ServiceRegistration
         services.ConfigureHttpJsonOptions(x => { });
 
         //注册验证器
-        services.AddFluentValidationAutoValidation();
+        services.AddValidatorsFromAssemblies(Assemblies.AllRequiredAssemblies);
 
         //作用域范围内缓存服务提供程序
         services.AddScoped<ICachedServiceProvider, CachedServiceProvider>();
