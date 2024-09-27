@@ -300,12 +300,16 @@ public static class ServiceRegistration
 
                 //antiforgery
                 //net8.0以上使用UseAntiforgery,
-                //net7.0以下使用QuickApiAntiforgeryMiddleware
                 var antiforgeryApi = scope.ServiceProvider.GetRequiredService(apiType) as IAntiforgeryApi;
-#if NET8_0_OR_GREATER
+
                 if (antiforgeryApi?.IsAntiforgeryEnabled is false)
                 {
-                    rhBuilder.DisableAntiforgery();
+                    var antiAttr = apiType.GetCustomAttribute<RequireAntiforgeryTokenAttribute>();
+                    if (antiAttr?.RequiresValidation is not true)
+                    {
+                        //并且attrs中RequireAntiforgeryTokenAttribute没有的情况
+                        rhBuilder.DisableAntiforgery();
+                    }
                 }
                 if (antiforgeryApi?.IsAntiforgeryEnabled is true)
                 {
@@ -315,12 +319,11 @@ public static class ServiceRegistration
                     }
                     rhBuilder.WithMetadata(new RequireAntiforgeryTokenAttribute(true));
                 }
-#endif
 
                 //获取T的所有Attribute:
                 var attrs = apiType.GetCustomAttributes(true);
                 //将所有的Attribute添加到metadatas中
-                rhBuilder?.WithMetadata(attrs);
+                rhBuilder.WithMetadata(attrs);
 
                 //OpenApiMetadataAttribute
                 if (apiType.GetCustomAttribute<OpenApiMetadataAttribute>() is { } openApiMetadata)
