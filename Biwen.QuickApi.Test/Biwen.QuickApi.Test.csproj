@@ -10,7 +10,7 @@
 		<NoWarn>xUnit1045;GEN051</NoWarn>
 	</PropertyGroup>
 
-	<Import Project="..\SharedReference.Props"/>
+	<Import Project="..\SharedReference.Props" />
 
 	<ItemGroup>
 		<PackageReference Include="Alba" Version="8.0.0" />
@@ -18,7 +18,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.0-rc.2.24420.12" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
 		<PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" Version="17.12.4" />
-		<PackageReference Include="xunit" Version="2.9.0" />
+		<PackageReference Include="xunit" Version="2.9.2" />
 		<PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>

@@ -8,6 +8,8 @@ using Biwen.QuickApi.Events;
 
 namespace Biwen.QuickApi.Scheduling.Events;
 
+#if DEBUG
+
 /// <summary>
 /// 订阅Schedule完成通知
 /// </summary>
@@ -17,9 +19,11 @@ public class SuccessedEventHandler(ILogger<SuccessedEventHandler> logger) : IEve
 {
     public virtual Task HandleAsync(TaskSuccessedEvent @event, CancellationToken ct)
     {
-#if DEBUG
+
         logger.LogDebug($"[{@event.EventTime}] ScheduleTask:{@event.ScheduleTask.GetType().FullName} Successed!");
-#endif
+
         return Task.CompletedTask;
     }
 }
+
+#endif
