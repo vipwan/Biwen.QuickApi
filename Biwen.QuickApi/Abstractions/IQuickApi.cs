@@ -62,7 +62,7 @@ internal interface IQuickApiMiddlewareHandler
 internal interface IAntiforgeryApi
 {
     /// <summary>
-    /// 是否启动防伪令牌检测
+    /// 是否启动防伪令牌检测,等价于:<see cref="Microsoft.AspNetCore.Antiforgery.RequireAntiforgeryTokenAttribute"/>
     /// </summary>
     bool IsAntiforgeryEnabled { get; }
 }

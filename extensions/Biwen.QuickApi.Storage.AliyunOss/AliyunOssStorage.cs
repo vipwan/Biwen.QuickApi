@@ -421,8 +421,9 @@ public class AliyunOssStorage : IFileStorage
 
         try
         {
-            var putResult = await Task.Factory.FromAsync(_client.BeginPutObject, _client.EndPutObject, new PutObjectRequest(_bucket, normalizedPath, seekableStream), null);
-            return putResult.HttpStatusCode == HttpStatusCode.OK;
+            var req = new PutObjectRequest(_bucket, normalizedPath, seekableStream);
+            var result = _client.PutObject(req);
+            return result.HttpStatusCode == HttpStatusCode.OK;
         }
         catch (Exception ex)
         {
