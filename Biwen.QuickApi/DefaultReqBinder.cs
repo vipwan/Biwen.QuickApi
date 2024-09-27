@@ -180,25 +180,47 @@ public class DefaultReqBinder<T> : IReqBinder<T> where T : BaseRequest<T>, new()
 
                     //是否上传文件
                     bool hasFormFile = prop.PropertyType == typeof(IFormFile) || prop.PropertyType == typeof(IFormFileCollection);
-
-                    //form
-                    //{
-                    //    var qs = context.Request.Form;
-                    //    foreach (var item in qs)
-                    //    {
-                    //        var prop = typeof(T).GetProperties().FirstOrDefault(x => x.Name.Equals(item.Key, StringComparison.OrdinalIgnoreCase));
-                    //        if (prop != null)
-                    //        {
-                    //            //转换
-                    //            var value = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(item.Value.ToString());
-                    //            prop.SetValue(@default, item.Value);
-                    //        }
-                    //    }
-                    //}
                     //body
                     {
                         //如果是上传文件,则跳过
                         if (hasFormFile) continue;
+
+                        //如果是FromHeader:
+                        if (prop.GetCustomAttribute<FromHeaderAttribute>() is { })
+                        {
+                            var qs = context.Request.Headers;
+                            var headers = qs[prop.Name];
+                            if (headers.Count > 0)
+                            {
+                                //转换
+                                var value2 = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(headers[0]!);
+                                prop.SetValue(@default, value2);
+                                continue;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        //如果是Query:
+                        if (prop.GetCustomAttribute<FromQueryAttribute>() is { })
+                        {
+                            var qs = context.Request.Query;
+                            var query = StringValuesExtensions.DeserializeFromStringValues(qs[prop.Name], prop.PropertyType);
+                            prop.SetValue(@default, query);
+                            continue;
+                        }
+                        //如果是Route:
+                        if (prop.GetCustomAttribute<FromRouteAttribute>() is { })
+                        {
+                            var qs = context.Request.RouteValues;
+                            if (qs.ContainsKey(prop.Name))
+                            {
+                                var route = TypeDescriptor.GetConverter(prop.PropertyType).ConvertFromInvariantString(qs[prop.Name]?.ToString()!);
+                                prop.SetValue(@default, route);
+                                continue;
+                            }
+                        }
 
                         try
                         {
