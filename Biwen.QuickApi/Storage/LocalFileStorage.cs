@@ -49,7 +49,7 @@ public class LocalFileStorage : IFileStorage
     /// </summary>
     public string Folder { get; private set; }
 
-    private static object _lock = new();
+    private static Lock _lock = new();
 
     public ISerializer Serializer { get; }
 

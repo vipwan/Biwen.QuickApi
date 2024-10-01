@@ -32,7 +32,7 @@ internal static class ServiceRegistration
         return services;
     }
 
-    static readonly object _lock = new();//锁
+    static readonly Lock _lock = new();//锁
     static IEnumerable<Type> _eventSubscribers = null!;
     static readonly Type InterfaceEventSubscriber = typeof(IEventSubscriber<>);
     static bool IsToGenericInterface(Type type, Type baseInterface)

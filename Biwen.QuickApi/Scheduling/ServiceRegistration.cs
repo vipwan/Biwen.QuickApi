@@ -63,7 +63,7 @@ public static class ServiceRegistration
         return services;
     }
 
-    static readonly object _lock = new();//锁
+    static readonly Lock _lock = new();//锁
     static IEnumerable<Type> _scheduleTasks = null!;
     static IEnumerable<Type> ScheduleTasks
     {

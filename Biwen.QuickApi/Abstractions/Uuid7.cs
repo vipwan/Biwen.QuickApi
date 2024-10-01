@@ -544,7 +544,7 @@ public readonly struct Uuid7
     [ThreadStatic]
     private static uint PerThreadMonotonicCounter;  // counter that gets embedded into UUID
 
-    private static readonly object NonThreadedSyncRoot = new();  // sync root for all static counters
+    private static readonly Lock NonThreadedSyncRoot = new();  // sync root for all static counters
     private static long NonThreadedLastMillisecond;  // real time in milliseconds since 0001-01-01
     private static long NonThreadedMillisecondCounter;  // usually real time but doesn't go backward
     private static uint NonThreadedMonotonicCounter;  // counter that gets embedded into UUID
