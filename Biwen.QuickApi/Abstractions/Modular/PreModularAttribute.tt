@@ -1,0 +1,40 @@
+<#@ template language="C#" hostspecific="true" #>
+<#@ output encoding="utf-8" extension=".cs" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+    int maxTypeParameters = 9; // 这里可以设置N的值
+#>
+// Licensed to the Biwen.QuickApi (net8.0) under one or more agreements.
+// The Biwen.QuickApi (net8.0) licenses this file to you under the MIT license. 
+// See the LICENSE file in the project root for more information.
+// Biwen.QuickApi (net8.0) Author: vipwa Github: https://github.com/vipwan
+// Modify Date: <# Write(DateTime.Now.ToString());  #> PreModularAttribute.cs
+
+namespace Biwen.QuickApi.Abstractions.Modular;
+<#
+    for (int i = 1; i <= maxTypeParameters; i++)
+    {
+        var typeParams = new List<string>();
+        var constraints = new StringBuilder();
+        for (int j = 1; j <= i; j++)
+        {
+            typeParams.Add($"T{j}");
+            constraints.AppendLine($"    where T{j} : ModularBase");
+        }
+        var typeParamList = string.Join(", ", typeParams);
+#>
+
+/// <summary>
+/// 前置模块
+/// </summary>
+<# foreach (var param in typeParams) { #>
+/// <typeparam name="<#= param #>"></typeparam>
+<# } #>
+[AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+public class PreModularAttribute<<#= typeParamList #>> : Attribute
+<#= constraints.ToString() #>{
+}
+<#
+    }
+#>

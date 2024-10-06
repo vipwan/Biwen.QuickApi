@@ -177,7 +177,9 @@ public static class ServiceRegistration
                 modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,>)),
                 modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,>)),
                 modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,>)),
-                modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,>))
+                modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,>)),
+                modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,,>)),
+                modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,,,>)),
                 ];
             allPres.ForEach(preConfigure);
 
