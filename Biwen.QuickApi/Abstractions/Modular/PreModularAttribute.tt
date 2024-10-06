@@ -1,9 +1,9 @@
-<#@ template language="C#" hostspecific="true" #>
+ï»¿<#@ template language="C#" hostspecific="true" #>
 <#@ output encoding="utf-8" extension=".cs" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#
-    int maxTypeParameters = 9; // ÕâÀï¿ÉÒÔÉèÖÃNµÄÖµ
+    int maxTypeParameters = 9; // è¿™é‡Œå¯ä»¥è®¾ç½®Nçš„å€¼
 #>
 // Licensed to the Biwen.QuickApi (net8.0) under one or more agreements.
 // The Biwen.QuickApi (net8.0) licenses this file to you under the MIT license. 
@@ -26,7 +26,7 @@ namespace Biwen.QuickApi.Abstractions.Modular;
 #>
 
 /// <summary>
-/// Ç°ÖÃÄ£¿é
+/// å‰ç½®æ¨¡å—
 /// </summary>
 <# foreach (var param in typeParams) { #>
 /// <typeparam name="<#= param #>"></typeparam>

@@ -2,7 +2,7 @@
 // The Biwen.QuickApi (net8.0) licenses this file to you under the MIT license. 
 // See the LICENSE file in the project root for more information.
 // Biwen.QuickApi (net8.0) Author: vipwa Github: https://github.com/vipwan
-// Modify Date: 2024/10/6 17:10:14 PreModularAttribute.cs
+// Modify Date: 2024/10/6 17:15:43 PreModularAttribute.cs
 
 namespace Biwen.QuickApi.Abstractions.Modular;
 
