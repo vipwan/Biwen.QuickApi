@@ -15,10 +15,10 @@
 
 	<ItemGroup>
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.3.6" />
-		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0-rc.2.24420.12" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0-rc.2.24422.2" />
-		<PackageReference Include="Microsoft.Extensions.Caching.Hybrid" Version="9.0.0-rc.2.24420.12" />
-		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.10.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0-rc.2.24474.3" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0-rc.2.24474.3" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Hybrid" Version="9.0.0-rc.2.24474.3" />
+		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.10.2" />
 	</ItemGroup>
 
 	<ItemGroup>
