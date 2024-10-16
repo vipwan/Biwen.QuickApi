@@ -47,8 +47,8 @@ public class TodoApi : BaseQuickApi<EmptyRequest,Todo[]>
 ## 依赖环境&库
 
 - Microsoft.AspNetCore.App
-- [FluentValidation.AspNetCore](https://www.nuget.org/packages/FluentValidation.AspNetCore/11.3.0)
-- [Microsoft.AspNetCore.OpenApi](https://www.nuget.org/packages/Microsoft.AspNetCore.OpenApi/8.0.5)
+- [FluentValidation.DependencyInjectionExtensions](https://www.nuget.org/packages/FluentValidation.DependencyInjectionExtensions)
+- [Microsoft.AspNetCore.OpenApi](https://www.nuget.org/packages/Microsoft.AspNetCore.OpenApi/8.0.10)
 
 ## 使用方式
 
