@@ -11,7 +11,7 @@
 	<Import Project="..\SharedReference.Props" />
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="[4.0.0-preview4,5.0.0)" />
+		<PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="[4.0.0-preview5,5.0.0)" />
 	</ItemGroup>
 
 	<ItemGroup>
