@@ -42,7 +42,7 @@ public interface ICurdService<TEntity> where TEntity : class
     /// </summary>
     /// <param name="ids">可能存在双重主键</param>
     /// <returns></returns>
-    Task<TEntity> GetAsync(object[] ids);
+    Task<TEntity?> GetAsync(object[] ids);
 
     /// <summary>
     /// 获取分页数据

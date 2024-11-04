@@ -42,9 +42,19 @@ public abstract class CurdBuinessServiceBase<TEntity, TDbContext> : BuinessServi
         await Uow.SaveChangesAsync();
     }
 
-    public virtual async Task<TEntity> GetAsync(object[] ids)
+    public virtual async Task<TEntity?> GetAsync(object[] ids)
     {
-        return await Repository.FindAsync(ids) ?? throw new Exception("未找到数据");
+        return await Repository.FindAsync(ids);
+    }
+
+    /// <summary>
+    /// 获取第一个或者默认
+    /// </summary>
+    /// <param name="predicate"></param>
+    /// <returns></returns>
+    public virtual async Task<TEntity?> GetFirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
+    {
+        return await Repository.GetFirstOrDefaultAsync(predicate);
     }
 
     public virtual async Task UpdateAsync(TEntity entity)

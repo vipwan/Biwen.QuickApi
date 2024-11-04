@@ -4,7 +4,6 @@ using Biwen.QuickApi.DemoWeb.Schedules;
 using Biwen.QuickApi.FeatureManagement;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Caching.Distributed;
-using Microsoft.Extensions.Caching.Hybrid;
 using Microsoft.Extensions.Options;
 using Microsoft.FeatureManagement.Mvc;
 using Constants = Biwen.QuickApi.FeatureManagement.Constants;
@@ -71,18 +70,6 @@ namespace Biwen.QuickApi.DemoWeb
 
         public override void ConfigureServices(IServiceCollection services)
         {
-            //hybrid cache NET9 新功能,多级缓存避免分布式缓存的强制转换,需要引用Microsoft.Extensions.Caching.Hybri
-            services.AddHybridCache(options =>
-            {
-
-                options.DefaultEntryOptions = new HybridCacheEntryOptions
-                {
-                    Expiration = TimeSpan.FromSeconds(5 * 60),//默认5分钟缓存
-                    LocalCacheExpiration = TimeSpan.FromSeconds(5 * 60 - 1)//本地缓存提前1秒过期
-
-                };
-            });
-
             // Add services to the container.
             //services.AddScoped<HelloService>();
 
@@ -139,20 +126,6 @@ namespace Biwen.QuickApi.DemoWeb
 
                     return Results.Content($"{fromCacheData?.DateTime}-{DateTime.Now}");
                 }).WithDescription("分布式缓存,存在序列化&反序列化,性能较差");
-
-                //hybrid缓存,避免分布式缓存的强制转换
-                x.MapGet("/cached-in-hybrid", async (HybridCache hybridCache) =>
-                {
-                    var cachedDate = await hybridCache.GetOrCreateAsync($"$cached-in-hybrid", async cancel =>
-                      {
-                          return await ValueTask.FromResult(new CacheData(DateTime.Now));
-                      }, options: new HybridCacheEntryOptions
-                      {
-                          Expiration = TimeSpan.FromSeconds(10d),//便于验证,设直10秒过期
-                          LocalCacheExpiration = TimeSpan.FromSeconds(10d),
-                      });
-                    return Results.Content($"缓存的数据:{cachedDate.DateTime}");
-                }).WithDescription("多级缓存,避免分布式缓存的频繁序列化反序列化");
 
                 x.MapComponent<HelloWorld>("/razor/{key}",
                     context =>
