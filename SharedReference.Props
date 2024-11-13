@@ -1,5 +1,5 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<PackageReference Include="Biwen.AutoClassGen" Version="1.5.2" PrivateAssets="All" />
+		<PackageReference Include="Biwen.AutoClassGen" Version="1.5.3" PrivateAssets="All" />
 	</ItemGroup>
 </Project>
