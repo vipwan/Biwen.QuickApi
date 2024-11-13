@@ -36,8 +36,7 @@ internal class HttpModular(IServiceProvider serviceProvider) : ModularBase
     }
 
     static readonly Type InterfaceQuickApi = typeof(IQuickApi<,>);
-    static readonly object _lock = new();//锁
-
+    static readonly Lock _lock = new();//锁
     static bool IsToGenericInterface(Type type, Type baseInterface)
     {
         if (type == null) return false;

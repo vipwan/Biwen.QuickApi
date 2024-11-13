@@ -48,9 +48,7 @@ public class LocalFileStorage : IFileStorage
     /// 文件夹路径
     /// </summary>
     public string Folder { get; private set; }
-
-    private static object _lock = new();
-
+    static readonly Lock _lock = new();//锁
     public ISerializer Serializer { get; }
 
     private readonly ILogger<LocalFileStorage> _logger;

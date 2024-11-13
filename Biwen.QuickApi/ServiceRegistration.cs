@@ -125,8 +125,7 @@ public static class ServiceRegistration
     //static readonly Type InterfaceReqBinder = typeof(IReqBinder<>);
     //static readonly Type InterfaceEventSubscriber = typeof(IEventSubscriber<>);
     static readonly Type ModularBaseType = typeof(ModularBase);
-    static readonly object _lock = new();//锁
-
+    static readonly Lock _lock = new();//锁
     static IEnumerable<Type> _modulars = null!;
     static IEnumerable<Type> Modulars
     {

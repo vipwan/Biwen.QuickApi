@@ -15,10 +15,10 @@ internal sealed class AttributeScheduleMetadataStore : IScheduleMetadataStore
     /// 特性中的metadatas缓存起来
     /// </summary>
     private static ScheduleTaskMetadata[] _cachedMetatas = [];
-
+    static readonly Lock _lock = new();
     public AttributeScheduleMetadataStore(IServiceProvider serviceProvider)
     {
-        lock (this)
+        lock (_lock)
         {
             var tasks = serviceProvider.GetServices<IScheduleTask>();
             if (tasks is null || !tasks.Any())
