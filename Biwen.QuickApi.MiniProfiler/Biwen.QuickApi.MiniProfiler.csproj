@@ -23,14 +23,6 @@
 	<Import Project="..\SharedReference.Props"/>
 
 	<ItemGroup>
-		<None Include="..\..\Biwen.QuickApi\LICENSE.txt" Link="LICENSE.txt">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-		<None Include="README.md" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.3.8" />
 		<PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.3.8" />
 		<PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
