@@ -406,8 +406,18 @@ public static class ServiceRegistration
         routes.MapBiwenQuickApis();
 
         // Knowing that routes are already configured.
-        app.UseEndpoints(routes => { });
+        app.UseEndpoints(routes =>
+        {
+#if NET9_0_OR_GREATER
+            //NET9 新特性
+            //https://learn.microsoft.com/zh-cn/aspnet/core/release-notes/aspnetcore-9.0?view=aspnetcore-9.0
+            routes.MapStaticAssets();
+#endif
+        });
+
+#if !NET9_0_OR_GREATER
         app.UseStaticFiles();
+#endif
 
         return app;
     }
