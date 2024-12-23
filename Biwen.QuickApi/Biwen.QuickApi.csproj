@@ -44,20 +44,18 @@
 		<PackageReference Include="HtmlSanitizer" Version="[8.2.871-beta,9.0.0)" />
 		<PackageReference Include="Mapster.DependencyInjection" Version="1.0.2-pre01" />
 		<PackageReference Include="Microsoft.AspNetCore.AsyncState" Version="$(MicrosoftExtensionsVer)" />
-
+		<PackageReference Include="System.Text.Json" Version="9.0.0" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="[8.0.11,9.0.0)" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="[8.0.11,9.0.0)" />
-		<PackageReference Include="System.Text.Json" Version="[8.0.5,9.0.0)" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="[9.0.0,10.0.0)" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="[9.0.0,10.0.0)" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="[9.0.0,10.0.0)" />
-		<PackageReference Include="System.Text.Json" Version="[9.0.0,10.0.0)" />
 	</ItemGroup>
 
 	<ItemGroup>
