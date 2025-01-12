@@ -5,8 +5,6 @@ using Biwen.QuickApi.UnitOfWork;
 
 namespace Biwen.QuickApi.DemoWeb.Services
 {
-
-#pragma warning disable GEN031 // 使用[AutoGen]自动生成
     /// <summary>
     /// User Service 接口抽象
     /// </summary>
@@ -14,7 +12,6 @@ namespace Biwen.QuickApi.DemoWeb.Services
     {
         //可以定义更多的接口方法
     }
-#pragma warning restore GEN031 // 使用[AutoGen]自动生成
 
     /// <summary>
     /// User Service

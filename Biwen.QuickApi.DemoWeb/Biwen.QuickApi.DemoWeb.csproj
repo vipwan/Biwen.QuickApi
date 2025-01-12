@@ -4,7 +4,7 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<NoWarn>CA2254;CA2016;GEN050;GEN052</NoWarn>
+		<NoWarn>CA2254;CA2016;GEN031;GEN050;GEN052</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -17,7 +17,7 @@
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.3.6" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
-		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.0" />
+		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.1" />
 	</ItemGroup>
 
 	<ItemGroup>
