@@ -150,10 +150,7 @@ namespace Biwen.QuickApi.DemoWeb
             });
 
             //测试特性管理
-            routes.MapGet(
-                "/new-feature",
-                () => Results.Content("new feature!"))
-                .WithMetadata(new FeatureGateAttribute("myfeature"));
+            routes.MapGet("/new-feature", () => "new feature!").WithFeature("myfeature");
 
             // Identity API {"email" : "vipwan@co.ltd","password" : "*******"}
             // ~/account/register    
