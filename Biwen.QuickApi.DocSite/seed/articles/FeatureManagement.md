@@ -21,10 +21,7 @@ dotnet add package Biwen.QuickApi.FeatureManagement --version 2.0.0+
 #### 在MinimalApi中使用FeatureManagement
 
 ```csharp
-app.MapGet("feature-test", () =>
-{
-    return Results.Content("hello world");
-}).WithMetadata(new FeatureGateAttribute("myfeature"));
+app.MapGet("feature-test", () => "hello world").WithFeature("myfeature");
 ```
 
 
