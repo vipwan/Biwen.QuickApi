@@ -23,7 +23,7 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
-		<PackageReference Include="coverlet.collector" Version="6.0.3">
+		<PackageReference Include="coverlet.collector" Version="6.0.4">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
@@ -38,7 +38,7 @@
           MSTest.TestFramework
           MSTest.Analyzers
     -->
-		<PackageReference Include="MSTest" Version="3.7.1" />
+		<PackageReference Include="MSTest" Version="3.7.3" />
 	</ItemGroup>
 
 
