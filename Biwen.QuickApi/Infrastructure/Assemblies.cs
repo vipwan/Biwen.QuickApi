@@ -64,16 +64,26 @@ internal static class Assemblies
                 //    Assembly.Load(@as);
                 //}
 
-                // 存在模块化开发,因此只能通过扫描dll的方式装载程序集
-                var assemblies = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll")
-                    .Select(x => Assembly.Load(AssemblyName.GetAssemblyName(x)));
+                var dlls = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll");
+                //排除程序集名称以EscapeAssemblies集合开头的程序集:
+                var needDlls = new List<string>();
+                foreach (var dll in dlls)
+                {
+                    var assemblyName = Path.GetFileName(dll);
+                    var flag = false;
+                    foreach (var escape in EscapeAssemblies)
+                    {
+                        if (assemblyName.StartsWith(escape))
+                        {
+                            flag = true;
+                        }
+                    }
+                    if (!flag)
+                        needDlls.Add(dll);
+                }
 
-                _allRequiredAssemblies ??=
-                assemblies
-                .Where(x => !EscapeAssemblies
-                .Any(a => x.FullName!.StartsWith(a)))
-                .ToArray();
-
+                var assemblies = needDlls.Select(x => Assembly.Load(AssemblyName.GetAssemblyName(x)));
+                _allRequiredAssemblies ??= [.. assemblies];
                 _allRequiredAssembliesFound = true;
             }
             return _allRequiredAssemblies;
