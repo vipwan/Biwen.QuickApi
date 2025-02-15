@@ -22,8 +22,8 @@
 
 	<ItemGroup>
 		<PackageReference Include="Docfx.App" Version="2.78.2" />
-		<PackageReference Include="System.Formats.Asn1" Version="9.0.1" />
-		<PackageReference Include="System.Security.Cryptography.Xml" Version="9.0.1" />
+		<PackageReference Include="System.Formats.Asn1" Version="9.0.2" />
+		<PackageReference Include="System.Security.Cryptography.Xml" Version="9.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -15,7 +15,7 @@
 	<ItemGroup>
 		<PackageReference Include="Alba" Version="8.1.1" />
 		<PackageReference Include="Bogus" Version="35.6.1" />
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.2" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
 		<PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" Version="17.13.1" />
 		<PackageReference Include="xunit" Version="2.9.3" />
@@ -38,7 +38,7 @@
           MSTest.TestFramework
           MSTest.Analyzers
     -->
-		<PackageReference Include="MSTest" Version="3.7.3" />
+		<PackageReference Include="MSTest" Version="3.8.0" />
 	</ItemGroup>
 
 
