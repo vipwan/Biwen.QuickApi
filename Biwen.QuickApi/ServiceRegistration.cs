@@ -201,7 +201,9 @@ public static class ServiceRegistration
     {
         if (!HttpModular.Apis.Any())
         {
-            throw new QuickApiExcetion($"未找到任何QuickApi!,请添加一个HelloWorldApi吧 (#^.^#)");
+            //不再报错.而是记录日志:
+            app.ServiceProvider.GetRequiredService<ILogger<BaseQuickApi>>()
+                .LogWarning("未找到任何QuickApi!,请添加一个HelloWorldApi吧 (#^.^#)");
         }
         if (HttpModular.Apis.Any(x => x.GetCustomAttribute<QuickApiAttribute>() == null))
         {
@@ -222,6 +224,12 @@ public static class ServiceRegistration
 #if NET8_0_OR_GREATER
             (app as WebApplication)?.UseAntiforgery();
 #endif
+        }
+
+        if (!HttpModular.Apis.Any())
+        {
+            //直接返回不再后续处理:
+            return [];
         }
 
         //middleware:

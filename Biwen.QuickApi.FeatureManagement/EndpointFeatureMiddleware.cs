@@ -17,88 +17,100 @@ namespace Biwen.QuickApi.FeatureManagement;
 /// <summary>
 /// 处理特性的中间件,主要扩展了Endpoint & QuickApi支持
 /// </summary>
-internal class EndpointFeatureMiddleware
+internal sealed class EndpointFeatureMiddleware
 {
     private readonly RequestDelegate _next;
 
     public EndpointFeatureMiddleware(RequestDelegate next)
     {
-        _next = next;
+        _next = next ?? throw new ArgumentNullException(nameof(next));
     }
 
     public async Task InvokeAsync(HttpContext context)
     {
-        if (context.GetEndpoint() is { } endpoint)
+        ArgumentNullException.ThrowIfNull(context);
+
+        var endpoint = context.GetEndpoint();
+        if (endpoint is null)
         {
-            //这里不处理PageRouteMetadata,因为PageRouteMetadata是用于RazorPage的,不是用于MinimalApi的
-            if (endpoint.Metadata.OfType<PageRouteMetadata>().Any())
-            {
-                await _next(context);
-                return;
-            }
-
-            //不处理Mvc Controller
-            if (endpoint.Metadata.OfType<ControllerActionDescriptor>().Any())
-            {
-                await _next(context);
-                return;
-            }
-
-            if (endpoint.Metadata.GetMetadata<FeatureGateAttribute>() is { } metadata)
-            {
-                //IFeatureManagerSnapshot 比 IFeatureManager 多了一层缓存封装,性能更好
-                //IFeatureManagerSnapshot 适用于作用域请求,IFeatureManager 适用于单例请求. 因此IFeatureManagerSnapshot不要在构造器中注入
-                var _featureManager = context.RequestServices.GetRequiredService<IFeatureManagerSnapshot>();
-                var options = context.RequestServices.GetRequiredService<IOptions<QuickApiFeatureManagementOptions>>().Value;
-                var features = metadata.Features;
-
-                //只要有一个特性开启就可以:
-                if (metadata.RequirementType == RequirementType.Any)
-                {
-                    foreach (var feature in features)
-                    {
-                        if (await _featureManager.IsEnabledAsync(feature))
-                        {
-                            await _next(context);
-                            return;
-                        }
-                    }
-                    context.Response.StatusCode = options.StatusCode;
-                    if (options.OnErrorAsync is { } errorHandler)
-                    {
-                        errorHandler.Invoke(context);
-                    }
-                    else
-                    {
-                        //返回规范的Result.Problem:
-                        await Results.Problem(statusCode: options.StatusCode).ExecuteAsync(context);
-                    }
-                    return;
-                }
-                //所有特性都必须开启:
-                else
-                {
-                    foreach (var feature in features)
-                    {
-                        if (!await _featureManager.IsEnabledAsync(feature))
-                        {
-                            context.Response.StatusCode = options.StatusCode;
-                            if (options.OnErrorAsync is { } errorHandler)
-                            {
-                                errorHandler.Invoke(context);
-                            }
-                            else
-                            {
-                                //返回规范的Result.Problem:
-                                await Results.Problem(statusCode: options.StatusCode).ExecuteAsync(context);
-                            }
-                            return;
-                        }
-                    }
-                }
-            }
+            await _next(context);
+            return;
         }
-        await _next(context);
+
+        // 快速跳过不需处理的端点类型
+        if (ShouldSkipEndpoint(endpoint))
+        {
+            await _next(context);
+            return;
+        }
+
+        // 获取特性门控属性
+        var metadata = endpoint.Metadata.GetMetadata<FeatureGateAttribute>();
+        if (metadata is null)
+        {
+            await _next(context);
+            return;
+        }
+
+        // 处理特性门控逻辑
+        var featureManager = context.RequestServices.GetRequiredService<IFeatureManagerSnapshot>();
+        var options = context.RequestServices.GetRequiredService<IOptions<QuickApiFeatureManagementOptions>>().Value;
+
+        bool isAllowed = metadata.RequirementType == RequirementType.Any
+            ? await IsAnyFeatureEnabledAsync(metadata.Features, featureManager)
+            : await AreAllFeaturesEnabledAsync(metadata.Features, featureManager);
+
+        if (isAllowed)
+        {
+            await _next(context);
+            return;
+        }
+
+        // 处理未通过特性门控的请求
+        await HandleFeatureNotAllowedAsync(context, options);
     }
 
+    private static bool ShouldSkipEndpoint(Endpoint endpoint)
+    {
+        return endpoint.Metadata.OfType<PageRouteMetadata>().Any() ||
+               endpoint.Metadata.OfType<ControllerActionDescriptor>().Any();
+    }
+
+    private static async Task<bool> IsAnyFeatureEnabledAsync(IEnumerable<string> features, IFeatureManagerSnapshot featureManager)
+    {
+        foreach (var feature in features)
+        {
+            if (await featureManager.IsEnabledAsync(feature))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static async Task<bool> AreAllFeaturesEnabledAsync(IEnumerable<string> features, IFeatureManagerSnapshot featureManager)
+    {
+        foreach (var feature in features)
+        {
+            if (!await featureManager.IsEnabledAsync(feature))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static async Task HandleFeatureNotAllowedAsync(HttpContext context, QuickApiFeatureManagementOptions options)
+    {
+        context.Response.StatusCode = options.StatusCode;
+
+        if (options.OnErrorAsync is { } errorHandler)
+        {
+            await Task.Run(() => errorHandler.Invoke(context));
+        }
+        else
+        {
+            await Results.Problem(statusCode: options.StatusCode).ExecuteAsync(context);
+        }
+    }
 }
