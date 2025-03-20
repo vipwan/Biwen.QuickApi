@@ -38,7 +38,7 @@
           MSTest.TestFramework
           MSTest.Analyzers
     -->
-		<PackageReference Include="MSTest" Version="3.8.2" />
+		<PackageReference Include="MSTest" Version="3.8.3" />
 	</ItemGroup>
 
 

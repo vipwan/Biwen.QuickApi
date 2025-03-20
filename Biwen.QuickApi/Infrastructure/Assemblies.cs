@@ -42,7 +42,8 @@ internal static class Assemblies
         "MiniProfiler",
         "Serilog",//Serilog
         "OpenTelemetry",//OpenTelemetry
-        "Biwen.AutoClassGen" //AutoClassGen
+        "Biwen.AutoClassGen" ,//AutoClassGen
+        "EPPlus" //EPPlus
     };
 
     private static Assembly[] _allRequiredAssemblies = null!;
