@@ -291,9 +291,14 @@ public static class ServiceRegistration
                         return await ProcessRequestAsync(ctx, apiType, attr);
                     });
 
-                //Accept
-                rhBuilder?.WithMetadata(new AcceptsMetadata(["application/json"], reqType));
-
+                //Accept,如果是GET请求,则Accept=*/*
+                var acceptTypes = (verbs.Count() == 1 && (verbs.First() == Verb.GET || verbs.First() == Verb.HEAD)) switch
+                {
+                    true => new[] { "*/*" },
+                    false => reqType == typeof(EmptyRequest) ? new[] { "*/*" } : new[] { "application/json" }
+                };
+                rhBuilder?.WithMetadata(new AcceptsMetadata(acceptTypes, reqType));
+                
                 //HandlerBuilder
                 using var scope = app.ServiceProvider.CreateAsyncScope();
                 var hb = scope.ServiceProvider.GetRequiredService(apiType) as IHandlerBuilder;
