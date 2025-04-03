@@ -11,7 +11,12 @@ namespace Biwen.QuickApi.UnitOfWork;
 [SuppressType]
 public static class UnitOfWorkServiceCollectionExtensions
 {
-
+    /// <summary>
+    /// 添加工作单元
+    /// </summary>
+    /// <typeparam name="TContext"></typeparam>
+    /// <param name="services"></param>
+    /// <returns></returns>
     public static IServiceCollection AddUnitOfWork<TContext>(this IServiceCollection services)
         where TContext : DbContext
     {
@@ -25,6 +30,13 @@ public static class UnitOfWorkServiceCollectionExtensions
         return services;
     }
 
+    /// <summary>
+    /// 添加工作单元
+    /// </summary>
+    /// <typeparam name="TContext1"></typeparam>
+    /// <typeparam name="TContext2"></typeparam>
+    /// <param name="services"></param>
+    /// <returns></returns>
     public static IServiceCollection AddUnitOfWork<TContext1, TContext2>(this IServiceCollection services)
         where TContext1 : DbContext
         where TContext2 : DbContext

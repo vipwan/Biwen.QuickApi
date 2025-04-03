@@ -18,7 +18,7 @@ public static class EventExtensions
     /// <exception cref="InvalidOperationException"></exception>
     public static async Task PublishAsync<T>(this T @event, CancellationToken cancellationToken = default) where T : class, IEvent
     {
-        if (QuickApi.ServiceRegistration.ServiceProvider is null) throw new QuickApiExcetion("mush UseBiwenQuickApis() first!");
+        if (QuickApi.ServiceRegistration.ServiceProvider is null) throw new QuickApiExcetion("must UseBiwenQuickApis() first!");
         var publisher = ActivatorUtilities.GetServiceOrCreateInstance<Publisher>(QuickApi.ServiceRegistration.ServiceProvider);
         await publisher.PublishAsync(@event, cancellationToken);
     }

@@ -139,7 +139,8 @@ public static class ServiceRegistration
         }
     }
 
-    static HashSet<Type> configedTypes = new();
+    static readonly HashSet<Type> configedTypes = new();
+
     static void Configure(IStartup modular, IApplicationBuilder app, IEndpointRouteBuilder routes, ILogger? logger)
     {
         lock (_lock)
@@ -169,17 +170,22 @@ public static class ServiceRegistration
                 }
             };
 
-            List<Attribute?> allPres = [
-                modularType.GetCustomAttribute(typeof(PreModularAttribute<>)),
-                modularType.GetCustomAttribute(typeof(PreModularAttribute<,>)),
-                modularType.GetCustomAttribute(typeof(PreModularAttribute<,,>)),
-                modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,>)),
-                modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,>)),
-                modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,>)),
-                modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,>)),
-                modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,,>)),
-                modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,,,>)),
-                ];
+            //List<Attribute?> allPres = [
+            //    modularType.GetCustomAttribute(typeof(PreModularAttribute<>)),
+            //    modularType.GetCustomAttribute(typeof(PreModularAttribute<,>)),
+            //    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,>)),
+            //    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,>)),
+            //    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,>)),
+            //    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,>)),
+            //    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,>)),
+            //    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,,>)),
+            //    modularType.GetCustomAttribute(typeof(PreModularAttribute<,,,,,,,,>)),
+            //    ];
+
+            var allPres = modularType.GetCustomAttributes()
+                .Where(attr => attr.GetType().Name.StartsWith("PreModularAttribute`"))
+                .ToList();
+
             allPres.ForEach(preConfigure);
 
             modular.Configure(app, routes, app.ApplicationServices);
@@ -467,7 +473,6 @@ public static class ServiceRegistration
             }
 
             var api = sp.GetRequiredService(apiType);
-
             var result = await ((dynamic)api)!.ExecuteAsync(req!, tokenSource.Token);
             var rawResult = InnerResult(result);
             return rawResult;

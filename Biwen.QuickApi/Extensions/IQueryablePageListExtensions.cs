@@ -7,7 +7,7 @@
 using Biwen.QuickApi.UnitOfWork.Pagenation;
 using Microsoft.EntityFrameworkCore;
 
-namespace Biwen.QuickApi.UnitOfWork;
+namespace Biwen.QuickApi;
 
 /// <summary>
 /// IQueryable 分页扩展

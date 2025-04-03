@@ -1,8 +1,8 @@
 ﻿// Licensed to the Biwen.QuickApi under one or more agreements.
 // The Biwen.QuickApi licenses this file to you under the MIT license. 
 // See the LICENSE file in the project root for more information.
-// Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
-// Modify Date: 2024-09-06 16:55:49 UnitOfWork.cs
+// Biwen.QuickApi 作者: 万雅虎 Github: https://github.com/vipwan
+// 修改日期: 2025-04-03 UnitOfWork.cs
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -12,13 +12,13 @@ using Microsoft.EntityFrameworkCore.Storage;
 namespace Biwen.QuickApi.UnitOfWork;
 
 /// <summary>
-/// Represents the default implementation of the <see cref="T:IUnitOfWork"/> and <see cref="T:IUnitOfWork{TContext}"/> interface.
+/// 工作单元模式的默认实现，实现了 <see cref="T:IUnitOfWork"/> 和 <see cref="T:IUnitOfWork{TContext}"/> 接口
 /// </summary>
-/// <typeparam name="TContext">The type of the db context.</typeparam>
+/// <typeparam name="TContext">数据库上下文类型</typeparam>
 public sealed class UnitOfWork<TContext> : IRepositoryFactory, IUnitOfWork<TContext>
     where TContext : DbContext
 {
-    #region fields
+    #region 字段
 
     private bool _disposed;
     private Dictionary<Type, object>? _repositories;
@@ -26,31 +26,37 @@ public sealed class UnitOfWork<TContext> : IRepositoryFactory, IUnitOfWork<TCont
     #endregion
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="UnitOfWork{TContext}"/> class.
+    /// 初始化 <see cref="UnitOfWork{TContext}"/> 类的新实例
     /// </summary>
-    /// <param name="context">The context.</param>
+    /// <param name="context">数据库上下文</param>
     public UnitOfWork(TContext context)
     {
         DbContext = context ?? throw new ArgumentNullException(nameof(context));
         LastSaveChangesResult = new SaveChangesResult();
     }
 
-    #region properties
+    #region 属性
 
     /// <summary>
-    /// Gets the db context.
+    /// 获取数据库上下文
     /// </summary>
-    /// <returns>The instance of type <typeparamref name="TContext"/>.</returns>
+    /// <returns><typeparamref name="TContext"/> 类型的实例</returns>
     public TContext DbContext { get; }
+
+    /// <summary>
+    /// 获取最后一次保存操作的结果
+    /// </summary>
+    public SaveChangesResult LastSaveChangesResult { get; }
 
     #endregion
 
-    #region Methods
+    #region 方法
 
     /// <summary>
-    /// Returns Transaction 
+    /// 异步开始一个事务
     /// </summary>
-    /// <returns></returns>
+    /// <param name="useIfExists">如果已存在事务，是否使用现有事务</param>
+    /// <returns>数据库事务对象</returns>
     public Task<IDbContextTransaction> BeginTransactionAsync(bool useIfExists = false)
     {
         var transaction = DbContext.Database.CurrentTransaction;
@@ -63,9 +69,10 @@ public sealed class UnitOfWork<TContext> : IRepositoryFactory, IUnitOfWork<TCont
     }
 
     /// <summary>
-    /// Returns Transaction 
+    /// 同步开始一个事务
     /// </summary>
-    /// <returns></returns>
+    /// <param name="useIfExists">如果已存在事务，是否使用现有事务</param>
+    /// <returns>数据库事务对象</returns>
     public IDbContextTransaction BeginTransaction(bool useIfExists = false)
     {
         var transaction = DbContext.Database.CurrentTransaction;
@@ -78,27 +85,22 @@ public sealed class UnitOfWork<TContext> : IRepositoryFactory, IUnitOfWork<TCont
     }
 
     /// <summary>
-    /// DbContext disable/enable auto detect changes
+    /// 启用或禁用数据库上下文的自动变更检测
     /// </summary>
-    /// <param name="value"></param>
+    /// <param name="value">是否启用自动变更检测</param>
     public void SetAutoDetectChanges(bool value) => DbContext.ChangeTracker.AutoDetectChangesEnabled = value;
 
-    public SaveChangesResult LastSaveChangesResult { get; }
-
-
-    #endregion
-
     /// <summary>
-    /// Gets the specified repository for the <typeparamref name="TEntity"/>.
+    /// 获取指定实体类型的仓储
     /// </summary>
-    /// <param name="hasCustomRepository"><c>True</c> if providing custom repository</param>
-    /// <typeparam name="TEntity">The type of the entity.</typeparam>
-    /// <returns>An instance of type inherited from <see cref="IRepository{TEntity}"/> interface.</returns>
+    /// <param name="hasCustomRepository">是否使用自定义仓储</param>
+    /// <typeparam name="TEntity">实体类型</typeparam>
+    /// <returns>实现 <see cref="IRepository{TEntity}"/> 接口的实例</returns>
     public IRepository<TEntity> GetRepository<TEntity>(bool hasCustomRepository = false) where TEntity : class
     {
         _repositories ??= new Dictionary<Type, object>();
 
-        // what's the best way to support custom repository?
+        // 处理自定义仓储
         if (hasCustomRepository)
         {
             var customRepo = DbContext.GetService<IRepository<TEntity>>();
@@ -119,34 +121,35 @@ public sealed class UnitOfWork<TContext> : IRepositoryFactory, IUnitOfWork<TCont
     }
 
     /// <summary>
-    /// Executes the specified raw SQL command.
+    /// 执行指定的SQL命令
     /// </summary>
-    /// <param name="sql">The raw SQL.</param>
-    /// <param name="parameters">The parameters.</param>
-    /// <returns>The number of state entities written to database.</returns>
+    /// <param name="sql">原始SQL语句</param>
+    /// <param name="parameters">SQL参数</param>
+    /// <returns>受影响的行数</returns>
     public int ExecuteSqlCommand(string sql, params object[] parameters) => DbContext.Database.ExecuteSqlRaw(sql, parameters);
 
     /// <summary>
-    /// Executes the specified raw SQL command.
+    /// 异步执行指定的SQL命令
     /// </summary>
-    /// <param name="sql">The raw SQL.</param>
-    /// <param name="parameters">The parameters.</param>
-    /// <returns>The number of state entities written to database.</returns>
+    /// <param name="sql">原始SQL语句</param>
+    /// <param name="parameters">SQL参数</param>
+    /// <returns>受影响的行数</returns>
     public Task<int> ExecuteSqlCommandAsync(string sql, params object[] parameters) => DbContext.Database.ExecuteSqlRawAsync(sql, parameters);
 
     /// <summary>
-    /// Uses raw SQL queries to fetch the specified <typeparamref name="TEntity" /> data.
+    /// 使用原始SQL查询获取指定实体类型的数据
     /// </summary>
-    /// <typeparam name="TEntity">The type of the entity.</typeparam>
-    /// <param name="sql">The raw SQL.</param>
-    /// <param name="parameters">The parameters.</param>
-    /// <returns>An <see cref="IQueryable{T}" /> that contains elements that satisfy the condition specified by raw SQL.</returns>
-    public IQueryable<TEntity> FromSqlRaw<TEntity>(string sql, params object[] parameters) where TEntity : class => DbContext.Set<TEntity>().FromSqlRaw(sql, parameters);
+    /// <typeparam name="TEntity">实体类型</typeparam>
+    /// <param name="sql">原始SQL语句</param>
+    /// <param name="parameters">SQL参数</param>
+    /// <returns>包含满足SQL条件的元素的 <see cref="IQueryable{T}"/> 对象</returns>
+    public IQueryable<TEntity> FromSqlRaw<TEntity>(string sql, params object[] parameters) where TEntity : class
+        => DbContext.Set<TEntity>().FromSqlRaw(sql, parameters);
 
     /// <summary>
-    /// Saves all changes made in this context to the database.
+    /// 将所有在此上下文中的更改保存到数据库
     /// </summary>
-    /// <returns>The number of state entries written to the database.</returns>
+    /// <returns>写入数据库的状态条目数</returns>
     public int SaveChanges()
     {
         try
@@ -161,9 +164,9 @@ public sealed class UnitOfWork<TContext> : IRepositoryFactory, IUnitOfWork<TCont
     }
 
     /// <summary>
-    /// Asynchronously saves all changes made in this unit of work to the database.
+    /// 异步将所有在此工作单元中的更改保存到数据库
     /// </summary>
-    /// <returns>A <see cref="Task{TResult}"/> that represents the asynchronous save operation. The task result contains the number of state entities written to database.</returns>
+    /// <returns>表示异步保存操作的任务，任务结果包含写入数据库的状态条目数</returns>
     public async Task<int> SaveChangesAsync()
     {
         try
@@ -178,10 +181,10 @@ public sealed class UnitOfWork<TContext> : IRepositoryFactory, IUnitOfWork<TCont
     }
 
     /// <summary>
-    /// Saves all changes made in this context to the database with distributed transaction.
+    /// 使用分布式事务将所有在此上下文中的更改保存到数据库
     /// </summary>
-    /// <param name="unitOfWorks">An optional <see cref="T:IUnitOfWork"/> array.</param>
-    /// <returns>A <see cref="Task{TResult}"/> that represents the asynchronous save operation. The task result contains the number of state entities written to database.</returns>
+    /// <param name="unitOfWorks">可选的 <see cref="T:IUnitOfWork"/> 数组</param>
+    /// <returns>表示异步保存操作的任务，任务结果包含写入数据库的状态条目数</returns>
     public async Task<int> SaveChangesAsync(params IUnitOfWork[] unitOfWorks)
     {
         var count = 0;
@@ -195,19 +198,18 @@ public sealed class UnitOfWork<TContext> : IRepositoryFactory, IUnitOfWork<TCont
     }
 
     /// <summary>
-    /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+    /// 执行与释放或重置非托管资源相关的应用程序定义的任务
     /// </summary>
     public void Dispose()
     {
         Dispose(true);
-        //ReSharper disable once GCSuppressFinalizeForTypeWithoutDestructor
         GC.SuppressFinalize(this);
     }
 
     /// <summary>
-    /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+    /// 执行与释放或重置非托管资源相关的应用程序定义的任务
     /// </summary>
-    /// <param name="disposing">The disposing.</param>
+    /// <param name="disposing">是否正在释放资源</param>
     private void Dispose(bool disposing)
     {
         if (!_disposed)
@@ -222,9 +224,12 @@ public sealed class UnitOfWork<TContext> : IRepositoryFactory, IUnitOfWork<TCont
     }
 
     /// <summary>
-    /// Uses Track Graph Api to attach disconnected entities
+    /// 使用跟踪图API附加已分离的实体
     /// </summary>
-    /// <param name="rootEntity"> Root entity</param>
-    /// <param name="callback">Delegate to convert Object's State properties to Entities entry state.</param>
-    public void TrackGraph(object rootEntity, Action<EntityEntryGraphNode> callback) => DbContext.ChangeTracker.TrackGraph(rootEntity, callback);
+    /// <param name="rootEntity">根实体</param>
+    /// <param name="callback">将对象状态属性转换为实体条目状态的委托</param>
+    public void TrackGraph(object rootEntity, Action<EntityEntryGraphNode> callback)
+        => DbContext.ChangeTracker.TrackGraph(rootEntity, callback);
+
+    #endregion
 }
