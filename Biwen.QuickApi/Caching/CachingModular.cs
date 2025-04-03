@@ -28,9 +28,9 @@ internal class CachingModular : ModularBase
         services.AddResponseCaching();
 
         //注入IProxyCache,默认使用MemoryCache
-        services.AddSingleton<IProxyCache, MemoryProxyCache>();
+        services.AddScoped<IProxyCache, MemoryProxyCache>();
         //注入Caching代理
-        services.TryAddSingleton(typeof(CachingProxyFactory<>));
+        services.TryAddScoped(typeof(CachingProxyFactory<>));
     }
 
     public override void Configure(IApplicationBuilder app, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)
