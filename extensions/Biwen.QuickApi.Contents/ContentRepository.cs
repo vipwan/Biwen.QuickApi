@@ -16,6 +16,7 @@ namespace Biwen.QuickApi.Contents;
 public class ContentRepository(
     ContentSerializer serializer,
     IContentDbContext dbContext,
+    IPublisher publisher,
     IContentSchemaGenerator schemaGenerator) :
     IContentRepository
 {
@@ -65,7 +66,7 @@ public class ContentRepository(
         await dbContext.Context.SaveChangesAsync();
 
         // 发布内容创建事件
-        await new ContentCreatedEvent(entity).PublishAsync();
+        await publisher.PublishAsync(new ContentCreatedEvent(entity));
 
         return entity.Id;
     }
@@ -146,7 +147,7 @@ public class ContentRepository(
         await dbContext.Context.SaveChangesAsync();
 
         // 发布内容更新事件
-        await new ContentUpdatedEvent(entity, previousVersion).PublishAsync();
+        await publisher.PublishAsync(new ContentUpdatedEvent(entity, previousVersion));
     }
 
     public async Task DeleteContentAsync(Guid id)
@@ -159,7 +160,7 @@ public class ContentRepository(
         await dbContext.Context.SaveChangesAsync();
 
         // 发布内容删除事件
-        await new ContentDeletedEvent(id).PublishAsync();
+        await publisher.PublishAsync(new ContentDeletedEvent(id));
     }
 
     /// <summary>
@@ -190,7 +191,7 @@ public class ContentRepository(
         // 发布状态变更事件
         if (previousStatus != status)
         {
-            await new ContentStatusChangedEvent(entity, previousStatus, status).PublishAsync();
+            await publisher.PublishAsync(new ContentStatusChangedEvent(entity, previousStatus, status));
         }
     }
 
@@ -225,7 +226,7 @@ public class ContentRepository(
         await dbContext.Context.SaveChangesAsync();
 
         // 发布内容更新事件
-        await new ContentUpdatedEvent(content, previousVersion, isRollback, version).PublishAsync();
+        await publisher.PublishAsync(new ContentUpdatedEvent(content, previousVersion, isRollback, version));
     }
 
     // 获取内容的Schema

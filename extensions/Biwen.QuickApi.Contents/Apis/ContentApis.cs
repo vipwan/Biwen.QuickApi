@@ -8,7 +8,6 @@ using Biwen.QuickApi.Contents.Domain;
 using Biwen.QuickApi.UnitOfWork.Pagenation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
 
 namespace Biwen.QuickApi.Contents.Apis;
 
@@ -104,7 +103,8 @@ public class CreateContentRequest : BaseRequest<CreateContentRequest>
 [OpenApiMetadata("创建内容", "创建内容")]
 public class CreateContentApi(
     IContentRepository repository,
-    ContentSerializer contentSerializer
+    ContentSerializer contentSerializer,
+    IContentValidator contentValidator // 注入文档验证器
 ) : BaseQuickApi<CreateContentRequest, Guid>
 {
     public override async ValueTask<Guid> ExecuteAsync(CreateContentRequest request, CancellationToken cancellationToken = default)
@@ -125,6 +125,20 @@ public class CreateContentApi(
             ?.MakeGenericMethod(contentType.GetType());
 
         var content = deserializeMethod!.Invoke(contentSerializer, [request.JsonContent]);
+
+        // 验证内容
+        var validateMethod = contentValidator.GetType()
+            .GetMethod(nameof(IContentValidator.ValidateAsync))
+            ?.MakeGenericMethod(contentType.GetType());
+
+        var validationResult = await (Task<ValidationResult>)validateMethod!.Invoke(
+            contentValidator, [content])!;
+
+        // 如果验证失败，抛出异常
+        if (validationResult != ValidationResult.Success)
+        {
+            throw new ValidationException(validationResult.ErrorMessage);
+        }
 
         //使用反射获取SaveContentAsync的泛型方法并调用:
         var saveMethod = repository!.GetType()
@@ -166,7 +180,8 @@ public class UpdateContentRequest : BaseRequest<UpdateContentRequest>
 public class UpdateContentApi(
     IContentRepository repository,
     ContentSerializer contentSerializer,
-    IHttpContextAccessor httpContextAccessor
+    IHttpContextAccessor httpContextAccessor,
+    IContentValidator contentValidator // 注入文档验证器
 ) : BaseQuickApi<UpdateContentRequest, bool>
 {
     public override async ValueTask<bool> ExecuteAsync(UpdateContentRequest request, CancellationToken cancellationToken = default)
@@ -193,6 +208,20 @@ public class UpdateContentApi(
 
         var updatedContent = deserializeMethod!.Invoke(contentSerializer, [request.JsonContent])!;
 
+        // 验证内容
+        var validateMethod = contentValidator.GetType()
+            .GetMethod(nameof(IContentValidator.ValidateAsync))
+            ?.MakeGenericMethod(contentType.GetType());
+
+        var validationResult = await (Task<ValidationResult>)validateMethod!.Invoke(
+            contentValidator, [updatedContent])!;
+
+        // 如果验证失败，抛出异常
+        if (validationResult != ValidationResult.Success)
+        {
+            throw new ValidationException(validationResult.ErrorMessage);
+        }
+
         //反射泛型方法:
         var updateMethod = repository!.GetType()
             .GetMethod(nameof(IContentRepository.UpdateContentAsync))
@@ -200,7 +229,6 @@ public class UpdateContentApi(
 
         // 更新内容
         await (Task)updateMethod?.Invoke(repository, [contentId, updatedContent])!;
-
 
         //还需要更新标题和Slug
         var content = await repository.GetRawContentAsync(contentId);

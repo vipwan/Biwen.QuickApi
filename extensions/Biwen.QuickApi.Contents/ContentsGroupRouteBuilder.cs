@@ -4,7 +4,7 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2025-04-05 22:52:58 ContentsGroupRouteBuilder.cs
 
-using Biwen.QuickApi.Contents.Apis;
+using Biwen.QuickApi.Contents.Apis.Filters;
 using Biwen.QuickApi.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -25,10 +25,12 @@ internal class ContentsGroupRouteBuilder : IQuickApiGroupRouteBuilder
         //添加Tags
         routeBuilder.WithTags([Constants.Tags]);
 
-        //验证的Filter
+        //验证权限的Filter
         routeBuilder.AddEndpointFilter<AuthFilter>();
 
-        //验证传递的Content
+        //不需要验证逻辑,在Biwen.QuickApi中直接处理ValidationException
+        //routeBuilder.AddEndpointFilter<ValidationExceptionFilter>();
+
         //待实现...
 
         return routeBuilder;
