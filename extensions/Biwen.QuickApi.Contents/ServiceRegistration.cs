@@ -39,12 +39,10 @@ public static class ServiceRegistration
         services.AddSingleton<IFieldType, TextAreaFieldType>();
         services.AddSingleton<IFieldType, MarkdownFieldType>();
         services.AddSingleton<IFieldType, NumberFieldType>();
-
         services.AddSingleton<IFieldType, TimeFieldType>();
         services.AddSingleton<IFieldType, DateTimeFieldType>();
         services.AddSingleton<IFieldType, ImageFieldType>();
         services.AddSingleton<IFieldType, FileFieldType>();
-
         //单选
         services.AddSingleton<IFieldType, OptionsFieldType<int>>();//选项.默认枚举存储的类型为int
         //复选
@@ -64,6 +62,8 @@ public static class ServiceRegistration
 
         // 注册文件类型提供器
         services.AddSingleton<ContentSerializer>();
+        // 注册泛型文档验证器
+        services.AddSingleton<IContentValidator, DefaultContentValidator>();
 
         // 注册内容仓储上下文
         services.AddScoped<IContentDbContext, TDbContext>();
