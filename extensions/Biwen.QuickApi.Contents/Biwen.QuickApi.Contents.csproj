@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<NoWarn>GEN053</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Biwen.AutoClassGen" Version="1.6.0" PrivateAssets="all" />
+		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.6.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Rendering\" />
+	</ItemGroup>
+
+
+</Project>

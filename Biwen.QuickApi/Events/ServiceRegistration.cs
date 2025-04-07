@@ -28,7 +28,7 @@ internal static class ServiceRegistration
             }
         }
         //注册Publisher
-        services.AddActivatedSingleton<Publisher>();
+        services.AddSingleton<IPublisher, Publisher>();
         return services;
     }
 

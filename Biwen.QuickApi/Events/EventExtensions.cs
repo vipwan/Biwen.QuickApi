@@ -18,8 +18,15 @@ public static class EventExtensions
     /// <exception cref="InvalidOperationException"></exception>
     public static async Task PublishAsync<T>(this T @event, CancellationToken cancellationToken = default) where T : class, IEvent
     {
+#if DEBUG
+        //如果是单元测试环境,没有完整的网络环境,则不需要发布事件
+        if (QuickApi.ServiceRegistration.ServiceProvider is null)
+        {
+            return;
+        }
+#endif
         if (QuickApi.ServiceRegistration.ServiceProvider is null) throw new QuickApiExcetion("must UseBiwenQuickApis() first!");
-        var publisher = ActivatorUtilities.GetServiceOrCreateInstance<Publisher>(QuickApi.ServiceRegistration.ServiceProvider);
+        var publisher = ActivatorUtilities.GetServiceOrCreateInstance<IPublisher>(QuickApi.ServiceRegistration.ServiceProvider);
         await publisher.PublishAsync(@event, cancellationToken);
     }
 }

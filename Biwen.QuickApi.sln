@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biwen.QuickApi.Messaging.Al
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biwen.QuickApi.Locking.DistributedLock", "extensions\Biwen.QuickApi.Locking.DistributedLock\Biwen.QuickApi.Locking.DistributedLock.csproj", "{DEE91143-93E0-44C3-94B3-4FE2285282D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biwen.QuickApi.Contents", "extensions\Biwen.QuickApi.Contents\Biwen.QuickApi.Contents.csproj", "{820A7B08-C1C4-8A7B-4849-F80F369BF1CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,10 @@ Global
 		{DEE91143-93E0-44C3-94B3-4FE2285282D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEE91143-93E0-44C3-94B3-4FE2285282D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEE91143-93E0-44C3-94B3-4FE2285282D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{820A7B08-C1C4-8A7B-4849-F80F369BF1CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{820A7B08-C1C4-8A7B-4849-F80F369BF1CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{820A7B08-C1C4-8A7B-4849-F80F369BF1CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{820A7B08-C1C4-8A7B-4849-F80F369BF1CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +136,7 @@ Global
 		{5A5BB986-7FA8-4B1F-BF5A-A2B8912BF7F3} = {72E63A55-F682-4AC4-8ED5-535DE652DAC4}
 		{6440AA25-9612-406B-81CA-4FA8544E7CC8} = {72E63A55-F682-4AC4-8ED5-535DE652DAC4}
 		{DEE91143-93E0-44C3-94B3-4FE2285282D2} = {72E63A55-F682-4AC4-8ED5-535DE652DAC4}
+		{820A7B08-C1C4-8A7B-4849-F80F369BF1CB} = {72E63A55-F682-4AC4-8ED5-535DE652DAC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3859D772-48C9-4531-BC8B-583D2B4DF111}

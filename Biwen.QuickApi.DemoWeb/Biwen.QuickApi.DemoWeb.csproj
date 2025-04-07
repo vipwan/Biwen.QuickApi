@@ -14,7 +14,7 @@
 	<Import Project="..\SharedReference.Props" />
 
 	<ItemGroup>
-		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.3.6" />
+		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.6.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.3" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.3" />
 		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.6" />
@@ -25,6 +25,7 @@
 		<ProjectReference Include="..\Biwen.QuickApi.Logging.Serilog\Biwen.QuickApi.Logging.Serilog.csproj" />
 		<ProjectReference Include="..\Biwen.QuickApi.MiniProfiler\Biwen.QuickApi.MiniProfiler.csproj" />
 		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
+		<ProjectReference Include="..\extensions\Biwen.QuickApi.Contents\Biwen.QuickApi.Contents.csproj" />
 		<ProjectReference Include="..\extensions\Biwen.QuickApi.Telemetry\Biwen.QuickApi.Telemetry.csproj" />
 	</ItemGroup>
 
