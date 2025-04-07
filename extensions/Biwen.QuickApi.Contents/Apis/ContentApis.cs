@@ -79,6 +79,36 @@ public class ContentsApi(
     }
 }
 
+[AutoDto<Content>]
+public partial record ContentDto;
+
+[QuickApi("/{id:guid}", Group = Constants.GroupName)]
+[OpenApiMetadata("获取指定文档", "根据ID获取指定的内容")]
+public class GetContentByIdApi(
+    IContentRepository repository,
+    IHttpContextAccessor httpContextAccessor
+) : BaseQuickApi<EmptyRequest, ContentDto>
+{
+    public override async ValueTask<ContentDto> ExecuteAsync(EmptyRequest emptyRequest, CancellationToken cancellationToken = default)
+    {
+        // 获取请求的ID
+        var id = httpContextAccessor.HttpContext!.Request.RouteValues["id"]?.ToString();
+        if (string.IsNullOrEmpty(id) || !Guid.TryParse(id, out var contentId))
+        {
+            throw new ArgumentException("无效的ID");
+        }
+        var content = await repository.GetRawContentAsync(contentId);
+        if (content == null)
+        {
+            throw new KeyNotFoundException($"未找到ID为{contentId}的内容");
+        }
+
+        return content.MapperToContentDto();
+    }
+}
+
+
+
 [FromBody]
 public class CreateContentRequest : BaseRequest<CreateContentRequest>
 {

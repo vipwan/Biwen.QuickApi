@@ -19,23 +19,31 @@ namespace Biwen.QuickApi.Contents.Domain;
 public class Content
 {
     [Key]
+    [Description("ID")]
     public Guid Id { get; set; }
 
     [Required, StringLength(500)]
+    [Description("内容的标题,用于SEO优化和用户友好显示")]
     public string Title { get; set; } = string.Empty;
 
     [Required, StringLength(500)]
+    [Description("内容的唯一标识符,用于URL友好显示")]
     public string Slug { get; set; } = string.Empty;
 
+    [Description("内容状态,0:草稿,1:已发布,2:存档")]
     public ContentStatus Status { get; set; }
 
+    [Description("创建时间")]
     public DateTime CreatedAt { get; set; }
 
+    [Description("发布时间")]
     public DateTime? PublishedAt { get; set; }
 
+    [Description("最后更新时间")]
     public DateTime? UpdatedAt { get; set; }
 
     [Required, StringLength(maximumLength: 1024)]
+    [Description("文档类型")]
     public string ContentType { get; set; } = string.Empty; // 存储内容类型的完全限定名
 
     [Required]
