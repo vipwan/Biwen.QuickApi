@@ -304,7 +304,7 @@ public static class ServiceRegistration
                     false => reqType == typeof(EmptyRequest) ? new[] { "*/*" } : new[] { "application/json" }
                 };
                 rhBuilder?.WithMetadata(new AcceptsMetadata(acceptTypes, reqType));
-                
+
                 //HandlerBuilder
                 using var scope = app.ServiceProvider.CreateAsyncScope();
                 var hb = scope.ServiceProvider.GetRequiredService(apiType) as IHandlerBuilder;
@@ -476,6 +476,18 @@ public static class ServiceRegistration
             var result = await ((dynamic)api)!.ExecuteAsync(req!, tokenSource.Token);
             var rawResult = InnerResult(result);
             return rawResult;
+        }
+        //直接友好的返回:TypedResults.ValidationProblem
+        catch (ValidationException vex1)
+        {
+            var errors = new Dictionary<string, string[]>();
+            return TypedResults.ValidationProblem(errors, vex1.Message);
+        }
+        //直接友好的返回:TypedResults.ValidationProblem
+        catch (MSDA.ValidationException vex2)
+        {
+            var errors = new Dictionary<string, string[]>();
+            return TypedResults.ValidationProblem(errors, vex2.Message);
         }
         catch (Exception ex)
         {
