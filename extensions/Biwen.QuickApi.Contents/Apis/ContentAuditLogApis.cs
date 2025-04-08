@@ -72,6 +72,7 @@ public class AuditLogQueryRequest : BaseRequest<AuditLogQueryRequest>
 /// </summary>
 
 [AutoDto<ContentAuditLog>]
+[AutoDtoComplex(2)]//现在支持复杂类型DTO生成
 public partial record ContentAuditLogDto;
 
 /// <summary>

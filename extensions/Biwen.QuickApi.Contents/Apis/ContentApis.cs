@@ -43,8 +43,8 @@ public class PageRequest : BaseRequest<PageRequest>
 
 }
 
-[AutoDto<Content>]
-public partial record ContentDto;
+//[AutoDto<Content>]
+//public partial record ContentDto;
 
 
 [QuickApi("/infopages", Group = Constants.GroupName)]

@@ -21,7 +21,7 @@
 		<PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.11.1" />
 		<PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.11.1" />
 		<PackageReference Include="OpenTelemetry.Instrumentation.Process" Version="1.11.0-beta.2" />
-		<PackageReference Include="Spectre.Console" Version="0.49.1" />
+		<PackageReference Include="Spectre.Console" Version="0.50.0" />
 	</ItemGroup>
 
 	<ItemGroup>
