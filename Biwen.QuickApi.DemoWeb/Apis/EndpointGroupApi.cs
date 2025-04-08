@@ -20,4 +20,22 @@
             return base.HandlerBuilder(builder);
         }
     }
+
+    [QuickApi("ctx")]
+    [OpenApiMetadata("ctx测试", "ctx测试")]
+    public class CtxApi : BaseQuickApi
+    {
+        public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken)
+        {
+            await Task.CompletedTask;
+            var ctx = HttpContext;
+
+            //使用Httpcontext
+            ctx.Response.StatusCode = 403;
+
+            return Results.Content("ctx");
+
+        }
+    }
+
 }

@@ -132,6 +132,26 @@ public abstract class BaseQuickApi<Req, Rsp> : IQuickApi<Req, Rsp> where Req : B
         return builder!;
     }
 
+    /// <summary>
+    /// Current HttpContext
+    /// </summary>
+    public HttpContext HttpContext
+    {
+        get
+        {
+            var asyncContextService = ActivatorUtilities.GetServiceOrCreateInstance<AsyncContextService<IHttpContextAccessor>>(
+                ServiceRegistration.ServiceProvider);
+
+            if (asyncContextService?.TryGet(out var httpContextAccessor) is true && httpContextAccessor is not null)
+            {
+                return httpContextAccessor.HttpContext!;
+            }
+            else
+            {
+                throw new InvalidOperationException("HttpContext is null");
+            }
+        }
+    }
 
     /// <summary>
     /// ReqType是否是:multipart/form-data

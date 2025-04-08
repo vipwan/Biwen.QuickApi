@@ -11,14 +11,26 @@ using Microsoft.AspNetCore.Http;
 
 namespace Biwen.QuickApi.Contents.Apis;
 
+
+[AutoDto<ContentVersion>(nameof(ContentVersion.Content))]
+public partial record ContentVersionDto
+{
+    /// <summary>
+    /// 重写Content
+    /// </summary>
+    [Description("文档内容")]
+    public ContentDto? Content { get; set; }
+
+}
+
 /// <summary>
 /// 获取内容版本列表的API
 /// </summary>
 [QuickApi("/versions/{id:guid}", Group = Constants.GroupName)]
 [OpenApiMetadata("获取内容版本列表", "获取指定内容的所有版本")]
-public class GetContentVersionsApi(IContentVersionService versionService, IHttpContextAccessor httpContextAccessor) : BaseQuickApi<EmptyRequest, IEnumerable<ContentVersion>>
+public class GetContentVersionsApi(IContentVersionService versionService, IHttpContextAccessor httpContextAccessor) : BaseQuickApi<EmptyRequest, IEnumerable<ContentVersionDto>>
 {
-    public override async ValueTask<IEnumerable<ContentVersion>> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken = default)
+    public override async ValueTask<IEnumerable<ContentVersionDto>> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken = default)
     {
         var id = httpContextAccessor.HttpContext!.Request.RouteValues["id"]?.ToString();
         if (string.IsNullOrEmpty(id) || !Guid.TryParse(id, out var contentId))
@@ -26,7 +38,17 @@ public class GetContentVersionsApi(IContentVersionService versionService, IHttpC
             throw new ArgumentException("无效的ID");
         }
 
-        return await versionService.GetVersionsAsync(contentId);
+        var models = await versionService.GetVersionsAsync(contentId);
+
+        //对象转换
+        var dtos = models.Select(models =>
+        {
+            var dto = models.MapperToContentVersionDto();
+            dto.Content = models.Content.MapperToContentDto();
+            return dto;
+        }).ToList();
+
+        return dtos;
     }
 }
 
@@ -35,9 +57,9 @@ public class GetContentVersionsApi(IContentVersionService versionService, IHttpC
 /// </summary>
 [QuickApi("/versions/{id:guid}/{version:guid}", Group = Constants.GroupName)]
 [OpenApiMetadata("获取指定版本内容", "获取指定内容的指定版本")]
-public class GetContentVersionApi(IContentVersionService versionService, IHttpContextAccessor httpContextAccessor) : BaseQuickApi<EmptyRequest, ContentVersion?>
+public class GetContentVersionApi(IContentVersionService versionService, IHttpContextAccessor httpContextAccessor) : BaseQuickApi<EmptyRequest, ContentVersionDto?>
 {
-    public override async ValueTask<ContentVersion?> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken = default)
+    public override async ValueTask<ContentVersionDto?> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken = default)
     {
         var id = httpContextAccessor.HttpContext!.Request.RouteValues["id"]?.ToString();
         var version = httpContextAccessor.HttpContext!.Request.RouteValues["version"]?.ToString();
@@ -52,10 +74,18 @@ public class GetContentVersionApi(IContentVersionService versionService, IHttpCo
             throw new ArgumentException("无效的版本号");
         }
 
-        return await versionService.GetVersionAsync(contentId, versionNumber);
+        var model = await versionService.GetVersionAsync(contentId, versionNumber);
+
+        if (model == null)
+            throw new ArgumentException("无效的版本号");
+
+        //对象转换
+        var dto = model.MapperToContentVersionDto();
+        dto.Content = model.Content.MapperToContentDto();
+
+        return dto;
     }
 }
-
 
 
 //contents/versions/f67d329e-f54f-4e3b-be0c-2e0e3652d9f3/rollback/16b4a343-24ca-4452-9f23-43da7711ec1a

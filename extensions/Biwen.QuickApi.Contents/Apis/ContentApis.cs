@@ -43,21 +43,25 @@ public class PageRequest : BaseRequest<PageRequest>
 
 }
 
+[AutoDto<Content>]
+public partial record ContentDto;
+
+
 [QuickApi("/infopages", Group = Constants.GroupName)]
 [OpenApiMetadata("内容API", "文档查询")]
 public class ContentsApi(
     IContentRepository repository,
     ContentSerializer contentSerializer
-) : BaseQuickApi<PageRequest, IPagedList<Content>>
+) : BaseQuickApi<PageRequest, IPagedList<ContentDto>>
 {
-    public override async ValueTask<IPagedList<Content>> ExecuteAsync(PageRequest request, CancellationToken cancellationToken = default)
+    public override async ValueTask<IPagedList<ContentDto>> ExecuteAsync(PageRequest request, CancellationToken cancellationToken = default)
     {
         var pageIndex = (request.PageNumber ?? 1) - 1;
         var pageSize = request.PageSize ?? 10;
 
         if (string.IsNullOrEmpty(request.ContentType))
         {
-            return new PagedList<Content>([], 0, 1, 0, 10);
+            return new PagedList<ContentDto>([], 0, 1, 0, 10);
             //throw new ArgumentException("ContentType不能为空");
         }
 
@@ -72,27 +76,29 @@ public class ContentsApi(
             .GetMethod(nameof(IContentRepository.GetDomainContentsByTypeAsync))
             ?.MakeGenericMethod(contentType.GetType());
 
-        return await (Task<IPagedList<Content>>)method!.Invoke(
+        var models = await (Task<IPagedList<Content>>)method!.Invoke(
             repository,
             [request.Slug, pageIndex, pageSize, request.Status, request.Title]
         )!;
+
+        //将Content转换为Dto:
+        var dtos = models.ToPagedList(
+            m => m.Select(x => x.MapperToContentDto()));
+
+        return dtos;
     }
 }
-
-[AutoDto<Content>]
-public partial record ContentDto;
 
 [QuickApi("/{id:guid}", Group = Constants.GroupName)]
 [OpenApiMetadata("获取指定文档", "根据ID获取指定的内容")]
 public class GetContentByIdApi(
-    IContentRepository repository,
-    IHttpContextAccessor httpContextAccessor
+    IContentRepository repository
 ) : BaseQuickApi<EmptyRequest, ContentDto>
 {
     public override async ValueTask<ContentDto> ExecuteAsync(EmptyRequest emptyRequest, CancellationToken cancellationToken = default)
     {
         // 获取请求的ID
-        var id = httpContextAccessor.HttpContext!.Request.RouteValues["id"]?.ToString();
+        var id = HttpContext.Request.RouteValues["id"]?.ToString();
         if (string.IsNullOrEmpty(id) || !Guid.TryParse(id, out var contentId))
         {
             throw new ArgumentException("无效的ID");
@@ -284,14 +290,13 @@ public class UpdateContentApi(
 [QuickApi("/{id:guid}", Group = Constants.GroupName, Verbs = Verb.DELETE)]
 [OpenApiMetadata("删除内容", "删除指定ID的内容")]
 public class DeleteContentApi(
-    IContentRepository repository,
-    IHttpContextAccessor httpContextAccessor
+    IContentRepository repository
 ) : BaseQuickApi<EmptyRequest, bool>
 {
     public override async ValueTask<bool> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken = default)
     {
         // 获取请求的ID
-        var id = httpContextAccessor.HttpContext!.Request.RouteValues["id"]?.ToString();
+        var id = HttpContext.Request.RouteValues["id"]?.ToString();
         if (string.IsNullOrEmpty(id) || !Guid.TryParse(id, out var Id))
         {
             throw new ArgumentException("无效的ID");
@@ -350,7 +355,6 @@ public class GetAllContentTypesApi(ContentSerializer contentSerializer) :
 [OpenApiMetadata("获取内容Schema", "获取指定类型的内容Schema")]
 public class GetContentSchemaApi(
     IContentSchemaGenerator schemaGenerator,
-    IHttpContextAccessor httpContextAccessor,
     ContentSerializer contentSerializer) :
     BaseQuickApi<EmptyRequest, string>
 {
@@ -359,7 +363,7 @@ public class GetContentSchemaApi(
         await Task.CompletedTask;
 
         // 获取请求的类型
-        var type = httpContextAccessor.HttpContext!.Request.RouteValues["type"]?.ToString();
+        var type = HttpContext.Request.RouteValues["type"]?.ToString();
         if (string.IsNullOrEmpty(type))
         {
             throw new ArgumentException("无效的类型");

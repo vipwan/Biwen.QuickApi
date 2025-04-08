@@ -300,8 +300,8 @@ public static class ServiceRegistration
                 //Accept,如果是GET请求,则Accept=*/*
                 var acceptTypes = (verbs.Count() == 1 && (verbs.First() == Verb.GET || verbs.First() == Verb.HEAD)) switch
                 {
-                    true => new[] { "*/*" },
-                    false => reqType == typeof(EmptyRequest) ? new[] { "*/*" } : new[] { "application/json" }
+                    true => ["*/*"],
+                    false => reqType == typeof(EmptyRequest) ? ["*/*"] : new[] { "application/json" }
                 };
                 rhBuilder?.WithMetadata(new AcceptsMetadata(acceptTypes, reqType));
 
@@ -461,6 +461,8 @@ public static class ServiceRegistration
         var tokenSource = new CancellationTokenSource();
         //设置CancelToken
         sp.GetRequiredService<AsyncContextService<CancellationTokenSource>>().Set(tokenSource);
+        //设置IHttpContextAccessor
+        sp.GetRequiredService<AsyncContextService<IHttpContextAccessor>>().Set(ctx);
 
         //执行请求
         try
