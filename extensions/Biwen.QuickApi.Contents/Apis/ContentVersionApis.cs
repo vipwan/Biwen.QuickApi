@@ -12,16 +12,9 @@ using Microsoft.AspNetCore.Http;
 namespace Biwen.QuickApi.Contents.Apis;
 
 
-[AutoDto<ContentVersion>(nameof(ContentVersion.Content))]
-public partial record ContentVersionDto
-{
-    /// <summary>
-    /// 重写Content
-    /// </summary>
-    [Description("文档内容")]
-    public ContentDto? Content { get; set; }
-
-}
+[AutoDto<ContentVersion>]
+[AutoDtoComplex(2)]//现在支持复杂类型DTO生成
+public partial record ContentVersionDto;
 
 /// <summary>
 /// 获取内容版本列表的API
@@ -39,16 +32,8 @@ public class GetContentVersionsApi(IContentVersionService versionService, IHttpC
         }
 
         var models = await versionService.GetVersionsAsync(contentId);
-
         //对象转换
-        var dtos = models.Select(models =>
-        {
-            var dto = models.MapperToContentVersionDto();
-            dto.Content = models.Content.MapperToContentDto();
-            return dto;
-        }).ToList();
-
-        return dtos;
+        return models.AsQueryable().ProjectToContentVersionDto();
     }
 }
 
@@ -80,10 +65,7 @@ public class GetContentVersionApi(IContentVersionService versionService, IHttpCo
             throw new ArgumentException("无效的版本号");
 
         //对象转换
-        var dto = model.MapperToContentVersionDto();
-        dto.Content = model.Content.MapperToContentDto();
-
-        return dto;
+        return model.MapperToContentVersionDto();
     }
 }
 

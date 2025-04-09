@@ -28,15 +28,7 @@ public class GetContentAuditLogsApi(
         }
 
         var logs = await auditLogService.GetAuditLogsAsync(contentId);
-
-        // 转换为DTO，包含用户名
-        var dtoItems = new List<ContentAuditLogDto>();
-        foreach (var log in logs)
-        {
-            var dto = log.MapperToContentAuditLogDto();
-            dtoItems.Add(dto);
-        }
-        return dtoItems;
+        return logs.AsQueryable().ProjectToContentAuditLogDto();
     }
 }
 
@@ -95,13 +87,7 @@ public class QueryAuditLogsApi(IContentAuditLogService auditLogService) : BaseQu
             pageSize
         );
 
-        // 转换为DTO，包含用户名
-        var dtoItems = new List<ContentAuditLogDto>();
-        foreach (var log in logs.Items)
-        {
-            var dto = log.MapperToContentAuditLogDto();
-            dtoItems.Add(dto);
-        }
+        var dtoItems = logs.Items.AsQueryable().ProjectToContentAuditLogDto();
 
         // 创建分页DTO
         return new PagedList<ContentAuditLogDto>(
