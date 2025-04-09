@@ -441,6 +441,8 @@ public static class ServiceRegistration
         return app;
     }
 
+
+
     /// <summary>
     /// 执行请求的委托
     /// </summary>
@@ -461,8 +463,6 @@ public static class ServiceRegistration
         var tokenSource = new CancellationTokenSource();
         //设置CancelToken
         sp.GetRequiredService<AsyncContextService<CancellationTokenSource>>().Set(tokenSource);
-        //设置IHttpContextAccessor
-        sp.GetRequiredService<AsyncContextService<IHttpContextAccessor>>().Set(ctx);
 
         //执行请求
         try
@@ -479,34 +479,9 @@ public static class ServiceRegistration
             var rawResult = InnerResult(result);
             return rawResult;
         }
-        //直接友好的返回:TypedResults.ValidationProblem
-        catch (ValidationException vex1)
-        {
-            var errors = new Dictionary<string, string[]>();
-            return TypedResults.ValidationProblem(errors, vex1.Message);
-        }
-        //直接友好的返回:TypedResults.ValidationProblem
-        catch (MSDA.ValidationException vex2)
-        {
-            var errors = new Dictionary<string, string[]>();
-            return TypedResults.ValidationProblem(errors, vex2.Message);
-        }
         catch (Exception ex)
         {
-            var exceptionHandlers = sp.GetServices<IQuickApiExceptionHandler>();
-            //异常处理
-            foreach (var handler in exceptionHandlers)
-            {
-                await handler.HandleAsync(ex);
-            }
-
-            //规范化异常返回
-            if (sp.GetService<IQuickApiExceptionResultBuilder>() is { } exceptionResultBuilder)
-            {
-                return await exceptionResultBuilder.ErrorResultAsync(ex);
-            }
-            //默认使用ProblemDetails
-            throw;
+            return await HandleExceptionAsync(ex, sp);
         }
         finally
         {
@@ -528,5 +503,52 @@ public static class ServiceRegistration
             string iresult => Results.Content(iresult),
             _ => Results.Json(result),
         };
+
+        /// <summary>
+        /// 处理异常并返回适当的IResult
+        /// </summary>
+        /// <param name="ex">捕获的异常</param>
+        /// <param name="serviceProvider">服务提供程序</param>
+        /// <returns>表示异常处理结果的IResult</returns>
+        static async Task<IResult> HandleExceptionAsync(Exception ex, IServiceProvider serviceProvider)
+        {
+            // 直接友好的返回:TypedResults.ValidationProblem
+            if (ex is ValidationException vex1)
+            {
+                var errors = new Dictionary<string, string[]>();
+                return TypedResults.ValidationProblem(errors, vex1.Message);
+            }
+
+            // 直接友好的返回:TypedResults.ValidationProblem
+            if (ex is MSDA.ValidationException vex2)
+            {
+                var errors = new Dictionary<string, string[]>();
+                return TypedResults.ValidationProblem(errors, vex2.Message);
+            }
+
+            // 404
+            if (ex is KeyNotFoundException)
+            {
+                return TypedResults.NotFound();
+            }
+
+            // 其他异常处理
+            var exceptionHandlers = serviceProvider.GetServices<IQuickApiExceptionHandler>();
+            // 异常处理
+            foreach (var handler in exceptionHandlers)
+            {
+                await handler.HandleAsync(ex);
+            }
+
+            // a规范化异常返回
+            if (serviceProvider.GetService<IQuickApiExceptionResultBuilder>() is { } exceptionResultBuilder)
+            {
+                return await exceptionResultBuilder.ErrorResultAsync(ex);
+            }
+
+            // 默认使用ProblemDetails
+            throw ex;
+        }
+
     }
 }

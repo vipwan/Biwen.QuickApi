@@ -139,16 +139,15 @@ public abstract class BaseQuickApi<Req, Rsp> : IQuickApi<Req, Rsp> where Req : B
     {
         get
         {
-            var asyncContextService = ActivatorUtilities.GetServiceOrCreateInstance<AsyncContextService<IHttpContextAccessor>>(
+            var asyncContextService = ActivatorUtilities.GetServiceOrCreateInstance<IHttpContextAccessor>(
                 ServiceRegistration.ServiceProvider);
-
-            if (asyncContextService?.TryGet(out var httpContextAccessor) is true && httpContextAccessor is not null)
+            if (asyncContextService is IHttpContextAccessor httpContextAccessor)
             {
-                return httpContextAccessor.HttpContext!;
+                return httpContextAccessor.HttpContext ?? throw new InvalidOperationException("HttpContext is null");
             }
             else
             {
-                throw new InvalidOperationException("HttpContext is null");
+                throw new InvalidOperationException("IHttpContextAccessor is null");
             }
         }
     }
