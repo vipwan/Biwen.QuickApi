@@ -17,6 +17,13 @@ public class DateTimeFieldType : IFieldType
     public string SystemName => "datetime";
     public Type ValueType => typeof(DateTime);
 
+    // 添加带参构造函数
+    public DateTimeFieldType() { }
+    public DateTimeFieldType(DateTime value)
+    {
+        Value = value.ToString("yyyy-MM-dd HH:mm:ss");
+    }
+
     public object? ConvertValue(string value)
     {
         if (DateTime.TryParse(value, out var result))

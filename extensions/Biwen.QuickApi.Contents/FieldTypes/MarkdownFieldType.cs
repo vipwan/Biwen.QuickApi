@@ -16,6 +16,15 @@ public class MarkdownFieldType : IFieldType
     public string Name => "Markdown";
     public string SystemName => "markdown";
     public Type ValueType => typeof(string);
+
+    // 添加带参构造函数
+    public MarkdownFieldType() { }
+    public MarkdownFieldType(string value)
+    {
+        Value = value;
+    }
+
+
     public object? ConvertValue(string value) => value;
     public string ConvertToString(object? value) => value?.ToString() ?? string.Empty;
     public bool Validate(string value, string? rules = null) => true;

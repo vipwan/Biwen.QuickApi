@@ -17,6 +17,12 @@ public class ArrayFieldType : IFieldType
     public string SystemName => "tags";
     public Type ValueType => typeof(string[]);
 
+    // 添加带参构造函数
+    public ArrayFieldType() { }
+    public ArrayFieldType(string[] value)
+    {
+        Value = string.Join(SplitString, value);
+    }
 
     const string SplitString = ",";
 

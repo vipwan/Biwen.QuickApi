@@ -17,6 +17,14 @@ public class FileFieldType : IFieldType
     public string SystemName => "file";
     public Type ValueType => typeof(string);
 
+    // 添加带参构造函数
+    public FileFieldType() { }
+    public FileFieldType(string value)
+    {
+        Value = value;
+    }
+
+
     public object? ConvertValue(string value) => value;
     public string ConvertToString(object? value) => value?.ToString() ?? string.Empty;
     public bool Validate(string value, string? rules = null) => true;

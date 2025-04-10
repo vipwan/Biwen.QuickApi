@@ -17,6 +17,16 @@ public class UrlFieldType : IFieldType
     public string SystemName => "url";
     public Type ValueType => typeof(string);
 
+    // 添加带参构造函数
+    public UrlFieldType() { }
+
+    public UrlFieldType(string value)
+    {
+        Value = value;
+    }
+
+
+
     public object? ConvertValue(string value) => value;
     public string ConvertToString(object? value) => value?.ToString() ?? string.Empty;
     public bool Validate(string value, string? rules = null)

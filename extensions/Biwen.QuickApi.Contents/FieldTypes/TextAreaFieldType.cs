@@ -17,6 +17,14 @@ public class TextAreaFieldType : IFieldType
     public string SystemName => "textArea";
     public Type ValueType => typeof(string);
 
+    // 添加带参构造函数
+    public TextAreaFieldType() { }
+
+    public TextAreaFieldType(string value)
+    {
+        Value = value;
+    }
+
     public object? ConvertValue(string value) => value;
     public string ConvertToString(object? value) => value?.ToString() ?? string.Empty;
     public bool Validate(string value, string? rules = null) => true;

@@ -17,6 +17,15 @@ public class BooleanFieldType : IFieldType
     public string SystemName => "boolean";
     public Type ValueType => typeof(bool);
 
+    // 添加带参构造函数
+    public BooleanFieldType() { }
+    public BooleanFieldType(bool value)
+    {
+        Value = value.ToString().ToLower();
+    }
+
+
+
     public object? ConvertValue(string value)
     {
         if (bool.TryParse(value, out var result))

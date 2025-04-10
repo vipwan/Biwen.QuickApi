@@ -17,6 +17,13 @@ public class NumberFieldType : IFieldType
     public string SystemName => "number";
     public Type ValueType => typeof(double);
 
+    // 添加带参构造函数
+    public NumberFieldType() { }
+    public NumberFieldType(double value)
+    {
+        Value = value.ToString();
+    }
+
     public object? ConvertValue(string value)
     {
         if (double.TryParse(value, out var result))

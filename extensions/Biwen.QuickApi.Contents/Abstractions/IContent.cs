@@ -4,6 +4,7 @@
 // Biwen.QuickApi Author: 万雅虎 Github: https://github.com/vipwan
 // Modify Date: 2025-04-04 17:11:56 IContent.cs
 
+using System.Reflection;
 using System.Text.Json.Serialization;
 
 namespace Biwen.QuickApi.Contents.Abstractions;
@@ -44,13 +45,20 @@ public abstract class ContentBase<T> : IContent
     /// 文档类型
     /// </summary>
     [JsonIgnore]
-    public virtual string Content_ContentType { get; }= typeof(T).FullName!;
+    public virtual string Content_ContentType { get; } = typeof(T).FullName!;
 
     /// <summary>
     /// 文档描述
     /// </summary>
     [JsonIgnore]
-    public virtual string Content_Description { get; } = typeof(T).Name;
+    public virtual string Content_Description
+    {
+        get
+        {
+            var attr = typeof(T).GetCustomAttribute<DescriptionAttribute>();
+            return attr?.Description ?? typeof(T).Name;
+        }
+    }
 
     /// <summary>
     /// 排序
@@ -58,4 +66,3 @@ public abstract class ContentBase<T> : IContent
     [JsonIgnore]
     public virtual int Content_Order { get; } = 1000;
 }
-

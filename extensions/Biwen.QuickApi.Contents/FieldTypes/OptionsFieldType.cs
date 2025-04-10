@@ -18,6 +18,13 @@ public class OptionsFieldType<T> : IFieldType
     public string SystemName => $"enum";
     public Type ValueType => typeof(T);
 
+    // 添加带参构造函数
+    public OptionsFieldType() { }
+    public OptionsFieldType(T value)
+    {
+        Value = Convert.ToInt32(value).ToString();
+    }
+
     public object? ConvertValue(string value)
     {
         if (string.IsNullOrEmpty(value))

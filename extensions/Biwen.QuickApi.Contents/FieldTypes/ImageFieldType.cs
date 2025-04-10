@@ -14,4 +14,10 @@ public class ImageFieldType : TextFieldType
     public override string Name => "图片";
     public override string SystemName => "imageInput";
 
+    // 添加带参构造函数
+    public ImageFieldType() { }
+    public ImageFieldType(string value) : base(value)
+    {
+        Value = value;
+    }
 }

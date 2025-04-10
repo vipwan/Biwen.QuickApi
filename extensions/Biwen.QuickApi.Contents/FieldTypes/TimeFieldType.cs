@@ -16,4 +16,9 @@ public class TimeFieldType : TextFieldType
     public override string Name => "时间";
     public override string SystemName => "timePicker";
 
+    public TimeFieldType() { }
+    public TimeFieldType(string value) : base(value)
+    {
+        Value = value;
+    }
 }

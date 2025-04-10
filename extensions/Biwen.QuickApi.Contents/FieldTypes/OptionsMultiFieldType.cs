@@ -13,6 +13,15 @@ public class OptionsMultiFieldType<T> : IFieldType
     public string Name => "多选项";
     public string SystemName => "checkboxes";
     public Type ValueType => typeof(List<string>);
+
+    // 添加带参构造函数
+    public OptionsMultiFieldType() { }
+    public OptionsMultiFieldType(List<Enum> value)
+    {
+        Value = string.Join(",", Convert.ToInt32(value));
+    }
+
+
     public object? ConvertValue(string value) => value.Split(',').ToList();
     public string ConvertToString(object? value) => string.Join(",", (List<string>)value!);
     public bool Validate(string value, string? rules = null) => true;

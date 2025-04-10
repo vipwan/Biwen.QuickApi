@@ -17,6 +17,13 @@ public class IntegerFieldType : IFieldType
     public string SystemName => "integer";
     public Type ValueType => typeof(int);
 
+    // 添加带参构造函数
+    public IntegerFieldType() { }
+    public IntegerFieldType(int value)
+    {
+        Value = value.ToString();
+    }
+
     public object? ConvertValue(string value)
     {
         if (int.TryParse(value, out var result))

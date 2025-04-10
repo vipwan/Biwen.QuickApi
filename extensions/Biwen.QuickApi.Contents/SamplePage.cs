@@ -9,7 +9,7 @@ using Biwen.QuickApi.Contents.FieldTypes;
 
 namespace Biwen.QuickApi.Contents;
 
-[Description("普通页面")]
+[Description("默认文档")]
 public class SamplePage : ContentBase<SamplePage>
 {
     /// <summary>
@@ -38,10 +38,8 @@ public class SamplePage : ContentBase<SamplePage>
     [ArrayField(10, 5)]
     public ArrayFieldType? Tags { get; set; }
 
-    public override string Content_Description => "默认文档";
-
     /// <summary>
     /// 默认Page排序为最前
     /// </summary>
-    public override int Content_Order => -1;
+    public override int Content_Order => int.MinValue;
 }

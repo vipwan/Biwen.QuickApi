@@ -32,13 +32,12 @@ public class ContentValidatorTest
         var validator = new DefaultContentValidator();
         var blog = new Blog
         {
-            Title = new TextFieldType { Value = "有效的博客标题" },
-            IsPublished = new BooleanFieldType { Value = "true" },
-            Description = new TextAreaFieldType { Value = "这是博客描述" },
-            Content = new MarkdownFieldType { Value = "# 这是Markdown内容" },
-            Tags = new ArrayFieldType { Value = "标签1,标签2" }
+            Title = new TextFieldType("有效的博客标题"),
+            IsPublished = new BooleanFieldType(true),
+            Description = new TextAreaFieldType("这是博客描述"),
+            Content = new MarkdownFieldType("# 这是Markdown内容"),
+            Tags = new ArrayFieldType(["标签1,标签2"]),
         };
-
         // 执行
         var result = await validator.ValidateAsync(blog);
 
@@ -53,11 +52,11 @@ public class ContentValidatorTest
         var validator = new DefaultContentValidator();
         var blog = new Blog
         {
-            Title = new TextFieldType { Value = "" },  // 空标题，应该验证失败
-            IsPublished = new BooleanFieldType { Value = "true" },
-            Description = new TextAreaFieldType { Value = "这是博客描述" },
-            Content = new MarkdownFieldType { Value = "# 这是Markdown内容" },
-            Tags = new ArrayFieldType { Value = "标签1,标签2" }
+            Title = new TextFieldType(""),  // 空标题，应该验证失败
+            IsPublished = new BooleanFieldType(true),
+            Description = new TextAreaFieldType("这是博客描述"),
+            Content = new MarkdownFieldType("# 这是Markdown内容"),
+            Tags = new ArrayFieldType(["标签1,标签2"])
         };
 
         // 执行
@@ -79,10 +78,10 @@ public class ContentValidatorTest
         {
             // 创建一个超过500字符的标题
             Title = new TextFieldType { Value = new string('a', 501) },
-            IsPublished = new BooleanFieldType { Value = "true" },
-            Description = new TextAreaFieldType { Value = "这是博客描述" },
-            Content = new MarkdownFieldType { Value = "# 这是Markdown内容" },
-            Tags = new ArrayFieldType { Value = "标签1,标签2" }
+            IsPublished = new BooleanFieldType(true),
+            Description = new TextAreaFieldType("这是博客描述"),
+            Content = new MarkdownFieldType("# 这是Markdown内容"),
+            Tags = new ArrayFieldType(["标签1,标签2"])
         };
 
         // 执行

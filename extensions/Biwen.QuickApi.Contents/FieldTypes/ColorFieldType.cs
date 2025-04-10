@@ -17,6 +17,14 @@ public class ColorFieldType : IFieldType
     public string SystemName => "color";
     public Type ValueType => typeof(string);
 
+    // 添加带参构造函数
+    public ColorFieldType() { }
+    public ColorFieldType(string value)
+    {
+        Value = value;
+    }
+
+
     public object? ConvertValue(string value) => value;
     public string ConvertToString(object? value) => value?.ToString() ?? string.Empty;
     public bool Validate(string value, string? rules = null)
