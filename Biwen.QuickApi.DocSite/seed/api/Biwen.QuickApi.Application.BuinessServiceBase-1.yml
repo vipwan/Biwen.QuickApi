@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/BuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/BuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -60,7 +60,7 @@ items:
   fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext>.BuinessServiceBase(Biwen.QuickApi.UnitOfWork.IUnitOfWork<TDbContext>, Microsoft.Extensions.Logging.ILogger?)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/BuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/BuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -88,7 +88,7 @@ items:
   fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext>.Uow
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/BuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/BuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -115,7 +115,7 @@ items:
   fullName: Biwen.QuickApi.Application.BuinessServiceBase<TDbContext>.Logger
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/BuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/BuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application

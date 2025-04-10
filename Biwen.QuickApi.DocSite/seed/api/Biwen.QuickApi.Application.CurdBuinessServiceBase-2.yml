@@ -9,7 +9,8 @@ items:
   - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.AddAsync(`0)
   - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.DeleteAsync(`0)
   - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetAsync(System.Object[])
-  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetFirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
   - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Repository
   - Biwen.QuickApi.Application.CurdBuinessServiceBase`2.UpdateAsync(`0)
   langs:
@@ -20,7 +21,7 @@ items:
   fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -68,7 +69,7 @@ items:
   fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.CurdBuinessServiceBase(Biwen.QuickApi.UnitOfWork.IUnitOfWork<TDbContext>, Microsoft.Extensions.Logging.ILogger?)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -96,7 +97,7 @@ items:
   fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.AddAsync(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -129,7 +130,7 @@ items:
   fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.DeleteAsync(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -162,14 +163,14 @@ items:
   fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.GetAsync(object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
   summary: 获取
   example: []
   syntax:
-    content: public virtual Task<TEntity> GetAsync(object[] ids)
+    content: public virtual Task<TEntity?> GetAsync(object[] ids)
     parameters:
     - id: ids
       type: System.Object[]
@@ -184,6 +185,38 @@ items:
   nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).GetAsync(Object())
   fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).GetAsync(Object())
   name.vb: GetAsync(Object())
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetFirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  commentId: M:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetFirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  id: GetFirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  parent: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
+  langs:
+  - csharp
+  - vb
+  name: GetFirstOrDefaultAsync(Expression<Func<TEntity, bool>>)
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.GetFirstOrDefaultAsync(Expression<Func<TEntity, bool>>)
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.GetFirstOrDefaultAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi.Application
+  summary: 获取第一个或者默认
+  example: []
+  syntax:
+    content: public virtual Task<TEntity?> GetFirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{{TEntity}}
+      description: ''
+    content.vb: Public Overridable Function GetFirstOrDefaultAsync(predicate As Expression(Of Func(Of TEntity, Boolean))) As Task(Of TEntity)
+  overload: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetFirstOrDefaultAsync*
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).GetFirstOrDefaultAsync(Expression(Of Func(Of TEntity, Boolean)))
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).GetFirstOrDefaultAsync(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)))
+  name.vb: GetFirstOrDefaultAsync(Expression(Of Func(Of TEntity, Boolean)))
 - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.UpdateAsync(`0)
   commentId: M:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.UpdateAsync(`0)
   id: UpdateAsync(`0)
@@ -196,7 +229,7 @@ items:
   fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.UpdateAsync(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -217,26 +250,26 @@ items:
   - Biwen.QuickApi.Application.ICurdService{{TEntity}}.UpdateAsync({TEntity})
   nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).UpdateAsync(TEntity)
   fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).UpdateAsync(TEntity)
-- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
-  commentId: M:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
-  id: GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  commentId: M:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  id: GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
   parent: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
   langs:
   - csharp
   - vb
-  name: GetPagedList(int, int, Expression<Func<TEntity, bool>>?, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>?, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>?)
-  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedList(int, int, Expression<Func<TEntity, bool>>?, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>?, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>?)
-  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedList(int, int, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?)
+  name: GetPagedListAsync(int, int, Expression<Func<TEntity, bool>>?, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>?, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>?)
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedListAsync(int, int, Expression<Func<TEntity, bool>>?, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>?, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>?)
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedListAsync(int, int, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
   summary: 获取分页数据
   example: []
   syntax:
-    content: public virtual Task<IPagedList<TEntity>> GetPagedList(int pageIndex = 0, int pageSize = 20, Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null)
+    content: public virtual Task<IPagedList<TEntity>> GetPagedListAsync(int pageIndex = 0, int pageSize = 20, Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null)
     parameters:
     - id: pageIndex
       type: System.Int32
@@ -256,13 +289,13 @@ items:
     return:
       type: System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{{TEntity}}}
       description: ''
-    content.vb: Public Overridable Function GetPagedList(pageIndex As Integer = 0, pageSize As Integer = 20, predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing) As Task(Of IPagedList(Of TEntity))
-  overload: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList*
+    content.vb: Public Overridable Function GetPagedListAsync(pageIndex As Integer = 0, pageSize As Integer = 20, predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing) As Task(Of IPagedList(Of TEntity))
+  overload: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedListAsync*
   implements:
-  - Biwen.QuickApi.Application.ICurdService{{TEntity}}.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}},System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}},System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}})
-  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
-  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedList(Integer, Integer, System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)), System.Func(Of System.Linq.IQueryable(Of TEntity), System.Linq.IOrderedQueryable(Of TEntity)), System.Func(Of System.Linq.IQueryable(Of TEntity), Microsoft.EntityFrameworkCore.Query.IIncludableQueryable(Of TEntity, Object)))
-  name.vb: GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+  - Biwen.QuickApi.Application.ICurdService{{TEntity}}.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}},System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}},System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}})
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedListAsync(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedListAsync(Integer, Integer, System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)), System.Func(Of System.Linq.IQueryable(Of TEntity), System.Linq.IOrderedQueryable(Of TEntity)), System.Func(Of System.Linq.IQueryable(Of TEntity), Microsoft.EntityFrameworkCore.Query.IIncludableQueryable(Of TEntity, Object)))
+  name.vb: GetPagedListAsync(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
 - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Repository
   commentId: P:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.Repository
   id: Repository
@@ -275,7 +308,7 @@ items:
   fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.Repository
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Application/CurdBuinessServiceBase.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Application
@@ -1585,6 +1618,135 @@ references:
   - name: " "
   - name: TResult
   - name: )
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetFirstOrDefaultAsync*
+  commentId: Overload:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetFirstOrDefaultAsync
+  isExternal: true
+  href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html#Biwen_QuickApi_Application_CurdBuinessServiceBase_2_GetFirstOrDefaultAsync_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
+  name: GetFirstOrDefaultAsync
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.GetFirstOrDefaultAsync
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.GetFirstOrDefaultAsync
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).GetFirstOrDefaultAsync
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).GetFirstOrDefaultAsync
+- uid: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<TEntity, bool>>
+  nameWithType: Expression<Func<TEntity, bool>>
+  fullName: System.Linq.Expressions.Expression<System.Func<TEntity, bool>>
+  nameWithType.vb: Expression(Of Func(Of TEntity, Boolean))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean))
+  name.vb: Expression(Of Func(Of TEntity, Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
 - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.UpdateAsync*
   commentId: Overload:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.UpdateAsync
   isExternal: true
@@ -1645,31 +1807,31 @@ references:
   - name: (
   - name: TEntity
   - name: )
-- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList*
-  commentId: Overload:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedList
+- uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedListAsync*
+  commentId: Overload:Biwen.QuickApi.Application.CurdBuinessServiceBase`2.GetPagedListAsync
   isExternal: true
-  href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html#Biwen_QuickApi_Application_CurdBuinessServiceBase_2_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
-  name: GetPagedList
-  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedList
-  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedList
-  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedList
-  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedList
-- uid: Biwen.QuickApi.Application.ICurdService{{TEntity}}.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}},System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}},System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}})
-  commentId: M:Biwen.QuickApi.Application.ICurdService{`0}.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  href: Biwen.QuickApi.Application.CurdBuinessServiceBase-2.html#Biwen_QuickApi_Application_CurdBuinessServiceBase_2_GetPagedListAsync_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+  name: GetPagedListAsync
+  nameWithType: CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedListAsync
+  fullName: Biwen.QuickApi.Application.CurdBuinessServiceBase<TEntity, TDbContext>.GetPagedListAsync
+  nameWithType.vb: CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedListAsync
+  fullName.vb: Biwen.QuickApi.Application.CurdBuinessServiceBase(Of TEntity, TDbContext).GetPagedListAsync
+- uid: Biwen.QuickApi.Application.ICurdService{{TEntity}}.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}},System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}},System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}})
+  commentId: M:Biwen.QuickApi.Application.ICurdService{`0}.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
   parent: Biwen.QuickApi.Application.ICurdService{{TEntity}}
-  definition: Biwen.QuickApi.Application.ICurdService`1.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
-  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
-  name: GetPagedList(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
-  nameWithType: ICurdService<TEntity>.GetPagedList(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
-  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.GetPagedList(int, int, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>)
-  nameWithType.vb: ICurdService(Of TEntity).GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
-  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).GetPagedList(Integer, Integer, System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)), System.Func(Of System.Linq.IQueryable(Of TEntity), System.Linq.IOrderedQueryable(Of TEntity)), System.Func(Of System.Linq.IQueryable(Of TEntity), Microsoft.EntityFrameworkCore.Query.IIncludableQueryable(Of TEntity, Object)))
-  name.vb: GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+  definition: Biwen.QuickApi.Application.ICurdService`1.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedListAsync_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+  name: GetPagedListAsync(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
+  nameWithType: ICurdService<TEntity>.GetPagedListAsync(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.GetPagedListAsync(int, int, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>)
+  nameWithType.vb: ICurdService(Of TEntity).GetPagedListAsync(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).GetPagedListAsync(Integer, Integer, System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)), System.Func(Of System.Linq.IQueryable(Of TEntity), System.Linq.IOrderedQueryable(Of TEntity)), System.Func(Of System.Linq.IQueryable(Of TEntity), Microsoft.EntityFrameworkCore.Query.IIncludableQueryable(Of TEntity, Object)))
+  name.vb: GetPagedListAsync(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
   spec.csharp:
-  - uid: Biwen.QuickApi.Application.ICurdService{`0}.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
-    name: GetPagedList
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+    name: GetPagedListAsync
     isExternal: true
-    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedListAsync_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
   - name: (
   - uid: System.Int32
     name: int
@@ -1758,10 +1920,10 @@ references:
   - name: '>'
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.Application.ICurdService{`0}.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
-    name: GetPagedList
+  - uid: Biwen.QuickApi.Application.ICurdService{`0}.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+    name: GetPagedListAsync
     isExternal: true
-    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedListAsync_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
   - name: (
   - uid: System.Int32
     name: Integer
@@ -1876,61 +2038,6 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}
-  parent: System.Linq.Expressions
-  definition: System.Linq.Expressions.Expression`1
-  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
-  name: Expression<Func<TEntity, bool>>
-  nameWithType: Expression<Func<TEntity, bool>>
-  fullName: System.Linq.Expressions.Expression<System.Func<TEntity, bool>>
-  nameWithType.vb: Expression(Of Func(Of TEntity, Boolean))
-  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean))
-  name.vb: Expression(Of Func(Of TEntity, Boolean))
-  spec.csharp:
-  - uid: System.Linq.Expressions.Expression`1
-    name: Expression
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
-  - name: <
-  - uid: System.Func`2
-    name: Func
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.func-2
-  - name: <
-  - name: TEntity
-  - name: ','
-  - name: " "
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: '>'
-  - name: '>'
-  spec.vb:
-  - uid: System.Linq.Expressions.Expression`1
-    name: Expression
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Func`2
-    name: Func
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.func-2
-  - name: (
-  - name: Of
-  - name: " "
-  - name: TEntity
-  - name: ','
-  - name: " "
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
-  - name: )
 - uid: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
   commentId: T:System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}}
   parent: System
@@ -2112,21 +2219,21 @@ references:
   - name: TEntity
   - name: )
   - name: )
-- uid: Biwen.QuickApi.Application.ICurdService`1.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
-  commentId: M:Biwen.QuickApi.Application.ICurdService`1.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+- uid: Biwen.QuickApi.Application.ICurdService`1.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+  commentId: M:Biwen.QuickApi.Application.ICurdService`1.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
   isExternal: true
-  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
-  name: GetPagedList(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
-  nameWithType: ICurdService<TEntity>.GetPagedList(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
-  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.GetPagedList(int, int, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>)
-  nameWithType.vb: ICurdService(Of TEntity).GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
-  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).GetPagedList(Integer, Integer, System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)), System.Func(Of System.Linq.IQueryable(Of TEntity), System.Linq.IOrderedQueryable(Of TEntity)), System.Func(Of System.Linq.IQueryable(Of TEntity), Microsoft.EntityFrameworkCore.Query.IIncludableQueryable(Of TEntity, Object)))
-  name.vb: GetPagedList(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+  href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedListAsync_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+  name: GetPagedListAsync(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
+  nameWithType: ICurdService<TEntity>.GetPagedListAsync(int, int, Expression<Func<TEntity, bool>>, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>)
+  fullName: Biwen.QuickApi.Application.ICurdService<TEntity>.GetPagedListAsync(int, int, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>)
+  nameWithType.vb: ICurdService(Of TEntity).GetPagedListAsync(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
+  fullName.vb: Biwen.QuickApi.Application.ICurdService(Of TEntity).GetPagedListAsync(Integer, Integer, System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)), System.Func(Of System.Linq.IQueryable(Of TEntity), System.Linq.IOrderedQueryable(Of TEntity)), System.Func(Of System.Linq.IQueryable(Of TEntity), Microsoft.EntityFrameworkCore.Query.IIncludableQueryable(Of TEntity, Object)))
+  name.vb: GetPagedListAsync(Integer, Integer, Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)))
   spec.csharp:
-  - uid: Biwen.QuickApi.Application.ICurdService`1.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
-    name: GetPagedList
+  - uid: Biwen.QuickApi.Application.ICurdService`1.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+    name: GetPagedListAsync
     isExternal: true
-    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedListAsync_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
   - name: (
   - uid: System.Int32
     name: int
@@ -2215,10 +2322,10 @@ references:
   - name: '>'
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.Application.ICurdService`1.GetPagedList(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
-    name: GetPagedList
+  - uid: Biwen.QuickApi.Application.ICurdService`1.GetPagedListAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}})
+    name: GetPagedListAsync
     isExternal: true
-    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedList_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
+    href: Biwen.QuickApi.Application.ICurdService-1.html#Biwen_QuickApi_Application_ICurdService_1_GetPagedListAsync_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Func_System_Linq_IQueryable__0__Microsoft_EntityFrameworkCore_Query_IIncludableQueryable__0_System_Object___
   - name: (
   - uid: System.Int32
     name: Integer
@@ -2322,71 +2429,6 @@ references:
   - name: )
   - name: )
   - name: )
-- uid: System.Linq.Expressions.Expression`1
-  commentId: T:System.Linq.Expressions.Expression`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
-  name: Expression<TDelegate>
-  nameWithType: Expression<TDelegate>
-  fullName: System.Linq.Expressions.Expression<TDelegate>
-  nameWithType.vb: Expression(Of TDelegate)
-  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
-  name.vb: Expression(Of TDelegate)
-  spec.csharp:
-  - uid: System.Linq.Expressions.Expression`1
-    name: Expression
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
-  - name: <
-  - name: TDelegate
-  - name: '>'
-  spec.vb:
-  - uid: System.Linq.Expressions.Expression`1
-    name: Expression
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: TDelegate
-  - name: )
-- uid: System.Linq.Expressions
-  commentId: N:System.Linq.Expressions
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Linq.Expressions
-  nameWithType: System.Linq.Expressions
-  fullName: System.Linq.Expressions
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Linq
-    name: Linq
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.linq
-  - name: .
-  - uid: System.Linq.Expressions
-    name: Expressions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Linq
-    name: Linq
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.linq
-  - name: .
-  - uid: System.Linq.Expressions
-    name: Expressions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
 - uid: System.Func`2
   commentId: T:System.Func`2
   isExternal: true

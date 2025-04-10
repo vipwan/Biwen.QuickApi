@@ -6,7 +6,7 @@ items:
   parent: Biwen.QuickApi.Http
   children:
   - Biwen.QuickApi.Http.BlazorRendererService.#ctor(System.IServiceProvider)
-  - Biwen.QuickApi.Http.BlazorRendererService.Render``1(System.Collections.Generic.IDictionary{System.String,System.Object})
+  - Biwen.QuickApi.Http.BlazorRendererService.RenderAsync``1(System.Collections.Generic.IDictionary{System.String,System.Object})
   langs:
   - csharp
   - vb
@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Http.BlazorRendererService
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Http/BlazorRendererService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Http/BlazorRendererService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
@@ -49,7 +49,7 @@ items:
   fullName: Biwen.QuickApi.Http.BlazorRendererService.BlazorRendererService(System.IServiceProvider)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Http/BlazorRendererService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Http/BlazorRendererService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
@@ -66,26 +66,26 @@ items:
   nameWithType.vb: BlazorRendererService.New(IServiceProvider)
   fullName.vb: Biwen.QuickApi.Http.BlazorRendererService.New(System.IServiceProvider)
   name.vb: New(IServiceProvider)
-- uid: Biwen.QuickApi.Http.BlazorRendererService.Render``1(System.Collections.Generic.IDictionary{System.String,System.Object})
-  commentId: M:Biwen.QuickApi.Http.BlazorRendererService.Render``1(System.Collections.Generic.IDictionary{System.String,System.Object})
-  id: Render``1(System.Collections.Generic.IDictionary{System.String,System.Object})
+- uid: Biwen.QuickApi.Http.BlazorRendererService.RenderAsync``1(System.Collections.Generic.IDictionary{System.String,System.Object})
+  commentId: M:Biwen.QuickApi.Http.BlazorRendererService.RenderAsync``1(System.Collections.Generic.IDictionary{System.String,System.Object})
+  id: RenderAsync``1(System.Collections.Generic.IDictionary{System.String,System.Object})
   parent: Biwen.QuickApi.Http.BlazorRendererService
   langs:
   - csharp
   - vb
-  name: Render<T>(IDictionary<string, object?>?)
-  nameWithType: BlazorRendererService.Render<T>(IDictionary<string, object?>?)
-  fullName: Biwen.QuickApi.Http.BlazorRendererService.Render<T>(System.Collections.Generic.IDictionary<string, object?>?)
+  name: RenderAsync<T>(IDictionary<string, object?>?)
+  nameWithType: BlazorRendererService.RenderAsync<T>(IDictionary<string, object?>?)
+  fullName: Biwen.QuickApi.Http.BlazorRendererService.RenderAsync<T>(System.Collections.Generic.IDictionary<string, object?>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Http/BlazorRendererService.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Http/BlazorRendererService.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
   summary: 根据Blazor组件渲染Html
   example: []
   syntax:
-    content: 'public Task<string> Render<T>(IDictionary<string, object?>? parms) where T : class, IComponent'
+    content: 'public Task<string> RenderAsync<T>(IDictionary<string, object?>? parms) where T : class, IComponent'
     parameters:
     - id: parms
       type: System.Collections.Generic.IDictionary{System.String,System.Object}
@@ -96,11 +96,11 @@ items:
     return:
       type: System.Threading.Tasks.Task{System.String}
       description: ''
-    content.vb: Public Function Render(Of T As {Class, IComponent})(parms As IDictionary(Of String, Object)) As Task(Of String)
-  overload: Biwen.QuickApi.Http.BlazorRendererService.Render*
-  nameWithType.vb: BlazorRendererService.Render(Of T)(IDictionary(Of String, Object))
-  fullName.vb: Biwen.QuickApi.Http.BlazorRendererService.Render(Of T)(System.Collections.Generic.IDictionary(Of String, Object))
-  name.vb: Render(Of T)(IDictionary(Of String, Object))
+    content.vb: Public Function RenderAsync(Of T As {Class, IComponent})(parms As IDictionary(Of String, Object)) As Task(Of String)
+  overload: Biwen.QuickApi.Http.BlazorRendererService.RenderAsync*
+  nameWithType.vb: BlazorRendererService.RenderAsync(Of T)(IDictionary(Of String, Object))
+  fullName.vb: Biwen.QuickApi.Http.BlazorRendererService.RenderAsync(Of T)(System.Collections.Generic.IDictionary(Of String, Object))
+  name.vb: RenderAsync(Of T)(IDictionary(Of String, Object))
 references:
 - uid: Biwen.QuickApi.Http
   commentId: N:Biwen.QuickApi.Http
@@ -668,13 +668,13 @@ references:
   name: IServiceProvider
   nameWithType: IServiceProvider
   fullName: System.IServiceProvider
-- uid: Biwen.QuickApi.Http.BlazorRendererService.Render*
-  commentId: Overload:Biwen.QuickApi.Http.BlazorRendererService.Render
+- uid: Biwen.QuickApi.Http.BlazorRendererService.RenderAsync*
+  commentId: Overload:Biwen.QuickApi.Http.BlazorRendererService.RenderAsync
   isExternal: true
-  href: Biwen.QuickApi.Http.BlazorRendererService.html#Biwen_QuickApi_Http_BlazorRendererService_Render__1_System_Collections_Generic_IDictionary_System_String_System_Object__
-  name: Render
-  nameWithType: BlazorRendererService.Render
-  fullName: Biwen.QuickApi.Http.BlazorRendererService.Render
+  href: Biwen.QuickApi.Http.BlazorRendererService.html#Biwen_QuickApi_Http_BlazorRendererService_RenderAsync__1_System_Collections_Generic_IDictionary_System_String_System_Object__
+  name: RenderAsync
+  nameWithType: BlazorRendererService.RenderAsync
+  fullName: Biwen.QuickApi.Http.BlazorRendererService.RenderAsync
 - uid: System.Collections.Generic.IDictionary{System.String,System.Object}
   commentId: T:System.Collections.Generic.IDictionary{System.String,System.Object}
   parent: System.Collections.Generic

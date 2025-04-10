@@ -1,0 +1,1145 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator
+  commentId: T:Biwen.QuickApi.Contents.DefaultContentValidator
+  id: DefaultContentValidator
+  parent: Biwen.QuickApi.Contents
+  children:
+  - Biwen.QuickApi.Contents.DefaultContentValidator.#ctor
+  - Biwen.QuickApi.Contents.DefaultContentValidator.CustomValidate``1(``0,System.Reflection.PropertyInfo,Biwen.QuickApi.Contents.Abstractions.IFieldType,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult})
+  - Biwen.QuickApi.Contents.DefaultContentValidator.ValidateAsync``1(``0)
+  - Biwen.QuickApi.Contents.DefaultContentValidator.ValidateProperty``1(``0,System.Reflection.PropertyInfo,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult})
+  langs:
+  - csharp
+  - vb
+  name: DefaultContentValidator
+  nameWithType: DefaultContentValidator
+  fullName: Biwen.QuickApi.Contents.DefaultContentValidator
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/DefaultContentValidator.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  syntax:
+    content: 'public class DefaultContentValidator : IContentValidator'
+    content.vb: Public Class DefaultContentValidator Implements IContentValidator
+  inheritance:
+  - System.Object
+  implements:
+  - Biwen.QuickApi.Contents.IContentValidator
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  extensionMethods:
+  - Biwen.QuickApi.Contents.DefaultContentValidator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Contents.DefaultContentValidator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Contents.DefaultContentValidator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Contents.DefaultContentValidator.ValidateAsync``1(``0)
+  id: ValidateAsync``1(``0)
+  parent: Biwen.QuickApi.Contents.DefaultContentValidator
+  langs:
+  - csharp
+  - vb
+  name: ValidateAsync<T>(T)
+  nameWithType: DefaultContentValidator.ValidateAsync<T>(T)
+  fullName: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateAsync<T>(T)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/DefaultContentValidator.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: 'public virtual Task<ValidationResult> ValidateAsync<T>(T content) where T : class, IContent'
+    parameters:
+    - id: content
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{System.ComponentModel.DataAnnotations.ValidationResult}
+    content.vb: Public Overridable Function ValidateAsync(Of T As {Class, IContent})(content As T) As Task(Of ValidationResult)
+  overload: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateAsync*
+  implements:
+  - Biwen.QuickApi.Contents.IContentValidator.ValidateAsync``1({T})
+  nameWithType.vb: DefaultContentValidator.ValidateAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateAsync(Of T)(T)
+  name.vb: ValidateAsync(Of T)(T)
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateProperty``1(``0,System.Reflection.PropertyInfo,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult})
+  commentId: M:Biwen.QuickApi.Contents.DefaultContentValidator.ValidateProperty``1(``0,System.Reflection.PropertyInfo,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult})
+  id: ValidateProperty``1(``0,System.Reflection.PropertyInfo,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult})
+  parent: Biwen.QuickApi.Contents.DefaultContentValidator
+  langs:
+  - csharp
+  - vb
+  name: ValidateProperty<T>(T, PropertyInfo, List<ValidationResult>)
+  nameWithType: DefaultContentValidator.ValidateProperty<T>(T, PropertyInfo, List<ValidationResult>)
+  fullName: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateProperty<T>(T, System.Reflection.PropertyInfo, System.Collections.Generic.List<System.ComponentModel.DataAnnotations.ValidationResult>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/DefaultContentValidator.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  syntax:
+    content: 'protected virtual void ValidateProperty<T>(T content, PropertyInfo property, List<ValidationResult> validationResults) where T : class, IContent'
+    parameters:
+    - id: content
+      type: '{T}'
+    - id: property
+      type: System.Reflection.PropertyInfo
+    - id: validationResults
+      type: System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult}
+    typeParameters:
+    - id: T
+    content.vb: Protected Overridable Sub ValidateProperty(Of T As {Class, IContent})(content As T, [property] As PropertyInfo, validationResults As List(Of ValidationResult))
+  overload: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateProperty*
+  nameWithType.vb: DefaultContentValidator.ValidateProperty(Of T)(T, PropertyInfo, List(Of ValidationResult))
+  fullName.vb: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateProperty(Of T)(T, System.Reflection.PropertyInfo, System.Collections.Generic.List(Of System.ComponentModel.DataAnnotations.ValidationResult))
+  name.vb: ValidateProperty(Of T)(T, PropertyInfo, List(Of ValidationResult))
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator.CustomValidate``1(``0,System.Reflection.PropertyInfo,Biwen.QuickApi.Contents.Abstractions.IFieldType,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult})
+  commentId: M:Biwen.QuickApi.Contents.DefaultContentValidator.CustomValidate``1(``0,System.Reflection.PropertyInfo,Biwen.QuickApi.Contents.Abstractions.IFieldType,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult})
+  id: CustomValidate``1(``0,System.Reflection.PropertyInfo,Biwen.QuickApi.Contents.Abstractions.IFieldType,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult})
+  parent: Biwen.QuickApi.Contents.DefaultContentValidator
+  langs:
+  - csharp
+  - vb
+  name: CustomValidate<T>(T, PropertyInfo, IFieldType, List<ValidationResult>)
+  nameWithType: DefaultContentValidator.CustomValidate<T>(T, PropertyInfo, IFieldType, List<ValidationResult>)
+  fullName: Biwen.QuickApi.Contents.DefaultContentValidator.CustomValidate<T>(T, System.Reflection.PropertyInfo, Biwen.QuickApi.Contents.Abstractions.IFieldType, System.Collections.Generic.List<System.ComponentModel.DataAnnotations.ValidationResult>)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/DefaultContentValidator.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  syntax:
+    content: 'protected virtual void CustomValidate<T>(T content, PropertyInfo property, IFieldType fieldValue, List<ValidationResult> validationResults) where T : class, IContent'
+    parameters:
+    - id: content
+      type: '{T}'
+    - id: property
+      type: System.Reflection.PropertyInfo
+    - id: fieldValue
+      type: Biwen.QuickApi.Contents.Abstractions.IFieldType
+    - id: validationResults
+      type: System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult}
+    typeParameters:
+    - id: T
+    content.vb: Protected Overridable Sub CustomValidate(Of T As {Class, IContent})(content As T, [property] As PropertyInfo, fieldValue As IFieldType, validationResults As List(Of ValidationResult))
+  overload: Biwen.QuickApi.Contents.DefaultContentValidator.CustomValidate*
+  nameWithType.vb: DefaultContentValidator.CustomValidate(Of T)(T, PropertyInfo, IFieldType, List(Of ValidationResult))
+  fullName.vb: Biwen.QuickApi.Contents.DefaultContentValidator.CustomValidate(Of T)(T, System.Reflection.PropertyInfo, Biwen.QuickApi.Contents.Abstractions.IFieldType, System.Collections.Generic.List(Of System.ComponentModel.DataAnnotations.ValidationResult))
+  name.vb: CustomValidate(Of T)(T, PropertyInfo, IFieldType, List(Of ValidationResult))
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator.#ctor
+  commentId: M:Biwen.QuickApi.Contents.DefaultContentValidator.#ctor
+  id: '#ctor'
+  parent: Biwen.QuickApi.Contents.DefaultContentValidator
+  langs:
+  - csharp
+  - vb
+  name: DefaultContentValidator()
+  nameWithType: DefaultContentValidator.DefaultContentValidator()
+  fullName: Biwen.QuickApi.Contents.DefaultContentValidator.DefaultContentValidator()
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/DefaultContentValidator.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  syntax:
+    content: public DefaultContentValidator()
+    content.vb: Public Sub New()
+  overload: Biwen.QuickApi.Contents.DefaultContentValidator.#ctor*
+  nameWithType.vb: DefaultContentValidator.New()
+  fullName.vb: Biwen.QuickApi.Contents.DefaultContentValidator.New()
+  name.vb: New()
+references:
+- uid: Biwen.QuickApi.Contents
+  commentId: N:Biwen.QuickApi.Contents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents
+  nameWithType: Biwen.QuickApi.Contents
+  fullName: Biwen.QuickApi.Contents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Contents.IContentValidator
+  commentId: T:Biwen.QuickApi.Contents.IContentValidator
+  parent: Biwen.QuickApi.Contents
+  isExternal: true
+  href: Biwen.QuickApi.Contents.IContentValidator.html
+  name: IContentValidator
+  nameWithType: IContentValidator
+  fullName: Biwen.QuickApi.Contents.IContentValidator
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<DefaultContentValidator>(DefaultContentValidator)
+  nameWithType: EntityExtensions.PublishAddedAsync<DefaultContentValidator>(DefaultContentValidator)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Contents.DefaultContentValidator>(Biwen.QuickApi.Contents.DefaultContentValidator)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of DefaultContentValidator)(DefaultContentValidator)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Contents.DefaultContentValidator)(Biwen.QuickApi.Contents.DefaultContentValidator)
+  name.vb: PublishAddedAsync(Of DefaultContentValidator)(DefaultContentValidator)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.DefaultContentValidator)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.DefaultContentValidator)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<DefaultContentValidator>(DefaultContentValidator)
+  nameWithType: EntityExtensions.PublishDeletedAsync<DefaultContentValidator>(DefaultContentValidator)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Contents.DefaultContentValidator>(Biwen.QuickApi.Contents.DefaultContentValidator)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of DefaultContentValidator)(DefaultContentValidator)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Contents.DefaultContentValidator)(Biwen.QuickApi.Contents.DefaultContentValidator)
+  name.vb: PublishDeletedAsync(Of DefaultContentValidator)(DefaultContentValidator)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.DefaultContentValidator)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.DefaultContentValidator)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<DefaultContentValidator>(DefaultContentValidator)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<DefaultContentValidator>(DefaultContentValidator)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Contents.DefaultContentValidator>(Biwen.QuickApi.Contents.DefaultContentValidator)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of DefaultContentValidator)(DefaultContentValidator)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Contents.DefaultContentValidator)(Biwen.QuickApi.Contents.DefaultContentValidator)
+  name.vb: PublishUpdatedAsync(Of DefaultContentValidator)(DefaultContentValidator)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.DefaultContentValidator)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.DefaultContentValidator)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateAsync*
+  commentId: Overload:Biwen.QuickApi.Contents.DefaultContentValidator.ValidateAsync
+  isExternal: true
+  href: Biwen.QuickApi.Contents.DefaultContentValidator.html#Biwen_QuickApi_Contents_DefaultContentValidator_ValidateAsync__1___0_
+  name: ValidateAsync
+  nameWithType: DefaultContentValidator.ValidateAsync
+  fullName: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateAsync
+- uid: Biwen.QuickApi.Contents.IContentValidator.ValidateAsync``1({T})
+  commentId: M:Biwen.QuickApi.Contents.IContentValidator.ValidateAsync``1(``0)
+  parent: Biwen.QuickApi.Contents.IContentValidator
+  definition: Biwen.QuickApi.Contents.IContentValidator.ValidateAsync``1(``0)
+  href: Biwen.QuickApi.Contents.IContentValidator.html#Biwen_QuickApi_Contents_IContentValidator_ValidateAsync__1___0_
+  name: ValidateAsync<T>(T)
+  nameWithType: IContentValidator.ValidateAsync<T>(T)
+  fullName: Biwen.QuickApi.Contents.IContentValidator.ValidateAsync<T>(T)
+  nameWithType.vb: IContentValidator.ValidateAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Contents.IContentValidator.ValidateAsync(Of T)(T)
+  name.vb: ValidateAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.IContentValidator.ValidateAsync``1(``0)
+    name: ValidateAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.IContentValidator.html#Biwen_QuickApi_Contents_IContentValidator_ValidateAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.IContentValidator.ValidateAsync``1(``0)
+    name: ValidateAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.IContentValidator.html#Biwen_QuickApi_Contents_IContentValidator_ValidateAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Threading.Tasks.Task{System.ComponentModel.DataAnnotations.ValidationResult}
+  commentId: T:System.Threading.Tasks.Task{System.ComponentModel.DataAnnotations.ValidationResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ValidationResult>
+  nameWithType: Task<ValidationResult>
+  fullName: System.Threading.Tasks.Task<System.ComponentModel.DataAnnotations.ValidationResult>
+  nameWithType.vb: Task(Of ValidationResult)
+  fullName.vb: System.Threading.Tasks.Task(Of System.ComponentModel.DataAnnotations.ValidationResult)
+  name.vb: Task(Of ValidationResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.ComponentModel.DataAnnotations.ValidationResult
+    name: ValidationResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationresult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.ComponentModel.DataAnnotations.ValidationResult
+    name: ValidationResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationresult
+  - name: )
+- uid: Biwen.QuickApi.Contents.IContentValidator.ValidateAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Contents.IContentValidator.ValidateAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Contents.IContentValidator.html#Biwen_QuickApi_Contents_IContentValidator_ValidateAsync__1___0_
+  name: ValidateAsync<T>(T)
+  nameWithType: IContentValidator.ValidateAsync<T>(T)
+  fullName: Biwen.QuickApi.Contents.IContentValidator.ValidateAsync<T>(T)
+  nameWithType.vb: IContentValidator.ValidateAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Contents.IContentValidator.ValidateAsync(Of T)(T)
+  name.vb: ValidateAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.IContentValidator.ValidateAsync``1(``0)
+    name: ValidateAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.IContentValidator.html#Biwen_QuickApi_Contents_IContentValidator_ValidateAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.IContentValidator.ValidateAsync``1(``0)
+    name: ValidateAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.IContentValidator.html#Biwen_QuickApi_Contents_IContentValidator_ValidateAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateProperty*
+  commentId: Overload:Biwen.QuickApi.Contents.DefaultContentValidator.ValidateProperty
+  isExternal: true
+  href: Biwen.QuickApi.Contents.DefaultContentValidator.html#Biwen_QuickApi_Contents_DefaultContentValidator_ValidateProperty__1___0_System_Reflection_PropertyInfo_System_Collections_Generic_List_System_ComponentModel_DataAnnotations_ValidationResult__
+  name: ValidateProperty
+  nameWithType: DefaultContentValidator.ValidateProperty
+  fullName: Biwen.QuickApi.Contents.DefaultContentValidator.ValidateProperty
+- uid: System.Reflection.PropertyInfo
+  commentId: T:System.Reflection.PropertyInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  name: PropertyInfo
+  nameWithType: PropertyInfo
+  fullName: System.Reflection.PropertyInfo
+- uid: System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult}
+  commentId: T:System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ValidationResult>
+  nameWithType: List<ValidationResult>
+  fullName: System.Collections.Generic.List<System.ComponentModel.DataAnnotations.ValidationResult>
+  nameWithType.vb: List(Of ValidationResult)
+  fullName.vb: System.Collections.Generic.List(Of System.ComponentModel.DataAnnotations.ValidationResult)
+  name.vb: List(Of ValidationResult)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.ComponentModel.DataAnnotations.ValidationResult
+    name: ValidationResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationresult
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.ComponentModel.DataAnnotations.ValidationResult
+    name: ValidationResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationresult
+  - name: )
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator.CustomValidate*
+  commentId: Overload:Biwen.QuickApi.Contents.DefaultContentValidator.CustomValidate
+  isExternal: true
+  href: Biwen.QuickApi.Contents.DefaultContentValidator.html#Biwen_QuickApi_Contents_DefaultContentValidator_CustomValidate__1___0_System_Reflection_PropertyInfo_Biwen_QuickApi_Contents_Abstractions_IFieldType_System_Collections_Generic_List_System_ComponentModel_DataAnnotations_ValidationResult__
+  name: CustomValidate
+  nameWithType: DefaultContentValidator.CustomValidate
+  fullName: Biwen.QuickApi.Contents.DefaultContentValidator.CustomValidate
+- uid: Biwen.QuickApi.Contents.Abstractions.IFieldType
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.IFieldType
+  parent: Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IFieldType.html
+  name: IFieldType
+  nameWithType: IFieldType
+  fullName: Biwen.QuickApi.Contents.Abstractions.IFieldType
+- uid: Biwen.QuickApi.Contents.Abstractions
+  commentId: N:Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Abstractions
+  nameWithType: Biwen.QuickApi.Contents.Abstractions
+  fullName: Biwen.QuickApi.Contents.Abstractions
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.html
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator.#ctor*
+  commentId: Overload:Biwen.QuickApi.Contents.DefaultContentValidator.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Contents.DefaultContentValidator.html#Biwen_QuickApi_Contents_DefaultContentValidator__ctor
+  name: DefaultContentValidator
+  nameWithType: DefaultContentValidator.DefaultContentValidator
+  fullName: Biwen.QuickApi.Contents.DefaultContentValidator.DefaultContentValidator
+  nameWithType.vb: DefaultContentValidator.New
+  fullName.vb: Biwen.QuickApi.Contents.DefaultContentValidator.New
+  name.vb: New

@@ -1,0 +1,1299 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  commentId: T:Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  id: ContentDeletedEvent
+  parent: Biwen.QuickApi.Contents.Events
+  children:
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.#ctor(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.#ctor(System.Guid)
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ContentId
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Deconstruct(System.Guid@)
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.EqualityContract
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals(System.Object)
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.GetHashCode
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.PrintMembers(System.Text.StringBuilder)
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ToString
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Equality(Biwen.QuickApi.Contents.Events.ContentDeletedEvent,Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Inequality(Biwen.QuickApi.Contents.Events.ContentDeletedEvent,Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  langs:
+  - csharp
+  - vb
+  name: ContentDeletedEvent
+  nameWithType: ContentDeletedEvent
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: 'public record ContentDeletedEvent : IEvent, IEquatable<ContentDeletedEvent>'
+    content.vb: Public Class ContentDeletedEvent Implements IEvent, IEquatable(Of ContentDeletedEvent)
+  inheritance:
+  - System.Object
+  implements:
+  - Biwen.QuickApi.Events.IEvent
+  - System.IEquatable{Biwen.QuickApi.Contents.Events.ContentDeletedEvent}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.#ctor(System.Guid)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.#ctor(System.Guid)
+  id: '#ctor(System.Guid)'
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: ContentDeletedEvent(Guid)
+  nameWithType: ContentDeletedEvent.ContentDeletedEvent(Guid)
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ContentDeletedEvent(System.Guid)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public ContentDeletedEvent(Guid ContentId)
+    parameters:
+    - id: ContentId
+      type: System.Guid
+    content.vb: Public Sub New(ContentId As Guid)
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.#ctor*
+  nameWithType.vb: ContentDeletedEvent.New(Guid)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.New(System.Guid)
+  name.vb: New(Guid)
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ToString
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ToString
+  id: ToString
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ContentDeletedEvent.ToString()
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ToString()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ToString*
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.PrintMembers(System.Text.StringBuilder)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.PrintMembers(System.Text.StringBuilder)
+  id: PrintMembers(System.Text.StringBuilder)
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: PrintMembers(StringBuilder)
+  nameWithType: ContentDeletedEvent.PrintMembers(StringBuilder)
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.PrintMembers(System.Text.StringBuilder)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: protected virtual bool PrintMembers(StringBuilder builder)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+    return:
+      type: System.Boolean
+    content.vb: Protected Overridable Function PrintMembers(builder As StringBuilder) As Boolean
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.PrintMembers*
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Inequality(Biwen.QuickApi.Contents.Events.ContentDeletedEvent,Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Inequality(Biwen.QuickApi.Contents.Events.ContentDeletedEvent,Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  id: op_Inequality(Biwen.QuickApi.Contents.Events.ContentDeletedEvent,Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: operator !=(ContentDeletedEvent?, ContentDeletedEvent?)
+  nameWithType: ContentDeletedEvent.operator !=(ContentDeletedEvent?, ContentDeletedEvent?)
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.operator !=(Biwen.QuickApi.Contents.Events.ContentDeletedEvent?, Biwen.QuickApi.Contents.Events.ContentDeletedEvent?)
+  type: Operator
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public static bool operator !=(ContentDeletedEvent? left, ContentDeletedEvent? right)
+    parameters:
+    - id: left
+      type: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    - id: right
+      type: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As ContentDeletedEvent, right As ContentDeletedEvent) As Boolean
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Inequality*
+  nameWithType.vb: ContentDeletedEvent.<>(ContentDeletedEvent, ContentDeletedEvent)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.<>(Biwen.QuickApi.Contents.Events.ContentDeletedEvent, Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  name.vb: <>(ContentDeletedEvent, ContentDeletedEvent)
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Equality(Biwen.QuickApi.Contents.Events.ContentDeletedEvent,Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Equality(Biwen.QuickApi.Contents.Events.ContentDeletedEvent,Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  id: op_Equality(Biwen.QuickApi.Contents.Events.ContentDeletedEvent,Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: operator ==(ContentDeletedEvent?, ContentDeletedEvent?)
+  nameWithType: ContentDeletedEvent.operator ==(ContentDeletedEvent?, ContentDeletedEvent?)
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.operator ==(Biwen.QuickApi.Contents.Events.ContentDeletedEvent?, Biwen.QuickApi.Contents.Events.ContentDeletedEvent?)
+  type: Operator
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public static bool operator ==(ContentDeletedEvent? left, ContentDeletedEvent? right)
+    parameters:
+    - id: left
+      type: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    - id: right
+      type: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As ContentDeletedEvent, right As ContentDeletedEvent) As Boolean
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Equality*
+  nameWithType.vb: ContentDeletedEvent.=(ContentDeletedEvent, ContentDeletedEvent)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.=(Biwen.QuickApi.Contents.Events.ContentDeletedEvent, Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  name.vb: =(ContentDeletedEvent, ContentDeletedEvent)
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.GetHashCode
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.GetHashCode
+  id: GetHashCode
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: ContentDeletedEvent.GetHashCode()
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.GetHashCode*
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals(System.Object)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: ContentDeletedEvent.Equals(object?)
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals*
+  nameWithType.vb: ContentDeletedEvent.Equals(Object)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  id: Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: Equals(ContentDeletedEvent?)
+  nameWithType: ContentDeletedEvent.Equals(ContentDeletedEvent?)
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  example: []
+  syntax:
+    content: public virtual bool Equals(ContentDeletedEvent? other)
+    parameters:
+    - id: other
+      type: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function Equals(other As ContentDeletedEvent) As Boolean
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals*
+  implements:
+  - System.IEquatable{Biwen.QuickApi.Contents.Events.ContentDeletedEvent}.Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  nameWithType.vb: ContentDeletedEvent.Equals(ContentDeletedEvent)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  name.vb: Equals(ContentDeletedEvent)
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.#ctor(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.#ctor(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  id: '#ctor(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)'
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: ContentDeletedEvent(ContentDeletedEvent)
+  nameWithType: ContentDeletedEvent.ContentDeletedEvent(ContentDeletedEvent)
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ContentDeletedEvent(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: protected ContentDeletedEvent(ContentDeletedEvent original)
+    parameters:
+    - id: original
+      type: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    content.vb: Protected Sub New(original As ContentDeletedEvent)
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.#ctor*
+  nameWithType.vb: ContentDeletedEvent.New(ContentDeletedEvent)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.New(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  name.vb: New(ContentDeletedEvent)
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Deconstruct(System.Guid@)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Deconstruct(System.Guid@)
+  id: Deconstruct(System.Guid@)
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Guid)
+  nameWithType: ContentDeletedEvent.Deconstruct(out Guid)
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Deconstruct(out System.Guid)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public void Deconstruct(out Guid ContentId)
+    parameters:
+    - id: ContentId
+      type: System.Guid
+    content.vb: Public Sub Deconstruct(ContentId As Guid)
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Deconstruct*
+  nameWithType.vb: ContentDeletedEvent.Deconstruct(Guid)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Deconstruct(System.Guid)
+  name.vb: Deconstruct(Guid)
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.EqualityContract
+  commentId: P:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.EqualityContract
+  id: EqualityContract
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: EqualityContract
+  nameWithType: ContentDeletedEvent.EqualityContract
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.EqualityContract
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: protected virtual Type EqualityContract { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Protected Overridable ReadOnly Property EqualityContract As Type
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.EqualityContract*
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ContentId
+  commentId: P:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ContentId
+  id: ContentId
+  parent: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  langs:
+  - csharp
+  - vb
+  name: ContentId
+  nameWithType: ContentDeletedEvent.ContentId
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ContentId
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public Guid ContentId { get; init; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property ContentId As Guid
+  overload: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ContentId*
+references:
+- uid: Biwen.QuickApi.Contents.Events
+  commentId: N:Biwen.QuickApi.Contents.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Events
+  nameWithType: Biwen.QuickApi.Contents.Events
+  fullName: Biwen.QuickApi.Contents.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Events.IEvent
+  commentId: T:Biwen.QuickApi.Events.IEvent
+  parent: Biwen.QuickApi.Events
+  isExternal: true
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Events/IEvent.cs
+  name: IEvent
+  nameWithType: IEvent
+  fullName: Biwen.QuickApi.Events.IEvent
+- uid: System.IEquatable{Biwen.QuickApi.Contents.Events.ContentDeletedEvent}
+  commentId: T:System.IEquatable{Biwen.QuickApi.Contents.Events.ContentDeletedEvent}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ContentDeletedEvent>
+  nameWithType: IEquatable<ContentDeletedEvent>
+  fullName: System.IEquatable<Biwen.QuickApi.Contents.Events.ContentDeletedEvent>
+  nameWithType.vb: IEquatable(Of ContentDeletedEvent)
+  fullName.vb: System.IEquatable(Of Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  name.vb: IEquatable(Of ContentDeletedEvent)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<ContentDeletedEvent>(ContentDeletedEvent)
+  nameWithType: EntityExtensions.PublishAddedAsync<ContentDeletedEvent>(ContentDeletedEvent)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Contents.Events.ContentDeletedEvent>(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of ContentDeletedEvent)(ContentDeletedEvent)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Contents.Events.ContentDeletedEvent)(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  name.vb: PublishAddedAsync(Of ContentDeletedEvent)(ContentDeletedEvent)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<ContentDeletedEvent>(ContentDeletedEvent)
+  nameWithType: EntityExtensions.PublishDeletedAsync<ContentDeletedEvent>(ContentDeletedEvent)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Contents.Events.ContentDeletedEvent>(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of ContentDeletedEvent)(ContentDeletedEvent)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Contents.Events.ContentDeletedEvent)(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  name.vb: PublishDeletedAsync(Of ContentDeletedEvent)(ContentDeletedEvent)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<ContentDeletedEvent>(ContentDeletedEvent)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<ContentDeletedEvent>(ContentDeletedEvent)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Contents.Events.ContentDeletedEvent>(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of ContentDeletedEvent)(ContentDeletedEvent)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Contents.Events.ContentDeletedEvent)(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  name.vb: PublishUpdatedAsync(Of ContentDeletedEvent)(ContentDeletedEvent)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Events
+  commentId: N:Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Events
+  nameWithType: Biwen.QuickApi.Events
+  fullName: Biwen.QuickApi.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.#ctor*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent__ctor_System_Guid_
+  name: ContentDeletedEvent
+  nameWithType: ContentDeletedEvent.ContentDeletedEvent
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ContentDeletedEvent
+  nameWithType.vb: ContentDeletedEvent.New
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.New
+  name.vb: New
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ToString*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ToString
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent_ToString
+  name: ToString
+  nameWithType: ContentDeletedEvent.ToString
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.PrintMembers*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.PrintMembers
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent_PrintMembers_System_Text_StringBuilder_
+  name: PrintMembers
+  nameWithType: ContentDeletedEvent.PrintMembers
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.PrintMembers
+- uid: System.Text.StringBuilder
+  commentId: T:System.Text.StringBuilder
+  parent: System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.stringbuilder
+  name: StringBuilder
+  nameWithType: StringBuilder
+  fullName: System.Text.StringBuilder
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Inequality*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Inequality
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent_op_Inequality_Biwen_QuickApi_Contents_Events_ContentDeletedEvent_Biwen_QuickApi_Contents_Events_ContentDeletedEvent_
+  name: operator !=
+  nameWithType: ContentDeletedEvent.operator !=
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.operator !=
+  nameWithType.vb: ContentDeletedEvent.<>
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent_op_Inequality_Biwen_QuickApi_Contents_Events_ContentDeletedEvent_Biwen_QuickApi_Contents_Events_ContentDeletedEvent_
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  commentId: T:Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  parent: Biwen.QuickApi.Contents.Events
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  name: ContentDeletedEvent
+  nameWithType: ContentDeletedEvent
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Equality*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Equality
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent_op_Equality_Biwen_QuickApi_Contents_Events_ContentDeletedEvent_Biwen_QuickApi_Contents_Events_ContentDeletedEvent_
+  name: operator ==
+  nameWithType: ContentDeletedEvent.operator ==
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.operator ==
+  nameWithType.vb: ContentDeletedEvent.=
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.op_Equality*
+    name: ==
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent_op_Equality_Biwen_QuickApi_Contents_Events_ContentDeletedEvent_Biwen_QuickApi_Contents_Events_ContentDeletedEvent_
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.GetHashCode*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.GetHashCode
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent_GetHashCode
+  name: GetHashCode
+  nameWithType: ContentDeletedEvent.GetHashCode
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent_Equals_System_Object_
+  name: Equals
+  nameWithType: ContentDeletedEvent.Equals
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Equals
+- uid: System.IEquatable{Biwen.QuickApi.Contents.Events.ContentDeletedEvent}.Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  commentId: M:System.IEquatable{Biwen.QuickApi.Contents.Events.ContentDeletedEvent}.Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  parent: System.IEquatable{Biwen.QuickApi.Contents.Events.ContentDeletedEvent}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(ContentDeletedEvent)
+  nameWithType: IEquatable<ContentDeletedEvent>.Equals(ContentDeletedEvent)
+  fullName: System.IEquatable<Biwen.QuickApi.Contents.Events.ContentDeletedEvent>.Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  nameWithType.vb: IEquatable(Of ContentDeletedEvent).Equals(ContentDeletedEvent)
+  fullName.vb: System.IEquatable(Of Biwen.QuickApi.Contents.Events.ContentDeletedEvent).Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+  spec.csharp:
+  - uid: System.IEquatable{Biwen.QuickApi.Contents.Events.ContentDeletedEvent}.Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Biwen.QuickApi.Contents.Events.ContentDeletedEvent}.Equals(Biwen.QuickApi.Contents.Events.ContentDeletedEvent)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Deconstruct*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Deconstruct
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent_Deconstruct_System_Guid__
+  name: Deconstruct
+  nameWithType: ContentDeletedEvent.Deconstruct
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.Deconstruct
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.EqualityContract*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.EqualityContract
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent_EqualityContract
+  name: EqualityContract
+  nameWithType: ContentDeletedEvent.EqualityContract
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.EqualityContract
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ContentId*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ContentId
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html#Biwen_QuickApi_Contents_Events_ContentDeletedEvent_ContentId
+  name: ContentId
+  nameWithType: ContentDeletedEvent.ContentId
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.ContentId

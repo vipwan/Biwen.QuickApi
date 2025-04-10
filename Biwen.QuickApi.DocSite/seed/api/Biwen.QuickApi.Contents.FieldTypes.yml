@@ -1,0 +1,255 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.FieldTypes
+  commentId: N:Biwen.QuickApi.Contents.FieldTypes
+  id: Biwen.QuickApi.Contents.FieldTypes
+  children:
+  - Biwen.QuickApi.Contents.FieldTypes.ArrayFieldAttribute
+  - Biwen.QuickApi.Contents.FieldTypes.ArrayFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.BooleanFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.ColorFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.DateTimeFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.FileFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.IntegerFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.MarkdownFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.MarkdownToolBarAttribute
+  - Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  - Biwen.QuickApi.Contents.FieldTypes.NumberFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.OptionsFieldType`1
+  - Biwen.QuickApi.Contents.FieldTypes.OptionsMultiFieldType`1
+  - Biwen.QuickApi.Contents.FieldTypes.TextAreaFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.TimeFieldType
+  - Biwen.QuickApi.Contents.FieldTypes.UrlFieldType
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Contents.FieldTypes
+  nameWithType: Biwen.QuickApi.Contents.FieldTypes
+  fullName: Biwen.QuickApi.Contents.FieldTypes
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Contents
+references:
+- uid: Biwen.QuickApi.Contents.FieldTypes.ArrayFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.ArrayFieldType
+  parent: Biwen.QuickApi.Contents.FieldTypes
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.ArrayFieldType.html
+  name: ArrayFieldType
+  nameWithType: ArrayFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.ArrayFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.ArrayFieldAttribute
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.ArrayFieldAttribute
+  parent: Biwen.QuickApi.Contents.FieldTypes
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.ArrayFieldAttribute.html
+  name: ArrayFieldAttribute
+  nameWithType: ArrayFieldAttribute
+  fullName: Biwen.QuickApi.Contents.FieldTypes.ArrayFieldAttribute
+- uid: Biwen.QuickApi.Contents.FieldTypes.BooleanFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.BooleanFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.BooleanFieldType.html
+  name: BooleanFieldType
+  nameWithType: BooleanFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.BooleanFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.ColorFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.ColorFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.ColorFieldType.html
+  name: ColorFieldType
+  nameWithType: ColorFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.ColorFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.DateTimeFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.DateTimeFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.DateTimeFieldType.html
+  name: DateTimeFieldType
+  nameWithType: DateTimeFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.DateTimeFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.FileFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.FileFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.FileFieldType.html
+  name: FileFieldType
+  nameWithType: FileFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.FileFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  name: ImageFieldType
+  nameWithType: ImageFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.IntegerFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.IntegerFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.IntegerFieldType.html
+  name: IntegerFieldType
+  nameWithType: IntegerFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.IntegerFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.MarkdownFieldType
+  parent: Biwen.QuickApi.Contents.FieldTypes
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.MarkdownFieldType.html
+  name: MarkdownFieldType
+  nameWithType: MarkdownFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.MarkdownFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolBarAttribute
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.MarkdownToolBarAttribute
+  parent: Biwen.QuickApi.Contents.FieldTypes
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolBarAttribute.html
+  name: MarkdownToolBarAttribute
+  nameWithType: MarkdownToolBarAttribute
+  fullName: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolBarAttribute
+- uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  parent: Biwen.QuickApi.Contents.FieldTypes
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.html
+  name: MarkdownToolStyle
+  nameWithType: MarkdownToolStyle
+  fullName: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+- uid: Biwen.QuickApi.Contents.FieldTypes.NumberFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.NumberFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.NumberFieldType.html
+  name: NumberFieldType
+  nameWithType: NumberFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.NumberFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.OptionsFieldType`1
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.OptionsFieldType`1
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.OptionsFieldType-1.html
+  name: OptionsFieldType<T>
+  nameWithType: OptionsFieldType<T>
+  fullName: Biwen.QuickApi.Contents.FieldTypes.OptionsFieldType<T>
+  nameWithType.vb: OptionsFieldType(Of T)
+  fullName.vb: Biwen.QuickApi.Contents.FieldTypes.OptionsFieldType(Of T)
+  name.vb: OptionsFieldType(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.OptionsFieldType`1
+    name: OptionsFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.OptionsFieldType-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.OptionsFieldType`1
+    name: OptionsFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.OptionsFieldType-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Contents.FieldTypes.OptionsMultiFieldType`1
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.OptionsMultiFieldType`1
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.OptionsMultiFieldType-1.html
+  name: OptionsMultiFieldType<T>
+  nameWithType: OptionsMultiFieldType<T>
+  fullName: Biwen.QuickApi.Contents.FieldTypes.OptionsMultiFieldType<T>
+  nameWithType.vb: OptionsMultiFieldType(Of T)
+  fullName.vb: Biwen.QuickApi.Contents.FieldTypes.OptionsMultiFieldType(Of T)
+  name.vb: OptionsMultiFieldType(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.OptionsMultiFieldType`1
+    name: OptionsMultiFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.OptionsMultiFieldType-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.OptionsMultiFieldType`1
+    name: OptionsMultiFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.OptionsMultiFieldType-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextAreaFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.TextAreaFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextAreaFieldType.html
+  name: TextAreaFieldType
+  nameWithType: TextAreaFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextAreaFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  parent: Biwen.QuickApi.Contents.FieldTypes
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html
+  name: TextFieldType
+  nameWithType: TextFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.TimeFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.TimeFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TimeFieldType.html
+  name: TimeFieldType
+  nameWithType: TimeFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TimeFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.UrlFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.UrlFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.UrlFieldType.html
+  name: UrlFieldType
+  nameWithType: UrlFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.UrlFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes
+  commentId: N:Biwen.QuickApi.Contents.FieldTypes
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.FieldTypes
+  nameWithType: Biwen.QuickApi.Contents.FieldTypes
+  fullName: Biwen.QuickApi.Contents.FieldTypes
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.FieldTypes
+    name: FieldTypes
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.FieldTypes
+    name: FieldTypes
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.html

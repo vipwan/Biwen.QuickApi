@@ -1,0 +1,32 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.EventHandlers
+  commentId: N:Biwen.QuickApi.Contents.EventHandlers
+  id: Biwen.QuickApi.Contents.EventHandlers
+  children:
+  - Biwen.QuickApi.Contents.EventHandlers.ContentAuditLogEventHandler
+  - Biwen.QuickApi.Contents.EventHandlers.ContentVersionEventHandler
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Contents.EventHandlers
+  nameWithType: Biwen.QuickApi.Contents.EventHandlers
+  fullName: Biwen.QuickApi.Contents.EventHandlers
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Contents
+references:
+- uid: Biwen.QuickApi.Contents.EventHandlers.ContentAuditLogEventHandler
+  commentId: T:Biwen.QuickApi.Contents.EventHandlers.ContentAuditLogEventHandler
+  isExternal: true
+  href: Biwen.QuickApi.Contents.EventHandlers.ContentAuditLogEventHandler.html
+  name: ContentAuditLogEventHandler
+  nameWithType: ContentAuditLogEventHandler
+  fullName: Biwen.QuickApi.Contents.EventHandlers.ContentAuditLogEventHandler
+- uid: Biwen.QuickApi.Contents.EventHandlers.ContentVersionEventHandler
+  commentId: T:Biwen.QuickApi.Contents.EventHandlers.ContentVersionEventHandler
+  isExternal: true
+  href: Biwen.QuickApi.Contents.EventHandlers.ContentVersionEventHandler.html
+  name: ContentVersionEventHandler
+  nameWithType: ContentVersionEventHandler
+  fullName: Biwen.QuickApi.Contents.EventHandlers.ContentVersionEventHandler

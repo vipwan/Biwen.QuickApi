@@ -1,24 +1,47 @@
 ﻿items:
-- name: 系统配置
-  href: BiwenQuickApiOptions.md
-- href: 1.md
-- href: 2.md
-- name: 发布订阅
-  href: 3.md
-- name: 作业调度
-  href: 4.md
-- name: 对象映射
-  href: DTO.md
-- name: 缓存服务
-  href: Caching.md
-- name: 文件存储
-  href: FileStorage.md
-- name: UnitOfWork
-  href: UnitOfWork.md
-- name: 审计
-  href: Auditing.md
-- name: 多租户
-  href: MultiTenant.md
+- name: 基础功能
+  expanded: true
+  items:
+  - name: 系统配置
+    href: BiwenQuickApiOptions.md
+  - name: 快速入门
+    href: GettingStarted.md
+  - name: 基础概念
+    href: CoreConcepts.md
+  - name: 发布订阅
+    href: EventPublishing.md
+  - name: 作业调度
+    href: Scheduling.md
+  - name: 对象映射
+    href: DTO.md
+  - name: 缓存服务
+    href: Caching.md
+  - name: 文件存储
+    href: FileStorage.md
+  - name: UnitOfWork
+    href: UnitOfWork.md
+  - name: 审计
+    href: Auditing.md
+  - name: 多租户
+    href: MultiTenant.md
+
+- name: CMS模块
+  expanded: true
+  items:
+  - name: 内容管理系统概述
+    href: CMS/Overview.md
+  - name: 内容类型定义
+    href: CMS/ContentTypes.md
+  - name: 字段类型
+    href: CMS/FieldTypes.md
+  - name: 内容渲染
+    href: CMS/ContentRendering.md
+  - name: 版本控制
+    href: CMS/Versioning.md
+  - name: API 集成
+    href: CMS/ApiIntegration.md
+  - name: 最佳实践
+    href: CMS/BestPractices.md
 
 - name: 扩展组件
   expanded: true
@@ -36,7 +59,7 @@
   expanded: true
   items:
   - name: IQuickApi
-    href: QuickApi.md
+    href: QuickApi.md  
   - name: IQuickEndpoint
     href: QuickEndpoint.md
   - name: 请求绑定
@@ -44,6 +67,7 @@
   - name: 请求验证
     href: Validation.md
   - name: OpenApi集成
+    href: OpenApiIntegration.md
   - name: 更多帮助
     href: https://github.com/vipwan/Biwen.QuickApi/issues
   
@@ -53,17 +77,17 @@
   - name: 模板引擎
     href: BlazorRendererService.md
   - name: 本地锁
-    href: 5.md
+    href: LocalLock.md
   - name: 分布式锁
     href: DistributedLock.md
   - name: 异步流服务
     href: AsyncContextService.md
   - name: 启动任务
-    href: 6.md
+    href: StartupTasks.md
   - name: XSS过滤
-    href: 7.md
+    href: XssFilter.md
   - name: IdGenerator
-    href: 8.md
+    href: IdGenerator.md
 
 - name: Microsoft Docs
   href: https://docs.microsoft.com/en-us/

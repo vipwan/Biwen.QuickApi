@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Services
+  commentId: N:Biwen.QuickApi.Contents.Services
+  id: Biwen.QuickApi.Contents.Services
+  children:
+  - Biwen.QuickApi.Contents.Services.ContentAuditLogService
+  - Biwen.QuickApi.Contents.Services.ContentVersionService
+  - Biwen.QuickApi.Contents.Services.IContentAuditLogService
+  - Biwen.QuickApi.Contents.Services.IContentVersionService
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Contents.Services
+  nameWithType: Biwen.QuickApi.Contents.Services
+  fullName: Biwen.QuickApi.Contents.Services
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Contents
+references:
+- uid: Biwen.QuickApi.Contents.Services.ContentAuditLogService
+  commentId: T:Biwen.QuickApi.Contents.Services.ContentAuditLogService
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Services.ContentAuditLogService.html
+  name: ContentAuditLogService
+  nameWithType: ContentAuditLogService
+  fullName: Biwen.QuickApi.Contents.Services.ContentAuditLogService
+- uid: Biwen.QuickApi.Contents.Services.ContentVersionService
+  commentId: T:Biwen.QuickApi.Contents.Services.ContentVersionService
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Services.ContentVersionService.html
+  name: ContentVersionService
+  nameWithType: ContentVersionService
+  fullName: Biwen.QuickApi.Contents.Services.ContentVersionService
+- uid: Biwen.QuickApi.Contents.Services.IContentAuditLogService
+  commentId: T:Biwen.QuickApi.Contents.Services.IContentAuditLogService
+  parent: Biwen.QuickApi.Contents.Services
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Services.IContentAuditLogService.html
+  name: IContentAuditLogService
+  nameWithType: IContentAuditLogService
+  fullName: Biwen.QuickApi.Contents.Services.IContentAuditLogService
+- uid: Biwen.QuickApi.Contents.Services.IContentVersionService
+  commentId: T:Biwen.QuickApi.Contents.Services.IContentVersionService
+  parent: Biwen.QuickApi.Contents.Services
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Services.IContentVersionService.html
+  name: IContentVersionService
+  nameWithType: IContentVersionService
+  fullName: Biwen.QuickApi.Contents.Services.IContentVersionService
+- uid: Biwen.QuickApi.Contents.Services
+  commentId: N:Biwen.QuickApi.Contents.Services
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Services
+  nameWithType: Biwen.QuickApi.Contents.Services
+  fullName: Biwen.QuickApi.Contents.Services
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Services
+    name: Services
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Services.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Services
+    name: Services
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Services.html

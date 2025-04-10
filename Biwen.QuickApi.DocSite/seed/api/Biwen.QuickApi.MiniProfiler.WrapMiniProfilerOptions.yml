@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
   assemblies:
   - Biwen.QuickApi.MiniProfiler
   namespace: Biwen.QuickApi.MiniProfiler
@@ -71,6 +71,7 @@ items:
   - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ProfilerProvider
   - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.StopwatchProvider
   - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TimingInstrumentationProvider
+  - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.NonceProvider
   - StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnInternalError
   - System.Object.GetType
   - System.Object.MemberwiseClone
@@ -95,7 +96,7 @@ items:
   fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Key
   type: Field
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
   assemblies:
   - Biwen.QuickApi.MiniProfiler
   namespace: Biwen.QuickApi.MiniProfiler
@@ -118,7 +119,7 @@ items:
   fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.WrapMiniProfilerOptions()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
   assemblies:
   - Biwen.QuickApi.MiniProfiler
   namespace: Biwen.QuickApi.MiniProfiler
@@ -141,7 +142,7 @@ items:
   fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions.Enabled
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi.MiniProfiler/MiniProfilerOptions.cs
   assemblies:
   - Biwen.QuickApi.MiniProfiler
   namespace: Biwen.QuickApi.MiniProfiler
@@ -540,6 +541,13 @@ references:
   name: TimingInstrumentationProvider
   nameWithType: MiniProfilerBaseOptions.TimingInstrumentationProvider
   fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.TimingInstrumentationProvider
+- uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.NonceProvider
+  commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.NonceProvider
+  parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions
+  isExternal: true
+  name: NonceProvider
+  nameWithType: MiniProfilerBaseOptions.NonceProvider
+  fullName: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.NonceProvider
 - uid: StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnInternalError
   commentId: P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.OnInternalError
   parent: StackExchange.Profiling.Internal.MiniProfilerBaseOptions

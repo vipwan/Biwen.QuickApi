@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Caching.AutoCacheAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/AutoCacheAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Caching/AutoCacheAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -106,7 +106,7 @@ items:
   fullName: Biwen.QuickApi.Caching.AutoCacheAttribute.AutoCacheAttribute(int)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/AutoCacheAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Caching/AutoCacheAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -135,7 +135,7 @@ items:
   fullName: Biwen.QuickApi.Caching.AutoCacheAttribute.AutoCacheAttribute(bool, int)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/AutoCacheAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Caching/AutoCacheAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -167,7 +167,7 @@ items:
   fullName: Biwen.QuickApi.Caching.AutoCacheAttribute.Expiration
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/AutoCacheAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Caching/AutoCacheAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching
@@ -192,7 +192,7 @@ items:
   fullName: Biwen.QuickApi.Caching.AutoCacheAttribute.IsEnabled
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/AutoCacheAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Caching/AutoCacheAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching

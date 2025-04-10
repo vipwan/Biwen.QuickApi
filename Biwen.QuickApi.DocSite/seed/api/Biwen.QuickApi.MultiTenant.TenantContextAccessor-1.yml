@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.TenantContextAccessor<TInfo>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/TenantContextAccessor.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/MultiTenant/TenantContextAccessor.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -52,7 +52,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.TenantContextAccessor<TInfo>.TenantContextAccessor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/TenantContextAccessor.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/MultiTenant/TenantContextAccessor.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant
@@ -78,7 +78,7 @@ items:
   fullName: Biwen.QuickApi.MultiTenant.TenantContextAccessor<TInfo>.TenantInfo
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/MultiTenant/TenantContextAccessor.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/MultiTenant/TenantContextAccessor.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.MultiTenant

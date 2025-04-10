@@ -1,0 +1,1092 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+  id: ImageFieldType
+  parent: Biwen.QuickApi.Contents.FieldTypes
+  children:
+  - Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.#ctor
+  - Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Name
+  - Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.SystemName
+  langs:
+  - csharp
+  - vb
+  name: ImageFieldType
+  nameWithType: ImageFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/FieldTypes/ImageFieldType.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.FieldTypes
+  syntax:
+    content: 'public class ImageFieldType : TextFieldType, IFieldType'
+    content.vb: Public Class ImageFieldType Inherits TextFieldType Implements IFieldType
+  inheritance:
+  - System.Object
+  - Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IFieldType
+  inheritedMembers:
+  - Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertValue(System.String)
+  - Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertToString(System.Object)
+  - Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Validate(System.String,System.String)
+  - Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValue
+  - Biwen.QuickApi.Contents.FieldTypes.TextFieldType.SetValue(System.Object)
+  - Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValidationErrorMessage
+  - Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ValueType
+  - Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Value
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  extensionMethods:
+  - Biwen.QuickApi.Contents.Abstractions.IFieldType.Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString
+  - Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.#ctor
+  commentId: M:Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.#ctor
+  id: '#ctor'
+  parent: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+  langs:
+  - csharp
+  - vb
+  name: ImageFieldType()
+  nameWithType: ImageFieldType.ImageFieldType()
+  fullName: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.ImageFieldType()
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/FieldTypes/ImageFieldType.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.FieldTypes
+  syntax:
+    content: public ImageFieldType()
+    content.vb: Public Sub New()
+  overload: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.#ctor*
+  nameWithType.vb: ImageFieldType.New()
+  fullName.vb: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.New()
+  name.vb: New()
+- uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Name
+  commentId: P:Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Name
+  id: Name
+  parent: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ImageFieldType.Name
+  fullName: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Name
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/FieldTypes/ImageFieldType.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.FieldTypes
+  example: []
+  syntax:
+    content: public override string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property Name As String
+  overridden: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Name
+  overload: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Name*
+- uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.SystemName
+  commentId: P:Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.SystemName
+  id: SystemName
+  parent: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+  langs:
+  - csharp
+  - vb
+  name: SystemName
+  nameWithType: ImageFieldType.SystemName
+  fullName: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.SystemName
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/FieldTypes/ImageFieldType.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.FieldTypes
+  example: []
+  syntax:
+    content: public override string SystemName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property SystemName As String
+  overridden: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.SystemName
+  overload: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.SystemName*
+references:
+- uid: Biwen.QuickApi.Contents.FieldTypes
+  commentId: N:Biwen.QuickApi.Contents.FieldTypes
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.FieldTypes
+  nameWithType: Biwen.QuickApi.Contents.FieldTypes
+  fullName: Biwen.QuickApi.Contents.FieldTypes
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.FieldTypes
+    name: FieldTypes
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.FieldTypes
+    name: FieldTypes
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  parent: Biwen.QuickApi.Contents.FieldTypes
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html
+  name: TextFieldType
+  nameWithType: TextFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+- uid: Biwen.QuickApi.Contents.Abstractions.IFieldType
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.IFieldType
+  parent: Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IFieldType.html
+  name: IFieldType
+  nameWithType: IFieldType
+  fullName: Biwen.QuickApi.Contents.Abstractions.IFieldType
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertValue(System.String)
+  commentId: M:Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertValue(System.String)
+  parent: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_ConvertValue_System_String_
+  name: ConvertValue(string)
+  nameWithType: TextFieldType.ConvertValue(string)
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertValue(string)
+  nameWithType.vb: TextFieldType.ConvertValue(String)
+  fullName.vb: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertValue(String)
+  name.vb: ConvertValue(String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertValue(System.String)
+    name: ConvertValue
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_ConvertValue_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertValue(System.String)
+    name: ConvertValue
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_ConvertValue_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertToString(System.Object)
+  commentId: M:Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertToString(System.Object)
+  parent: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_ConvertToString_System_Object_
+  name: ConvertToString(object)
+  nameWithType: TextFieldType.ConvertToString(object)
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertToString(object)
+  nameWithType.vb: TextFieldType.ConvertToString(Object)
+  fullName.vb: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertToString(Object)
+  name.vb: ConvertToString(Object)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertToString(System.Object)
+    name: ConvertToString
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_ConvertToString_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ConvertToString(System.Object)
+    name: ConvertToString
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_ConvertToString_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Validate(System.String,System.String)
+  commentId: M:Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Validate(System.String,System.String)
+  parent: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_Validate_System_String_System_String_
+  name: Validate(string, string)
+  nameWithType: TextFieldType.Validate(string, string)
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Validate(string, string)
+  nameWithType.vb: TextFieldType.Validate(String, String)
+  fullName.vb: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Validate(String, String)
+  name.vb: Validate(String, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Validate(System.String,System.String)
+    name: Validate
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_Validate_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Validate(System.String,System.String)
+    name: Validate
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_Validate_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValue
+  commentId: M:Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValue
+  parent: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_GetValue
+  name: GetValue()
+  nameWithType: TextFieldType.GetValue()
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValue()
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValue
+    name: GetValue
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_GetValue
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValue
+    name: GetValue
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_GetValue
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.SetValue(System.Object)
+  commentId: M:Biwen.QuickApi.Contents.FieldTypes.TextFieldType.SetValue(System.Object)
+  parent: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_SetValue_System_Object_
+  name: SetValue(object)
+  nameWithType: TextFieldType.SetValue(object)
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.SetValue(object)
+  nameWithType.vb: TextFieldType.SetValue(Object)
+  fullName.vb: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.SetValue(Object)
+  name.vb: SetValue(Object)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.SetValue(System.Object)
+    name: SetValue
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_SetValue_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.SetValue(System.Object)
+    name: SetValue
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_SetValue_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValidationErrorMessage
+  commentId: M:Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValidationErrorMessage
+  parent: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_GetValidationErrorMessage
+  name: GetValidationErrorMessage()
+  nameWithType: TextFieldType.GetValidationErrorMessage()
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValidationErrorMessage()
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValidationErrorMessage
+    name: GetValidationErrorMessage
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_GetValidationErrorMessage
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.GetValidationErrorMessage
+    name: GetValidationErrorMessage
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_GetValidationErrorMessage
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ValueType
+  commentId: P:Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ValueType
+  parent: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_ValueType
+  name: ValueType
+  nameWithType: TextFieldType.ValueType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.ValueType
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Value
+  commentId: P:Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Value
+  parent: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_Value
+  name: Value
+  nameWithType: TextFieldType.Value
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Value
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Contents.Abstractions.IFieldType.Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString(Biwen.QuickApi.Contents.Abstractions.IFieldType)
+  parent: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions
+  definition: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString(Biwen.QuickApi.Contents.Abstractions.IFieldType)
+  href: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.html#Biwen_QuickApi_Contents_Abstractions_FieldTypeExtensions_GetValueString_Biwen_QuickApi_Contents_Abstractions_IFieldType_
+  name: GetValueString(IFieldType)
+  nameWithType: FieldTypeExtensions.GetValueString(IFieldType)
+  fullName: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString(Biwen.QuickApi.Contents.Abstractions.IFieldType)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString(Biwen.QuickApi.Contents.Abstractions.IFieldType)
+    name: GetValueString
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.html#Biwen_QuickApi_Contents_Abstractions_FieldTypeExtensions_GetValueString_Biwen_QuickApi_Contents_Abstractions_IFieldType_
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Abstractions.IFieldType
+    name: IFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IFieldType.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString(Biwen.QuickApi.Contents.Abstractions.IFieldType)
+    name: GetValueString
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.html#Biwen_QuickApi_Contents_Abstractions_FieldTypeExtensions_GetValueString_Biwen_QuickApi_Contents_Abstractions_IFieldType_
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Abstractions.IFieldType
+    name: IFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IFieldType.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<ImageFieldType>(ImageFieldType)
+  nameWithType: EntityExtensions.PublishAddedAsync<ImageFieldType>(ImageFieldType)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Contents.FieldTypes.ImageFieldType>(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of ImageFieldType)(ImageFieldType)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+  name.vb: PublishAddedAsync(Of ImageFieldType)(ImageFieldType)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<ImageFieldType>(ImageFieldType)
+  nameWithType: EntityExtensions.PublishDeletedAsync<ImageFieldType>(ImageFieldType)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Contents.FieldTypes.ImageFieldType>(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of ImageFieldType)(ImageFieldType)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+  name.vb: PublishDeletedAsync(Of ImageFieldType)(ImageFieldType)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<ImageFieldType>(ImageFieldType)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<ImageFieldType>(ImageFieldType)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Contents.FieldTypes.ImageFieldType>(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of ImageFieldType)(ImageFieldType)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+  name.vb: PublishUpdatedAsync(Of ImageFieldType)(ImageFieldType)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.FieldTypes.ImageFieldType)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Contents.Abstractions
+  commentId: N:Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Abstractions
+  nameWithType: Biwen.QuickApi.Contents.Abstractions
+  fullName: Biwen.QuickApi.Contents.Abstractions
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.html
+- uid: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString(Biwen.QuickApi.Contents.Abstractions.IFieldType)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString(Biwen.QuickApi.Contents.Abstractions.IFieldType)
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.html#Biwen_QuickApi_Contents_Abstractions_FieldTypeExtensions_GetValueString_Biwen_QuickApi_Contents_Abstractions_IFieldType_
+  name: GetValueString(IFieldType)
+  nameWithType: FieldTypeExtensions.GetValueString(IFieldType)
+  fullName: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString(Biwen.QuickApi.Contents.Abstractions.IFieldType)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString(Biwen.QuickApi.Contents.Abstractions.IFieldType)
+    name: GetValueString
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.html#Biwen_QuickApi_Contents_Abstractions_FieldTypeExtensions_GetValueString_Biwen_QuickApi_Contents_Abstractions_IFieldType_
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Abstractions.IFieldType
+    name: IFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IFieldType.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.GetValueString(Biwen.QuickApi.Contents.Abstractions.IFieldType)
+    name: GetValueString
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.html#Biwen_QuickApi_Contents_Abstractions_FieldTypeExtensions_GetValueString_Biwen_QuickApi_Contents_Abstractions_IFieldType_
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Abstractions.IFieldType
+    name: IFieldType
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IFieldType.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions
+  parent: Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.html
+  name: FieldTypeExtensions
+  nameWithType: FieldTypeExtensions
+  fullName: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.#ctor*
+  commentId: Overload:Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html#Biwen_QuickApi_Contents_FieldTypes_ImageFieldType__ctor
+  name: ImageFieldType
+  nameWithType: ImageFieldType.ImageFieldType
+  fullName: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.ImageFieldType
+  nameWithType.vb: ImageFieldType.New
+  fullName.vb: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.New
+  name.vb: New
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Name
+  commentId: P:Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Name
+  parent: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_Name
+  name: Name
+  nameWithType: TextFieldType.Name
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.Name
+- uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Name*
+  commentId: Overload:Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Name
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html#Biwen_QuickApi_Contents_FieldTypes_ImageFieldType_Name
+  name: Name
+  nameWithType: ImageFieldType.Name
+  fullName: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.SystemName
+  commentId: P:Biwen.QuickApi.Contents.FieldTypes.TextFieldType.SystemName
+  parent: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.html#Biwen_QuickApi_Contents_FieldTypes_TextFieldType_SystemName
+  name: SystemName
+  nameWithType: TextFieldType.SystemName
+  fullName: Biwen.QuickApi.Contents.FieldTypes.TextFieldType.SystemName
+- uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.SystemName*
+  commentId: Overload:Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.SystemName
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.html#Biwen_QuickApi_Contents_FieldTypes_ImageFieldType_SystemName
+  name: SystemName
+  nameWithType: ImageFieldType.SystemName
+  fullName: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType.SystemName

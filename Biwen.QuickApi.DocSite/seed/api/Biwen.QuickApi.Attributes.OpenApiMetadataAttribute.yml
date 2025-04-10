@@ -19,7 +19,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -109,7 +109,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.OpenApiMetadataAttribute(string?, string?)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -139,7 +139,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.Summary
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -164,7 +164,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.Description
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -189,7 +189,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.OperationId
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -214,7 +214,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.IsDeprecated
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -239,7 +239,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.Tags
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -255,8 +255,9 @@ items:
 references:
 - uid: Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
   commentId: M:Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
+  parent: Biwen.QuickApi.BaseQuickApi
   isExternal: true
-  href: Biwen.QuickApi.BaseQuickApi.html#Biwen_QuickApi_BaseQuickApi_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseQuickApi.cs
   name: HandlerBuilder(RouteHandlerBuilder)
   nameWithType: BaseQuickApi.HandlerBuilder(RouteHandlerBuilder)
   fullName: Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
@@ -264,7 +265,7 @@ references:
   - uid: Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
     name: HandlerBuilder
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi.html#Biwen_QuickApi_BaseQuickApi_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseQuickApi.cs
   - name: (
   - uid: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
     name: RouteHandlerBuilder
@@ -275,7 +276,7 @@ references:
   - uid: Biwen.QuickApi.BaseQuickApi.HandlerBuilder(Microsoft.AspNetCore.Builder.RouteHandlerBuilder)
     name: HandlerBuilder
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi.html#Biwen_QuickApi_BaseQuickApi_HandlerBuilder_Microsoft_AspNetCore_Builder_RouteHandlerBuilder_
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseQuickApi.cs
   - name: (
   - uid: Microsoft.AspNetCore.Builder.RouteHandlerBuilder
     name: RouteHandlerBuilder
@@ -2247,6 +2248,14 @@ references:
     isExternal: true
     href: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.html
   - name: )
+- uid: Biwen.QuickApi.BaseQuickApi
+  commentId: T:Biwen.QuickApi.BaseQuickApi
+  parent: Biwen.QuickApi
+  isExternal: true
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseQuickApi.cs
+  name: BaseQuickApi
+  nameWithType: BaseQuickApi
+  fullName: Biwen.QuickApi.BaseQuickApi
 - uid: System
   commentId: N:System
   isExternal: true
@@ -2364,6 +2373,33 @@ references:
   - name: (
   - name: T
   - name: )
+- uid: Biwen.QuickApi
+  commentId: N:Biwen.QuickApi
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi
+  nameWithType: Biwen.QuickApi
+  fullName: Biwen.QuickApi
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
 - uid: Biwen.QuickApi.Application.EntityEvents
   commentId: N:Biwen.QuickApi.Application.EntityEvents
   isExternal: true

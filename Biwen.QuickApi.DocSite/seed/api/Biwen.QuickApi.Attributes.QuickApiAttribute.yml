@@ -18,7 +18,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -108,7 +108,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute.QuickApiAttribute(string)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -134,7 +134,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute.Group
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -159,7 +159,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute.Route
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -184,7 +184,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute.Verbs
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -209,7 +209,7 @@ items:
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute.Policy
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Attributes
@@ -2401,7 +2401,7 @@ references:
   commentId: T:Biwen.QuickApi.Verb
   parent: Biwen.QuickApi
   isExternal: true
-  href: Biwen.QuickApi.Verb.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Verb.cs
   name: Verb
   nameWithType: Verb
   fullName: Biwen.QuickApi.Verb

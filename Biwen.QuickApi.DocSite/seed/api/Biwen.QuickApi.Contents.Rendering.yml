@@ -1,0 +1,101 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Rendering
+  commentId: N:Biwen.QuickApi.Contents.Rendering
+  id: Biwen.QuickApi.Contents.Rendering
+  children:
+  - Biwen.QuickApi.Contents.Rendering.ContentViewModel`1
+  - Biwen.QuickApi.Contents.Rendering.IDocumentRenderService
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Contents.Rendering
+  nameWithType: Biwen.QuickApi.Contents.Rendering
+  fullName: Biwen.QuickApi.Contents.Rendering
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Contents
+references:
+- uid: Biwen.QuickApi.Contents.Rendering.ContentViewModel`1
+  commentId: T:Biwen.QuickApi.Contents.Rendering.ContentViewModel`1
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Rendering.ContentViewModel-1.html
+  name: ContentViewModel<T>
+  nameWithType: ContentViewModel<T>
+  fullName: Biwen.QuickApi.Contents.Rendering.ContentViewModel<T>
+  nameWithType.vb: ContentViewModel(Of T)
+  fullName.vb: Biwen.QuickApi.Contents.Rendering.ContentViewModel(Of T)
+  name.vb: ContentViewModel(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Rendering.ContentViewModel`1
+    name: ContentViewModel
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Rendering.ContentViewModel-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Rendering.ContentViewModel`1
+    name: ContentViewModel
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Rendering.ContentViewModel-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Contents.Rendering.IDocumentRenderService
+  commentId: T:Biwen.QuickApi.Contents.Rendering.IDocumentRenderService
+  parent: Biwen.QuickApi.Contents.Rendering
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Rendering.IDocumentRenderService.html
+  name: IDocumentRenderService
+  nameWithType: IDocumentRenderService
+  fullName: Biwen.QuickApi.Contents.Rendering.IDocumentRenderService
+- uid: Biwen.QuickApi.Contents.Rendering
+  commentId: N:Biwen.QuickApi.Contents.Rendering
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Rendering
+  nameWithType: Biwen.QuickApi.Contents.Rendering
+  fullName: Biwen.QuickApi.Contents.Rendering
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Rendering
+    name: Rendering
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Rendering.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Rendering
+    name: Rendering
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Rendering.html

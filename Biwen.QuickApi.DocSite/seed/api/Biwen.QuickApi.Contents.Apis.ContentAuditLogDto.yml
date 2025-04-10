@@ -1,0 +1,1644 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  commentId: T:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  id: ContentAuditLogDto
+  parent: Biwen.QuickApi.Contents.Apis
+  children:
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.#ctor
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.#ctor(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Action
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Content
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ContentId
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Details
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.EqualityContract
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals(System.Object)
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.GetHashCode
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Id
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorId
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorName
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.PrintMembers(System.Text.StringBuilder)
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Timestamp
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ToString
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Equality(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto,Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Inequality(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto,Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  langs:
+  - csharp
+  - vb
+  name: ContentAuditLogDto
+  nameWithType: ContentAuditLogDto
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Apis/ContentAuditLogApis.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: >-
+      [AutoDto<ContentAuditLog>(new string[] { })]
+
+      [AutoDtoComplex(2)]
+
+      public record ContentAuditLogDto : IEquatable<ContentAuditLogDto>
+    content.vb: >-
+      <AutoDto(Of ContentAuditLog)(New String() { })>
+
+      <AutoDtoComplex(2)>
+
+      Public Class ContentAuditLogDto Implements IEquatable(Of ContentAuditLogDto)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Biwen.QuickApi.Contents.Apis.ContentAuditLogDto}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  - Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog
+  attributes:
+  - type: Biwen.AutoClassGen.Attributes.AutoDtoComplexAttribute
+    ctor: Biwen.AutoClassGen.Attributes.AutoDtoComplexAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 2
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ToString
+  commentId: M:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ToString
+  id: ToString
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ContentAuditLogDto.ToString()
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ToString()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Apis/ContentAuditLogApis.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ToString*
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.PrintMembers(System.Text.StringBuilder)
+  commentId: M:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.PrintMembers(System.Text.StringBuilder)
+  id: PrintMembers(System.Text.StringBuilder)
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: PrintMembers(StringBuilder)
+  nameWithType: ContentAuditLogDto.PrintMembers(StringBuilder)
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.PrintMembers(System.Text.StringBuilder)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Apis/ContentAuditLogApis.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: protected virtual bool PrintMembers(StringBuilder builder)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+    return:
+      type: System.Boolean
+    content.vb: Protected Overridable Function PrintMembers(builder As StringBuilder) As Boolean
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.PrintMembers*
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Inequality(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto,Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  commentId: M:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Inequality(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto,Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  id: op_Inequality(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto,Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: operator !=(ContentAuditLogDto?, ContentAuditLogDto?)
+  nameWithType: ContentAuditLogDto.operator !=(ContentAuditLogDto?, ContentAuditLogDto?)
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.operator !=(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto?, Biwen.QuickApi.Contents.Apis.ContentAuditLogDto?)
+  type: Operator
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Apis/ContentAuditLogApis.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: public static bool operator !=(ContentAuditLogDto? left, ContentAuditLogDto? right)
+    parameters:
+    - id: left
+      type: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    - id: right
+      type: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As ContentAuditLogDto, right As ContentAuditLogDto) As Boolean
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Inequality*
+  nameWithType.vb: ContentAuditLogDto.<>(ContentAuditLogDto, ContentAuditLogDto)
+  fullName.vb: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.<>(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto, Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  name.vb: <>(ContentAuditLogDto, ContentAuditLogDto)
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Equality(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto,Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  commentId: M:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Equality(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto,Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  id: op_Equality(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto,Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: operator ==(ContentAuditLogDto?, ContentAuditLogDto?)
+  nameWithType: ContentAuditLogDto.operator ==(ContentAuditLogDto?, ContentAuditLogDto?)
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.operator ==(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto?, Biwen.QuickApi.Contents.Apis.ContentAuditLogDto?)
+  type: Operator
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Apis/ContentAuditLogApis.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: public static bool operator ==(ContentAuditLogDto? left, ContentAuditLogDto? right)
+    parameters:
+    - id: left
+      type: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    - id: right
+      type: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As ContentAuditLogDto, right As ContentAuditLogDto) As Boolean
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Equality*
+  nameWithType.vb: ContentAuditLogDto.=(ContentAuditLogDto, ContentAuditLogDto)
+  fullName.vb: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.=(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto, Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  name.vb: =(ContentAuditLogDto, ContentAuditLogDto)
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.GetHashCode
+  commentId: M:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.GetHashCode
+  id: GetHashCode
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: ContentAuditLogDto.GetHashCode()
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Apis/ContentAuditLogApis.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.GetHashCode*
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals(System.Object)
+  commentId: M:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: ContentAuditLogDto.Equals(object?)
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Apis/ContentAuditLogApis.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals*
+  nameWithType.vb: ContentAuditLogDto.Equals(Object)
+  fullName.vb: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  commentId: M:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  id: Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: Equals(ContentAuditLogDto?)
+  nameWithType: ContentAuditLogDto.Equals(ContentAuditLogDto?)
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Apis/ContentAuditLogApis.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  example: []
+  syntax:
+    content: public virtual bool Equals(ContentAuditLogDto? other)
+    parameters:
+    - id: other
+      type: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function Equals(other As ContentAuditLogDto) As Boolean
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals*
+  implements:
+  - System.IEquatable{Biwen.QuickApi.Contents.Apis.ContentAuditLogDto}.Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  nameWithType.vb: ContentAuditLogDto.Equals(ContentAuditLogDto)
+  fullName.vb: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  name.vb: Equals(ContentAuditLogDto)
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.#ctor(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  commentId: M:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.#ctor(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  id: '#ctor(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)'
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: ContentAuditLogDto(ContentAuditLogDto)
+  nameWithType: ContentAuditLogDto.ContentAuditLogDto(ContentAuditLogDto)
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ContentAuditLogDto(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Apis/ContentAuditLogApis.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: protected ContentAuditLogDto(ContentAuditLogDto original)
+    parameters:
+    - id: original
+      type: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    content.vb: Protected Sub New(original As ContentAuditLogDto)
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.#ctor*
+  nameWithType.vb: ContentAuditLogDto.New(ContentAuditLogDto)
+  fullName.vb: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.New(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  name.vb: New(ContentAuditLogDto)
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.#ctor
+  commentId: M:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.#ctor
+  id: '#ctor'
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: ContentAuditLogDto()
+  nameWithType: ContentAuditLogDto.ContentAuditLogDto()
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ContentAuditLogDto()
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Apis/ContentAuditLogApis.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: public ContentAuditLogDto()
+    content.vb: Public Sub New()
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.#ctor*
+  nameWithType.vb: ContentAuditLogDto.New()
+  fullName.vb: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.New()
+  name.vb: New()
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.EqualityContract
+  commentId: P:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.EqualityContract
+  id: EqualityContract
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: EqualityContract
+  nameWithType: ContentAuditLogDto.EqualityContract
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.EqualityContract
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Apis/ContentAuditLogApis.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: protected virtual Type EqualityContract { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Protected Overridable ReadOnly Property EqualityContract As Type
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.EqualityContract*
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Id
+  commentId: P:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Id
+  id: Id
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ContentAuditLogDto.Id
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Id
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoDtoSourceGenerator/Biwen.AutoClassGenDto.g.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Id*
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ContentId
+  commentId: P:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ContentId
+  id: ContentId
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: ContentId
+  nameWithType: ContentAuditLogDto.ContentId
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ContentId
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoDtoSourceGenerator/Biwen.AutoClassGenDto.g.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: >-
+      [Required]
+
+      public Guid ContentId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: >-
+      <Required>
+
+      Public Property ContentId As Guid
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ContentId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorName
+  commentId: P:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorName
+  id: OperatorName
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: OperatorName
+  nameWithType: ContentAuditLogDto.OperatorName
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorName
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoDtoSourceGenerator/Biwen.AutoClassGenDto.g.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: public string? OperatorName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OperatorName As String
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorName*
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Action
+  commentId: P:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Action
+  id: Action
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: Action
+  nameWithType: ContentAuditLogDto.Action
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Action
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoDtoSourceGenerator/Biwen.AutoClassGenDto.g.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: >-
+      [Required]
+
+      [StringLength(50)]
+
+      public string Action { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Required>
+
+      <StringLength(50)>
+
+      Public Property Action As String
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Action*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 50
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Details
+  commentId: P:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Details
+  id: Details
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: Details
+  nameWithType: ContentAuditLogDto.Details
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Details
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoDtoSourceGenerator/Biwen.AutoClassGenDto.g.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: >-
+      [Required]
+
+      public string Details { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Required>
+
+      Public Property Details As String
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Details*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorId
+  commentId: P:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorId
+  id: OperatorId
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: OperatorId
+  nameWithType: ContentAuditLogDto.OperatorId
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorId
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoDtoSourceGenerator/Biwen.AutoClassGenDto.g.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: >-
+      [StringLength(100)]
+
+      public string? OperatorId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(100)>
+
+      Public Property OperatorId As String
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 100
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Timestamp
+  commentId: P:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Timestamp
+  id: Timestamp
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: ContentAuditLogDto.Timestamp
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Timestamp
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoDtoSourceGenerator/Biwen.AutoClassGenDto.g.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: >-
+      [Required]
+
+      public DateTime Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: >-
+      <Required>
+
+      Public Property Timestamp As Date
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Timestamp*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Content
+  commentId: P:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Content
+  id: Content
+  parent: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: ContentAuditLogDto.Content
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Content
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/obj/Debug/net9.0/Biwen.AutoClassGen/Biwen.AutoClassGen.AutoDtoSourceGenerator/Biwen.AutoClassGenDto.g.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Apis
+  syntax:
+    content: public ContentDto Content { get; set; }
+    parameters: []
+    return:
+      type: Biwen.QuickApi.Contents.Apis.ContentDto
+    content.vb: Public Property Content As ContentDto
+  overload: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Content*
+references:
+- uid: Biwen.QuickApi.Contents.Apis
+  commentId: N:Biwen.QuickApi.Contents.Apis
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Apis
+  nameWithType: Biwen.QuickApi.Contents.Apis
+  fullName: Biwen.QuickApi.Contents.Apis
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Apis
+    name: Apis
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Apis
+    name: Apis
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{Biwen.QuickApi.Contents.Apis.ContentAuditLogDto}
+  commentId: T:System.IEquatable{Biwen.QuickApi.Contents.Apis.ContentAuditLogDto}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ContentAuditLogDto>
+  nameWithType: IEquatable<ContentAuditLogDto>
+  fullName: System.IEquatable<Biwen.QuickApi.Contents.Apis.ContentAuditLogDto>
+  nameWithType.vb: IEquatable(Of ContentAuditLogDto)
+  fullName.vb: System.IEquatable(Of Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  name.vb: IEquatable(Of ContentAuditLogDto)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<ContentAuditLogDto>(ContentAuditLogDto)
+  nameWithType: EntityExtensions.PublishAddedAsync<ContentAuditLogDto>(ContentAuditLogDto)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Contents.Apis.ContentAuditLogDto>(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of ContentAuditLogDto)(ContentAuditLogDto)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  name.vb: PublishAddedAsync(Of ContentAuditLogDto)(ContentAuditLogDto)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<ContentAuditLogDto>(ContentAuditLogDto)
+  nameWithType: EntityExtensions.PublishDeletedAsync<ContentAuditLogDto>(ContentAuditLogDto)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Contents.Apis.ContentAuditLogDto>(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of ContentAuditLogDto)(ContentAuditLogDto)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  name.vb: PublishDeletedAsync(Of ContentAuditLogDto)(ContentAuditLogDto)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<ContentAuditLogDto>(ContentAuditLogDto)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<ContentAuditLogDto>(ContentAuditLogDto)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Contents.Apis.ContentAuditLogDto>(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of ContentAuditLogDto)(ContentAuditLogDto)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  name.vb: PublishUpdatedAsync(Of ContentAuditLogDto)(ContentAuditLogDto)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog
+  commentId: M:Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  parent: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions
+  definition: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  href: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.html#Biwen_QuickApi_Contents_Domain_ContentAuditLogDtoToContentAuditLogExtentions_MapperToContentAuditLog_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_
+  name: MapperToContentAuditLog(ContentAuditLogDto)
+  nameWithType: ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(ContentAuditLogDto)
+  fullName: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: MapperToContentAuditLog
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.html#Biwen_QuickApi_Contents_Domain_ContentAuditLogDtoToContentAuditLogExtentions_MapperToContentAuditLog_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: MapperToContentAuditLog
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.html#Biwen_QuickApi_Contents_Domain_ContentAuditLogDtoToContentAuditLogExtentions_MapperToContentAuditLog_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  commentId: M:Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.html#Biwen_QuickApi_Contents_Domain_ContentAuditLogDtoToContentAuditLogExtentions_MapperToContentAuditLog_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_
+  name: MapperToContentAuditLog(ContentAuditLogDto)
+  nameWithType: ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(ContentAuditLogDto)
+  fullName: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: MapperToContentAuditLog
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.html#Biwen_QuickApi_Contents_Domain_ContentAuditLogDtoToContentAuditLogExtentions_MapperToContentAuditLog_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.MapperToContentAuditLog(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: MapperToContentAuditLog
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.html#Biwen_QuickApi_Contents_Domain_ContentAuditLogDtoToContentAuditLogExtentions_MapperToContentAuditLog_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.html
+  name: ContentAuditLogDtoToContentAuditLogExtentions
+  nameWithType: ContentAuditLogDtoToContentAuditLogExtentions
+  fullName: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.Contents.Domain
+  commentId: N:Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Domain
+  nameWithType: Biwen.QuickApi.Contents.Domain
+  fullName: Biwen.QuickApi.Contents.Domain
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ToString*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ToString
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_ToString
+  name: ToString
+  nameWithType: ContentAuditLogDto.ToString
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.PrintMembers*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.PrintMembers
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_PrintMembers_System_Text_StringBuilder_
+  name: PrintMembers
+  nameWithType: ContentAuditLogDto.PrintMembers
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.PrintMembers
+- uid: System.Text.StringBuilder
+  commentId: T:System.Text.StringBuilder
+  parent: System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.stringbuilder
+  name: StringBuilder
+  nameWithType: StringBuilder
+  fullName: System.Text.StringBuilder
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Inequality*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Inequality
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_op_Inequality_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_
+  name: operator !=
+  nameWithType: ContentAuditLogDto.operator !=
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.operator !=
+  nameWithType.vb: ContentAuditLogDto.<>
+  fullName.vb: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_op_Inequality_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  commentId: T:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+  parent: Biwen.QuickApi.Contents.Apis
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  name: ContentAuditLogDto
+  nameWithType: ContentAuditLogDto
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Equality*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Equality
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_op_Equality_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_
+  name: operator ==
+  nameWithType: ContentAuditLogDto.operator ==
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.operator ==
+  nameWithType.vb: ContentAuditLogDto.=
+  fullName.vb: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.op_Equality*
+    name: ==
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_op_Equality_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.GetHashCode*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.GetHashCode
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_GetHashCode
+  name: GetHashCode
+  nameWithType: ContentAuditLogDto.GetHashCode
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_Equals_System_Object_
+  name: Equals
+  nameWithType: ContentAuditLogDto.Equals
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Equals
+- uid: System.IEquatable{Biwen.QuickApi.Contents.Apis.ContentAuditLogDto}.Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  commentId: M:System.IEquatable{Biwen.QuickApi.Contents.Apis.ContentAuditLogDto}.Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  parent: System.IEquatable{Biwen.QuickApi.Contents.Apis.ContentAuditLogDto}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(ContentAuditLogDto)
+  nameWithType: IEquatable<ContentAuditLogDto>.Equals(ContentAuditLogDto)
+  fullName: System.IEquatable<Biwen.QuickApi.Contents.Apis.ContentAuditLogDto>.Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  nameWithType.vb: IEquatable(Of ContentAuditLogDto).Equals(ContentAuditLogDto)
+  fullName.vb: System.IEquatable(Of Biwen.QuickApi.Contents.Apis.ContentAuditLogDto).Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+  spec.csharp:
+  - uid: System.IEquatable{Biwen.QuickApi.Contents.Apis.ContentAuditLogDto}.Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Biwen.QuickApi.Contents.Apis.ContentAuditLogDto}.Equals(Biwen.QuickApi.Contents.Apis.ContentAuditLogDto)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.#ctor*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto__ctor_Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_
+  name: ContentAuditLogDto
+  nameWithType: ContentAuditLogDto.ContentAuditLogDto
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ContentAuditLogDto
+  nameWithType.vb: ContentAuditLogDto.New
+  fullName.vb: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.New
+  name.vb: New
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.EqualityContract*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.EqualityContract
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_EqualityContract
+  name: EqualityContract
+  nameWithType: ContentAuditLogDto.EqualityContract
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.EqualityContract
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Id*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Id
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_Id
+  name: Id
+  nameWithType: ContentAuditLogDto.Id
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ContentId*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ContentId
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_ContentId
+  name: ContentId
+  nameWithType: ContentAuditLogDto.ContentId
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.ContentId
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorName*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorName
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_OperatorName
+  name: OperatorName
+  nameWithType: ContentAuditLogDto.OperatorName
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorName
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Action*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Action
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_Action
+  name: Action
+  nameWithType: ContentAuditLogDto.Action
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Action
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Details*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Details
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_Details
+  name: Details
+  nameWithType: ContentAuditLogDto.Details
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Details
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorId*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorId
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_OperatorId
+  name: OperatorId
+  nameWithType: ContentAuditLogDto.OperatorId
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.OperatorId
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Timestamp*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Timestamp
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_Timestamp
+  name: Timestamp
+  nameWithType: ContentAuditLogDto.Timestamp
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Timestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Content*
+  commentId: Overload:Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Content
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.html#Biwen_QuickApi_Contents_Apis_ContentAuditLogDto_Content
+  name: Content
+  nameWithType: ContentAuditLogDto.Content
+  fullName: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto.Content
+- uid: Biwen.QuickApi.Contents.Apis.ContentDto
+  commentId: T:Biwen.QuickApi.Contents.Apis.ContentDto
+  parent: Biwen.QuickApi.Contents.Apis
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.ContentDto.html
+  name: ContentDto
+  nameWithType: ContentDto
+  fullName: Biwen.QuickApi.Contents.Apis.ContentDto

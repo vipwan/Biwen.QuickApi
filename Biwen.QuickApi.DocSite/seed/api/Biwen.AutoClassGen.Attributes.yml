@@ -6,12 +6,17 @@ items:
   children:
   - Biwen.AutoClassGen.Attributes.AutoDecorAttribute
   - Biwen.AutoClassGen.Attributes.AutoDecorAttribute`1
+  - Biwen.AutoClassGen.Attributes.AutoDecorForAttribute
+  - Biwen.AutoClassGen.Attributes.AutoDecorForAttribute`1
   - Biwen.AutoClassGen.Attributes.AutoDtoAttribute
   - Biwen.AutoClassGen.Attributes.AutoDtoAttribute`1
+  - Biwen.AutoClassGen.Attributes.AutoDtoComplexAttribute
+  - Biwen.AutoClassGen.Attributes.AutoDtoIgronedAttribute
   - Biwen.AutoClassGen.Attributes.AutoGenAttribute
   - Biwen.AutoClassGen.Attributes.AutoInjectAttribute
   - Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
   - Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute`1
+  - Biwen.AutoClassGen.Attributes.IgnoreAsyncNamingAttribute
   - Biwen.AutoClassGen.Attributes.ServiceLifetime
   langs:
   - csharp
@@ -59,6 +64,42 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoDecorForAttribute
+  parent: Biwen.AutoClassGen.Attributes
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute.html
+  name: AutoDecorForAttribute
+  nameWithType: AutoDecorForAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute
+- uid: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute`1
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoDecorForAttribute`1
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute-1.html
+  name: AutoDecorForAttribute<T>
+  nameWithType: AutoDecorForAttribute<T>
+  fullName: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute<T>
+  nameWithType.vb: AutoDecorForAttribute(Of T)
+  fullName.vb: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute(Of T)
+  name.vb: AutoDecorForAttribute(Of T)
+  spec.csharp:
+  - uid: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute`1
+    name: AutoDecorForAttribute
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute`1
+    name: AutoDecorForAttribute
+    isExternal: true
+    href: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: Biwen.AutoClassGen.Attributes.AutoDtoAttribute
   commentId: T:Biwen.AutoClassGen.Attributes.AutoDtoAttribute
   parent: Biwen.AutoClassGen.Attributes
@@ -95,6 +136,21 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Biwen.AutoClassGen.Attributes.AutoDtoComplexAttribute
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoDtoComplexAttribute
+  parent: Biwen.AutoClassGen.Attributes
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoDtoComplexAttribute.html
+  name: AutoDtoComplexAttribute
+  nameWithType: AutoDtoComplexAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoDtoComplexAttribute
+- uid: Biwen.AutoClassGen.Attributes.AutoDtoIgronedAttribute
+  commentId: T:Biwen.AutoClassGen.Attributes.AutoDtoIgronedAttribute
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoDtoIgronedAttribute.html
+  name: AutoDtoIgronedAttribute
+  nameWithType: AutoDtoIgronedAttribute
+  fullName: Biwen.AutoClassGen.Attributes.AutoDtoIgronedAttribute
 - uid: Biwen.AutoClassGen.Attributes.AutoGenAttribute
   commentId: T:Biwen.AutoClassGen.Attributes.AutoGenAttribute
   isExternal: true
@@ -174,6 +230,13 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Biwen.AutoClassGen.Attributes.IgnoreAsyncNamingAttribute
+  commentId: T:Biwen.AutoClassGen.Attributes.IgnoreAsyncNamingAttribute
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.IgnoreAsyncNamingAttribute.html
+  name: IgnoreAsyncNamingAttribute
+  nameWithType: IgnoreAsyncNamingAttribute
+  fullName: Biwen.AutoClassGen.Attributes.IgnoreAsyncNamingAttribute
 - uid: Biwen.AutoClassGen.Attributes
   commentId: N:Biwen.AutoClassGen.Attributes
   isExternal: true

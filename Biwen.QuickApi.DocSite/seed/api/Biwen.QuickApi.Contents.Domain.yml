@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Domain
+  commentId: N:Biwen.QuickApi.Contents.Domain
+  id: Biwen.QuickApi.Contents.Domain
+  children:
+  - Biwen.QuickApi.Contents.Domain.Content
+  - Biwen.QuickApi.Contents.Domain.ContentAuditLog
+  - Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions
+  - Biwen.QuickApi.Contents.Domain.ContentAuditLogToContentAuditLogDtoExtentions
+  - Biwen.QuickApi.Contents.Domain.ContentDtoToContentExtentions
+  - Biwen.QuickApi.Contents.Domain.ContentStatus
+  - Biwen.QuickApi.Contents.Domain.ContentToContentDtoExtentions
+  - Biwen.QuickApi.Contents.Domain.ContentVersion
+  - Biwen.QuickApi.Contents.Domain.ContentVersionDtoToContentVersionExtentions
+  - Biwen.QuickApi.Contents.Domain.ContentVersionToContentVersionDtoExtentions
+  - Biwen.QuickApi.Contents.Domain.IContentDbContext
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Contents.Domain
+  nameWithType: Biwen.QuickApi.Contents.Domain
+  fullName: Biwen.QuickApi.Contents.Domain
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Contents
+references:
+- uid: Biwen.QuickApi.Contents.Domain.Content
+  commentId: T:Biwen.QuickApi.Contents.Domain.Content
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.Content.html
+  name: Content
+  nameWithType: Content
+  fullName: Biwen.QuickApi.Contents.Domain.Content
+- uid: Biwen.QuickApi.Contents.Domain.ContentStatus
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentStatus
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentStatus.html
+  name: ContentStatus
+  nameWithType: ContentStatus
+  fullName: Biwen.QuickApi.Contents.Domain.ContentStatus
+- uid: Biwen.QuickApi.Contents.Domain.ContentAuditLog
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentAuditLog
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentAuditLog.html
+  name: ContentAuditLog
+  nameWithType: ContentAuditLog
+  fullName: Biwen.QuickApi.Contents.Domain.ContentAuditLog
+- uid: Biwen.QuickApi.Contents.Domain.ContentVersion
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentVersion
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentVersion.html
+  name: ContentVersion
+  nameWithType: ContentVersion
+  fullName: Biwen.QuickApi.Contents.Domain.ContentVersion
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+  commentId: T:Biwen.QuickApi.Contents.Domain.IContentDbContext
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  name: IContentDbContext
+  nameWithType: IContentDbContext
+  fullName: Biwen.QuickApi.Contents.Domain.IContentDbContext
+- uid: Biwen.QuickApi.Contents.Domain.ContentAuditLogToContentAuditLogDtoExtentions
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentAuditLogToContentAuditLogDtoExtentions
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentAuditLogToContentAuditLogDtoExtentions.html
+  name: ContentAuditLogToContentAuditLogDtoExtentions
+  nameWithType: ContentAuditLogToContentAuditLogDtoExtentions
+  fullName: Biwen.QuickApi.Contents.Domain.ContentAuditLogToContentAuditLogDtoExtentions
+- uid: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions.html
+  name: ContentAuditLogDtoToContentAuditLogExtentions
+  nameWithType: ContentAuditLogDtoToContentAuditLogExtentions
+  fullName: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions
+- uid: Biwen.QuickApi.Contents.Domain.ContentVersionToContentVersionDtoExtentions
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentVersionToContentVersionDtoExtentions
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentVersionToContentVersionDtoExtentions.html
+  name: ContentVersionToContentVersionDtoExtentions
+  nameWithType: ContentVersionToContentVersionDtoExtentions
+  fullName: Biwen.QuickApi.Contents.Domain.ContentVersionToContentVersionDtoExtentions
+- uid: Biwen.QuickApi.Contents.Domain.ContentVersionDtoToContentVersionExtentions
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentVersionDtoToContentVersionExtentions
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentVersionDtoToContentVersionExtentions.html
+  name: ContentVersionDtoToContentVersionExtentions
+  nameWithType: ContentVersionDtoToContentVersionExtentions
+  fullName: Biwen.QuickApi.Contents.Domain.ContentVersionDtoToContentVersionExtentions
+- uid: Biwen.QuickApi.Contents.Domain.ContentToContentDtoExtentions
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentToContentDtoExtentions
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentToContentDtoExtentions.html
+  name: ContentToContentDtoExtentions
+  nameWithType: ContentToContentDtoExtentions
+  fullName: Biwen.QuickApi.Contents.Domain.ContentToContentDtoExtentions
+- uid: Biwen.QuickApi.Contents.Domain.ContentDtoToContentExtentions
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentDtoToContentExtentions
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentDtoToContentExtentions.html
+  name: ContentDtoToContentExtentions
+  nameWithType: ContentDtoToContentExtentions
+  fullName: Biwen.QuickApi.Contents.Domain.ContentDtoToContentExtentions
+- uid: Biwen.QuickApi.Contents.Domain
+  commentId: N:Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Domain
+  nameWithType: Biwen.QuickApi.Contents.Domain
+  fullName: Biwen.QuickApi.Contents.Domain
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html

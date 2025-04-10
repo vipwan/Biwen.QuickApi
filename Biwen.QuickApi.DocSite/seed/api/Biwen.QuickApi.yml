@@ -4,7 +4,6 @@ items:
   commentId: N:Biwen.QuickApi
   id: Biwen.QuickApi
   children:
-  - Biwen.QuickApi.AutoInjectExtension
   - Biwen.QuickApi.BaseQuickApi
   - Biwen.QuickApi.BaseQuickApiJustAsService`2
   - Biwen.QuickApi.BaseQuickApiWithoutRequest`1
@@ -15,16 +14,19 @@ items:
   - Biwen.QuickApi.BiwenQuickApiOptions
   - Biwen.QuickApi.DefaultReqBinder`1
   - Biwen.QuickApi.EmptyRequest
+  - Biwen.QuickApi.EnumerablePagedListExtensions
   - Biwen.QuickApi.FromBodyAttribute
   - Biwen.QuickApi.FromKeyedServicesAttribute
   - Biwen.QuickApi.GuidHelper
   - Biwen.QuickApi.IEndpointRouteBuilderExtensions
+  - Biwen.QuickApi.IQueryablePageListExtensions
   - Biwen.QuickApi.IResultExtensions
   - Biwen.QuickApi.IResultResponse
   - Biwen.QuickApi.IdGenerator
   - Biwen.QuickApi.QuickApiExcetion
   - Biwen.QuickApi.ServiceCollectionExtensions
   - Biwen.QuickApi.ServiceRegistration
+  - Biwen.QuickApi.SlugEndpointExtensions
   - Biwen.QuickApi.StringExtensions
   - Biwen.QuickApi.Verb
   - Biwen.QuickApi.WebApplicationBuilderExtensions
@@ -36,8 +38,15 @@ items:
   fullName: Biwen.QuickApi
   type: Namespace
   assemblies:
-  - Biwen.QuickApi
+  - Biwen.QuickApi.Contents
 references:
+- uid: Biwen.QuickApi.SlugEndpointExtensions
+  commentId: T:Biwen.QuickApi.SlugEndpointExtensions
+  isExternal: true
+  href: Biwen.QuickApi.SlugEndpointExtensions.html
+  name: SlugEndpointExtensions
+  nameWithType: SlugEndpointExtensions
+  fullName: Biwen.QuickApi.SlugEndpointExtensions
 - uid: Biwen.QuickApi.IdGenerator
   commentId: T:Biwen.QuickApi.IdGenerator
   isExternal: true
@@ -56,7 +65,7 @@ references:
   commentId: T:Biwen.QuickApi.FromBodyAttribute
   parent: Biwen.QuickApi
   isExternal: true
-  href: Biwen.QuickApi.FromBodyAttribute.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/FromBodyAttribute.cs
   name: FromBodyAttribute
   nameWithType: FromBodyAttribute
   fullName: Biwen.QuickApi.FromBodyAttribute
@@ -70,7 +79,7 @@ references:
 - uid: Biwen.QuickApi.BaseQuickApi`2
   commentId: T:Biwen.QuickApi.BaseQuickApi`2
   isExternal: true
-  href: Biwen.QuickApi.BaseQuickApi-2.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseQuickApi.cs
   name: BaseQuickApi<Req, Rsp>
   nameWithType: BaseQuickApi<Req, Rsp>
   fullName: Biwen.QuickApi.BaseQuickApi<Req, Rsp>
@@ -81,7 +90,7 @@ references:
   - uid: Biwen.QuickApi.BaseQuickApi`2
     name: BaseQuickApi
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseQuickApi.cs
   - name: <
   - name: Req
   - name: ','
@@ -92,7 +101,7 @@ references:
   - uid: Biwen.QuickApi.BaseQuickApi`2
     name: BaseQuickApi
     isExternal: true
-    href: Biwen.QuickApi.BaseQuickApi-2.html
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseQuickApi.cs
   - name: (
   - name: Of
   - name: " "
@@ -131,8 +140,9 @@ references:
   - name: )
 - uid: Biwen.QuickApi.BaseQuickApi
   commentId: T:Biwen.QuickApi.BaseQuickApi
+  parent: Biwen.QuickApi
   isExternal: true
-  href: Biwen.QuickApi.BaseQuickApi.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseQuickApi.cs
   name: BaseQuickApi
   nameWithType: BaseQuickApi
   fullName: Biwen.QuickApi.BaseQuickApi
@@ -201,7 +211,7 @@ references:
 - uid: Biwen.QuickApi.BaseRequest`1
   commentId: T:Biwen.QuickApi.BaseRequest`1
   isExternal: true
-  href: Biwen.QuickApi.BaseRequest-1.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   name: BaseRequest<T>
   nameWithType: BaseRequest<T>
   fullName: Biwen.QuickApi.BaseRequest<T>
@@ -212,7 +222,7 @@ references:
   - uid: Biwen.QuickApi.BaseRequest`1
     name: BaseRequest
     isExternal: true
-    href: Biwen.QuickApi.BaseRequest-1.html
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   - name: <
   - name: T
   - name: '>'
@@ -220,7 +230,7 @@ references:
   - uid: Biwen.QuickApi.BaseRequest`1
     name: BaseRequest
     isExternal: true
-    href: Biwen.QuickApi.BaseRequest-1.html
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   - name: (
   - name: Of
   - name: " "
@@ -258,7 +268,7 @@ references:
   commentId: T:Biwen.QuickApi.EmptyRequest
   parent: Biwen.QuickApi
   isExternal: true
-  href: Biwen.QuickApi.EmptyRequest.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   name: EmptyRequest
   nameWithType: EmptyRequest
   fullName: Biwen.QuickApi.EmptyRequest
@@ -305,6 +315,14 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Biwen.QuickApi.EnumerablePagedListExtensions
+  commentId: T:Biwen.QuickApi.EnumerablePagedListExtensions
+  parent: Biwen.QuickApi
+  isExternal: true
+  href: Biwen.QuickApi.EnumerablePagedListExtensions.html
+  name: EnumerablePagedListExtensions
+  nameWithType: EnumerablePagedListExtensions
+  fullName: Biwen.QuickApi.EnumerablePagedListExtensions
 - uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions
   commentId: T:Biwen.QuickApi.IEndpointRouteBuilderExtensions
   isExternal: true
@@ -312,6 +330,13 @@ references:
   name: IEndpointRouteBuilderExtensions
   nameWithType: IEndpointRouteBuilderExtensions
   fullName: Biwen.QuickApi.IEndpointRouteBuilderExtensions
+- uid: Biwen.QuickApi.IQueryablePageListExtensions
+  commentId: T:Biwen.QuickApi.IQueryablePageListExtensions
+  isExternal: true
+  href: Biwen.QuickApi.IQueryablePageListExtensions.html
+  name: IQueryablePageListExtensions
+  nameWithType: IQueryablePageListExtensions
+  fullName: Biwen.QuickApi.IQueryablePageListExtensions
 - uid: Biwen.QuickApi.ServiceCollectionExtensions
   commentId: T:Biwen.QuickApi.ServiceCollectionExtensions
   isExternal: true
@@ -358,17 +383,10 @@ references:
   commentId: T:Biwen.QuickApi.Verb
   parent: Biwen.QuickApi
   isExternal: true
-  href: Biwen.QuickApi.Verb.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Verb.cs
   name: Verb
   nameWithType: Verb
   fullName: Biwen.QuickApi.Verb
-- uid: Biwen.QuickApi.AutoInjectExtension
-  commentId: T:Biwen.QuickApi.AutoInjectExtension
-  isExternal: true
-  href: Biwen.QuickApi.AutoInjectExtension.html
-  name: AutoInjectExtension
-  nameWithType: AutoInjectExtension
-  fullName: Biwen.QuickApi.AutoInjectExtension
 - uid: Biwen.QuickApi
   commentId: N:Biwen.QuickApi
   isExternal: true

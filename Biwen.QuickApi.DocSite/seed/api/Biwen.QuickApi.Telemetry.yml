@@ -4,7 +4,6 @@ items:
   commentId: N:Biwen.QuickApi.Telemetry
   id: Biwen.QuickApi.Telemetry
   children:
-  - Biwen.QuickApi.Telemetry.AutoInjectExtension
   - Biwen.QuickApi.Telemetry.Constant
   - Biwen.QuickApi.Telemetry.TelemetryOptions
   langs:
@@ -31,10 +30,3 @@ references:
   name: TelemetryOptions
   nameWithType: TelemetryOptions
   fullName: Biwen.QuickApi.Telemetry.TelemetryOptions
-- uid: Biwen.QuickApi.Telemetry.AutoInjectExtension
-  commentId: T:Biwen.QuickApi.Telemetry.AutoInjectExtension
-  isExternal: true
-  href: Biwen.QuickApi.Telemetry.AutoInjectExtension.html
-  name: AutoInjectExtension
-  nameWithType: AutoInjectExtension
-  fullName: Biwen.QuickApi.Telemetry.AutoInjectExtension

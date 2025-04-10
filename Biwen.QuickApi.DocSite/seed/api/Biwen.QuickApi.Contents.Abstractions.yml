@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Abstractions
+  commentId: N:Biwen.QuickApi.Contents.Abstractions
+  id: Biwen.QuickApi.Contents.Abstractions
+  children:
+  - Biwen.QuickApi.Contents.Abstractions.ContentBase`1
+  - Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions
+  - Biwen.QuickApi.Contents.Abstractions.IContent
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  - Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  - Biwen.QuickApi.Contents.Abstractions.IFieldType
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Contents.Abstractions
+  nameWithType: Biwen.QuickApi.Contents.Abstractions
+  fullName: Biwen.QuickApi.Contents.Abstractions
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Contents
+references:
+- uid: Biwen.QuickApi.Contents.Abstractions.IContent
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.IContent
+  parent: Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContent.html
+  name: IContent
+  nameWithType: IContent
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContent
+- uid: Biwen.QuickApi.Contents.Abstractions.ContentBase`1
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.ContentBase`1
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.ContentBase-1.html
+  name: ContentBase<T>
+  nameWithType: ContentBase<T>
+  fullName: Biwen.QuickApi.Contents.Abstractions.ContentBase<T>
+  nameWithType.vb: ContentBase(Of T)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.ContentBase(Of T)
+  name.vb: ContentBase(Of T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.ContentBase`1
+    name: ContentBase
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.ContentBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.ContentBase`1
+    name: ContentBase
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.ContentBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  parent: Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html
+  name: IContentRepository
+  nameWithType: IContentRepository
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  parent: Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  name: IContentSchemaGenerator
+  nameWithType: IContentSchemaGenerator
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+- uid: Biwen.QuickApi.Contents.Abstractions.IFieldType
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.IFieldType
+  parent: Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IFieldType.html
+  name: IFieldType
+  nameWithType: IFieldType
+  fullName: Biwen.QuickApi.Contents.Abstractions.IFieldType
+- uid: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions
+  parent: Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions.html
+  name: FieldTypeExtensions
+  nameWithType: FieldTypeExtensions
+  fullName: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions
+- uid: Biwen.QuickApi.Contents.Abstractions
+  commentId: N:Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Abstractions
+  nameWithType: Biwen.QuickApi.Contents.Abstractions
+  fullName: Biwen.QuickApi.Contents.Abstractions
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.html

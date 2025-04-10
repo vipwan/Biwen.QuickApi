@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
@@ -54,7 +54,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent.TaskStartedEvent(Biwen.QuickApi.Scheduling.IScheduleTask, System.DateTime)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Scheduling/Events/ScheduleTaskEvent.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling.Events
@@ -145,7 +145,7 @@ references:
   commentId: T:Biwen.QuickApi.Events.IEvent
   parent: Biwen.QuickApi.Events
   isExternal: true
-  href: Biwen.QuickApi.Events.IEvent.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Events/IEvent.cs
   name: IEvent
   nameWithType: IEvent
   fullName: Biwen.QuickApi.Events.IEvent

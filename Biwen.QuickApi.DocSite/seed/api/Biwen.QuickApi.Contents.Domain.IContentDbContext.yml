@@ -1,0 +1,680 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+  commentId: T:Biwen.QuickApi.Contents.Domain.IContentDbContext
+  id: IContentDbContext
+  parent: Biwen.QuickApi.Contents.Domain
+  children:
+  - Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentAuditLogs
+  - Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentVersions
+  - Biwen.QuickApi.Contents.Domain.IContentDbContext.Contents
+  langs:
+  - csharp
+  - vb
+  name: IContentDbContext
+  nameWithType: IContentDbContext
+  fullName: Biwen.QuickApi.Contents.Domain.IContentDbContext
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Domain/IContentDbContext.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Domain
+  syntax:
+    content: 'public interface IContentDbContext : ICurrentDbContext'
+    content.vb: Public Interface IContentDbContext Inherits ICurrentDbContext
+  inheritedMembers:
+  - Microsoft.EntityFrameworkCore.Infrastructure.ICurrentDbContext.Context
+  extensionMethods:
+  - Biwen.QuickApi.Contents.Domain.IContentDbContext.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Contents.Domain.IContentDbContext.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Contents.Domain.IContentDbContext.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext.Contents
+  commentId: P:Biwen.QuickApi.Contents.Domain.IContentDbContext.Contents
+  id: Contents
+  parent: Biwen.QuickApi.Contents.Domain.IContentDbContext
+  langs:
+  - csharp
+  - vb
+  name: Contents
+  nameWithType: IContentDbContext.Contents
+  fullName: Biwen.QuickApi.Contents.Domain.IContentDbContext.Contents
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Domain/IContentDbContext.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Domain
+  syntax:
+    content: DbSet<Content> Contents { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{Biwen.QuickApi.Contents.Domain.Content}
+    content.vb: Property Contents As DbSet(Of Content)
+  overload: Biwen.QuickApi.Contents.Domain.IContentDbContext.Contents*
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentAuditLogs
+  commentId: P:Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentAuditLogs
+  id: ContentAuditLogs
+  parent: Biwen.QuickApi.Contents.Domain.IContentDbContext
+  langs:
+  - csharp
+  - vb
+  name: ContentAuditLogs
+  nameWithType: IContentDbContext.ContentAuditLogs
+  fullName: Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentAuditLogs
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Domain/IContentDbContext.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Domain
+  syntax:
+    content: DbSet<ContentAuditLog> ContentAuditLogs { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{Biwen.QuickApi.Contents.Domain.ContentAuditLog}
+    content.vb: Property ContentAuditLogs As DbSet(Of ContentAuditLog)
+  overload: Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentAuditLogs*
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentVersions
+  commentId: P:Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentVersions
+  id: ContentVersions
+  parent: Biwen.QuickApi.Contents.Domain.IContentDbContext
+  langs:
+  - csharp
+  - vb
+  name: ContentVersions
+  nameWithType: IContentDbContext.ContentVersions
+  fullName: Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentVersions
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Domain/IContentDbContext.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Domain
+  syntax:
+    content: DbSet<ContentVersion> ContentVersions { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{Biwen.QuickApi.Contents.Domain.ContentVersion}
+    content.vb: Property ContentVersions As DbSet(Of ContentVersion)
+  overload: Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentVersions*
+references:
+- uid: Biwen.QuickApi.Contents.Domain
+  commentId: N:Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Domain
+  nameWithType: Biwen.QuickApi.Contents.Domain
+  fullName: Biwen.QuickApi.Contents.Domain
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html
+- uid: Microsoft.EntityFrameworkCore.Infrastructure.ICurrentDbContext.Context
+  commentId: P:Microsoft.EntityFrameworkCore.Infrastructure.ICurrentDbContext.Context
+  parent: Microsoft.EntityFrameworkCore.Infrastructure.ICurrentDbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.icurrentdbcontext.context
+  name: Context
+  nameWithType: ICurrentDbContext.Context
+  fullName: Microsoft.EntityFrameworkCore.Infrastructure.ICurrentDbContext.Context
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<IContentDbContext>(IContentDbContext)
+  nameWithType: EntityExtensions.PublishAddedAsync<IContentDbContext>(IContentDbContext)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Contents.Domain.IContentDbContext>(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of IContentDbContext)(IContentDbContext)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Contents.Domain.IContentDbContext)(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+  name.vb: PublishAddedAsync(Of IContentDbContext)(IContentDbContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<IContentDbContext>(IContentDbContext)
+  nameWithType: EntityExtensions.PublishDeletedAsync<IContentDbContext>(IContentDbContext)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Contents.Domain.IContentDbContext>(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of IContentDbContext)(IContentDbContext)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Contents.Domain.IContentDbContext)(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+  name.vb: PublishDeletedAsync(Of IContentDbContext)(IContentDbContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<IContentDbContext>(IContentDbContext)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<IContentDbContext>(IContentDbContext)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Contents.Domain.IContentDbContext>(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of IContentDbContext)(IContentDbContext)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Contents.Domain.IContentDbContext)(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+  name.vb: PublishUpdatedAsync(Of IContentDbContext)(IContentDbContext)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.Domain.IContentDbContext)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.Infrastructure.ICurrentDbContext
+  commentId: T:Microsoft.EntityFrameworkCore.Infrastructure.ICurrentDbContext
+  parent: Microsoft.EntityFrameworkCore.Infrastructure
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.icurrentdbcontext
+  name: ICurrentDbContext
+  nameWithType: ICurrentDbContext
+  fullName: Microsoft.EntityFrameworkCore.Infrastructure.ICurrentDbContext
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.Infrastructure
+  commentId: N:Microsoft.EntityFrameworkCore.Infrastructure
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.EntityFrameworkCore.Infrastructure
+  nameWithType: Microsoft.EntityFrameworkCore.Infrastructure
+  fullName: Microsoft.EntityFrameworkCore.Infrastructure
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext.Contents*
+  commentId: Overload:Biwen.QuickApi.Contents.Domain.IContentDbContext.Contents
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html#Biwen_QuickApi_Contents_Domain_IContentDbContext_Contents
+  name: Contents
+  nameWithType: IContentDbContext.Contents
+  fullName: Biwen.QuickApi.Contents.Domain.IContentDbContext.Contents
+- uid: Microsoft.EntityFrameworkCore.DbSet{Biwen.QuickApi.Contents.Domain.Content}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{Biwen.QuickApi.Contents.Domain.Content}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<Content>
+  nameWithType: DbSet<Content>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<Biwen.QuickApi.Contents.Domain.Content>
+  nameWithType.vb: DbSet(Of Content)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of Biwen.QuickApi.Contents.Domain.Content)
+  name.vb: DbSet(Of Content)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Domain.Content
+    name: Content
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.Content.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Domain.Content
+    name: Content
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.Content.html
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbSet`1
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<TEntity>
+  nameWithType: DbSet<TEntity>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<TEntity>
+  nameWithType.vb: DbSet(Of TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of TEntity)
+  name.vb: DbSet(Of TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: Microsoft.EntityFrameworkCore
+  commentId: N:Microsoft.EntityFrameworkCore
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.EntityFrameworkCore
+  nameWithType: Microsoft.EntityFrameworkCore
+  fullName: Microsoft.EntityFrameworkCore
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentAuditLogs*
+  commentId: Overload:Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentAuditLogs
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html#Biwen_QuickApi_Contents_Domain_IContentDbContext_ContentAuditLogs
+  name: ContentAuditLogs
+  nameWithType: IContentDbContext.ContentAuditLogs
+  fullName: Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentAuditLogs
+- uid: Microsoft.EntityFrameworkCore.DbSet{Biwen.QuickApi.Contents.Domain.ContentAuditLog}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{Biwen.QuickApi.Contents.Domain.ContentAuditLog}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<ContentAuditLog>
+  nameWithType: DbSet<ContentAuditLog>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<Biwen.QuickApi.Contents.Domain.ContentAuditLog>
+  nameWithType.vb: DbSet(Of ContentAuditLog)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of Biwen.QuickApi.Contents.Domain.ContentAuditLog)
+  name.vb: DbSet(Of ContentAuditLog)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Domain.ContentAuditLog
+    name: ContentAuditLog
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.ContentAuditLog.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Domain.ContentAuditLog
+    name: ContentAuditLog
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.ContentAuditLog.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentVersions*
+  commentId: Overload:Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentVersions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html#Biwen_QuickApi_Contents_Domain_IContentDbContext_ContentVersions
+  name: ContentVersions
+  nameWithType: IContentDbContext.ContentVersions
+  fullName: Biwen.QuickApi.Contents.Domain.IContentDbContext.ContentVersions
+- uid: Microsoft.EntityFrameworkCore.DbSet{Biwen.QuickApi.Contents.Domain.ContentVersion}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{Biwen.QuickApi.Contents.Domain.ContentVersion}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<ContentVersion>
+  nameWithType: DbSet<ContentVersion>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<Biwen.QuickApi.Contents.Domain.ContentVersion>
+  nameWithType.vb: DbSet(Of ContentVersion)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of Biwen.QuickApi.Contents.Domain.ContentVersion)
+  name.vb: DbSet(Of ContentVersion)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Domain.ContentVersion
+    name: ContentVersion
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.ContentVersion.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Domain.ContentVersion
+    name: ContentVersion
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.ContentVersion.html
+  - name: )

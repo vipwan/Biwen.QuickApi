@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -57,19 +57,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions.AddUnitOfWork<TContext>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
+  summary: 添加工作单元
+  example: []
   syntax:
     content: 'public static IServiceCollection AddUnitOfWork<TContext>(this IServiceCollection services) where TContext : DbContext'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
     typeParameters:
     - id: TContext
+      description: ''
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
     content.vb: Public Shared Function AddUnitOfWork(Of TContext As DbContext)(services As IServiceCollection) As IServiceCollection
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions.AddUnitOfWork*
   nameWithType.vb: UnitOfWorkServiceCollectionExtensions.AddUnitOfWork(Of TContext)(IServiceCollection)
@@ -88,20 +93,26 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions.AddUnitOfWork<TContext1, TContext2>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
+  summary: 添加工作单元
+  example: []
   syntax:
     content: 'public static IServiceCollection AddUnitOfWork<TContext1, TContext2>(this IServiceCollection services) where TContext1 : DbContext where TContext2 : DbContext'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
     typeParameters:
     - id: TContext1
+      description: ''
     - id: TContext2
+      description: ''
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
     content.vb: Public Shared Function AddUnitOfWork(Of TContext1 As DbContext, TContext2 As DbContext)(services As IServiceCollection) As IServiceCollection
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions.AddUnitOfWork*
   nameWithType.vb: UnitOfWorkServiceCollectionExtensions.AddUnitOfWork(Of TContext1, TContext2)(IServiceCollection)
@@ -120,7 +131,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions.AddUnitOfWork<TContext1, TContext2, TContext3>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -153,7 +164,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions.AddCustomRepository<TEntity, TRepository>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWorkServiceCollectionExtensions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork

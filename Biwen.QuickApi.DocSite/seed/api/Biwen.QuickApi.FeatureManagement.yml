@@ -4,7 +4,6 @@ items:
   commentId: N:Biwen.QuickApi.FeatureManagement
   id: Biwen.QuickApi.FeatureManagement
   children:
-  - Biwen.QuickApi.FeatureManagement.AutoInjectExtension
   - Biwen.QuickApi.FeatureManagement.Constants
   - Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions
   - Biwen.QuickApi.FeatureManagement.ServiceRegistration
@@ -39,10 +38,3 @@ references:
   name: ServiceRegistration
   nameWithType: ServiceRegistration
   fullName: Biwen.QuickApi.FeatureManagement.ServiceRegistration
-- uid: Biwen.QuickApi.FeatureManagement.AutoInjectExtension
-  commentId: T:Biwen.QuickApi.FeatureManagement.AutoInjectExtension
-  isExternal: true
-  href: Biwen.QuickApi.FeatureManagement.AutoInjectExtension.html
-  name: AutoInjectExtension
-  nameWithType: AutoInjectExtension
-  fullName: Biwen.QuickApi.FeatureManagement.AutoInjectExtension

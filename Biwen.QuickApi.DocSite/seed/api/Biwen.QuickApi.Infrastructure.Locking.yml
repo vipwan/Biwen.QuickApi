@@ -22,7 +22,7 @@ references:
   commentId: T:Biwen.QuickApi.Infrastructure.Locking.ILocalLock
   parent: Biwen.QuickApi.Infrastructure.Locking
   isExternal: true
-  href: Biwen.QuickApi.Infrastructure.Locking.ILocalLock.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/Locking/ILock.cs
   name: ILocalLock
   nameWithType: ILocalLock
   fullName: Biwen.QuickApi.Infrastructure.Locking.ILocalLock

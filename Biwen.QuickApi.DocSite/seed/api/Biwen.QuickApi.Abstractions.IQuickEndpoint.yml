@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions
@@ -36,7 +36,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint.Verbs
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions
@@ -62,7 +62,7 @@ items:
   fullName: Biwen.QuickApi.Abstractions.IQuickEndpoint.Handler
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Abstractions/IQuickEndpoint.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions
@@ -125,7 +125,7 @@ references:
   commentId: T:Biwen.QuickApi.Verb
   parent: Biwen.QuickApi
   isExternal: true
-  href: Biwen.QuickApi.Verb.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Verb.cs
   name: Verb
   nameWithType: Verb
   fullName: Biwen.QuickApi.Verb

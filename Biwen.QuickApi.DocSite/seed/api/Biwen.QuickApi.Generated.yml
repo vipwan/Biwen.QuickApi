@@ -1,0 +1,32 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Generated
+  commentId: N:Biwen.QuickApi.Generated
+  id: Biwen.QuickApi.Generated
+  children:
+  - Biwen.QuickApi.Generated.AssemblyMetadata
+  - Biwen.QuickApi.Generated.Version
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Generated
+  nameWithType: Biwen.QuickApi.Generated
+  fullName: Biwen.QuickApi.Generated
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi
+references:
+- uid: Biwen.QuickApi.Generated.AssemblyMetadata
+  commentId: T:Biwen.QuickApi.Generated.AssemblyMetadata
+  isExternal: true
+  href: Biwen.QuickApi.Generated.AssemblyMetadata.html
+  name: AssemblyMetadata
+  nameWithType: AssemblyMetadata
+  fullName: Biwen.QuickApi.Generated.AssemblyMetadata
+- uid: Biwen.QuickApi.Generated.Version
+  commentId: T:Biwen.QuickApi.Generated.Version
+  isExternal: true
+  href: Biwen.QuickApi.Generated.Version.html
+  name: Version
+  nameWithType: Version
+  fullName: Biwen.QuickApi.Generated.Version

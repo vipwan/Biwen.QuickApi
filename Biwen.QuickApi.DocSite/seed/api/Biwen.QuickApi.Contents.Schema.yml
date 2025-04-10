@@ -1,0 +1,32 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Schema
+  commentId: N:Biwen.QuickApi.Contents.Schema
+  id: Biwen.QuickApi.Contents.Schema
+  children:
+  - Biwen.QuickApi.Contents.Schema.FormilySchemaGenerator
+  - Biwen.QuickApi.Contents.Schema.XRenderSchemaGenerator
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Contents.Schema
+  nameWithType: Biwen.QuickApi.Contents.Schema
+  fullName: Biwen.QuickApi.Contents.Schema
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Contents
+references:
+- uid: Biwen.QuickApi.Contents.Schema.FormilySchemaGenerator
+  commentId: T:Biwen.QuickApi.Contents.Schema.FormilySchemaGenerator
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Schema.FormilySchemaGenerator.html
+  name: FormilySchemaGenerator
+  nameWithType: FormilySchemaGenerator
+  fullName: Biwen.QuickApi.Contents.Schema.FormilySchemaGenerator
+- uid: Biwen.QuickApi.Contents.Schema.XRenderSchemaGenerator
+  commentId: T:Biwen.QuickApi.Contents.Schema.XRenderSchemaGenerator
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Schema.XRenderSchemaGenerator.html
+  name: XRenderSchemaGenerator
+  nameWithType: XRenderSchemaGenerator
+  fullName: Biwen.QuickApi.Contents.Schema.XRenderSchemaGenerator

@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json#",
 
   "metadata": [
@@ -12,7 +12,8 @@
             "**/bin/Debug/net9.0/Biwen.QuickApi.Logging.Serilog.dll",
             "**/bin/Debug/net9.0/Biwen.QuickApi.MiniProfiler.dll",
             "**/bin/Debug/net9.0/Biwen.QuickApi.FeatureManagement.dll",
-            "**/bin/Debug/net9.0/Biwen.QuickApi.Telemetry.dll"
+            "**/bin/Debug/net9.0/Biwen.QuickApi.Telemetry.dll",
+            "**/bin/Debug/net9.0/Biwen.QuickApi.Contents.dll"
           ],
           "src": "../"
         }
@@ -26,7 +27,7 @@
     ],
     "content": [
       {
-        "files": [ "articles/**/*.{md,yml}", "*.md", "toc.yml", "restapi/**", "api/*.yml" ]
+        "files": [ "articles/**/*.{md,yml}", "articles/CMS/*.{md,yml}", "*.md", "toc.yml", "restapi/**", "api/*.yml" ]
       }
     ],
     "resource": [

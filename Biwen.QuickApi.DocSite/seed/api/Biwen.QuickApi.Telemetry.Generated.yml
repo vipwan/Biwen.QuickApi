@@ -1,0 +1,32 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Telemetry.Generated
+  commentId: N:Biwen.QuickApi.Telemetry.Generated
+  id: Biwen.QuickApi.Telemetry.Generated
+  children:
+  - Biwen.QuickApi.Telemetry.Generated.AssemblyMetadata
+  - Biwen.QuickApi.Telemetry.Generated.Version
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Telemetry.Generated
+  nameWithType: Biwen.QuickApi.Telemetry.Generated
+  fullName: Biwen.QuickApi.Telemetry.Generated
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Telemetry
+references:
+- uid: Biwen.QuickApi.Telemetry.Generated.AssemblyMetadata
+  commentId: T:Biwen.QuickApi.Telemetry.Generated.AssemblyMetadata
+  isExternal: true
+  href: Biwen.QuickApi.Telemetry.Generated.AssemblyMetadata.html
+  name: AssemblyMetadata
+  nameWithType: AssemblyMetadata
+  fullName: Biwen.QuickApi.Telemetry.Generated.AssemblyMetadata
+- uid: Biwen.QuickApi.Telemetry.Generated.Version
+  commentId: T:Biwen.QuickApi.Telemetry.Generated.Version
+  isExternal: true
+  href: Biwen.QuickApi.Telemetry.Generated.Version.html
+  name: Version
+  nameWithType: Version
+  fullName: Biwen.QuickApi.Telemetry.Generated.Version

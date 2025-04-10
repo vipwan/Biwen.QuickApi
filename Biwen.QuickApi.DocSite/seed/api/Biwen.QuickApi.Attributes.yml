@@ -43,8 +43,9 @@ references:
   fullName: Biwen.QuickApi.Attributes.JustAsServiceAttribute
 - uid: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
   commentId: T:Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
+  parent: Biwen.QuickApi.Attributes
   isExternal: true
-  href: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/OpenApiMetadataAttribute.cs
   name: OpenApiMetadataAttribute
   nameWithType: OpenApiMetadataAttribute
   fullName: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
@@ -52,7 +53,7 @@ references:
   commentId: T:Biwen.QuickApi.Attributes.QuickApiAttribute
   parent: Biwen.QuickApi.Attributes
   isExternal: true
-  href: Biwen.QuickApi.Attributes.QuickApiAttribute.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   name: QuickApiAttribute
   nameWithType: QuickApiAttribute
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute

@@ -8,6 +8,7 @@ items:
   - Biwen.QuickApi.BaseRequest`1.#ctor
   - Biwen.QuickApi.BaseRequest`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
   - Biwen.QuickApi.BaseRequest`1.Validate
+  - Biwen.QuickApi.BaseRequest`1.ValidateAsync(System.Threading.CancellationToken)
   langs:
   - csharp
   - vb
@@ -16,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -29,6 +30,10 @@ items:
   - System.Object
   derivedClasses:
   - Biwen.QuickApi.BaseRequestFromBody`1
+  - Biwen.QuickApi.Contents.Apis.AuditLogQueryRequest
+  - Biwen.QuickApi.Contents.Apis.CreateContentRequest
+  - Biwen.QuickApi.Contents.Apis.PageRequest
+  - Biwen.QuickApi.Contents.Apis.UpdateContentRequest
   - Biwen.QuickApi.EmptyRequest
   inheritedMembers:
   - System.Object.GetType
@@ -57,7 +62,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>.RuleFor<TProperty>(System.Linq.Expressions.Expression<System.Func<T, TProperty>>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -92,7 +97,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>.Validate()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -107,6 +112,37 @@ items:
   overload: Biwen.QuickApi.BaseRequest`1.Validate*
   nameWithType.vb: BaseRequest(Of T).Validate()
   fullName.vb: Biwen.QuickApi.BaseRequest(Of T).Validate()
+- uid: Biwen.QuickApi.BaseRequest`1.ValidateAsync(System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseRequest`1.ValidateAsync(System.Threading.CancellationToken)
+  id: ValidateAsync(System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.BaseRequest`1
+  langs:
+  - csharp
+  - vb
+  name: ValidateAsync(CancellationToken)
+  nameWithType: BaseRequest<T>.ValidateAsync(CancellationToken)
+  fullName: Biwen.QuickApi.BaseRequest<T>.ValidateAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
+  assemblies:
+  - Biwen.QuickApi
+  namespace: Biwen.QuickApi
+  summary: 异步验证请求对象
+  example: []
+  syntax:
+    content: public Task<ValidationResult> ValidateAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{FluentValidation.Results.ValidationResult}
+      description: ''
+    content.vb: Public Function ValidateAsync(cancellationToken As CancellationToken = Nothing) As Task(Of ValidationResult)
+  overload: Biwen.QuickApi.BaseRequest`1.ValidateAsync*
+  nameWithType.vb: BaseRequest(Of T).ValidateAsync(CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseRequest(Of T).ValidateAsync(System.Threading.CancellationToken)
 - uid: Biwen.QuickApi.BaseRequest`1.#ctor
   commentId: M:Biwen.QuickApi.BaseRequest`1.#ctor
   id: '#ctor'
@@ -119,7 +155,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequest<T>.BaseRequest()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -971,6 +1007,148 @@ references:
   - uid: FluentValidation.Results
     name: Results
     isExternal: true
+- uid: Biwen.QuickApi.BaseRequest`1.ValidateAsync*
+  commentId: Overload:Biwen.QuickApi.BaseRequest`1.ValidateAsync
+  isExternal: true
+  href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_ValidateAsync_System_Threading_CancellationToken_
+  name: ValidateAsync
+  nameWithType: BaseRequest<T>.ValidateAsync
+  fullName: Biwen.QuickApi.BaseRequest<T>.ValidateAsync
+  nameWithType.vb: BaseRequest(Of T).ValidateAsync
+  fullName.vb: Biwen.QuickApi.BaseRequest(Of T).ValidateAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{FluentValidation.Results.ValidationResult}
+  commentId: T:System.Threading.Tasks.Task{FluentValidation.Results.ValidationResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ValidationResult>
+  nameWithType: Task<ValidationResult>
+  fullName: System.Threading.Tasks.Task<FluentValidation.Results.ValidationResult>
+  nameWithType.vb: Task(Of ValidationResult)
+  fullName.vb: System.Threading.Tasks.Task(Of FluentValidation.Results.ValidationResult)
+  name.vb: Task(Of ValidationResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: FluentValidation.Results.ValidationResult
+    name: ValidationResult
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FluentValidation.Results.ValidationResult
+    name: ValidationResult
+    isExternal: true
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
 - uid: Biwen.QuickApi.BaseRequest`1.#ctor*
   commentId: Overload:Biwen.QuickApi.BaseRequest`1.#ctor
   isExternal: true

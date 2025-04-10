@@ -48,7 +48,7 @@ references:
   commentId: T:Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
   parent: Biwen.QuickApi.Infrastructure
   isExternal: true
-  href: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/SuppressTypeAttribute.cs
   name: SuppressTypeAttribute
   nameWithType: SuppressTypeAttribute
   fullName: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute

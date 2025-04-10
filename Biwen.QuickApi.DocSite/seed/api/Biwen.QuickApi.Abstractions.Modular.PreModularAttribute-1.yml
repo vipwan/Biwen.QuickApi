@@ -9,12 +9,12 @@ items:
   langs:
   - csharp
   - vb
-  name: PreModularAttribute<T>
-  nameWithType: PreModularAttribute<T>
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>
+  name: PreModularAttribute<T1>
+  nameWithType: PreModularAttribute<T1>
+  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T1>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular
@@ -24,14 +24,14 @@ items:
     content: >-
       [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
 
-      public class PreModularAttribute<T> : Attribute where T : ModularBase
+      public class PreModularAttribute<T1> : Attribute where T1 : ModularBase
     typeParameters:
-    - id: T
+    - id: T1
       description: ''
     content.vb: >-
       <AttributeUsage(AttributeTargets.Class, AllowMultiple:=False)>
 
-      Public Class PreModularAttribute(Of T As ModularBase) Inherits Attribute
+      Public Class PreModularAttribute(Of T1 As ModularBase) Inherits Attribute
   inheritance:
   - System.Object
   - System.Attribute
@@ -92,9 +92,9 @@ items:
     - name: AllowMultiple
       type: System.Boolean
       value: false
-  nameWithType.vb: PreModularAttribute(Of T)
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T)
-  name.vb: PreModularAttribute(Of T)
+  nameWithType.vb: PreModularAttribute(Of T1)
+  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T1)
+  name.vb: PreModularAttribute(Of T1)
 - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
   commentId: M:Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor
   id: '#ctor'
@@ -103,11 +103,11 @@ items:
   - csharp
   - vb
   name: PreModularAttribute()
-  nameWithType: PreModularAttribute<T>.PreModularAttribute()
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>.PreModularAttribute()
+  nameWithType: PreModularAttribute<T1>.PreModularAttribute()
+  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T1>.PreModularAttribute()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Abstractions/Modular/PreModularAttribute.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Abstractions.Modular
@@ -115,8 +115,8 @@ items:
     content: public PreModularAttribute()
     content.vb: Public Sub New()
   overload: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.#ctor*
-  nameWithType.vb: PreModularAttribute(Of T).New()
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T).New()
+  nameWithType.vb: PreModularAttribute(Of T1).New()
+  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T1).New()
   name.vb: New()
 references:
 - uid: Biwen.QuickApi.Abstractions.Modular
@@ -1958,12 +1958,12 @@ references:
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
-  name: PublishAddedAsync<PreModularAttribute<T>>(PreModularAttribute<T>)
-  nameWithType: EntityExtensions.PublishAddedAsync<PreModularAttribute<T>>(PreModularAttribute<T>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>>(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>)
-  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of PreModularAttribute(Of T))(PreModularAttribute(Of T))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T))(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T))
-  name.vb: PublishAddedAsync(Of PreModularAttribute(Of T))(PreModularAttribute(Of T))
+  name: PublishAddedAsync<PreModularAttribute<T1>>(PreModularAttribute<T1>)
+  nameWithType: EntityExtensions.PublishAddedAsync<PreModularAttribute<T1>>(PreModularAttribute<T1>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T1>>(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T1>)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of PreModularAttribute(Of T1))(PreModularAttribute(Of T1))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T1))(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T1))
+  name.vb: PublishAddedAsync(Of PreModularAttribute(Of T1))(PreModularAttribute(Of T1))
   spec.csharp:
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute{`0})
     name: PublishAddedAsync
@@ -1975,7 +1975,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html
   - name: <
-  - name: T
+  - name: T1
   - name: '>'
   - name: '>'
   - name: (
@@ -1984,7 +1984,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html
   - name: <
-  - name: T
+  - name: T1
   - name: '>'
   - name: )
   spec.vb:
@@ -2002,7 +2002,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: T1
   - name: )
   - name: )
   - name: (
@@ -2013,7 +2013,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: T1
   - name: )
   - name: )
 - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
@@ -2021,12 +2021,12 @@ references:
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
-  name: PublishDeletedAsync<PreModularAttribute<T>>(PreModularAttribute<T>)
-  nameWithType: EntityExtensions.PublishDeletedAsync<PreModularAttribute<T>>(PreModularAttribute<T>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>>(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>)
-  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of PreModularAttribute(Of T))(PreModularAttribute(Of T))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T))(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T))
-  name.vb: PublishDeletedAsync(Of PreModularAttribute(Of T))(PreModularAttribute(Of T))
+  name: PublishDeletedAsync<PreModularAttribute<T1>>(PreModularAttribute<T1>)
+  nameWithType: EntityExtensions.PublishDeletedAsync<PreModularAttribute<T1>>(PreModularAttribute<T1>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T1>>(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T1>)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of PreModularAttribute(Of T1))(PreModularAttribute(Of T1))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T1))(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T1))
+  name.vb: PublishDeletedAsync(Of PreModularAttribute(Of T1))(PreModularAttribute(Of T1))
   spec.csharp:
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute{`0})
     name: PublishDeletedAsync
@@ -2038,7 +2038,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html
   - name: <
-  - name: T
+  - name: T1
   - name: '>'
   - name: '>'
   - name: (
@@ -2047,7 +2047,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html
   - name: <
-  - name: T
+  - name: T1
   - name: '>'
   - name: )
   spec.vb:
@@ -2065,7 +2065,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: T1
   - name: )
   - name: )
   - name: (
@@ -2076,7 +2076,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: T1
   - name: )
   - name: )
 - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
@@ -2084,12 +2084,12 @@ references:
   parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
   definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
   href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
-  name: PublishUpdatedAsync<PreModularAttribute<T>>(PreModularAttribute<T>)
-  nameWithType: EntityExtensions.PublishUpdatedAsync<PreModularAttribute<T>>(PreModularAttribute<T>)
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>>(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>)
-  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of PreModularAttribute(Of T))(PreModularAttribute(Of T))
-  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T))(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T))
-  name.vb: PublishUpdatedAsync(Of PreModularAttribute(Of T))(PreModularAttribute(Of T))
+  name: PublishUpdatedAsync<PreModularAttribute<T1>>(PreModularAttribute<T1>)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<PreModularAttribute<T1>>(PreModularAttribute<T1>)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T1>>(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T1>)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of PreModularAttribute(Of T1))(PreModularAttribute(Of T1))
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T1))(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T1))
+  name.vb: PublishUpdatedAsync(Of PreModularAttribute(Of T1))(PreModularAttribute(Of T1))
   spec.csharp:
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Abstractions.Modular.PreModularAttribute{`0})
     name: PublishUpdatedAsync
@@ -2101,7 +2101,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html
   - name: <
-  - name: T
+  - name: T1
   - name: '>'
   - name: '>'
   - name: (
@@ -2110,7 +2110,7 @@ references:
     isExternal: true
     href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html
   - name: <
-  - name: T
+  - name: T1
   - name: '>'
   - name: )
   spec.vb:
@@ -2128,7 +2128,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: T1
   - name: )
   - name: )
   - name: (
@@ -2139,7 +2139,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: T1
   - name: )
   - name: )
 - uid: System
@@ -2311,8 +2311,8 @@ references:
   isExternal: true
   href: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute-1.html#Biwen_QuickApi_Abstractions_Modular_PreModularAttribute_1__ctor
   name: PreModularAttribute
-  nameWithType: PreModularAttribute<T>.PreModularAttribute
-  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T>.PreModularAttribute
-  nameWithType.vb: PreModularAttribute(Of T).New
-  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T).New
+  nameWithType: PreModularAttribute<T1>.PreModularAttribute
+  fullName: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute<T1>.PreModularAttribute
+  nameWithType.vb: PreModularAttribute(Of T1).New
+  fullName.vb: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute(Of T1).New
   name.vb: New

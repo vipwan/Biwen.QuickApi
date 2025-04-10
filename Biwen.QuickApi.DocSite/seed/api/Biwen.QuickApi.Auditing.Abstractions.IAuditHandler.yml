@@ -5,7 +5,7 @@ items:
   id: IAuditHandler
   parent: Biwen.QuickApi.Auditing.Abstractions
   children:
-  - Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle(Biwen.QuickApi.Auditing.AuditInfo)
+  - Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.HandleAsync(Biwen.QuickApi.Auditing.AuditInfo)
   langs:
   - csharp
   - vb
@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Auditing/Abstractions/IAuditHandler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Auditing/Abstractions/IAuditHandler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing.Abstractions
@@ -25,34 +25,34 @@ items:
   - Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
   - Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
   - Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
-- uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle(Biwen.QuickApi.Auditing.AuditInfo)
-  commentId: M:Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle(Biwen.QuickApi.Auditing.AuditInfo)
-  id: Handle(Biwen.QuickApi.Auditing.AuditInfo)
+- uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.HandleAsync(Biwen.QuickApi.Auditing.AuditInfo)
+  commentId: M:Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.HandleAsync(Biwen.QuickApi.Auditing.AuditInfo)
+  id: HandleAsync(Biwen.QuickApi.Auditing.AuditInfo)
   parent: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
   langs:
   - csharp
   - vb
-  name: Handle(AuditInfo)
-  nameWithType: IAuditHandler.Handle(AuditInfo)
-  fullName: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle(Biwen.QuickApi.Auditing.AuditInfo)
+  name: HandleAsync(AuditInfo)
+  nameWithType: IAuditHandler.HandleAsync(AuditInfo)
+  fullName: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.HandleAsync(Biwen.QuickApi.Auditing.AuditInfo)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Auditing/Abstractions/IAuditHandler.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Auditing/Abstractions/IAuditHandler.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Auditing.Abstractions
   summary: 处理审计日志
   example: []
   syntax:
-    content: Task Handle(AuditInfo auditInfo)
+    content: Task HandleAsync(AuditInfo auditInfo)
     parameters:
     - id: auditInfo
       type: Biwen.QuickApi.Auditing.AuditInfo
       description: ''
     return:
       type: System.Threading.Tasks.Task
-    content.vb: Function Handle(auditInfo As AuditInfo) As Task
-  overload: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle*
+    content.vb: Function HandleAsync(auditInfo As AuditInfo) As Task
+  overload: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.HandleAsync*
 references:
 - uid: Biwen.QuickApi.Auditing.Abstractions
   commentId: N:Biwen.QuickApi.Auditing.Abstractions
@@ -399,13 +399,13 @@ references:
     name: EntityEvents
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.html
-- uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle*
-  commentId: Overload:Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle
+- uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.HandleAsync*
+  commentId: Overload:Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.HandleAsync
   isExternal: true
-  href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html#Biwen_QuickApi_Auditing_Abstractions_IAuditHandler_Handle_Biwen_QuickApi_Auditing_AuditInfo_
-  name: Handle
-  nameWithType: IAuditHandler.Handle
-  fullName: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.Handle
+  href: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.html#Biwen_QuickApi_Auditing_Abstractions_IAuditHandler_HandleAsync_Biwen_QuickApi_Auditing_AuditInfo_
+  name: HandleAsync
+  nameWithType: IAuditHandler.HandleAsync
+  fullName: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler.HandleAsync
 - uid: Biwen.QuickApi.Auditing.AuditInfo
   commentId: T:Biwen.QuickApi.Auditing.AuditInfo
   parent: Biwen.QuickApi.Auditing

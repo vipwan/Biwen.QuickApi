@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Microsoft.AspNetCore.Http
+  commentId: N:Microsoft.AspNetCore.Http
+  id: Microsoft.AspNetCore.Http
+  children:
+  - Microsoft.AspNetCore.Http.FeatureRouteHandlerBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: Microsoft.AspNetCore.Http
+  nameWithType: Microsoft.AspNetCore.Http
+  fullName: Microsoft.AspNetCore.Http
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.FeatureManagement
+references:
+- uid: Microsoft.AspNetCore.Http.FeatureRouteHandlerBuilderExtensions
+  commentId: T:Microsoft.AspNetCore.Http.FeatureRouteHandlerBuilderExtensions
+  isExternal: true
+  href: Microsoft.AspNetCore.Http.FeatureRouteHandlerBuilderExtensions.html
+  name: FeatureRouteHandlerBuilderExtensions
+  nameWithType: FeatureRouteHandlerBuilderExtensions
+  fullName: Microsoft.AspNetCore.Http.FeatureRouteHandlerBuilderExtensions

@@ -1,0 +1,628 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  id: IContentSchemaGenerator
+  parent: Biwen.QuickApi.Contents.Abstractions
+  children:
+  - Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema(System.Type)
+  - Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson(System.Type,System.Text.Json.JsonSerializerOptions)
+  - Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson``1(System.Text.Json.JsonSerializerOptions)
+  - Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema``1
+  langs:
+  - csharp
+  - vb
+  name: IContentSchemaGenerator
+  nameWithType: IContentSchemaGenerator
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  type: Interface
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Abstractions/IContentSchemaGenerator.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Abstractions
+  syntax:
+    content: public interface IContentSchemaGenerator
+    content.vb: Public Interface IContentSchemaGenerator
+  extensionMethods:
+  - Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema``1
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema``1
+  id: GenerateSchema``1
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateSchema<T>()
+  nameWithType: IContentSchemaGenerator.GenerateSchema<T>()
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema<T>()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Abstractions/IContentSchemaGenerator.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Abstractions
+  syntax:
+    content: 'JsonObject GenerateSchema<T>() where T : IContent'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Function GenerateSchema(Of T As IContent)() As JsonObject
+  overload: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema*
+  nameWithType.vb: IContentSchemaGenerator.GenerateSchema(Of T)()
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema(Of T)()
+  name.vb: GenerateSchema(Of T)()
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema(System.Type)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema(System.Type)
+  id: GenerateSchema(System.Type)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateSchema(Type)
+  nameWithType: IContentSchemaGenerator.GenerateSchema(Type)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema(System.Type)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Abstractions/IContentSchemaGenerator.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Abstractions
+  syntax:
+    content: JsonObject GenerateSchema(Type contentType)
+    parameters:
+    - id: contentType
+      type: System.Type
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Function GenerateSchema(contentType As Type) As JsonObject
+  overload: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema*
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson``1(System.Text.Json.JsonSerializerOptions)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson``1(System.Text.Json.JsonSerializerOptions)
+  id: GenerateSchemaJson``1(System.Text.Json.JsonSerializerOptions)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateSchemaJson<T>(JsonSerializerOptions?)
+  nameWithType: IContentSchemaGenerator.GenerateSchemaJson<T>(JsonSerializerOptions?)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson<T>(System.Text.Json.JsonSerializerOptions?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Abstractions/IContentSchemaGenerator.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Abstractions
+  syntax:
+    content: 'string GenerateSchemaJson<T>(JsonSerializerOptions? options = null) where T : IContent'
+    parameters:
+    - id: options
+      type: System.Text.Json.JsonSerializerOptions
+    typeParameters:
+    - id: T
+    return:
+      type: System.String
+    content.vb: Function GenerateSchemaJson(Of T As IContent)(options As JsonSerializerOptions = Nothing) As String
+  overload: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson*
+  nameWithType.vb: IContentSchemaGenerator.GenerateSchemaJson(Of T)(JsonSerializerOptions)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson(Of T)(System.Text.Json.JsonSerializerOptions)
+  name.vb: GenerateSchemaJson(Of T)(JsonSerializerOptions)
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson(System.Type,System.Text.Json.JsonSerializerOptions)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson(System.Type,System.Text.Json.JsonSerializerOptions)
+  id: GenerateSchemaJson(System.Type,System.Text.Json.JsonSerializerOptions)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateSchemaJson(Type, JsonSerializerOptions?)
+  nameWithType: IContentSchemaGenerator.GenerateSchemaJson(Type, JsonSerializerOptions?)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson(System.Type, System.Text.Json.JsonSerializerOptions?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Abstractions/IContentSchemaGenerator.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Abstractions
+  syntax:
+    content: string GenerateSchemaJson(Type contentType, JsonSerializerOptions? options = null)
+    parameters:
+    - id: contentType
+      type: System.Type
+    - id: options
+      type: System.Text.Json.JsonSerializerOptions
+    return:
+      type: System.String
+    content.vb: Function GenerateSchemaJson(contentType As Type, options As JsonSerializerOptions = Nothing) As String
+  overload: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson*
+  nameWithType.vb: IContentSchemaGenerator.GenerateSchemaJson(Type, JsonSerializerOptions)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson(System.Type, System.Text.Json.JsonSerializerOptions)
+  name.vb: GenerateSchemaJson(Type, JsonSerializerOptions)
+references:
+- uid: Biwen.QuickApi.Contents.Abstractions
+  commentId: N:Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Abstractions
+  nameWithType: Biwen.QuickApi.Contents.Abstractions
+  fullName: Biwen.QuickApi.Contents.Abstractions
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.html
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<IContentSchemaGenerator>(IContentSchemaGenerator)
+  nameWithType: EntityExtensions.PublishAddedAsync<IContentSchemaGenerator>(IContentSchemaGenerator)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator>(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of IContentSchemaGenerator)(IContentSchemaGenerator)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+  name.vb: PublishAddedAsync(Of IContentSchemaGenerator)(IContentSchemaGenerator)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<IContentSchemaGenerator>(IContentSchemaGenerator)
+  nameWithType: EntityExtensions.PublishDeletedAsync<IContentSchemaGenerator>(IContentSchemaGenerator)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator>(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of IContentSchemaGenerator)(IContentSchemaGenerator)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+  name.vb: PublishDeletedAsync(Of IContentSchemaGenerator)(IContentSchemaGenerator)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<IContentSchemaGenerator>(IContentSchemaGenerator)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<IContentSchemaGenerator>(IContentSchemaGenerator)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator>(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of IContentSchemaGenerator)(IContentSchemaGenerator)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+  name.vb: PublishUpdatedAsync(Of IContentSchemaGenerator)(IContentSchemaGenerator)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema*
+  commentId: Overload:Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html#Biwen_QuickApi_Contents_Abstractions_IContentSchemaGenerator_GenerateSchema__1
+  name: GenerateSchema
+  nameWithType: IContentSchemaGenerator.GenerateSchema
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchema
+- uid: System.Text.Json.Nodes.JsonObject
+  commentId: T:System.Text.Json.Nodes.JsonObject
+  parent: System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  name: JsonObject
+  nameWithType: JsonObject
+  fullName: System.Text.Json.Nodes.JsonObject
+- uid: System.Text.Json.Nodes
+  commentId: N:System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Nodes
+  nameWithType: System.Text.Json.Nodes
+  fullName: System.Text.Json.Nodes
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson*
+  commentId: Overload:Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html#Biwen_QuickApi_Contents_Abstractions_IContentSchemaGenerator_GenerateSchemaJson__1_System_Text_Json_JsonSerializerOptions_
+  name: GenerateSchemaJson
+  nameWithType: IContentSchemaGenerator.GenerateSchemaJson
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.GenerateSchemaJson
+- uid: System.Text.Json.JsonSerializerOptions
+  commentId: T:System.Text.Json.JsonSerializerOptions
+  parent: System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  name: JsonSerializerOptions
+  nameWithType: JsonSerializerOptions
+  fullName: System.Text.Json.JsonSerializerOptions
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Text.Json
+  commentId: N:System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json
+  nameWithType: System.Text.Json
+  fullName: System.Text.Json
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json

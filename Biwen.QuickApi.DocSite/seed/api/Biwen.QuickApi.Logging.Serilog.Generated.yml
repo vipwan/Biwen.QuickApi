@@ -1,0 +1,32 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Logging.Serilog.Generated
+  commentId: N:Biwen.QuickApi.Logging.Serilog.Generated
+  id: Biwen.QuickApi.Logging.Serilog.Generated
+  children:
+  - Biwen.QuickApi.Logging.Serilog.Generated.AssemblyMetadata
+  - Biwen.QuickApi.Logging.Serilog.Generated.Version
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Logging.Serilog.Generated
+  nameWithType: Biwen.QuickApi.Logging.Serilog.Generated
+  fullName: Biwen.QuickApi.Logging.Serilog.Generated
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Logging.Serilog
+references:
+- uid: Biwen.QuickApi.Logging.Serilog.Generated.AssemblyMetadata
+  commentId: T:Biwen.QuickApi.Logging.Serilog.Generated.AssemblyMetadata
+  isExternal: true
+  href: Biwen.QuickApi.Logging.Serilog.Generated.AssemblyMetadata.html
+  name: AssemblyMetadata
+  nameWithType: AssemblyMetadata
+  fullName: Biwen.QuickApi.Logging.Serilog.Generated.AssemblyMetadata
+- uid: Biwen.QuickApi.Logging.Serilog.Generated.Version
+  commentId: T:Biwen.QuickApi.Logging.Serilog.Generated.Version
+  isExternal: true
+  href: Biwen.QuickApi.Logging.Serilog.Generated.Version.html
+  name: Version
+  nameWithType: Version
+  fullName: Biwen.QuickApi.Logging.Serilog.Generated.Version

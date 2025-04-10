@@ -1,0 +1,141 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Domain.ContentStatus
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentStatus
+  id: ContentStatus
+  parent: Biwen.QuickApi.Contents.Domain
+  children:
+  - Biwen.QuickApi.Contents.Domain.ContentStatus.Archived
+  - Biwen.QuickApi.Contents.Domain.ContentStatus.Draft
+  - Biwen.QuickApi.Contents.Domain.ContentStatus.Published
+  langs:
+  - csharp
+  - vb
+  name: ContentStatus
+  nameWithType: ContentStatus
+  fullName: Biwen.QuickApi.Contents.Domain.ContentStatus
+  type: Enum
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Domain/Content.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Domain
+  syntax:
+    content: public enum ContentStatus
+    content.vb: Public Enum ContentStatus
+- uid: Biwen.QuickApi.Contents.Domain.ContentStatus.Draft
+  commentId: F:Biwen.QuickApi.Contents.Domain.ContentStatus.Draft
+  id: Draft
+  parent: Biwen.QuickApi.Contents.Domain.ContentStatus
+  langs:
+  - csharp
+  - vb
+  name: Draft
+  nameWithType: ContentStatus.Draft
+  fullName: Biwen.QuickApi.Contents.Domain.ContentStatus.Draft
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Domain/Content.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Domain
+  syntax:
+    content: Draft = 0
+    return:
+      type: Biwen.QuickApi.Contents.Domain.ContentStatus
+- uid: Biwen.QuickApi.Contents.Domain.ContentStatus.Published
+  commentId: F:Biwen.QuickApi.Contents.Domain.ContentStatus.Published
+  id: Published
+  parent: Biwen.QuickApi.Contents.Domain.ContentStatus
+  langs:
+  - csharp
+  - vb
+  name: Published
+  nameWithType: ContentStatus.Published
+  fullName: Biwen.QuickApi.Contents.Domain.ContentStatus.Published
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Domain/Content.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Domain
+  syntax:
+    content: Published = 1
+    return:
+      type: Biwen.QuickApi.Contents.Domain.ContentStatus
+- uid: Biwen.QuickApi.Contents.Domain.ContentStatus.Archived
+  commentId: F:Biwen.QuickApi.Contents.Domain.ContentStatus.Archived
+  id: Archived
+  parent: Biwen.QuickApi.Contents.Domain.ContentStatus
+  langs:
+  - csharp
+  - vb
+  name: Archived
+  nameWithType: ContentStatus.Archived
+  fullName: Biwen.QuickApi.Contents.Domain.ContentStatus.Archived
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Domain/Content.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Domain
+  syntax:
+    content: Archived = 2
+    return:
+      type: Biwen.QuickApi.Contents.Domain.ContentStatus
+references:
+- uid: Biwen.QuickApi.Contents.Domain
+  commentId: N:Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Domain
+  nameWithType: Biwen.QuickApi.Contents.Domain
+  fullName: Biwen.QuickApi.Contents.Domain
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html
+- uid: Biwen.QuickApi.Contents.Domain.ContentStatus
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentStatus
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentStatus.html
+  name: ContentStatus
+  nameWithType: ContentStatus
+  fullName: Biwen.QuickApi.Contents.Domain.ContentStatus

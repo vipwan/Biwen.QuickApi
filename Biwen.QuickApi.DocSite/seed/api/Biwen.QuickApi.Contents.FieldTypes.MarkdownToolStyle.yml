@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  id: MarkdownToolStyle
+  parent: Biwen.QuickApi.Contents.FieldTypes
+  children:
+  - Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Custom
+  - Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Full
+  - Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Simple
+  - Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Standard
+  langs:
+  - csharp
+  - vb
+  name: MarkdownToolStyle
+  nameWithType: MarkdownToolStyle
+  fullName: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  type: Enum
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/FieldTypes/MarkdownFieldType.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.FieldTypes
+  syntax:
+    content: public enum MarkdownToolStyle
+    content.vb: Public Enum MarkdownToolStyle
+- uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Simple
+  commentId: F:Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Simple
+  id: Simple
+  parent: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  langs:
+  - csharp
+  - vb
+  name: Simple
+  nameWithType: MarkdownToolStyle.Simple
+  fullName: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Simple
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/FieldTypes/MarkdownFieldType.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.FieldTypes
+  syntax:
+    content: Simple = 0
+    return:
+      type: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+- uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Standard
+  commentId: F:Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Standard
+  id: Standard
+  parent: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  langs:
+  - csharp
+  - vb
+  name: Standard
+  nameWithType: MarkdownToolStyle.Standard
+  fullName: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Standard
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/FieldTypes/MarkdownFieldType.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.FieldTypes
+  syntax:
+    content: Standard = 1
+    return:
+      type: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+- uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Full
+  commentId: F:Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Full
+  id: Full
+  parent: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  langs:
+  - csharp
+  - vb
+  name: Full
+  nameWithType: MarkdownToolStyle.Full
+  fullName: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Full
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/FieldTypes/MarkdownFieldType.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.FieldTypes
+  syntax:
+    content: Full = 2
+    return:
+      type: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+- uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Custom
+  commentId: F:Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Custom
+  id: Custom
+  parent: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  langs:
+  - csharp
+  - vb
+  name: Custom
+  nameWithType: MarkdownToolStyle.Custom
+  fullName: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.Custom
+  type: Field
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/FieldTypes/MarkdownFieldType.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.FieldTypes
+  syntax:
+    content: Custom = 3
+    return:
+      type: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+references:
+- uid: Biwen.QuickApi.Contents.FieldTypes
+  commentId: N:Biwen.QuickApi.Contents.FieldTypes
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.FieldTypes
+  nameWithType: Biwen.QuickApi.Contents.FieldTypes
+  fullName: Biwen.QuickApi.Contents.FieldTypes
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.FieldTypes
+    name: FieldTypes
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.FieldTypes
+    name: FieldTypes
+    isExternal: true
+    href: Biwen.QuickApi.Contents.FieldTypes.html
+- uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  commentId: T:Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+  parent: Biwen.QuickApi.Contents.FieldTypes
+  isExternal: true
+  href: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle.html
+  name: MarkdownToolStyle
+  nameWithType: MarkdownToolStyle
+  fullName: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle

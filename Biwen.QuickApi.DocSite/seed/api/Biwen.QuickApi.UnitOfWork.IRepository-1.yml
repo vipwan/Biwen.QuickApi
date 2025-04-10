@@ -66,7 +66,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
@@ -76,7 +76,7 @@ items:
     content: 'public interface IRepository<TEntity> where TEntity : class'
     typeParameters:
     - id: TEntity
-      description: The type of the entity.
+      description: 实体类型
     content.vb: Public Interface IRepository(Of TEntity As Class)
   extensionMethods:
   - Biwen.QuickApi.UnitOfWork.IRepository`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
@@ -97,43 +97,43 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetPagedList(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, int, int, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> based on a predicate, orderBy delegate and page information. This method default no-tracking query.. This method default no-tracking query.
-  remarks: This method default no-tracking query.
+  summary: 根据条件表达式、排序方式和分页信息获取 <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> 结果集。此方法默认禁用实体跟踪。
+  remarks: 此方法默认禁用实体跟踪查询
   example: []
   syntax:
     content: IPagedList<TEntity> GetPagedList(Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, int pageIndex = 0, int pageSize = 20, bool disableTracking = true, bool ignoreQueryFilters = false, bool ignoreAutoIncludes = false)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: A function to test each element for a condition.
+      description: 用于测试每个元素是否满足条件的函数
     - id: orderBy
       type: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
-      description: A function to order elements.
+      description: 用于排序元素的函数
     - id: include
       type: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
-      description: A function to include navigation properties
+      description: 用于包含导航属性的函数
     - id: pageIndex
       type: System.Int32
-      description: The index of page.
+      description: 页索引，从0开始
     - id: pageSize
       type: System.Int32
-      description: The size of the page.
+      description: 每页大小
     - id: disableTracking
       type: System.Boolean
-      description: <code>True</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     - id: ignoreQueryFilters
       type: System.Boolean
-      description: Ignore query filters
+      description: 是否忽略查询筛选器
     - id: ignoreAutoIncludes
       type: System.Boolean
-      description: Ignore automatic includes
+      description: 是否忽略自动包含
     return:
       type: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{{TEntity}}
-      description: An <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by <code class="paramref">predicate</code>.
+      description: 包含满足 <code class="paramref">predicate</code> 指定条件的元素的 <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> 实例
     content.vb: Function GetPagedList(predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing, pageIndex As Integer = 0, pageSize As Integer = 20, disableTracking As Boolean = True, ignoreQueryFilters As Boolean = False, ignoreAutoIncludes As Boolean = False) As IPagedList(Of TEntity)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetPagedList*
   nameWithType.vb: IRepository(Of TEntity).GetPagedList(Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)), Integer, Integer, Boolean, Boolean, Boolean)
@@ -151,12 +151,12 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetPagedListAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, int, int, bool, bool, bool, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
   summary: 分页查询 <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref>
-  remarks: 请注意当前方法 默认禁止了EntityTracking.
+  remarks: 请注意当前方法 默认禁止了EntityTracking
   example: []
   syntax:
     content: Task<IPagedList<TEntity>> GetPagedListAsync(Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, int pageIndex = 0, int pageSize = 20, bool disableTracking = true, bool ignoreQueryFilters = false, bool ignoreAutoIncludes = false, CancellationToken cancellationToken = default)
@@ -187,10 +187,10 @@ items:
       description: 是否忽略自动Includes,默认:False
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: A <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> to observe while waiting for the task to complete.
+      description: 用于观察任务完成的 <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref>
     return:
       type: System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{{TEntity}}}
-      description: An <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by <code class="paramref">predicate</code>.
+      description: 包含满足 <code class="paramref">predicate</code> 指定条件的元素的 <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> 实例
     content.vb: Function GetPagedListAsync(predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing, pageIndex As Integer = 0, pageSize As Integer = 20, disableTracking As Boolean = True, ignoreQueryFilters As Boolean = False, ignoreAutoIncludes As Boolean = False, cancellationToken As CancellationToken = Nothing) As Task(Of IPagedList(Of TEntity))
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetPagedListAsync*
   nameWithType.vb: IRepository(Of TEntity).GetPagedListAsync(Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)), Integer, Integer, Boolean, Boolean, Boolean, CancellationToken)
@@ -208,48 +208,48 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetPagedList<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, int, int, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> based on a predicate, orderBy delegate and page information. This method default no-tracking query.
-  remarks: This method default no-tracking query.
+  summary: 根据条件表达式、排序方式和分页信息获取投影后的 <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> 结果集。此方法默认禁用实体跟踪。
+  remarks: 此方法默认禁用实体跟踪查询
   example: []
   syntax:
     content: 'IPagedList<TResult> GetPagedList<TResult>(Expression<Func<TEntity, TResult>> selector, Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, int pageIndex = 0, int pageSize = 20, bool disableTracking = true, bool ignoreQueryFilters = false, bool ignoreAutoIncludes = false) where TResult : class'
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{TResult}}}
-      description: The selector for projection.
+      description: 用于投影的选择器
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: A function to test each element for a condition.
+      description: 用于测试每个元素是否满足条件的函数
     - id: orderBy
       type: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
-      description: A function to order elements.
+      description: 用于排序元素的函数
     - id: include
       type: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
-      description: A function to include navigation properties
+      description: 用于包含导航属性的函数
     - id: pageIndex
       type: System.Int32
-      description: The index of page.
+      description: 页索引，从0开始
     - id: pageSize
       type: System.Int32
-      description: The size of the page.
+      description: 每页大小
     - id: disableTracking
       type: System.Boolean
-      description: <code>True</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     - id: ignoreQueryFilters
       type: System.Boolean
-      description: Ignore query filters
+      description: 是否忽略查询筛选器
     - id: ignoreAutoIncludes
       type: System.Boolean
-      description: Ignore automatic includes
+      description: 是否忽略自动包含
     typeParameters:
     - id: TResult
     return:
       type: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{{TResult}}
-      description: An <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by <code class="paramref">predicate</code>.
+      description: 包含满足 <code class="paramref">predicate</code> 指定条件的元素的 <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> 实例
     content.vb: Function GetPagedList(Of TResult As Class)(selector As Expression(Of Func(Of TEntity, TResult)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing, pageIndex As Integer = 0, pageSize As Integer = 20, disableTracking As Boolean = True, ignoreQueryFilters As Boolean = False, ignoreAutoIncludes As Boolean = False) As IPagedList(Of TResult)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetPagedList*
   nameWithType.vb: IRepository(Of TEntity).GetPagedList(Of TResult)(Expression(Of Func(Of TEntity, TResult)), Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)), Integer, Integer, Boolean, Boolean, Boolean)
@@ -267,51 +267,51 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetPagedListAsync<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, int, int, bool, bool, bool, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> based on a predicate, orderBy delegate and page information. This method default no-tracking query.
-  remarks: This method default no-tracking query.
+  summary: 异步根据条件表达式、排序方式和分页信息获取投影后的 <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> 结果集。此方法默认禁用实体跟踪。
+  remarks: 此方法默认禁用实体跟踪查询
   example: []
   syntax:
     content: 'Task<IPagedList<TResult>> GetPagedListAsync<TResult>(Expression<Func<TEntity, TResult>> selector, Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, int pageIndex = 0, int pageSize = 20, bool disableTracking = true, bool ignoreQueryFilters = false, bool ignoreAutoIncludes = false, CancellationToken cancellationToken = default) where TResult : class'
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{TResult}}}
-      description: The selector for projection.
+      description: 用于投影的选择器
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: A function to test each element for a condition.
+      description: 用于测试每个元素是否满足条件的函数
     - id: orderBy
       type: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
-      description: A function to order elements.
+      description: 用于排序元素的函数
     - id: include
       type: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
-      description: A function to include navigation properties
+      description: 用于包含导航属性的函数
     - id: pageIndex
       type: System.Int32
-      description: The index of page.
+      description: 页索引，从0开始
     - id: pageSize
       type: System.Int32
-      description: The size of the page.
+      description: 每页大小
     - id: disableTracking
       type: System.Boolean
-      description: <code>True</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     - id: ignoreQueryFilters
       type: System.Boolean
-      description: Ignore query filters
+      description: 是否忽略查询筛选器
     - id: ignoreAutoIncludes
       type: System.Boolean
-      description: Ignore automatic includes
+      description: 是否忽略自动包含
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: A <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> to observe while waiting for the task to complete.
+      description: 用于观察任务完成的 <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref>
     typeParameters:
     - id: TResult
     return:
       type: System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{{TResult}}}
-      description: An <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by <code class="paramref">predicate</code>.
+      description: 包含满足 <code class="paramref">predicate</code> 指定条件的元素的 <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> 实例
     content.vb: Function GetPagedListAsync(Of TResult As Class)(selector As Expression(Of Func(Of TEntity, TResult)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing, pageIndex As Integer = 0, pageSize As Integer = 20, disableTracking As Boolean = True, ignoreQueryFilters As Boolean = False, ignoreAutoIncludes As Boolean = False, cancellationToken As CancellationToken = Nothing) As Task(Of IPagedList(Of TResult))
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetPagedListAsync*
   nameWithType.vb: IRepository(Of TEntity).GetPagedListAsync(Of TResult)(Expression(Of Func(Of TEntity, TResult)), Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)), Integer, Integer, Boolean, Boolean, Boolean, CancellationToken)
@@ -329,37 +329,37 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetFirstOrDefault(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the first or default entity based on a predicate, orderBy delegate and include delegate. This method defaults to a read-only, no-tracking query.
-  remarks: This method defaults to a read-only, no-tracking query.
+  summary: 根据条件表达式、排序方式和导航属性包含获取第一个或默认实体。此方法默认为只读、非跟踪查询。
+  remarks: 此方法默认为只读、非跟踪查询
   example: []
   syntax:
     content: TEntity? GetFirstOrDefault(Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, bool disableTracking = true, bool ignoreQueryFilters = false, bool ignoreAutoIncludes = false)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: A function to test each element for a condition.
+      description: 用于测试每个元素是否满足条件的函数
     - id: orderBy
       type: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
-      description: A function to order elements.
+      description: 用于排序元素的函数
     - id: include
       type: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
-      description: A function to include navigation properties
+      description: 用于包含导航属性的函数
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     - id: ignoreQueryFilters
       type: System.Boolean
-      description: Ignore query filters
+      description: 是否忽略查询筛选器
     - id: ignoreAutoIncludes
       type: System.Boolean
-      description: Ignore automatic includes
+      description: 是否忽略自动包含
     return:
       type: '{TEntity}'
-      description: An <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by <code class="paramref">predicate</code>.
+      description: 满足条件的第一个元素，如果没有则返回默认值
     content.vb: Function GetFirstOrDefault(predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing, disableTracking As Boolean = True, ignoreQueryFilters As Boolean = False, ignoreAutoIncludes As Boolean = False) As TEntity
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetFirstOrDefault*
   nameWithType.vb: IRepository(Of TEntity).GetFirstOrDefault(Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)), Boolean, Boolean, Boolean)
@@ -377,42 +377,42 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetFirstOrDefault<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the first or default entity based on a predicate, orderBy delegate and include delegate. This method defaults to a read-only, no-tracking query.
-  remarks: This method defaults to a read-only, no-tracking query.
+  summary: 根据条件表达式、排序方式和导航属性包含获取投影后的第一个或默认实体。此方法默认为只读、非跟踪查询。
+  remarks: 此方法默认为只读、非跟踪查询
   example: []
   syntax:
     content: TResult? GetFirstOrDefault<TResult>(Expression<Func<TEntity, TResult>> selector, Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, bool disableTracking = true, bool ignoreQueryFilters = false, bool ignoreAutoIncludes = false)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{TResult}}}
-      description: The selector for projection.
+      description: 用于投影的选择器
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: A function to test each element for a condition.
+      description: 用于测试每个元素是否满足条件的函数
     - id: orderBy
       type: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
-      description: A function to order elements.
+      description: 用于排序元素的函数
     - id: include
       type: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
-      description: A function to include navigation properties
+      description: 用于包含导航属性的函数
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     - id: ignoreQueryFilters
       type: System.Boolean
-      description: Ignore query filters
+      description: 是否忽略查询筛选器
     - id: ignoreAutoIncludes
       type: System.Boolean
-      description: Ignore automatic includes
+      description: 是否忽略自动包含
     typeParameters:
     - id: TResult
     return:
       type: '{TResult}'
-      description: An <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by <code class="paramref">predicate</code>.
+      description: 满足条件的第一个投影元素，如果没有则返回默认值
     content.vb: Function GetFirstOrDefault(Of TResult)(selector As Expression(Of Func(Of TEntity, TResult)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing, disableTracking As Boolean = True, ignoreQueryFilters As Boolean = False, ignoreAutoIncludes As Boolean = False) As TResult
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetFirstOrDefault*
   nameWithType.vb: IRepository(Of TEntity).GetFirstOrDefault(Of TResult)(Expression(Of Func(Of TEntity, TResult)), Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)), Boolean, Boolean, Boolean)
@@ -430,37 +430,37 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetFirstOrDefaultAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the first or default entity based on a predicate, orderBy delegate and include delegate. This method defaults to a read-only, no-tracking query.
-  remarks: 'Ex: This method defaults to a read-only, no-tracking query.'
+  summary: 异步根据条件表达式、排序方式和导航属性包含获取第一个或默认实体。此方法默认为只读、非跟踪查询。
+  remarks: 此方法默认为只读、非跟踪查询
   example: []
   syntax:
     content: Task<TEntity?> GetFirstOrDefaultAsync(Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, bool disableTracking = true, bool ignoreQueryFilters = false, bool ignoreAutoIncludes = false)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: A function to test each element for a condition.
+      description: 用于测试每个元素是否满足条件的函数
     - id: orderBy
       type: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
-      description: A function to order elements.
+      description: 用于排序元素的函数
     - id: include
       type: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
-      description: A function to include navigation properties
+      description: 用于包含导航属性的函数
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     - id: ignoreQueryFilters
       type: System.Boolean
-      description: Ignore query filters
+      description: 是否忽略查询筛选器
     - id: ignoreAutoIncludes
       type: System.Boolean
-      description: Ignore automatic includes
+      description: 是否忽略自动包含
     return:
       type: System.Threading.Tasks.Task{{TEntity}}
-      description: An <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by <code class="paramref">predicate</code>.
+      description: 表示异步操作的任务，返回满足条件的第一个元素，如果没有则返回默认值
     content.vb: Function GetFirstOrDefaultAsync(predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing, disableTracking As Boolean = True, ignoreQueryFilters As Boolean = False, ignoreAutoIncludes As Boolean = False) As Task(Of TEntity)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetFirstOrDefaultAsync*
   nameWithType.vb: IRepository(Of TEntity).GetFirstOrDefaultAsync(Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)), Boolean, Boolean, Boolean)
@@ -478,21 +478,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Find(params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Finds an entity with the given primary key values. If found, is attached to the context and returned. If no entity is found, then null is returned.
+  summary: 使用给定的主键值查找实体。如果找到，则将其附加到上下文并返回。如果未找到任何实体，则返回 null。
   example: []
   syntax:
     content: TEntity? Find(params object[] keyValues)
     parameters:
     - id: keyValues
       type: System.Object[]
-      description: The values of the primary key for the entity to be found.
+      description: 要查找的实体的主键值
     return:
       type: '{TEntity}'
-      description: The found entity or null.
+      description: 找到的实体，如果未找到则返回 null
     content.vb: Function Find(ParamArray keyValues As Object()) As TEntity
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Find*
   nameWithType.vb: IRepository(Of TEntity).Find(ParamArray Object())
@@ -510,21 +510,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.FindAsync(params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Finds an entity with the given primary key values. If found, is attached to the context and returned. If no entity is found, then null is returned.
+  summary: 异步使用给定的主键值查找实体。如果找到，则将其附加到上下文并返回。如果未找到任何实体，则返回 null。
   example: []
   syntax:
     content: ValueTask<TEntity?> FindAsync(params object[] keyValues)
     parameters:
     - id: keyValues
       type: System.Object[]
-      description: The values of the primary key for the entity to be found.
+      description: 要查找的实体的主键值
     return:
       type: System.Threading.Tasks.ValueTask{{TEntity}}
-      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> that represents the asynchronous find operation. The task result contains the found entity or null.
+      description: 表示异步查找操作的任务，任务结果包含找到的实体，如果未找到则为 null
     content.vb: Function FindAsync(ParamArray keyValues As Object()) As ValueTask(Of TEntity)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.FindAsync*
   nameWithType.vb: IRepository(Of TEntity).FindAsync(ParamArray Object())
@@ -542,24 +542,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.FindAsync(object[], System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Finds an entity with the given primary key values. If found, is attached to the context and returned. If no entity is found, then null is returned.
+  summary: 异步使用给定的主键值查找实体。如果找到，则将其附加到上下文并返回。如果未找到任何实体，则返回 null。
   example: []
   syntax:
     content: ValueTask<TEntity?> FindAsync(object[] keyValues, CancellationToken cancellationToken)
     parameters:
     - id: keyValues
       type: System.Object[]
-      description: The values of the primary key for the entity to be found.
+      description: 要查找的实体的主键值
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: A <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> to observe while waiting for the task to complete.
+      description: 用于观察任务完成的 <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref>
     return:
       type: System.Threading.Tasks.ValueTask{{TEntity}}
-      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> that represents the asynchronous find operation. The task result contains the found entity or null.
+      description: 表示异步查找操作的任务，任务结果包含找到的实体，如果未找到则为 null
     content.vb: Function FindAsync(keyValues As Object(), cancellationToken As CancellationToken) As ValueTask(Of TEntity)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.FindAsync*
   nameWithType.vb: IRepository(Of TEntity).FindAsync(Object(), CancellationToken)
@@ -577,21 +577,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAll(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets all entities. This method is not recommended
+  summary: 获取所有实体。不推荐使用此方法
   example: []
   syntax:
     content: IQueryable<TEntity> GetAll(bool disableTracking = true)
     parameters:
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     return:
       type: System.Linq.IQueryable{{TEntity}}
-      description: The <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref>.
+      description: <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref> 类型的结果
     content.vb: Function GetAll(disableTracking As Boolean = True) As IQueryable(Of TEntity)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetAll*
   nameWithType.vb: IRepository(Of TEntity).GetAll(Boolean)
@@ -609,26 +609,26 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAll<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets all entities. This method is not recommended
+  summary: 获取所有投影后的实体。不推荐使用此方法
   example: []
   syntax:
     content: IQueryable<TResult> GetAll<TResult>(Expression<Func<TEntity, TResult>> selector, bool disableTracking = true)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{TResult}}}
-      description: The selector for projection.
+      description: 用于投影的选择器
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     typeParameters:
     - id: TResult
     return:
       type: System.Linq.IQueryable{{TResult}}
-      description: The <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref>.
+      description: <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref> 类型的结果
     content.vb: Function GetAll(Of TResult)(selector As Expression(Of Func(Of TEntity, TResult)), disableTracking As Boolean = True) As IQueryable(Of TResult)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetAll*
   nameWithType.vb: IRepository(Of TEntity).GetAll(Of TResult)(Expression(Of Func(Of TEntity, TResult)), Boolean)
@@ -646,29 +646,29 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAll<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets all entities. This method is not recommended
+  summary: 根据条件获取所有投影后的实体。不推荐使用此方法
   example: []
   syntax:
     content: IQueryable<TResult> GetAll<TResult>(Expression<Func<TEntity, TResult>> selector, Expression<Func<TEntity, bool>>? predicate = null, bool disableTracking = true)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{TResult}}}
-      description: The selector for projection.
+      description: 用于投影的选择器
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: A function to test each element for a condition.
+      description: 用于测试每个元素是否满足条件的函数
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     typeParameters:
     - id: TResult
     return:
       type: System.Linq.IQueryable{{TResult}}
-      description: The <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref>.
+      description: <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref> 类型的结果
     content.vb: Function GetAll(Of TResult)(selector As Expression(Of Func(Of TEntity, TResult)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, disableTracking As Boolean = True) As IQueryable(Of TResult)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetAll*
   nameWithType.vb: IRepository(Of TEntity).GetAll(Of TResult)(Expression(Of Func(Of TEntity, TResult)), Expression(Of Func(Of TEntity, Boolean)), Boolean)
@@ -686,37 +686,37 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAll(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets all entities. This method is not recommended
-  remarks: 'Ex: This method defaults to a read-only, no-tracking query.'
+  summary: 根据条件获取所有实体。不推荐使用此方法
+  remarks: 此方法默认为只读、非跟踪查询
   example: []
   syntax:
     content: IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, bool disableTracking = true, bool ignoreQueryFilters = false, bool ignoreAutoIncludes = false)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: A function to test each element for a condition.
+      description: 用于测试每个元素是否满足条件的函数
     - id: orderBy
       type: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
-      description: A function to order elements.
+      description: 用于排序元素的函数
     - id: include
       type: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
-      description: A function to include navigation properties
+      description: 用于包含导航属性的函数
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     - id: ignoreQueryFilters
       type: System.Boolean
-      description: Ignore query filters
+      description: 是否忽略查询筛选器
     - id: ignoreAutoIncludes
       type: System.Boolean
-      description: Ignore automatic includes
+      description: 是否忽略自动包含
     return:
       type: System.Linq.IQueryable{{TEntity}}
-      description: An <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by <code class="paramref">predicate</code>.
+      description: 满足条件的查询结果
     content.vb: Function GetAll(predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing, disableTracking As Boolean = True, ignoreQueryFilters As Boolean = False, ignoreAutoIncludes As Boolean = False) As IQueryable(Of TEntity)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetAll*
   nameWithType.vb: IRepository(Of TEntity).GetAll(Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)), Boolean, Boolean, Boolean)
@@ -734,42 +734,42 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAll<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets all entities. This method is not recommended
-  remarks: 'Ex: This method defaults to a read-only, no-tracking query.'
+  summary: 根据条件获取所有投影后的实体。不推荐使用此方法
+  remarks: 此方法默认为只读、非跟踪查询
   example: []
   syntax:
     content: IQueryable<TResult> GetAll<TResult>(Expression<Func<TEntity, TResult>> selector, Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, bool disableTracking = true, bool ignoreQueryFilters = false, bool ignoreAutoIncludes = false)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{TResult}}}
-      description: The selector for projection.
+      description: 用于投影的选择器
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: A function to test each element for a condition.
+      description: 用于测试每个元素是否满足条件的函数
     - id: orderBy
       type: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
-      description: A function to order elements.
+      description: 用于排序元素的函数
     - id: include
       type: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
-      description: A function to include navigation properties
+      description: 用于包含导航属性的函数
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     - id: ignoreQueryFilters
       type: System.Boolean
-      description: Ignore query filters
+      description: 是否忽略查询筛选器
     - id: ignoreAutoIncludes
       type: System.Boolean
-      description: Ignore automatic includes
+      description: 是否忽略自动包含
     typeParameters:
     - id: TResult
     return:
       type: System.Linq.IQueryable{{TResult}}
-      description: An <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by <code class="paramref">predicate</code>.
+      description: 满足条件的查询结果
     content.vb: Function GetAll(Of TResult)(selector As Expression(Of Func(Of TEntity, TResult)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing, disableTracking As Boolean = True, ignoreQueryFilters As Boolean = False, ignoreAutoIncludes As Boolean = False) As IQueryable(Of TResult)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetAll*
   nameWithType.vb: IRepository(Of TEntity).GetAll(Of TResult)(Expression(Of Func(Of TEntity, TResult)), Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)), Boolean, Boolean, Boolean)
@@ -787,21 +787,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAllAsync(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets all entities. This method is not recommended
+  summary: 异步获取所有实体。不推荐使用此方法
   example: []
   syntax:
     content: Task<IList<TEntity>> GetAllAsync(bool disableTracking = true)
     parameters:
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     return:
       type: System.Threading.Tasks.Task{System.Collections.Generic.IList{{TEntity}}}
-      description: The <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref>.
+      description: 实体列表集合
     content.vb: Function GetAllAsync(disableTracking As Boolean = True) As Task(Of IList(Of TEntity))
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetAllAsync*
   nameWithType.vb: IRepository(Of TEntity).GetAllAsync(Boolean)
@@ -819,26 +819,26 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAllAsync<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets all entities. This method is not recommended
+  summary: 异步获取所有投影后的实体。不推荐使用此方法
   example: []
   syntax:
     content: Task<IList<TResult>> GetAllAsync<TResult>(Expression<Func<TEntity, TResult>> selector, bool disableTracking = true)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{TResult}}}
-      description: The selector for projection.
+      description: 用于投影的选择器
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     typeParameters:
     - id: TResult
     return:
       type: System.Threading.Tasks.Task{System.Collections.Generic.IList{{TResult}}}
-      description: The <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref>.
+      description: 投影后的实体列表集合
     content.vb: Function GetAllAsync(Of TResult)(selector As Expression(Of Func(Of TEntity, TResult)), disableTracking As Boolean = True) As Task(Of IList(Of TResult))
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetAllAsync*
   nameWithType.vb: IRepository(Of TEntity).GetAllAsync(Of TResult)(Expression(Of Func(Of TEntity, TResult)), Boolean)
@@ -856,37 +856,37 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAllAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets all entities. This method is not recommended
-  remarks: 'Ex: This method defaults to a read-only, no-tracking query.'
+  summary: 异步根据条件获取所有实体。不推荐使用此方法
+  remarks: 此方法默认为只读、非跟踪查询
   example: []
   syntax:
     content: Task<IList<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, bool disableTracking = true, bool ignoreQueryFilters = false, bool ignoreAutoIncludes = false)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: A function to test each element for a condition.
+      description: 用于测试每个元素是否满足条件的函数
     - id: orderBy
       type: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
-      description: A function to order elements.
+      description: 用于排序元素的函数
     - id: include
       type: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
-      description: A function to include navigation properties
+      description: 用于包含导航属性的函数
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     - id: ignoreQueryFilters
       type: System.Boolean
-      description: Ignore query filters
+      description: 是否忽略查询筛选器
     - id: ignoreAutoIncludes
       type: System.Boolean
-      description: Ignore automatic includes
+      description: 是否忽略自动包含
     return:
       type: System.Threading.Tasks.Task{System.Collections.Generic.IList{{TEntity}}}
-      description: An <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by <code class="paramref">predicate</code>.
+      description: 满足条件的实体列表集合
     content.vb: Function GetAllAsync(predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing, disableTracking As Boolean = True, ignoreQueryFilters As Boolean = False, ignoreAutoIncludes As Boolean = False) As Task(Of IList(Of TEntity))
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetAllAsync*
   nameWithType.vb: IRepository(Of TEntity).GetAllAsync(Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)), Boolean, Boolean, Boolean)
@@ -904,42 +904,42 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.GetAllAsync<TResult>(System.Linq.Expressions.Expression<System.Func<TEntity, TResult>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Func<System.Linq.IQueryable<TEntity>, System.Linq.IOrderedQueryable<TEntity>>?, System.Func<System.Linq.IQueryable<TEntity>, Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, object>>?, bool, bool, bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets all entities. This method is not recommended
-  remarks: 'Ex: This method defaults to a read-only, no-tracking query.'
+  summary: 异步根据条件获取所有投影后的实体。不推荐使用此方法
+  remarks: 此方法默认为只读、非跟踪查询
   example: []
   syntax:
     content: Task<IList<TResult>> GetAllAsync<TResult>(Expression<Func<TEntity, TResult>> selector, Expression<Func<TEntity, bool>>? predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, bool disableTracking = true, bool ignoreQueryFilters = false, bool ignoreAutoIncludes = false)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{TResult}}}
-      description: The selector for projection.
+      description: 用于投影的选择器
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: A function to test each element for a condition.
+      description: 用于测试每个元素是否满足条件的函数
     - id: orderBy
       type: System.Func{System.Linq.IQueryable{{TEntity}},System.Linq.IOrderedQueryable{{TEntity}}}
-      description: A function to order elements.
+      description: 用于排序元素的函数
     - id: include
       type: System.Func{System.Linq.IQueryable{{TEntity}},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{{TEntity},System.Object}}
-      description: A function to include navigation properties
+      description: 用于包含导航属性的函数
     - id: disableTracking
       type: System.Boolean
-      description: <code>true</code> to disable changing tracking; otherwise, <code>false</code>. Default to <code>true</code>.
+      description: 是否禁用更改跟踪，默认为 <code>true</code>
     - id: ignoreQueryFilters
       type: System.Boolean
-      description: Ignore query filters
+      description: 是否忽略查询筛选器
     - id: ignoreAutoIncludes
       type: System.Boolean
-      description: Ignore automatic includes
+      description: 是否忽略自动包含
     typeParameters:
     - id: TResult
     return:
       type: System.Threading.Tasks.Task{System.Collections.Generic.IList{{TResult}}}
-      description: An <xref href="Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by <code class="paramref">predicate</code>.
+      description: 满足条件的投影后实体列表集合
     content.vb: Function GetAllAsync(Of TResult)(selector As Expression(Of Func(Of TEntity, TResult)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)) = Nothing, include As Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)) = Nothing, disableTracking As Boolean = True, ignoreQueryFilters As Boolean = False, ignoreAutoIncludes As Boolean = False) As Task(Of IList(Of TResult))
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.GetAllAsync*
   nameWithType.vb: IRepository(Of TEntity).GetAllAsync(Of TResult)(Expression(Of Func(Of TEntity, TResult)), Expression(Of Func(Of TEntity, Boolean)), Func(Of IQueryable(Of TEntity), IOrderedQueryable(Of TEntity)), Func(Of IQueryable(Of TEntity), IIncludableQueryable(Of TEntity, Object)), Boolean, Boolean, Boolean)
@@ -957,20 +957,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Insert(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Inserts a new entity synchronously.
+  summary: 同步插入新实体
   example: []
   syntax:
     content: TEntity Insert(TEntity entity)
     parameters:
     - id: entity
       type: '{TEntity}'
-      description: The entity to insert.
+      description: 要插入的实体
     return:
       type: '{TEntity}'
+      description: 插入后的实体
     content.vb: Function Insert(entity As TEntity) As TEntity
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Insert*
   nameWithType.vb: IRepository(Of TEntity).Insert(TEntity)
@@ -987,18 +988,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Insert(params TEntity[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Inserts a range of entities synchronously.
+  summary: 同步插入多个实体
   example: []
   syntax:
     content: void Insert(params TEntity[] entities)
     parameters:
     - id: entities
       type: '{TEntity}[]'
-      description: The entities to insert.
+      description: 要插入的实体数组
     content.vb: Sub Insert(ParamArray entities As TEntity())
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Insert*
   nameWithType.vb: IRepository(Of TEntity).Insert(ParamArray TEntity())
@@ -1016,18 +1017,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Insert(System.Collections.Generic.IEnumerable<TEntity>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Inserts a range of entities synchronously.
+  summary: 同步插入多个实体
   example: []
   syntax:
     content: void Insert(IEnumerable<TEntity> entities)
     parameters:
     - id: entities
       type: System.Collections.Generic.IEnumerable{{TEntity}}
-      description: The entities to insert.
+      description: 要插入的实体集合
     content.vb: Sub Insert(entities As IEnumerable(Of TEntity))
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Insert*
   nameWithType.vb: IRepository(Of TEntity).Insert(IEnumerable(Of TEntity))
@@ -1045,24 +1046,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.InsertAsync(TEntity, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Inserts a new entity asynchronously.
+  summary: 异步插入新实体
   example: []
   syntax:
     content: ValueTask<EntityEntry<TEntity>> InsertAsync(TEntity entity, CancellationToken cancellationToken = default)
     parameters:
     - id: entity
       type: '{TEntity}'
-      description: The entity to insert.
+      description: 要插入的实体
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: A <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> to observe while waiting for the task to complete.
+      description: 用于观察任务完成的 <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref>
     return:
       type: System.Threading.Tasks.ValueTask{Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry{{TEntity}}}
-      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> that represents the asynchronous insert operation.
+      description: 表示异步插入操作的任务
     content.vb: Function InsertAsync(entity As TEntity, cancellationToken As CancellationToken = Nothing) As ValueTask(Of EntityEntry(Of TEntity))
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.InsertAsync*
   nameWithType.vb: IRepository(Of TEntity).InsertAsync(TEntity, CancellationToken)
@@ -1079,21 +1080,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.InsertAsync(params TEntity[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Inserts a range of entities asynchronously.
+  summary: 异步插入多个实体
   example: []
   syntax:
     content: Task InsertAsync(params TEntity[] entities)
     parameters:
     - id: entities
       type: '{TEntity}[]'
-      description: The entities to insert.
+      description: 要插入的实体数组
     return:
       type: System.Threading.Tasks.Task
-      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> that represents the asynchronous insert operation.
+      description: 表示异步插入操作的任务
     content.vb: Function InsertAsync(ParamArray entities As TEntity()) As Task
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.InsertAsync*
   nameWithType.vb: IRepository(Of TEntity).InsertAsync(ParamArray TEntity())
@@ -1111,24 +1112,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.InsertAsync(System.Collections.Generic.IEnumerable<TEntity>, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Inserts a range of entities asynchronously.
+  summary: 异步插入多个实体
   example: []
   syntax:
     content: Task InsertAsync(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default)
     parameters:
     - id: entities
       type: System.Collections.Generic.IEnumerable{{TEntity}}
-      description: The entities to insert.
+      description: 要插入的实体集合
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: A <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> to observe while waiting for the task to complete.
+      description: 用于观察任务完成的 <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref>
     return:
       type: System.Threading.Tasks.Task
-      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> that represents the asynchronous insert operation.
+      description: 表示异步插入操作的任务
     content.vb: Function InsertAsync(entities As IEnumerable(Of TEntity), cancellationToken As CancellationToken = Nothing) As Task
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.InsertAsync*
   nameWithType.vb: IRepository(Of TEntity).InsertAsync(IEnumerable(Of TEntity), CancellationToken)
@@ -1146,18 +1147,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Update(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Updates the specified entity.
+  summary: 更新指定实体
   example: []
   syntax:
     content: void Update(TEntity entity)
     parameters:
     - id: entity
       type: '{TEntity}'
-      description: The entity.
+      description: 要更新的实体
     content.vb: Sub Update(entity As TEntity)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Update*
   nameWithType.vb: IRepository(Of TEntity).Update(TEntity)
@@ -1174,18 +1175,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Update(params TEntity[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Updates the specified entities.
+  summary: 更新多个指定实体
   example: []
   syntax:
     content: void Update(params TEntity[] entities)
     parameters:
     - id: entities
       type: '{TEntity}[]'
-      description: The entities.
+      description: 要更新的实体数组
     content.vb: Sub Update(ParamArray entities As TEntity())
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Update*
   nameWithType.vb: IRepository(Of TEntity).Update(ParamArray TEntity())
@@ -1203,18 +1204,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Update(System.Collections.Generic.IEnumerable<TEntity>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Updates the specified entities.
+  summary: 更新多个指定实体
   example: []
   syntax:
     content: void Update(IEnumerable<TEntity> entities)
     parameters:
     - id: entities
       type: System.Collections.Generic.IEnumerable{{TEntity}}
-      description: The entities.
+      description: 要更新的实体集合
     content.vb: Sub Update(entities As IEnumerable(Of TEntity))
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Update*
   nameWithType.vb: IRepository(Of TEntity).Update(IEnumerable(Of TEntity))
@@ -1232,32 +1233,35 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ExecuteUpdate(System.Linq.Expressions.Expression<System.Func<Microsoft.EntityFrameworkCore.Query.SetPropertyCalls<TEntity>, Microsoft.EntityFrameworkCore.Query.SetPropertyCalls<TEntity>>>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Updates all database rows for the entity instances which match the LINQ query from the database.
+  summary: 批量更新符合LINQ查询的数据库行
   remarks: >-
     <p>
-                    This operation executes immediately against the database, rather than being deferred until
-                    <xref href="Microsoft.EntityFrameworkCore.DbContext.SaveChanges" data-throw-if-not-resolved="false"></xref> is called. It also does not interact with the EF change tracker in any way:
-                    entity instances which happen to be tracked when this operation is invoked aren't taken into account, and aren't updated
-                    to reflect the changes.
-                </p>
+
+    此操作立即针对数据库执行，而不是等到调用 <xref href="Microsoft.EntityFrameworkCore.DbContext.SaveChanges" data-throw-if-not-resolved="false"></xref> 时才执行。
+
+    它也不会以任何方式与EF变更跟踪器交互：调用此操作时正在跟踪的实体实例不会被考虑，也不会更新以反映更改。
+
+    </p>
+
     <p>
-                    See <a href="https://aka.ms/efcore-docs-bulk-operations">Executing bulk operations with EF Core</a>
-                    for more information and examples.
-                </p>
+
+    有关更多信息和示例，请参阅 <a href="https://aka.ms/efcore-docs-bulk-operations">使用EF Core执行批量操作</a>
+
+    </p>
   example: []
   syntax:
     content: int ExecuteUpdate(Expression<Func<SetPropertyCalls<TEntity>, SetPropertyCalls<TEntity>>> predicate)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{Microsoft.EntityFrameworkCore.Query.SetPropertyCalls{{TEntity}},Microsoft.EntityFrameworkCore.Query.SetPropertyCalls{{TEntity}}}}
-      description: Predicate
+      description: 属性更新表达式
     return:
       type: System.Int32
-      description: The total number of rows updated in the database.
+      description: 数据库中更新的总行数
     content.vb: Function ExecuteUpdate(predicate As Expression(Of Func(Of SetPropertyCalls(Of TEntity), SetPropertyCalls(Of TEntity)))) As Integer
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.ExecuteUpdate*
   nameWithType.vb: IRepository(Of TEntity).ExecuteUpdate(Expression(Of Func(Of SetPropertyCalls(Of TEntity), SetPropertyCalls(Of TEntity))))
@@ -1275,35 +1279,38 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ExecuteUpdateAsync(System.Linq.Expressions.Expression<System.Func<Microsoft.EntityFrameworkCore.Query.SetPropertyCalls<TEntity>, Microsoft.EntityFrameworkCore.Query.SetPropertyCalls<TEntity>>>, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Asynchronously updates database rows for the entity instances which match the LINQ query from the database.
+  summary: 异步批量更新符合LINQ查询的数据库行
   remarks: >-
     <p>
-                    This operation executes immediately against the database, rather than being deferred until
-                    <xref href="Microsoft.EntityFrameworkCore.DbContext.SaveChanges" data-throw-if-not-resolved="false"></xref> is called. It also does not interact with the EF change tracker in any way:
-                    entity instances which happen to be tracked when this operation is invoked aren't taken into account, and aren't updated
-                    to reflect the changes.
-                </p>
+
+    此操作立即针对数据库执行，而不是等到调用 <xref href="Microsoft.EntityFrameworkCore.DbContext.SaveChanges" data-throw-if-not-resolved="false"></xref> 时才执行。
+
+    它也不会以任何方式与EF变更跟踪器交互：调用此操作时正在跟踪的实体实例不会被考虑，也不会更新以反映更改。
+
+    </p>
+
     <p>
-                    See <a href="https://aka.ms/efcore-docs-bulk-operations">Executing bulk operations with EF Core</a>
-                    for more information and examples.
-                </p>
+
+    有关更多信息和示例，请参阅 <a href="https://aka.ms/efcore-docs-bulk-operations">使用EF Core执行批量操作</a>
+
+    </p>
   example: []
   syntax:
     content: Task<int> ExecuteUpdateAsync(Expression<Func<SetPropertyCalls<TEntity>, SetPropertyCalls<TEntity>>> predicate, CancellationToken cancellationToken)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{Microsoft.EntityFrameworkCore.Query.SetPropertyCalls{{TEntity}},Microsoft.EntityFrameworkCore.Query.SetPropertyCalls{{TEntity}}}}
-      description: Predicate
+      description: 属性更新表达式
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: A <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> to observe while waiting for the task to complete.
+      description: 用于观察任务完成的 <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref>
     return:
       type: System.Threading.Tasks.Task{System.Int32}
-      description: The total number of rows updated in the database.
+      description: 数据库中更新的总行数
     content.vb: Function ExecuteUpdateAsync(predicate As Expression(Of Func(Of SetPropertyCalls(Of TEntity), SetPropertyCalls(Of TEntity))), cancellationToken As CancellationToken) As Task(Of Integer)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.ExecuteUpdateAsync*
   nameWithType.vb: IRepository(Of TEntity).ExecuteUpdateAsync(Expression(Of Func(Of SetPropertyCalls(Of TEntity), SetPropertyCalls(Of TEntity))), CancellationToken)
@@ -1321,18 +1328,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Delete(object)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Deletes the entity by the specified primary key.
+  summary: 根据主键删除实体
   example: []
   syntax:
     content: void Delete(object id)
     parameters:
     - id: id
       type: System.Object
-      description: The primary key value.
+      description: 主键值
     content.vb: Sub Delete(id As Object)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Delete*
   nameWithType.vb: IRepository(Of TEntity).Delete(Object)
@@ -1350,18 +1357,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Delete(TEntity)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Deletes the specified entity.
+  summary: 删除指定实体
   example: []
   syntax:
     content: void Delete(TEntity entity)
     parameters:
     - id: entity
       type: '{TEntity}'
-      description: The entity to delete.
+      description: 要删除的实体
     content.vb: Sub Delete(entity As TEntity)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Delete*
   nameWithType.vb: IRepository(Of TEntity).Delete(TEntity)
@@ -1378,18 +1385,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Delete(params TEntity[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Deletes the specified entities.
+  summary: 删除多个指定实体
   example: []
   syntax:
     content: void Delete(params TEntity[] entities)
     parameters:
     - id: entities
       type: '{TEntity}[]'
-      description: The entities.
+      description: 要删除的实体数组
     content.vb: Sub Delete(ParamArray entities As TEntity())
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Delete*
   nameWithType.vb: IRepository(Of TEntity).Delete(ParamArray TEntity())
@@ -1407,18 +1414,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Delete(System.Collections.Generic.IEnumerable<TEntity>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Deletes the specified entities.
+  summary: 删除多个指定实体
   example: []
   syntax:
     content: void Delete(IEnumerable<TEntity> entities)
     parameters:
     - id: entities
       type: System.Collections.Generic.IEnumerable{{TEntity}}
-      description: The entities.
+      description: 要删除的实体集合
     content.vb: Sub Delete(entities As IEnumerable(Of TEntity))
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Delete*
   nameWithType.vb: IRepository(Of TEntity).Delete(IEnumerable(Of TEntity))
@@ -1436,28 +1443,31 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ExecuteDelete()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Deletes all database rows for the entity instances which match the LINQ query from the database.
+  summary: 批量删除符合LINQ查询的所有数据库行
   remarks: >-
     <p>
-                    This operation executes immediately against the database, rather than being deferred until
-                    <xref href="Microsoft.EntityFrameworkCore.DbContext.SaveChanges" data-throw-if-not-resolved="false"></xref> is called. It also does not interact with the EF change tracker in any way:
-                    entity instances which happen to be tracked when this operation is invoked aren't taken into account, and aren't updated
-                    to reflect the changes.
-                </p>
+
+    此操作立即针对数据库执行，而不是等到调用 <xref href="Microsoft.EntityFrameworkCore.DbContext.SaveChanges" data-throw-if-not-resolved="false"></xref> 时才执行。
+
+    它也不会以任何方式与EF变更跟踪器交互：调用此操作时正在跟踪的实体实例不会被考虑，也不会更新以反映更改。
+
+    </p>
+
     <p>
-                    See <a href="https://aka.ms/efcore-docs-bulk-operations">Executing bulk operations with EF Core</a>
-                    for more information and examples.
-                </p>
+
+    有关更多信息和示例，请参阅 <a href="https://aka.ms/efcore-docs-bulk-operations">使用EF Core执行批量操作</a>
+
+    </p>
   example: []
   syntax:
     content: int ExecuteDelete()
     return:
       type: System.Int32
-      description: The total number of rows deleted in the database.
+      description: 数据库中删除的总行数
     content.vb: Function ExecuteDelete() As Integer
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.ExecuteDelete*
   nameWithType.vb: IRepository(Of TEntity).ExecuteDelete()
@@ -1474,32 +1484,35 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ExecuteDeleteAsync(System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Asynchronously deletes database rows for the entity instances which match the LINQ query from the database.
+  summary: 异步批量删除符合LINQ查询的所有数据库行
   remarks: >-
     <p>
-                    This operation executes immediately against the database, rather than being deferred until
-                    <xref href="Microsoft.EntityFrameworkCore.DbContext.SaveChanges" data-throw-if-not-resolved="false"></xref> is called. It also does not interact with the EF change tracker in any way:
-                    entity instances which happen to be tracked when this operation is invoked aren't taken into account, and aren't updated
-                    to reflect the changes.
-                </p>
+
+    此操作立即针对数据库执行，而不是等到调用 <xref href="Microsoft.EntityFrameworkCore.DbContext.SaveChanges" data-throw-if-not-resolved="false"></xref> 时才执行。
+
+    它也不会以任何方式与EF变更跟踪器交互：调用此操作时正在跟踪的实体实例不会被考虑，也不会更新以反映更改。
+
+    </p>
+
     <p>
-                    See <a href="https://aka.ms/efcore-docs-bulk-operations">Executing bulk operations with EF Core</a>
-                    for more information and examples.
-                </p>
+
+    有关更多信息和示例，请参阅 <a href="https://aka.ms/efcore-docs-bulk-operations">使用EF Core执行批量操作</a>
+
+    </p>
   example: []
   syntax:
     content: Task<int> ExecuteDeleteAsync(CancellationToken cancellationToken = default)
     parameters:
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: A <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> to observe while waiting for the task to complete.
+      description: 用于观察任务完成的 <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref>
     return:
       type: System.Threading.Tasks.Task{System.Int32}
-      description: The total number of rows deleted in the database.
+      description: 数据库中删除的总行数
     content.vb: Function ExecuteDeleteAsync(cancellationToken As CancellationToken = Nothing) As Task(Of Integer)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.ExecuteDeleteAsync*
   nameWithType.vb: IRepository(Of TEntity).ExecuteDeleteAsync(CancellationToken)
@@ -1516,21 +1529,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Count(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the count based on a predicate.
+  summary: 根据条件获取记录数量
   example: []
   syntax:
     content: int Count(Expression<Func<TEntity, bool>>? predicate = null)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     return:
       type: System.Int32
-      description: ''
+      description: 记录数量
     content.vb: Function Count(predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing) As Integer
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Count*
   nameWithType.vb: IRepository(Of TEntity).Count(Expression(Of Func(Of TEntity, Boolean)))
@@ -1548,24 +1561,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.CountAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets async the count based on a predicate.
+  summary: 异步根据条件获取记录数量
   example: []
   syntax:
     content: Task<int> CountAsync(Expression<Func<TEntity, bool>>? predicate = null, CancellationToken cancellationToken = default)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: ''
+      description: 取消令牌
     return:
       type: System.Threading.Tasks.Task{System.Int32}
-      description: ''
+      description: 记录数量
     content.vb: Function CountAsync(predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of Integer)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.CountAsync*
   nameWithType.vb: IRepository(Of TEntity).CountAsync(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
@@ -1583,21 +1596,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.LongCount(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the long count based on a predicate.
+  summary: 根据条件获取长整型记录数量
   example: []
   syntax:
     content: long LongCount(Expression<Func<TEntity, bool>>? predicate = null)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     return:
       type: System.Int64
-      description: ''
+      description: 记录数量
     content.vb: Function LongCount(predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing) As Long
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.LongCount*
   nameWithType.vb: IRepository(Of TEntity).LongCount(Expression(Of Func(Of TEntity, Boolean)))
@@ -1615,24 +1628,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.LongCountAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets async the long count based on a predicate.
+  summary: 异步根据条件获取长整型记录数量
   example: []
   syntax:
     content: Task<long> LongCountAsync(Expression<Func<TEntity, bool>>? predicate = null, CancellationToken cancellationToken = default)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: ''
+      description: 取消令牌
     return:
       type: System.Threading.Tasks.Task{System.Int64}
-      description: ''
+      description: 记录数量
     content.vb: Function LongCountAsync(predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of Long)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.LongCountAsync*
   nameWithType.vb: IRepository(Of TEntity).LongCountAsync(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
@@ -1650,21 +1663,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Exists(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the Exists record based on a predicate.
+  summary: 根据条件判断记录是否存在
   example: []
   syntax:
     content: bool Exists(Expression<Func<TEntity, bool>>? predicate = null)
     parameters:
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     return:
       type: System.Boolean
-      description: ''
+      description: 如果存在则返回true，否则返回false
     content.vb: Function Exists(predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing) As Boolean
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Exists*
   nameWithType.vb: IRepository(Of TEntity).Exists(Expression(Of Func(Of TEntity, Boolean)))
@@ -1682,24 +1695,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ExistsAsync(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the Async Exists record based on a predicate.
+  summary: 异步根据条件判断记录是否存在
   example: []
   syntax:
     content: Task<bool> ExistsAsync(Expression<Func<TEntity, bool>>? selector = null, CancellationToken cancellationToken = default)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: ''
+      description: 取消令牌
     return:
       type: System.Threading.Tasks.Task{System.Boolean}
-      description: ''
+      description: 如果存在则返回true，否则返回false
     content.vb: Function ExistsAsync(selector As Expression(Of Func(Of TEntity, Boolean)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.ExistsAsync*
   nameWithType.vb: IRepository(Of TEntity).ExistsAsync(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
@@ -1717,26 +1730,26 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Max<T>(System.Linq.Expressions.Expression<System.Func<TEntity, T>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the max based on a predicate.
+  summary: 根据条件获取最大值
   example: []
   syntax:
     content: T? Max<T>(Expression<Func<TEntity, T>> selector, Expression<Func<TEntity, bool>>? predicate = null)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{T}}}
-      description: ''
+      description: 选择器表达式
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     typeParameters:
     - id: T
     return:
       type: '{T}'
-      description: decimal
+      description: 最大值
     content.vb: Function Max(Of T)(selector As Expression(Of Func(Of TEntity, T)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing) As T
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Max*
   nameWithType.vb: IRepository(Of TEntity).Max(Of T)(Expression(Of Func(Of TEntity, T)), Expression(Of Func(Of TEntity, Boolean)))
@@ -1754,29 +1767,29 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.MaxAsync<T>(System.Linq.Expressions.Expression<System.Func<TEntity, T>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the async max based on a predicate.
+  summary: 异步根据条件获取最大值
   example: []
   syntax:
     content: Task<T> MaxAsync<T>(Expression<Func<TEntity, T>> selector, Expression<Func<TEntity, bool>>? predicate = null, CancellationToken cancellationToken = default)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{T}}}
-      description: ''
+      description: 选择器表达式
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: ''
+      description: 取消令牌
     typeParameters:
     - id: T
     return:
       type: System.Threading.Tasks.Task{{T}}
-      description: decimal
+      description: 最大值
     content.vb: Function MaxAsync(Of T)(selector As Expression(Of Func(Of TEntity, T)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of T)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.MaxAsync*
   nameWithType.vb: IRepository(Of TEntity).MaxAsync(Of T)(Expression(Of Func(Of TEntity, T)), Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
@@ -1794,26 +1807,26 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Min<T>(System.Linq.Expressions.Expression<System.Func<TEntity, T>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the min based on a predicate.
+  summary: 根据条件获取最小值
   example: []
   syntax:
     content: T? Min<T>(Expression<Func<TEntity, T>> selector, Expression<Func<TEntity, bool>>? predicate = null)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{T}}}
-      description: ''
+      description: 选择器表达式
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     typeParameters:
     - id: T
     return:
       type: '{T}'
-      description: decimal
+      description: 最小值
     content.vb: Function Min(Of T)(selector As Expression(Of Func(Of TEntity, T)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing) As T
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Min*
   nameWithType.vb: IRepository(Of TEntity).Min(Of T)(Expression(Of Func(Of TEntity, T)), Expression(Of Func(Of TEntity, Boolean)))
@@ -1831,29 +1844,29 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.MinAsync<T>(System.Linq.Expressions.Expression<System.Func<TEntity, T>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the async min based on a predicate.
+  summary: 异步根据条件获取最小值
   example: []
   syntax:
     content: Task<T> MinAsync<T>(Expression<Func<TEntity, T>> selector, Expression<Func<TEntity, bool>>? predicate = null, CancellationToken cancellationToken = default)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},{T}}}
-      description: ''
+      description: 选择器表达式
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: ''
+      description: 取消令牌
     typeParameters:
     - id: T
     return:
       type: System.Threading.Tasks.Task{{T}}
-      description: decimal
+      description: 最小值
     content.vb: Function MinAsync(Of T)(selector As Expression(Of Func(Of TEntity, T)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of T)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.MinAsync*
   nameWithType.vb: IRepository(Of TEntity).MinAsync(Of T)(Expression(Of Func(Of TEntity, T)), Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
@@ -1871,24 +1884,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Average(System.Linq.Expressions.Expression<System.Func<TEntity, decimal>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the average based on a predicate.
+  summary: 根据条件获取平均值
   example: []
   syntax:
     content: decimal Average(Expression<Func<TEntity, decimal>> selector, Expression<Func<TEntity, bool>>? predicate = null)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Decimal}}
-      description: ''
+      description: 选择器表达式
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     return:
       type: System.Decimal
-      description: decimal
+      description: 平均值
     content.vb: Function Average(selector As Expression(Of Func(Of TEntity, Decimal)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing) As Decimal
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Average*
   nameWithType.vb: IRepository(Of TEntity).Average(Expression(Of Func(Of TEntity, Decimal)), Expression(Of Func(Of TEntity, Boolean)))
@@ -1906,27 +1919,27 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.AverageAsync(System.Linq.Expressions.Expression<System.Func<TEntity, decimal>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the async average based on a predicate.
+  summary: 异步根据条件获取平均值
   example: []
   syntax:
     content: Task<decimal> AverageAsync(Expression<Func<TEntity, decimal>> selector, Expression<Func<TEntity, bool>>? predicate = null, CancellationToken cancellationToken = default)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Decimal}}
-      description: ''
+      description: 选择器表达式
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: ''
+      description: 取消令牌
     return:
       type: System.Threading.Tasks.Task{System.Decimal}
-      description: decimal
+      description: 平均值
     content.vb: Function AverageAsync(selector As Expression(Of Func(Of TEntity, Decimal)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of Decimal)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.AverageAsync*
   nameWithType.vb: IRepository(Of TEntity).AverageAsync(Expression(Of Func(Of TEntity, Decimal)), Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
@@ -1944,24 +1957,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.Sum(System.Linq.Expressions.Expression<System.Func<TEntity, decimal>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the sum based on a predicate.
+  summary: 根据条件获取求和值
   example: []
   syntax:
     content: decimal Sum(Expression<Func<TEntity, decimal>> selector, Expression<Func<TEntity, bool>>? predicate = null)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Decimal}}
-      description: ''
+      description: 选择器表达式
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     return:
       type: System.Decimal
-      description: decimal
+      description: 求和值
     content.vb: Function Sum(selector As Expression(Of Func(Of TEntity, Decimal)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing) As Decimal
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.Sum*
   nameWithType.vb: IRepository(Of TEntity).Sum(Expression(Of Func(Of TEntity, Decimal)), Expression(Of Func(Of TEntity, Boolean)))
@@ -1979,27 +1992,27 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.SumAsync(System.Linq.Expressions.Expression<System.Func<TEntity, decimal>>, System.Linq.Expressions.Expression<System.Func<TEntity, bool>>?, System.Threading.CancellationToken)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the async sum based on a predicate.
+  summary: 异步根据条件获取求和值
   example: []
   syntax:
     content: Task<decimal> SumAsync(Expression<Func<TEntity, decimal>> selector, Expression<Func<TEntity, bool>>? predicate = null, CancellationToken cancellationToken = default)
     parameters:
     - id: selector
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Decimal}}
-      description: ''
+      description: 选择器表达式
     - id: predicate
       type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
-      description: ''
+      description: 条件表达式
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: ''
+      description: 取消令牌
     return:
       type: System.Threading.Tasks.Task{System.Decimal}
-      description: decimal
+      description: 求和值
     content.vb: Function SumAsync(selector As Expression(Of Func(Of TEntity, Decimal)), predicate As Expression(Of Func(Of TEntity, Boolean)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of Decimal)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.SumAsync*
   nameWithType.vb: IRepository(Of TEntity).SumAsync(Expression(Of Func(Of TEntity, Decimal)), Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
@@ -2017,21 +2030,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ChangeEntityState(TEntity, Microsoft.EntityFrameworkCore.EntityState)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Change entity state for patch method on web api.
+  summary: 为Web API的PATCH方法更改实体状态
   example: []
   syntax:
     content: void ChangeEntityState(TEntity entity, EntityState state)
     parameters:
     - id: entity
       type: '{TEntity}'
-      description: The entity.
+      description: 实体
     - id: state
       type: Microsoft.EntityFrameworkCore.EntityState
-      description: The entity state.
+      description: 实体状态
     content.vb: Sub ChangeEntityState(entity As TEntity, state As EntityState)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.ChangeEntityState*
   nameWithType.vb: IRepository(Of TEntity).ChangeEntityState(TEntity, EntityState)
@@ -2048,19 +2061,19 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.ChangeTable(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Changes the table name. This require the tables in the same database.
-  remarks: This only been used for supporting multiple tables in the same model. This require the tables in the same database.
+  summary: 更改表名。这要求表位于同一数据库中。
+  remarks: 这仅用于支持同一模型中的多个表。这要求表位于同一数据库中。
   example: []
   syntax:
     content: void ChangeTable(string table)
     parameters:
     - id: table
       type: System.String
-      description: ''
+      description: 表名
     content.vb: Sub ChangeTable(table As String)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.ChangeTable*
   nameWithType.vb: IRepository(Of TEntity).ChangeTable(String)
@@ -2078,24 +2091,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.IRepository<TEntity>.FromSql(string, params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/IRepository.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/IRepository.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Uses raw SQL queries to fetch the specified <code class="typeparamref">TEntity</code> data.
+  summary: 使用原始SQL查询获取指定实体类型的数据
   example: []
   syntax:
     content: IQueryable<TEntity> FromSql(string sql, params object[] parameters)
     parameters:
     - id: sql
       type: System.String
-      description: The raw SQL.
+      description: 原始SQL语句
     - id: parameters
       type: System.Object[]
-      description: The parameters.
+      description: 参数
     return:
       type: System.Linq.IQueryable{{TEntity}}
-      description: An <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by raw SQL.
+      description: 包含满足原始SQL指定条件的元素的 <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref> 对象
     content.vb: Function FromSql(sql As String, ParamArray parameters As Object()) As IQueryable(Of TEntity)
   overload: Biwen.QuickApi.UnitOfWork.IRepository`1.FromSql*
   nameWithType.vb: IRepository(Of TEntity).FromSql(String, ParamArray Object())
@@ -3693,14 +3706,6 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
 - uid: Biwen.QuickApi.UnitOfWork.IRepository`1.InsertAsync*
   commentId: Overload:Biwen.QuickApi.UnitOfWork.IRepository`1.InsertAsync
   isExternal: true
@@ -3753,6 +3758,14 @@ references:
   - name: TEntity
   - name: )
   - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
 - uid: Biwen.QuickApi.UnitOfWork.IRepository`1.Update*
   commentId: Overload:Biwen.QuickApi.UnitOfWork.IRepository`1.Update
   isExternal: true

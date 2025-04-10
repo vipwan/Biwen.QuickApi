@@ -9,6 +9,7 @@ items:
   - Biwen.QuickApi.Events.EventSubscriber`1
   - Biwen.QuickApi.Events.IEvent
   - Biwen.QuickApi.Events.IEventSubscriber`1
+  - Biwen.QuickApi.Events.IPublisher
   langs:
   - csharp
   - vb
@@ -39,14 +40,14 @@ references:
   commentId: T:Biwen.QuickApi.Events.IEvent
   parent: Biwen.QuickApi.Events
   isExternal: true
-  href: Biwen.QuickApi.Events.IEvent.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Events/IEvent.cs
   name: IEvent
   nameWithType: IEvent
   fullName: Biwen.QuickApi.Events.IEvent
 - uid: Biwen.QuickApi.Events.IEventSubscriber`1
   commentId: T:Biwen.QuickApi.Events.IEventSubscriber`1
   isExternal: true
-  href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Events/IEventSubscriber.cs
   name: IEventSubscriber<T>
   nameWithType: IEventSubscriber<T>
   fullName: Biwen.QuickApi.Events.IEventSubscriber<T>
@@ -57,7 +58,7 @@ references:
   - uid: Biwen.QuickApi.Events.IEventSubscriber`1
     name: IEventSubscriber
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Events/IEventSubscriber.cs
   - name: <
   - name: T
   - name: '>'
@@ -65,7 +66,7 @@ references:
   - uid: Biwen.QuickApi.Events.IEventSubscriber`1
     name: IEventSubscriber
     isExternal: true
-    href: Biwen.QuickApi.Events.IEventSubscriber-1.html
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Events/IEventSubscriber.cs
   - name: (
   - name: Of
   - name: " "
@@ -99,6 +100,14 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Biwen.QuickApi.Events.IPublisher
+  commentId: T:Biwen.QuickApi.Events.IPublisher
+  parent: Biwen.QuickApi.Events
+  isExternal: true
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Events/Publisher.cs
+  name: IPublisher
+  nameWithType: IPublisher
+  fullName: Biwen.QuickApi.Events.IPublisher
 - uid: Biwen.QuickApi.Events
   commentId: N:Biwen.QuickApi.Events
   isExternal: true

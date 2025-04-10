@@ -1,0 +1,2353 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.ContentRepository
+  commentId: T:Biwen.QuickApi.Contents.ContentRepository
+  id: ContentRepository
+  parent: Biwen.QuickApi.Contents
+  children:
+  - Biwen.QuickApi.Contents.ContentRepository.#ctor(Biwen.QuickApi.Contents.ContentSerializer,Biwen.QuickApi.Contents.Domain.IContentDbContext,Biwen.QuickApi.Events.IPublisher,Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+  - Biwen.QuickApi.Contents.ContentRepository.DeleteContentAsync(System.Guid)
+  - Biwen.QuickApi.Contents.ContentRepository.GetContentAsync``1(System.Guid)
+  - Biwen.QuickApi.Contents.ContentRepository.GetContentIdBySlugAsync(System.String)
+  - Biwen.QuickApi.Contents.ContentRepository.GetContentSchema``1
+  - Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync``1(System.Int32,System.Int32)
+  - Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync``1(System.String)
+  - Biwen.QuickApi.Contents.ContentRepository.GetDomainContentsByTypeAsync``1(System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String)
+  - Biwen.QuickApi.Contents.ContentRepository.GetRawContentAsync(System.Guid)
+  - Biwen.QuickApi.Contents.ContentRepository.SaveContentAsync``1(``0,System.String,System.String)
+  - Biwen.QuickApi.Contents.ContentRepository.SetContentStatusAsync(System.Guid,Biwen.QuickApi.Contents.Domain.ContentStatus)
+  - Biwen.QuickApi.Contents.ContentRepository.UpdateContentAsync``1(System.Guid,``0)
+  - Biwen.QuickApi.Contents.ContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content,System.Boolean,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: ContentRepository
+  nameWithType: ContentRepository
+  fullName: Biwen.QuickApi.Contents.ContentRepository
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  syntax:
+    content: 'public class ContentRepository : IContentRepository'
+    content.vb: Public Class ContentRepository Implements IContentRepository
+  inheritance:
+  - System.Object
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  extensionMethods:
+  - Biwen.QuickApi.Contents.ContentRepository.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Contents.ContentRepository.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Contents.ContentRepository.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Contents.ContentRepository.#ctor(Biwen.QuickApi.Contents.ContentSerializer,Biwen.QuickApi.Contents.Domain.IContentDbContext,Biwen.QuickApi.Events.IPublisher,Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.#ctor(Biwen.QuickApi.Contents.ContentSerializer,Biwen.QuickApi.Contents.Domain.IContentDbContext,Biwen.QuickApi.Events.IPublisher,Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+  id: '#ctor(Biwen.QuickApi.Contents.ContentSerializer,Biwen.QuickApi.Contents.Domain.IContentDbContext,Biwen.QuickApi.Events.IPublisher,Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)'
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: ContentRepository(ContentSerializer, IContentDbContext, IPublisher, IContentSchemaGenerator)
+  nameWithType: ContentRepository.ContentRepository(ContentSerializer, IContentDbContext, IPublisher, IContentSchemaGenerator)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.ContentRepository(Biwen.QuickApi.Contents.ContentSerializer, Biwen.QuickApi.Contents.Domain.IContentDbContext, Biwen.QuickApi.Events.IPublisher, Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  syntax:
+    content: public ContentRepository(ContentSerializer serializer, IContentDbContext dbContext, IPublisher publisher, IContentSchemaGenerator schemaGenerator)
+    parameters:
+    - id: serializer
+      type: Biwen.QuickApi.Contents.ContentSerializer
+    - id: dbContext
+      type: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    - id: publisher
+      type: Biwen.QuickApi.Events.IPublisher
+    - id: schemaGenerator
+      type: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    content.vb: Public Sub New(serializer As ContentSerializer, dbContext As IContentDbContext, publisher As IPublisher, schemaGenerator As IContentSchemaGenerator)
+  overload: Biwen.QuickApi.Contents.ContentRepository.#ctor*
+  nameWithType.vb: ContentRepository.New(ContentSerializer, IContentDbContext, IPublisher, IContentSchemaGenerator)
+  fullName.vb: Biwen.QuickApi.Contents.ContentRepository.New(Biwen.QuickApi.Contents.ContentSerializer, Biwen.QuickApi.Contents.Domain.IContentDbContext, Biwen.QuickApi.Events.IPublisher, Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator)
+  name.vb: New(ContentSerializer, IContentDbContext, IPublisher, IContentSchemaGenerator)
+- uid: Biwen.QuickApi.Contents.ContentRepository.SaveContentAsync``1(``0,System.String,System.String)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.SaveContentAsync``1(``0,System.String,System.String)
+  id: SaveContentAsync``1(``0,System.String,System.String)
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: SaveContentAsync<T>(T, string?, string?)
+  nameWithType: ContentRepository.SaveContentAsync<T>(T, string?, string?)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.SaveContentAsync<T>(T, string?, string?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: 'public Task<Guid> SaveContentAsync<T>(T content, string? title = null, string? slug = null) where T : IContent'
+    parameters:
+    - id: content
+      type: '{T}'
+    - id: title
+      type: System.String
+    - id: slug
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{System.Guid}
+    content.vb: Public Function SaveContentAsync(Of T As IContent)(content As T, title As String = Nothing, slug As String = Nothing) As Task(Of Guid)
+  overload: Biwen.QuickApi.Contents.ContentRepository.SaveContentAsync*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync``1({T},System.String,System.String)
+  nameWithType.vb: ContentRepository.SaveContentAsync(Of T)(T, String, String)
+  fullName.vb: Biwen.QuickApi.Contents.ContentRepository.SaveContentAsync(Of T)(T, String, String)
+  name.vb: SaveContentAsync(Of T)(T, String, String)
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetContentAsync``1(System.Guid)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.GetContentAsync``1(System.Guid)
+  id: GetContentAsync``1(System.Guid)
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: GetContentAsync<T>(Guid)
+  nameWithType: ContentRepository.GetContentAsync<T>(Guid)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetContentAsync<T>(System.Guid)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: 'public Task<T?> GetContentAsync<T>(Guid id) where T : IContent, new()'
+    parameters:
+    - id: id
+      type: System.Guid
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Public Function GetContentAsync(Of T As {IContent, New})(id As Guid) As Task(Of T)
+  overload: Biwen.QuickApi.Contents.ContentRepository.GetContentAsync*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentAsync``1(System.Guid)
+  nameWithType.vb: ContentRepository.GetContentAsync(Of T)(Guid)
+  fullName.vb: Biwen.QuickApi.Contents.ContentRepository.GetContentAsync(Of T)(System.Guid)
+  name.vb: GetContentAsync(Of T)(Guid)
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync``1(System.Int32,System.Int32)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync``1(System.Int32,System.Int32)
+  id: GetContentsByTypeAsync``1(System.Int32,System.Int32)
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: GetContentsByTypeAsync<T>(int, int)
+  nameWithType: ContentRepository.GetContentsByTypeAsync<T>(int, int)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync<T>(int, int)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: 'public Task<IPagedList<T>> GetContentsByTypeAsync<T>(int pageIndex = 0, int len = 10) where T : IContent, new()'
+    parameters:
+    - id: pageIndex
+      type: System.Int32
+    - id: len
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{{T}}}
+    content.vb: Public Function GetContentsByTypeAsync(Of T As {IContent, New})(pageIndex As Integer = 0, len As Integer = 10) As Task(Of IPagedList(Of T))
+  overload: Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync``1(System.Int32,System.Int32)
+  nameWithType.vb: ContentRepository.GetContentsByTypeAsync(Of T)(Integer, Integer)
+  fullName.vb: Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync(Of T)(Integer, Integer)
+  name.vb: GetContentsByTypeAsync(Of T)(Integer, Integer)
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetDomainContentsByTypeAsync``1(System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.GetDomainContentsByTypeAsync``1(System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String)
+  id: GetDomainContentsByTypeAsync``1(System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String)
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: GetDomainContentsByTypeAsync<T>(string?, int, int, int?, string?)
+  nameWithType: ContentRepository.GetDomainContentsByTypeAsync<T>(string?, int, int, int?, string?)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetDomainContentsByTypeAsync<T>(string?, int, int, int?, string?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: 'public Task<IPagedList<Content>> GetDomainContentsByTypeAsync<T>(string? slug = null, int pageIndex = 0, int len = 10, int? status = null, string? title = null) where T : IContent, new()'
+    parameters:
+    - id: slug
+      type: System.String
+    - id: pageIndex
+      type: System.Int32
+    - id: len
+      type: System.Int32
+    - id: status
+      type: System.Nullable{System.Int32}
+    - id: title
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{Biwen.QuickApi.Contents.Domain.Content}}
+    content.vb: Public Function GetDomainContentsByTypeAsync(Of T As {IContent, New})(slug As String = Nothing, pageIndex As Integer = 0, len As Integer = 10, status As Integer? = Nothing, title As String = Nothing) As Task(Of IPagedList(Of Content))
+  overload: Biwen.QuickApi.Contents.ContentRepository.GetDomainContentsByTypeAsync*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetDomainContentsByTypeAsync``1(System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String)
+  nameWithType.vb: ContentRepository.GetDomainContentsByTypeAsync(Of T)(String, Integer, Integer, Integer?, String)
+  fullName.vb: Biwen.QuickApi.Contents.ContentRepository.GetDomainContentsByTypeAsync(Of T)(String, Integer, Integer, Integer?, String)
+  name.vb: GetDomainContentsByTypeAsync(Of T)(String, Integer, Integer, Integer?, String)
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync``1(System.String)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync``1(System.String)
+  id: GetContentsByTypeAsync``1(System.String)
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: GetContentsByTypeAsync<T>(string)
+  nameWithType: ContentRepository.GetContentsByTypeAsync<T>(string)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync<T>(string)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: 'public Task<T?> GetContentsByTypeAsync<T>(string slug) where T : IContent, new()'
+    parameters:
+    - id: slug
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Public Function GetContentsByTypeAsync(Of T As {IContent, New})(slug As String) As Task(Of T)
+  overload: Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync``1(System.String)
+  nameWithType.vb: ContentRepository.GetContentsByTypeAsync(Of T)(String)
+  fullName.vb: Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync(Of T)(String)
+  name.vb: GetContentsByTypeAsync(Of T)(String)
+- uid: Biwen.QuickApi.Contents.ContentRepository.UpdateContentAsync``1(System.Guid,``0)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.UpdateContentAsync``1(System.Guid,``0)
+  id: UpdateContentAsync``1(System.Guid,``0)
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateContentAsync<T>(Guid, T)
+  nameWithType: ContentRepository.UpdateContentAsync<T>(Guid, T)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.UpdateContentAsync<T>(System.Guid, T)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: 'public Task UpdateContentAsync<T>(Guid id, T content) where T : IContent'
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: content
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function UpdateContentAsync(Of T As IContent)(id As Guid, content As T) As Task
+  overload: Biwen.QuickApi.Contents.ContentRepository.UpdateContentAsync*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync``1(System.Guid,{T})
+  nameWithType.vb: ContentRepository.UpdateContentAsync(Of T)(Guid, T)
+  fullName.vb: Biwen.QuickApi.Contents.ContentRepository.UpdateContentAsync(Of T)(System.Guid, T)
+  name.vb: UpdateContentAsync(Of T)(Guid, T)
+- uid: Biwen.QuickApi.Contents.ContentRepository.DeleteContentAsync(System.Guid)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.DeleteContentAsync(System.Guid)
+  id: DeleteContentAsync(System.Guid)
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteContentAsync(Guid)
+  nameWithType: ContentRepository.DeleteContentAsync(Guid)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.DeleteContentAsync(System.Guid)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: public Task DeleteContentAsync(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function DeleteContentAsync(id As Guid) As Task
+  overload: Biwen.QuickApi.Contents.ContentRepository.DeleteContentAsync*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.DeleteContentAsync(System.Guid)
+- uid: Biwen.QuickApi.Contents.ContentRepository.SetContentStatusAsync(System.Guid,Biwen.QuickApi.Contents.Domain.ContentStatus)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.SetContentStatusAsync(System.Guid,Biwen.QuickApi.Contents.Domain.ContentStatus)
+  id: SetContentStatusAsync(System.Guid,Biwen.QuickApi.Contents.Domain.ContentStatus)
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: SetContentStatusAsync(Guid, ContentStatus)
+  nameWithType: ContentRepository.SetContentStatusAsync(Guid, ContentStatus)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.SetContentStatusAsync(System.Guid, Biwen.QuickApi.Contents.Domain.ContentStatus)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: public Task SetContentStatusAsync(Guid id, ContentStatus status)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: status
+      type: Biwen.QuickApi.Contents.Domain.ContentStatus
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function SetContentStatusAsync(id As Guid, status As ContentStatus) As Task
+  overload: Biwen.QuickApi.Contents.ContentRepository.SetContentStatusAsync*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.SetContentStatusAsync(System.Guid,Biwen.QuickApi.Contents.Domain.ContentStatus)
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetRawContentAsync(System.Guid)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.GetRawContentAsync(System.Guid)
+  id: GetRawContentAsync(System.Guid)
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: GetRawContentAsync(Guid)
+  nameWithType: ContentRepository.GetRawContentAsync(Guid)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetRawContentAsync(System.Guid)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: public Task<Content> GetRawContentAsync(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{Biwen.QuickApi.Contents.Domain.Content}
+    content.vb: Public Function GetRawContentAsync(id As Guid) As Task(Of Content)
+  overload: Biwen.QuickApi.Contents.ContentRepository.GetRawContentAsync*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetRawContentAsync(System.Guid)
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetContentIdBySlugAsync(System.String)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.GetContentIdBySlugAsync(System.String)
+  id: GetContentIdBySlugAsync(System.String)
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: GetContentIdBySlugAsync(string)
+  nameWithType: ContentRepository.GetContentIdBySlugAsync(string)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetContentIdBySlugAsync(string)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: public Task<Content?> GetContentIdBySlugAsync(string slug)
+    parameters:
+    - id: slug
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{Biwen.QuickApi.Contents.Domain.Content}
+    content.vb: Public Function GetContentIdBySlugAsync(slug As String) As Task(Of Content)
+  overload: Biwen.QuickApi.Contents.ContentRepository.GetContentIdBySlugAsync*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentIdBySlugAsync(System.String)
+  nameWithType.vb: ContentRepository.GetContentIdBySlugAsync(String)
+  fullName.vb: Biwen.QuickApi.Contents.ContentRepository.GetContentIdBySlugAsync(String)
+  name.vb: GetContentIdBySlugAsync(String)
+- uid: Biwen.QuickApi.Contents.ContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content,System.Boolean,System.Int32)
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content,System.Boolean,System.Int32)
+  id: UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content,System.Boolean,System.Int32)
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateRawContentAsync(Content, bool, int)
+  nameWithType: ContentRepository.UpdateRawContentAsync(Content, bool, int)
+  fullName: Biwen.QuickApi.Contents.ContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content, bool, int)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: public Task UpdateRawContentAsync(Content content, bool isRollback = false, int version = 0)
+    parameters:
+    - id: content
+      type: Biwen.QuickApi.Contents.Domain.Content
+    - id: isRollback
+      type: System.Boolean
+    - id: version
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function UpdateRawContentAsync(content As Content, isRollback As Boolean = False, version As Integer = 0) As Task
+  overload: Biwen.QuickApi.Contents.ContentRepository.UpdateRawContentAsync*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content,System.Boolean,System.Int32)
+  nameWithType.vb: ContentRepository.UpdateRawContentAsync(Content, Boolean, Integer)
+  fullName.vb: Biwen.QuickApi.Contents.ContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content, Boolean, Integer)
+  name.vb: UpdateRawContentAsync(Content, Boolean, Integer)
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetContentSchema``1
+  commentId: M:Biwen.QuickApi.Contents.ContentRepository.GetContentSchema``1
+  id: GetContentSchema``1
+  parent: Biwen.QuickApi.Contents.ContentRepository
+  langs:
+  - csharp
+  - vb
+  name: GetContentSchema<T>()
+  nameWithType: ContentRepository.GetContentSchema<T>()
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetContentSchema<T>()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/ContentRepository.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents
+  example: []
+  syntax:
+    content: 'public string GetContentSchema<T>() where T : IContent'
+    typeParameters:
+    - id: T
+    return:
+      type: System.String
+    content.vb: Public Function GetContentSchema(Of T As IContent)() As String
+  overload: Biwen.QuickApi.Contents.ContentRepository.GetContentSchema*
+  implements:
+  - Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentSchema``1
+  nameWithType.vb: ContentRepository.GetContentSchema(Of T)()
+  fullName.vb: Biwen.QuickApi.Contents.ContentRepository.GetContentSchema(Of T)()
+  name.vb: GetContentSchema(Of T)()
+references:
+- uid: Biwen.QuickApi.Contents
+  commentId: N:Biwen.QuickApi.Contents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents
+  nameWithType: Biwen.QuickApi.Contents
+  fullName: Biwen.QuickApi.Contents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  parent: Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html
+  name: IContentRepository
+  nameWithType: IContentRepository
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Contents.ContentRepository.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<ContentRepository>(ContentRepository)
+  nameWithType: EntityExtensions.PublishAddedAsync<ContentRepository>(ContentRepository)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Contents.ContentRepository>(Biwen.QuickApi.Contents.ContentRepository)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of ContentRepository)(ContentRepository)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Contents.ContentRepository)(Biwen.QuickApi.Contents.ContentRepository)
+  name.vb: PublishAddedAsync(Of ContentRepository)(ContentRepository)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.ContentRepository)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.ContentRepository)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.ContentRepository.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<ContentRepository>(ContentRepository)
+  nameWithType: EntityExtensions.PublishDeletedAsync<ContentRepository>(ContentRepository)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Contents.ContentRepository>(Biwen.QuickApi.Contents.ContentRepository)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of ContentRepository)(ContentRepository)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Contents.ContentRepository)(Biwen.QuickApi.Contents.ContentRepository)
+  name.vb: PublishDeletedAsync(Of ContentRepository)(ContentRepository)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.ContentRepository)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.ContentRepository)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.ContentRepository.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<ContentRepository>(ContentRepository)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<ContentRepository>(ContentRepository)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Contents.ContentRepository>(Biwen.QuickApi.Contents.ContentRepository)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of ContentRepository)(ContentRepository)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Contents.ContentRepository)(Biwen.QuickApi.Contents.ContentRepository)
+  name.vb: PublishUpdatedAsync(Of ContentRepository)(ContentRepository)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.ContentRepository)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.ContentRepository)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    isExternal: true
+    href: Biwen.QuickApi.Contents.ContentRepository.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Contents.Abstractions
+  commentId: N:Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Abstractions
+  nameWithType: Biwen.QuickApi.Contents.Abstractions
+  fullName: Biwen.QuickApi.Contents.Abstractions
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Abstractions
+    name: Abstractions
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.html
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.Contents.ContentRepository.#ctor*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository__ctor_Biwen_QuickApi_Contents_ContentSerializer_Biwen_QuickApi_Contents_Domain_IContentDbContext_Biwen_QuickApi_Events_IPublisher_Biwen_QuickApi_Contents_Abstractions_IContentSchemaGenerator_
+  name: ContentRepository
+  nameWithType: ContentRepository.ContentRepository
+  fullName: Biwen.QuickApi.Contents.ContentRepository.ContentRepository
+  nameWithType.vb: ContentRepository.New
+  fullName.vb: Biwen.QuickApi.Contents.ContentRepository.New
+  name.vb: New
+- uid: Biwen.QuickApi.Contents.ContentSerializer
+  commentId: T:Biwen.QuickApi.Contents.ContentSerializer
+  parent: Biwen.QuickApi.Contents
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentSerializer.html
+  name: ContentSerializer
+  nameWithType: ContentSerializer
+  fullName: Biwen.QuickApi.Contents.ContentSerializer
+- uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+  commentId: T:Biwen.QuickApi.Contents.Domain.IContentDbContext
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.IContentDbContext.html
+  name: IContentDbContext
+  nameWithType: IContentDbContext
+  fullName: Biwen.QuickApi.Contents.Domain.IContentDbContext
+- uid: Biwen.QuickApi.Events.IPublisher
+  commentId: T:Biwen.QuickApi.Events.IPublisher
+  parent: Biwen.QuickApi.Events
+  isExternal: true
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Events/Publisher.cs
+  name: IPublisher
+  nameWithType: IPublisher
+  fullName: Biwen.QuickApi.Events.IPublisher
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  commentId: T:Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+  parent: Biwen.QuickApi.Contents.Abstractions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator.html
+  name: IContentSchemaGenerator
+  nameWithType: IContentSchemaGenerator
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+- uid: Biwen.QuickApi.Contents.Domain
+  commentId: N:Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Domain
+  nameWithType: Biwen.QuickApi.Contents.Domain
+  fullName: Biwen.QuickApi.Contents.Domain
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html
+- uid: Biwen.QuickApi.Events
+  commentId: N:Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Events
+  nameWithType: Biwen.QuickApi.Events
+  fullName: Biwen.QuickApi.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+- uid: Biwen.QuickApi.Contents.ContentRepository.SaveContentAsync*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.SaveContentAsync
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository_SaveContentAsync__1___0_System_String_System_String_
+  name: SaveContentAsync
+  nameWithType: ContentRepository.SaveContentAsync
+  fullName: Biwen.QuickApi.Contents.ContentRepository.SaveContentAsync
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync``1({T},System.String,System.String)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync``1(``0,System.String,System.String)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  definition: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync``1(``0,System.String,System.String)
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_SaveContentAsync__1___0_System_String_System_String_
+  name: SaveContentAsync<T>(T, string, string)
+  nameWithType: IContentRepository.SaveContentAsync<T>(T, string, string)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync<T>(T, string, string)
+  nameWithType.vb: IContentRepository.SaveContentAsync(Of T)(T, String, String)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync(Of T)(T, String, String)
+  name.vb: SaveContentAsync(Of T)(T, String, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync``1(``0,System.String,System.String)
+    name: SaveContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_SaveContentAsync__1___0_System_String_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync``1(``0,System.String,System.String)
+    name: SaveContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_SaveContentAsync__1___0_System_String_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Guid}
+  commentId: T:System.Threading.Tasks.Task{System.Guid}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Guid>
+  nameWithType: Task<Guid>
+  fullName: System.Threading.Tasks.Task<System.Guid>
+  nameWithType.vb: Task(Of Guid)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Guid)
+  name.vb: Task(Of Guid)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync``1(``0,System.String,System.String)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync``1(``0,System.String,System.String)
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_SaveContentAsync__1___0_System_String_System_String_
+  name: SaveContentAsync<T>(T, string, string)
+  nameWithType: IContentRepository.SaveContentAsync<T>(T, string, string)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync<T>(T, string, string)
+  nameWithType.vb: IContentRepository.SaveContentAsync(Of T)(T, String, String)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync(Of T)(T, String, String)
+  name.vb: SaveContentAsync(Of T)(T, String, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync``1(``0,System.String,System.String)
+    name: SaveContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_SaveContentAsync__1___0_System_String_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SaveContentAsync``1(``0,System.String,System.String)
+    name: SaveContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_SaveContentAsync__1___0_System_String_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetContentAsync*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.GetContentAsync
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository_GetContentAsync__1_System_Guid_
+  name: GetContentAsync
+  nameWithType: ContentRepository.GetContentAsync
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetContentAsync
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentAsync``1(System.Guid)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentAsync``1(System.Guid)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentAsync__1_System_Guid_
+  name: GetContentAsync<T>(Guid)
+  nameWithType: IContentRepository.GetContentAsync<T>(Guid)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentAsync<T>(System.Guid)
+  nameWithType.vb: IContentRepository.GetContentAsync(Of T)(Guid)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentAsync(Of T)(System.Guid)
+  name.vb: GetContentAsync(Of T)(Guid)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentAsync``1(System.Guid)
+    name: GetContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentAsync__1_System_Guid_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentAsync``1(System.Guid)
+    name: GetContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentAsync__1_System_Guid_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{``0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<T>
+  nameWithType: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
+  nameWithType.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
+  name.vb: Task(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository_GetContentsByTypeAsync__1_System_Int32_System_Int32_
+  name: GetContentsByTypeAsync
+  nameWithType: ContentRepository.GetContentsByTypeAsync
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetContentsByTypeAsync
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync``1(System.Int32,System.Int32)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync``1(System.Int32,System.Int32)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentsByTypeAsync__1_System_Int32_System_Int32_
+  name: GetContentsByTypeAsync<T>(int, int)
+  nameWithType: IContentRepository.GetContentsByTypeAsync<T>(int, int)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync<T>(int, int)
+  nameWithType.vb: IContentRepository.GetContentsByTypeAsync(Of T)(Integer, Integer)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync(Of T)(Integer, Integer)
+  name.vb: GetContentsByTypeAsync(Of T)(Integer, Integer)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync``1(System.Int32,System.Int32)
+    name: GetContentsByTypeAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentsByTypeAsync__1_System_Int32_System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync``1(System.Int32,System.Int32)
+    name: GetContentsByTypeAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentsByTypeAsync__1_System_Int32_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{{T}}}
+  commentId: T:System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IPagedList<T>>
+  nameWithType: Task<IPagedList<T>>
+  fullName: System.Threading.Tasks.Task<Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>>
+  nameWithType.vb: Task(Of IPagedList(Of T))
+  fullName.vb: System.Threading.Tasks.Task(Of Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList(Of T))
+  name.vb: Task(Of IPagedList(Of T))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+    name: IPagedList
+    isExternal: true
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+    name: IPagedList
+    isExternal: true
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetDomainContentsByTypeAsync*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.GetDomainContentsByTypeAsync
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository_GetDomainContentsByTypeAsync__1_System_String_System_Int32_System_Int32_System_Nullable_System_Int32__System_String_
+  name: GetDomainContentsByTypeAsync
+  nameWithType: ContentRepository.GetDomainContentsByTypeAsync
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetDomainContentsByTypeAsync
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetDomainContentsByTypeAsync``1(System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetDomainContentsByTypeAsync``1(System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetDomainContentsByTypeAsync__1_System_String_System_Int32_System_Int32_System_Nullable_System_Int32__System_String_
+  name: GetDomainContentsByTypeAsync<T>(string, int, int, int?, string)
+  nameWithType: IContentRepository.GetDomainContentsByTypeAsync<T>(string, int, int, int?, string)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetDomainContentsByTypeAsync<T>(string, int, int, int?, string)
+  nameWithType.vb: IContentRepository.GetDomainContentsByTypeAsync(Of T)(String, Integer, Integer, Integer?, String)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetDomainContentsByTypeAsync(Of T)(String, Integer, Integer, Integer?, String)
+  name.vb: GetDomainContentsByTypeAsync(Of T)(String, Integer, Integer, Integer?, String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetDomainContentsByTypeAsync``1(System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String)
+    name: GetDomainContentsByTypeAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetDomainContentsByTypeAsync__1_System_String_System_Int32_System_Int32_System_Nullable_System_Int32__System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetDomainContentsByTypeAsync``1(System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String)
+    name: GetDomainContentsByTypeAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetDomainContentsByTypeAsync__1_System_String_System_Int32_System_Int32_System_Nullable_System_Int32__System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{Biwen.QuickApi.Contents.Domain.Content}}
+  commentId: T:System.Threading.Tasks.Task{Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{Biwen.QuickApi.Contents.Domain.Content}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IPagedList<Content>>
+  nameWithType: Task<IPagedList<Content>>
+  fullName: System.Threading.Tasks.Task<Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<Biwen.QuickApi.Contents.Domain.Content>>
+  nameWithType.vb: Task(Of IPagedList(Of Content))
+  fullName.vb: System.Threading.Tasks.Task(Of Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList(Of Biwen.QuickApi.Contents.Domain.Content))
+  name.vb: Task(Of IPagedList(Of Content))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+    name: IPagedList
+    isExternal: true
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Domain.Content
+    name: Content
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.Content.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
+    name: IPagedList
+    isExternal: true
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Domain.Content
+    name: Content
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.Content.html
+  - name: )
+  - name: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync``1(System.String)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync``1(System.String)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentsByTypeAsync__1_System_String_
+  name: GetContentsByTypeAsync<T>(string)
+  nameWithType: IContentRepository.GetContentsByTypeAsync<T>(string)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync<T>(string)
+  nameWithType.vb: IContentRepository.GetContentsByTypeAsync(Of T)(String)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync(Of T)(String)
+  name.vb: GetContentsByTypeAsync(Of T)(String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync``1(System.String)
+    name: GetContentsByTypeAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentsByTypeAsync__1_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentsByTypeAsync``1(System.String)
+    name: GetContentsByTypeAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentsByTypeAsync__1_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Contents.ContentRepository.UpdateContentAsync*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.UpdateContentAsync
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository_UpdateContentAsync__1_System_Guid___0_
+  name: UpdateContentAsync
+  nameWithType: ContentRepository.UpdateContentAsync
+  fullName: Biwen.QuickApi.Contents.ContentRepository.UpdateContentAsync
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync``1(System.Guid,{T})
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync``1(System.Guid,``0)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  definition: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync``1(System.Guid,``0)
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_UpdateContentAsync__1_System_Guid___0_
+  name: UpdateContentAsync<T>(Guid, T)
+  nameWithType: IContentRepository.UpdateContentAsync<T>(Guid, T)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync<T>(System.Guid, T)
+  nameWithType.vb: IContentRepository.UpdateContentAsync(Of T)(Guid, T)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync(Of T)(System.Guid, T)
+  name.vb: UpdateContentAsync(Of T)(Guid, T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync``1(System.Guid,``0)
+    name: UpdateContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_UpdateContentAsync__1_System_Guid___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync``1(System.Guid,``0)
+    name: UpdateContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_UpdateContentAsync__1_System_Guid___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync``1(System.Guid,``0)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync``1(System.Guid,``0)
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_UpdateContentAsync__1_System_Guid___0_
+  name: UpdateContentAsync<T>(Guid, T)
+  nameWithType: IContentRepository.UpdateContentAsync<T>(Guid, T)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync<T>(System.Guid, T)
+  nameWithType.vb: IContentRepository.UpdateContentAsync(Of T)(Guid, T)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync(Of T)(System.Guid, T)
+  name.vb: UpdateContentAsync(Of T)(Guid, T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync``1(System.Guid,``0)
+    name: UpdateContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_UpdateContentAsync__1_System_Guid___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateContentAsync``1(System.Guid,``0)
+    name: UpdateContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_UpdateContentAsync__1_System_Guid___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Contents.ContentRepository.DeleteContentAsync*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.DeleteContentAsync
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository_DeleteContentAsync_System_Guid_
+  name: DeleteContentAsync
+  nameWithType: ContentRepository.DeleteContentAsync
+  fullName: Biwen.QuickApi.Contents.ContentRepository.DeleteContentAsync
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.DeleteContentAsync(System.Guid)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.DeleteContentAsync(System.Guid)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_DeleteContentAsync_System_Guid_
+  name: DeleteContentAsync(Guid)
+  nameWithType: IContentRepository.DeleteContentAsync(Guid)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.DeleteContentAsync(System.Guid)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.DeleteContentAsync(System.Guid)
+    name: DeleteContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_DeleteContentAsync_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.DeleteContentAsync(System.Guid)
+    name: DeleteContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_DeleteContentAsync_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: Biwen.QuickApi.Contents.ContentRepository.SetContentStatusAsync*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.SetContentStatusAsync
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository_SetContentStatusAsync_System_Guid_Biwen_QuickApi_Contents_Domain_ContentStatus_
+  name: SetContentStatusAsync
+  nameWithType: ContentRepository.SetContentStatusAsync
+  fullName: Biwen.QuickApi.Contents.ContentRepository.SetContentStatusAsync
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SetContentStatusAsync(System.Guid,Biwen.QuickApi.Contents.Domain.ContentStatus)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.SetContentStatusAsync(System.Guid,Biwen.QuickApi.Contents.Domain.ContentStatus)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_SetContentStatusAsync_System_Guid_Biwen_QuickApi_Contents_Domain_ContentStatus_
+  name: SetContentStatusAsync(Guid, ContentStatus)
+  nameWithType: IContentRepository.SetContentStatusAsync(Guid, ContentStatus)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SetContentStatusAsync(System.Guid, Biwen.QuickApi.Contents.Domain.ContentStatus)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SetContentStatusAsync(System.Guid,Biwen.QuickApi.Contents.Domain.ContentStatus)
+    name: SetContentStatusAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_SetContentStatusAsync_System_Guid_Biwen_QuickApi_Contents_Domain_ContentStatus_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Domain.ContentStatus
+    name: ContentStatus
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.ContentStatus.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.SetContentStatusAsync(System.Guid,Biwen.QuickApi.Contents.Domain.ContentStatus)
+    name: SetContentStatusAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_SetContentStatusAsync_System_Guid_Biwen_QuickApi_Contents_Domain_ContentStatus_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Domain.ContentStatus
+    name: ContentStatus
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.ContentStatus.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Domain.ContentStatus
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentStatus
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentStatus.html
+  name: ContentStatus
+  nameWithType: ContentStatus
+  fullName: Biwen.QuickApi.Contents.Domain.ContentStatus
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetRawContentAsync*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.GetRawContentAsync
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository_GetRawContentAsync_System_Guid_
+  name: GetRawContentAsync
+  nameWithType: ContentRepository.GetRawContentAsync
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetRawContentAsync
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetRawContentAsync(System.Guid)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetRawContentAsync(System.Guid)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetRawContentAsync_System_Guid_
+  name: GetRawContentAsync(Guid)
+  nameWithType: IContentRepository.GetRawContentAsync(Guid)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetRawContentAsync(System.Guid)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetRawContentAsync(System.Guid)
+    name: GetRawContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetRawContentAsync_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetRawContentAsync(System.Guid)
+    name: GetRawContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetRawContentAsync_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Threading.Tasks.Task{Biwen.QuickApi.Contents.Domain.Content}
+  commentId: T:System.Threading.Tasks.Task{Biwen.QuickApi.Contents.Domain.Content}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Content>
+  nameWithType: Task<Content>
+  fullName: System.Threading.Tasks.Task<Biwen.QuickApi.Contents.Domain.Content>
+  nameWithType.vb: Task(Of Content)
+  fullName.vb: System.Threading.Tasks.Task(Of Biwen.QuickApi.Contents.Domain.Content)
+  name.vb: Task(Of Content)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Domain.Content
+    name: Content
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.Content.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Domain.Content
+    name: Content
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.Content.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetContentIdBySlugAsync*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.GetContentIdBySlugAsync
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository_GetContentIdBySlugAsync_System_String_
+  name: GetContentIdBySlugAsync
+  nameWithType: ContentRepository.GetContentIdBySlugAsync
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetContentIdBySlugAsync
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentIdBySlugAsync(System.String)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentIdBySlugAsync(System.String)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentIdBySlugAsync_System_String_
+  name: GetContentIdBySlugAsync(string)
+  nameWithType: IContentRepository.GetContentIdBySlugAsync(string)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentIdBySlugAsync(string)
+  nameWithType.vb: IContentRepository.GetContentIdBySlugAsync(String)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentIdBySlugAsync(String)
+  name.vb: GetContentIdBySlugAsync(String)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentIdBySlugAsync(System.String)
+    name: GetContentIdBySlugAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentIdBySlugAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentIdBySlugAsync(System.String)
+    name: GetContentIdBySlugAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentIdBySlugAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Biwen.QuickApi.Contents.ContentRepository.UpdateRawContentAsync*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.UpdateRawContentAsync
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository_UpdateRawContentAsync_Biwen_QuickApi_Contents_Domain_Content_System_Boolean_System_Int32_
+  name: UpdateRawContentAsync
+  nameWithType: ContentRepository.UpdateRawContentAsync
+  fullName: Biwen.QuickApi.Contents.ContentRepository.UpdateRawContentAsync
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content,System.Boolean,System.Int32)
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content,System.Boolean,System.Int32)
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_UpdateRawContentAsync_Biwen_QuickApi_Contents_Domain_Content_System_Boolean_System_Int32_
+  name: UpdateRawContentAsync(Content, bool, int)
+  nameWithType: IContentRepository.UpdateRawContentAsync(Content, bool, int)
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content, bool, int)
+  nameWithType.vb: IContentRepository.UpdateRawContentAsync(Content, Boolean, Integer)
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content, Boolean, Integer)
+  name.vb: UpdateRawContentAsync(Content, Boolean, Integer)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content,System.Boolean,System.Int32)
+    name: UpdateRawContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_UpdateRawContentAsync_Biwen_QuickApi_Contents_Domain_Content_System_Boolean_System_Int32_
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Domain.Content
+    name: Content
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.Content.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.UpdateRawContentAsync(Biwen.QuickApi.Contents.Domain.Content,System.Boolean,System.Int32)
+    name: UpdateRawContentAsync
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_UpdateRawContentAsync_Biwen_QuickApi_Contents_Domain_Content_System_Boolean_System_Int32_
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Domain.Content
+    name: Content
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.Content.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Biwen.QuickApi.Contents.Domain.Content
+  commentId: T:Biwen.QuickApi.Contents.Domain.Content
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.Content.html
+  name: Content
+  nameWithType: Content
+  fullName: Biwen.QuickApi.Contents.Domain.Content
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Biwen.QuickApi.Contents.ContentRepository.GetContentSchema*
+  commentId: Overload:Biwen.QuickApi.Contents.ContentRepository.GetContentSchema
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html#Biwen_QuickApi_Contents_ContentRepository_GetContentSchema__1
+  name: GetContentSchema
+  nameWithType: ContentRepository.GetContentSchema
+  fullName: Biwen.QuickApi.Contents.ContentRepository.GetContentSchema
+- uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentSchema``1
+  commentId: M:Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentSchema``1
+  parent: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentSchema__1
+  name: GetContentSchema<T>()
+  nameWithType: IContentRepository.GetContentSchema<T>()
+  fullName: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentSchema<T>()
+  nameWithType.vb: IContentRepository.GetContentSchema(Of T)()
+  fullName.vb: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentSchema(Of T)()
+  name.vb: GetContentSchema(Of T)()
+  spec.csharp:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentSchema``1
+    name: GetContentSchema
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentSchema__1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository.GetContentSchema``1
+    name: GetContentSchema
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Abstractions.IContentRepository.html#Biwen_QuickApi_Contents_Abstractions_IContentRepository_GetContentSchema__1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )

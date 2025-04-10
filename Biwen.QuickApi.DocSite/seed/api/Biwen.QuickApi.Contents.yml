@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents
+  commentId: N:Biwen.QuickApi.Contents
+  id: Biwen.QuickApi.Contents
+  children:
+  - Biwen.QuickApi.Contents.BiwenContentOptions
+  - Biwen.QuickApi.Contents.ContentFieldManager
+  - Biwen.QuickApi.Contents.ContentRepository
+  - Biwen.QuickApi.Contents.ContentSerializer
+  - Biwen.QuickApi.Contents.DefaultContentValidator
+  - Biwen.QuickApi.Contents.IContentValidator
+  - Biwen.QuickApi.Contents.SamplePage
+  - Biwen.QuickApi.Contents.ServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Contents
+  nameWithType: Biwen.QuickApi.Contents
+  fullName: Biwen.QuickApi.Contents
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Contents
+references:
+- uid: Biwen.QuickApi.Contents.BiwenContentOptions
+  commentId: T:Biwen.QuickApi.Contents.BiwenContentOptions
+  isExternal: true
+  href: Biwen.QuickApi.Contents.BiwenContentOptions.html
+  name: BiwenContentOptions
+  nameWithType: BiwenContentOptions
+  fullName: Biwen.QuickApi.Contents.BiwenContentOptions
+- uid: Biwen.QuickApi.Contents.ContentFieldManager
+  commentId: T:Biwen.QuickApi.Contents.ContentFieldManager
+  parent: Biwen.QuickApi.Contents
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentFieldManager.html
+  name: ContentFieldManager
+  nameWithType: ContentFieldManager
+  fullName: Biwen.QuickApi.Contents.ContentFieldManager
+- uid: Biwen.QuickApi.Contents.ContentRepository
+  commentId: T:Biwen.QuickApi.Contents.ContentRepository
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentRepository.html
+  name: ContentRepository
+  nameWithType: ContentRepository
+  fullName: Biwen.QuickApi.Contents.ContentRepository
+- uid: Biwen.QuickApi.Contents.ContentSerializer
+  commentId: T:Biwen.QuickApi.Contents.ContentSerializer
+  parent: Biwen.QuickApi.Contents
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ContentSerializer.html
+  name: ContentSerializer
+  nameWithType: ContentSerializer
+  fullName: Biwen.QuickApi.Contents.ContentSerializer
+- uid: Biwen.QuickApi.Contents.IContentValidator
+  commentId: T:Biwen.QuickApi.Contents.IContentValidator
+  parent: Biwen.QuickApi.Contents
+  isExternal: true
+  href: Biwen.QuickApi.Contents.IContentValidator.html
+  name: IContentValidator
+  nameWithType: IContentValidator
+  fullName: Biwen.QuickApi.Contents.IContentValidator
+- uid: Biwen.QuickApi.Contents.DefaultContentValidator
+  commentId: T:Biwen.QuickApi.Contents.DefaultContentValidator
+  isExternal: true
+  href: Biwen.QuickApi.Contents.DefaultContentValidator.html
+  name: DefaultContentValidator
+  nameWithType: DefaultContentValidator
+  fullName: Biwen.QuickApi.Contents.DefaultContentValidator
+- uid: Biwen.QuickApi.Contents.SamplePage
+  commentId: T:Biwen.QuickApi.Contents.SamplePage
+  isExternal: true
+  href: Biwen.QuickApi.Contents.SamplePage.html
+  name: SamplePage
+  nameWithType: SamplePage
+  fullName: Biwen.QuickApi.Contents.SamplePage
+- uid: Biwen.QuickApi.Contents.ServiceRegistration
+  commentId: T:Biwen.QuickApi.Contents.ServiceRegistration
+  isExternal: true
+  href: Biwen.QuickApi.Contents.ServiceRegistration.html
+  name: ServiceRegistration
+  nameWithType: ServiceRegistration
+  fullName: Biwen.QuickApi.Contents.ServiceRegistration
+- uid: Biwen.QuickApi.Contents
+  commentId: N:Biwen.QuickApi.Contents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents
+  nameWithType: Biwen.QuickApi.Contents
+  fullName: Biwen.QuickApi.Contents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html

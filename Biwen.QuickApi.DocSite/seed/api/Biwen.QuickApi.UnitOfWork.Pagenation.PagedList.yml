@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/PagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/PagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -48,7 +48,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList.Empty<T>()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/PagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/PagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -79,7 +79,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList.From<TSource, TResult>(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<TSource>, System.Func<System.Collections.Generic.IEnumerable<TSource>, System.Collections.Generic.IEnumerable<TResult>>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/PagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/PagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -119,7 +119,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList.Create<T>(System.Collections.Generic.IEnumerable<T>, int, int, int)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/PagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/PagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -163,7 +163,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList.Create<TSource, TResult>(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<TSource>, System.Func<System.Collections.Generic.IEnumerable<TSource>, System.Collections.Generic.IEnumerable<TResult>>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/PagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/PagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation

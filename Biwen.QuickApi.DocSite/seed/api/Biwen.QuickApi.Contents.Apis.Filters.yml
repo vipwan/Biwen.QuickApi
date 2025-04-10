@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Apis.Filters
+  commentId: N:Biwen.QuickApi.Contents.Apis.Filters
+  id: Biwen.QuickApi.Contents.Apis.Filters
+  children:
+  - Biwen.QuickApi.Contents.Apis.Filters.ValidationExceptionFilter
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Contents.Apis.Filters
+  nameWithType: Biwen.QuickApi.Contents.Apis.Filters
+  fullName: Biwen.QuickApi.Contents.Apis.Filters
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Contents
+references:
+- uid: Biwen.QuickApi.Contents.Apis.Filters.ValidationExceptionFilter
+  commentId: T:Biwen.QuickApi.Contents.Apis.Filters.ValidationExceptionFilter
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Apis.Filters.ValidationExceptionFilter.html
+  name: ValidationExceptionFilter
+  nameWithType: ValidationExceptionFilter
+  fullName: Biwen.QuickApi.Contents.Apis.Filters.ValidationExceptionFilter

@@ -75,6 +75,14 @@ references:
   - name: " "
   - name: TEntity
   - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
 - uid: Biwen.QuickApi.Application.EntityEvents.EntityUpdated`1
   commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityUpdated`1
   isExternal: true
@@ -111,14 +119,6 @@ references:
   name: IEntityEvent
   nameWithType: IEntityEvent
   fullName: Biwen.QuickApi.Application.EntityEvents.IEntityEvent
-- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
-  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
-  parent: Biwen.QuickApi.Application.EntityEvents
-  isExternal: true
-  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
-  name: EntityExtensions
-  nameWithType: EntityExtensions
-  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
 - uid: Biwen.QuickApi.Application.EntityEvents
   commentId: N:Biwen.QuickApi.Application.EntityEvents
   isExternal: true

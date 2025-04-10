@@ -6,8 +6,6 @@ items:
   children:
   - Biwen.QuickApi.UnitOfWork.AutoEventDbContext`1
   - Biwen.QuickApi.UnitOfWork.AutoEventIgnoreAttribute
-  - Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
-  - Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions
   - Biwen.QuickApi.UnitOfWork.IRepositoryFactory
   - Biwen.QuickApi.UnitOfWork.IRepository`1
   - Biwen.QuickApi.UnitOfWork.IUnitOfWork
@@ -61,21 +59,6 @@ references:
   name: AutoEventIgnoreAttribute
   nameWithType: AutoEventIgnoreAttribute
   fullName: Biwen.QuickApi.UnitOfWork.AutoEventIgnoreAttribute
-- uid: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
-  commentId: T:Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
-  parent: Biwen.QuickApi.UnitOfWork
-  isExternal: true
-  href: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.html
-  name: EnumerablePagedListExtensions
-  nameWithType: EnumerablePagedListExtensions
-  fullName: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
-- uid: Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions
-  commentId: T:Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions
-  isExternal: true
-  href: Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions.html
-  name: IQueryablePageListExtensions
-  nameWithType: IQueryablePageListExtensions
-  fullName: Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions
 - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
   commentId: T:Biwen.QuickApi.UnitOfWork.IRepository`1
   isExternal: true

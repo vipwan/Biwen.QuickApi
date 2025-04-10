@@ -6,6 +6,7 @@ items:
   parent: Biwen.AutoClassGen.Attributes
   children:
   - Biwen.AutoClassGen.Attributes.AutoDecorAttribute.#ctor(System.Type)
+  - Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType
   langs:
   - csharp
   - vb
@@ -114,6 +115,27 @@ items:
   nameWithType.vb: AutoDecorAttribute.New(Type)
   fullName.vb: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.New(System.Type)
   name.vb: New(Type)
+- uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType
+  commentId: P:Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType
+  id: ImplementType
+  parent: Biwen.AutoClassGen.Attributes.AutoDecorAttribute
+  langs:
+  - csharp
+  - vb
+  name: ImplementType
+  nameWithType: AutoDecorAttribute.ImplementType
+  fullName: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType
+  type: Property
+  assemblies:
+  - Biwen.AutoClassGen.Attributes
+  namespace: Biwen.AutoClassGen.Attributes
+  syntax:
+    content: public Type ImplementType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property ImplementType As Type
+  overload: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType*
 references:
 - uid: Biwen.AutoClassGen.Attributes
   commentId: N:Biwen.AutoClassGen.Attributes
@@ -2262,3 +2284,10 @@ references:
   name: Type
   nameWithType: Type
   fullName: System.Type
+- uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType*
+  commentId: Overload:Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.html#Biwen_AutoClassGen_Attributes_AutoDecorAttribute_ImplementType
+  name: ImplementType
+  nameWithType: AutoDecorAttribute.ImplementType
+  fullName: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType

@@ -2,510 +2,1099 @@
 items:
 - uid: Biwen.AutoClassGen.Attributes
   name: Biwen.AutoClassGen.Attributes
+  type: Namespace
   items:
   - uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute
     name: AutoDecorAttribute
+    type: Class
   - uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute`1
     name: AutoDecorAttribute<T>
+    type: Class
+  - uid: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute
+    name: AutoDecorForAttribute
+    type: Class
+  - uid: Biwen.AutoClassGen.Attributes.AutoDecorForAttribute`1
+    name: AutoDecorForAttribute<T>
+    type: Class
   - uid: Biwen.AutoClassGen.Attributes.AutoDtoAttribute
     name: AutoDtoAttribute
+    type: Class
   - uid: Biwen.AutoClassGen.Attributes.AutoDtoAttribute`1
     name: AutoDtoAttribute<T>
+    type: Class
+  - uid: Biwen.AutoClassGen.Attributes.AutoDtoComplexAttribute
+    name: AutoDtoComplexAttribute
+    type: Class
+  - uid: Biwen.AutoClassGen.Attributes.AutoDtoIgronedAttribute
+    name: AutoDtoIgronedAttribute
+    type: Class
   - uid: Biwen.AutoClassGen.Attributes.AutoGenAttribute
     name: AutoGenAttribute
+    type: Class
   - uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute
     name: AutoInjectAttribute
+    type: Class
   - uid: Biwen.AutoClassGen.Attributes.AutoInjectAttribute`1
     name: AutoInjectAttribute<T>
+    type: Class
   - uid: Biwen.AutoClassGen.Attributes.AutoInjectKeyedAttribute`1
     name: AutoInjectKeyedAttribute<T>
+    type: Class
+  - uid: Biwen.AutoClassGen.Attributes.IgnoreAsyncNamingAttribute
+    name: IgnoreAsyncNamingAttribute
+    type: Class
   - uid: Biwen.AutoClassGen.Attributes.ServiceLifetime
     name: ServiceLifetime
+    type: Enum
 - uid: Biwen.QuickApi
   name: Biwen.QuickApi
+  type: Namespace
   items:
-  - uid: Biwen.QuickApi.AutoInjectExtension
-    name: AutoInjectExtension
   - uid: Biwen.QuickApi.BaseQuickApi
     name: BaseQuickApi
+    type: Class
   - uid: Biwen.QuickApi.BaseQuickApi`1
     name: BaseQuickApi<Req>
+    type: Class
   - uid: Biwen.QuickApi.BaseQuickApi`2
     name: BaseQuickApi<Req, Rsp>
+    type: Class
   - uid: Biwen.QuickApi.BaseQuickApiJustAsService`2
     name: BaseQuickApiJustAsService<Req, Rsp>
+    type: Class
   - uid: Biwen.QuickApi.BaseQuickApiWithoutRequest`1
     name: BaseQuickApiWithoutRequest<Rsp>
+    type: Class
   - uid: Biwen.QuickApi.BaseRequest`1
     name: BaseRequest<T>
+    type: Class
   - uid: Biwen.QuickApi.BaseRequestFromBody`1
     name: BaseRequestFromBody<T>
+    type: Class
   - uid: Biwen.QuickApi.BiwenQuickApiOptions
     name: BiwenQuickApiOptions
+    type: Class
   - uid: Biwen.QuickApi.DefaultReqBinder`1
     name: DefaultReqBinder<T>
+    type: Class
   - uid: Biwen.QuickApi.EmptyRequest
     name: EmptyRequest
+    type: Class
+  - uid: Biwen.QuickApi.EnumerablePagedListExtensions
+    name: EnumerablePagedListExtensions
+    type: Class
   - uid: Biwen.QuickApi.FromBodyAttribute
     name: FromBodyAttribute
+    type: Class
   - uid: Biwen.QuickApi.FromKeyedServicesAttribute
     name: FromKeyedServicesAttribute
+    type: Class
   - uid: Biwen.QuickApi.GuidHelper
     name: GuidHelper
+    type: Class
   - uid: Biwen.QuickApi.IdGenerator
     name: IdGenerator
+    type: Class
   - uid: Biwen.QuickApi.IEndpointRouteBuilderExtensions
     name: IEndpointRouteBuilderExtensions
+    type: Class
+  - uid: Biwen.QuickApi.IQueryablePageListExtensions
+    name: IQueryablePageListExtensions
+    type: Class
   - uid: Biwen.QuickApi.IResultExtensions
     name: IResultExtensions
+    type: Class
   - uid: Biwen.QuickApi.IResultResponse
     name: IResultResponse
+    type: Class
   - uid: Biwen.QuickApi.QuickApiExcetion
     name: QuickApiExcetion
+    type: Class
   - uid: Biwen.QuickApi.ServiceCollectionExtensions
     name: ServiceCollectionExtensions
+    type: Class
   - uid: Biwen.QuickApi.ServiceRegistration
     name: ServiceRegistration
+    type: Class
+  - uid: Biwen.QuickApi.SlugEndpointExtensions
+    name: SlugEndpointExtensions
+    type: Class
   - uid: Biwen.QuickApi.StringExtensions
     name: StringExtensions
+    type: Class
   - uid: Biwen.QuickApi.Verb
     name: Verb
+    type: Enum
   - uid: Biwen.QuickApi.WebApplicationBuilderExtensions
     name: WebApplicationBuilderExtensions
+    type: Class
 - uid: Biwen.QuickApi.Abstractions
   name: Biwen.QuickApi.Abstractions
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Abstractions.IQuickEndpoint
     name: IQuickEndpoint
+    type: Interface
   - uid: Biwen.QuickApi.Abstractions.IReqBinder`1
     name: IReqBinder<T>
+    type: Interface
 - uid: Biwen.QuickApi.Abstractions.Modular
   name: Biwen.QuickApi.Abstractions.Modular
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Abstractions.Modular.ModularBase
     name: ModularBase
+    type: Class
   - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`1
-    name: PreModularAttribute<T>
+    name: PreModularAttribute<T1>
+    type: Class
   - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`2
-    name: PreModularAttribute<T, T2>
+    name: PreModularAttribute<T1, T2>
+    type: Class
   - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`3
-    name: PreModularAttribute<T, T2, T3>
+    name: PreModularAttribute<T1, T2, T3>
+    type: Class
   - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`4
-    name: PreModularAttribute<T, T2, T3, T4>
+    name: PreModularAttribute<T1, T2, T3, T4>
+    type: Class
   - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`5
-    name: PreModularAttribute<T, T2, T3, T4, T5>
+    name: PreModularAttribute<T1, T2, T3, T4, T5>
+    type: Class
   - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`6
-    name: PreModularAttribute<T, T2, T3, T4, T5, T6>
+    name: PreModularAttribute<T1, T2, T3, T4, T5, T6>
+    type: Class
   - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`7
-    name: PreModularAttribute<T, T2, T3, T4, T5, T6, T7>
+    name: PreModularAttribute<T1, T2, T3, T4, T5, T6, T7>
+    type: Class
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`8
+    name: PreModularAttribute<T1, T2, T3, T4, T5, T6, T7, T8>
+    type: Class
+  - uid: Biwen.QuickApi.Abstractions.Modular.PreModularAttribute`9
+    name: PreModularAttribute<T1, T2, T3, T4, T5, T6, T7, T8, T9>
+    type: Class
 - uid: Biwen.QuickApi.Application
   name: Biwen.QuickApi.Application
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Application.BuinessServiceBase`1
     name: BuinessServiceBase<TDbContext>
+    type: Class
   - uid: Biwen.QuickApi.Application.BuinessServiceBase`2
     name: BuinessServiceBase<TDbContext1, TDbContext2>
+    type: Class
   - uid: Biwen.QuickApi.Application.BuinessServiceBase`3
     name: BuinessServiceBase<TDbContext1, TDbContext2, TDbContext3>
+    type: Class
   - uid: Biwen.QuickApi.Application.CurdBuinessServiceBase`2
     name: CurdBuinessServiceBase<TEntity, TDbContext>
+    type: Class
   - uid: Biwen.QuickApi.Application.ICurdService`1
     name: ICurdService<TEntity>
+    type: Interface
 - uid: Biwen.QuickApi.Application.EntityEvents
   name: Biwen.QuickApi.Application.EntityEvents
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityAdded`1
     name: EntityAdded<TEntity>
+    type: Class
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityDeleted`1
     name: EntityDeleted<TEntity>
+    type: Class
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
     name: EntityExtensions
+    type: Class
   - uid: Biwen.QuickApi.Application.EntityEvents.EntityUpdated`1
     name: EntityUpdated<TEntity>
+    type: Class
   - uid: Biwen.QuickApi.Application.EntityEvents.IEntityEvent
     name: IEntityEvent
+    type: Interface
 - uid: Biwen.QuickApi.Attributes
   name: Biwen.QuickApi.Attributes
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Attributes.AliasAsAttribute
     name: AliasAsAttribute
+    type: Class
   - uid: Biwen.QuickApi.Attributes.AuditApiAttribute
     name: AuditApiAttribute
+    type: Class
   - uid: Biwen.QuickApi.Attributes.JustAsServiceAttribute
     name: JustAsServiceAttribute
+    type: Class
   - uid: Biwen.QuickApi.Attributes.OpenApiMetadataAttribute
     name: OpenApiMetadataAttribute
+    type: Class
   - uid: Biwen.QuickApi.Attributes.QuickApiAttribute
     name: QuickApiAttribute
+    type: Class
 - uid: Biwen.QuickApi.Auditing
   name: Biwen.QuickApi.Auditing
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Auditing.ActionInfo
     name: ActionInfo
+    type: Class
   - uid: Biwen.QuickApi.Auditing.AuditIgnoreAttribute
     name: AuditIgnoreAttribute
+    type: Class
   - uid: Biwen.QuickApi.Auditing.AuditInfo
     name: AuditInfo
+    type: Class
   - uid: Biwen.QuickApi.Auditing.AuditProxyFactory`1
     name: AuditProxyFactory<T>
+    type: Class
   - uid: Biwen.QuickApi.Auditing.IgnoreType
     name: IgnoreType
+    type: Enum
   - uid: Biwen.QuickApi.Auditing.ServiceRegistration
     name: ServiceRegistration
+    type: Class
 - uid: Biwen.QuickApi.Auditing.Abstractions
   name: Biwen.QuickApi.Auditing.Abstractions
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Auditing.Abstractions.IAuditHandler
     name: IAuditHandler
+    type: Interface
 - uid: Biwen.QuickApi.Caching
   name: Biwen.QuickApi.Caching
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Caching.AutoCacheAttribute
     name: AutoCacheAttribute
+    type: Class
   - uid: Biwen.QuickApi.Caching.CachingProxyFactory`1
     name: CachingProxyFactory<T>
+    type: Class
 - uid: Biwen.QuickApi.Caching.Abstractions
   name: Biwen.QuickApi.Caching.Abstractions
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache
     name: IProxyCache
+    type: Interface
+- uid: Biwen.QuickApi.Contents
+  name: Biwen.QuickApi.Contents
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.BiwenContentOptions
+    name: BiwenContentOptions
+    type: Class
+  - uid: Biwen.QuickApi.Contents.ContentFieldManager
+    name: ContentFieldManager
+    type: Class
+  - uid: Biwen.QuickApi.Contents.ContentRepository
+    name: ContentRepository
+    type: Class
+  - uid: Biwen.QuickApi.Contents.ContentSerializer
+    name: ContentSerializer
+    type: Class
+  - uid: Biwen.QuickApi.Contents.DefaultContentValidator
+    name: DefaultContentValidator
+    type: Class
+  - uid: Biwen.QuickApi.Contents.IContentValidator
+    name: IContentValidator
+    type: Interface
+  - uid: Biwen.QuickApi.Contents.SamplePage
+    name: SamplePage
+    type: Class
+  - uid: Biwen.QuickApi.Contents.ServiceRegistration
+    name: ServiceRegistration
+    type: Class
+- uid: Biwen.QuickApi.Contents.Abstractions
+  name: Biwen.QuickApi.Contents.Abstractions
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.Abstractions.ContentBase`1
+    name: ContentBase<T>
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Abstractions.FieldTypeExtensions
+    name: FieldTypeExtensions
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContent
+    name: IContent
+    type: Interface
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentRepository
+    name: IContentRepository
+    type: Interface
+  - uid: Biwen.QuickApi.Contents.Abstractions.IContentSchemaGenerator
+    name: IContentSchemaGenerator
+    type: Interface
+  - uid: Biwen.QuickApi.Contents.Abstractions.IFieldType
+    name: IFieldType
+    type: Interface
+- uid: Biwen.QuickApi.Contents.Apis
+  name: Biwen.QuickApi.Contents.Apis
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.Apis.AuditLogQueryRequest
+    name: AuditLogQueryRequest
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.ContentAuditLogDto
+    name: ContentAuditLogDto
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.ContentDto
+    name: ContentDto
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.ContentsApi
+    name: ContentsApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.ContentTypeDto
+    name: ContentTypeDto
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.ContentVersionDto
+    name: ContentVersionDto
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.CreateContentApi
+    name: CreateContentApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.CreateContentRequest
+    name: CreateContentRequest
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.DeleteContentApi
+    name: DeleteContentApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.GetAllContentTypesApi
+    name: GetAllContentTypesApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.GetContentAuditLogsApi
+    name: GetContentAuditLogsApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.GetContentByIdApi
+    name: GetContentByIdApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.GetContentSchemaApi
+    name: GetContentSchemaApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.GetContentVersionApi
+    name: GetContentVersionApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.GetContentVersionsApi
+    name: GetContentVersionsApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.PageRequest
+    name: PageRequest
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.PreviewContentApi
+    name: PreviewContentApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.QueryAuditLogsApi
+    name: QueryAuditLogsApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.RollbackContentVersionApi
+    name: RollbackContentVersionApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.UpdateContentApi
+    name: UpdateContentApi
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Apis.UpdateContentRequest
+    name: UpdateContentRequest
+    type: Class
+- uid: Biwen.QuickApi.Contents.Apis.Filters
+  name: Biwen.QuickApi.Contents.Apis.Filters
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.Apis.Filters.ValidationExceptionFilter
+    name: ValidationExceptionFilter
+    type: Class
+- uid: Biwen.QuickApi.Contents.Domain
+  name: Biwen.QuickApi.Contents.Domain
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.Domain.Content
+    name: Content
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Domain.ContentAuditLog
+    name: ContentAuditLog
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Domain.ContentAuditLogDtoToContentAuditLogExtentions
+    name: ContentAuditLogDtoToContentAuditLogExtentions
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Domain.ContentAuditLogToContentAuditLogDtoExtentions
+    name: ContentAuditLogToContentAuditLogDtoExtentions
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Domain.ContentDtoToContentExtentions
+    name: ContentDtoToContentExtentions
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Domain.ContentStatus
+    name: ContentStatus
+    type: Enum
+  - uid: Biwen.QuickApi.Contents.Domain.ContentToContentDtoExtentions
+    name: ContentToContentDtoExtentions
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Domain.ContentVersion
+    name: ContentVersion
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Domain.ContentVersionDtoToContentVersionExtentions
+    name: ContentVersionDtoToContentVersionExtentions
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Domain.ContentVersionToContentVersionDtoExtentions
+    name: ContentVersionToContentVersionDtoExtentions
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Domain.IContentDbContext
+    name: IContentDbContext
+    type: Interface
+- uid: Biwen.QuickApi.Contents.EventHandlers
+  name: Biwen.QuickApi.Contents.EventHandlers
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.EventHandlers.ContentAuditLogEventHandler
+    name: ContentAuditLogEventHandler
+    type: Class
+  - uid: Biwen.QuickApi.Contents.EventHandlers.ContentVersionEventHandler
+    name: ContentVersionEventHandler
+    type: Class
+- uid: Biwen.QuickApi.Contents.Events
+  name: Biwen.QuickApi.Contents.Events
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.Events.ContentCreatedEvent
+    name: ContentCreatedEvent
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+    name: ContentDeletedEvent
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Events.ContentUpdatedEvent
+    name: ContentUpdatedEvent
+    type: Class
+- uid: Biwen.QuickApi.Contents.FieldTypes
+  name: Biwen.QuickApi.Contents.FieldTypes
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ArrayFieldAttribute
+    name: ArrayFieldAttribute
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ArrayFieldType
+    name: ArrayFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.BooleanFieldType
+    name: BooleanFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ColorFieldType
+    name: ColorFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.DateTimeFieldType
+    name: DateTimeFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.FileFieldType
+    name: FileFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.ImageFieldType
+    name: ImageFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.IntegerFieldType
+    name: IntegerFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownFieldType
+    name: MarkdownFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolBarAttribute
+    name: MarkdownToolBarAttribute
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.MarkdownToolStyle
+    name: MarkdownToolStyle
+    type: Enum
+  - uid: Biwen.QuickApi.Contents.FieldTypes.NumberFieldType
+    name: NumberFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.OptionsFieldType`1
+    name: OptionsFieldType<T>
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.OptionsMultiFieldType`1
+    name: OptionsMultiFieldType<T>
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextAreaFieldType
+    name: TextAreaFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TextFieldType
+    name: TextFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.TimeFieldType
+    name: TimeFieldType
+    type: Class
+  - uid: Biwen.QuickApi.Contents.FieldTypes.UrlFieldType
+    name: UrlFieldType
+    type: Class
+- uid: Biwen.QuickApi.Contents.Generated
+  name: Biwen.QuickApi.Contents.Generated
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.Generated.AssemblyMetadata
+    name: AssemblyMetadata
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Generated.Version
+    name: Version
+    type: Class
+- uid: Biwen.QuickApi.Contents.Rendering
+  name: Biwen.QuickApi.Contents.Rendering
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.Rendering.ContentViewModel`1
+    name: ContentViewModel<T>
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Rendering.IDocumentRenderService
+    name: IDocumentRenderService
+    type: Interface
+- uid: Biwen.QuickApi.Contents.Schema
+  name: Biwen.QuickApi.Contents.Schema
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.Schema.FormilySchemaGenerator
+    name: FormilySchemaGenerator
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Schema.XRenderSchemaGenerator
+    name: XRenderSchemaGenerator
+    type: Class
+- uid: Biwen.QuickApi.Contents.Services
+  name: Biwen.QuickApi.Contents.Services
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Contents.Services.ContentAuditLogService
+    name: ContentAuditLogService
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Services.ContentVersionService
+    name: ContentVersionService
+    type: Class
+  - uid: Biwen.QuickApi.Contents.Services.IContentAuditLogService
+    name: IContentAuditLogService
+    type: Interface
+  - uid: Biwen.QuickApi.Contents.Services.IContentVersionService
+    name: IContentVersionService
+    type: Interface
 - uid: Biwen.QuickApi.Events
   name: Biwen.QuickApi.Events
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Events.EventExtensions
     name: EventExtensions
+    type: Class
   - uid: Biwen.QuickApi.Events.EventSubscriber`1
     name: EventSubscriber<T>
+    type: Class
   - uid: Biwen.QuickApi.Events.EventSubscriberAttribute
     name: EventSubscriberAttribute
+    type: Class
   - uid: Biwen.QuickApi.Events.IEvent
     name: IEvent
+    type: Interface
   - uid: Biwen.QuickApi.Events.IEventSubscriber`1
     name: IEventSubscriber<T>
+    type: Interface
+  - uid: Biwen.QuickApi.Events.IPublisher
+    name: IPublisher
+    type: Interface
 - uid: Biwen.QuickApi.FeatureManagement
   name: Biwen.QuickApi.FeatureManagement
+  type: Namespace
   items:
-  - uid: Biwen.QuickApi.FeatureManagement.AutoInjectExtension
-    name: AutoInjectExtension
   - uid: Biwen.QuickApi.FeatureManagement.Constants
     name: Constants
+    type: Class
   - uid: Biwen.QuickApi.FeatureManagement.QuickApiFeatureManagementOptions
     name: QuickApiFeatureManagementOptions
+    type: Class
   - uid: Biwen.QuickApi.FeatureManagement.ServiceRegistration
     name: ServiceRegistration
+    type: Class
+- uid: Biwen.QuickApi.FeatureManagement.Generated
+  name: Biwen.QuickApi.FeatureManagement.Generated
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.FeatureManagement.Generated.AssemblyMetadata
+    name: AssemblyMetadata
+    type: Class
+  - uid: Biwen.QuickApi.FeatureManagement.Generated.Version
+    name: Version
+    type: Class
+- uid: Biwen.QuickApi.Generated
+  name: Biwen.QuickApi.Generated
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Generated.AssemblyMetadata
+    name: AssemblyMetadata
+    type: Class
+  - uid: Biwen.QuickApi.Generated.Version
+    name: Version
+    type: Class
 - uid: Biwen.QuickApi.Http
   name: Biwen.QuickApi.Http
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Http.BaseQuickApiGroupRouteBuilder
     name: BaseQuickApiGroupRouteBuilder
+    type: Class
   - uid: Biwen.QuickApi.Http.BlazorRendererService
     name: BlazorRendererService
+    type: Class
   - uid: Biwen.QuickApi.Http.IQuickApiExceptionHandler
     name: IQuickApiExceptionHandler
+    type: Interface
   - uid: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder
     name: IQuickApiExceptionResultBuilder
+    type: Interface
   - uid: Biwen.QuickApi.Http.IQuickApiGroupRouteBuilder
     name: IQuickApiGroupRouteBuilder
+    type: Interface
   - uid: Biwen.QuickApi.Http.QuickApiAntiforgeryMiddleware
     name: QuickApiAntiforgeryMiddleware
+    type: Class
 - uid: Biwen.QuickApi.Infrastructure
   name: Biwen.QuickApi.Infrastructure
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Infrastructure.AsyncContextService`1
     name: AsyncContextService<T>
+    type: Class
   - uid: Biwen.QuickApi.Infrastructure.SuppressTypeAttribute
     name: SuppressTypeAttribute
+    type: Class
 - uid: Biwen.QuickApi.Infrastructure.DependencyInjection
   name: Biwen.QuickApi.Infrastructure.DependencyInjection
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ICachedServiceProvider
     name: ICachedServiceProvider
+    type: Interface
   - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.INamed`1
     name: INamed<T>
+    type: Interface
   - uid: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier
     name: ServiceIdentifier
+    type: Struct
 - uid: Biwen.QuickApi.Infrastructure.Html
   name: Biwen.QuickApi.Infrastructure.Html
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerOptions
     name: HtmlSanitizerOptions
+    type: Class
   - uid: Biwen.QuickApi.Infrastructure.Html.HtmlSanitizerService
     name: HtmlSanitizerService
+    type: Class
   - uid: Biwen.QuickApi.Infrastructure.Html.IHtmlSanitizerService
     name: IHtmlSanitizerService
+    type: Interface
 - uid: Biwen.QuickApi.Infrastructure.Locking
   name: Biwen.QuickApi.Infrastructure.Locking
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Infrastructure.Locking.ILocalLock
     name: ILocalLock
+    type: Interface
   - uid: Biwen.QuickApi.Infrastructure.Locking.ILock
     name: ILock
+    type: Interface
   - uid: Biwen.QuickApi.Infrastructure.Locking.ILocker
     name: ILocker
+    type: Interface
   - uid: Biwen.QuickApi.Infrastructure.Locking.LocalLock
     name: LocalLock
+    type: Class
 - uid: Biwen.QuickApi.Infrastructure.StartupTask
   name: Biwen.QuickApi.Infrastructure.StartupTask
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Infrastructure.StartupTask.IStartupTask
     name: IStartupTask
+    type: Interface
   - uid: Biwen.QuickApi.Infrastructure.StartupTask.StartupTaskBase
     name: StartupTaskBase
+    type: Class
 - uid: Biwen.QuickApi.Logging
   name: Biwen.QuickApi.Logging
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Logging.ServiceRegistration
     name: ServiceRegistration
-- uid: Biwen.QuickApi.Logging.Serilog
-  name: Biwen.QuickApi.Logging.Serilog
-  items:
-  - uid: Biwen.QuickApi.Logging.Serilog.AutoInjectExtension
-    name: AutoInjectExtension
+    type: Class
 - uid: Biwen.QuickApi.Logging.Serilog.Enrichers
   name: Biwen.QuickApi.Logging.Serilog.Enrichers
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Logging.Serilog.Enrichers.ClientInfoEnrich
     name: ClientInfoEnrich
+    type: Class
+- uid: Biwen.QuickApi.Logging.Serilog.Generated
+  name: Biwen.QuickApi.Logging.Serilog.Generated
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Logging.Serilog.Generated.AssemblyMetadata
+    name: AssemblyMetadata
+    type: Class
+  - uid: Biwen.QuickApi.Logging.Serilog.Generated.Version
+    name: Version
+    type: Class
 - uid: Biwen.QuickApi.Mapping
   name: Biwen.QuickApi.Mapping
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Mapping.ServiceRegistration
     name: ServiceRegistration
+    type: Class
 - uid: Biwen.QuickApi.Messaging.Email
   name: Biwen.QuickApi.Messaging.Email
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Messaging.Email.AdditionalEmailSendingArgs
     name: AdditionalEmailSendingArgs
+    type: Class
   - uid: Biwen.QuickApi.Messaging.Email.EmailAttachment
     name: EmailAttachment
+    type: Class
   - uid: Biwen.QuickApi.Messaging.Email.IEmailSender
     name: IEmailSender
+    type: Interface
   - uid: Biwen.QuickApi.Messaging.Email.NullEmailSender
     name: NullEmailSender
+    type: Class
   - uid: Biwen.QuickApi.Messaging.Email.ServiceRegistration
     name: ServiceRegistration
+    type: Class
 - uid: Biwen.QuickApi.Messaging.Sms
   name: Biwen.QuickApi.Messaging.Sms
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Messaging.Sms.ISmsSender
     name: ISmsSender
+    type: Interface
   - uid: Biwen.QuickApi.Messaging.Sms.NullSmsSender
     name: NullSmsSender
+    type: Class
   - uid: Biwen.QuickApi.Messaging.Sms.ServiceRegistration
     name: ServiceRegistration
+    type: Class
   - uid: Biwen.QuickApi.Messaging.Sms.SmsMessage
     name: SmsMessage
+    type: Class
   - uid: Biwen.QuickApi.Messaging.Sms.SmsSenderExtensions
     name: SmsSenderExtensions
+    type: Class
 - uid: Biwen.QuickApi.Metadata
   name: Biwen.QuickApi.Metadata
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Metadata.QuickApiEndpointMetadata
     name: QuickApiEndpointMetadata
+    type: Class
   - uid: Biwen.QuickApi.Metadata.QuickApiExampleMetadata
     name: QuickApiExampleMetadata
+    type: Class
   - uid: Biwen.QuickApi.Metadata.QuickApiMetadata
     name: QuickApiMetadata
+    type: Class
 - uid: Biwen.QuickApi.MiniProfiler
   name: Biwen.QuickApi.MiniProfiler
+  type: Namespace
   items:
-  - uid: Biwen.QuickApi.MiniProfiler.AutoInjectExtension
-    name: AutoInjectExtension
   - uid: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
     name: WrapMiniProfilerOptions
+    type: Class
+- uid: Biwen.QuickApi.MiniProfiler.Generated
+  name: Biwen.QuickApi.MiniProfiler.Generated
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.MiniProfiler.Generated.AssemblyMetadata
+    name: AssemblyMetadata
+    type: Class
+  - uid: Biwen.QuickApi.MiniProfiler.Generated.Version
+    name: Version
+    type: Class
 - uid: Biwen.QuickApi.MultiTenant
   name: Biwen.QuickApi.MultiTenant
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.MultiTenant.HttpContextExtensions
     name: HttpContextExtensions
+    type: Class
   - uid: Biwen.QuickApi.MultiTenant.IApplicationBuilderExtensions
     name: IApplicationBuilderExtensions
+    type: Class
   - uid: Biwen.QuickApi.MultiTenant.ITenantInfo
     name: ITenantInfo
+    type: Interface
   - uid: Biwen.QuickApi.MultiTenant.MultiTenantBuilder`1
     name: MultiTenantBuilder<TInfo>
+    type: Class
   - uid: Biwen.QuickApi.MultiTenant.MultiTenantOptions
     name: MultiTenantOptions
+    type: Class
   - uid: Biwen.QuickApi.MultiTenant.ServiceRegistration
     name: ServiceRegistration
+    type: Class
   - uid: Biwen.QuickApi.MultiTenant.TenantContextAccessor`1
     name: TenantContextAccessor<TInfo>
+    type: Class
   - uid: Biwen.QuickApi.MultiTenant.TenantInfo
     name: TenantInfo
+    type: Class
 - uid: Biwen.QuickApi.MultiTenant.Abstractions
   name: Biwen.QuickApi.MultiTenant.Abstractions
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantFinder`1
     name: ITenantFinder<TInfo>
+    type: Interface
   - uid: Biwen.QuickApi.MultiTenant.Abstractions.ITenantInfoProvider`1
     name: ITenantInfoProvider<TInfo>
+    type: Interface
 - uid: Biwen.QuickApi.MultiTenant.Finders
   name: Biwen.QuickApi.MultiTenant.Finders
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.MultiTenant.Finders.BasePathFinder`1
     name: BasePathFinder<TInfo>
+    type: Class
   - uid: Biwen.QuickApi.MultiTenant.Finders.HeaderFinder`1
     name: HeaderFinder<TInfo>
+    type: Class
   - uid: Biwen.QuickApi.MultiTenant.Finders.HostFinder`1
     name: HostFinder<TInfo>
+    type: Class
   - uid: Biwen.QuickApi.MultiTenant.Finders.RouteFinder`1
     name: RouteFinder<TInfo>
+    type: Class
   - uid: Biwen.QuickApi.MultiTenant.Finders.SessionFinder`1
     name: SessionFinder<TInfo>
+    type: Class
 - uid: Biwen.QuickApi.OpenApi
   name: Biwen.QuickApi.OpenApi
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.OpenApi.BearerSecuritySchemeTransformer
     name: BearerSecuritySchemeTransformer
+    type: Class
   - uid: Biwen.QuickApi.OpenApi.ServiceRegistration
     name: ServiceRegistration
+    type: Class
 - uid: Biwen.QuickApi.OpenApi.Scalar
   name: Biwen.QuickApi.OpenApi.Scalar
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.OpenApi.Scalar.IEndpointRouteBuilderExtensions
     name: IEndpointRouteBuilderExtensions
+    type: Class
   - uid: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationApiKey
     name: ScalarAuthenticationApiKey
+    type: Class
   - uid: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationoAuth2
     name: ScalarAuthenticationoAuth2
+    type: Class
   - uid: Biwen.QuickApi.OpenApi.Scalar.ScalarAuthenticationOptions
     name: ScalarAuthenticationOptions
+    type: Class
   - uid: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions
     name: ScalarOptions
+    type: Class
 - uid: Biwen.QuickApi.Scheduling
   name: Biwen.QuickApi.Scheduling
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Scheduling.Constants
     name: Constants
+    type: Class
   - uid: Biwen.QuickApi.Scheduling.IScheduler
     name: IScheduler
+    type: Interface
   - uid: Biwen.QuickApi.Scheduling.IScheduleTask
     name: IScheduleTask
+    type: Interface
   - uid: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask
     name: OnlyOneRunningScheduleTask
+    type: Class
   - uid: Biwen.QuickApi.Scheduling.SampleNCrontabScheduler
     name: SampleNCrontabScheduler
+    type: Class
   - uid: Biwen.QuickApi.Scheduling.ScheduleTask
     name: ScheduleTask
+    type: Class
   - uid: Biwen.QuickApi.Scheduling.ScheduleTaskAttribute
     name: ScheduleTaskAttribute
+    type: Class
   - uid: Biwen.QuickApi.Scheduling.ServiceRegistration
     name: ServiceRegistration
+    type: Class
 - uid: Biwen.QuickApi.Scheduling.Events
   name: Biwen.QuickApi.Scheduling.Events
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Scheduling.Events.ScheduleTaskEvent
     name: ScheduleTaskEvent
+    type: Class
   - uid: Biwen.QuickApi.Scheduling.Events.SuccessedEventHandler
     name: SuccessedEventHandler
+    type: Class
   - uid: Biwen.QuickApi.Scheduling.Events.TaskFailedEvent
     name: TaskFailedEvent
+    type: Class
   - uid: Biwen.QuickApi.Scheduling.Events.TaskStartedEvent
     name: TaskStartedEvent
+    type: Class
   - uid: Biwen.QuickApi.Scheduling.Events.TaskSuccessedEvent
     name: TaskSuccessedEvent
+    type: Class
 - uid: Biwen.QuickApi.Scheduling.Stores
   name: Biwen.QuickApi.Scheduling.Stores
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Scheduling.Stores.IScheduleMetadataStore
     name: IScheduleMetadataStore
+    type: Interface
   - uid: Biwen.QuickApi.Scheduling.Stores.ScheduleTaskMetadata
     name: ScheduleTaskMetadata
+    type: Class
 - uid: Biwen.QuickApi.Serializer
   name: Biwen.QuickApi.Serializer
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Serializer.DefaultSerializer
     name: DefaultSerializer
+    type: Class
   - uid: Biwen.QuickApi.Serializer.ISerializer
     name: ISerializer
+    type: Interface
   - uid: Biwen.QuickApi.Serializer.ITextSerializer
     name: ITextSerializer
+    type: Interface
   - uid: Biwen.QuickApi.Serializer.ObjectToInferredTypesConverter
     name: ObjectToInferredTypesConverter
+    type: Class
   - uid: Biwen.QuickApi.Serializer.SerializerExtensions
     name: SerializerExtensions
+    type: Class
   - uid: Biwen.QuickApi.Serializer.ServiceRegistration
     name: ServiceRegistration
+    type: Class
   - uid: Biwen.QuickApi.Serializer.SystemTextJsonSerializer
     name: SystemTextJsonSerializer
+    type: Class
 - uid: Biwen.QuickApi.Storage
   name: Biwen.QuickApi.Storage
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.Storage.FileSpec
     name: FileSpec
+    type: Class
   - uid: Biwen.QuickApi.Storage.FileStorageExtensions
     name: FileStorageExtensions
+    type: Class
   - uid: Biwen.QuickApi.Storage.FileStorageFactory
     name: FileStorageFactory
+    type: Class
   - uid: Biwen.QuickApi.Storage.IFileStorage
     name: IFileStorage
+    type: Interface
   - uid: Biwen.QuickApi.Storage.IHasNextPageFunc
     name: IHasNextPageFunc
+    type: Interface
   - uid: Biwen.QuickApi.Storage.LocalFileStorage
     name: LocalFileStorage
+    type: Class
   - uid: Biwen.QuickApi.Storage.NextPageResult
     name: NextPageResult
+    type: Class
   - uid: Biwen.QuickApi.Storage.PagedFileListResult
     name: PagedFileListResult
+    type: Class
   - uid: Biwen.QuickApi.Storage.ServiceRegistration
     name: ServiceRegistration
+    type: Class
   - uid: Biwen.QuickApi.Storage.StreamMode
     name: StreamMode
+    type: Enum
 - uid: Biwen.QuickApi.Telemetry
   name: Biwen.QuickApi.Telemetry
+  type: Namespace
   items:
-  - uid: Biwen.QuickApi.Telemetry.AutoInjectExtension
-    name: AutoInjectExtension
   - uid: Biwen.QuickApi.Telemetry.Constant
     name: Constant
+    type: Class
   - uid: Biwen.QuickApi.Telemetry.TelemetryOptions
     name: TelemetryOptions
+    type: Class
+- uid: Biwen.QuickApi.Telemetry.Generated
+  name: Biwen.QuickApi.Telemetry.Generated
+  type: Namespace
+  items:
+  - uid: Biwen.QuickApi.Telemetry.Generated.AssemblyMetadata
+    name: AssemblyMetadata
+    type: Class
+  - uid: Biwen.QuickApi.Telemetry.Generated.Version
+    name: Version
+    type: Class
 - uid: Biwen.QuickApi.UnitOfWork
   name: Biwen.QuickApi.UnitOfWork
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.UnitOfWork.AutoEventDbContext`1
     name: AutoEventDbContext<TDbContext>
+    type: Class
   - uid: Biwen.QuickApi.UnitOfWork.AutoEventIgnoreAttribute
     name: AutoEventIgnoreAttribute
-  - uid: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
-    name: EnumerablePagedListExtensions
-  - uid: Biwen.QuickApi.UnitOfWork.IQueryablePageListExtensions
-    name: IQueryablePageListExtensions
+    type: Class
   - uid: Biwen.QuickApi.UnitOfWork.IRepository`1
     name: IRepository<TEntity>
+    type: Interface
   - uid: Biwen.QuickApi.UnitOfWork.IRepositoryFactory
     name: IRepositoryFactory
+    type: Interface
   - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork
     name: IUnitOfWork
+    type: Interface
   - uid: Biwen.QuickApi.UnitOfWork.IUnitOfWork`1
     name: IUnitOfWork<TContext>
+    type: Interface
   - uid: Biwen.QuickApi.UnitOfWork.Repository`1
     name: Repository<TEntity>
+    type: Class
   - uid: Biwen.QuickApi.UnitOfWork.SaveChangesResult
     name: SaveChangesResult
+    type: Class
   - uid: Biwen.QuickApi.UnitOfWork.UnitOfWork`1
     name: UnitOfWork<TContext>
+    type: Class
   - uid: Biwen.QuickApi.UnitOfWork.UnitOfWorkServiceCollectionExtensions
     name: UnitOfWorkServiceCollectionExtensions
+    type: Class
 - uid: Biwen.QuickApi.UnitOfWork.Pagenation
   name: Biwen.QuickApi.UnitOfWork.Pagenation
+  type: Namespace
   items:
   - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1
     name: IPagedList<T>
+    type: Interface
   - uid: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList
     name: PagedList
+    type: Class
   - uid: Biwen.QuickApi.UnitOfWork.Pagenation.PagedList`1
     name: PagedList<T>
+    type: Class
+- uid: Microsoft.AspNetCore.Http
+  name: Microsoft.AspNetCore.Http
+  type: Namespace
+  items:
+  - uid: Microsoft.AspNetCore.Http.FeatureRouteHandlerBuilderExtensions
+    name: FeatureRouteHandlerBuilderExtensions
+    type: Class
 - uid: Microsoft.Extensions.DependencyInjection
   name: Microsoft.Extensions.DependencyInjection
+  type: Namespace
   items:
   - uid: Microsoft.Extensions.DependencyInjection.AutoActivationExtensions
     name: AutoActivationExtensions
+    type: Class
   - uid: Microsoft.Extensions.DependencyInjection.HtmlSanitizerOptionsExtensions
     name: HtmlSanitizerOptionsExtensions
+    type: Class
 - uid: System
   name: System
+  type: Namespace
   items:
   - uid: System.StringExtensions
     name: StringExtensions
+    type: Class
 memberLayout: SamePage

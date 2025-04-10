@@ -1,4 +1,6 @@
-﻿using Docfx.Dotnet;
+﻿using Biwen.QuickApi.Contents;
+using Biwen.QuickApi.DocSite;
+using Docfx.Dotnet;
 using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateSlimBuilder(args);
@@ -8,6 +10,12 @@ builder.Services.AddBiwenQuickApis(o =>
 {
     o.UseQuickApiExceptionResultBuilder = true;
 });
+
+
+builder.Services.AddDbContext<TestDbContext>(o =>
+{
+});
+builder.Services.AddBiwenContents<TestDbContext>();
 
 var app = builder.Build();
 

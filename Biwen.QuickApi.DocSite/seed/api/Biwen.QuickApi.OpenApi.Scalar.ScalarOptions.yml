@@ -27,7 +27,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -60,7 +60,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.ScalarOptions()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -83,7 +83,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.EndpointPathPrefix
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -116,7 +116,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.OpenApiPathPrefix
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -149,7 +149,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.Title
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -182,7 +182,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.Theme
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -207,7 +207,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.DarkMode
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -230,7 +230,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.HideDownloadButton
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -253,7 +253,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.ShowSideBar
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -276,7 +276,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.WithDefaultFonts
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -299,7 +299,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.Layout
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -322,7 +322,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.CustomCss
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -345,7 +345,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.SearchHotkey
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -368,7 +368,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.Metadata
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar
@@ -391,7 +391,7 @@ items:
   fullName: Biwen.QuickApi.OpenApi.Scalar.ScalarOptions.Authentication
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/OpenApi/Scalar/ScalarOptions.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.OpenApi.Scalar

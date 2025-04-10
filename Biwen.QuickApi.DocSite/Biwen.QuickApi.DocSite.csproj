@@ -30,6 +30,7 @@
 		<ProjectReference Include="..\Biwen.QuickApi.MiniProfiler\Biwen.QuickApi.MiniProfiler.csproj" />
 		<ProjectReference Include="..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
 		<ProjectReference Include="..\extensions\Biwen.QuickApi.Telemetry\Biwen.QuickApi.Telemetry.csproj" />
+		<ProjectReference Include="..\extensions\Biwen.QuickApi.Contents\Biwen.QuickApi.Contents.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

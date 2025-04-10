@@ -4,7 +4,6 @@ items:
   commentId: N:Biwen.QuickApi.MiniProfiler
   id: Biwen.QuickApi.MiniProfiler
   children:
-  - Biwen.QuickApi.MiniProfiler.AutoInjectExtension
   - Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
   langs:
   - csharp
@@ -23,10 +22,3 @@ references:
   name: WrapMiniProfilerOptions
   nameWithType: WrapMiniProfilerOptions
   fullName: Biwen.QuickApi.MiniProfiler.WrapMiniProfilerOptions
-- uid: Biwen.QuickApi.MiniProfiler.AutoInjectExtension
-  commentId: T:Biwen.QuickApi.MiniProfiler.AutoInjectExtension
-  isExternal: true
-  href: Biwen.QuickApi.MiniProfiler.AutoInjectExtension.html
-  name: AutoInjectExtension
-  nameWithType: AutoInjectExtension
-  fullName: Biwen.QuickApi.MiniProfiler.AutoInjectExtension

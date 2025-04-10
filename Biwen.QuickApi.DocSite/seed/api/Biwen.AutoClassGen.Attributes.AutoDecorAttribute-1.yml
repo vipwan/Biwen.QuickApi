@@ -32,6 +32,7 @@ items:
   - System.Attribute
   - Biwen.AutoClassGen.Attributes.AutoDecorAttribute
   inheritedMembers:
+  - Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type,System.Boolean)
   - System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo)
@@ -180,6 +181,14 @@ references:
   name: AutoDecorAttribute
   nameWithType: AutoDecorAttribute
   fullName: Biwen.AutoClassGen.Attributes.AutoDecorAttribute
+- uid: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType
+  commentId: P:Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType
+  parent: Biwen.AutoClassGen.Attributes.AutoDecorAttribute
+  isExternal: true
+  href: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.html#Biwen_AutoClassGen_Attributes_AutoDecorAttribute_ImplementType
+  name: ImplementType
+  nameWithType: AutoDecorAttribute.ImplementType
+  fullName: Biwen.AutoClassGen.Attributes.AutoDecorAttribute.ImplementType
 - uid: System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
   commentId: M:System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
   parent: System.Attribute

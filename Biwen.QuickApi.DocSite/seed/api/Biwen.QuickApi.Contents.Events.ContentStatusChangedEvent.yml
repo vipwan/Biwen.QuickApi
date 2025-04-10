@@ -1,0 +1,1424 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  commentId: T:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  id: ContentStatusChangedEvent
+  parent: Biwen.QuickApi.Contents.Events
+  children:
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.#ctor(Biwen.QuickApi.Contents.Domain.Content,Biwen.QuickApi.Contents.Domain.ContentStatus,Biwen.QuickApi.Contents.Domain.ContentStatus)
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.#ctor(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Content
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Deconstruct(Biwen.QuickApi.Contents.Domain.Content@,Biwen.QuickApi.Contents.Domain.ContentStatus@,Biwen.QuickApi.Contents.Domain.ContentStatus@)
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.EqualityContract
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals(System.Object)
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.GetHashCode
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.NewStatus
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PreviousStatus
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PrintMembers(System.Text.StringBuilder)
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.ToString
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Equality(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent,Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Inequality(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent,Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  langs:
+  - csharp
+  - vb
+  name: ContentStatusChangedEvent
+  nameWithType: ContentStatusChangedEvent
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  type: Class
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: 'public record ContentStatusChangedEvent : IEvent, IEquatable<ContentStatusChangedEvent>'
+    content.vb: Public Class ContentStatusChangedEvent Implements IEvent, IEquatable(Of ContentStatusChangedEvent)
+  inheritance:
+  - System.Object
+  implements:
+  - Biwen.QuickApi.Events.IEvent
+  - System.IEquatable{Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent}
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.#ctor(Biwen.QuickApi.Contents.Domain.Content,Biwen.QuickApi.Contents.Domain.ContentStatus,Biwen.QuickApi.Contents.Domain.ContentStatus)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.#ctor(Biwen.QuickApi.Contents.Domain.Content,Biwen.QuickApi.Contents.Domain.ContentStatus,Biwen.QuickApi.Contents.Domain.ContentStatus)
+  id: '#ctor(Biwen.QuickApi.Contents.Domain.Content,Biwen.QuickApi.Contents.Domain.ContentStatus,Biwen.QuickApi.Contents.Domain.ContentStatus)'
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: ContentStatusChangedEvent(Content, ContentStatus, ContentStatus)
+  nameWithType: ContentStatusChangedEvent.ContentStatusChangedEvent(Content, ContentStatus, ContentStatus)
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.ContentStatusChangedEvent(Biwen.QuickApi.Contents.Domain.Content, Biwen.QuickApi.Contents.Domain.ContentStatus, Biwen.QuickApi.Contents.Domain.ContentStatus)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public ContentStatusChangedEvent(Content Content, ContentStatus PreviousStatus, ContentStatus NewStatus)
+    parameters:
+    - id: Content
+      type: Biwen.QuickApi.Contents.Domain.Content
+    - id: PreviousStatus
+      type: Biwen.QuickApi.Contents.Domain.ContentStatus
+    - id: NewStatus
+      type: Biwen.QuickApi.Contents.Domain.ContentStatus
+    content.vb: Public Sub New(Content As Content, PreviousStatus As ContentStatus, NewStatus As ContentStatus)
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.#ctor*
+  nameWithType.vb: ContentStatusChangedEvent.New(Content, ContentStatus, ContentStatus)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.New(Biwen.QuickApi.Contents.Domain.Content, Biwen.QuickApi.Contents.Domain.ContentStatus, Biwen.QuickApi.Contents.Domain.ContentStatus)
+  name.vb: New(Content, ContentStatus, ContentStatus)
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.ToString
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.ToString
+  id: ToString
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ContentStatusChangedEvent.ToString()
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.ToString()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.ToString*
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PrintMembers(System.Text.StringBuilder)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PrintMembers(System.Text.StringBuilder)
+  id: PrintMembers(System.Text.StringBuilder)
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: PrintMembers(StringBuilder)
+  nameWithType: ContentStatusChangedEvent.PrintMembers(StringBuilder)
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PrintMembers(System.Text.StringBuilder)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: protected virtual bool PrintMembers(StringBuilder builder)
+    parameters:
+    - id: builder
+      type: System.Text.StringBuilder
+    return:
+      type: System.Boolean
+    content.vb: Protected Overridable Function PrintMembers(builder As StringBuilder) As Boolean
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PrintMembers*
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Inequality(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent,Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Inequality(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent,Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  id: op_Inequality(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent,Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: operator !=(ContentStatusChangedEvent?, ContentStatusChangedEvent?)
+  nameWithType: ContentStatusChangedEvent.operator !=(ContentStatusChangedEvent?, ContentStatusChangedEvent?)
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.operator !=(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent?, Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent?)
+  type: Operator
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public static bool operator !=(ContentStatusChangedEvent? left, ContentStatusChangedEvent? right)
+    parameters:
+    - id: left
+      type: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    - id: right
+      type: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As ContentStatusChangedEvent, right As ContentStatusChangedEvent) As Boolean
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Inequality*
+  nameWithType.vb: ContentStatusChangedEvent.<>(ContentStatusChangedEvent, ContentStatusChangedEvent)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.<>(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent, Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  name.vb: <>(ContentStatusChangedEvent, ContentStatusChangedEvent)
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Equality(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent,Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Equality(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent,Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  id: op_Equality(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent,Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: operator ==(ContentStatusChangedEvent?, ContentStatusChangedEvent?)
+  nameWithType: ContentStatusChangedEvent.operator ==(ContentStatusChangedEvent?, ContentStatusChangedEvent?)
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.operator ==(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent?, Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent?)
+  type: Operator
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public static bool operator ==(ContentStatusChangedEvent? left, ContentStatusChangedEvent? right)
+    parameters:
+    - id: left
+      type: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    - id: right
+      type: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As ContentStatusChangedEvent, right As ContentStatusChangedEvent) As Boolean
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Equality*
+  nameWithType.vb: ContentStatusChangedEvent.=(ContentStatusChangedEvent, ContentStatusChangedEvent)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.=(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent, Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  name.vb: =(ContentStatusChangedEvent, ContentStatusChangedEvent)
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.GetHashCode
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.GetHashCode
+  id: GetHashCode
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: ContentStatusChangedEvent.GetHashCode()
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.GetHashCode*
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals(System.Object)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: ContentStatusChangedEvent.Equals(object?)
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals(object?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals*
+  nameWithType.vb: ContentStatusChangedEvent.Equals(Object)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  id: Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: Equals(ContentStatusChangedEvent?)
+  nameWithType: ContentStatusChangedEvent.Equals(ContentStatusChangedEvent?)
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent?)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  example: []
+  syntax:
+    content: public virtual bool Equals(ContentStatusChangedEvent? other)
+    parameters:
+    - id: other
+      type: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function Equals(other As ContentStatusChangedEvent) As Boolean
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals*
+  implements:
+  - System.IEquatable{Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent}.Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  nameWithType.vb: ContentStatusChangedEvent.Equals(ContentStatusChangedEvent)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  name.vb: Equals(ContentStatusChangedEvent)
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.#ctor(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.#ctor(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  id: '#ctor(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)'
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: ContentStatusChangedEvent(ContentStatusChangedEvent)
+  nameWithType: ContentStatusChangedEvent.ContentStatusChangedEvent(ContentStatusChangedEvent)
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.ContentStatusChangedEvent(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  type: Constructor
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: protected ContentStatusChangedEvent(ContentStatusChangedEvent original)
+    parameters:
+    - id: original
+      type: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    content.vb: Protected Sub New(original As ContentStatusChangedEvent)
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.#ctor*
+  nameWithType.vb: ContentStatusChangedEvent.New(ContentStatusChangedEvent)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.New(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  name.vb: New(ContentStatusChangedEvent)
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Deconstruct(Biwen.QuickApi.Contents.Domain.Content@,Biwen.QuickApi.Contents.Domain.ContentStatus@,Biwen.QuickApi.Contents.Domain.ContentStatus@)
+  commentId: M:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Deconstruct(Biwen.QuickApi.Contents.Domain.Content@,Biwen.QuickApi.Contents.Domain.ContentStatus@,Biwen.QuickApi.Contents.Domain.ContentStatus@)
+  id: Deconstruct(Biwen.QuickApi.Contents.Domain.Content@,Biwen.QuickApi.Contents.Domain.ContentStatus@,Biwen.QuickApi.Contents.Domain.ContentStatus@)
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Content, out ContentStatus, out ContentStatus)
+  nameWithType: ContentStatusChangedEvent.Deconstruct(out Content, out ContentStatus, out ContentStatus)
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Deconstruct(out Biwen.QuickApi.Contents.Domain.Content, out Biwen.QuickApi.Contents.Domain.ContentStatus, out Biwen.QuickApi.Contents.Domain.ContentStatus)
+  type: Method
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public void Deconstruct(out Content Content, out ContentStatus PreviousStatus, out ContentStatus NewStatus)
+    parameters:
+    - id: Content
+      type: Biwen.QuickApi.Contents.Domain.Content
+    - id: PreviousStatus
+      type: Biwen.QuickApi.Contents.Domain.ContentStatus
+    - id: NewStatus
+      type: Biwen.QuickApi.Contents.Domain.ContentStatus
+    content.vb: Public Sub Deconstruct(Content As Content, PreviousStatus As ContentStatus, NewStatus As ContentStatus)
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Deconstruct*
+  nameWithType.vb: ContentStatusChangedEvent.Deconstruct(Content, ContentStatus, ContentStatus)
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Deconstruct(Biwen.QuickApi.Contents.Domain.Content, Biwen.QuickApi.Contents.Domain.ContentStatus, Biwen.QuickApi.Contents.Domain.ContentStatus)
+  name.vb: Deconstruct(Content, ContentStatus, ContentStatus)
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.EqualityContract
+  commentId: P:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.EqualityContract
+  id: EqualityContract
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: EqualityContract
+  nameWithType: ContentStatusChangedEvent.EqualityContract
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.EqualityContract
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: protected virtual Type EqualityContract { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Protected Overridable ReadOnly Property EqualityContract As Type
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.EqualityContract*
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Content
+  commentId: P:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Content
+  id: Content
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: ContentStatusChangedEvent.Content
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Content
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public Content Content { get; init; }
+    parameters: []
+    return:
+      type: Biwen.QuickApi.Contents.Domain.Content
+    content.vb: Public Property Content As Content
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Content*
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PreviousStatus
+  commentId: P:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PreviousStatus
+  id: PreviousStatus
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: PreviousStatus
+  nameWithType: ContentStatusChangedEvent.PreviousStatus
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PreviousStatus
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public ContentStatus PreviousStatus { get; init; }
+    parameters: []
+    return:
+      type: Biwen.QuickApi.Contents.Domain.ContentStatus
+    content.vb: Public Property PreviousStatus As ContentStatus
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PreviousStatus*
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.NewStatus
+  commentId: P:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.NewStatus
+  id: NewStatus
+  parent: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: NewStatus
+  nameWithType: ContentStatusChangedEvent.NewStatus
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.NewStatus
+  type: Property
+  source:
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/c38197f713ab96671f3a8501ed76d7e653173831/extensions/Biwen.QuickApi.Contents/Events/ContentEvents.cs
+  assemblies:
+  - Biwen.QuickApi.Contents
+  namespace: Biwen.QuickApi.Contents.Events
+  syntax:
+    content: public ContentStatus NewStatus { get; init; }
+    parameters: []
+    return:
+      type: Biwen.QuickApi.Contents.Domain.ContentStatus
+    content.vb: Public Property NewStatus As ContentStatus
+  overload: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.NewStatus*
+references:
+- uid: Biwen.QuickApi.Contents.Events
+  commentId: N:Biwen.QuickApi.Contents.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Events
+  nameWithType: Biwen.QuickApi.Contents.Events
+  fullName: Biwen.QuickApi.Contents.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Biwen.QuickApi.Events.IEvent
+  commentId: T:Biwen.QuickApi.Events.IEvent
+  parent: Biwen.QuickApi.Events
+  isExternal: true
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Events/IEvent.cs
+  name: IEvent
+  nameWithType: IEvent
+  fullName: Biwen.QuickApi.Events.IEvent
+- uid: System.IEquatable{Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent}
+  commentId: T:System.IEquatable{Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ContentStatusChangedEvent>
+  nameWithType: IEquatable<ContentStatusChangedEvent>
+  fullName: System.IEquatable<Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent>
+  nameWithType.vb: IEquatable(Of ContentStatusChangedEvent)
+  fullName.vb: System.IEquatable(Of Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  name.vb: IEquatable(Of ContentStatusChangedEvent)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<ContentStatusChangedEvent>(ContentStatusChangedEvent)
+  nameWithType: EntityExtensions.PublishAddedAsync<ContentStatusChangedEvent>(ContentStatusChangedEvent)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent>(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of ContentStatusChangedEvent)(ContentStatusChangedEvent)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  name.vb: PublishAddedAsync(Of ContentStatusChangedEvent)(ContentStatusChangedEvent)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<ContentStatusChangedEvent>(ContentStatusChangedEvent)
+  nameWithType: EntityExtensions.PublishDeletedAsync<ContentStatusChangedEvent>(ContentStatusChangedEvent)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent>(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of ContentStatusChangedEvent)(ContentStatusChangedEvent)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  name.vb: PublishDeletedAsync(Of ContentStatusChangedEvent)(ContentStatusChangedEvent)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  parent: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  definition: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<ContentStatusChangedEvent>(ContentStatusChangedEvent)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<ContentStatusChangedEvent>(ContentStatusChangedEvent)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent>(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of ContentStatusChangedEvent)(ContentStatusChangedEvent)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  name.vb: PublishUpdatedAsync(Of ContentStatusChangedEvent)(ContentStatusChangedEvent)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: '>'
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Biwen.QuickApi.Events
+  commentId: N:Biwen.QuickApi.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Events
+  nameWithType: Biwen.QuickApi.Events
+  fullName: Biwen.QuickApi.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Events.html
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  name: PublishAddedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishAddedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishAddedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync(Of T)(T)
+  name.vb: PublishAddedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
+    name: PublishAddedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishAddedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  commentId: T:Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+  parent: Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html
+  name: EntityExtensions
+  nameWithType: EntityExtensions
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  name: PublishDeletedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishDeletedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishDeletedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync(Of T)(T)
+  name.vb: PublishDeletedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1(``0)
+    name: PublishDeletedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishDeletedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+  isExternal: true
+  href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  name: PublishUpdatedAsync<T>(T)
+  nameWithType: EntityExtensions.PublishUpdatedAsync<T>(T)
+  fullName: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync<T>(T)
+  nameWithType.vb: EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  fullName.vb: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync(Of T)(T)
+  name.vb: PublishUpdatedAsync(Of T)(T)
+  spec.csharp:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1(``0)
+    name: PublishUpdatedAsync
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.html#Biwen_QuickApi_Application_EntityEvents_EntityExtensions_PublishUpdatedAsync__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Application.EntityEvents
+  commentId: N:Biwen.QuickApi.Application.EntityEvents
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Application.EntityEvents
+  nameWithType: Biwen.QuickApi.Application.EntityEvents
+  fullName: Biwen.QuickApi.Application.EntityEvents
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Application
+    name: Application
+    isExternal: true
+    href: Biwen.QuickApi.Application.html
+  - name: .
+  - uid: Biwen.QuickApi.Application.EntityEvents
+    name: EntityEvents
+    isExternal: true
+    href: Biwen.QuickApi.Application.EntityEvents.html
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.#ctor*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.#ctor
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent__ctor_Biwen_QuickApi_Contents_Domain_Content_Biwen_QuickApi_Contents_Domain_ContentStatus_Biwen_QuickApi_Contents_Domain_ContentStatus_
+  name: ContentStatusChangedEvent
+  nameWithType: ContentStatusChangedEvent.ContentStatusChangedEvent
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.ContentStatusChangedEvent
+  nameWithType.vb: ContentStatusChangedEvent.New
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.New
+  name.vb: New
+- uid: Biwen.QuickApi.Contents.Domain.Content
+  commentId: T:Biwen.QuickApi.Contents.Domain.Content
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.Content.html
+  name: Content
+  nameWithType: Content
+  fullName: Biwen.QuickApi.Contents.Domain.Content
+- uid: Biwen.QuickApi.Contents.Domain.ContentStatus
+  commentId: T:Biwen.QuickApi.Contents.Domain.ContentStatus
+  parent: Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Domain.ContentStatus.html
+  name: ContentStatus
+  nameWithType: ContentStatus
+  fullName: Biwen.QuickApi.Contents.Domain.ContentStatus
+- uid: Biwen.QuickApi.Contents.Domain
+  commentId: N:Biwen.QuickApi.Contents.Domain
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Domain
+  nameWithType: Biwen.QuickApi.Contents.Domain
+  fullName: Biwen.QuickApi.Contents.Domain
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Domain
+    name: Domain
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Domain.html
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.ToString*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.ToString
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_ToString
+  name: ToString
+  nameWithType: ContentStatusChangedEvent.ToString
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PrintMembers*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PrintMembers
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_PrintMembers_System_Text_StringBuilder_
+  name: PrintMembers
+  nameWithType: ContentStatusChangedEvent.PrintMembers
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PrintMembers
+- uid: System.Text.StringBuilder
+  commentId: T:System.Text.StringBuilder
+  parent: System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.stringbuilder
+  name: StringBuilder
+  nameWithType: StringBuilder
+  fullName: System.Text.StringBuilder
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Inequality*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Inequality
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_op_Inequality_Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_
+  name: operator !=
+  nameWithType: ContentStatusChangedEvent.operator !=
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.operator !=
+  nameWithType.vb: ContentStatusChangedEvent.<>
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_op_Inequality_Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  commentId: T:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  parent: Biwen.QuickApi.Contents.Events
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  name: ContentStatusChangedEvent
+  nameWithType: ContentStatusChangedEvent
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Equality*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Equality
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_op_Equality_Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_
+  name: operator ==
+  nameWithType: ContentStatusChangedEvent.operator ==
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.operator ==
+  nameWithType.vb: ContentStatusChangedEvent.=
+  fullName.vb: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.op_Equality*
+    name: ==
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_op_Equality_Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.GetHashCode*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.GetHashCode
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_GetHashCode
+  name: GetHashCode
+  nameWithType: ContentStatusChangedEvent.GetHashCode
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_Equals_System_Object_
+  name: Equals
+  nameWithType: ContentStatusChangedEvent.Equals
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Equals
+- uid: System.IEquatable{Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent}.Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  commentId: M:System.IEquatable{Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent}.Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  parent: System.IEquatable{Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(ContentStatusChangedEvent)
+  nameWithType: IEquatable<ContentStatusChangedEvent>.Equals(ContentStatusChangedEvent)
+  fullName: System.IEquatable<Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent>.Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  nameWithType.vb: IEquatable(Of ContentStatusChangedEvent).Equals(ContentStatusChangedEvent)
+  fullName.vb: System.IEquatable(Of Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent).Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+  spec.csharp:
+  - uid: System.IEquatable{Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent}.Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent}.Equals(Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+    name: ContentStatusChangedEvent
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Deconstruct*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Deconstruct
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_Deconstruct_Biwen_QuickApi_Contents_Domain_Content__Biwen_QuickApi_Contents_Domain_ContentStatus__Biwen_QuickApi_Contents_Domain_ContentStatus__
+  name: Deconstruct
+  nameWithType: ContentStatusChangedEvent.Deconstruct
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Deconstruct
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.EqualityContract*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.EqualityContract
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_EqualityContract
+  name: EqualityContract
+  nameWithType: ContentStatusChangedEvent.EqualityContract
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.EqualityContract
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Content*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Content
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_Content
+  name: Content
+  nameWithType: ContentStatusChangedEvent.Content
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.Content
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PreviousStatus*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PreviousStatus
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_PreviousStatus
+  name: PreviousStatus
+  nameWithType: ContentStatusChangedEvent.PreviousStatus
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.PreviousStatus
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.NewStatus*
+  commentId: Overload:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.NewStatus
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html#Biwen_QuickApi_Contents_Events_ContentStatusChangedEvent_NewStatus
+  name: NewStatus
+  nameWithType: ContentStatusChangedEvent.NewStatus
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.NewStatus

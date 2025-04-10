@@ -28,17 +28,17 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Represents the default implementation of the <xref href="IUnitOfWork" data-throw-if-not-resolved="false"></xref> and <xref href="IUnitOfWork%7bTContext%7d" data-throw-if-not-resolved="false"></xref> interface.
+  summary: 工作单元模式的默认实现，实现了 <xref href="IUnitOfWork" data-throw-if-not-resolved="false"></xref> 和 <xref href="IUnitOfWork%7bTContext%7d" data-throw-if-not-resolved="false"></xref> 接口
   example: []
   syntax:
     content: 'public sealed class UnitOfWork<TContext> : IRepositoryFactory, IUnitOfWork<TContext>, IUnitOfWork, IDisposable where TContext : DbContext'
     typeParameters:
     - id: TContext
-      description: The type of the db context.
+      description: 数据库上下文类型
     content.vb: Public NotInheritable Class UnitOfWork(Of TContext As DbContext) Implements IRepositoryFactory, IUnitOfWork(Of TContext), IUnitOfWork, IDisposable
   inheritance:
   - System.Object
@@ -73,18 +73,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.UnitOfWork(TContext)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Initializes a new instance of the <xref href="Biwen.QuickApi.UnitOfWork.UnitOfWork%601" data-throw-if-not-resolved="false"></xref> class.
+  summary: 初始化 <xref href="Biwen.QuickApi.UnitOfWork.UnitOfWork%601" data-throw-if-not-resolved="false"></xref> 类的新实例
   example: []
   syntax:
     content: public UnitOfWork(TContext context)
     parameters:
     - id: context
       type: '{TContext}'
-      description: The context.
+      description: 数据库上下文
     content.vb: Public Sub New(context As TContext)
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.#ctor*
   nameWithType.vb: UnitOfWork(Of TContext).New(TContext)
@@ -102,20 +102,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.BeginTransactionAsync(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Returns Transaction
+  summary: 异步开始一个事务
   example: []
   syntax:
     content: public Task<IDbContextTransaction> BeginTransactionAsync(bool useIfExists = false)
     parameters:
     - id: useIfExists
       type: System.Boolean
+      description: 如果已存在事务，是否使用现有事务
     return:
       type: System.Threading.Tasks.Task{Microsoft.EntityFrameworkCore.Storage.IDbContextTransaction}
-      description: ''
+      description: 数据库事务对象
     content.vb: Public Function BeginTransactionAsync(useIfExists As Boolean = False) As Task(Of IDbContextTransaction)
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.BeginTransactionAsync*
   implements:
@@ -135,20 +136,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.BeginTransaction(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Returns Transaction
+  summary: 同步开始一个事务
   example: []
   syntax:
     content: public IDbContextTransaction BeginTransaction(bool useIfExists = false)
     parameters:
     - id: useIfExists
       type: System.Boolean
+      description: 如果已存在事务，是否使用现有事务
     return:
       type: Microsoft.EntityFrameworkCore.Storage.IDbContextTransaction
-      description: ''
+      description: 数据库事务对象
     content.vb: Public Function BeginTransaction(useIfExists As Boolean = False) As IDbContextTransaction
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.BeginTransaction*
   implements:
@@ -168,18 +170,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.SetAutoDetectChanges(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: DbContext disable/enable auto detect changes
+  summary: 启用或禁用数据库上下文的自动变更检测
   example: []
   syntax:
     content: public void SetAutoDetectChanges(bool value)
     parameters:
     - id: value
       type: System.Boolean
-      description: ''
+      description: 是否启用自动变更检测
     content.vb: Public Sub SetAutoDetectChanges(value As Boolean)
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.SetAutoDetectChanges*
   implements:
@@ -199,24 +201,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.GetRepository<TEntity>(bool)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the specified repository for the <code class="typeparamref">TEntity</code>.
+  summary: 获取指定实体类型的仓储
   example: []
   syntax:
     content: 'public IRepository<TEntity> GetRepository<TEntity>(bool hasCustomRepository = false) where TEntity : class'
     parameters:
     - id: hasCustomRepository
       type: System.Boolean
-      description: <code>True</code> if providing custom repository
+      description: 是否使用自定义仓储
     typeParameters:
     - id: TEntity
-      description: The type of the entity.
+      description: 实体类型
     return:
       type: Biwen.QuickApi.UnitOfWork.IRepository{{TEntity}}
-      description: An instance of type inherited from <xref href="Biwen.QuickApi.UnitOfWork.IRepository%601" data-throw-if-not-resolved="false"></xref> interface.
+      description: 实现 <xref href="Biwen.QuickApi.UnitOfWork.IRepository%601" data-throw-if-not-resolved="false"></xref> 接口的实例
     content.vb: Public Function GetRepository(Of TEntity As Class)(hasCustomRepository As Boolean = False) As IRepository(Of TEntity)
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.GetRepository*
   implements:
@@ -237,24 +239,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.ExecuteSqlCommand(string, params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Executes the specified raw SQL command.
+  summary: 执行指定的SQL命令
   example: []
   syntax:
     content: public int ExecuteSqlCommand(string sql, params object[] parameters)
     parameters:
     - id: sql
       type: System.String
-      description: The raw SQL.
+      description: 原始SQL语句
     - id: parameters
       type: System.Object[]
-      description: The parameters.
+      description: SQL参数
     return:
       type: System.Int32
-      description: The number of state entities written to database.
+      description: 受影响的行数
     content.vb: Public Function ExecuteSqlCommand(sql As String, ParamArray parameters As Object()) As Integer
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.ExecuteSqlCommand*
   implements:
@@ -274,24 +276,24 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.ExecuteSqlCommandAsync(string, params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Executes the specified raw SQL command.
+  summary: 异步执行指定的SQL命令
   example: []
   syntax:
     content: public Task<int> ExecuteSqlCommandAsync(string sql, params object[] parameters)
     parameters:
     - id: sql
       type: System.String
-      description: The raw SQL.
+      description: 原始SQL语句
     - id: parameters
       type: System.Object[]
-      description: The parameters.
+      description: SQL参数
     return:
       type: System.Threading.Tasks.Task{System.Int32}
-      description: The number of state entities written to database.
+      description: 受影响的行数
     content.vb: Public Function ExecuteSqlCommandAsync(sql As String, ParamArray parameters As Object()) As Task(Of Integer)
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.ExecuteSqlCommandAsync*
   implements:
@@ -311,27 +313,27 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.FromSqlRaw<TEntity>(string, params object[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Uses raw SQL queries to fetch the specified <code class="typeparamref">TEntity</code> data.
+  summary: 使用原始SQL查询获取指定实体类型的数据
   example: []
   syntax:
     content: 'public IQueryable<TEntity> FromSqlRaw<TEntity>(string sql, params object[] parameters) where TEntity : class'
     parameters:
     - id: sql
       type: System.String
-      description: The raw SQL.
+      description: 原始SQL语句
     - id: parameters
       type: System.Object[]
-      description: The parameters.
+      description: SQL参数
     typeParameters:
     - id: TEntity
-      description: The type of the entity.
+      description: 实体类型
     return:
       type: System.Linq.IQueryable{{TEntity}}
-      description: An <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref> that contains elements that satisfy the condition specified by raw SQL.
+      description: 包含满足SQL条件的元素的 <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref> 对象
     content.vb: Public Function FromSqlRaw(Of TEntity As Class)(sql As String, ParamArray parameters As Object()) As IQueryable(Of TEntity)
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.FromSqlRaw*
   implements:
@@ -351,17 +353,17 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.SaveChanges()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Saves all changes made in this context to the database.
+  summary: 将所有在此上下文中的更改保存到数据库
   example: []
   syntax:
     content: public int SaveChanges()
     return:
       type: System.Int32
-      description: The number of state entries written to the database.
+      description: 写入数据库的状态条目数
     content.vb: Public Function SaveChanges() As Integer
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.SaveChanges*
   implements:
@@ -380,17 +382,17 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.SaveChangesAsync()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Asynchronously saves all changes made in this unit of work to the database.
+  summary: 异步将所有在此工作单元中的更改保存到数据库
   example: []
   syntax:
     content: public Task<int> SaveChangesAsync()
     return:
       type: System.Threading.Tasks.Task{System.Int32}
-      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> that represents the asynchronous save operation. The task result contains the number of state entities written to database.
+      description: 表示异步保存操作的任务，任务结果包含写入数据库的状态条目数
     content.vb: Public Function SaveChangesAsync() As Task(Of Integer)
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.SaveChangesAsync*
   implements:
@@ -409,21 +411,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.SaveChangesAsync(params Biwen.QuickApi.UnitOfWork.IUnitOfWork[])
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Saves all changes made in this context to the database with distributed transaction.
+  summary: 使用分布式事务将所有在此上下文中的更改保存到数据库
   example: []
   syntax:
     content: public Task<int> SaveChangesAsync(params IUnitOfWork[] unitOfWorks)
     parameters:
     - id: unitOfWorks
       type: Biwen.QuickApi.UnitOfWork.IUnitOfWork[]
-      description: An optional <xref href="IUnitOfWork" data-throw-if-not-resolved="false"></xref> array.
+      description: 可选的 <xref href="IUnitOfWork" data-throw-if-not-resolved="false"></xref> 数组
     return:
       type: System.Threading.Tasks.Task{System.Int32}
-      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> that represents the asynchronous save operation. The task result contains the number of state entities written to database.
+      description: 表示异步保存操作的任务，任务结果包含写入数据库的状态条目数
     content.vb: Public Function SaveChangesAsync(ParamArray unitOfWorks As IUnitOfWork()) As Task(Of Integer)
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.SaveChangesAsync*
   implements:
@@ -443,11 +445,11 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.Dispose()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  summary: 执行与释放或重置非托管资源相关的应用程序定义的任务
   example: []
   syntax:
     content: public void Dispose()
@@ -469,21 +471,21 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.TrackGraph(object, System.Action<Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntryGraphNode>)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Uses Track Graph Api to attach disconnected entities
+  summary: 使用跟踪图API附加已分离的实体
   example: []
   syntax:
     content: public void TrackGraph(object rootEntity, Action<EntityEntryGraphNode> callback)
     parameters:
     - id: rootEntity
       type: System.Object
-      description: Root entity
+      description: 根实体
     - id: callback
       type: System.Action{Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntryGraphNode}
-      description: Delegate to convert Object's State properties to Entities entry state.
+      description: 将对象状态属性转换为实体条目状态的委托
     content.vb: Public Sub TrackGraph(rootEntity As Object, callback As Action(Of EntityEntryGraphNode))
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.TrackGraph*
   implements:
@@ -503,18 +505,18 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.DbContext
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Gets the db context.
+  summary: 获取数据库上下文
   example: []
   syntax:
     content: public TContext DbContext { get; }
     parameters: []
     return:
       type: '{TContext}'
-      description: The instance of type <code class="typeparamref">TContext</code>.
+      description: <code class="typeparamref">TContext</code> 类型的实例
     content.vb: Public ReadOnly Property DbContext As TContext
   overload: Biwen.QuickApi.UnitOfWork.UnitOfWork`1.DbContext*
   implements:
@@ -533,11 +535,11 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.UnitOfWork<TContext>.LastSaveChangesResult
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/UnitOfWork.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork
-  summary: Last error after SaveChanges operation executed
+  summary: 获取最后一次保存操作的结果
   example: []
   syntax:
     content: public SaveChangesResult LastSaveChangesResult { get; }

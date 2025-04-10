@@ -5,10 +5,10 @@ items:
   id: IProxyCache
   parent: Biwen.QuickApi.Caching.Abstractions
   children:
-  - Biwen.QuickApi.Caching.Abstractions.IProxyCache.Exists(System.String)
+  - Biwen.QuickApi.Caching.Abstractions.IProxyCache.ExistsAsync(System.String)
   - Biwen.QuickApi.Caching.Abstractions.IProxyCache.Get(System.String)
-  - Biwen.QuickApi.Caching.Abstractions.IProxyCache.Remove(System.String)
-  - Biwen.QuickApi.Caching.Abstractions.IProxyCache.Set(System.String,System.Object,System.TimeSpan)
+  - Biwen.QuickApi.Caching.Abstractions.IProxyCache.RemoveAsync(System.String)
+  - Biwen.QuickApi.Caching.Abstractions.IProxyCache.SetAsync(System.String,System.Object,System.TimeSpan)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/Abstractions/IProxyCache.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Caching/Abstractions/IProxyCache.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching.Abstractions
@@ -42,7 +42,7 @@ items:
   fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Get(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/Abstractions/IProxyCache.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Caching/Abstractions/IProxyCache.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching.Abstractions
@@ -62,26 +62,26 @@ items:
   nameWithType.vb: IProxyCache.Get(String)
   fullName.vb: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Get(String)
   name.vb: Get(String)
-- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Set(System.String,System.Object,System.TimeSpan)
-  commentId: M:Biwen.QuickApi.Caching.Abstractions.IProxyCache.Set(System.String,System.Object,System.TimeSpan)
-  id: Set(System.String,System.Object,System.TimeSpan)
+- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.SetAsync(System.String,System.Object,System.TimeSpan)
+  commentId: M:Biwen.QuickApi.Caching.Abstractions.IProxyCache.SetAsync(System.String,System.Object,System.TimeSpan)
+  id: SetAsync(System.String,System.Object,System.TimeSpan)
   parent: Biwen.QuickApi.Caching.Abstractions.IProxyCache
   langs:
   - csharp
   - vb
-  name: Set(string, object?, TimeSpan)
-  nameWithType: IProxyCache.Set(string, object?, TimeSpan)
-  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Set(string, object?, System.TimeSpan)
+  name: SetAsync(string, object?, TimeSpan)
+  nameWithType: IProxyCache.SetAsync(string, object?, TimeSpan)
+  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.SetAsync(string, object?, System.TimeSpan)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/Abstractions/IProxyCache.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Caching/Abstractions/IProxyCache.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching.Abstractions
   summary: 设置缓存
   example: []
   syntax:
-    content: Task Set(string key, object? value, TimeSpan expire)
+    content: Task SetAsync(string key, object? value, TimeSpan expire)
     parameters:
     - id: key
       type: System.String
@@ -94,62 +94,62 @@ items:
       description: ''
     return:
       type: System.Threading.Tasks.Task
-    content.vb: Function [Set](key As String, value As Object, expire As TimeSpan) As Task
-  overload: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Set*
-  nameWithType.vb: IProxyCache.Set(String, Object, TimeSpan)
-  fullName.vb: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Set(String, Object, System.TimeSpan)
-  name.vb: Set(String, Object, TimeSpan)
-- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Remove(System.String)
-  commentId: M:Biwen.QuickApi.Caching.Abstractions.IProxyCache.Remove(System.String)
-  id: Remove(System.String)
+    content.vb: Function SetAsync(key As String, value As Object, expire As TimeSpan) As Task
+  overload: Biwen.QuickApi.Caching.Abstractions.IProxyCache.SetAsync*
+  nameWithType.vb: IProxyCache.SetAsync(String, Object, TimeSpan)
+  fullName.vb: Biwen.QuickApi.Caching.Abstractions.IProxyCache.SetAsync(String, Object, System.TimeSpan)
+  name.vb: SetAsync(String, Object, TimeSpan)
+- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.RemoveAsync(System.String)
+  commentId: M:Biwen.QuickApi.Caching.Abstractions.IProxyCache.RemoveAsync(System.String)
+  id: RemoveAsync(System.String)
   parent: Biwen.QuickApi.Caching.Abstractions.IProxyCache
   langs:
   - csharp
   - vb
-  name: Remove(string)
-  nameWithType: IProxyCache.Remove(string)
-  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Remove(string)
+  name: RemoveAsync(string)
+  nameWithType: IProxyCache.RemoveAsync(string)
+  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.RemoveAsync(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/Abstractions/IProxyCache.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Caching/Abstractions/IProxyCache.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching.Abstractions
   summary: 移除缓存
   example: []
   syntax:
-    content: Task Remove(string key)
+    content: Task RemoveAsync(string key)
     parameters:
     - id: key
       type: System.String
       description: ''
     return:
       type: System.Threading.Tasks.Task
-    content.vb: Function Remove(key As String) As Task
-  overload: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Remove*
-  nameWithType.vb: IProxyCache.Remove(String)
-  fullName.vb: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Remove(String)
-  name.vb: Remove(String)
-- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Exists(System.String)
-  commentId: M:Biwen.QuickApi.Caching.Abstractions.IProxyCache.Exists(System.String)
-  id: Exists(System.String)
+    content.vb: Function RemoveAsync(key As String) As Task
+  overload: Biwen.QuickApi.Caching.Abstractions.IProxyCache.RemoveAsync*
+  nameWithType.vb: IProxyCache.RemoveAsync(String)
+  fullName.vb: Biwen.QuickApi.Caching.Abstractions.IProxyCache.RemoveAsync(String)
+  name.vb: RemoveAsync(String)
+- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.ExistsAsync(System.String)
+  commentId: M:Biwen.QuickApi.Caching.Abstractions.IProxyCache.ExistsAsync(System.String)
+  id: ExistsAsync(System.String)
   parent: Biwen.QuickApi.Caching.Abstractions.IProxyCache
   langs:
   - csharp
   - vb
-  name: Exists(string)
-  nameWithType: IProxyCache.Exists(string)
-  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Exists(string)
+  name: ExistsAsync(string)
+  nameWithType: IProxyCache.ExistsAsync(string)
+  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.ExistsAsync(string)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Caching/Abstractions/IProxyCache.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Caching/Abstractions/IProxyCache.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Caching.Abstractions
   summary: 是否存在
   example: []
   syntax:
-    content: Task Exists(string key)
+    content: Task ExistsAsync(string key)
     parameters:
     - id: key
       type: System.String
@@ -157,11 +157,11 @@ items:
     return:
       type: System.Threading.Tasks.Task
       description: ''
-    content.vb: Function Exists(key As String) As Task
-  overload: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Exists*
-  nameWithType.vb: IProxyCache.Exists(String)
-  fullName.vb: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Exists(String)
-  name.vb: Exists(String)
+    content.vb: Function ExistsAsync(key As String) As Task
+  overload: Biwen.QuickApi.Caching.Abstractions.IProxyCache.ExistsAsync*
+  nameWithType.vb: IProxyCache.ExistsAsync(String)
+  fullName.vb: Biwen.QuickApi.Caching.Abstractions.IProxyCache.ExistsAsync(String)
+  name.vb: ExistsAsync(String)
 references:
 - uid: Biwen.QuickApi.Caching.Abstractions
   commentId: N:Biwen.QuickApi.Caching.Abstractions
@@ -544,13 +544,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Set*
-  commentId: Overload:Biwen.QuickApi.Caching.Abstractions.IProxyCache.Set
+- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.SetAsync*
+  commentId: Overload:Biwen.QuickApi.Caching.Abstractions.IProxyCache.SetAsync
   isExternal: true
-  href: Biwen.QuickApi.Caching.Abstractions.IProxyCache.html#Biwen_QuickApi_Caching_Abstractions_IProxyCache_Set_System_String_System_Object_System_TimeSpan_
-  name: Set
-  nameWithType: IProxyCache.Set
-  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Set
+  href: Biwen.QuickApi.Caching.Abstractions.IProxyCache.html#Biwen_QuickApi_Caching_Abstractions_IProxyCache_SetAsync_System_String_System_Object_System_TimeSpan_
+  name: SetAsync
+  nameWithType: IProxyCache.SetAsync
+  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.SetAsync
 - uid: System.TimeSpan
   commentId: T:System.TimeSpan
   parent: System
@@ -604,17 +604,17 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Remove*
-  commentId: Overload:Biwen.QuickApi.Caching.Abstractions.IProxyCache.Remove
+- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.RemoveAsync*
+  commentId: Overload:Biwen.QuickApi.Caching.Abstractions.IProxyCache.RemoveAsync
   isExternal: true
-  href: Biwen.QuickApi.Caching.Abstractions.IProxyCache.html#Biwen_QuickApi_Caching_Abstractions_IProxyCache_Remove_System_String_
-  name: Remove
-  nameWithType: IProxyCache.Remove
-  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Remove
-- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Exists*
-  commentId: Overload:Biwen.QuickApi.Caching.Abstractions.IProxyCache.Exists
+  href: Biwen.QuickApi.Caching.Abstractions.IProxyCache.html#Biwen_QuickApi_Caching_Abstractions_IProxyCache_RemoveAsync_System_String_
+  name: RemoveAsync
+  nameWithType: IProxyCache.RemoveAsync
+  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.RemoveAsync
+- uid: Biwen.QuickApi.Caching.Abstractions.IProxyCache.ExistsAsync*
+  commentId: Overload:Biwen.QuickApi.Caching.Abstractions.IProxyCache.ExistsAsync
   isExternal: true
-  href: Biwen.QuickApi.Caching.Abstractions.IProxyCache.html#Biwen_QuickApi_Caching_Abstractions_IProxyCache_Exists_System_String_
-  name: Exists
-  nameWithType: IProxyCache.Exists
-  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.Exists
+  href: Biwen.QuickApi.Caching.Abstractions.IProxyCache.html#Biwen_QuickApi_Caching_Abstractions_IProxyCache_ExistsAsync_System_String_
+  name: ExistsAsync
+  nameWithType: IProxyCache.ExistsAsync
+  fullName: Biwen.QuickApi.Caching.Abstractions.IProxyCache.ExistsAsync

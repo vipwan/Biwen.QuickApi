@@ -21,7 +21,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -37,7 +37,7 @@ items:
   - Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
   - Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
   - Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
-  - Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1.Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList``2(System.Func{System.Collections.Generic.IEnumerable{{T}},System.Collections.Generic.IEnumerable{{TResult}}})
+  - Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1.Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList``2(System.Func{System.Collections.Generic.IEnumerable{{T}},System.Collections.Generic.IEnumerable{{TResult}}})
   nameWithType.vb: IPagedList(Of T)
   fullName.vb: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList(Of T)
   name.vb: IPagedList(Of T)
@@ -53,7 +53,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>.IndexFrom
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -81,7 +81,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>.PageIndex
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -108,7 +108,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>.PageSize
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -135,7 +135,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>.TotalCount
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -162,7 +162,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>.TotalPages
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -189,7 +189,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>.Items
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -216,7 +216,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>.HasPreviousPage
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -244,7 +244,7 @@ items:
   fullName: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>.HasNextPage
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/UnitOfWork/Pagenation/IPagedList.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.UnitOfWork.Pagenation
@@ -497,22 +497,22 @@ references:
   - name: T
   - name: )
   - name: )
-- uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1.Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList``2(System.Func{System.Collections.Generic.IEnumerable{{T}},System.Collections.Generic.IEnumerable{{TResult}}})
-  commentId: M:Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
-  parent: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
-  definition: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
-  href: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.html#Biwen_QuickApi_UnitOfWork_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
+- uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1.Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList``2(System.Func{System.Collections.Generic.IEnumerable{{T}},System.Collections.Generic.IEnumerable{{TResult}}})
+  commentId: M:Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
+  parent: Biwen.QuickApi.EnumerablePagedListExtensions
+  definition: Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
+  href: Biwen.QuickApi.EnumerablePagedListExtensions.html#Biwen_QuickApi_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
   name: ToPagedList<T, TResult>(IPagedList<T>, Func<IEnumerable<T>, IEnumerable<TResult>>)
   nameWithType: EnumerablePagedListExtensions.ToPagedList<T, TResult>(IPagedList<T>, Func<IEnumerable<T>, IEnumerable<TResult>>)
-  fullName: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList<T, TResult>(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>, System.Func<System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<TResult>>)
+  fullName: Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList<T, TResult>(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<T>, System.Func<System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<TResult>>)
   nameWithType.vb: EnumerablePagedListExtensions.ToPagedList(Of T, TResult)(IPagedList(Of T), Func(Of IEnumerable(Of T), IEnumerable(Of TResult)))
-  fullName.vb: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList(Of T, TResult)(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList(Of T), System.Func(Of System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of TResult)))
+  fullName.vb: Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList(Of T, TResult)(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList(Of T), System.Func(Of System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of TResult)))
   name.vb: ToPagedList(Of T, TResult)(IPagedList(Of T), Func(Of IEnumerable(Of T), IEnumerable(Of TResult)))
   spec.csharp:
-  - uid: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{`0},System.Func{System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{``1}})
+  - uid: Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{`0},System.Func{System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{``1}})
     name: ToPagedList
     isExternal: true
-    href: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.html#Biwen_QuickApi_UnitOfWork_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
+    href: Biwen.QuickApi.EnumerablePagedListExtensions.html#Biwen_QuickApi_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
   - name: <
   - name: T
   - name: ','
@@ -553,10 +553,10 @@ references:
   - name: '>'
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{`0},System.Func{System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{``1}})
+  - uid: Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{`0},System.Func{System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{``1}})
     name: ToPagedList
     isExternal: true
-    href: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.html#Biwen_QuickApi_UnitOfWork_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
+    href: Biwen.QuickApi.EnumerablePagedListExtensions.html#Biwen_QuickApi_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
   - name: (
   - name: Of
   - name: " "
@@ -716,21 +716,21 @@ references:
   - name: (
   - name: T
   - name: )
-- uid: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
-  commentId: M:Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
+- uid: Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
+  commentId: M:Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
   isExternal: true
-  href: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.html#Biwen_QuickApi_UnitOfWork_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
+  href: Biwen.QuickApi.EnumerablePagedListExtensions.html#Biwen_QuickApi_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
   name: ToPagedList<TSource, TResult>(IPagedList<TSource>, Func<IEnumerable<TSource>, IEnumerable<TResult>>)
   nameWithType: EnumerablePagedListExtensions.ToPagedList<TSource, TResult>(IPagedList<TSource>, Func<IEnumerable<TSource>, IEnumerable<TResult>>)
-  fullName: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList<TSource, TResult>(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<TSource>, System.Func<System.Collections.Generic.IEnumerable<TSource>, System.Collections.Generic.IEnumerable<TResult>>)
+  fullName: Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList<TSource, TResult>(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList<TSource>, System.Func<System.Collections.Generic.IEnumerable<TSource>, System.Collections.Generic.IEnumerable<TResult>>)
   nameWithType.vb: EnumerablePagedListExtensions.ToPagedList(Of TSource, TResult)(IPagedList(Of TSource), Func(Of IEnumerable(Of TSource), IEnumerable(Of TResult)))
-  fullName.vb: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList(Of TSource, TResult)(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList(Of TSource), System.Func(Of System.Collections.Generic.IEnumerable(Of TSource), System.Collections.Generic.IEnumerable(Of TResult)))
+  fullName.vb: Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList(Of TSource, TResult)(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList(Of TSource), System.Func(Of System.Collections.Generic.IEnumerable(Of TSource), System.Collections.Generic.IEnumerable(Of TResult)))
   name.vb: ToPagedList(Of TSource, TResult)(IPagedList(Of TSource), Func(Of IEnumerable(Of TSource), IEnumerable(Of TResult)))
   spec.csharp:
-  - uid: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
+  - uid: Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
     name: ToPagedList
     isExternal: true
-    href: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.html#Biwen_QuickApi_UnitOfWork_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
+    href: Biwen.QuickApi.EnumerablePagedListExtensions.html#Biwen_QuickApi_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
   - name: <
   - name: TSource
   - name: ','
@@ -771,10 +771,10 @@ references:
   - name: '>'
   - name: )
   spec.vb:
-  - uid: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
+  - uid: Biwen.QuickApi.EnumerablePagedListExtensions.ToPagedList``2(Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})
     name: ToPagedList
     isExternal: true
-    href: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.html#Biwen_QuickApi_UnitOfWork_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
+    href: Biwen.QuickApi.EnumerablePagedListExtensions.html#Biwen_QuickApi_EnumerablePagedListExtensions_ToPagedList__2_Biwen_QuickApi_UnitOfWork_Pagenation_IPagedList___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1___
   - name: (
   - name: Of
   - name: " "
@@ -824,14 +824,14 @@ references:
   - name: )
   - name: )
   - name: )
-- uid: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
-  commentId: T:Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
-  parent: Biwen.QuickApi.UnitOfWork
+- uid: Biwen.QuickApi.EnumerablePagedListExtensions
+  commentId: T:Biwen.QuickApi.EnumerablePagedListExtensions
+  parent: Biwen.QuickApi
   isExternal: true
-  href: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions.html
+  href: Biwen.QuickApi.EnumerablePagedListExtensions.html
   name: EnumerablePagedListExtensions
   nameWithType: EnumerablePagedListExtensions
-  fullName: Biwen.QuickApi.UnitOfWork.EnumerablePagedListExtensions
+  fullName: Biwen.QuickApi.EnumerablePagedListExtensions
 - uid: Biwen.QuickApi.Application.EntityEvents
   commentId: N:Biwen.QuickApi.Application.EntityEvents
   isExternal: true
@@ -879,13 +879,13 @@ references:
     name: EntityEvents
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.html
-- uid: Biwen.QuickApi.UnitOfWork
-  commentId: N:Biwen.QuickApi.UnitOfWork
+- uid: Biwen.QuickApi
+  commentId: N:Biwen.QuickApi
   isExternal: true
   href: Biwen.html
-  name: Biwen.QuickApi.UnitOfWork
-  nameWithType: Biwen.QuickApi.UnitOfWork
-  fullName: Biwen.QuickApi.UnitOfWork
+  name: Biwen.QuickApi
+  nameWithType: Biwen.QuickApi
+  fullName: Biwen.QuickApi
   spec.csharp:
   - uid: Biwen
     name: Biwen
@@ -896,11 +896,6 @@ references:
     name: QuickApi
     isExternal: true
     href: Biwen.QuickApi.html
-  - name: .
-  - uid: Biwen.QuickApi.UnitOfWork
-    name: UnitOfWork
-    isExternal: true
-    href: Biwen.QuickApi.UnitOfWork.html
   spec.vb:
   - uid: Biwen
     name: Biwen
@@ -911,11 +906,6 @@ references:
     name: QuickApi
     isExternal: true
     href: Biwen.QuickApi.html
-  - name: .
-  - uid: Biwen.QuickApi.UnitOfWork
-    name: UnitOfWork
-    isExternal: true
-    href: Biwen.QuickApi.UnitOfWork.html
 - uid: Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1.IndexFrom*
   commentId: Overload:Biwen.QuickApi.UnitOfWork.Pagenation.IPagedList`1.IndexFrom
   isExternal: true

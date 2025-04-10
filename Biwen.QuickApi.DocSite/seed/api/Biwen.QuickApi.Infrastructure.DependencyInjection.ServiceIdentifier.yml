@@ -22,7 +22,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier
   type: Struct
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -48,7 +48,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier.ServiceIdentifier(System.Type)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -74,7 +74,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier.ServiceIdentifier(object?, System.Type)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -102,7 +102,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier.Equals(Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -130,7 +130,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier.Equals(object?)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -160,7 +160,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier.GetHashCode()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -184,7 +184,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier.operator ==(Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier, Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier)
   type: Operator
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -214,7 +214,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier.operator !=(Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier, Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier)
   type: Operator
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -244,7 +244,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier.ServiceKey
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection
@@ -267,7 +267,7 @@ items:
   fullName: Biwen.QuickApi.Infrastructure.DependencyInjection.ServiceIdentifier.ServiceType
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Infrastructure/DependencyInjection/ServiceIdentifier.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Infrastructure.DependencyInjection

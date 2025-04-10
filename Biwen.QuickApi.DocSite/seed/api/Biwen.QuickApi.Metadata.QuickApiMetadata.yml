@@ -16,7 +16,7 @@ items:
   fullName: Biwen.QuickApi.Metadata.QuickApiMetadata
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Metadata
@@ -51,7 +51,7 @@ items:
   fullName: Biwen.QuickApi.Metadata.QuickApiMetadata.QuickApiMetadata(System.Type?, Biwen.QuickApi.Attributes.QuickApiAttribute?)
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Metadata
@@ -81,7 +81,7 @@ items:
   fullName: Biwen.QuickApi.Metadata.QuickApiMetadata.QuickApiType
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Metadata
@@ -104,7 +104,7 @@ items:
   fullName: Biwen.QuickApi.Metadata.QuickApiMetadata.QuickApiAttribute
   type: Property
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Metadata/QuickApiMetadata.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Metadata
@@ -712,7 +712,7 @@ references:
   commentId: T:Biwen.QuickApi.Attributes.QuickApiAttribute
   parent: Biwen.QuickApi.Attributes
   isExternal: true
-  href: Biwen.QuickApi.Attributes.QuickApiAttribute.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Attributes/QuickApiAttribute.cs
   name: QuickApiAttribute
   nameWithType: QuickApiAttribute
   fullName: Biwen.QuickApi.Attributes.QuickApiAttribute

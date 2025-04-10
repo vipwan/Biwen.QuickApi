@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequestFromBody<T>
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -38,6 +38,7 @@ items:
   inheritedMembers:
   - Biwen.QuickApi.BaseRequest{{T}}.RuleFor``1(System.Linq.Expressions.Expression{System.Func{{T},{TProperty}}})
   - Biwen.QuickApi.BaseRequest{{T}}.Validate
+  - Biwen.QuickApi.BaseRequest{{T}}.ValidateAsync(System.Threading.CancellationToken)
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ToString
@@ -68,7 +69,7 @@ items:
   fullName: Biwen.QuickApi.BaseRequestFromBody<T>.BaseRequestFromBody()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/BaseRequest.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi
@@ -239,6 +240,38 @@ references:
     isExternal: true
     href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_Validate
   - name: (
+  - name: )
+- uid: Biwen.QuickApi.BaseRequest{{T}}.ValidateAsync(System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseRequest{`0}.ValidateAsync(System.Threading.CancellationToken)
+  parent: Biwen.QuickApi.BaseRequest{{T}}
+  definition: Biwen.QuickApi.BaseRequest`1.ValidateAsync(System.Threading.CancellationToken)
+  href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_ValidateAsync_System_Threading_CancellationToken_
+  name: ValidateAsync(CancellationToken)
+  nameWithType: BaseRequest<T>.ValidateAsync(CancellationToken)
+  fullName: Biwen.QuickApi.BaseRequest<T>.ValidateAsync(System.Threading.CancellationToken)
+  nameWithType.vb: BaseRequest(Of T).ValidateAsync(CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseRequest(Of T).ValidateAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseRequest{`0}.ValidateAsync(System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_ValidateAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseRequest{`0}.ValidateAsync(System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_ValidateAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
@@ -658,7 +691,7 @@ references:
 - uid: Biwen.QuickApi.BaseRequest`1
   commentId: T:Biwen.QuickApi.BaseRequest`1
   isExternal: true
-  href: Biwen.QuickApi.BaseRequest-1.html
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   name: BaseRequest<T>
   nameWithType: BaseRequest<T>
   fullName: Biwen.QuickApi.BaseRequest<T>
@@ -669,7 +702,7 @@ references:
   - uid: Biwen.QuickApi.BaseRequest`1
     name: BaseRequest
     isExternal: true
-    href: Biwen.QuickApi.BaseRequest-1.html
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   - name: <
   - name: T
   - name: '>'
@@ -677,7 +710,7 @@ references:
   - uid: Biwen.QuickApi.BaseRequest`1
     name: BaseRequest
     isExternal: true
-    href: Biwen.QuickApi.BaseRequest-1.html
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   - name: (
   - name: Of
   - name: " "
@@ -686,7 +719,7 @@ references:
 - uid: Biwen.QuickApi.BaseRequest`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
   commentId: M:Biwen.QuickApi.BaseRequest`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
   isExternal: true
-  href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_RuleFor__1_System_Linq_Expressions_Expression_System_Func__0___0___
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   name: RuleFor<TProperty>(Expression<Func<T, TProperty>>)
   nameWithType: BaseRequest<T>.RuleFor<TProperty>(Expression<Func<T, TProperty>>)
   fullName: Biwen.QuickApi.BaseRequest<T>.RuleFor<TProperty>(System.Linq.Expressions.Expression<System.Func<T, TProperty>>)
@@ -697,7 +730,7 @@ references:
   - uid: Biwen.QuickApi.BaseRequest`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
     name: RuleFor
     isExternal: true
-    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_RuleFor__1_System_Linq_Expressions_Expression_System_Func__0___0___
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   - name: <
   - name: TProperty
   - name: '>'
@@ -723,7 +756,7 @@ references:
   - uid: Biwen.QuickApi.BaseRequest`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
     name: RuleFor
     isExternal: true
-    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_RuleFor__1_System_Linq_Expressions_Expression_System_Func__0___0___
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   - name: (
   - name: Of
   - name: " "
@@ -754,7 +787,7 @@ references:
 - uid: Biwen.QuickApi.BaseRequest`1.Validate
   commentId: M:Biwen.QuickApi.BaseRequest`1.Validate
   isExternal: true
-  href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_Validate
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   name: Validate()
   nameWithType: BaseRequest<T>.Validate()
   fullName: Biwen.QuickApi.BaseRequest<T>.Validate()
@@ -764,15 +797,46 @@ references:
   - uid: Biwen.QuickApi.BaseRequest`1.Validate
     name: Validate
     isExternal: true
-    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_Validate
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   - name: (
   - name: )
   spec.vb:
   - uid: Biwen.QuickApi.BaseRequest`1.Validate
     name: Validate
     isExternal: true
-    href: Biwen.QuickApi.BaseRequest-1.html#Biwen_QuickApi_BaseRequest_1_Validate
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
   - name: (
+  - name: )
+- uid: Biwen.QuickApi.BaseRequest`1.ValidateAsync(System.Threading.CancellationToken)
+  commentId: M:Biwen.QuickApi.BaseRequest`1.ValidateAsync(System.Threading.CancellationToken)
+  isExternal: true
+  href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
+  name: ValidateAsync(CancellationToken)
+  nameWithType: BaseRequest<T>.ValidateAsync(CancellationToken)
+  fullName: Biwen.QuickApi.BaseRequest<T>.ValidateAsync(System.Threading.CancellationToken)
+  nameWithType.vb: BaseRequest(Of T).ValidateAsync(CancellationToken)
+  fullName.vb: Biwen.QuickApi.BaseRequest(Of T).ValidateAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Biwen.QuickApi.BaseRequest`1.ValidateAsync(System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Biwen.QuickApi.BaseRequest`1.ValidateAsync(System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/BaseRequest.cs
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
 - uid: Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)
   commentId: M:Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1(``0)

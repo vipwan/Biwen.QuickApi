@@ -6,7 +6,7 @@ items:
   parent: Biwen.QuickApi.Scheduling
   children:
   - Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.#ctor
-  - Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbort
+  - Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbortAsync
   langs:
   - csharp
   - vb
@@ -15,7 +15,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask
   type: Class
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/IScheduleTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Scheduling/IScheduleTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -42,31 +42,31 @@ items:
   - Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
   - Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
   - Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
-- uid: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbort
-  commentId: M:Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbort
-  id: OnAbort
+- uid: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbortAsync
+  commentId: M:Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbortAsync
+  id: OnAbortAsync
   parent: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask
   langs:
   - csharp
   - vb
-  name: OnAbort()
-  nameWithType: OnlyOneRunningScheduleTask.OnAbort()
-  fullName: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbort()
+  name: OnAbortAsync()
+  nameWithType: OnlyOneRunningScheduleTask.OnAbortAsync()
+  fullName: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbortAsync()
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/IScheduleTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Scheduling/IScheduleTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
   summary: 如果有正在运行的相同任务,打断当前的执行的回调
   example: []
   syntax:
-    content: public virtual Task OnAbort()
+    content: public virtual Task OnAbortAsync()
     return:
       type: System.Threading.Tasks.Task
       description: ''
-    content.vb: Public Overridable Function OnAbort() As Task
-  overload: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbort*
+    content.vb: Public Overridable Function OnAbortAsync() As Task
+  overload: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbortAsync*
 - uid: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.#ctor
   commentId: M:Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.#ctor
   id: '#ctor'
@@ -79,7 +79,7 @@ items:
   fullName: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnlyOneRunningScheduleTask()
   type: Constructor
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Scheduling/IScheduleTask.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Scheduling/IScheduleTask.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Scheduling
@@ -701,13 +701,13 @@ references:
     name: EntityEvents
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.html
-- uid: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbort*
-  commentId: Overload:Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbort
+- uid: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbortAsync*
+  commentId: Overload:Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbortAsync
   isExternal: true
-  href: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.html#Biwen_QuickApi_Scheduling_OnlyOneRunningScheduleTask_OnAbort
-  name: OnAbort
-  nameWithType: OnlyOneRunningScheduleTask.OnAbort
-  fullName: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbort
+  href: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.html#Biwen_QuickApi_Scheduling_OnlyOneRunningScheduleTask_OnAbortAsync
+  name: OnAbortAsync
+  nameWithType: OnlyOneRunningScheduleTask.OnAbortAsync
+  fullName: Biwen.QuickApi.Scheduling.OnlyOneRunningScheduleTask.OnAbortAsync
 - uid: System.Threading.Tasks.Task
   commentId: T:System.Threading.Tasks.Task
   parent: System.Threading.Tasks

@@ -5,7 +5,7 @@ items:
   id: IQuickApiExceptionResultBuilder
   parent: Biwen.QuickApi.Http
   children:
-  - Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResult(System.Exception)
+  - Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResultAsync(System.Exception)
   langs:
   - csharp
   - vb
@@ -14,7 +14,7 @@ items:
   fullName: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder
   type: Interface
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Http/IQuickApiExceptionResultBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Http/IQuickApiExceptionResultBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
@@ -27,26 +27,26 @@ items:
   - Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishAddedAsync``1
   - Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishDeletedAsync``1
   - Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.Biwen.QuickApi.Application.EntityEvents.EntityExtensions.PublishUpdatedAsync``1
-- uid: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResult(System.Exception)
-  commentId: M:Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResult(System.Exception)
-  id: ErrorResult(System.Exception)
+- uid: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResultAsync(System.Exception)
+  commentId: M:Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResultAsync(System.Exception)
+  id: ErrorResultAsync(System.Exception)
   parent: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder
   langs:
   - csharp
   - vb
-  name: ErrorResult(Exception)
-  nameWithType: IQuickApiExceptionResultBuilder.ErrorResult(Exception)
-  fullName: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResult(System.Exception)
+  name: ErrorResultAsync(Exception)
+  nameWithType: IQuickApiExceptionResultBuilder.ErrorResultAsync(Exception)
+  fullName: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResultAsync(System.Exception)
   type: Method
   source:
-    href: https://github.com/vipwan/Biwen.QuickApi/blob/4e4fd60cd0cc33042add385c3bf2d83c28bb142d/Biwen.QuickApi/Http/IQuickApiExceptionResultBuilder.cs
+    href: https://github.com/vipwan/Biwen.QuickApi/blob/816b99dc81c4b1410650b2e33b5fc36e7fe54b3a/Biwen.QuickApi/Http/IQuickApiExceptionResultBuilder.cs
   assemblies:
   - Biwen.QuickApi
   namespace: Biwen.QuickApi.Http
   summary: 规范化返回异常
   example: []
   syntax:
-    content: Task<IResult> ErrorResult(Exception exception)
+    content: Task<IResult> ErrorResultAsync(Exception exception)
     parameters:
     - id: exception
       type: System.Exception
@@ -54,8 +54,8 @@ items:
     return:
       type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Http.IResult}
       description: ''
-    content.vb: Function ErrorResult(exception As Exception) As Task(Of IResult)
-  overload: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResult*
+    content.vb: Function ErrorResultAsync(exception As Exception) As Task(Of IResult)
+  overload: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResultAsync*
 references:
 - uid: Biwen.QuickApi.Http
   commentId: N:Biwen.QuickApi.Http
@@ -392,13 +392,13 @@ references:
     name: EntityEvents
     isExternal: true
     href: Biwen.QuickApi.Application.EntityEvents.html
-- uid: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResult*
-  commentId: Overload:Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResult
+- uid: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResultAsync*
+  commentId: Overload:Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResultAsync
   isExternal: true
-  href: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.html#Biwen_QuickApi_Http_IQuickApiExceptionResultBuilder_ErrorResult_System_Exception_
-  name: ErrorResult
-  nameWithType: IQuickApiExceptionResultBuilder.ErrorResult
-  fullName: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResult
+  href: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.html#Biwen_QuickApi_Http_IQuickApiExceptionResultBuilder_ErrorResultAsync_System_Exception_
+  name: ErrorResultAsync
+  nameWithType: IQuickApiExceptionResultBuilder.ErrorResultAsync
+  fullName: Biwen.QuickApi.Http.IQuickApiExceptionResultBuilder.ErrorResultAsync
 - uid: System.Exception
   commentId: T:System.Exception
   parent: System

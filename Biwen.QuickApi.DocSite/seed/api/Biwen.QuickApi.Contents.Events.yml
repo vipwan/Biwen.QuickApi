@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+- uid: Biwen.QuickApi.Contents.Events
+  commentId: N:Biwen.QuickApi.Contents.Events
+  id: Biwen.QuickApi.Contents.Events
+  children:
+  - Biwen.QuickApi.Contents.Events.ContentCreatedEvent
+  - Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  - Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  - Biwen.QuickApi.Contents.Events.ContentUpdatedEvent
+  langs:
+  - csharp
+  - vb
+  name: Biwen.QuickApi.Contents.Events
+  nameWithType: Biwen.QuickApi.Contents.Events
+  fullName: Biwen.QuickApi.Contents.Events
+  type: Namespace
+  assemblies:
+  - Biwen.QuickApi.Contents
+references:
+- uid: Biwen.QuickApi.Contents.Events.ContentCreatedEvent
+  commentId: T:Biwen.QuickApi.Contents.Events.ContentCreatedEvent
+  parent: Biwen.QuickApi.Contents.Events
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentCreatedEvent.html
+  name: ContentCreatedEvent
+  nameWithType: ContentCreatedEvent
+  fullName: Biwen.QuickApi.Contents.Events.ContentCreatedEvent
+- uid: Biwen.QuickApi.Contents.Events.ContentUpdatedEvent
+  commentId: T:Biwen.QuickApi.Contents.Events.ContentUpdatedEvent
+  parent: Biwen.QuickApi.Contents.Events
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentUpdatedEvent.html
+  name: ContentUpdatedEvent
+  nameWithType: ContentUpdatedEvent
+  fullName: Biwen.QuickApi.Contents.Events.ContentUpdatedEvent
+- uid: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  commentId: T:Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+  parent: Biwen.QuickApi.Contents.Events
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentDeletedEvent.html
+  name: ContentDeletedEvent
+  nameWithType: ContentDeletedEvent
+  fullName: Biwen.QuickApi.Contents.Events.ContentDeletedEvent
+- uid: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  commentId: T:Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+  parent: Biwen.QuickApi.Contents.Events
+  isExternal: true
+  href: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent.html
+  name: ContentStatusChangedEvent
+  nameWithType: ContentStatusChangedEvent
+  fullName: Biwen.QuickApi.Contents.Events.ContentStatusChangedEvent
+- uid: Biwen.QuickApi.Contents.Events
+  commentId: N:Biwen.QuickApi.Contents.Events
+  isExternal: true
+  href: Biwen.html
+  name: Biwen.QuickApi.Contents.Events
+  nameWithType: Biwen.QuickApi.Contents.Events
+  fullName: Biwen.QuickApi.Contents.Events
+  spec.csharp:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.html
+  spec.vb:
+  - uid: Biwen
+    name: Biwen
+    isExternal: true
+    href: Biwen.html
+  - name: .
+  - uid: Biwen.QuickApi
+    name: QuickApi
+    isExternal: true
+    href: Biwen.QuickApi.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents
+    name: Contents
+    isExternal: true
+    href: Biwen.QuickApi.Contents.html
+  - name: .
+  - uid: Biwen.QuickApi.Contents.Events
+    name: Events
+    isExternal: true
+    href: Biwen.QuickApi.Contents.Events.html
