@@ -205,6 +205,110 @@ public class BlogController : Controller
 }
 ```
 
+## 自定义文档类型视图
+
+Biwen.QuickApi.Contents 允许您为每种内容类型创建自定义视图模板，以控制内容的呈现方式。
+
+### 视图位置规范
+
+视图文件应遵循以下命名和位置规范：
+
+1. **基础路径**：视图文件默认位于 `Views/Contents` 目录下（可通过 `BiwenContentOptions.ViewPath` 配置）
+2. **视图命名**：视图名称应与内容类型的简单名称匹配，例如 `BlogPost.cshtml`
+3. **子目录支持**：您可以在 `Views/Contents` 下创建子目录来组织不同类别的视图
+
+### 创建自定义视图模板
+
+以下是创建自定义视图模板的步骤：
+
+1. 在您的项目中创建 `Views/Contents` 目录（如果不存在）
+2. 创建与您的内容类型名称相匹配的 .cshtml 文件，例如 `BlogPost.cshtml` 
+3. 在视图文件中添加必要的命名空间和模型指令
+
+示例视图模板 `Views/Contents/BlogPost.cshtml`：
+
+```cshtml
+@model Biwen.QuickApi.Contents.Rendering.ContentViewModel<YourNamespace.BlogPost>
+@{
+    ViewData["Title"] = Model.Content.Title.Value;
+    Layout = "_Layout"; // 使用您的布局文件
+}
+
+<div class="blog-post">
+    <h1>@Model.Content.Title.Value</h1>
+    
+    <div class="metadata">
+        <span class="date">发布于: @Model.Content.PublishDate.Value.ToString("yyyy-MM-dd")</span>
+        <span class="category">分类: @Model.Content.Category.DisplayValue</span>
+    </div>
+    
+    @if (Model.Content.FeaturedImage != null && !string.IsNullOrEmpty(Model.Content.FeaturedImage.Value))
+    {
+        <div class="featured-image">
+            <img src="@Model.Content.FeaturedImage.Value" alt="@Model.Content.Title.Value" />
+        </div>
+    }
+    
+    <div class="content markdown-body">
+        @Html.Raw(Model.Content.Content.Html)
+    </div>
+    
+    @if (Model.Content.Tags != null && Model.Content.Tags.DisplayValues?.Any() == true)
+    {
+        <div class="tags">
+            <strong>标签:</strong>
+            @foreach (var tag in Model.Content.Tags.DisplayValues)
+            {
+                <span class="tag">@tag</span>
+            }
+        </div>
+    }
+</div>
+```
+
+### 视图模型结构
+
+视图接收 `ContentViewModel<T>` 类型的模型，该模型包含两个主要属性：
+
+- `Content`：您的强类型内容实例（如 `BlogPost`）
+- `ContentDefine`：内容的元数据信息（ID、创建时间、状态等）
+
+### 访问字段值
+
+在视图中访问内容字段值的方法：
+
+- 文本字段：`Model.Content.Title.Value`
+- Markdown字段：`Html.Raw(Model.Content.Content.Html)`（已转换为HTML）
+- 日期字段：`Model.Content.PublishDate.Value.ToString("yyyy-MM-dd")`
+- 选项字段（单选）：`Model.Content.Category.DisplayValue`
+- 选项字段（多选）：`Model.Content.Tags.DisplayValues`（字符串集合）
+
+### 自定义CSS样式
+
+为确保内容呈现一致，您可以引入特定的样式：
+
+```cshtml
+@section Styles {
+    <link rel="stylesheet" href="~/css/markdown.css" />
+    <link rel="stylesheet" href="~/css/blog-post.css" />
+}
+```
+
+### 条件渲染
+
+您可以根据内容的特定字段值进行条件渲染：
+
+```cshtml
+@if (Model.ContentDefine.Status == ContentStatus.Published)
+{
+    <div class="published-badge">已发布</div>
+}
+else if (Model.ContentDefine.Status == ContentStatus.Draft)
+{
+    <div class="draft-badge">草稿</div>
+}
+```
+
 ## 内容版本和审计
 
 系统自动记录内容的变更历史：
