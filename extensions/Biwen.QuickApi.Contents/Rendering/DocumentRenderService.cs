@@ -134,24 +134,22 @@ internal class RazorDocumentRenderService : IDocumentRenderService
         return RenderAsync(viewName, vm);
     }
 
-    public async Task<string> RenderDocumentAsync(Guid id)
+    internal async Task<string> RenderDocumentAsync(Content content)
     {
-        //根据ID获取文档
-        var contentRaw = await _repository.GetRawContentAsync(id);
-        if (contentRaw == null)
+        if (content == null)
         {
-            throw new KeyNotFoundException($"未找到ID为{id}的内容");
+            throw new ArgumentNullException(nameof(content), "内容不能为空");
         }
 
         // 获取文档类型
         var types = _contentSerializer.GetAllContentTypes();
         var contentType = types.FirstOrDefault(t =>
-            t.Content_ContentType == contentRaw.ContentType ||
-            t.Content_ContentType.Split('.').Last() == contentRaw.ContentType);
+            t.Content_ContentType == content.ContentType ||
+            t.Content_ContentType.Split('.').Last() == content.ContentType);
 
         if (contentType == null)
         {
-            throw new ArgumentException($"不支持的文档类型: {contentRaw.ContentType}");
+            throw new ArgumentException($"不支持的文档类型: {content.ContentType}");
         }
 
         // 获取实际类型
@@ -162,7 +160,7 @@ internal class RazorDocumentRenderService : IDocumentRenderService
             .GetMethod(nameof(ContentSerializer.DeserializeContent))
             ?.MakeGenericMethod(actualType);
 
-        var document = deserializeMethod!.Invoke(_contentSerializer, [contentRaw.JsonContent])!;
+        var document = deserializeMethod!.Invoke(_contentSerializer, [content.JsonContent])!;
 
         // 使用反射调用渲染服务的RenderDocumentAsync方法
         var renderMethod = GetType().GetMethods()
@@ -171,7 +169,45 @@ internal class RazorDocumentRenderService : IDocumentRenderService
                 RenderDocumentAsync.IsGenericMethodDefinition)
             ?.MakeGenericMethod(actualType);
 
-        return await (Task<string>)renderMethod!.Invoke(this, [document, contentRaw])!;
+        return await (Task<string>)renderMethod!.Invoke(this, [document, content])!;
+
     }
 
+    public async Task<string> RenderDocumentAsync(Guid id)
+    {
+        //根据ID获取文档
+        var contentRaw = await _repository.GetRawContentAsync(id);
+        if (contentRaw == null)
+        {
+            throw new KeyNotFoundException($"未找到ID为{id}的内容");
+        }
+
+        return await RenderDocumentAsync(contentRaw);
+    }
+
+    public async Task<string> RenderDocumentBySlugAsync(string slug)
+    {
+        if (string.IsNullOrWhiteSpace(slug))
+        {
+            throw new ArgumentNullException(nameof(slug), "slug不能为空");
+        }
+
+        // 根据slug获取内容
+        var content = await _repository.GetContentIdBySlugAsync(slug);
+        if (content == null)
+        {
+            throw new KeyNotFoundException($"未找到slug为{slug}的内容");
+        }
+
+#if !DEBUG
+
+        // 根据ID获取文档
+        if (content.Status != ContentStatus.Published)
+        {
+            throw new KeyNotFoundException($"slug为{slug}的内容未发布");
+        }
+#endif
+
+        return await RenderDocumentAsync(content);
+    }
 }

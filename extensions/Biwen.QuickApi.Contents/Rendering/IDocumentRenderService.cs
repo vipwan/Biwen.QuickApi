@@ -29,4 +29,11 @@ public interface IDocumentRenderService
     /// <returns></returns>
     Task<string> RenderDocumentAsync(Guid id);
 
+    /// <summary>
+    /// 根据文档slug渲染文档
+    /// </summary>
+    /// <param name="slug">文档的唯一标识符</param>
+    /// <returns>渲染后的HTML</returns>
+    Task<string> RenderDocumentBySlugAsync(string slug);
+
 }

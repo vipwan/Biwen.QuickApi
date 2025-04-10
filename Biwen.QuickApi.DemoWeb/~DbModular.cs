@@ -40,5 +40,10 @@ namespace Biwen.QuickApi.DemoWeb
 
             });
         }
+
+        public override void Configure(IApplicationBuilder app, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)
+        {
+            routes.MapBiwenContentsBySlug("p");
+        }
     }
 }

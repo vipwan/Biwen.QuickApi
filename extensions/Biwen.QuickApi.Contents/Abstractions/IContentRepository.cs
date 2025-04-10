@@ -102,6 +102,17 @@ public interface IContentRepository
     /// <returns>内容实体</returns>
     Task<Content> GetRawContentAsync(Guid id);
 
+
+    /// <summary>
+    /// 根据slug获取返回的第一个Id
+    /// </summary>
+    /// <param name="slug"></param>
+    /// <returns></returns>
+    Task<Content?> GetContentIdBySlugAsync(string slug);
+
+
+
+
     /// <summary>
     /// 更新原始内容实体
     /// </summary>

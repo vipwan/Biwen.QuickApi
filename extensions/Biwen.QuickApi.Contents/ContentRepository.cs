@@ -209,6 +209,16 @@ public class ContentRepository(
         return entity;
     }
 
+
+    public async Task<Content?> GetContentIdBySlugAsync(string slug)
+    {
+        return await dbContext.Contents
+            .Where(c => c.Slug == slug)
+            //.OrderBy(c=>c.PublishedAt)
+            .FirstOrDefaultAsync();
+    }
+
+
     /// <summary>
     /// 更新原始内容实体
     /// </summary>

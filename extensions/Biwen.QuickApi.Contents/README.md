@@ -62,13 +62,15 @@ builder.Services.AddBiwenContents<YourDbContext>(options =>
 
 ### 4. 定义内容模型
 
-创建实现`IContent`接口的内容模型：
+创建继承于`ContentBase<T>`的内容模型：
 
 ```csharp
-public class BlogPost : IContent
+public class BlogPost : ContentBase<BlogPost>
 {
+    [Required]
     public TextFieldType Title { get; set; } = new();
     public UrlFieldType Slug { get; set; } = new();
+    [MarkdownToolBar(MarkdownToolStyle.Standard)]
     public MarkdownFieldType Content { get; set; } = new();
     public DateTimeFieldType PublishDate { get; set; } = new();
     public ImageFieldType FeaturedImage { get; set; } = new();
@@ -86,6 +88,7 @@ public class BlogPost : IContent
     [Flags]
     public enum TagType
     {
+        [Description(".NET")]
         DotNet = 1,
         CSharp = 2,
         AspNetCore = 4,
@@ -261,9 +264,33 @@ A: 您可以使用自定义字段类型来存储关联ID，或者在内容模型
 
 A: 您可以扩展`ContentRepository`并添加基于全文搜索的方法，或者使用第三方搜索引擎如Elasticsearch。
 
+## 通过Slug访问内容
+
+Biwen.QuickApi.Contents提供了一个便捷的方法，使您可以通过自定义URL格式访问内容。您可以在应用程序启动时配置这个功能：
+
+```csharp
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    // 其他中间件配置...
+    
+    app.UseEndpoints(endpoints =>
+    {
+        // 添加通过Slug访问内容的路由
+        // 这将创建形如 /{prefix}/{slug} 的路由
+        endpoints.MapBiwenContentsBySlug("p"); // 使用"p"作为URL前缀
+        
+        // 其他路由配置...
+    });
+}
+```
+
+上面的配置将创建如下格式的URL：`/p/{slug}`，例如`/p/my-blog-post`。当用户访问这个URL时，系统会自动查找匹配的内容并使用`IDocumentRenderService`进行渲染。
+
+您可以根据需要自定义前缀，例如使用"contents"、"articles"、"pages"等。
+
 ## API 接口说明
 
-Biwen.QuickApi.Contents 提供了一系列 API 接口，用于内容的增删改查等操作。所有 API 接口都位于 `/biwen/contents` 路径下（由 `Constants.GroupName` 定义）。
+Biwen.QuickApi.Contents 提供了一系列 API 接口，用于内容的增删改查等操作。所有 API 接口都位于 `~/contents` 路径下（由 `Constants.GroupName` 定义）。
 
 ### 内容查询 API
 
@@ -316,7 +343,7 @@ POST ~~/contents/create
   "title": "内容标题",
   "slug": "content-slug",
   "contentType": "BlogPost",
-  "jsonContent": "序列化后的内容JSON字符串"
+  "jsonContent": "[{\"fieldName\":\"Title\",\"value\":\"hello world\"}]"
 }
 ```
 
@@ -324,7 +351,7 @@ POST ~~/contents/create
 - `title` - 内容标题
 - `slug` - 内容的 URL 友好标识符
 - `contentType` - 内容类型的完全限定名或最后一个名称
-- `jsonContent` - 序列化的内容，为 JSON 字符串
+- `jsonContent` - 序列化的内容，为 JSON 字符串,格式为`[{ "fieldName": "字段名称", "value": "字段值" }]`
 
 ### 更新内容 API
 
