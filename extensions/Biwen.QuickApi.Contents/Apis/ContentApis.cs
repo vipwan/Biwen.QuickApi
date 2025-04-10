@@ -5,6 +5,7 @@
 using Biwen.QuickApi.Attributes;
 using Biwen.QuickApi.Contents.Abstractions;
 using Biwen.QuickApi.Contents.Domain;
+using Biwen.QuickApi.Contents.Rendering;
 using Biwen.QuickApi.UnitOfWork.Pagenation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -382,3 +383,25 @@ public class GetContentSchemaApi(
         return schema.ToString();
     }
 }
+
+
+[QuickApi("/preview/{id:guid}", Group = Constants.GroupName)]
+[OpenApiMetadata("预览文档", "根据文档ID生成HTML视图页面")]
+public class PreviewContentApi(IDocumentRenderService renderService) : BaseQuickApi
+{
+    public override async ValueTask<IResult> ExecuteAsync(EmptyRequest request, CancellationToken cancellationToken = default)
+    {
+        // 获取请求的ID
+        var id = HttpContext.Request.RouteValues["id"]?.ToString();
+        if (string.IsNullOrEmpty(id) || !Guid.TryParse(id, out var contentId))
+        {
+            throw new ArgumentException("无效的ID");
+        }
+
+        var html = await renderService.RenderDocumentAsync(contentId);
+
+        // 返回HTML内容
+        return Results.Content(html, "text/html");
+    }
+}
+

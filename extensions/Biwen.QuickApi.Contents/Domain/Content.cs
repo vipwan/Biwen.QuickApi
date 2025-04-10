@@ -12,10 +12,8 @@ namespace Biwen.QuickApi.Contents.Domain;
 /// <summary>
 /// 持久层实体
 /// </summary>
-[Index(
-    nameof(Content.Slug),
-    nameof(Content.Status),
-    nameof(Content.ContentType))]
+[Index(nameof(Content.Slug), nameof(Content.Status), nameof(Content.ContentType))]
+[Index(nameof(Slug), IsUnique = true)]
 public class Content
 {
     [Key]

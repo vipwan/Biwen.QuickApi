@@ -1,0 +1,31 @@
+﻿@model ContentViewModel<SamplePage>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Model.Content.Title.Value</title>
+</head>
+<body>
+    <article class="document">
+        <header>
+            <h1>@Model.Content.Title.Value</h1>
+
+            <div class="description">
+                @Html.Raw(Model.Content.Description?.Value)
+            </div>
+
+        </header>
+        <div class="content">
+            @Html.Raw(Model.Content.Content?.Value)
+        </div>
+
+        <div>
+            slug : @Model.ContentDefine?.Slug
+        </div>
+
+    </article>
+
+</body>
+</html>

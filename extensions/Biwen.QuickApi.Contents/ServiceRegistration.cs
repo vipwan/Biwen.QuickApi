@@ -7,6 +7,7 @@
 using Biwen.QuickApi.Contents.Abstractions;
 using Biwen.QuickApi.Contents.Domain;
 using Biwen.QuickApi.Contents.FieldTypes;
+using Biwen.QuickApi.Contents.Rendering;
 using Biwen.QuickApi.Contents.Schema;
 using Biwen.QuickApi.Contents.Services;
 using Biwen.QuickApi.Infrastructure;
@@ -77,6 +78,10 @@ public static class ServiceRegistration
 
         // 注册GroupRouteBuilder
         services.AddQuickApiGroupRouteBuilder<ContentsGroupRouteBuilder>();
+
+        // 渲染服务 
+        services.AddRazorPages().AddRazorRuntimeCompilation();
+        services.AddScoped<IDocumentRenderService, RazorDocumentRenderService>();
 
         return services;
     }

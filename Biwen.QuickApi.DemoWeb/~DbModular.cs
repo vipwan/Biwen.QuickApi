@@ -33,7 +33,12 @@ namespace Biwen.QuickApi.DemoWeb
             services.AddUnitOfWork<UserDbContext, IdentityDbContext, ContentDbContext>();
 
             //添加 Biwen.QuickApi.Contents
-            services.AddBiwenContents<ContentDbContext>();
+            services.AddBiwenContents<ContentDbContext>(o =>
+            {
+                o.GenerateApiDocument = true;
+                o.EnableApi = true;
+
+            });
         }
     }
 }

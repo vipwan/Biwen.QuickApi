@@ -6,6 +6,8 @@
 // Modify Date: 2024-09-21 00:58:08 HtmlRendererTest.cs
 
 using Alba;
+using Biwen.QuickApi.Contents;
+using Biwen.QuickApi.Contents.Rendering;
 using Biwen.QuickApi.Test.Components;
 
 namespace Biwen.QuickApi.Test;
@@ -90,4 +92,51 @@ public class BlazorRendererServiceTest : IClassFixture<TestBase.QuickApiTestFact
         _testOutput.WriteLine(html);
         Assert.Contains(message, html);
     }
+
+    //验证Biwen.QuickApi.Contents.Rendering.RazorDocumentRenderService
+
+    [Theory]
+    [InlineData("this is content 1!")]
+    [InlineData("this is content 2!")]
+    public async Task RazorDocumentRenderService_ShouldRenderHtml(string title)
+    {
+        var host = await AlbaHost.For<DemoWeb.Program>();
+        using var scope = host.Services.CreateScope();
+
+        var service = scope.ServiceProvider.GetRequiredService<IDocumentRenderService>();
+
+
+        var samplePage = new SamplePage
+        {
+            Title = new QuickApi.Contents.FieldTypes.TextFieldType
+            {
+                Value = title
+            },
+            Content = new QuickApi.Contents.FieldTypes.MarkdownFieldType
+            {
+                Value = "<h3>Hello from the Render Message component!</h3>"
+            },
+            Description = new QuickApi.Contents.FieldTypes.MarkdownFieldType
+            {
+                Value = "Hello from the Render Message component!"
+            },
+            Tags = new QuickApi.Contents.FieldTypes.ArrayFieldType
+            {
+                Value = "Tag1,Tag2"
+            }
+        };
+
+        //测试内部方法:
+        var svc = (RazorDocumentRenderService)service;
+
+        var html = await svc.RenderDocumentAsync(samplePage, new QuickApi.Contents.Domain.Content
+        {
+            Id = Guid.NewGuid(),
+            Slug = "Slug Test"
+        });
+
+        _testOutput.WriteLine(html);
+        Assert.Contains(title, html);
+    }
+
 }

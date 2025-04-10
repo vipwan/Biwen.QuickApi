@@ -8,13 +8,14 @@ using Biwen.QuickApi.Contents.Apis.Filters;
 using Biwen.QuickApi.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.Options;
 
 namespace Biwen.QuickApi.Contents;
 
 /// <summary>
 /// 定义文档的GroupRouteBuilder,用于验证等操作
 /// </summary>
-internal class ContentsGroupRouteBuilder : IQuickApiGroupRouteBuilder
+internal class ContentsGroupRouteBuilder(IOptions<BiwenContentOptions> options) : IQuickApiGroupRouteBuilder
 {
     public string Group => Constants.GroupName;
 
@@ -27,6 +28,24 @@ internal class ContentsGroupRouteBuilder : IQuickApiGroupRouteBuilder
 
         //验证权限的Filter
         routeBuilder.AddEndpointFilter<AuthFilter>();
+
+        //是否启用Api:
+        if (!options.Value.EnableApi)
+        {
+            // 如果禁用API，则添加一个拦截所有请求的过滤器
+            routeBuilder.AddEndpointFilter(async (context, next) =>
+            {
+                // 返回403禁止访问
+                await Task.CompletedTask;
+                context.HttpContext.Response.StatusCode = StatusCodes.Status403Forbidden;
+                return Results.StatusCode(StatusCodes.Status403Forbidden);
+            });
+        }
+
+        if (!options.Value.GenerateApiDocument)
+        {
+            routeBuilder.ExcludeFromDescription();
+        }
 
         //不需要验证逻辑,在Biwen.QuickApi中直接处理ValidationException
         //routeBuilder.AddEndpointFilter<ValidationExceptionFilter>();

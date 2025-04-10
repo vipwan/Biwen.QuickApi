@@ -7,16 +7,16 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<InternalsVisibleTo Include="Biwen.QuickApi.Test" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Biwen.AutoClassGen" Version="1.7.0" PrivateAssets="all" />
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.7.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="Rendering\" />
 	</ItemGroup>
 
 

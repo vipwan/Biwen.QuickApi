@@ -7,7 +7,6 @@
 using Biwen.QuickApi.Contents.Abstractions;
 using Biwen.QuickApi.Contents.Domain;
 using Biwen.QuickApi.Contents.Events;
-using Biwen.QuickApi.Events;
 using Biwen.QuickApi.UnitOfWork.Pagenation;
 using Microsoft.EntityFrameworkCore;
 
@@ -79,6 +78,7 @@ public class ContentRepository(
 
         return serializer.DeserializeContent<T>(entity.JsonContent);
     }
+
 
     public async Task<IPagedList<T>> GetContentsByTypeAsync<T>(int pageIndex = 0, int len = 10) where T : IContent, new()
     {
