@@ -60,6 +60,12 @@ public class ContentRepositoryTest
         Assert.Equal(2, retrievedBlog.Tags.GetValueString().Split([',', ';']).Length);
 
         Assert.Equal(blog.Tags.GetValueString(), retrievedBlog.Tags.GetValueString());
+
+
+        // Raw Content
+        var rawContet = await repo.GetRawContentAsync(id);
+
+        Assert.NotNull(rawContet);
     }
 
     [Fact]

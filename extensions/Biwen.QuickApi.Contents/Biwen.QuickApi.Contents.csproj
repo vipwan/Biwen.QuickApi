@@ -13,6 +13,7 @@
 	<ItemGroup>
 		<PackageReference Include="Biwen.AutoClassGen" Version="1.8.1" PrivateAssets="all" />
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.8.0" />
+		<PackageReference Include="Elastic.Clients.Elasticsearch" Version="8.17.4" />
 	</ItemGroup>
 
 	<ItemGroup>

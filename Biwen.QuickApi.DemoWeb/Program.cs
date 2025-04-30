@@ -10,6 +10,9 @@ using Microsoft.FluentUI.AspNetCore.Components;
 using System.Reflection;
 using Biwen.QuickApi.MultiTenant;
 
+using Elastic.Clients.Elasticsearch;
+using Biwen.QuickApi.Contents.Searching;
+
 //verison 
 Console.WriteLine($"Biwen.QuickApi Version:{Biwen.QuickApi.Generated.Version.AssemblyVersion}");
 Console.WriteLine($"Biwen.QuickApi Author:{Biwen.QuickApi.Generated.AssemblyMetadata.Company}");
@@ -26,7 +29,6 @@ builder.Logging.ClearProviders();
 builder.Host.UseSerilogFromConfiguration();
 
 
-
 #endregion
 
 builder.Services.AddFluentUIComponents();
@@ -36,6 +38,15 @@ builder.Services.AddRazorPages();
 
 //add mvc
 builder.Services.AddControllersWithViews();
+
+//add es
+builder.Services.AddSingleton(sp =>
+{
+    return new ElasticsearchClient(new Uri(builder.Configuration["ElasticSearch"]!));
+});
+//添加 es 索引服务
+builder.Services.AddScoped<IContentSearchService, ElasticsearchService>();
+
 
 
 //all

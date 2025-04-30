@@ -353,10 +353,12 @@ public class ContentSerializer
 /// <summary>
 /// 转换类型定义
 /// </summary>
-internal class ContentFieldValue
+public class ContentFieldValue
 {
+    [JsonPropertyName("fieldName")]
     public string FieldName { get; set; } = string.Empty;
 
+    [JsonPropertyName("value")]
     [JsonConverter(typeof(JsonStringConverter))]
     public string Value { get; set; } = string.Empty;
 }
