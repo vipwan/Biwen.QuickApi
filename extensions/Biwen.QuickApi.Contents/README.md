@@ -10,6 +10,7 @@ Biwen.QuickApi.Contents是基于`Biwen.QuickApi`用于内容管理的库，可�
 - 内容审计日志
 - 内容渲染服务
 - 支持内容草稿和发布工作流
+- 基于Elasticsearch的全文搜索功能
 
 ## 快速入门
 
@@ -43,6 +44,15 @@ public class YourDbContext : DbContext, IContentDbContext
 ### 3. 在Program.cs中注册服务
 
 ```csharp
+// 配置Elasticsearch客户端（可选，如需使用搜索功能）
+builder.Services.AddSingleton(sp =>
+{
+    return new ElasticsearchClient(new Uri(builder.Configuration["ElasticSearch"]!));
+});
+// 添加内容搜索服务（可选，如需使用搜索功能）
+builder.Services.AddScoped<IContentSearchService, ElasticsearchService>();
+
+// 添加BiweContents核心服务
 builder.Services.AddBiwenContents<YourDbContext>(options => 
 {
     // 是否启用Api接口
@@ -57,6 +67,17 @@ builder.Services.AddBiwenContents<YourDbContext>(options =>
         // 您的权限验证逻辑
         return Task.FromResult(httpContext.User.Identity!.IsAuthenticated);
     };
+});
+
+// 应用程序启动后初始化Elasticsearch索引（可选）
+app.Lifetime.ApplicationStarted.Register(async () =>
+{
+    using var scope = app.Services.CreateScope();
+    var searchService = scope.ServiceProvider.GetService<IContentSearchService>();
+    if (searchService != null)
+    {
+        await searchService.InitializeIndexAsync();
+    }
 });
 ```
 
@@ -344,6 +365,130 @@ services.AddBiwenContents<YourDbContext>(options =>
 4. 利用内容状态工作流来管理发布流程
 5. 使用内容事件来实现自定义业务逻辑
 
+## 内容搜索服务
+
+Biwen.QuickApi.Contents提供基于Elasticsearch的内容搜索服务，支持全文搜索、分面搜索、高亮显示等高级功能。
+
+### 自动索引更新
+
+内容模块集成了自动索引更新功能，当内容被创建、更新、删除或状态发生变化时，系统会自动更新ElasticSearch索引。这是通过事件处理机制实现的，即使在应用程序没有启用ElasticSearch服务的情况下也不会产生错误。
+
+事件处理器支持以下操作：
+- 当内容创建后，自动添加到索引
+- 当内容更新后，自动更新索引
+- 当内容删除后，自动从索引中移除
+- 当内容状态变更为已归档时，自动从索引中移除
+
+### 配置Elasticsearch服务
+
+1. 在`appsettings.json`中添加Elasticsearch连接配置：
+
+```json
+{
+  "ElasticSearch": "http://localhost:9200"
+}
+```
+
+2. 在项目的启动配置中注册Elasticsearch客户端和搜索服务：
+
+```csharp
+// 添加Elasticsearch客户端
+builder.Services.AddSingleton(sp =>
+{
+    return new ElasticsearchClient(new Uri(builder.Configuration["ElasticSearch"]!));
+});
+
+// 添加内容搜索服务
+builder.Services.AddScoped<IContentSearchService, ElasticsearchService>();
+```
+
+3. 应用程序启动时初始化索引：
+
+```csharp
+// 在应用程序启动时初始化Elasticsearch索引
+app.UseEndpoints(endpoints =>
+{
+    // 其他端点配置...
+    
+    // 异步初始化Elasticsearch索引
+    var scope = app.ApplicationServices.CreateScope();
+    var searchService = scope.ServiceProvider.GetRequiredService<IContentSearchService>();
+    _ = searchService.InitializeIndexAsync();
+});
+```
+
+### 使用内容搜索服务
+
+```csharp
+public class SearchController : Controller
+{
+    private readonly IContentSearchService _searchService;
+    private readonly IContentRepository _contentRepository;
+    
+    public SearchController(IContentSearchService searchService, IContentRepository contentRepository)
+    {
+        _searchService = searchService;
+        _contentRepository = contentRepository;
+    }
+    
+    // 重建索引
+    public async Task<IActionResult> RebuildIndex()
+    {
+        // 获取所有内容
+        var allContents = await _contentRepository.GetAllContentsAsync();
+        
+        // 重建索引
+        await _searchService.RebuildIndexAsync(allContents);
+        return Ok("索引重建完成");
+    }
+    
+    // 执行搜索
+    public async Task<IActionResult> Search(string query, int page = 1, int size = 10, string filter = null, string sort = null)
+    {
+        // 执行搜索查询
+        var results = await _searchService.SearchContentsAsync(
+            query,
+            page,
+            size,
+            filter,
+            sort,
+            enableHighlight: true,
+            facets: ["contentType"] // 返回内容类型分面
+        );
+        
+        return View(results);
+    }
+}
+```
+
+### 搜索功能特性
+
+搜索服务支持以下功能：
+
+1. **全文搜索**：支持跨字段的全文搜索，可以搜索内容标题、Slug以及内容字段的值。
+2. **模糊搜索**：使用Elasticsearch的模糊匹配功能，容忍拼写错误。
+3. **高亮显示**：自动高亮显示搜索结果中与查询相关的部分。
+4. **分面搜索**：支持按内容类型、状态等属性进行分面聚合。
+5. **排序和过滤**：支持按创建时间、更新时间、标题等字段排序，并支持多种过滤方式。
+
+### 搜索查询语法
+
+搜索服务支持多种查询和过滤语法：
+
+- **基础搜索**：直接输入关键词，例如：`博客`
+- **类型过滤**：按内容类型过滤，有两种格式：
+  - `contentType:BlogPost`
+  - `contentType = 'BlogPost'`
+- **状态过滤**：按内容状态过滤，例如：`status:Published`
+- **字段筛选**：按特定字段和值过滤，例如：`field:Category=技术文章`
+- **排序**：支持多种排序选项：
+  - `createdAt:asc` - 按创建时间升序
+  - `createdAt:desc` - 按创建时间降序
+  - `updatedAt:asc` - 按更新时间升序
+  - `updatedAt:desc` - 按更新时间降序
+  - `title:asc` - 按标题字母升序
+  - `title:desc` - 按标题字母降序
+
 ## 常见问题
 
 ### Q: 如何自定义内容字段类型？
@@ -364,9 +509,13 @@ services.AddSingleton<IFieldType, CustomFieldType>();
 
 A: 您可以使用自定义字段类型来存储关联ID，或者在内容模型中使用特殊的引用字段。
 
-### Q: 如何实现内容搜索？
+### Q: 如何优化Elasticsearch搜索性能？
 
-A: 您可以扩展`ContentRepository`并添加基于全文搜索的方法，或者使用第三方搜索引擎如Elasticsearch。
+A: 可以考虑以下几点：
+1. 在生产环境中增加分片数和副本数
+2. 为高频查询创建专用索引
+3. 使用筛选而非查询来提高性能
+4. 定期重建索引以优化存储
 
 ## 通过Slug访问内容
 
