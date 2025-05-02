@@ -81,10 +81,14 @@ public class ContentSerializer
             // 获取值字符串表示
             var value = GetFieldStringValue(fieldInstance);
 
+            // 获取字段类型
+            var fieldType = GetContentFieldType(fieldInstance);
+
             fieldValues.Add(new ContentFieldValue
             {
                 FieldName = property.Name,
-                Value = value
+                Value = value,
+                FieldType = fieldType
             });
         }
 
@@ -112,15 +116,14 @@ public class ContentSerializer
 
             var fieldValue = fieldValues.FirstOrDefault(f => f.FieldName == property.Name);
             if (fieldValue == null)
-                continue;
-
-            // 创建字段类型实例
+                continue;            // 创建字段类型实例
             var fieldTypeInstance = CreateFieldTypeInstance(property.PropertyType);
             if (fieldTypeInstance == null)
                 continue;
 
+            // 根据FieldType设置值转换逻辑
             // 设置字段值
-            SetFieldValue(fieldTypeInstance, fieldValue.Value);
+            SetFieldValueWithTypeInfo(fieldTypeInstance, fieldValue);
 
             // 泛型则表示枚举,单选:
             if (property.PropertyType.IsGenericType && property.PropertyType.Name == (typeof(OptionsFieldType<>).Name))
@@ -348,6 +351,75 @@ public class ContentSerializer
 
         return string.Empty;
     }
+
+    // 获取ContentFieldType
+    private ContentFieldType GetContentFieldType(IFieldType fieldInstance)
+    {
+        var type = fieldInstance.GetType();
+
+        if (type == typeof(BooleanFieldType))
+            return ContentFieldType.Boolean;
+        else if (type == typeof(IntegerFieldType) ||
+                 type == typeof(NumberFieldType))
+            return ContentFieldType.Number;
+        else if (type == typeof(DateTimeFieldType))
+            return ContentFieldType.DateTime;
+        else
+        {
+            // 尝试通过字段系统名称获取对应的类型
+            var systemName = GetFieldTypeSystemName(type);
+            return GetContentFieldTypeBySystemName(systemName);
+        }
+    }
+
+    // 从字段系统名称获取ContentFieldType
+    private ContentFieldType GetContentFieldTypeBySystemName(string systemName)
+    {
+        switch (systemName.ToLowerInvariant())
+        {
+            case "boolean":
+                return ContentFieldType.Boolean;
+            case "integer":
+            case "number":
+                return ContentFieldType.Number;
+            case "datetime":
+                return ContentFieldType.DateTime;
+            default:
+                return ContentFieldType.Text;
+        }
+    }
+
+    // 根据字段类型设置字段值
+    private void SetFieldValueWithTypeInfo(IFieldType fieldInstance, ContentFieldValue fieldValue)
+    {
+        // 根据字段类型进行不同的处理
+        switch (fieldValue.FieldType)
+        {
+            case ContentFieldType.Boolean:
+                // 布尔值处理
+                var boolValue = fieldValue.Value.Equals("true", StringComparison.OrdinalIgnoreCase);
+                SetFieldValue(fieldInstance, boolValue.ToString().ToLowerInvariant());
+                break;
+
+            case ContentFieldType.Number:
+                // 数字处理
+                // 确保数字格式正确，可以考虑处理特殊格式
+                SetFieldValue(fieldInstance, fieldValue.Value);
+                break;
+
+            case ContentFieldType.DateTime:
+                // 日期时间处理
+                // 可以根据需要添加日期格式验证或转换
+                SetFieldValue(fieldInstance, fieldValue.Value);
+                break;
+
+            case ContentFieldType.Text:
+            default:
+                // 默认文本处理
+                SetFieldValue(fieldInstance, fieldValue.Value);
+                break;
+        }
+    }
 }
 
 /// <summary>
@@ -361,6 +433,35 @@ public class ContentFieldValue
     [JsonPropertyName("value")]
     [JsonConverter(typeof(JsonStringConverter))]
     public string Value { get; set; } = string.Empty;
+
+    /// <summary>
+    /// ContentFieldType
+    /// </summary>
+    [JsonPropertyName("fieldType")]
+    public ContentFieldType FieldType { get; set; } = ContentFieldType.Text;
+}
+
+/// <summary>
+/// 内容字段类型,主要用于索引和搜索
+/// </summary>
+public enum ContentFieldType
+{
+    /// <summary>
+    /// 文本
+    /// </summary>
+    Text,
+    /// <summary>
+    /// 布尔值
+    /// </summary>
+    Boolean,
+    /// <summary>
+    /// 数字,包含浮点数和整数
+    /// </summary>
+    Number,
+    /// <summary>
+    /// 日期时间
+    /// </summary>
+    DateTime,
 }
 
 /// <summary>

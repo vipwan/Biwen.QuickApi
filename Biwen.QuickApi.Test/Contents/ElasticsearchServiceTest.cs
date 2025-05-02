@@ -7,12 +7,11 @@
 
 using Biwen.QuickApi.Contents.Domain;
 using Biwen.QuickApi.Contents.Searching;
-using Biwen.QuickApi.UnitOfWork.Pagenation;
 using Elastic.Clients.Elasticsearch;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using System.Text.Json;
+using Biwen.QuickApi.Contents; // 引入ContentFieldType枚举
 
 namespace Biwen.QuickApi.Test.Contents;
 
@@ -38,7 +37,7 @@ public class ElasticsearchServiceTest : IAsyncLifetime
         //    .Build();
 
 
-        var elasticConnectionString = "http://elastic:A6k}8!Zu9r~_bD.yZt8{+R@localhost:56024";
+        var elasticConnectionString = "http://elastic:A6k}8!Zu9r~_bD.yZt8{+R@localhost:62077";
 
         _output.WriteLine($"Elasticsearch连接字符串: {elasticConnectionString}");
 
@@ -278,10 +277,9 @@ public class ElasticsearchServiceTest : IAsyncLifetime
         await EnsureTestDataExists();
 
         // 添加一个包含指定关键词的文档
-        var specialContent = CreateSampleContent("高亮测试文档", "highlight-test", "blog");
-        specialContent.JsonContent = JsonSerializer.Serialize(new[]
+        var specialContent = CreateSampleContent("高亮测试文档", "highlight-test", "blog"); specialContent.JsonContent = JsonSerializer.Serialize(new[]
         {
-            new { fieldName = "Content", value = "这是一个包含高亮关键词的测试文档内容" }
+            new { fieldName = "Content", value = "这是一个包含高亮关键词的测试文档内容", fieldType = Biwen.QuickApi.Contents.ContentFieldType.Text }
         });
         await _service.AddOrUpdateDocumentAsync(specialContent);
         await Task.Delay(1000); // 等待索引刷新
@@ -320,11 +318,10 @@ public class ElasticsearchServiceTest : IAsyncLifetime
     public async Task SearchContentsAsync_ShouldFindNestedFieldContent()
     {
         // Arrange
-        var nestedContent = CreateSampleContent("嵌套字段测试", "nested-test", "test");
-        nestedContent.JsonContent = JsonSerializer.Serialize(new[]
+        var nestedContent = CreateSampleContent("嵌套字段测试", "nested-test", "test"); nestedContent.JsonContent = JsonSerializer.Serialize(new[]
         {
-            new { fieldName = "Title", value = "嵌套字段标题" },
-            new { fieldName = "Content", value = "这是一个测试嵌套字段内容搜索的示例" }
+            new { fieldName = "Title", value = "嵌套字段标题", fieldType = Biwen.QuickApi.Contents.ContentFieldType.Text },
+            new { fieldName = "Content", value = "这是一个测试嵌套字段内容搜索的示例", fieldType = Biwen.QuickApi.Contents.ContentFieldType.Text }
         });
 
         await _service.AddOrUpdateDocumentAsync(nestedContent);
@@ -345,15 +342,15 @@ public class ElasticsearchServiceTest : IAsyncLifetime
         var nestedContent1 = CreateSampleContent("嵌套字段过滤测试1", "nested-filter-test1", "test");
         nestedContent1.JsonContent = JsonSerializer.Serialize(new[]
         {
-            new { fieldName = "Category", value = "技术文章" },
-            new { fieldName = "Content", value = "这是技术文章的内容" }
+            new { fieldName = "Category", value = "技术文章", fieldType = Biwen.QuickApi.Contents.ContentFieldType.Text },
+            new { fieldName = "Content", value = "这是技术文章的内容", fieldType = Biwen.QuickApi.Contents.ContentFieldType.Text }
         });
 
         var nestedContent2 = CreateSampleContent("嵌套字段过滤测试2", "nested-filter-test2", "test");
         nestedContent2.JsonContent = JsonSerializer.Serialize(new[]
         {
-            new { fieldName = "Category", value = "生活随笔" },
-            new { fieldName = "Content", value = "这是生活随笔的内容" }
+            new { fieldName = "Category", value = "生活随笔", fieldType = Biwen.QuickApi.Contents.ContentFieldType.Text },
+            new { fieldName = "Content", value = "这是生活随笔的内容", fieldType = Biwen.QuickApi.Contents.ContentFieldType.Text }
         });
 
         await _service.AddOrUpdateDocumentAsync(nestedContent1);
@@ -393,9 +390,9 @@ public class ElasticsearchServiceTest : IAsyncLifetime
             UpdatedAt = DateTime.UtcNow.AddSeconds(0 - Random.Shared.Next(1000, 9999)),
             JsonContent = JsonSerializer.Serialize(new[]
             {
-                new { fieldName = "Title", value = title },
-                new { fieldName = "Content", value = $"这是{title}的内容描述" },
-                new { fieldName = "Tags", value = "测试,示例" }
+                new { fieldName = "Title", value = title, fieldType = ContentFieldType.Text },
+                new { fieldName = "Content", value = $"这是{title}的内容描述", fieldType = ContentFieldType.Text },
+                new { fieldName = "Tags", value = "测试,示例", fieldType = ContentFieldType.Text }
             })
         };
     }

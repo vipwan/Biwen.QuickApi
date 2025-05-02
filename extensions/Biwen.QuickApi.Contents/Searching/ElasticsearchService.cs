@@ -24,7 +24,8 @@ namespace Biwen.QuickApi.Contents.Searching;
 /// <param name="client"></param>
 /// <param name="logger"></param>
 public class ElasticsearchService(
-    ElasticsearchClient client, ILogger<ElasticsearchService> logger) : IContentSearchService
+    ElasticsearchClient client,
+    ILogger<ElasticsearchService> logger) : IContentSearchService
 {
     // Elasticsearch索引名称
     private const string IndexName = "biwen.quickapi.contents";
