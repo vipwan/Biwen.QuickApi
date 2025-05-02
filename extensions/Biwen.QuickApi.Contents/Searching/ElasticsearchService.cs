@@ -37,18 +37,7 @@ public class ElasticsearchService(
     public async Task AddOrUpdateDocumentAsync(Content content)
     {
         // 创建一个可以被ES正确索引的对象
-        var indexContent = new
-        {
-            content.Id,
-            content.Title,
-            content.Slug,
-            content.Status,
-            content.CreatedAt,
-            content.UpdatedAt,
-            content.ContentType,
-            // 将JsonContent解析为对象数组
-            JsonContent = JsonSerializer.Deserialize<ContentFieldValue[]>(content.JsonContent)
-        };
+        var indexContent = CreateIndexableContent(content);
 
         // 执行索引文档请求，如果文档存在则更新，不存在则添加
         var response = await client.IndexAsync(indexContent, idx =>
@@ -154,26 +143,34 @@ public class ElasticsearchService(
                             }
                         }
                     },
-                    // 配置JsonContent字段为嵌套类型，用于处理JSON数组
-                    { nameof(Content.JsonContent).ToCamelCase(), new NestedProperty
+                // 配置JsonContent字段为嵌套类型，用于处理JSON数组
+                { nameof(Content.JsonContent).ToCamelCase(), new NestedProperty
+                    {
+                        Properties = new Properties
                         {
-                            Properties = new Properties
-                            {
-                                // 配置fieldName字段为关键字类型
-                                { nameof(ContentFieldValue.FieldName).ToCamelCase(), new KeywordProperty() },
-                                // 配置value字段为文本类型，使用自定义分析器和关键字子字段
-                                { nameof(ContentFieldValue.Value).ToCamelCase(), new TextProperty
+                            // 配置fieldName字段为关键字类型
+                            { nameof(ContentFieldValue.FieldName).ToCamelCase(), new KeywordProperty() },
+                            // 配置字段类型:Text,Boolean,Number,DateTime
+                            { nameof(ContentFieldValue.FieldType).ToCamelCase(), new KeywordProperty() },
+                            // 配置value字段为文本类型，使用自定义分析器和关键字子字段
+                            { "value", new TextProperty
+                                {
+                                    Analyzer = "content_analyzer",
+                                    Fields = new Properties
                                     {
-                                        Analyzer = "content_analyzer",
-                                        Fields = new Properties
-                                        {
-                                            { "keyword", new KeywordProperty { IgnoreAbove = 256 } }
-                                        }
+                                        { "keyword", new KeywordProperty { IgnoreAbove = 256 } },
                                     }
                                 }
-                            }
+                            },
+                            // 添加对Boolean类型的支持
+                            { "valueBoolean", new BooleanProperty() },
+                            // 添加对Number类型的支持
+                            { "valueNumber", new FloatNumberProperty() },
+                            // 添加对DateTime类型的支持
+                            { "valueDate", new DateProperty() },
                         }
-                    },
+                    }
+                },
                     // 配置ContentType字段为关键字类型
                     { nameof(Content.ContentType).ToCamelCase(), new KeywordProperty() },
                     // 配置Slug字段为关键字类型
@@ -239,18 +236,7 @@ public class ElasticsearchService(
                 try
                 {
                     // 为每篇文档创建适合索引的结构
-                    var indexContent = new
-                    {
-                        content.Id,
-                        content.Title,
-                        content.Slug,
-                        content.Status,
-                        content.CreatedAt,
-                        content.UpdatedAt,
-                        content.ContentType,
-                        // 将JsonContent解析为对象数组
-                        JsonContent = JsonSerializer.Deserialize<List<ContentFieldValue>>(content.JsonContent)
-                    };
+                    var indexContent = CreateIndexableContent(content);
 
                     // 为每篇文档创建索引操作
                     var operation = new BulkIndexOperation<object>(indexContent)
@@ -481,6 +467,89 @@ public class ElasticsearchService(
         return new PagedList<ContentSearchResult>(searchResponse.Hits!.Select(h => h.Source!).ToList(), from, pageSize, 0, (int)totalHits);
     }
 
+
+    /// <summary>
+    /// 创建一个适合ES索引的内容对象，支持多种数据类型
+    /// </summary>
+    /// <param name="content"></param>
+    /// <returns></returns>
+    private object CreateIndexableContent(Content content)
+    {
+        var jsonContentValues = JsonSerializer.Deserialize<List<ContentFieldValue>>(content.JsonContent);
+
+        // 将字段值转换为适当的数据类型
+        var typedJsonContent = jsonContentValues?.Select(field =>
+        {
+            // 创建一个基本的匿名对象，包含所有字段
+            var baseObject = new Dictionary<string, object> {
+            { "fieldName", field.FieldName },
+            { "fieldType", field.FieldType.ToString() }
+        };
+
+            // 根据字段类型，添加转换后的值
+            switch (field.FieldType)
+            {
+                case ContentFieldType.Number:
+                    if (double.TryParse(field.Value, out var numberValue))
+                    {
+                        baseObject.Add("value", field.Value);
+                        // 为了保持文本搜索能力，也保留原始数字值
+                        baseObject.Add("valueNumber", numberValue);
+                    }
+                    else
+                    {
+                        baseObject.Add("value", field.Value); // 如果转换失败，保持原始字符串
+                    }
+                    break;
+
+                case ContentFieldType.DateTime:
+                    if (DateTime.TryParse(field.Value, out var dateValue))
+                    {
+                        baseObject.Add("value", field.Value);
+                        // 为了保持文本搜索能力，也保留原始日期值
+                        baseObject.Add("valueDate", dateValue);
+                    }
+                    else
+                    {
+                        baseObject.Add("value", field.Value); // 如果转换失败，保持原始字符串
+                    }
+                    break;
+
+                case ContentFieldType.Boolean:
+                    if (bool.TryParse(field.Value, out var boolValue))
+                    {
+                        baseObject.Add("value", field.Value);
+                        // 为了保持文本搜索能力，也保留原始字符串值
+                        baseObject.Add("valueBoolean", boolValue);
+                    }
+                    else
+                    {
+                        baseObject.Add("value", field.Value); // 如果转换失败，保持原始字符串
+                    }
+                    break;
+
+                default: // Text 和其他类型
+                    baseObject.Add("value", field.Value);
+                    break;
+            }
+
+            return baseObject;
+        }).ToList();
+
+        // 返回完整的索引内容对象
+        return new
+        {
+            content.Id,
+            content.Title,
+            content.Slug,
+            content.Status,
+            content.CreatedAt,
+            content.UpdatedAt,
+            content.ContentType,
+            JsonContent = typedJsonContent
+        };
+    }
+
     /// <summary>
     /// 根据查询文本和过滤条件构建Elasticsearch查询
     /// </summary>
@@ -534,6 +603,7 @@ public class ElasticsearchService(
         // 如果有过滤条件，添加过滤
         if (!string.IsNullOrWhiteSpace(filter))
         {
+
             // field:文档筛选器的优先级高于其他筛选器
             if (filter.StartsWith("field:"))
             {
@@ -622,7 +692,6 @@ public class ElasticsearchService(
 
         return boolQuery;
     }
-
 
     /// <summary>
     /// 根据排序字符串构建排序选项
