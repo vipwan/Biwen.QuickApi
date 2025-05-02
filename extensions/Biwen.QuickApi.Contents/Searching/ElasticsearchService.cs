@@ -603,9 +603,147 @@ public class ElasticsearchService(
         // 如果有过滤条件，添加过滤
         if (!string.IsNullOrWhiteSpace(filter))
         {
+            // 处理范围查询和布尔条件
+            if (filter.StartsWith("range:"))
+            {
+                // 格式如 "range:fieldName=gte:10,lte:100"
+                var parts = filter.Substring(6).Split('=');
+                if (parts.Length == 2)
+                {
+                    var fieldName = parts[0].Trim();
+                    var rangeConditions = parts[1].Split(',');
+                    var rangeQuery = new NumberRangeQuery(new Field($"{nameof(Content.JsonContent).ToCamelCase()}.valueNumber"));
 
+                    foreach (var condition in rangeConditions)
+                    {
+                        var rangeParts = condition.Split(':');
+                        if (rangeParts.Length == 2 && double.TryParse(rangeParts[1], out var value))
+                        {
+                            switch (rangeParts[0].ToLower())
+                            {
+                                case "gte":
+                                    rangeQuery.Gte = value;
+                                    break;
+                                case "lte":
+                                    rangeQuery.Lte = value;
+                                    break;
+                                case "gt":
+                                    rangeQuery.Gt = value;
+                                    break;
+                                case "lt":
+                                    rangeQuery.Lt = value;
+                                    break;
+                            }
+                        }
+                    }
+
+                    var nestedRangeQuery = new NestedQuery
+                    {
+                        Path = new Field(nameof(Content.JsonContent).ToCamelCase()),
+                        Query = new BoolQuery
+                        {
+                            Must = [
+                                new TermQuery(new Field($"{nameof(Content.JsonContent).ToCamelCase()}.fieldName"))
+                                {
+                                    Value = fieldName
+                                },
+                                rangeQuery
+                            ]
+                        }
+                    };
+
+                    boolQuery.Filter ??= [];
+                    boolQuery.Filter = boolQuery.Filter.Append(nestedRangeQuery).ToArray();
+                }
+            }
+            // 处理布尔条件
+            else if (filter.StartsWith("bool:"))
+            {
+                // 格式如 "bool:fieldName=true"
+                var parts = filter.Substring(5).Split('=');
+                if (parts.Length == 2)
+                {
+                    var fieldName = parts[0].Trim();
+                    if (bool.TryParse(parts[1], out var boolValue))
+                    {
+                        var nestedBoolQuery = new NestedQuery
+                        {
+                            Path = new Field(nameof(Content.JsonContent).ToCamelCase()),
+                            Query = new BoolQuery
+                            {
+                                Must = [
+                                    new TermQuery(new Field($"{nameof(Content.JsonContent).ToCamelCase()}.fieldName"))
+                                    {
+                                        Value = fieldName
+                                    },
+                                    new TermQuery(new Field($"{nameof(Content.JsonContent).ToCamelCase()}.valueBoolean"))
+                                    {
+                                        Value = boolValue
+                                    }
+                                ]
+                            }
+                        };
+
+                        boolQuery.Filter ??= [];
+                        boolQuery.Filter = boolQuery.Filter.Append(nestedBoolQuery).ToArray();
+                    }
+                }
+            }
+            // 处理日期范围查询
+            else if (filter.StartsWith("daterange:"))
+            {
+                // 格式如 "daterange:fieldName=gte:2024-01-01,lte:2024-12-31"
+                var parts = filter.Substring(10).Split('=');
+                if (parts.Length == 2)
+                {
+                    var fieldName = parts[0].Trim();
+                    var rangeConditions = parts[1].Split(',');
+                    var rangeQuery = new DateRangeQuery(new Field($"{nameof(Content.JsonContent).ToCamelCase()}.valueDate"));
+
+                    foreach (var condition in rangeConditions)
+                    {
+                        var rangeParts = condition.Split(':');
+                        if (rangeParts.Length == 2 && DateTime.TryParse(rangeParts[1], out var dateValue))
+                        {
+                            switch (rangeParts[0].ToLower())
+                            {
+                                case "gte":
+                                    rangeQuery.Gte = dateValue;
+                                    break;
+                                case "lte":
+                                    rangeQuery.Lte = dateValue;
+                                    break;
+                                case "gt":
+                                    rangeQuery.Gt = dateValue;
+                                    break;
+                                case "lt":
+                                    rangeQuery.Lt = dateValue;
+                                    break;
+                            }
+                        }
+                    }
+
+                    var nestedRangeQuery = new NestedQuery
+                    {
+                        Path = new Field(nameof(Content.JsonContent).ToCamelCase()),
+                        Query = new BoolQuery
+                        {
+                            Must = [
+                                new TermQuery(new Field($"{nameof(Content.JsonContent).ToCamelCase()}.fieldName"))
+                                {
+                                    Value = fieldName
+                                },
+                                rangeQuery
+                            ]
+                        }
+                    };
+
+                    boolQuery.Filter ??= [];
+                    boolQuery.Filter = boolQuery.Filter.Append(nestedRangeQuery).ToArray();
+                }
+            }
             // field:文档筛选器的优先级高于其他筛选器
-            if (filter.StartsWith("field:"))
+            else if (filter.StartsWith("field:"))
             {
                 // 格式如 "field:Category=技术文章"
                 var parts = filter.Substring(6).Split('=');
@@ -643,7 +781,6 @@ public class ElasticsearchService(
                     boolQuery.Filter = boolQuery.Filter.Append(nestedFilter).ToArray();
                 }
             }
-
             // 同时支持两种格式：contentType:test 和 contentType = 'test'
             else if (filter.Contains(':'))
             {

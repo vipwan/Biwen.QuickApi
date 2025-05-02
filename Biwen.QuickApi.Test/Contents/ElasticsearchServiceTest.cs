@@ -310,10 +310,6 @@ public class ElasticsearchServiceTest : IAsyncLifetime
         // 这需要修改IPagedList接口或SearchContentsAsync方法以返回分面信息
     }
 
-    #endregion
-
-    #region 嵌套字段测试
-
     [Fact]
     public async Task SearchContentsAsync_ShouldFindNestedFieldContent()
     {
@@ -370,6 +366,89 @@ public class ElasticsearchServiceTest : IAsyncLifetime
         Assert.DoesNotContain(result.Items, i => i.Id == nestedContent2.Id);
     }
 
+    [Fact]
+    public async Task SearchContentsAsync_ShouldFilterByNumberRange()
+    {
+        // Arrange
+        var contents = new List<Content>
+        {
+            CreateSampleContentWithNumber("价格测试1", "price-test-1", "product", "Price", 100),
+            CreateSampleContentWithNumber("价格测试2", "price-test-2", "product", "Price", 200),
+            CreateSampleContentWithNumber("价格测试3", "price-test-3", "product", "Price", 300)
+        };
+
+        await _service.RebuildIndexAsync(contents);
+        await Task.Delay(1000); // 等待索引刷新
+
+        // Act - 查询价格在150到250之间的产品
+        var result = await _service.SearchContentsAsync("", filter: "range:Price=gte:150,lte:250");
+
+        // Assert
+        Assert.NotEmpty(result.Items);
+        Assert.All(result.Items, item => 
+        {
+            var priceField = item.JsonContent.FirstOrDefault(f => f.FieldName == "Price");
+            Assert.NotNull(priceField);
+            var price = double.Parse(priceField.Value);
+            Assert.True(price >= 150 && price <= 250);
+        });
+    }
+
+    [Fact]
+    public async Task SearchContentsAsync_ShouldFilterByDateRange()
+    {
+        // Arrange
+        var contents = new List<Content>
+        {
+            CreateSampleContentWithDate("日期测试1", "date-test-1", "event", "EventDate", new DateTime(2024, 1, 1)),
+            CreateSampleContentWithDate("日期测试2", "date-test-2", "event", "EventDate", new DateTime(2024, 6, 1)),
+            CreateSampleContentWithDate("日期测试3", "date-test-3", "event", "EventDate", new DateTime(2024, 12, 31))
+        };
+
+        await _service.RebuildIndexAsync(contents);
+        await Task.Delay(1000); // 等待索引刷新
+
+        // Act - 查询2024年上半年的活动
+        var result = await _service.SearchContentsAsync("", filter: "daterange:EventDate=gte:2024-01-01,lte:2024-06-30");
+
+        // Assert
+        Assert.NotEmpty(result.Items);
+        Assert.All(result.Items, item => 
+        {
+            var dateField = item.JsonContent.FirstOrDefault(f => f.FieldName == "EventDate");
+            Assert.NotNull(dateField);
+            var date = DateTime.Parse(dateField.Value);
+            Assert.True(date >= new DateTime(2024, 1, 1) && date <= new DateTime(2024, 6, 30));
+        });
+    }
+
+    [Fact]
+    public async Task SearchContentsAsync_ShouldFilterByBooleanCondition()
+    {
+        // Arrange
+        var contents = new List<Content>
+        {
+            CreateSampleContentWithBoolean("布尔测试1", "bool-test-1", "product", "IsActive", true),
+            CreateSampleContentWithBoolean("布尔测试2", "bool-test-2", "product", "IsActive", false),
+            CreateSampleContentWithBoolean("布尔测试3", "bool-test-3", "product", "IsActive", true)
+        };
+
+        await _service.RebuildIndexAsync(contents);
+        await Task.Delay(1000); // 等待索引刷新
+
+        // Act - 查询激活状态的产品
+        var result = await _service.SearchContentsAsync("", filter: "bool:IsActive=true");
+
+        // Assert
+        Assert.NotEmpty(result.Items);
+        Assert.All(result.Items, item => 
+        {
+            var boolField = item.JsonContent.FirstOrDefault(f => f.FieldName == "IsActive");
+            Assert.NotNull(boolField);
+            Assert.True(bool.Parse(boolField.Value));
+        });
+    }
+
     #endregion
 
     #region 帮助方法
@@ -395,6 +474,39 @@ public class ElasticsearchServiceTest : IAsyncLifetime
                 new { fieldName = "Tags", value = "测试,示例", fieldType = ContentFieldType.Text }
             })
         };
+    }
+
+    private Content CreateSampleContentWithNumber(string title, string slug, string contentType, string fieldName, double value)
+    {
+        var content = CreateSampleContent(title, slug, contentType);
+        var fields = new List<ContentFieldValue>
+        {
+            new() { FieldName = fieldName, FieldType = ContentFieldType.Number, Value = value.ToString() }
+        };
+        content.JsonContent = JsonSerializer.Serialize(fields);
+        return content;
+    }
+
+    private Content CreateSampleContentWithDate(string title, string slug, string contentType, string fieldName, DateTime value)
+    {
+        var content = CreateSampleContent(title, slug, contentType);
+        var fields = new List<ContentFieldValue>
+        {
+            new() { FieldName = fieldName, FieldType = ContentFieldType.DateTime, Value = value.ToString("O") }
+        };
+        content.JsonContent = JsonSerializer.Serialize(fields);
+        return content;
+    }
+
+    private Content CreateSampleContentWithBoolean(string title, string slug, string contentType, string fieldName, bool value)
+    {
+        var content = CreateSampleContent(title, slug, contentType);
+        var fields = new List<ContentFieldValue>
+        {
+            new() { FieldName = fieldName, FieldType = ContentFieldType.Boolean, Value = value.ToString() }
+        };
+        content.JsonContent = JsonSerializer.Serialize(fields);
+        return content;
     }
 
     /// <summary>

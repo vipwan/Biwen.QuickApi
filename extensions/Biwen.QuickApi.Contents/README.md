@@ -481,6 +481,11 @@ public class SearchController : Controller
   - `contentType = 'BlogPost'`
 - **状态过滤**：按内容状态过滤，例如：`status:Published`
 - **字段筛选**：按特定字段和值过滤，例如：`field:Category=技术文章`
+- **数值范围查询**：按数值字段范围过滤，例如：`range:Price=gte:100,lte:200`
+  - 支持的操作符：`gte`（大于等于）、`lte`（小于等于）、`gt`（大于）、`lt`（小于）
+- **日期范围查询**：按日期字段范围过滤，例如：`daterange:EventDate=gte:2024-01-01,lte:2024-12-31`
+  - 支持的操作符：`gte`（大于等于）、`lte`（小于等于）、`gt`（大于）、`lt`（小于）
+- **布尔条件查询**：按布尔字段过滤，例如：`bool:IsActive=true`
 - **排序**：支持多种排序选项：
   - `createdAt:asc` - 按创建时间升序
   - `createdAt:desc` - 按创建时间降序
@@ -488,6 +493,37 @@ public class SearchController : Controller
   - `updatedAt:desc` - 按更新时间降序
   - `title:asc` - 按标题字母升序
   - `title:desc` - 按标题字母降序
+
+### 嵌套字段查询示例
+
+以下是一些嵌套字段查询的具体示例：
+
+1. **数值范围查询**：
+```csharp
+// 查询价格在150到250之间的产品
+var result = await _searchService.SearchContentsAsync("", filter: "range:Price=gte:150,lte:250");
+```
+
+2. **日期范围查询**：
+```csharp
+// 查询2024年上半年的活动
+var result = await _searchService.SearchContentsAsync("", filter: "daterange:EventDate=gte:2024-01-01,lte:2024-06-30");
+```
+
+3. **布尔条件查询**：
+```csharp
+// 查询激活状态的产品
+var result = await _searchService.SearchContentsAsync("", filter: "bool:IsActive=true");
+```
+
+4. **组合查询**：
+```csharp
+// 查询2024年上半年的激活状态产品，价格在100到200之间
+var result = await _searchService.SearchContentsAsync("", 
+    filter: "daterange:EventDate=gte:2024-01-01,lte:2024-06-30 AND bool:IsActive=true AND range:Price=gte:100,lte:200");
+```
+
+这些查询都支持嵌套字段，可以精确匹配 `JsonContent` 中的字段值。查询结果会自动过滤出符合所有条件的文档。
 
 ## 常见问题
 
