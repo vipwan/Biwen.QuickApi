@@ -9,7 +9,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Label="Package versions used in this repository">
-		<FluentValidationAspNetCoreVer>11.11.0</FluentValidationAspNetCoreVer>
+		<FluentValidationAspNetCoreVer>12.0.0</FluentValidationAspNetCoreVer>
 		<MicrosoftExtensionsVer>9.4.0</MicrosoftExtensionsVer>
 		<DOTNETVer8>8.0.15</DOTNETVer8>
 		<DOTNETVer9>9.0.4</DOTNETVer9>

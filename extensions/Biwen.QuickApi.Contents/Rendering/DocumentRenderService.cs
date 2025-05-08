@@ -16,7 +16,6 @@ using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Options;
-using System.Reflection;
 
 namespace Biwen.QuickApi.Contents.Rendering;
 
