@@ -25,6 +25,7 @@ Biwen.QuickApi 2+,是一个微型`aspnetcore`开发框架,提供minimalapi的Qui
 - 通过Slug友好URL访问内容
 - 完整的内容API（创建、查询、更新、删除、预览）
 - 内容状态工作流（草稿、发布、归档）
+- 基于`Elasticsearch`的全文搜索支持
 
 ## 代码示例
 
