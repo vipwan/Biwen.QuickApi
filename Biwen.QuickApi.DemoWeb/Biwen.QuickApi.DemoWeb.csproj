@@ -18,7 +18,7 @@
 		<PackageReference Include="Biwen.AutoClassGen.Attributes" Version="1.8.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="$(DOTNETVer9)" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="$(DOTNETVer9)" />
-		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.8" />
+		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.9" />
 	</ItemGroup>
 
 	<ItemGroup>

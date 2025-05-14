@@ -1,18 +1,18 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
 	<PropertyGroup>
-		<PackageVersion>2.0.4</PackageVersion>
-		<Version>2.0.4</Version>
-		<AssemblyVersion>2.0.4</AssemblyVersion>
-		<FileVersion>2.0.4</FileVersion>
+		<PackageVersion>2.0.5</PackageVersion>
+		<Version>2.0.5</Version>
+		<AssemblyVersion>2.0.5</AssemblyVersion>
+		<FileVersion>2.0.5</FileVersion>
 		<PackageReleaseNotes></PackageReleaseNotes>
 	</PropertyGroup>
 
 	<PropertyGroup Label="Package versions used in this repository">
 		<FluentValidationAspNetCoreVer>12.0.0</FluentValidationAspNetCoreVer>
-		<MicrosoftExtensionsVer>9.4.0</MicrosoftExtensionsVer>
-		<DOTNETVer8>8.0.15</DOTNETVer8>
-		<DOTNETVer9>9.0.4</DOTNETVer9>
+		<MicrosoftExtensionsVer>9.5.0</MicrosoftExtensionsVer>
+		<DOTNETVer8>8.0.16</DOTNETVer8>
+		<DOTNETVer9>9.0.5</DOTNETVer9>
 	</PropertyGroup>
 
 

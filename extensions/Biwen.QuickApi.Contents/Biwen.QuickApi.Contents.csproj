@@ -1,13 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+		<PackageProjectUrl>https://github.com/vipwan/Biwen.QuickApi</PackageProjectUrl>
+		<Authors>万雅虎</Authors>
+		<RepositoryUrl>https://github.com/vipwan/Biwen.QuickApi</RepositoryUrl>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<NoWarn>GEN053</NoWarn>
+		<Copyright>MIT</Copyright>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<Import Project="..\..\Version.props" />
 
 	<ItemGroup>
 		<InternalsVisibleTo Include="Biwen.QuickApi.Test" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Link="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\..\Biwen.QuickApi\LICENSE.txt" Link="LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\..\Biwen.QuickApi\.editorconfig" Link=".editorconfig" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -19,6 +38,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\Biwen.QuickApi\Biwen.QuickApi.csproj" />
 	</ItemGroup>
+
 
 
 </Project>
